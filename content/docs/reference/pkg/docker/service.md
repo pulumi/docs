@@ -26,19 +26,34 @@ Docker service can be imported using the long id, e.g. for a service with the sh
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthArgs]</span> = None<span class="p">, </span><span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[ServiceConvergeConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceEndpointSpecArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLabelArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[ServiceModeArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRollbackConfigArgs]</span> = None<span class="p">, </span><span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceTaskSpecArgs]</span> = None<span class="p">, </span><span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[ServiceUpdateConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceAuthArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceConvergeConfigArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceEndpointSpecArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceLabelArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceModeArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceRollbackConfigArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceTaskSpecArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceUpdateConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +88,32 @@ Docker service can be imported using the long id, e.g. for a service with the sh
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +122,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +146,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -346,7 +371,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#taskspec_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspec">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See TaskSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -355,7 +380,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth</a></span>
+        <span class="property-type"><a href="#serviceauth">pulumi<wbr>Input<Service<wbr>Auth<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Auth below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -364,7 +389,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#convergeconfig_nodejs" style="color: inherit; text-decoration: inherit;">converge<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">pulumi<wbr>Input<Service<wbr>Converge<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Converge Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -373,7 +398,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpointspec_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">pulumi<wbr>Input<Service<wbr>Endpoint<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See EndpointSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -382,7 +407,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">Service<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#servicelabel">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Label<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -391,7 +416,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Service<wbr>Mode</a></span>
+        <span class="property-type"><a href="#servicemode">pulumi<wbr>Input<Service<wbr>Mode<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -400,7 +425,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Docker service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -409,7 +434,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#rollbackconfig_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">pulumi<wbr>Input<Service<wbr>Rollback<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See RollbackConfig below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -418,7 +443,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#updateconfig_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">pulumi<wbr>Input<Service<wbr>Update<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See UpdateConfig below for details.
 {{% /md %}}</dd></dl>
@@ -431,7 +456,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#task_spec_python" style="color: inherit; text-decoration: inherit;">task_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspec">Input[Service<wbr>Task<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See TaskSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -440,7 +465,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauth">Input[Service<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Auth below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -449,7 +474,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#converge_config_python" style="color: inherit; text-decoration: inherit;">converge_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">Input[Service<wbr>Converge<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Converge Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -458,7 +483,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpoint_spec_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">Input[Service<wbr>Endpoint<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See EndpointSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -467,7 +492,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">Sequence[Service<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicelabel">Input[Service<wbr>Label<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -476,7 +501,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemode">Input[Service<wbr>Mode<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -485,7 +510,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Docker service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -494,7 +519,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#rollback_config_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">Input[Service<wbr>Rollback<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See RollbackConfig below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -503,7 +528,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#update_config_python" style="color: inherit; text-decoration: inherit;">update_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">Input[Service<wbr>Update<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See UpdateConfig below for details.
 {{% /md %}}</dd></dl>
@@ -572,20 +597,31 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[ServiceAuthArgs]</span> = None<span class="p">, </span><span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[ServiceConvergeConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceEndpointSpecArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLabelArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[ServiceModeArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[ServiceRollbackConfigArgs]</span> = None<span class="p">, </span><span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[ServiceTaskSpecArgs]</span> = None<span class="p">, </span><span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[ServiceUpdateConfigArgs]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceAuthArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">converge_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceConvergeConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceEndpointSpecArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceLabelArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceModeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rollback_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceRollbackConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">task_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceTaskSpecArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceUpdateConfigArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -864,7 +900,7 @@ The following state arguments are supported:
 <a href="#state_auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth</a></span>
+        <span class="property-type"><a href="#serviceauth">pulumi<wbr>Input<Service<wbr>Auth<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Auth below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +909,7 @@ The following state arguments are supported:
 <a href="#state_convergeconfig_nodejs" style="color: inherit; text-decoration: inherit;">converge<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">pulumi<wbr>Input<Service<wbr>Converge<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Converge Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +918,7 @@ The following state arguments are supported:
 <a href="#state_endpointspec_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">pulumi<wbr>Input<Service<wbr>Endpoint<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See EndpointSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +927,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">Service<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#servicelabel">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Label<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -900,7 +936,7 @@ The following state arguments are supported:
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Service<wbr>Mode</a></span>
+        <span class="property-type"><a href="#servicemode">pulumi<wbr>Input<Service<wbr>Mode<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +945,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Docker service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +954,7 @@ The following state arguments are supported:
 <a href="#state_rollbackconfig_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">pulumi<wbr>Input<Service<wbr>Rollback<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See RollbackConfig below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +963,7 @@ The following state arguments are supported:
 <a href="#state_taskspec_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspec">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See TaskSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +972,7 @@ The following state arguments are supported:
 <a href="#state_updateconfig_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">pulumi<wbr>Input<Service<wbr>Update<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See UpdateConfig below for details.
 {{% /md %}}</dd></dl>
@@ -949,7 +985,7 @@ The following state arguments are supported:
 <a href="#state_auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauth">Service<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauth">Input[Service<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Auth below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -958,7 +994,7 @@ The following state arguments are supported:
 <a href="#state_converge_config_python" style="color: inherit; text-decoration: inherit;">converge_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceconvergeconfig">Service<wbr>Converge<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceconvergeconfig">Input[Service<wbr>Converge<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Converge Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +1003,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_spec_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspec">Service<wbr>Endpoint<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceendpointspec">Input[Service<wbr>Endpoint<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See EndpointSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -976,7 +1012,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelabel">Sequence[Service<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicelabel">Input[Service<wbr>Label<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +1021,7 @@ The following state arguments are supported:
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemode">Service<wbr>Mode<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemode">Input[Service<wbr>Mode<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +1030,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Docker service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1003,7 +1039,7 @@ The following state arguments are supported:
 <a href="#state_rollback_config_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicerollbackconfig">Service<wbr>Rollback<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicerollbackconfig">Input[Service<wbr>Rollback<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See RollbackConfig below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +1048,7 @@ The following state arguments are supported:
 <a href="#state_task_spec_python" style="color: inherit; text-decoration: inherit;">task_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspec">Service<wbr>Task<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspec">Input[Service<wbr>Task<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See TaskSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +1057,7 @@ The following state arguments are supported:
 <a href="#state_update_config_python" style="color: inherit; text-decoration: inherit;">update_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupdateconfig">Service<wbr>Update<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceupdateconfig">Input[Service<wbr>Update<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See UpdateConfig below for details.
 {{% /md %}}</dd></dl>
@@ -1107,7 +1143,7 @@ The following state arguments are supported:
 <a href="#serveraddress_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The address of the registry server
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1152,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_PASS` is also be checked.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1161,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
 {{% /md %}}</dd></dl>
@@ -1138,7 +1174,7 @@ The following state arguments are supported:
 <a href="#server_address_python" style="color: inherit; text-decoration: inherit;">server_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The address of the registry server
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1183,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_PASS` is also be checked.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1192,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username to use for authenticating to the registry. If this is blank, the `DOCKER_REGISTRY_USER` is also be checked.
 {{% /md %}}</dd></dl>
@@ -1217,7 +1253,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time between each the check to check docker endpoint `(ms|s|m|h)`. For example, to check if
 all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
@@ -1227,7 +1263,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timeout of the service to reach the desired state `(s|m)`. Default: `3m`.
 {{% /md %}}</dd></dl>
@@ -1240,7 +1276,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time between each the check to check docker endpoint `(ms|s|m|h)`. For example, to check if
 all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
@@ -1250,7 +1286,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timeout of the service to reach the desired state `(s|m)`. Default: `3m`.
 {{% /md %}}</dd></dl>
@@ -1309,7 +1345,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The mode of resolution to use for internal load balancing between tasks. `(vip|dnsrr)`. Default: `vip`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1354,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspecport">Service<wbr>Endpoint<wbr>Spec<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#serviceendpointspecport">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Endpoint<wbr>Spec<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd></dl>
@@ -1331,7 +1367,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The mode of resolution to use for internal load balancing between tasks. `(vip|dnsrr)`. Default: `vip`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1340,7 +1376,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpointspecport">Sequence[Service<wbr>Endpoint<wbr>Spec<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceendpointspecport">Input[Service<wbr>Endpoint<wbr>Spec<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See Ports below for details.
 {{% /md %}}</dd></dl>
@@ -1453,7 +1489,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#targetport_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port inside the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1498,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Docker service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1507,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protocol that can be used over this port: `tcp|udp|sctp`. Default: `tcp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1516,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#publishmode_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents the mode in which the port is to be published: `ingress|host`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1525,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#publishedport_nodejs" style="color: inherit; text-decoration: inherit;">published<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port on the swarm hosts. If not set the value of `target_port` will be used.
 {{% /md %}}</dd></dl>
@@ -1502,7 +1538,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#target_port_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port inside the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1547,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Docker service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1556,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protocol that can be used over this port: `tcp|udp|sctp`. Default: `tcp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1565,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#publish_mode_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents the mode in which the port is to be published: `ingress|host`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1574,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#published_port_python" style="color: inherit; text-decoration: inherit;">published_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port on the swarm hosts. If not set the value of `target_port` will be used.
 {{% /md %}}</dd></dl>
@@ -1597,7 +1633,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -1606,7 +1642,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -1619,7 +1655,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -1628,7 +1664,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -1687,7 +1723,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}set it to `true` to run the service in the global mode
 {{% /md %}}</dd><dt class="property-optional"
@@ -1696,7 +1732,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#replicated_nodejs" style="color: inherit; text-decoration: inherit;">replicated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated</a></span>
+        <span class="property-type"><a href="#servicemodereplicated">pulumi<wbr>Input<Service<wbr>Mode<wbr>Replicated<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}, which contains atm only the amount of `replicas`
 {{% /md %}}</dd></dl>
@@ -1709,7 +1745,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}set it to `true` to run the service in the global mode
 {{% /md %}}</dd><dt class="property-optional"
@@ -1718,7 +1754,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#replicated_python" style="color: inherit; text-decoration: inherit;">replicated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemodereplicated">Service<wbr>Mode<wbr>Replicated<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicemodereplicated">Input[Service<wbr>Mode<wbr>Replicated<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}, which contains atm only the amount of `replicas`
 {{% /md %}}</dd></dl>
@@ -1757,7 +1793,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1769,7 +1805,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1903,7 +1939,7 @@ casting and precision errors.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
 all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
@@ -1913,7 +1949,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#failureaction_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1958,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#maxfailureratio_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
 casting and precision errors.
@@ -1932,7 +1968,7 @@ casting and precision errors.
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +1977,7 @@ casting and precision errors.
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +1986,7 @@ casting and precision errors.
 <a href="#parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
 {{% /md %}}</dd></dl>
@@ -1963,7 +1999,7 @@ casting and precision errors.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
 all tasks are up when a service is created, or to check if all tasks are successfully updated on an update. Default: `7s`.
@@ -1973,7 +2009,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1982,7 +2018,7 @@ all tasks are up when a service is created, or to check if all tasks are success
 <a href="#max_failure_ratio_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
 casting and precision errors.
@@ -1992,7 +2028,7 @@ casting and precision errors.
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2001,7 +2037,7 @@ casting and precision errors.
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +2046,7 @@ casting and precision errors.
 <a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
 {{% /md %}}</dd></dl>
@@ -2177,7 +2213,7 @@ casting and precision errors.
 <a href="#containerspec_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspec">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See ContainerSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2186,7 +2222,7 @@ casting and precision errors.
 <a href="#forceupdate_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A counter that triggers an update even if no relevant parameters have been changed. See [Docker Spec](https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2231,7 @@ casting and precision errors.
 <a href="#logdriver_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver</a></span>
+        <span class="property-type"><a href="#servicetaskspeclogdriver">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Log Driver below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2240,7 @@ casting and precision errors.
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Ids of the networks in which the container will be put in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,7 +2249,7 @@ casting and precision errors.
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacement">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Placement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2222,7 +2258,7 @@ casting and precision errors.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources</a></span>
+        <span class="property-type"><a href="#servicetaskspecresources">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Resources below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2231,7 +2267,7 @@ casting and precision errors.
 <a href="#restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicetaskspecrestartpolicy">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Restart Policy below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2240,7 +2276,7 @@ casting and precision errors.
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Runtime is the type of runtime specified for the task executor. See [Docker Runtime](https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go).
 {{% /md %}}</dd></dl>
@@ -2253,7 +2289,7 @@ casting and precision errors.
 <a href="#container_spec_python" style="color: inherit; text-decoration: inherit;">container_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspec">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See ContainerSpec below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2298,7 @@ casting and precision errors.
 <a href="#force_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A counter that triggers an update even if no relevant parameters have been changed. See [Docker Spec](https://github.com/docker/swarmkit/blob/master/api/specs.proto#L126).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2307,7 @@ casting and precision errors.
 <a href="#log_driver_python" style="color: inherit; text-decoration: inherit;">log_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeclogdriver">Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeclogdriver">Input[Service<wbr>Task<wbr>Spec<wbr>Log<wbr>Driver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Log Driver below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2280,7 +2316,7 @@ casting and precision errors.
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Ids of the networks in which the container will be put in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2289,7 +2325,7 @@ casting and precision errors.
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacement">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacement">Input[Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Placement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2298,7 +2334,7 @@ casting and precision errors.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresources">Input[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Resources below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2307,7 +2343,7 @@ casting and precision errors.
 <a href="#restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecrestartpolicy">Input[Service<wbr>Task<wbr>Spec<wbr>Restart<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Restart Policy below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2316,7 +2352,7 @@ casting and precision errors.
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Runtime is the type of runtime specified for the task executor. See [Docker Runtime](https://github.com/moby/moby/blob/master/api/types/swarm/runtime.go).
 {{% /md %}}</dd></dl>
@@ -2697,7 +2733,7 @@ casting and precision errors.
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The image used to create the Docker service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2706,7 +2742,7 @@ casting and precision errors.
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Arguments to the command.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2715,7 +2751,7 @@ casting and precision errors.
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The command to be run in the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2724,7 +2760,7 @@ casting and precision errors.
 <a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See Configs below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2733,7 +2769,7 @@ casting and precision errors.
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2778,7 @@ casting and precision errors.
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See DNS Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2751,7 +2787,7 @@ casting and precision errors.
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A list of environment variables in the form VAR=value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2760,7 +2796,7 @@ casting and precision errors.
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of additional groups that the container process will run as.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2769,7 +2805,7 @@ casting and precision errors.
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2778,7 +2814,7 @@ casting and precision errors.
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname to use for the container, as a valid RFC 1123 hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2787,7 +2823,7 @@ casting and precision errors.
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechost">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2795,7 +2831,7 @@ casting and precision errors.
 <a href="#isolation_nodejs" style="color: inherit; text-decoration: inherit;">isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Isolation technology of the containers running the service. (Windows only). Valid values are: `default|process|hyperv`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2804,7 +2840,7 @@ casting and precision errors.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2813,7 +2849,7 @@ casting and precision errors.
 <a href="#mounts_nodejs" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2858,7 @@ casting and precision errors.
 <a href="#privileges_nodejs" style="color: inherit; text-decoration: inherit;">privileges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}See Privileges below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2831,7 +2867,7 @@ casting and precision errors.
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Mount the container's root filesystem as read only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2876,7 @@ casting and precision errors.
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See Secrets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2885,7 @@ casting and precision errors.
 <a href="#stopgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Grace<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amount of time to wait for the container to terminate before forcefully removing it `(ms|s|m|h)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2858,7 +2894,7 @@ casting and precision errors.
 <a href="#stopsignal_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Signal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Signal to stop the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2867,7 +2903,7 @@ casting and precision errors.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user inside the container.
 {{% /md %}}</dd></dl>
@@ -2880,7 +2916,7 @@ casting and precision errors.
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The image used to create the Docker service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2889,7 +2925,7 @@ casting and precision errors.
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Arguments to the command.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2898,7 +2934,7 @@ casting and precision errors.
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The command to be run in the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2907,7 +2943,7 @@ casting and precision errors.
 <a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecconfig">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Config<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See Configs below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2916,7 +2952,7 @@ casting and precision errors.
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The working directory for commands to run in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2925,7 +2961,7 @@ casting and precision errors.
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecdnsconfig">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Dns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See DNS Config below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2934,7 +2970,7 @@ casting and precision errors.
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of environment variables in the form VAR=value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2943,7 +2979,7 @@ casting and precision errors.
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of additional groups that the container process will run as.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2952,7 +2988,7 @@ casting and precision errors.
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechealthcheck">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Healthcheck below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2961,7 +2997,7 @@ casting and precision errors.
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname to use for the container, as a valid RFC 1123 hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2970,7 +3006,7 @@ casting and precision errors.
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspechost">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Host<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2978,7 +3014,7 @@ casting and precision errors.
 <a href="#isolation_python" style="color: inherit; text-decoration: inherit;">isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Isolation technology of the containers running the service. (Windows only). Valid values are: `default|process|hyperv`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2987,7 +3023,7 @@ casting and precision errors.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspeclabel">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Label<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2996,7 +3032,7 @@ casting and precision errors.
 <a href="#mounts_python" style="color: inherit; text-decoration: inherit;">mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmount">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See Mounts below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +3041,7 @@ casting and precision errors.
 <a href="#privileges_python" style="color: inherit; text-decoration: inherit;">privileges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivileges">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Privileges below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3014,7 +3050,7 @@ casting and precision errors.
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Mount the container's root filesystem as read only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3023,7 +3059,7 @@ casting and precision errors.
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecsecret">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Secret<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See Secrets below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3032,7 +3068,7 @@ casting and precision errors.
 <a href="#stop_grace_period_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>grace_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amount of time to wait for the container to terminate before forcefully removing it `(ms|s|m|h)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3041,7 +3077,7 @@ casting and precision errors.
 <a href="#stop_signal_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>signal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Signal to stop the container.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3050,7 +3086,7 @@ casting and precision errors.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user inside the container.
 {{% /md %}}</dd></dl>
@@ -3181,7 +3217,7 @@ casting and precision errors.
 <a href="#configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ConfigID represents the ID of the specific config.
 {{% /md %}}</dd><dt class="property-required"
@@ -3190,7 +3226,7 @@ casting and precision errors.
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. `/root/config/config.json`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3199,7 +3235,7 @@ casting and precision errors.
 <a href="#configname_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the config that this references, but internally it is just provided for lookup/display purposes
 {{% /md %}}</dd><dt class="property-optional"
@@ -3208,7 +3244,7 @@ casting and precision errors.
 <a href="#filegid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents the file GID. Defaults: `0`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3217,7 +3253,7 @@ casting and precision errors.
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3226,7 +3262,7 @@ casting and precision errors.
 <a href="#fileuid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents the file UID. Defaults: `0`
 {{% /md %}}</dd></dl>
@@ -3239,7 +3275,7 @@ casting and precision errors.
 <a href="#config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ConfigID represents the ID of the specific config.
 {{% /md %}}</dd><dt class="property-required"
@@ -3248,7 +3284,7 @@ casting and precision errors.
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the config data is written within the docker container, e.g. `/root/config/config.json`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3257,7 +3293,7 @@ casting and precision errors.
 <a href="#config_name_python" style="color: inherit; text-decoration: inherit;">config_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the config that this references, but internally it is just provided for lookup/display purposes
 {{% /md %}}</dd><dt class="property-optional"
@@ -3266,7 +3302,7 @@ casting and precision errors.
 <a href="#file_gid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents the file GID. Defaults: `0`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3275,7 +3311,7 @@ casting and precision errors.
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3284,7 +3320,7 @@ casting and precision errors.
 <a href="#file_uid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents the file UID. Defaults: `0`
 {{% /md %}}</dd></dl>
@@ -3361,7 +3397,7 @@ casting and precision errors.
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IP addresses of the name servers, for example, `8.8.8.8`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3370,7 +3406,7 @@ casting and precision errors.
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of internal resolver variables to be modified, for example, `debug`, `ndots:3`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3379,7 +3415,7 @@ casting and precision errors.
 <a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A search list for host-name lookup.
 {{% /md %}}</dd></dl>
@@ -3392,7 +3428,7 @@ casting and precision errors.
 <a href="#nameservers_python" style="color: inherit; text-decoration: inherit;">nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IP addresses of the name servers, for example, `8.8.8.8`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3401,7 +3437,7 @@ casting and precision errors.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of internal resolver variables to be modified, for example, `debug`, `ndots:3`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3410,7 +3446,7 @@ casting and precision errors.
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A search list for host-name lookup.
 {{% /md %}}</dd></dl>
@@ -3525,7 +3561,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
@@ -3535,7 +3571,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3544,7 +3580,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3553,7 +3589,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#startperiod_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3562,7 +3598,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd></dl>
@@ -3575,7 +3611,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Command to run to check health. For example, to run `curl -f http://localhost/health` set the
 command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
@@ -3585,7 +3621,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time between running the check `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3594,7 +3630,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Consecutive failures needed to report unhealthy. Default: `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3603,7 +3639,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#start_period_python" style="color: inherit; text-decoration: inherit;">start_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Start period for the container to initialize before counting retries towards unstable `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3612,7 +3648,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum time to allow one check to run `(ms|s|m|h)`. Default: `0s`.
 {{% /md %}}</dd></dl>
@@ -3671,7 +3707,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A list of hostname/IP mappings to add to the container's hosts file.
 {{% /md %}}</dd><dt class="property-required"
@@ -3680,7 +3716,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ip
 {{% /md %}}</dd></dl>
@@ -3693,7 +3729,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A list of hostname/IP mappings to add to the container's hosts file.
 {{% /md %}}</dd><dt class="property-required"
@@ -3702,7 +3738,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ip
 {{% /md %}}</dd></dl>
@@ -3761,7 +3797,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -3770,7 +3806,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -3783,7 +3819,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -3792,7 +3828,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -3941,7 +3977,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The container path.
 {{% /md %}}</dd><dt class="property-required"
@@ -3950,7 +3986,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SELinux type label
 {{% /md %}}</dd><dt class="property-optional"
@@ -3959,7 +3995,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#bindoptions_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3968,7 +4004,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Mount the container's root filesystem as read only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3977,7 +4013,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3986,7 +4022,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#tmpfsoptions_nodejs" style="color: inherit; text-decoration: inherit;">tmpfs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3995,7 +4031,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#volumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
 {{% /md %}}</dd></dl>
@@ -4008,7 +4044,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The container path.
 {{% /md %}}</dd><dt class="property-required"
@@ -4017,7 +4053,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SELinux type label
 {{% /md %}}</dd><dt class="property-optional"
@@ -4026,7 +4062,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#bind_options_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountbindoptions">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Bind<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `bind` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4035,7 +4071,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Mount the container's root filesystem as read only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4044,7 +4080,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The mount source (e.g., a volume name, a host path)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4053,7 +4089,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#tmpfs_options_python" style="color: inherit; text-decoration: inherit;">tmpfs_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmounttmpfsoptions">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Tmpfs<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `tmpf` type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4062,7 +4098,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#volume_options_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptions">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration for the `volume` type.
 {{% /md %}}</dd></dl>
@@ -4103,7 +4139,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#propagation_nodejs" style="color: inherit; text-decoration: inherit;">propagation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A propagation mode with the value.
 {{% /md %}}</dd></dl>
@@ -4116,7 +4152,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#propagation_python" style="color: inherit; text-decoration: inherit;">propagation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A propagation mode with the value.
 {{% /md %}}</dd></dl>
@@ -4175,7 +4211,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4184,7 +4220,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd></dl>
@@ -4197,7 +4233,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}See Mode below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4206,7 +4242,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size for the tmpfs mount in bytes.
 {{% /md %}}</dd></dl>
@@ -4297,7 +4333,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#drivername_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4305,7 +4341,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#driveroptions_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4313,7 +4349,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4322,7 +4358,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#nocopy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to populate volume with data from the target.
 {{% /md %}}</dd></dl>
@@ -4335,7 +4371,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#driver_name_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4343,7 +4379,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#driver_options_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4351,7 +4387,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Sequence[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecmountvolumeoptionslabel">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4360,7 +4396,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#no_copy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to populate volume with data from the target.
 {{% /md %}}</dd></dl>
@@ -4419,7 +4455,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -4428,7 +4464,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -4441,7 +4477,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the label
 {{% /md %}}</dd><dt class="property-required"
@@ -4450,7 +4486,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the label
 {{% /md %}}</dd></dl>
@@ -4509,7 +4545,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#credentialspec_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}For managed service account (Windows only)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4518,7 +4554,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#selinuxcontext_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SELinux labels of the container
 {{% /md %}}</dd></dl>
@@ -4531,7 +4567,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#credential_spec_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegescredentialspec">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Credential<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}For managed service account (Windows only)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4540,7 +4576,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#se_linux_context_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspeccontainerspecprivilegesselinuxcontext">Input[Service<wbr>Task<wbr>Spec<wbr>Container<wbr>Spec<wbr>Privileges<wbr>Se<wbr>Linux<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SELinux labels of the container
 {{% /md %}}</dd></dl>
@@ -4599,7 +4635,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Load credential spec from this file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4608,7 +4644,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Load credential spec from this value in the Windows registry.
 {{% /md %}}</dd></dl>
@@ -4621,7 +4657,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Load credential spec from this file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4630,7 +4666,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Load credential spec from this value in the Windows registry.
 {{% /md %}}</dd></dl>
@@ -4743,7 +4779,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#disable_nodejs" style="color: inherit; text-decoration: inherit;">disable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Disable SELinux
 {{% /md %}}</dd><dt class="property-optional"
@@ -4752,7 +4788,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SELinux level label
 {{% /md %}}</dd><dt class="property-optional"
@@ -4761,7 +4797,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SELinux role label
 {{% /md %}}</dd><dt class="property-optional"
@@ -4770,7 +4806,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SELinux type label
 {{% /md %}}</dd><dt class="property-optional"
@@ -4779,7 +4815,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user inside the container.
 {{% /md %}}</dd></dl>
@@ -4792,7 +4828,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#disable_python" style="color: inherit; text-decoration: inherit;">disable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Disable SELinux
 {{% /md %}}</dd><dt class="property-optional"
@@ -4801,7 +4837,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SELinux level label
 {{% /md %}}</dd><dt class="property-optional"
@@ -4810,7 +4846,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SELinux role label
 {{% /md %}}</dd><dt class="property-optional"
@@ -4819,7 +4855,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SELinux type label
 {{% /md %}}</dd><dt class="property-optional"
@@ -4828,7 +4864,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user inside the container.
 {{% /md %}}</dd></dl>
@@ -4959,7 +4995,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the secret data is written within the docker container, e.g. `/root/secret/secret.json`
 {{% /md %}}</dd><dt class="property-required"
@@ -4968,7 +5004,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ConfigID represents the ID of the specific secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4977,7 +5013,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#filegid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents the file GID. Defaults: `0`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4986,7 +5022,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4995,7 +5031,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#fileuid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents the file UID. Defaults: `0`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5004,7 +5040,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the secret that this references, but internally it is just provided for lookup/display purposes
 {{% /md %}}</dd></dl>
@@ -5017,7 +5053,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#file_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents the final filename in the filesystem. The specific target file that the secret data is written within the docker container, e.g. `/root/secret/secret.json`
 {{% /md %}}</dd><dt class="property-required"
@@ -5026,7 +5062,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ConfigID represents the ID of the specific secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5035,7 +5071,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#file_gid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents the file GID. Defaults: `0`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5044,7 +5080,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Represents the FileMode of the file. Defaults: `0444`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5053,7 +5089,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#file_uid_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents the file UID. Defaults: `0`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5062,7 +5098,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the secret that this references, but internally it is just provided for lookup/display purposes
 {{% /md %}}</dd></dl>
@@ -5121,7 +5157,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The logging driver to use. Either `(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5130,7 +5166,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The options for the logging driver, e.g.
 {{% /md %}}</dd></dl>
@@ -5143,7 +5179,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The logging driver to use. Either `(none|json-file|syslog|journald|gelf|fluentd|awslogs|splunk|etwlogs|gcplogs)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5152,7 +5188,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The options for the logging driver, e.g.
 {{% /md %}}</dd></dl>
@@ -5247,7 +5283,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of constraints. e.g.: `node.role==manager`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5256,7 +5292,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#maxreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of replicas for per node (default value is 0, which is unlimited)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5265,7 +5301,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#platforms_nodejs" style="color: inherit; text-decoration: inherit;">platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacementplatform">Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform[]</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacementplatform">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Platforms stores all the platforms that the service's image can run on
 {{% /md %}}</dd><dt class="property-optional"
@@ -5274,7 +5310,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#prefs_nodejs" style="color: inherit; text-decoration: inherit;">prefs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: `spread=node.role.manager`
 {{% /md %}}</dd></dl>
@@ -5287,7 +5323,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of constraints. e.g.: `node.role==manager`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5296,7 +5332,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of replicas for per node (default value is 0, which is unlimited)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5305,7 +5341,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#platforms_python" style="color: inherit; text-decoration: inherit;">platforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecplacementplatform">Sequence[Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetaskspecplacementplatform">Input[Service<wbr>Task<wbr>Spec<wbr>Placement<wbr>Platform<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Platforms stores all the platforms that the service's image can run on
 {{% /md %}}</dd><dt class="property-optional"
@@ -5314,7 +5350,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#prefs_python" style="color: inherit; text-decoration: inherit;">prefs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Preferences provide a way to make the scheduler aware of factors such as topology. They are provided in order from highest to lowest precedence, e.g.: `spread=node.role.manager`
 {{% /md %}}</dd></dl>
@@ -5373,7 +5409,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The architecture, e.g., `amd64`
 {{% /md %}}</dd><dt class="property-required"
@@ -5382,7 +5418,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operation system, e.g., `linux`
 {{% /md %}}</dd></dl>
@@ -5395,7 +5431,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The architecture, e.g., `amd64`
 {{% /md %}}</dd><dt class="property-required"
@@ -5404,7 +5440,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operation system, e.g., `linux`
 {{% /md %}}</dd></dl>
@@ -5463,7 +5499,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimits">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the resources which can be advertised by a node and requested by a task.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5472,7 +5508,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#reservation_nodejs" style="color: inherit; text-decoration: inherit;">reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservation">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An object describing the resources which can be advertised by a node and requested by a task.
 {{% /md %}}</dd></dl>
@@ -5485,7 +5521,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimits">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimits">Input[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the resources which can be advertised by a node and requested by a task.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5494,7 +5530,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#reservation_python" style="color: inherit; text-decoration: inherit;">reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservation">Input[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object describing the resources which can be advertised by a node and requested by a task.
 {{% /md %}}</dd></dl>
@@ -5571,7 +5607,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#genericresources_nodejs" style="color: inherit; text-decoration: inherit;">generic<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5580,7 +5616,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#memorybytes_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of memory in bytes the container allocates
 {{% /md %}}</dd><dt class="property-optional"
@@ -5589,7 +5625,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#nanocpus_nodejs" style="color: inherit; text-decoration: inherit;">nano<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
 {{% /md %}}</dd></dl>
@@ -5602,7 +5638,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#generic_resources_python" style="color: inherit; text-decoration: inherit;">generic_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourceslimitsgenericresources">Input[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Limits<wbr>Generic<wbr>Resources<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5611,7 +5647,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#memory_bytes_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of memory in bytes the container allocates
 {{% /md %}}</dd><dt class="property-optional"
@@ -5620,7 +5656,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#nano_cpus_python" style="color: inherit; text-decoration: inherit;">nano_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
 {{% /md %}}</dd></dl>
@@ -5679,7 +5715,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#discreteresourcesspecs_nodejs" style="color: inherit; text-decoration: inherit;">discrete<wbr>Resources<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The Integer resources, delimited by `=`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5688,7 +5724,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#namedresourcesspecs_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Resources<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The String resources, delimited by `=`
 {{% /md %}}</dd></dl>
@@ -5701,7 +5737,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#discrete_resources_specs_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>resources_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The Integer resources, delimited by `=`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5710,7 +5746,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#named_resources_specs_python" style="color: inherit; text-decoration: inherit;">named_<wbr>resources_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The String resources, delimited by `=`
 {{% /md %}}</dd></dl>
@@ -5787,7 +5823,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#genericresources_nodejs" style="color: inherit; text-decoration: inherit;">generic<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">pulumi<wbr>Input<Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5796,7 +5832,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#memorybytes_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of memory in bytes the container allocates
 {{% /md %}}</dd><dt class="property-optional"
@@ -5805,7 +5841,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#nanocpus_nodejs" style="color: inherit; text-decoration: inherit;">nano<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
 {{% /md %}}</dd></dl>
@@ -5818,7 +5854,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#generic_resources_python" style="color: inherit; text-decoration: inherit;">generic_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetaskspecresourcesreservationgenericresources">Input[Service<wbr>Task<wbr>Spec<wbr>Resources<wbr>Reservation<wbr>Generic<wbr>Resources<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}User-defined resources can be either Integer resources (e.g, SSD=3) or String resources (e.g, GPU=UUID1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5827,7 +5863,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#memory_bytes_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of memory in bytes the container allocates
 {{% /md %}}</dd><dt class="property-optional"
@@ -5836,7 +5872,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#nano_cpus_python" style="color: inherit; text-decoration: inherit;">nano_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}CPU shares in units of 1/1e9 (or 10^-9) of the CPU. Should be at least 1000000
 {{% /md %}}</dd></dl>
@@ -5895,7 +5931,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#discreteresourcesspecs_nodejs" style="color: inherit; text-decoration: inherit;">discrete<wbr>Resources<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The Integer resources, delimited by `=`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5904,7 +5940,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#namedresourcesspecs_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Resources<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The String resources, delimited by `=`
 {{% /md %}}</dd></dl>
@@ -5917,7 +5953,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#discrete_resources_specs_python" style="color: inherit; text-decoration: inherit;">discrete_<wbr>resources_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The Integer resources, delimited by `=`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5926,7 +5962,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#named_resources_specs_python" style="color: inherit; text-decoration: inherit;">named_<wbr>resources_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The String resources, delimited by `=`
 {{% /md %}}</dd></dl>
@@ -6021,7 +6057,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Condition for restart: `(none|on-failure|any)`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6030,7 +6066,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6039,7 +6075,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum attempts to restart a given container before giving up (default value is `0`, which is ignored)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6048,7 +6084,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time window used to evaluate the restart policy (default value is `0`, which is unbounded) `(ms|s|m|h)`
 {{% /md %}}</dd></dl>
@@ -6061,7 +6097,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Condition for restart: `(none|on-failure|any)`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6070,7 +6106,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delay between restart attempts `(ms|s|m|h)`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6079,7 +6115,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum attempts to restart a given container before giving up (default value is `0`, which is ignored)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6088,7 +6124,7 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 <a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time window used to evaluate the restart policy (default value is `0`, which is unbounded) `(ms|s|m|h)`
 {{% /md %}}</dd></dl>
@@ -6221,7 +6257,7 @@ casting and precision errors.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delay between updates `(ns|us|ms|s|m|h)`, e.g. `5s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6230,7 +6266,7 @@ casting and precision errors.
 <a href="#failureaction_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6239,7 +6275,7 @@ casting and precision errors.
 <a href="#maxfailureratio_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
 casting and precision errors.
@@ -6249,7 +6285,7 @@ casting and precision errors.
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6258,7 +6294,7 @@ casting and precision errors.
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6267,7 +6303,7 @@ casting and precision errors.
 <a href="#parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
 {{% /md %}}</dd></dl>
@@ -6280,7 +6316,7 @@ casting and precision errors.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delay between updates `(ns|us|ms|s|m|h)`, e.g. `5s`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6289,7 +6325,7 @@ casting and precision errors.
 <a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action on update failure: `pause|continue|rollback`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6298,7 +6334,7 @@ casting and precision errors.
 <a href="#max_failure_ratio_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The failure rate to tolerate during an update as `float`. **Important:** the `float`need to be wrapped in a `string` to avoid internal
 casting and precision errors.
@@ -6308,7 +6344,7 @@ casting and precision errors.
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Duration after each task update to monitor for failure `(ns|us|ms|s|m|h)`
 {{% /md %}}</dd><dt class="property-optional"
@@ -6317,7 +6353,7 @@ casting and precision errors.
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Update order either 'stop-first' or 'start-first'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6326,7 +6362,7 @@ casting and precision errors.
 <a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks to be updated in one iteration simultaneously (0 to update all at once).
 {{% /md %}}</dd></dl>
