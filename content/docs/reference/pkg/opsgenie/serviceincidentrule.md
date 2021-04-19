@@ -100,7 +100,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -260,19 +260,27 @@ const testServiceIncidentRule = new opsgenie.ServiceIncidentRule("testServiceInc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceIncidentRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIncidentRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceIncidentRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIncidentRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceIncidentRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">incident_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceIncidentRuleIncidentRuleArgs]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceIncidentRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">incident_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceIncidentRuleIncidentRuleArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceIncidentRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIncidentRuleArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceIncidentRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceIncidentRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIncidentRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceIncidentRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceIncidentRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIncidentRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceIncidentRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceIncidentRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceIncidentRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceIncidentRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -307,22 +315,32 @@ const testServiceIncidentRule = new opsgenie.ServiceIncidentRule("testServiceInc
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceIncidentRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -454,7 +472,7 @@ The ServiceIncidentRule resource accepts the following [input]({{< relref "/docs
 <a href="#incidentrules_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrule">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrule">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}This is the rule configuration for this incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -463,7 +481,7 @@ The ServiceIncidentRule resource accepts the following [input]({{< relref "/docs
 <a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the service associated
 {{% /md %}}</dd></dl>
@@ -476,7 +494,7 @@ The ServiceIncidentRule resource accepts the following [input]({{< relref "/docs
 <a href="#incident_rules_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrule">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrule">Input[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}This is the rule configuration for this incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -485,7 +503,7 @@ The ServiceIncidentRule resource accepts the following [input]({{< relref "/docs
 <a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the service associated
 {{% /md %}}</dd></dl>
@@ -554,20 +572,24 @@ Get an existing ServiceIncidentRule resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceIncidentRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceIncidentRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceIncidentRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceIncidentRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">incident_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceIncidentRuleIncidentRuleArgs]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceIncidentRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">incident_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceIncidentRuleIncidentRuleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ServiceIncidentRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIncidentRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceIncidentRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIncidentRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIncidentRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceIncidentRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIncidentRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceIncidentRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceIncidentRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceIncidentRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceIncidentRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -720,7 +742,7 @@ The following state arguments are supported:
 <a href="#state_incidentrules_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrule">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrule">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}This is the rule configuration for this incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +751,7 @@ The following state arguments are supported:
 <a href="#state_serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the service associated
 {{% /md %}}</dd></dl>
@@ -742,7 +764,7 @@ The following state arguments are supported:
 <a href="#state_incident_rules_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrule">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrule">Input[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}This is the rule configuration for this incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -751,7 +773,7 @@ The following state arguments are supported:
 <a href="#state_service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the service associated
 {{% /md %}}</dd></dl>
@@ -837,7 +859,7 @@ The following state arguments are supported:
 <a href="#incidentproperties_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property[]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Properties for incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +868,7 @@ The following state arguments are supported:
 <a href="#conditionmatchtype_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Match<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A Condition type, supported types are: "match-all", "match-any-condition", "match-all-conditions". Default: "match-all"
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +877,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to incident. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -868,7 +890,7 @@ The following state arguments are supported:
 <a href="#incident_properties_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentproperty">Input[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Properties for incident rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -877,7 +899,7 @@ The following state arguments are supported:
 <a href="#condition_match_type_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>match_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A Condition type, supported types are: "match-all", "match-any-condition", "match-all-conditions". Default: "match-all"
 {{% /md %}}</dd><dt class="property-optional"
@@ -886,7 +908,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentrulecondition">Input[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Conditions applied to incident. This is a block, structure is documented below.
 {{% /md %}}</dd></dl>
@@ -997,7 +1019,7 @@ The following state arguments are supported:
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
 {{% /md %}}</dd><dt class="property-required"
@@ -1006,7 +1028,7 @@ The following state arguments are supported:
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1037,7 @@ The following state arguments are supported:
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User defined value that will be compared with alert field according to the operation. Default: empty string
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1046,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1054,7 @@ The following state arguments are supported:
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default: false
 {{% /md %}}</dd></dl>
@@ -1045,7 +1067,7 @@ The following state arguments are supported:
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
 {{% /md %}}</dd><dt class="property-required"
@@ -1054,7 +1076,7 @@ The following state arguments are supported:
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1085,7 @@ The following state arguments are supported:
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User defined value that will be compared with alert field according to the operation. Default: empty string
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1094,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1080,7 +1102,7 @@ The following state arguments are supported:
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default: false
 {{% /md %}}</dd></dl>
@@ -1211,7 +1233,7 @@ The following state arguments are supported:
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Message that is to be passed to audience that is generally used to provide a content information about the alert.
 {{% /md %}}</dd><dt class="property-required"
@@ -1220,7 +1242,7 @@ The following state arguments are supported:
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Priority level of the alert. Possible values are P1, P2, P3, P4 and P5
 {{% /md %}}</dd><dt class="property-required"
@@ -1229,7 +1251,7 @@ The following state arguments are supported:
 <a href="#stakeholderproperties_nodejs" style="color: inherit; text-decoration: inherit;">stakeholder<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property[]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}DEtails about stakeholders for this rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1260,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description that is generally used to provide a detailed information about the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1269,7 @@ The following state arguments are supported:
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of key-value pairs to use as custom properties of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1278,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Tags of the alert.
 {{% /md %}}</dd></dl>
@@ -1269,7 +1291,7 @@ The following state arguments are supported:
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Message that is to be passed to audience that is generally used to provide a content information about the alert.
 {{% /md %}}</dd><dt class="property-required"
@@ -1278,7 +1300,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Priority level of the alert. Possible values are P1, P2, P3, P4 and P5
 {{% /md %}}</dd><dt class="property-required"
@@ -1287,7 +1309,7 @@ The following state arguments are supported:
 <a href="#stakeholder_properties_python" style="color: inherit; text-decoration: inherit;">stakeholder_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">Sequence[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceincidentruleincidentruleincidentpropertystakeholderproperty">Input[Service<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Rule<wbr>Incident<wbr>Property<wbr>Stakeholder<wbr>Property<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}DEtails about stakeholders for this rule. This is a block, structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1318,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description that is generally used to provide a detailed information about the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1327,7 @@ The following state arguments are supported:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of key-value pairs to use as custom properties of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1336,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags of the alert.
 {{% /md %}}</dd></dl>
@@ -1391,7 +1413,7 @@ The following state arguments are supported:
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Message that is to be passed to audience that is generally used to provide a content information about the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1400,7 +1422,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description that is generally used to provide a detailed information about the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1409,7 +1431,7 @@ The following state arguments are supported:
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Option to enable stakeholder notifications.Default value is true.
 {{% /md %}}</dd></dl>
@@ -1422,7 +1444,7 @@ The following state arguments are supported:
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Message that is to be passed to audience that is generally used to provide a content information about the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1453,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description that is generally used to provide a detailed information about the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1462,7 @@ The following state arguments are supported:
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Option to enable stakeholder notifications.Default value is true.
 {{% /md %}}</dd></dl>

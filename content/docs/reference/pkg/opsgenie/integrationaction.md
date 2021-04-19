@@ -11,15 +11,15 @@ meta_desc: "Documentation for the opsgenie.IntegrationAction resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages advanced actions for Integrations within Opsgenie. This applies for the following resources:
-* opsgenie.ApiIntegration
-* opsgenie.EmailIntegration
+* `opsgenie.ApiIntegration`
+* `opsgenie.EmailIntegration`
 
 The actions that are supported are:
-* create
-* close
-* acknowledge
-* add_note
-* ignore
+* `create`
+* `close`
+* `acknowledge`
+* `add_note`
+* `ignore`
 
 
 {{% examples %}}
@@ -258,7 +258,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -707,19 +707,31 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledges</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionAcknowledgeArgs]]</span> = None<span class="p">, </span><span class="nx">add_notes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionAddNoteArgs]]</span> = None<span class="p">, </span><span class="nx">closes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionCloseArgs]]</span> = None<span class="p">, </span><span class="nx">creates</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionCreateArgs]]</span> = None<span class="p">, </span><span class="nx">ignores</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionIgnoreArgs]]</span> = None<span class="p">, </span><span class="nx">integration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">acknowledges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionAcknowledgeArgs]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">add_notes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionAddNoteArgs]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">closes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionCloseArgs]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">creates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionCreateArgs]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">ignores</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionIgnoreArgs]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">integration_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAction</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAction</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -754,22 +766,32 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IntegrationActionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -963,7 +985,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#integrationid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the parent integration resource to bind to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +994,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#acknowledges_nodejs" style="color: inherit; text-decoration: inherit;">acknowledges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledge">Integration<wbr>Action<wbr>Acknowledge[]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledge">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Acknowledge<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +1002,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#addnotes_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnote">Integration<wbr>Action<wbr>Add<wbr>Note[]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnote">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -988,7 +1010,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#closes_nodejs" style="color: inherit; text-decoration: inherit;">closes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclose">Integration<wbr>Action<wbr>Close[]</a></span>
+        <span class="property-type"><a href="#integrationactionclose">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Close<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +1018,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#creates_nodejs" style="color: inherit; text-decoration: inherit;">creates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreate">Integration<wbr>Action<wbr>Create[]</a></span>
+        <span class="property-type"><a href="#integrationactioncreate">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Create<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +1026,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#ignores_nodejs" style="color: inherit; text-decoration: inherit;">ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignore">Integration<wbr>Action<wbr>Ignore[]</a></span>
+        <span class="property-type"><a href="#integrationactionignore">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Ignore<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1016,7 +1038,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#integration_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the parent integration resource to bind to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1025,7 +1047,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#acknowledges_python" style="color: inherit; text-decoration: inherit;">acknowledges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledge">Sequence[Integration<wbr>Action<wbr>Acknowledge<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledge">Input[Integration<wbr>Action<wbr>Acknowledge<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1055,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#add_notes_python" style="color: inherit; text-decoration: inherit;">add_<wbr>notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnote">Sequence[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnote">Input[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1063,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#closes_python" style="color: inherit; text-decoration: inherit;">closes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclose">Sequence[Integration<wbr>Action<wbr>Close<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionclose">Input[Integration<wbr>Action<wbr>Close<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1071,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#creates_python" style="color: inherit; text-decoration: inherit;">creates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreate">Sequence[Integration<wbr>Action<wbr>Create<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactioncreate">Input[Integration<wbr>Action<wbr>Create<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1079,7 @@ The IntegrationAction resource accepts the following [input]({{< relref "/docs/i
 <a href="#ignores_python" style="color: inherit; text-decoration: inherit;">ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignore">Sequence[Integration<wbr>Action<wbr>Ignore<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionignore">Input[Integration<wbr>Action<wbr>Ignore<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1125,20 +1147,28 @@ Get an existing IntegrationAction resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IntegrationActionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IntegrationAction</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IntegrationActionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IntegrationAction</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledges</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionAcknowledgeArgs]]</span> = None<span class="p">, </span><span class="nx">add_notes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionAddNoteArgs]]</span> = None<span class="p">, </span><span class="nx">closes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionCloseArgs]]</span> = None<span class="p">, </span><span class="nx">creates</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionCreateArgs]]</span> = None<span class="p">, </span><span class="nx">ignores</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionIgnoreArgs]]</span> = None<span class="p">, </span><span class="nx">integration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IntegrationAction</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">acknowledges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionAcknowledgeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">add_notes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionAddNoteArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">closes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionCloseArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">creates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionCreateArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ignores</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntegrationActionIgnoreArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">integration_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> IntegrationAction</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationAction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationActionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAction</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationAction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationActionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAction</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IntegrationAction</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IntegrationActionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IntegrationAction</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IntegrationActionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1353,7 +1383,7 @@ The following state arguments are supported:
 <a href="#state_acknowledges_nodejs" style="color: inherit; text-decoration: inherit;">acknowledges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledge">Integration<wbr>Action<wbr>Acknowledge[]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledge">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Acknowledge<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1391,7 @@ The following state arguments are supported:
 <a href="#state_addnotes_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnote">Integration<wbr>Action<wbr>Add<wbr>Note[]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnote">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1399,7 @@ The following state arguments are supported:
 <a href="#state_closes_nodejs" style="color: inherit; text-decoration: inherit;">closes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclose">Integration<wbr>Action<wbr>Close[]</a></span>
+        <span class="property-type"><a href="#integrationactionclose">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Close<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1407,7 @@ The following state arguments are supported:
 <a href="#state_creates_nodejs" style="color: inherit; text-decoration: inherit;">creates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreate">Integration<wbr>Action<wbr>Create[]</a></span>
+        <span class="property-type"><a href="#integrationactioncreate">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Create<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1415,7 @@ The following state arguments are supported:
 <a href="#state_ignores_nodejs" style="color: inherit; text-decoration: inherit;">ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignore">Integration<wbr>Action<wbr>Ignore[]</a></span>
+        <span class="property-type"><a href="#integrationactionignore">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Ignore<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1423,7 @@ The following state arguments are supported:
 <a href="#state_integrationid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the parent integration resource to bind to.
 {{% /md %}}</dd></dl>
@@ -1406,7 +1436,7 @@ The following state arguments are supported:
 <a href="#state_acknowledges_python" style="color: inherit; text-decoration: inherit;">acknowledges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledge">Sequence[Integration<wbr>Action<wbr>Acknowledge<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledge">Input[Integration<wbr>Action<wbr>Acknowledge<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1414,7 +1444,7 @@ The following state arguments are supported:
 <a href="#state_add_notes_python" style="color: inherit; text-decoration: inherit;">add_<wbr>notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnote">Sequence[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnote">Input[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1452,7 @@ The following state arguments are supported:
 <a href="#state_closes_python" style="color: inherit; text-decoration: inherit;">closes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclose">Sequence[Integration<wbr>Action<wbr>Close<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionclose">Input[Integration<wbr>Action<wbr>Close<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1430,7 +1460,7 @@ The following state arguments are supported:
 <a href="#state_creates_python" style="color: inherit; text-decoration: inherit;">creates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreate">Sequence[Integration<wbr>Action<wbr>Create<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactioncreate">Input[Integration<wbr>Action<wbr>Create<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1438,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_ignores_python" style="color: inherit; text-decoration: inherit;">ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignore">Sequence[Integration<wbr>Action<wbr>Ignore<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionignore">Input[Integration<wbr>Action<wbr>Ignore<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1476,7 @@ The following state arguments are supported:
 <a href="#state_integration_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the parent integration resource to bind to.
 {{% /md %}}</dd></dl>
@@ -1481,7 +1511,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
@@ -1502,7 +1532,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
@@ -1511,7 +1541,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -1520,7 +1550,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
@@ -1551,7 +1581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
@@ -1572,7 +1602,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
@@ -1581,7 +1611,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -1590,7 +1620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
@@ -1610,7 +1640,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,16 +1649,16 @@ The following state arguments are supported:
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefilter">Integration<wbr>Action<wbr>Acknowledge<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefilter">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -1640,34 +1670,34 @@ The following state arguments are supported:
 <a href="#note_nodejs" style="color: inherit; text-decoration: inherit;">note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Owner of the execution for integration action.
 {{% /md %}}</dd></dl>
@@ -1680,7 +1710,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1689,16 +1719,16 @@ The following state arguments are supported:
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefilter">Sequence[Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefilter">Input[Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -1710,34 +1740,34 @@ The following state arguments are supported:
 <a href="#note_python" style="color: inherit; text-decoration: inherit;">note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Owner of the execution for integration action.
 {{% /md %}}</dd></dl>
@@ -1754,7 +1784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
@@ -1775,7 +1805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
@@ -1794,16 +1824,16 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,16 +1845,16 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">Sequence[Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionacknowledgefiltercondition">Input[Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1880,7 +1910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1933,7 +1963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1944,7 +1974,7 @@ The following state arguments are supported:
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1952,7 +1982,7 @@ The following state arguments are supported:
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1960,7 +1990,7 @@ The following state arguments are supported:
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1968,7 +1998,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1976,7 +2006,7 @@ The following state arguments are supported:
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1984,9 +2014,9 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1997,7 +2027,7 @@ The following state arguments are supported:
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2005,7 +2035,7 @@ The following state arguments are supported:
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2043,7 @@ The following state arguments are supported:
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2051,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2059,7 @@ The following state arguments are supported:
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,9 +2067,9 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2063,7 +2093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
@@ -2084,7 +2114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
@@ -2093,7 +2123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -2102,7 +2132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
@@ -2133,7 +2163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
@@ -2154,7 +2184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
@@ -2163,7 +2193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -2172,7 +2202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
@@ -2192,7 +2222,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,16 +2231,16 @@ The following state arguments are supported:
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefilter">Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefilter">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2222,34 +2252,34 @@ The following state arguments are supported:
 <a href="#note_nodejs" style="color: inherit; text-decoration: inherit;">note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Owner of the execution for integration action.
 {{% /md %}}</dd></dl>
@@ -2262,7 +2292,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,16 +2301,16 @@ The following state arguments are supported:
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefilter">Sequence[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefilter">Input[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2292,34 +2322,34 @@ The following state arguments are supported:
 <a href="#note_python" style="color: inherit; text-decoration: inherit;">note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Owner of the execution for integration action.
 {{% /md %}}</dd></dl>
@@ -2336,7 +2366,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
@@ -2357,7 +2387,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
@@ -2376,16 +2406,16 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2397,16 +2427,16 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">Sequence[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionaddnotefiltercondition">Input[Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2462,7 +2492,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2515,7 +2545,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2526,7 +2556,7 @@ The following state arguments are supported:
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2534,7 +2564,7 @@ The following state arguments are supported:
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2542,7 +2572,7 @@ The following state arguments are supported:
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2550,7 +2580,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2558,7 +2588,7 @@ The following state arguments are supported:
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2566,9 +2596,9 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2579,7 +2609,7 @@ The following state arguments are supported:
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2587,7 +2617,7 @@ The following state arguments are supported:
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2625,7 @@ The following state arguments are supported:
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2603,7 +2633,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2611,7 +2641,7 @@ The following state arguments are supported:
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,9 +2649,9 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2645,7 +2675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
@@ -2666,7 +2696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
@@ -2675,7 +2705,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -2684,7 +2714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
@@ -2715,7 +2745,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
@@ -2736,7 +2766,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
@@ -2745,7 +2775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -2754,7 +2784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
@@ -2774,7 +2804,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,16 +2813,16 @@ The following state arguments are supported:
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefilter">Integration<wbr>Action<wbr>Close<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#integrationactionclosefilter">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2804,34 +2834,34 @@ The following state arguments are supported:
 <a href="#note_nodejs" style="color: inherit; text-decoration: inherit;">note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Owner of the execution for integration action.
 {{% /md %}}</dd></dl>
@@ -2844,7 +2874,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2853,16 +2883,16 @@ The following state arguments are supported:
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefilter">Sequence[Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionclosefilter">Input[Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -2874,34 +2904,34 @@ The following state arguments are supported:
 <a href="#note_python" style="color: inherit; text-decoration: inherit;">note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Owner of the execution for integration action.
 {{% /md %}}</dd></dl>
@@ -2918,7 +2948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
@@ -2939,7 +2969,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
@@ -2958,16 +2988,16 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefiltercondition">Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#integrationactionclosefiltercondition">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2979,16 +3009,16 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionclosefiltercondition">Sequence[Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionclosefiltercondition">Input[Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3044,7 +3074,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3097,7 +3127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3108,7 +3138,7 @@ The following state arguments are supported:
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3116,7 +3146,7 @@ The following state arguments are supported:
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3124,7 +3154,7 @@ The following state arguments are supported:
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3132,7 +3162,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3140,7 +3170,7 @@ The following state arguments are supported:
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3148,9 +3178,9 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3161,7 +3191,7 @@ The following state arguments are supported:
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3169,7 +3199,7 @@ The following state arguments are supported:
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3177,7 +3207,7 @@ The following state arguments are supported:
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3185,7 +3215,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3223,7 @@ The following state arguments are supported:
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,9 +3231,9 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3235,7 +3265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appendattachments_csharp">
@@ -3252,7 +3282,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom alert priority. e.g. {{message.substring(0,2)}}
+    <dd>{{% md %}}Custom alert priority. e.g. ``{{message.substring(0,2)}}``
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -3351,7 +3381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
@@ -3360,7 +3390,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
@@ -3405,7 +3435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
@@ -3444,7 +3474,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appendattachments_go">
@@ -3461,7 +3491,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom alert priority. e.g. {{message.substring(0,2)}}
+    <dd>{{% md %}}Custom alert priority. e.g. ``{{message.substring(0,2)}}``
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -3560,7 +3590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
@@ -3569,7 +3599,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
@@ -3614,7 +3644,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
@@ -3634,7 +3664,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3643,7 +3673,7 @@ The following state arguments are supported:
 <a href="#alertactions_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3651,16 +3681,16 @@ The following state arguments are supported:
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appendattachments_nodejs">
 <a href="#appendattachments_nodejs" style="color: inherit; text-decoration: inherit;">append<wbr>Attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3668,16 +3698,16 @@ The following state arguments are supported:
 <a href="#custompriority_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}Custom alert priority. e.g. {{message.substring(0,2)}}
+    <dd>{{% md %}}Custom alert priority. e.g. ``{{message.substring(0,2)}}``
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Detailed description of the alert, anything that may not have fit in the `message` field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3686,7 +3716,7 @@ The following state arguments are supported:
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The entity the alert is related to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3695,7 +3725,7 @@ The following state arguments are supported:
 <a href="#extraproperties_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Set of user defined properties specified as a map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3704,7 +3734,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefilter">Integration<wbr>Action<wbr>Create<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefilter">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -3716,7 +3746,7 @@ The following state arguments are supported:
 <a href="#ignorealertactionsfrompayload_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Alert<wbr>Actions<wbr>From<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3724,7 +3754,7 @@ The following state arguments are supported:
 <a href="#ignoreextrapropertiesfrompayload_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Extra<wbr>Properties<wbr>From<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3732,7 +3762,7 @@ The following state arguments are supported:
 <a href="#ignorerespondersfrompayload_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Responders<wbr>From<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If enabled, the integration will ignore responders sent in request payloads.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3741,7 +3771,7 @@ The following state arguments are supported:
 <a href="#ignoretagsfrompayload_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Tags<wbr>From<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3749,7 +3779,7 @@ The following state arguments are supported:
 <a href="#ignoreteamsfrompayload_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Teams<wbr>From<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If enabled, the integration will ignore teams sent in request payloads.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3758,7 +3788,7 @@ The following state arguments are supported:
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Alert text limited to 130 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3767,25 +3797,25 @@ The following state arguments are supported:
 <a href="#note_nodejs" style="color: inherit; text-decoration: inherit;">note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Alert priority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3794,7 +3824,7 @@ The following state arguments are supported:
 <a href="#responders_nodejs" style="color: inherit; text-decoration: inherit;">responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreateresponder">Integration<wbr>Action<wbr>Create<wbr>Responder[]</a></span>
+        <span class="property-type"><a href="#integrationactioncreateresponder">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Create<wbr>Responder<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}User, schedule, teams or escalation names to calculate which users will receive notifications of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3803,7 +3833,7 @@ The following state arguments are supported:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User defined field to specify source of action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3812,7 +3842,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Comma separated list of labels to be attached to the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3821,16 +3851,16 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Owner of the execution for integration action.
 {{% /md %}}</dd></dl>
@@ -3843,7 +3873,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3852,7 +3882,7 @@ The following state arguments are supported:
 <a href="#alert_actions_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3860,16 +3890,16 @@ The following state arguments are supported:
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}An identifier that is used for alert deduplication. Defaults to `{{alias}}`.
+    <dd>{{% md %}}An identifier that is used for alert deduplication. Default: `{{alias}}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="append_attachments_python">
 <a href="#append_attachments_python" style="color: inherit; text-decoration: inherit;">append_<wbr>attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3877,16 +3907,16 @@ The following state arguments are supported:
 <a href="#custom_priority_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}Custom alert priority. e.g. {{message.substring(0,2)}}
+    <dd>{{% md %}}Custom alert priority. e.g. ``{{message.substring(0,2)}}``
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Detailed description of the alert, anything that may not have fit in the `message` field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3895,7 +3925,7 @@ The following state arguments are supported:
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The entity the alert is related to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3904,7 +3934,7 @@ The following state arguments are supported:
 <a href="#extra_properties_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Set of user defined properties specified as a map.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3913,7 +3943,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefilter">Sequence[Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefilter">Input[Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -3925,7 +3955,7 @@ The following state arguments are supported:
 <a href="#ignore_alert_actions_from_payload_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>alert_<wbr>actions_<wbr>from_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +3963,7 @@ The following state arguments are supported:
 <a href="#ignore_extra_properties_from_payload_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>extra_<wbr>properties_<wbr>from_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3941,7 +3971,7 @@ The following state arguments are supported:
 <a href="#ignore_responders_from_payload_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>responders_<wbr>from_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If enabled, the integration will ignore responders sent in request payloads.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3950,7 +3980,7 @@ The following state arguments are supported:
 <a href="#ignore_tags_from_payload_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>tags_<wbr>from_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3958,7 +3988,7 @@ The following state arguments are supported:
 <a href="#ignore_teams_from_payload_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>teams_<wbr>from_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If enabled, the integration will ignore teams sent in request payloads.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3967,7 +3997,7 @@ The following state arguments are supported:
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Alert text limited to 130 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3976,25 +4006,25 @@ The following state arguments are supported:
 <a href="#note_python" style="color: inherit; text-decoration: inherit;">note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed.
+    <dd>{{% md %}}Additional alert action note.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Alert priority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4003,7 +4033,7 @@ The following state arguments are supported:
 <a href="#responders_python" style="color: inherit; text-decoration: inherit;">responders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreateresponder">Sequence[Integration<wbr>Action<wbr>Create<wbr>Responder<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactioncreateresponder">Input[Integration<wbr>Action<wbr>Create<wbr>Responder<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}User, schedule, teams or escalation names to calculate which users will receive notifications of the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4012,7 +4042,7 @@ The following state arguments are supported:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User defined field to specify source of action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4021,7 +4051,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of labels to be attached to the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4030,16 +4060,16 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Owner of the execution for integration action.
 {{% /md %}}</dd></dl>
@@ -4056,7 +4086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
@@ -4077,7 +4107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
@@ -4096,16 +4126,16 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefiltercondition">Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefiltercondition">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4117,16 +4147,16 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactioncreatefiltercondition">Sequence[Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactioncreatefiltercondition">Input[Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4182,7 +4212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4235,7 +4265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4246,7 +4276,7 @@ The following state arguments are supported:
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4254,7 +4284,7 @@ The following state arguments are supported:
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4262,7 +4292,7 @@ The following state arguments are supported:
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4270,7 +4300,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4278,7 +4308,7 @@ The following state arguments are supported:
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4286,9 +4316,9 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4299,7 +4329,7 @@ The following state arguments are supported:
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4307,7 +4337,7 @@ The following state arguments are supported:
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4315,7 +4345,7 @@ The following state arguments are supported:
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4323,7 +4353,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4331,7 +4361,7 @@ The following state arguments are supported:
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4339,9 +4369,9 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4365,7 +4395,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4387,7 +4417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4398,7 +4428,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the responder.
 {{% /md %}}</dd><dt class="property-required"
@@ -4407,9 +4437,9 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4420,7 +4450,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the responder.
 {{% /md %}}</dd><dt class="property-required"
@@ -4429,9 +4459,9 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4467,7 +4497,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -4476,7 +4506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4510,7 +4540,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -4519,7 +4549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4530,7 +4560,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4539,7 +4569,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefilter">Integration<wbr>Action<wbr>Ignore<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#integrationactionignorefilter">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -4551,18 +4581,18 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4573,7 +4603,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the integration action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4582,7 +4612,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefilter">Sequence[Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionignorefilter">Input[Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Used to specify rules for matching alerts and the filter type. Please note that depending on the integration type the field names in the filter conditions are:
 * For SNS integration: `actions`, `alias`, `entity`, `Message`, `recipients`, `responders`, `Subject`, `tags`, `teams`, `eventType`, `Timestamp`, `TopicArn`.
@@ -4594,18 +4624,18 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4620,7 +4650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
@@ -4641,7 +4671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
@@ -4660,16 +4690,16 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefiltercondition">Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#integrationactionignorefiltercondition">pulumi<wbr>Input<pulumi<wbr>Input<Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4681,16 +4711,16 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The responder type - can be escalation, team or user.
+    <dd>{{% md %}}The responder type - can be `escalation`, `team` or `user`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationactionignorefiltercondition">Sequence[Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#integrationactionignorefiltercondition">Input[Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4746,7 +4776,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4799,7 +4829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4810,7 +4840,7 @@ The following state arguments are supported:
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4818,7 +4848,7 @@ The following state arguments are supported:
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4826,7 +4856,7 @@ The following state arguments are supported:
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4834,7 +4864,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4842,7 +4872,7 @@ The following state arguments are supported:
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4850,9 +4880,9 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4863,7 +4893,7 @@ The following state arguments are supported:
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4871,7 +4901,7 @@ The following state arguments are supported:
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4879,7 +4909,7 @@ The following state arguments are supported:
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4887,7 +4917,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4895,7 +4925,7 @@ The following state arguments are supported:
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4903,9 +4933,9 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Defaults to `1`.
+    <dd>{{% md %}}Integer value that defines in which order the action will be performed. Default: `1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
