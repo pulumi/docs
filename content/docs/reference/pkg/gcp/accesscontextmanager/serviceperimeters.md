@@ -124,8 +124,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/accesscontextmanager"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/accesscontextmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -325,19 +325,27 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServicePerimeters</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServicePerimetersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServicePerimeters</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServicePerimetersArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServicePerimeters</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_perimeters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePerimetersServicePerimeterArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServicePerimeters</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">service_perimeters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServicePerimetersServicePerimeterArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServicePerimeters</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServicePerimetersArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicePerimeters</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServicePerimetersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServicePerimeters</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicePerimeters</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServicePerimetersArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServicePerimeters</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServicePerimeters</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServicePerimetersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServicePerimeters</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServicePerimetersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -372,22 +380,32 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServicePerimetersArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -396,7 +414,7 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -420,7 +438,7 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -523,7 +541,7 @@ Structure is documented below.
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
@@ -533,7 +551,7 @@ Format: accessPolicies/{policy_id}
 <a href="#serviceperimeters_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Perimeters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeter">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeter">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
 Structure is documented below.
@@ -547,7 +565,7 @@ Structure is documented below.
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
@@ -557,7 +575,7 @@ Format: accessPolicies/{policy_id}
 <a href="#service_perimeters_python" style="color: inherit; text-decoration: inherit;">service_<wbr>perimeters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeter">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeter">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
 Structure is documented below.
@@ -627,20 +645,24 @@ Get an existing ServicePerimeters resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServicePerimetersState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServicePerimeters</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServicePerimetersState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServicePerimeters</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_perimeters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePerimetersServicePerimeterArgs]]</span> = None<span class="p">) -&gt;</span> ServicePerimeters</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_perimeters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServicePerimetersServicePerimeterArgs]]]]</span> = None<span class="p">) -&gt;</span> ServicePerimeters</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicePerimeters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServicePerimetersState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServicePerimeters</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicePerimeters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServicePerimetersState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServicePerimeters</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServicePerimeters</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServicePerimetersState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServicePerimeters</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServicePerimetersState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -797,7 +819,7 @@ Structure is documented below.
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
@@ -807,7 +829,7 @@ Format: accessPolicies/{policy_id}
 <a href="#state_serviceperimeters_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Perimeters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeter">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeter">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
 Structure is documented below.
@@ -821,7 +843,7 @@ Structure is documented below.
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
@@ -831,7 +853,7 @@ Format: accessPolicies/{policy_id}
 <a href="#state_service_perimeters_python" style="color: inherit; text-decoration: inherit;">service_<wbr>perimeters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeter">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeter">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The desired Service Perimeters that should replace all existing Service Perimeters in the Access Policy.
 Structure is documented below.
@@ -1096,7 +1118,7 @@ bet set to True if any of the fields in the spec are set to non-default values.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
@@ -1107,7 +1129,7 @@ Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1138,7 @@ Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}-
 Time the AccessPolicy was created in UTC.
@@ -1126,7 +1148,7 @@ Time the AccessPolicy was created in UTC.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
@@ -1136,7 +1158,7 @@ behavior.
 <a href="#perimetertype_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -1160,7 +1182,7 @@ Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspec">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspec">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
@@ -1173,7 +1195,7 @@ Structure is documented below.
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatus">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatus">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
@@ -1185,7 +1207,7 @@ Structure is documented below.
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}-
 Time the AccessPolicy was updated in UTC.
@@ -1195,7 +1217,7 @@ Time the AccessPolicy was updated in UTC.
 <a href="#useexplicitdryrunspec_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Explicit<wbr>Dry<wbr>Run<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -1216,7 +1238,7 @@ bet set to True if any of the fields in the spec are set to non-default values.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
@@ -1227,7 +1249,7 @@ Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1236,7 +1258,7 @@ Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}-
 Time the AccessPolicy was created in UTC.
@@ -1246,7 +1268,7 @@ Time the AccessPolicy was created in UTC.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
@@ -1256,7 +1278,7 @@ behavior.
 <a href="#perimeter_type_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -1280,7 +1302,7 @@ Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspec">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspec">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
@@ -1293,7 +1315,7 @@ Structure is documented below.
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatus">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatus">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
@@ -1305,7 +1327,7 @@ Structure is documented below.
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}-
 Time the AccessPolicy was updated in UTC.
@@ -1315,7 +1337,7 @@ Time the AccessPolicy was updated in UTC.
 <a href="#use_explicit_dry_run_spec_python" style="color: inherit; text-decoration: inherit;">use_<wbr>explicit_<wbr>dry_<wbr>run_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -1506,7 +1528,7 @@ Structure is documented below.
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -1523,7 +1545,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -1536,7 +1558,7 @@ Structure is documented below.
 <a href="#ingresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -1549,7 +1571,7 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -1562,7 +1584,7 @@ the perimeter.
 <a href="#restrictedservices_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -1575,7 +1597,7 @@ restrictions.
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecvpcaccessibleservices">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -1590,7 +1612,7 @@ Structure is documented below.
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -1607,7 +1629,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egress_policies_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicy">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicy">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -1620,7 +1642,7 @@ Structure is documented below.
 <a href="#ingress_policies_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicy">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicy">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -1633,7 +1655,7 @@ Structure is documented below.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -1646,7 +1668,7 @@ the perimeter.
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -1659,7 +1681,7 @@ restrictions.
 <a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecvpcaccessibleservices">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -1726,7 +1748,7 @@ Structure is documented below.
 <a href="#egressfrom_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressfrom">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -1736,7 +1758,7 @@ Structure is documented below.
 <a href="#egressto_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressto">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -1751,7 +1773,7 @@ Structure is documented below.
 <a href="#egress_from_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressfrom">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -1761,7 +1783,7 @@ Structure is documented below.
 <a href="#egress_to_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegressto">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -1832,7 +1854,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this `EgressPolicy`.
 Should be in the format of email address. The email address should
@@ -1843,7 +1865,7 @@ represent individual user or service account only.
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of `identities` field will
@@ -1859,7 +1881,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this `EgressPolicy`.
 Should be in the format of email address. The email address should
@@ -1870,7 +1892,7 @@ represent individual user or service account only.
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of `identities` field will
@@ -1944,7 +1966,7 @@ the perimeter.
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperation">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -1955,7 +1977,7 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -1972,7 +1994,7 @@ the perimeter.
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperation">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperation">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -1983,7 +2005,7 @@ Structure is documented below.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -2058,7 +2080,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -2071,7 +2093,7 @@ Structure is documented below.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the `IngressPolicy` or
 `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
@@ -2086,7 +2108,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecegresspolicyegresstooperationmethodselector">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -2099,7 +2121,7 @@ Structure is documented below.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the `IngressPolicy` or
 `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
@@ -2166,7 +2188,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding
 `serviceName` in `ApiOperation`. If `*` used as value for method,
@@ -2177,7 +2199,7 @@ then ALL methods and permissions are allowed.
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value for permission should be a valid Cloud IAM permission for the
 corresponding `serviceName` in `ApiOperation`.
@@ -2191,7 +2213,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding
 `serviceName` in `ApiOperation`. If `*` used as value for method,
@@ -2202,7 +2224,7 @@ then ALL methods and permissions are allowed.
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value for permission should be a valid Cloud IAM permission for the
 corresponding `serviceName` in `ApiOperation`.
@@ -2270,7 +2292,7 @@ Structure is documented below.
 <a href="#ingressfrom_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfrom">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -2281,7 +2303,7 @@ Structure is documented below.
 <a href="#ingressto_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressto">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -2296,7 +2318,7 @@ Structure is documented below.
 <a href="#ingress_from_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfrom">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -2307,7 +2329,7 @@ Structure is documented below.
 <a href="#ingress_to_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressto">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -2398,7 +2420,7 @@ Structure is documented below.
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this `EgressPolicy`.
 Should be in the format of email address. The email address should
@@ -2409,7 +2431,7 @@ represent individual user or service account only.
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of `identities` field will
@@ -2421,7 +2443,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfromsource">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfromsource">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -2435,7 +2457,7 @@ Structure is documented below.
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this `EgressPolicy`.
 Should be in the format of email address. The email address should
@@ -2446,7 +2468,7 @@ represent individual user or service account only.
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of `identities` field will
@@ -2458,7 +2480,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfromsource">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingressfromsource">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -2542,7 +2564,7 @@ of allowing all Google Cloud resources only is not supported.
 <a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An `AccessLevel` resource name that allow resources within the
 `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed
@@ -2558,7 +2580,7 @@ If * is specified, then all IngressSources will be allowed.
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A Google Cloud resource that is allowed to ingress the perimeter.
 Requests from these resources will be allowed to access perimeter data.
@@ -2576,7 +2598,7 @@ of allowing all Google Cloud resources only is not supported.
 <a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An `AccessLevel` resource name that allow resources within the
 `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed
@@ -2592,7 +2614,7 @@ If * is specified, then all IngressSources will be allowed.
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A Google Cloud resource that is allowed to ingress the perimeter.
 Requests from these resources will be allowed to access perimeter data.
@@ -2668,7 +2690,7 @@ the perimeter.
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperation">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -2679,7 +2701,7 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -2696,7 +2718,7 @@ the perimeter.
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperation">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperation">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -2707,7 +2729,7 @@ Structure is documented below.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -2782,7 +2804,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -2795,7 +2817,7 @@ Structure is documented below.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the `IngressPolicy` or
 `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
@@ -2810,7 +2832,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterspecingresspolicyingresstooperationmethodselector">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -2823,7 +2845,7 @@ Structure is documented below.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the `IngressPolicy` or
 `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
@@ -2890,7 +2912,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding
 `serviceName` in `ApiOperation`. If `*` used as value for method,
@@ -2901,7 +2923,7 @@ then ALL methods and permissions are allowed.
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value for permission should be a valid Cloud IAM permission for the
 corresponding `serviceName` in `ApiOperation`.
@@ -2915,7 +2937,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding
 `serviceName` in `ApiOperation`. If `*` used as value for method,
@@ -2926,7 +2948,7 @@ then ALL methods and permissions are allowed.
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value for permission should be a valid Cloud IAM permission for the
 corresponding `serviceName` in `ApiOperation`.
@@ -2990,7 +3012,7 @@ list of APIs specified in 'allowedServices'.
 <a href="#allowedservices_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
@@ -3000,7 +3022,7 @@ Must be empty unless `enableRestriction` is True.
 <a href="#enablerestriction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
@@ -3014,7 +3036,7 @@ list of APIs specified in 'allowedServices'.
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
@@ -3024,7 +3046,7 @@ Must be empty unless `enableRestriction` is True.
 <a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
@@ -3208,7 +3230,7 @@ Structure is documented below.
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -3225,7 +3247,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -3238,7 +3260,7 @@ Structure is documented below.
 <a href="#ingresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicy">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -3251,7 +3273,7 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -3264,7 +3286,7 @@ the perimeter.
 <a href="#restrictedservices_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -3277,7 +3299,7 @@ restrictions.
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusvpcaccessibleservices">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -3292,7 +3314,7 @@ Structure is documented below.
 <a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -3309,7 +3331,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egress_policies_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicy">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicy">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -3322,7 +3344,7 @@ Structure is documented below.
 <a href="#ingress_policies_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicy">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicy">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -3335,7 +3357,7 @@ Structure is documented below.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -3348,7 +3370,7 @@ the perimeter.
 <a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -3361,7 +3383,7 @@ restrictions.
 <a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusvpcaccessibleservices">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -3428,7 +3450,7 @@ Structure is documented below.
 <a href="#egressfrom_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressfrom">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -3438,7 +3460,7 @@ Structure is documented below.
 <a href="#egressto_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressto">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -3453,7 +3475,7 @@ Structure is documented below.
 <a href="#egress_from_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressfrom">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -3463,7 +3485,7 @@ Structure is documented below.
 <a href="#egress_to_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegressto">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -3534,7 +3556,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this `EgressPolicy`.
 Should be in the format of email address. The email address should
@@ -3545,7 +3567,7 @@ represent individual user or service account only.
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of `identities` field will
@@ -3561,7 +3583,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this `EgressPolicy`.
 Should be in the format of email address. The email address should
@@ -3572,7 +3594,7 @@ represent individual user or service account only.
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of `identities` field will
@@ -3646,7 +3668,7 @@ the perimeter.
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -3657,7 +3679,7 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -3674,7 +3696,7 @@ the perimeter.
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperation">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -3685,7 +3707,7 @@ Structure is documented below.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -3760,7 +3782,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -3773,7 +3795,7 @@ Structure is documented below.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the `IngressPolicy` or
 `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
@@ -3788,7 +3810,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusegresspolicyegresstooperationmethodselector">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -3801,7 +3823,7 @@ Structure is documented below.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the `IngressPolicy` or
 `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
@@ -3868,7 +3890,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding
 `serviceName` in `ApiOperation`. If `*` used as value for method,
@@ -3879,7 +3901,7 @@ then ALL methods and permissions are allowed.
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value for permission should be a valid Cloud IAM permission for the
 corresponding `serviceName` in `ApiOperation`.
@@ -3893,7 +3915,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding
 `serviceName` in `ApiOperation`. If `*` used as value for method,
@@ -3904,7 +3926,7 @@ then ALL methods and permissions are allowed.
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value for permission should be a valid Cloud IAM permission for the
 corresponding `serviceName` in `ApiOperation`.
@@ -3972,7 +3994,7 @@ Structure is documented below.
 <a href="#ingressfrom_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfrom">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -3983,7 +4005,7 @@ Structure is documented below.
 <a href="#ingressto_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressto">pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -3998,7 +4020,7 @@ Structure is documented below.
 <a href="#ingress_from_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfrom">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -4009,7 +4031,7 @@ Structure is documented below.
 <a href="#ingress_to_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressto">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -4100,7 +4122,7 @@ Structure is documented below.
 <a href="#identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this `EgressPolicy`.
 Should be in the format of email address. The email address should
@@ -4111,7 +4133,7 @@ represent individual user or service account only.
 <a href="#identitytype_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of `identities` field will
@@ -4123,7 +4145,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -4137,7 +4159,7 @@ Structure is documented below.
 <a href="#identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of identities that are allowed access through this `EgressPolicy`.
 Should be in the format of email address. The email address should
@@ -4148,7 +4170,7 @@ represent individual user or service account only.
 <a href="#identity_type_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of `identities` field will
@@ -4160,7 +4182,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingressfromsource">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -4244,7 +4266,7 @@ of allowing all Google Cloud resources only is not supported.
 <a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An `AccessLevel` resource name that allow resources within the
 `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed
@@ -4260,7 +4282,7 @@ If * is specified, then all IngressSources will be allowed.
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A Google Cloud resource that is allowed to ingress the perimeter.
 Requests from these resources will be allowed to access perimeter data.
@@ -4278,7 +4300,7 @@ of allowing all Google Cloud resources only is not supported.
 <a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An `AccessLevel` resource name that allow resources within the
 `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed
@@ -4294,7 +4316,7 @@ If * is specified, then all IngressSources will be allowed.
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A Google Cloud resource that is allowed to ingress the perimeter.
 Requests from these resources will be allowed to access perimeter data.
@@ -4370,7 +4392,7 @@ the perimeter.
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -4381,7 +4403,7 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -4398,7 +4420,7 @@ the perimeter.
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperation">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -4409,7 +4431,7 @@ Structure is documented below.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resources, currently only projects in the form
 `projects/<projectnumber>`, that match this to stanza. A request matches
@@ -4484,7 +4506,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -4497,7 +4519,7 @@ Structure is documented below.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the `IngressPolicy` or
 `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
@@ -4512,7 +4534,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">Sequence[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimetersserviceperimeterstatusingresspolicyingresstooperationmethodselector">Input[Service<wbr>Perimeters<wbr>Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -4525,7 +4547,7 @@ Structure is documented below.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the API whose methods or permissions the `IngressPolicy` or
 `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
@@ -4592,7 +4614,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding
 `serviceName` in `ApiOperation`. If `*` used as value for method,
@@ -4603,7 +4625,7 @@ then ALL methods and permissions are allowed.
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value for permission should be a valid Cloud IAM permission for the
 corresponding `serviceName` in `ApiOperation`.
@@ -4617,7 +4639,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value for `method` should be a valid method name for the corresponding
 `serviceName` in `ApiOperation`. If `*` used as value for method,
@@ -4628,7 +4650,7 @@ then ALL methods and permissions are allowed.
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value for permission should be a valid Cloud IAM permission for the
 corresponding `serviceName` in `ApiOperation`.
@@ -4692,7 +4714,7 @@ list of APIs specified in 'allowedServices'.
 <a href="#allowedservices_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
@@ -4702,7 +4724,7 @@ Must be empty unless `enableRestriction` is True.
 <a href="#enablerestriction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
@@ -4716,7 +4738,7 @@ list of APIs specified in 'allowedServices'.
 <a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
@@ -4726,7 +4748,7 @@ Must be empty unless `enableRestriction` is True.
 <a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.

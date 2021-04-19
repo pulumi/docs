@@ -98,10 +98,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -241,19 +241,39 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataTransferConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataTransferConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataTransferConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataTransferConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataTransferConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_preferences</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigEmailPreferencesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_options</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigScheduleOptionsArgs]</span> = None<span class="p">, </span><span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigSensitiveParamsArgs]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DataTransferConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                       <span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                       <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">email_preferences</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataTransferConfigEmailPreferencesArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">schedule_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataTransferConfigScheduleOptionsArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataTransferConfigSensitiveParamsArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DataTransferConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataTransferConfigArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataTransferConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataTransferConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataTransferConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataTransferConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataTransferConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataTransferConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataTransferConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataTransferConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataTransferConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DataTransferConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -288,22 +308,32 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DataTransferConfigArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -312,7 +342,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -336,7 +366,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -701,7 +731,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
 {{% /md %}}</dd><dt class="property-required"
@@ -710,7 +740,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#destinationdatasetid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-required"
@@ -719,7 +749,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
 {{% /md %}}</dd><dt class="property-required"
@@ -728,7 +758,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -737,7 +767,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#datarefreshwindowdays_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Refresh<wbr>Window<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days to look back to automatically refresh the data.
 For example, if dataRefreshWindowDays = 10, then every day BigQuery
@@ -750,7 +780,7 @@ Set the value to 0 to use the default value.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +789,7 @@ Set the value to 0 to use the default value.
 <a href="#emailpreferences_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">pulumi.<wbr>Input<Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
@@ -770,7 +800,7 @@ Structure is documented below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
@@ -780,7 +810,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
 <a href="#notificationpubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
@@ -790,7 +820,7 @@ associated with this transfer config finish.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -800,7 +830,7 @@ If it is not provided, the provider project is used.
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
 schedule, this should be empty. If it is empty, the default value for
@@ -816,7 +846,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 <a href="#scheduleoptions_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</a></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">pulumi.<wbr>Input<Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
@@ -826,7 +856,7 @@ Structure is documented below.
 <a href="#sensitiveparams_nodejs" style="color: inherit; text-decoration: inherit;">sensitive<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</a></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">pulumi.<wbr>Input<Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
 resource. This block contains the parameters which contain secrets or passwords so that they can be marked
@@ -841,7 +871,7 @@ Structure is documented below.
 <a href="#serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
@@ -856,7 +886,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
 {{% /md %}}</dd><dt class="property-required"
@@ -865,7 +895,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#destination_dataset_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-required"
@@ -874,7 +904,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
 {{% /md %}}</dd><dt class="property-required"
@@ -883,7 +913,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +922,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#data_refresh_window_days_python" style="color: inherit; text-decoration: inherit;">data_<wbr>refresh_<wbr>window_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days to look back to automatically refresh the data.
 For example, if dataRefreshWindowDays = 10, then every day BigQuery
@@ -905,7 +935,7 @@ Set the value to 0 to use the default value.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +944,7 @@ Set the value to 0 to use the default value.
 <a href="#email_preferences_python" style="color: inherit; text-decoration: inherit;">email_<wbr>preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Input[Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
@@ -925,7 +955,7 @@ Structure is documented below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
@@ -935,7 +965,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
 <a href="#notification_pubsub_topic_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
@@ -945,7 +975,7 @@ associated with this transfer config finish.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -955,7 +985,7 @@ If it is not provided, the provider project is used.
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
 schedule, this should be empty. If it is empty, the default value for
@@ -971,7 +1001,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 <a href="#schedule_options_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Input[Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
@@ -981,7 +1011,7 @@ Structure is documented below.
 <a href="#sensitive_params_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Input[Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
 resource. This block contains the parameters which contain secrets or passwords so that they can be marked
@@ -996,7 +1026,7 @@ Structure is documented below.
 <a href="#service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
@@ -1111,20 +1141,37 @@ Get an existing DataTransferConfig resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DataTransferConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DataTransferConfig</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DataTransferConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DataTransferConfig</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_preferences</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigEmailPreferencesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_options</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigScheduleOptionsArgs]</span> = None<span class="p">, </span><span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[DataTransferConfigSensitiveParamsArgs]</span> = None<span class="p">, </span><span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataTransferConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">data_refresh_window_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_dataset_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">email_preferences</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataTransferConfigEmailPreferencesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">notification_pubsub_topic</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">params</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">schedule_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataTransferConfigScheduleOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">sensitive_params</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataTransferConfigSensitiveParamsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">service_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> DataTransferConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataTransferConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DataTransferConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataTransferConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataTransferConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DataTransferConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataTransferConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DataTransferConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DataTransferConfigState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DataTransferConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DataTransferConfigState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1565,7 +1612,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#state_datarefreshwindowdays_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Refresh<wbr>Window<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days to look back to automatically refresh the data.
 For example, if dataRefreshWindowDays = 10, then every day BigQuery
@@ -1578,7 +1625,7 @@ Set the value to 0 to use the default value.
 <a href="#state_datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1587,7 +1634,7 @@ Set the value to 0 to use the default value.
 <a href="#state_destinationdatasetid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1596,7 +1643,7 @@ Set the value to 0 to use the default value.
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1652,7 @@ Set the value to 0 to use the default value.
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1661,7 @@ Set the value to 0 to use the default value.
 <a href="#state_emailpreferences_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</a></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">pulumi.<wbr>Input<Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
@@ -1625,7 +1672,7 @@ Structure is documented below.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
@@ -1635,7 +1682,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
@@ -1646,7 +1693,7 @@ required. The name is ignored when creating a transfer config.
 <a href="#state_notificationpubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
@@ -1656,7 +1703,7 @@ associated with this transfer config finish.
 <a href="#state_params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1665,7 +1712,7 @@ associated with this transfer config finish.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1675,7 +1722,7 @@ If it is not provided, the provider project is used.
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
 schedule, this should be empty. If it is empty, the default value for
@@ -1691,7 +1738,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 <a href="#state_scheduleoptions_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</a></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">pulumi.<wbr>Input<Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
@@ -1701,7 +1748,7 @@ Structure is documented below.
 <a href="#state_sensitiveparams_nodejs" style="color: inherit; text-decoration: inherit;">sensitive<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</a></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">pulumi.<wbr>Input<Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
 resource. This block contains the parameters which contain secrets or passwords so that they can be marked
@@ -1716,7 +1763,7 @@ Structure is documented below.
 <a href="#state_serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
@@ -1731,7 +1778,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#state_data_refresh_window_days_python" style="color: inherit; text-decoration: inherit;">data_<wbr>refresh_<wbr>window_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days to look back to automatically refresh the data.
 For example, if dataRefreshWindowDays = 10, then every day BigQuery
@@ -1744,7 +1791,7 @@ Set the value to 0 to use the default value.
 <a href="#state_data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1753,7 +1800,7 @@ Set the value to 0 to use the default value.
 <a href="#state_destination_dataset_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1762,7 +1809,7 @@ Set the value to 0 to use the default value.
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1771,7 +1818,7 @@ Set the value to 0 to use the default value.
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1780,7 +1827,7 @@ Set the value to 0 to use the default value.
 <a href="#state_email_preferences_python" style="color: inherit; text-decoration: inherit;">email_<wbr>preferences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args</a></span>
+        <span class="property-type"><a href="#datatransferconfigemailpreferences">Input[Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
@@ -1791,7 +1838,7 @@ Structure is documented below.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
@@ -1801,7 +1848,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
@@ -1812,7 +1859,7 @@ required. The name is ignored when creating a transfer config.
 <a href="#state_notification_pubsub_topic_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
@@ -1822,7 +1869,7 @@ associated with this transfer config finish.
 <a href="#state_params_python" style="color: inherit; text-decoration: inherit;">params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1831,7 +1878,7 @@ associated with this transfer config finish.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1841,7 +1888,7 @@ If it is not provided, the provider project is used.
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data transfer schedule. If the data source does not support a custom
 schedule, this should be empty. If it is empty, the default value for
@@ -1857,7 +1904,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 <a href="#state_schedule_options_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#datatransferconfigscheduleoptions">Input[Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
@@ -1867,7 +1914,7 @@ Structure is documented below.
 <a href="#state_sensitive_params_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#datatransferconfigsensitiveparams">Input[Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Different parameters are configured primarily using the the `params` field on this
 resource. This block contains the parameters which contain secrets or passwords so that they can be marked
@@ -1882,7 +1929,7 @@ Structure is documented below.
 <a href="#state_service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
@@ -1934,7 +1981,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#enablefailureemail_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Failure<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
 {{% /md %}}</dd></dl>
@@ -1947,7 +1994,7 @@ requesting user calling this API has permissions to act as this service account.
 <a href="#enable_failure_email_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>failure_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
 {{% /md %}}</dd></dl>
@@ -2046,7 +2093,7 @@ limited by this option.
 <a href="#disableautoscheduling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Auto<wbr>Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, automatic scheduling of data transfer runs for this
 configuration will be disabled. The runs can be started on ad-hoc
@@ -2059,7 +2106,7 @@ be ignored.
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines time to stop scheduling transfer runs. A transfer run cannot be
 scheduled at or after the end time. The end time can be changed at any
@@ -2071,7 +2118,7 @@ limited by this option.
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies time to start scheduling transfer runs. The first run will be
 scheduled at or after the start time according to a recurrence pattern
@@ -2088,7 +2135,7 @@ limited by this option.
 <a href="#disable_auto_scheduling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>auto_<wbr>scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, automatic scheduling of data transfer runs for this
 configuration will be disabled. The runs can be started on ad-hoc
@@ -2101,7 +2148,7 @@ be ignored.
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines time to stop scheduling transfer runs. A transfer run cannot be
 scheduled at or after the end time. The end time can be changed at any
@@ -2113,7 +2160,7 @@ limited by this option.
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies time to start scheduling transfer runs. The first run will be
 scheduled at or after the start time according to a recurrence pattern
@@ -2160,7 +2207,7 @@ limited by this option.
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
 **Note**: This property is sensitive and will not be displayed in the plan.
@@ -2174,7 +2221,7 @@ limited by this option.
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
 **Note**: This property is sensitive and will not be displayed in the plan.

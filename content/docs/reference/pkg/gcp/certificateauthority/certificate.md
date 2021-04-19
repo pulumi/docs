@@ -206,19 +206,33 @@ const _default = new gcp.certificateauthority.Certificate("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[CertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateConfigArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -253,22 +267,32 @@ const _default = new gcp.certificateauthority.Certificate("default", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -277,7 +301,7 @@ const _default = new gcp.certificateauthority.Certificate("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -301,7 +325,7 @@ const _default = new gcp.certificateauthority.Certificate("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -518,7 +542,7 @@ If it is not provided, the provider project is used.
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
 {{% /md %}}</dd><dt class="property-required"
@@ -527,7 +551,7 @@ If it is not provided, the provider project is used.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
@@ -537,7 +561,7 @@ running `gcloud beta privateca locations list`.
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfig">pulumi.<wbr>Input<Certificate<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -547,7 +571,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -556,7 +580,7 @@ Structure is documented below.
 <a href="#lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -567,7 +591,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
 {{% /md %}}</dd><dt class="property-optional"
@@ -576,7 +600,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#pemcsr_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +609,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -599,7 +623,7 @@ If it is not provided, the provider project is used.
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
 {{% /md %}}</dd><dt class="property-required"
@@ -608,7 +632,7 @@ If it is not provided, the provider project is used.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
@@ -618,7 +642,7 @@ running `gcloud beta privateca locations list`.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfig">Input[Certificate<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -628,7 +652,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -637,7 +661,7 @@ Structure is documented below.
 <a href="#lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -648,7 +672,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +681,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#pem_csr_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
 {{% /md %}}</dd><dt class="property-optional"
@@ -666,7 +690,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -960,20 +984,36 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CertificateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Certificate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CertificateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Certificate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_descriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateCertificateDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[CertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pem_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pem_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revocation_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateRevocationDetailArgs]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate_descriptions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CertificateCertificateDescriptionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pem_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pem_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">revocation_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CertificateRevocationDetailArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CertificateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CertificateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Certificate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CertificateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Certificate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CertificateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1356,7 +1396,7 @@ this field is present.
 <a href="#state_certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1405,7 @@ this field is present.
 <a href="#state_certificatedescriptions_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Descriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescription">Certificate<wbr>Certificate<wbr>Description[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescription">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
@@ -1375,7 +1415,7 @@ this field is present.
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfig">pulumi.<wbr>Input<Certificate<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -1385,7 +1425,7 @@ Structure is documented below.
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1394,7 +1434,7 @@ Structure is documented below.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1403,7 +1443,7 @@ Structure is documented below.
 <a href="#state_lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -1414,7 +1454,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
@@ -1424,7 +1464,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1473,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_pemcertificate_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1442,7 +1482,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_pemcertificates_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1491,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_pemcsr_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1500,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1470,7 +1510,7 @@ If it is not provided, the provider project is used.
 <a href="#state_revocationdetails_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificaterevocationdetail">Certificate<wbr>Revocation<wbr>Detail[]</a></span>
+        <span class="property-type"><a href="#certificaterevocationdetail">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Revocation<wbr>Detail<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
@@ -1480,7 +1520,7 @@ this field is present.
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
 {{% /md %}}</dd></dl>
@@ -1493,7 +1533,7 @@ this field is present.
 <a href="#state_certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1542,7 @@ this field is present.
 <a href="#state_certificate_descriptions_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>descriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescription">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescription">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
@@ -1512,7 +1552,7 @@ this field is present.
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfig">Input[Certificate<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -1522,7 +1562,7 @@ Structure is documented below.
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1571,7 @@ Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1580,7 @@ Structure is documented below.
 <a href="#state_lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -1551,7 +1591,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
@@ -1561,7 +1601,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1570,7 +1610,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_pem_certificate_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1579,7 +1619,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_pem_certificates_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,7 +1628,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_pem_csr_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1597,7 +1637,7 @@ running `gcloud beta privateca locations list`.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1607,7 +1647,7 @@ If it is not provided, the provider project is used.
 <a href="#state_revocation_details_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificaterevocationdetail">Sequence[Certificate<wbr>Revocation<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificaterevocationdetail">Input[Certificate<wbr>Revocation<wbr>Detail<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
@@ -1617,7 +1657,7 @@ this field is present.
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
 {{% /md %}}</dd></dl>
@@ -1781,7 +1821,7 @@ Structure is documented below.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -1791,7 +1831,7 @@ Structure is documented below.
 <a href="#aiaissuingcertificateurls_nodejs" style="color: inherit; text-decoration: inherit;">aia<wbr>Issuing<wbr>Certificate<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1799,7 +1839,7 @@ Structure is documented below.
 <a href="#authoritykeyid_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1807,7 +1847,7 @@ Structure is documented below.
 <a href="#certfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1815,7 +1855,7 @@ Structure is documented below.
 <a href="#configvalues_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1823,7 +1863,7 @@ Structure is documented below.
 <a href="#crldistributionpoints_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Distribution<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1831,7 +1871,7 @@ Structure is documented below.
 <a href="#subjectdescription_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1879,7 @@ Structure is documented below.
 <a href="#subjectkeyid_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1851,7 +1891,7 @@ Structure is documented below.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -1861,7 +1901,7 @@ Structure is documented below.
 <a href="#aia_issuing_certificate_urls_python" style="color: inherit; text-decoration: inherit;">aia_<wbr>issuing_<wbr>certificate_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1909,7 @@ Structure is documented below.
 <a href="#authority_key_id_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1917,7 @@ Structure is documented below.
 <a href="#cert_fingerprint_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1925,7 @@ Structure is documented below.
 <a href="#config_values_python" style="color: inherit; text-decoration: inherit;">config_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1933,7 @@ Structure is documented below.
 <a href="#crl_distribution_points_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>distribution_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1941,7 @@ Structure is documented below.
 <a href="#subject_description_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1949,7 @@ Structure is documented below.
 <a href="#subject_key_id_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1947,7 +1987,7 @@ Structure is documented below.
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1959,7 +1999,7 @@ Structure is documented below.
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1997,7 +2037,7 @@ Structure is documented below.
 <a href="#sha256hash_nodejs" style="color: inherit; text-decoration: inherit;">sha256Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2009,7 +2049,7 @@ Structure is documented below.
 <a href="#sha256_hash_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2047,7 +2087,7 @@ Structure is documented below.
 <a href="#keyusage_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2059,7 +2099,7 @@ Structure is documented below.
 <a href="#key_usage_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2129,7 +2169,7 @@ Structure is documented below.
 <a href="#unknownextendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2137,7 +2177,7 @@ Structure is documented below.
 <a href="#basekeyusage_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2185,7 @@ Structure is documented below.
 <a href="#extendedkeyusage_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2157,7 +2197,7 @@ Structure is documented below.
 <a href="#unknown_extended_key_usages_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>extended_<wbr>key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2205,7 @@ Structure is documented below.
 <a href="#base_key_usage_python" style="color: inherit; text-decoration: inherit;">base_<wbr>key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2213,7 @@ Structure is documented below.
 <a href="#extended_key_usage_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2211,7 +2251,7 @@ Structure is documented below.
 <a href="#keyusageoptions_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2263,7 @@ Structure is documented below.
 <a href="#key_usage_options_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2389,7 +2429,7 @@ Structure is documented below.
 <a href="#certsign_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2397,7 +2437,7 @@ Structure is documented below.
 <a href="#contentcommitment_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2405,7 +2445,7 @@ Structure is documented below.
 <a href="#crlsign_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2453,7 @@ Structure is documented below.
 <a href="#dataencipherment_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2461,7 @@ Structure is documented below.
 <a href="#decipheronly_nodejs" style="color: inherit; text-decoration: inherit;">decipher<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2469,7 @@ Structure is documented below.
 <a href="#digitalsignature_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2477,7 @@ Structure is documented below.
 <a href="#encipheronly_nodejs" style="color: inherit; text-decoration: inherit;">encipher<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2485,7 @@ Structure is documented below.
 <a href="#keyagreement_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2493,7 @@ Structure is documented below.
 <a href="#keyencipherment_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2465,7 +2505,7 @@ Structure is documented below.
 <a href="#cert_sign_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2513,7 @@ Structure is documented below.
 <a href="#content_commitment_python" style="color: inherit; text-decoration: inherit;">content_<wbr>commitment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2521,7 @@ Structure is documented below.
 <a href="#crl_sign_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>sign</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2529,7 @@ Structure is documented below.
 <a href="#data_encipherment_python" style="color: inherit; text-decoration: inherit;">data_<wbr>encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2497,7 +2537,7 @@ Structure is documented below.
 <a href="#decipher_only_python" style="color: inherit; text-decoration: inherit;">decipher_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2545,7 @@ Structure is documented below.
 <a href="#digital_signature_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2553,7 @@ Structure is documented below.
 <a href="#encipher_only_python" style="color: inherit; text-decoration: inherit;">encipher_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2561,7 @@ Structure is documented below.
 <a href="#key_agreement_python" style="color: inherit; text-decoration: inherit;">key_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,7 +2569,7 @@ Structure is documented below.
 <a href="#key_encipherment_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encipherment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2647,7 +2687,7 @@ Structure is documented below.
 <a href="#clientauth_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2695,7 @@ Structure is documented below.
 <a href="#codesigning_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2663,7 +2703,7 @@ Structure is documented below.
 <a href="#emailprotection_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2671,7 +2711,7 @@ Structure is documented below.
 <a href="#ocspsigning_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2679,7 +2719,7 @@ Structure is documented below.
 <a href="#serverauth_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2687,7 +2727,7 @@ Structure is documented below.
 <a href="#timestamping_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Stamping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2699,7 +2739,7 @@ Structure is documented below.
 <a href="#client_auth_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2707,7 +2747,7 @@ Structure is documented below.
 <a href="#code_signing_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2715,7 +2755,7 @@ Structure is documented below.
 <a href="#email_protection_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2723,7 +2763,7 @@ Structure is documented below.
 <a href="#ocsp_signing_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2731,7 +2771,7 @@ Structure is documented below.
 <a href="#server_auth_python" style="color: inherit; text-decoration: inherit;">server_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2739,7 +2779,7 @@ Structure is documented below.
 <a href="#time_stamping_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2777,7 +2817,7 @@ Structure is documented below.
 <a href="#obectid_nodejs" style="color: inherit; text-decoration: inherit;">obect<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2789,7 +2829,7 @@ Structure is documented below.
 <a href="#obect_id_python" style="color: inherit; text-decoration: inherit;">obect_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2827,7 +2867,7 @@ Structure is documented below.
 <a href="#objectidpaths_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2839,7 +2879,7 @@ Structure is documented below.
 <a href="#object_id_paths_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2899,7 +2939,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
@@ -2909,7 +2949,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
 {{% /md %}}</dd></dl>
@@ -2922,7 +2962,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
@@ -2932,7 +2972,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
 {{% /md %}}</dd></dl>
@@ -3083,7 +3123,7 @@ Structure is documented below.
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3092,7 +3132,7 @@ Structure is documented below.
 <a href="#hexserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">hex<wbr>Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3100,7 +3140,7 @@ Structure is documented below.
 <a href="#lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -3111,7 +3151,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#notaftertime_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>After<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3119,7 +3159,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#notbeforetime_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3127,7 +3167,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -3137,7 +3177,7 @@ Structure is documented below.
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -3151,7 +3191,7 @@ Structure is documented below.
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3160,7 +3200,7 @@ Structure is documented below.
 <a href="#hex_serial_number_python" style="color: inherit; text-decoration: inherit;">hex_<wbr>serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3168,7 +3208,7 @@ Structure is documented below.
 <a href="#lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
@@ -3179,7 +3219,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#not_after_time_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3227,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#not_before_time_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3195,7 +3235,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -3205,7 +3245,7 @@ Structure is documented below.
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -3355,7 +3395,7 @@ Structure is documented below.
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3364,7 +3404,7 @@ Structure is documented below.
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3373,7 +3413,7 @@ Structure is documented below.
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3382,7 +3422,7 @@ Structure is documented below.
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3391,7 +3431,7 @@ Structure is documented below.
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3400,7 +3440,7 @@ Structure is documented below.
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3409,7 +3449,7 @@ Structure is documented below.
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
 {{% /md %}}</dd></dl>
@@ -3422,7 +3462,7 @@ Structure is documented below.
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3431,7 +3471,7 @@ Structure is documented below.
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3440,7 +3480,7 @@ Structure is documented below.
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3449,7 +3489,7 @@ Structure is documented below.
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3458,7 +3498,7 @@ Structure is documented below.
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3467,7 +3507,7 @@ Structure is documented below.
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3476,7 +3516,7 @@ Structure is documented below.
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
 {{% /md %}}</dd></dl>
@@ -3587,7 +3627,7 @@ Structure is documented below.
 <a href="#customsans_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3595,7 +3635,7 @@ Structure is documented below.
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3604,7 +3644,7 @@ Structure is documented below.
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3613,7 +3653,7 @@ Structure is documented below.
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3622,7 +3662,7 @@ Structure is documented below.
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
 {{% /md %}}</dd></dl>
@@ -3635,7 +3675,7 @@ Structure is documented below.
 <a href="#custom_sans_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3643,7 +3683,7 @@ Structure is documented below.
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3652,7 +3692,7 @@ Structure is documented below.
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3661,7 +3701,7 @@ Structure is documented below.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3670,7 +3710,7 @@ Structure is documented below.
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
 {{% /md %}}</dd></dl>
@@ -3741,7 +3781,7 @@ Structure is documented below.
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3749,7 +3789,7 @@ Structure is documented below.
 <a href="#obectid_nodejs" style="color: inherit; text-decoration: inherit;">obect<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3757,7 +3797,7 @@ Structure is documented below.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3769,7 +3809,7 @@ Structure is documented below.
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3777,7 +3817,7 @@ Structure is documented below.
 <a href="#obect_id_python" style="color: inherit; text-decoration: inherit;">obect_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Input[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3825,7 @@ Structure is documented below.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3823,7 +3863,7 @@ Structure is documented below.
 <a href="#objectidpaths_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3835,7 +3875,7 @@ Structure is documented below.
 <a href="#object_id_paths_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3873,7 +3913,7 @@ Structure is documented below.
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3885,7 +3925,7 @@ Structure is documented below.
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3967,7 +4007,7 @@ Structure is documented below.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#certificateconfigpublickey">pulumi.<wbr>Input<Certificate<wbr>Config<wbr>Public<wbr>Key<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -3977,7 +4017,7 @@ Structure is documented below.
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfigreusableconfig">pulumi.<wbr>Input<Certificate<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -3987,7 +4027,7 @@ Structure is documented below.
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfig">pulumi.<wbr>Input<Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -4001,7 +4041,7 @@ Structure is documented below.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigpublickey">Input[Certificate<wbr>Config<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -4011,7 +4051,7 @@ Structure is documented below.
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigreusableconfig">Input[Certificate<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -4021,7 +4061,7 @@ Structure is documented below.
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfig">Input[Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -4083,7 +4123,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
@@ -4093,7 +4133,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
 {{% /md %}}</dd></dl>
@@ -4106,7 +4146,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
@@ -4116,7 +4156,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
 {{% /md %}}</dd></dl>
@@ -4159,7 +4199,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -4173,7 +4213,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -4255,7 +4295,7 @@ Structure is documented below.
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
 {{% /md %}}</dd><dt class="property-required"
@@ -4264,7 +4304,7 @@ Structure is documented below.
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">pulumi.<wbr>Input<Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -4274,7 +4314,7 @@ Structure is documented below.
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">pulumi.<wbr>Input<Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -4288,7 +4328,7 @@ Structure is documented below.
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
 {{% /md %}}</dd><dt class="property-required"
@@ -4297,7 +4337,7 @@ Structure is documented below.
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Input[Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -4307,7 +4347,7 @@ Structure is documented below.
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Input[Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -4457,7 +4497,7 @@ Structure is documented below.
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4466,7 +4506,7 @@ Structure is documented below.
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4475,7 +4515,7 @@ Structure is documented below.
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4484,7 +4524,7 @@ Structure is documented below.
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4493,7 +4533,7 @@ Structure is documented below.
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4502,7 +4542,7 @@ Structure is documented below.
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4511,7 +4551,7 @@ Structure is documented below.
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
 {{% /md %}}</dd></dl>
@@ -4524,7 +4564,7 @@ Structure is documented below.
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4533,7 +4573,7 @@ Structure is documented below.
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4542,7 +4582,7 @@ Structure is documented below.
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4551,7 +4591,7 @@ Structure is documented below.
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4560,7 +4600,7 @@ Structure is documented below.
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4569,7 +4609,7 @@ Structure is documented below.
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4578,7 +4618,7 @@ Structure is documented below.
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
 {{% /md %}}</dd></dl>
@@ -4673,7 +4713,7 @@ Structure is documented below.
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4682,7 +4722,7 @@ Structure is documented below.
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4691,7 +4731,7 @@ Structure is documented below.
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4700,7 +4740,7 @@ Structure is documented below.
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
 {{% /md %}}</dd></dl>
@@ -4713,7 +4753,7 @@ Structure is documented below.
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4722,7 +4762,7 @@ Structure is documented below.
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4731,7 +4771,7 @@ Structure is documented below.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4740,7 +4780,7 @@ Structure is documented below.
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
 {{% /md %}}</dd></dl>
@@ -4795,7 +4835,7 @@ Structure is documented below.
 <a href="#revocationstate_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4803,7 +4843,7 @@ Structure is documented below.
 <a href="#revocationtime_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4815,7 +4855,7 @@ Structure is documented below.
 <a href="#revocation_state_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4823,7 +4863,7 @@ Structure is documented below.
 <a href="#revocation_time_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

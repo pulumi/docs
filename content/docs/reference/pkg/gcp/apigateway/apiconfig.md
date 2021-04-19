@@ -25,19 +25,33 @@ To get more information about ApiConfig, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_config_id_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[ApiConfigGatewayConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">openapi_documents</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConfigOpenapiDocumentArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">api</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">api_config_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">api_config_id_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiConfigGatewayConfigArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">openapi_documents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiConfigOpenapiDocumentArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApiConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -72,22 +86,32 @@ To get more information about ApiConfig, see:
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ApiConfigArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -96,7 +120,7 @@ To get more information about ApiConfig, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -120,7 +144,7 @@ To get more information about ApiConfig, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -337,7 +361,7 @@ If it is not provided, the provider project is used.
 <a href="#api_nodejs" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
 {{% /md %}}</dd><dt class="property-required"
@@ -346,7 +370,7 @@ If it is not provided, the provider project is used.
 <a href="#openapidocuments_nodejs" style="color: inherit; text-decoration: inherit;">openapi<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocument">Api<wbr>Config<wbr>Openapi<wbr>Document[]</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocument">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
@@ -356,7 +380,7 @@ Structure is documented below.
 <a href="#apiconfigid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
 {{% /md %}}</dd><dt class="property-optional"
@@ -365,7 +389,7 @@ Structure is documented below.
 <a href="#apiconfigidprefix_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config<wbr>Id<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
@@ -375,7 +399,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -384,7 +408,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfig">pulumi.<wbr>Input<Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
@@ -395,7 +419,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -404,7 +428,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -418,7 +442,7 @@ If it is not provided, the provider project is used.
 <a href="#api_python" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
 {{% /md %}}</dd><dt class="property-required"
@@ -427,7 +451,7 @@ If it is not provided, the provider project is used.
 <a href="#openapi_documents_python" style="color: inherit; text-decoration: inherit;">openapi_<wbr>documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocument">Sequence[Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocument">Input[Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
@@ -437,7 +461,7 @@ Structure is documented below.
 <a href="#api_config_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
 {{% /md %}}</dd><dt class="property-optional"
@@ -446,7 +470,7 @@ Structure is documented below.
 <a href="#api_config_id_prefix_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config_<wbr>id_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
@@ -456,7 +480,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -465,7 +489,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfig">Input[Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
@@ -476,7 +500,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -485,7 +509,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -627,20 +651,32 @@ Get an existing ApiConfig resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApiConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ApiConfig</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ApiConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ApiConfig</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_config_id_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[ApiConfigGatewayConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openapi_documents</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiConfigOpenapiDocumentArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">api</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">api_config_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">api_config_id_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiConfigGatewayConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">openapi_documents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiConfigOpenapiDocumentArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_config_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ApiConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApiConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ApiConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ApiConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApiConfigState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ApiConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ApiConfigState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -947,7 +983,7 @@ If it is not provided, the provider project is used.
 <a href="#state_api_nodejs" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +992,7 @@ If it is not provided, the provider project is used.
 <a href="#state_apiconfigid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
 {{% /md %}}</dd><dt class="property-optional"
@@ -965,7 +1001,7 @@ If it is not provided, the provider project is used.
 <a href="#state_apiconfigidprefix_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config<wbr>Id<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
@@ -975,7 +1011,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +1020,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#state_gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfig">pulumi.<wbr>Input<Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
@@ -995,7 +1031,7 @@ Structure is documented below.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1040,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1049,7 @@ Structure is documented below.
 <a href="#state_openapidocuments_nodejs" style="color: inherit; text-decoration: inherit;">openapi<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocument">Api<wbr>Config<wbr>Openapi<wbr>Document[]</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocument">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
@@ -1023,7 +1059,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1033,7 +1069,7 @@ If it is not provided, the provider project is used.
 <a href="#state_serviceconfigid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Config<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
 {{% /md %}}</dd></dl>
@@ -1046,7 +1082,7 @@ If it is not provided, the provider project is used.
 <a href="#state_api_python" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1091,7 @@ If it is not provided, the provider project is used.
 <a href="#state_api_config_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1100,7 @@ If it is not provided, the provider project is used.
 <a href="#state_api_config_id_prefix_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config_<wbr>id_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
@@ -1074,7 +1110,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1119,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
 <a href="#state_gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfig">Input[Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
@@ -1094,7 +1130,7 @@ Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1139,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1148,7 @@ Structure is documented below.
 <a href="#state_openapi_documents_python" style="color: inherit; text-decoration: inherit;">openapi_<wbr>documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocument">Sequence[Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocument">Input[Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
@@ -1122,7 +1158,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1132,7 +1168,7 @@ If it is not provided, the provider project is used.
 <a href="#state_service_config_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>config_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
 {{% /md %}}</dd></dl>
@@ -1184,7 +1220,7 @@ Structure is documented below.
 <a href="#backendconfig_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">pulumi.<wbr>Input<Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
@@ -1198,7 +1234,7 @@ Structure is documented below.
 <a href="#backend_config_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfiggatewayconfigbackendconfig">Input[Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
@@ -1242,7 +1278,7 @@ Structure is documented below.
 <a href="#googleserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
 (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
@@ -1256,7 +1292,7 @@ Structure is documented below.
 <a href="#google_service_account_python" style="color: inherit; text-decoration: inherit;">google_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
 (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
@@ -1300,7 +1336,7 @@ Structure is documented below.
 <a href="#document_nodejs" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">pulumi.<wbr>Input<Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.
@@ -1314,7 +1350,7 @@ Structure is documented below.
 <a href="#document_python" style="color: inherit; text-decoration: inherit;">document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiconfigopenapidocumentdocument">Input[Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.
@@ -1374,7 +1410,7 @@ Structure is documented below.
 <a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 encoded content of the file.
 {{% /md %}}</dd><dt class="property-required"
@@ -1383,7 +1419,7 @@ Structure is documented below.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.
 {{% /md %}}</dd></dl>
@@ -1396,7 +1432,7 @@ Structure is documented below.
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 encoded content of the file.
 {{% /md %}}</dd><dt class="property-required"
@@ -1405,7 +1441,7 @@ Structure is documented below.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.
 {{% /md %}}</dd></dl>

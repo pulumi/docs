@@ -157,8 +157,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataloss"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -301,9 +301,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataloss"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -424,19 +424,31 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreventionStoredInfoType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionStoredInfoTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreventionStoredInfoType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionStoredInfoTypeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PreventionStoredInfoType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dictionary</span><span class="p">:</span> <span class="nx">Optional[PreventionStoredInfoTypeDictionaryArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">large_custom_dictionary</span><span class="p">:</span> <span class="nx">Optional[PreventionStoredInfoTypeLargeCustomDictionaryArgs]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regex</span><span class="p">:</span> <span class="nx">Optional[PreventionStoredInfoTypeRegexArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PreventionStoredInfoType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">dictionary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreventionStoredInfoTypeDictionaryArgs]]</span> = None<span class="p">,</span>
+                             <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">large_custom_dictionary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreventionStoredInfoTypeLargeCustomDictionaryArgs]]</span> = None<span class="p">,</span>
+                             <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">regex</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreventionStoredInfoTypeRegexArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PreventionStoredInfoType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionStoredInfoTypeArgs</a></span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreventionStoredInfoType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreventionStoredInfoTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionStoredInfoType</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreventionStoredInfoType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreventionStoredInfoTypeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionStoredInfoType</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreventionStoredInfoType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PreventionStoredInfoTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreventionStoredInfoType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PreventionStoredInfoTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -471,22 +483,32 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PreventionStoredInfoTypeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -495,7 +517,7 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -519,7 +541,7 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -704,7 +726,7 @@ Structure is documented below.
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -717,7 +739,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -726,7 +748,7 @@ Structure is documented below.
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionary">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -736,7 +758,7 @@ Structure is documented below.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +767,7 @@ Structure is documented below.
 <a href="#largecustomdictionary_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Custom<wbr>Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -755,7 +777,7 @@ Structure is documented below.
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotyperegex">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -769,7 +791,7 @@ Structure is documented below.
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -782,7 +804,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +813,7 @@ Structure is documented below.
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -801,7 +823,7 @@ Structure is documented below.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +832,7 @@ Structure is documented below.
 <a href="#large_custom_dictionary_python" style="color: inherit; text-decoration: inherit;">large_<wbr>custom_<wbr>dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -820,7 +842,7 @@ Structure is documented below.
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotyperegex">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -926,20 +948,29 @@ Get an existing PreventionStoredInfoType resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PreventionStoredInfoTypeState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreventionStoredInfoType</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PreventionStoredInfoTypeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreventionStoredInfoType</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dictionary</span><span class="p">:</span> <span class="nx">Optional[PreventionStoredInfoTypeDictionaryArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">large_custom_dictionary</span><span class="p">:</span> <span class="nx">Optional[PreventionStoredInfoTypeLargeCustomDictionaryArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regex</span><span class="p">:</span> <span class="nx">Optional[PreventionStoredInfoTypeRegexArgs]</span> = None<span class="p">) -&gt;</span> PreventionStoredInfoType</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dictionary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreventionStoredInfoTypeDictionaryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">large_custom_dictionary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreventionStoredInfoTypeLargeCustomDictionaryArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">regex</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreventionStoredInfoTypeRegexArgs]]</span> = None<span class="p">) -&gt;</span> PreventionStoredInfoType</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionStoredInfoType<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PreventionStoredInfoTypeState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionStoredInfoType</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionStoredInfoType<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PreventionStoredInfoTypeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionStoredInfoType</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreventionStoredInfoType</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PreventionStoredInfoTypeState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreventionStoredInfoType</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PreventionStoredInfoTypeState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1196,7 +1227,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1236,7 @@ Structure is documented below.
 <a href="#state_dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionary">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -1215,7 +1246,7 @@ Structure is documented below.
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1255,7 @@ Structure is documented below.
 <a href="#state_largecustomdictionary_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Custom<wbr>Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -1234,7 +1265,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1274,7 @@ Structure is documented below.
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -1256,7 +1287,7 @@ Structure is documented below.
 <a href="#state_regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotyperegex">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -1270,7 +1301,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1310,7 @@ Structure is documented below.
 <a href="#state_dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionary">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -1289,7 +1320,7 @@ Structure is documented below.
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1329,7 @@ Structure is documented below.
 <a href="#state_large_custom_dictionary_python" style="color: inherit; text-decoration: inherit;">large_<wbr>custom_<wbr>dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -1308,7 +1339,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1348,7 @@ Structure is documented below.
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -1330,7 +1361,7 @@ Structure is documented below.
 <a href="#state_regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotyperegex">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -1403,7 +1434,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -1413,7 +1444,7 @@ Structure is documented below.
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -1427,7 +1458,7 @@ Structure is documented below.
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -1437,7 +1468,7 @@ Structure is documented below.
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -1479,7 +1510,7 @@ Structure is documented below.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd></dl>
@@ -1492,7 +1523,7 @@ Structure is documented below.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd></dl>
@@ -1535,7 +1566,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
@@ -1549,7 +1580,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
@@ -1635,7 +1666,7 @@ Structure is documented below.
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
@@ -1646,7 +1677,7 @@ Structure is documented below.
 <a href="#bigqueryfield_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1656,7 +1687,7 @@ Structure is documented below.
 <a href="#cloudstoragefileset_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
@@ -1670,7 +1701,7 @@ Structure is documented below.
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
@@ -1681,7 +1712,7 @@ Structure is documented below.
 <a href="#big_query_field_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1691,7 +1722,7 @@ Structure is documented below.
 <a href="#cloud_storage_file_set_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>file_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
@@ -1755,7 +1786,7 @@ Structure is documented below.
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
@@ -1765,7 +1796,7 @@ Structure is documented below.
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">pulumi.<wbr>Input<Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1779,7 +1810,7 @@ Structure is documented below.
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
@@ -1789,7 +1820,7 @@ Structure is documented below.
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Input[Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
@@ -1831,7 +1862,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd></dl>
@@ -1844,7 +1875,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd></dl>
@@ -1921,7 +1952,7 @@ Structure is documented below.
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dataset ID of the table.
 {{% /md %}}</dd><dt class="property-required"
@@ -1930,7 +1961,7 @@ Structure is documented below.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd><dt class="property-required"
@@ -1939,7 +1970,7 @@ Structure is documented below.
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd></dl>
@@ -1952,7 +1983,7 @@ Structure is documented below.
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dataset ID of the table.
 {{% /md %}}</dd><dt class="property-required"
@@ -1961,7 +1992,7 @@ Structure is documented below.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd><dt class="property-required"
@@ -1970,7 +2001,7 @@ Structure is documented below.
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd></dl>
@@ -2011,7 +2042,7 @@ Structure is documented below.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
 {{% /md %}}</dd></dl>
@@ -2024,7 +2055,7 @@ Structure is documented below.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
 {{% /md %}}</dd></dl>
@@ -2065,7 +2096,7 @@ Structure is documented below.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd></dl>
@@ -2078,7 +2109,7 @@ Structure is documented below.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd></dl>
@@ -2139,7 +2170,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
@@ -2149,7 +2180,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd></dl>
@@ -2162,7 +2193,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
@@ -2172,7 +2203,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd></dl>

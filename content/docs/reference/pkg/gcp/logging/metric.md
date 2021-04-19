@@ -96,8 +96,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/logging"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -276,8 +276,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/logging"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -391,8 +391,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/logging"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -493,19 +493,33 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Metric</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Metric</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MetricArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Metric</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_options</span><span class="p">:</span> <span class="nx">Optional[MetricBucketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_extractors</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metric_descriptor</span><span class="p">:</span> <span class="nx">Optional[MetricMetricDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_extractor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Metric</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">bucket_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MetricBucketOptionsArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">label_extractors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">metric_descriptor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MetricMetricDescriptorArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">value_extractor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Metric</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MetricArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMetric</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Metric</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMetric</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MetricArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Metric</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Metric</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MetricArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Metric</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MetricArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -540,22 +554,32 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MetricArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -564,7 +588,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -588,7 +612,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -833,7 +857,7 @@ error to specify a regex that does not include exactly one capture group.
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
@@ -843,7 +867,7 @@ is used to match log entries.
 <a href="#metricdescriptor_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">pulumi.<wbr>Input<Metric<wbr>Metric<wbr>Descriptor<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
@@ -853,7 +877,7 @@ Structure is documented below.
 <a href="#bucketoptions_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">pulumi.<wbr>Input<Metric<wbr>Bucket<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
@@ -864,7 +888,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
@@ -874,7 +898,7 @@ description is 8000 characters.
 <a href="#labelextractors_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Extractors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
@@ -886,7 +910,7 @@ the same as for the valueExtractor field.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests".
 Metric identifiers are limited to 100 characters and can include only the following
@@ -899,7 +923,7 @@ of the name.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -909,7 +933,7 @@ If it is not provided, the provider project is used.
 <a href="#valueextractor_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Extractor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to
 record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
@@ -928,7 +952,7 @@ error to specify a regex that does not include exactly one capture group.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
@@ -938,7 +962,7 @@ is used to match log entries.
 <a href="#metric_descriptor_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Input[Metric<wbr>Metric<wbr>Descriptor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
@@ -948,7 +972,7 @@ Structure is documented below.
 <a href="#bucket_options_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Input[Metric<wbr>Bucket<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
@@ -959,7 +983,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
@@ -969,7 +993,7 @@ description is 8000 characters.
 <a href="#label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
@@ -981,7 +1005,7 @@ the same as for the valueExtractor field.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests".
 Metric identifiers are limited to 100 characters and can include only the following
@@ -994,7 +1018,7 @@ of the name.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1004,7 +1028,7 @@ If it is not provided, the provider project is used.
 <a href="#value_extractor_python" style="color: inherit; text-decoration: inherit;">value_<wbr>extractor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to
 record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
@@ -1079,20 +1103,30 @@ Get an existing Metric resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MetricState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Metric</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MetricState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Metric</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_options</span><span class="p">:</span> <span class="nx">Optional[MetricBucketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_extractors</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metric_descriptor</span><span class="p">:</span> <span class="nx">Optional[MetricMetricDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_extractor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Metric</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">bucket_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MetricBucketOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">label_extractors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">metric_descriptor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MetricMetricDescriptorArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">value_extractor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Metric</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetric<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MetricState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Metric</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetric<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MetricState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Metric</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Metric</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MetricState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Metric</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MetricState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1391,7 +1425,7 @@ error to specify a regex that does not include exactly one capture group.
 <a href="#state_bucketoptions_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">pulumi.<wbr>Input<Metric<wbr>Bucket<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
@@ -1402,7 +1436,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
@@ -1412,7 +1446,7 @@ description is 8000 characters.
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
@@ -1422,7 +1456,7 @@ is used to match log entries.
 <a href="#state_labelextractors_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Extractors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
@@ -1434,7 +1468,7 @@ the same as for the valueExtractor field.
 <a href="#state_metricdescriptor_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">pulumi.<wbr>Input<Metric<wbr>Metric<wbr>Descriptor<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
@@ -1444,7 +1478,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests".
 Metric identifiers are limited to 100 characters and can include only the following
@@ -1457,7 +1491,7 @@ of the name.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1467,7 +1501,7 @@ If it is not provided, the provider project is used.
 <a href="#state_valueextractor_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Extractor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to
 record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
@@ -1486,7 +1520,7 @@ error to specify a regex that does not include exactly one capture group.
 <a href="#state_bucket_options_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Input[Metric<wbr>Bucket<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
@@ -1497,7 +1531,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
@@ -1507,7 +1541,7 @@ description is 8000 characters.
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
@@ -1517,7 +1551,7 @@ is used to match log entries.
 <a href="#state_label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
@@ -1529,7 +1563,7 @@ the same as for the valueExtractor field.
 <a href="#state_metric_descriptor_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Input[Metric<wbr>Metric<wbr>Descriptor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
@@ -1539,7 +1573,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests".
 Metric identifiers are limited to 100 characters and can include only the following
@@ -1552,7 +1586,7 @@ of the name.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1562,7 +1596,7 @@ If it is not provided, the provider project is used.
 <a href="#state_value_extractor_python" style="color: inherit; text-decoration: inherit;">value_<wbr>extractor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to
 record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
@@ -1664,7 +1698,7 @@ Structure is documented below.
 <a href="#explicitbuckets_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">pulumi.<wbr>Input<Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
@@ -1674,7 +1708,7 @@ Structure is documented below.
 <a href="#exponentialbuckets_nodejs" style="color: inherit; text-decoration: inherit;">exponential<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">pulumi.<wbr>Input<Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
@@ -1685,7 +1719,7 @@ Structure is documented below.
 <a href="#linearbuckets_nodejs" style="color: inherit; text-decoration: inherit;">linear<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">pulumi.<wbr>Input<Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
@@ -1700,7 +1734,7 @@ Structure is documented below.
 <a href="#explicit_buckets_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Input[Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
@@ -1710,7 +1744,7 @@ Structure is documented below.
 <a href="#exponential_buckets_python" style="color: inherit; text-decoration: inherit;">exponential_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Input[Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
@@ -1721,7 +1755,7 @@ Structure is documented below.
 <a href="#linear_buckets_python" style="color: inherit; text-decoration: inherit;">linear_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Input[Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
@@ -1764,7 +1798,7 @@ Structure is documented below.
 <a href="#bounds_nodejs" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}The values must be monotonically increasing.
 {{% /md %}}</dd></dl>
@@ -1777,7 +1811,7 @@ Structure is documented below.
 <a href="#bounds_python" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[float]</span>
+        <span class="property-type">Input[float]]]</span>
     </dt>
     <dd>{{% md %}}The values must be monotonically increasing.
 {{% /md %}}</dd></dl>
@@ -1854,7 +1888,7 @@ Structure is documented below.
 <a href="#growthfactor_nodejs" style="color: inherit; text-decoration: inherit;">growth<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Must be greater than 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1897,7 @@ Structure is documented below.
 <a href="#numfinitebuckets_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1906,7 @@ Structure is documented below.
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd></dl>
@@ -1885,7 +1919,7 @@ Structure is documented below.
 <a href="#growth_factor_python" style="color: inherit; text-decoration: inherit;">growth_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Must be greater than 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1894,7 +1928,7 @@ Structure is documented below.
 <a href="#num_finite_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>finite_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1903,7 +1937,7 @@ Structure is documented below.
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd></dl>
@@ -1980,7 +2014,7 @@ Structure is documented below.
 <a href="#numfinitebuckets_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1989,7 +2023,7 @@ Structure is documented below.
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Lower bound of the first bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1998,7 +2032,7 @@ Structure is documented below.
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd></dl>
@@ -2011,7 +2045,7 @@ Structure is documented below.
 <a href="#num_finite_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>finite_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +2054,7 @@ Structure is documented below.
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Lower bound of the first bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2029,7 +2063,7 @@ Structure is documented below.
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
 {{% /md %}}</dd></dl>
@@ -2168,7 +2202,7 @@ Structure is documented below.
 <a href="#metrickind_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc.
 Some combinations of metricKind and valueType might not be supported.
@@ -2180,7 +2214,7 @@ Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
@@ -2191,7 +2225,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A concise name for the metric, which can be displayed in user interfaces. Use sentence case
 without an ending period, for example "Request count". This field is optional but it is
@@ -2202,7 +2236,7 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">Metric<wbr>Metric<wbr>Descriptor<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
@@ -2215,7 +2249,7 @@ Structure is documented below.
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unit in which the metric value is reported. It is only applicable if the valueType is
 `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
@@ -2230,7 +2264,7 @@ Structure is documented below.
 <a href="#metric_kind_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the metric records instantaneous values, changes to a value, etc.
 Some combinations of metricKind and valueType might not be supported.
@@ -2242,7 +2276,7 @@ Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
@@ -2253,7 +2287,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A concise name for the metric, which can be displayed in user interfaces. Use sentence case
 without an ending period, for example "Request count". This field is optional but it is
@@ -2264,7 +2298,7 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">Sequence[Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">Input[Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
@@ -2277,7 +2311,7 @@ Structure is documented below.
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unit in which the metric value is reported. It is only applicable if the valueType is
 `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
@@ -2362,7 +2396,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2371,7 +2405,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
@@ -2381,7 +2415,7 @@ description is 8000 characters.
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
@@ -2396,7 +2430,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2405,7 +2439,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
@@ -2415,7 +2449,7 @@ description is 8000 characters.
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
