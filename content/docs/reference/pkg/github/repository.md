@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-github/sdk/v3/go/github"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-github/sdk/v4/go/github"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -167,8 +167,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-github/sdk/v3/go/github"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-github/sdk/v4/go/github"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -252,19 +252,49 @@ const example = new github.Repository("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Repository</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">RepositoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Repository</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">RepositoryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Repository</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_merge_commit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_rebase_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_squash_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">archive_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_branch_on_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gitignore_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">has_downloads</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">has_issues</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">has_projects</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">has_wiki</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">homepage_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">license_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pages</span><span class="p">:</span> <span class="nx">Optional[RepositoryPagesArgs]</span> = None<span class="p">, </span><span class="nx">private</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[RepositoryTemplateArgs]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vulnerability_alerts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Repository</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">allow_merge_commit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">allow_rebase_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">allow_squash_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">archive_on_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">auto_init</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">delete_branch_on_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">gitignore_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">has_downloads</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">has_issues</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">has_projects</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">has_wiki</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">homepage_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">is_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">license_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">pages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RepositoryPagesArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">private</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RepositoryTemplateArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">vulnerability_alerts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Repository</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[RepositoryArgs]</a></span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRepository</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RepositoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Repository</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRepository</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RepositoryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Repository</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Repository</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RepositoryArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Repository</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RepositoryArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -299,22 +329,32 @@ const example = new github.Repository("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RepositoryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -323,7 +363,7 @@ const example = new github.Repository("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -347,7 +387,7 @@ const example = new github.Repository("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -852,7 +892,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +901,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#allowrebasemerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rebase<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +910,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#allowsquashmerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Squash<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +919,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#archiveondestroy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +928,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +937,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#autoinit_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Init</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -906,7 +946,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
@@ -917,7 +957,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#deletebranchonmerge_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Branch<wbr>On<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -926,7 +966,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,7 +975,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#gitignoretemplate_nodejs" style="color: inherit; text-decoration: inherit;">gitignore<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +984,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#hasdownloads_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Downloads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +993,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#hasissues_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
@@ -963,7 +1003,7 @@ on the repository.
 <a href="#hasprojects_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +1012,7 @@ on the repository.
 <a href="#haswiki_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Wiki</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
@@ -982,7 +1022,7 @@ the repository.
 <a href="#homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +1031,7 @@ the repository.
 <a href="#istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1000,7 +1040,7 @@ the repository.
 <a href="#licensetemplate_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +1049,7 @@ the repository.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +1058,7 @@ the repository.
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
+        <span class="property-type"><a href="#repositorypages">pulumi<wbr>Input<Repository<wbr>Pages<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1027,7 +1067,7 @@ the repository.
 <a href="#private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
@@ -1037,7 +1077,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
+        <span class="property-type"><a href="#repositorytemplate">pulumi<wbr>Input<Repository<wbr>Template<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1086,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1095,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1104,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#vulnerabilityalerts_nodejs" style="color: inherit; text-decoration: inherit;">vulnerability<wbr>Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
 {{% /md %}}</dd></dl>
@@ -1077,7 +1117,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1126,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#allow_rebase_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rebase_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1095,7 +1135,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#allow_squash_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>squash_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1104,7 +1144,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#archive_on_destroy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1153,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1122,7 +1162,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#auto_init_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>init</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1131,7 +1171,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
@@ -1142,7 +1182,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#delete_branch_on_merge_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>branch_<wbr>on_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1151,7 +1191,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1160,7 +1200,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#gitignore_template_python" style="color: inherit; text-decoration: inherit;">gitignore_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1169,7 +1209,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#has_downloads_python" style="color: inherit; text-decoration: inherit;">has_<wbr>downloads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1178,7 +1218,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#has_issues_python" style="color: inherit; text-decoration: inherit;">has_<wbr>issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
@@ -1188,7 +1228,7 @@ on the repository.
 <a href="#has_projects_python" style="color: inherit; text-decoration: inherit;">has_<wbr>projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1237,7 @@ on the repository.
 <a href="#has_wiki_python" style="color: inherit; text-decoration: inherit;">has_<wbr>wiki</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
@@ -1207,7 +1247,7 @@ the repository.
 <a href="#homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1256,7 @@ the repository.
 <a href="#is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1265,7 @@ the repository.
 <a href="#license_template_python" style="color: inherit; text-decoration: inherit;">license_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1274,7 @@ the repository.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1283,7 @@ the repository.
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
+        <span class="property-type"><a href="#repositorypages">Input[Repository<wbr>Pages<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1252,7 +1292,7 @@ the repository.
 <a href="#private_python" style="color: inherit; text-decoration: inherit;">private</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
@@ -1262,7 +1302,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#repositorytemplate">Input[Repository<wbr>Template<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1311,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1320,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1329,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#vulnerability_alerts_python" style="color: inherit; text-decoration: inherit;">vulnerability_<wbr>alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
 {{% /md %}}</dd></dl>
@@ -1678,20 +1718,55 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RepositoryState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Repository</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RepositoryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Repository</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_merge_commit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_rebase_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_squash_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">archive_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_branch_on_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">full_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">git_clone_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gitignore_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">has_downloads</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">has_issues</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">has_projects</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">has_wiki</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">homepage_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">html_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_clone_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">license_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pages</span><span class="p">:</span> <span class="nx">Optional[RepositoryPagesArgs]</span> = None<span class="p">, </span><span class="nx">private</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repo_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ssh_clone_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">svn_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[RepositoryTemplateArgs]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vulnerability_alerts</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Repository</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_merge_commit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_rebase_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_squash_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">archive_on_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_init</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">delete_branch_on_merge</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">full_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">git_clone_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">gitignore_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">has_downloads</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">has_issues</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">has_projects</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">has_wiki</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">homepage_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">html_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">http_clone_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">is_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">license_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RepositoryPagesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">private</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">repo_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ssh_clone_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">svn_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RepositoryTemplateArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vulnerability_alerts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Repository</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RepositoryState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Repository</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RepositoryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Repository</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Repository</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RepositoryState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Repository</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RepositoryState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2410,7 +2485,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_allowmergecommit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Merge<wbr>Commit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2419,7 +2494,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_allowrebasemerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rebase<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2428,7 +2503,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_allowsquashmerge_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Squash<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2437,7 +2512,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_archiveondestroy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2446,7 +2521,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2530,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_autoinit_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Init</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2464,7 +2539,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
@@ -2475,7 +2550,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_deletebranchonmerge_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Branch<wbr>On<wbr>Merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2559,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2568,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2501,7 +2576,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2510,7 +2585,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_gitcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2519,7 +2594,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_gitignoretemplate_nodejs" style="color: inherit; text-decoration: inherit;">gitignore<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2603,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_hasdownloads_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Downloads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2537,7 +2612,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_hasissues_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
@@ -2547,7 +2622,7 @@ on the repository.
 <a href="#state_hasprojects_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2556,7 +2631,7 @@ on the repository.
 <a href="#state_haswiki_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Wiki</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
@@ -2566,7 +2641,7 @@ the repository.
 <a href="#state_homepageurl_nodejs" style="color: inherit; text-decoration: inherit;">homepage<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2575,7 +2650,7 @@ the repository.
 <a href="#state_htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2584,7 +2659,7 @@ the repository.
 <a href="#state_httpcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Clone<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2593,7 +2668,7 @@ the repository.
 <a href="#state_istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2602,7 +2677,7 @@ the repository.
 <a href="#state_licensetemplate_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2611,7 +2686,7 @@ the repository.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2695,7 @@ the repository.
 <a href="#state_nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
 {{% /md %}}</dd><dt class="property-optional"
@@ -2629,7 +2704,7 @@ the repository.
 <a href="#state_pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages</a></span>
+        <span class="property-type"><a href="#repositorypages">pulumi<wbr>Input<Repository<wbr>Pages<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2638,7 +2713,7 @@ the repository.
 <a href="#state_private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
@@ -2648,7 +2723,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_repoid_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-optional"
@@ -2657,7 +2732,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_sshcloneurl_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Clone<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2666,7 +2741,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_svnurl_nodejs" style="color: inherit; text-decoration: inherit;">svn<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2675,7 +2750,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template</a></span>
+        <span class="property-type"><a href="#repositorytemplate">pulumi<wbr>Input<Repository<wbr>Template<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2684,7 +2759,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2768,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2777,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_vulnerabilityalerts_nodejs" style="color: inherit; text-decoration: inherit;">vulnerability<wbr>Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
 {{% /md %}}</dd></dl>
@@ -2715,7 +2790,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_allow_merge_commit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>merge_<wbr>commit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable merge commits on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2724,7 +2799,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_allow_rebase_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rebase_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable rebase merges on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2733,7 +2808,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_allow_squash_merge_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>squash_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `false` to disable squash merges on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2817,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_archive_on_destroy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to archive the repository instead of deleting on destroy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2751,7 +2826,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2760,7 +2835,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_auto_init_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>init</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to produce an initial commit in the repository.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2769,7 +2844,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Deprecated: Use `github.BranchDefault` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
 and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
@@ -2780,7 +2855,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_delete_branch_on_merge_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>branch_<wbr>on_<wbr>merge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Automatically delete head branch after a pull request is merged. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2789,7 +2864,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2873,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2806,7 +2881,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string of the form "orgname/reponame".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2815,7 +2890,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_git_clone_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository anonymously via the git protocol.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2824,7 +2899,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_gitignore_template_python" style="color: inherit; text-decoration: inherit;">gitignore_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2833,7 +2908,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_has_downloads_python" style="color: inherit; text-decoration: inherit;">has_<wbr>downloads</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the (deprecated) downloads features on the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2842,7 +2917,7 @@ initial repository creation and create the target branch inside of the repositor
 <a href="#state_has_issues_python" style="color: inherit; text-decoration: inherit;">has_<wbr>issues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Issues features
 on the repository.
@@ -2852,7 +2927,7 @@ on the repository.
 <a href="#state_has_projects_python" style="color: inherit; text-decoration: inherit;">has_<wbr>projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2861,7 +2936,7 @@ on the repository.
 <a href="#state_has_wiki_python" style="color: inherit; text-decoration: inherit;">has_<wbr>wiki</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the GitHub Wiki features on
 the repository.
@@ -2871,7 +2946,7 @@ the repository.
 <a href="#state_homepage_url_python" style="color: inherit; text-decoration: inherit;">homepage_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL of a page describing the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2880,7 +2955,7 @@ the repository.
 <a href="#state_html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2889,7 +2964,7 @@ the repository.
 <a href="#state_http_clone_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>clone_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2898,7 +2973,7 @@ the repository.
 <a href="#state_is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to tell GitHub that this is a template repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2907,7 +2982,7 @@ the repository.
 <a href="#state_license_template_python" style="color: inherit; text-decoration: inherit;">license_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2916,7 +2991,7 @@ the repository.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2925,7 +3000,7 @@ the repository.
 <a href="#state_node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}GraphQL global node id for use with v4 API
 {{% /md %}}</dd><dt class="property-optional"
@@ -2934,7 +3009,7 @@ the repository.
 <a href="#state_pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorypages">Repository<wbr>Pages<wbr>Args</a></span>
+        <span class="property-type"><a href="#repositorypages">Input[Repository<wbr>Pages<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2943,7 +3018,7 @@ the repository.
 <a href="#state_private_python" style="color: inherit; text-decoration: inherit;">private</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to create a private repository.
 Repositories are created as public (e.g. open source) by default.
@@ -2953,7 +3028,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_repo_id_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}GitHub ID for the repository
 {{% /md %}}</dd><dt class="property-optional"
@@ -2962,7 +3037,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_ssh_clone_url_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>clone_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the repository via SSH.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2971,7 +3046,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_svn_url_python" style="color: inherit; text-decoration: inherit;">svn_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `svn checkout` to check out the repository via GitHub's Subversion protocol emulation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2980,7 +3055,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorytemplate">Repository<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#repositorytemplate">Input[Repository<wbr>Template<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Use a template repository to create this resource. See Template Repositories below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2989,7 +3064,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of topics of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2998,7 +3073,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3007,7 +3082,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#state_vulnerability_alerts_python" style="color: inherit; text-decoration: inherit;">vulnerability_<wbr>alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See [GitHub Documentation](https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies) for details.
 {{% /md %}}</dd></dl>
@@ -3145,7 +3220,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source</a></span>
+        <span class="property-type"><a href="#repositorypagessource">pulumi<wbr>Input<Repository<wbr>Pages<wbr>Source<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The source branch and directory for the rendered Pages site. See GitHub Pages Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3154,7 +3229,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The custom domain for the repository. This can only be set after the repository has been created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3163,7 +3238,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#custom404_nodejs" style="color: inherit; text-decoration: inherit;">custom404</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the rendered GitHub Pages site has a custom 404 page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3172,7 +3247,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3181,7 +3256,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The GitHub Pages site's build status e.g. `building` or `built`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3190,7 +3265,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3202,7 +3277,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorypagessource">Repository<wbr>Pages<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#repositorypagessource">Input[Repository<wbr>Pages<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source branch and directory for the rendered Pages site. See GitHub Pages Source below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3211,7 +3286,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The custom domain for the repository. This can only be set after the repository has been created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3220,7 +3295,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#custom404_python" style="color: inherit; text-decoration: inherit;">custom404</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the rendered GitHub Pages site has a custom 404 page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3229,7 +3304,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The absolute URL (including scheme) of the rendered GitHub Pages site e.g. `https://username.github.io`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3238,7 +3313,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The GitHub Pages site's build status e.g. `building` or `built`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3247,7 +3322,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3305,7 +3380,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The repository branch used to publish the site's source files. (i.e. `main` or `gh-pages`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3314,7 +3389,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The repository directory from which the site publishes (Default: `/`).
 {{% /md %}}</dd></dl>
@@ -3327,7 +3402,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The repository branch used to publish the site's source files. (i.e. `main` or `gh-pages`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3336,7 +3411,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The repository directory from which the site publishes (Default: `/`).
 {{% /md %}}</dd></dl>
@@ -3391,7 +3466,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3399,7 +3474,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3411,7 +3486,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3419,7 +3494,7 @@ Repositories are created as public (e.g. open source) by default.
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -102,8 +102,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-github/sdk/v3/go/github"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-github/sdk/v4/go/github"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -264,19 +264,34 @@ const exampleTeamRepository = new github.TeamRepository("exampleTeamRepository",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BranchProtection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BranchProtectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BranchProtection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BranchProtectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BranchProtection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows_deletions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allows_force_pushes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BranchProtection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">allows_deletions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                     <span class="nx">allows_force_pushes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                     <span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                     <span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                     <span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BranchProtectionRequiredPullRequestReviewArgs]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BranchProtectionRequiredStatusCheckArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BranchProtection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BranchProtectionArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBranchProtection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BranchProtectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchProtection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBranchProtection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BranchProtectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchProtection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BranchProtection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BranchProtectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BranchProtection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BranchProtectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -311,22 +326,32 @@ const exampleTeamRepository = new github.TeamRepository("exampleTeamRepository",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BranchProtectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -335,7 +360,7 @@ const exampleTeamRepository = new github.TeamRepository("exampleTeamRepository",
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -359,7 +384,7 @@ const exampleTeamRepository = new github.TeamRepository("exampleTeamRepository",
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -584,7 +609,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies the protection rule pattern.
 {{% /md %}}</dd><dt class="property-required"
@@ -593,7 +618,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name or node ID of the repository associated with this branch protection rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +627,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#allowsdeletions_nodejs" style="color: inherit; text-decoration: inherit;">allows<wbr>Deletions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -611,7 +636,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#allowsforcepushes_nodejs" style="color: inherit; text-decoration: inherit;">allows<wbr>Force<wbr>Pushes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +645,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#enforceadmins_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +654,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#pushrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of actor IDs that may push to the branch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +663,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiresignedcommits_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Signed<wbr>Commits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +672,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review[]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">pulumi<wbr>Input<pulumi<wbr>Input<Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +681,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#requiredstatuschecks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Status<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check[]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">pulumi<wbr>Input<pulumi<wbr>Input<Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
 {{% /md %}}</dd></dl>
@@ -669,7 +694,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the protection rule pattern.
 {{% /md %}}</dd><dt class="property-required"
@@ -678,7 +703,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name or node ID of the repository associated with this branch protection rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -687,7 +712,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#allows_deletions_python" style="color: inherit; text-decoration: inherit;">allows_<wbr>deletions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -696,7 +721,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#allows_force_pushes_python" style="color: inherit; text-decoration: inherit;">allows_<wbr>force_<wbr>pushes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +730,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#enforce_admins_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +739,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#push_restrictions_python" style="color: inherit; text-decoration: inherit;">push_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of actor IDs that may push to the branch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +748,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#require_signed_commits_python" style="color: inherit; text-decoration: inherit;">require_<wbr>signed_<wbr>commits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +757,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Sequence[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Input[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +766,7 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 <a href="#required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Sequence[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Input[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
 {{% /md %}}</dd></dl>
@@ -810,20 +835,31 @@ Get an existing BranchProtection resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BranchProtectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BranchProtection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BranchProtectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BranchProtection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows_deletions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allows_force_pushes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">) -&gt;</span> BranchProtection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allows_deletions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allows_force_pushes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BranchProtectionRequiredPullRequestReviewArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BranchProtectionRequiredStatusCheckArgs]]]]</span> = None<span class="p">) -&gt;</span> BranchProtection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBranchProtection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BranchProtectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchProtection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBranchProtection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BranchProtectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchProtection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BranchProtection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BranchProtectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BranchProtection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BranchProtectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1102,7 +1138,7 @@ The following state arguments are supported:
 <a href="#state_allowsdeletions_nodejs" style="color: inherit; text-decoration: inherit;">allows<wbr>Deletions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_allowsforcepushes_nodejs" style="color: inherit; text-decoration: inherit;">allows<wbr>Force<wbr>Pushes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1156,7 @@ The following state arguments are supported:
 <a href="#state_enforceadmins_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1129,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifies the protection rule pattern.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_pushrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of actor IDs that may push to the branch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name or node ID of the repository associated with this branch protection rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_requiresignedcommits_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Signed<wbr>Commits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review[]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">pulumi<wbr>Input<pulumi<wbr>Input<Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1210,7 @@ The following state arguments are supported:
 <a href="#state_requiredstatuschecks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Status<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check[]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">pulumi<wbr>Input<pulumi<wbr>Input<Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
 {{% /md %}}</dd></dl>
@@ -1187,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_allows_deletions_python" style="color: inherit; text-decoration: inherit;">allows_<wbr>deletions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_allows_force_pushes_python" style="color: inherit; text-decoration: inherit;">allows_<wbr>force_<wbr>pushes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_enforce_admins_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the protection rule pattern.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_push_restrictions_python" style="color: inherit; text-decoration: inherit;">push_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of actor IDs that may push to the branch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name or node ID of the repository associated with this branch protection rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_require_signed_commits_python" style="color: inherit; text-decoration: inherit;">require_<wbr>signed_<wbr>commits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Sequence[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredpullrequestreview">Input[Branch<wbr>Protection<wbr>Required<wbr>Pull<wbr>Request<wbr>Review<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1295,7 @@ The following state arguments are supported:
 <a href="#state_required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Sequence[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#branchprotectionrequiredstatuscheck">Input[Branch<wbr>Protection<wbr>Required<wbr>Status<wbr>Check<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
 {{% /md %}}</dd></dl>
@@ -1355,7 +1391,7 @@ The following state arguments are supported:
 <a href="#dismissstalereviews_nodejs" style="color: inherit; text-decoration: inherit;">dismiss<wbr>Stale<wbr>Reviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1399,7 @@ The following state arguments are supported:
 <a href="#dismissalrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1407,7 @@ The following state arguments are supported:
 <a href="#requirecodeownerreviews_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Code<wbr>Owner<wbr>Reviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1415,7 @@ The following state arguments are supported:
 <a href="#requiredapprovingreviewcount_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Approving<wbr>Review<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1391,7 +1427,7 @@ The following state arguments are supported:
 <a href="#dismiss_stale_reviews_python" style="color: inherit; text-decoration: inherit;">dismiss_<wbr>stale_<wbr>reviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1399,7 +1435,7 @@ The following state arguments are supported:
 <a href="#dismissal_restrictions_python" style="color: inherit; text-decoration: inherit;">dismissal_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1407,7 +1443,7 @@ The following state arguments are supported:
 <a href="#require_code_owner_reviews_python" style="color: inherit; text-decoration: inherit;">require_<wbr>code_<wbr>owner_<wbr>reviews</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1451,7 @@ The following state arguments are supported:
 <a href="#required_approving_review_count_python" style="color: inherit; text-decoration: inherit;">required_<wbr>approving_<wbr>review_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1469,7 +1505,7 @@ The following state arguments are supported:
 <a href="#contexts_nodejs" style="color: inherit; text-decoration: inherit;">contexts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1477,7 +1513,7 @@ The following state arguments are supported:
 <a href="#strict_nodejs" style="color: inherit; text-decoration: inherit;">strict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1489,7 +1525,7 @@ The following state arguments are supported:
 <a href="#contexts_python" style="color: inherit; text-decoration: inherit;">contexts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1533,7 @@ The following state arguments are supported:
 <a href="#strict_python" style="color: inherit; text-decoration: inherit;">strict</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
