@@ -117,10 +117,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iot"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -312,19 +312,47 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iamPolicyForLambda", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TopicRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TopicRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TopicRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TopicRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TopicRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchAlarmArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchMetricArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDynamodbArgs]</span> = None<span class="p">, </span><span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleDynamodbv2Args]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[TopicRuleElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[TopicRuleErrorActionArgs]</span> = None<span class="p">, </span><span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[TopicRuleFirehoseArgs]</span> = None<span class="p">, </span><span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleIotAnalyticArgs]]</span> = None<span class="p">, </span><span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleIotEventArgs]]</span> = None<span class="p">, </span><span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[TopicRuleKinesisArgs]</span> = None<span class="p">, </span><span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[TopicRuleLambdaArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[TopicRuleRepublishArgs]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[TopicRuleS3Args]</span> = None<span class="p">, </span><span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSnsArgs]</span> = None<span class="p">, </span><span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSqsArgs]</span> = None<span class="p">, </span><span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleStepFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TopicRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleCloudwatchAlarmArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleCloudwatchMetricArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleDynamodbArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TopicRuleDynamodbv2Args]]]]</span> = None<span class="p">,</span>
+              <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleElasticsearchArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleErrorActionArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleFirehoseArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TopicRuleIotAnalyticArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TopicRuleIotEventArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleKinesisArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleLambdaArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleRepublishArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleS3Args]]</span> = None<span class="p">,</span>
+              <span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleSnsArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleSqsArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TopicRuleStepFunctionArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TopicRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TopicRuleArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTopicRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TopicRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TopicRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTopicRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TopicRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TopicRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TopicRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TopicRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TopicRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TopicRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -359,22 +387,32 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iamPolicyForLambda", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TopicRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -383,7 +421,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iamPolicyForLambda", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -407,7 +445,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iamPolicyForLambda", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -836,7 +874,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-required"
@@ -845,7 +883,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sql_nodejs" style="color: inherit; text-decoration: inherit;">sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 {{% /md %}}</dd><dt class="property-required"
@@ -854,7 +892,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sqlversion_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +901,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cloudwatchalarm_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +909,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cloudwatchmetric_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -879,7 +917,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +926,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodb_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Dynamodb<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -896,7 +934,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodbv2s_nodejs" style="color: inherit; text-decoration: inherit;">dynamodbv2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">Topic<wbr>Rule<wbr>Dynamodbv2[]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">pulumi.<wbr>Input<pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Dynamodbv2Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +942,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +950,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#erroraction_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</a></span>
+        <span class="property-type"><a href="#topicruleerroraction">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +959,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Firehose<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +967,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iotanalytics_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">Topic<wbr>Rule<wbr>Iot<wbr>Analytic[]</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">pulumi.<wbr>Input<pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +975,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iotevents_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">Topic<wbr>Rule<wbr>Iot<wbr>Event[]</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">pulumi.<wbr>Input<pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +983,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kinesis_nodejs" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Kinesis<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +991,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lambda_nodejs" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda</a></span>
+        <span class="property-type"><a href="#topicrulelambda">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Lambda<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +999,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +1008,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#republish_nodejs" style="color: inherit; text-decoration: inherit;">republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Republish<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +1016,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3</a></span>
+        <span class="property-type"><a href="#topicrules3">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>S3Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +1024,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sns_nodejs" style="color: inherit; text-decoration: inherit;">sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns</a></span>
+        <span class="property-type"><a href="#topicrulesns">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Sns<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +1032,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sqs_nodejs" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
+        <span class="property-type"><a href="#topicrulesqs">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Sqs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +1040,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#stepfunctions_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">Topic<wbr>Rule<wbr>Step<wbr>Function[]</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">pulumi.<wbr>Input<pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +1048,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -1023,7 +1061,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-required"
@@ -1032,7 +1070,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sql_python" style="color: inherit; text-decoration: inherit;">sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 {{% /md %}}</dd><dt class="property-required"
@@ -1041,7 +1079,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sql_version_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1050,7 +1088,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cloudwatch_alarm_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Input[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1096,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cloudwatch_metric_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Input[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1104,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1075,7 +1113,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodb_python" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Input[Topic<wbr>Rule<wbr>Dynamodb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1121,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodbv2s_python" style="color: inherit; text-decoration: inherit;">dynamodbv2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">Sequence[Topic<wbr>Rule<wbr>Dynamodbv2Args]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">Input[Topic<wbr>Rule<wbr>Dynamodbv2Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1091,7 +1129,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Input[Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1099,7 +1137,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroraction">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1146,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Input[Topic<wbr>Rule<wbr>Firehose<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1154,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">Sequence[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">Input[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1162,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">Sequence[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">Input[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1170,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kinesis_python" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Input[Topic<wbr>Rule<wbr>Kinesis<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1178,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Input[Topic<wbr>Rule<wbr>Lambda<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1186,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1157,7 +1195,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#republish_python" style="color: inherit; text-decoration: inherit;">republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Input[Topic<wbr>Rule<wbr>Republish<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1203,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#topicrules3">Input[Topic<wbr>Rule<wbr>S3Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1211,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sns_python" style="color: inherit; text-decoration: inherit;">sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulesns">Input[Topic<wbr>Rule<wbr>Sns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1181,7 +1219,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sqs_python" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Input[Topic<wbr>Rule<wbr>Sqs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1227,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">Sequence[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">Input[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1235,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -1302,20 +1340,45 @@ Get an existing TopicRule resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TopicRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TopicRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TopicRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TopicRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchAlarmArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchMetricArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDynamodbArgs]</span> = None<span class="p">, </span><span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleDynamodbv2Args]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[TopicRuleElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[TopicRuleErrorActionArgs]</span> = None<span class="p">, </span><span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[TopicRuleFirehoseArgs]</span> = None<span class="p">, </span><span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleIotAnalyticArgs]]</span> = None<span class="p">, </span><span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleIotEventArgs]]</span> = None<span class="p">, </span><span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[TopicRuleKinesisArgs]</span> = None<span class="p">, </span><span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[TopicRuleLambdaArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[TopicRuleRepublishArgs]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[TopicRuleS3Args]</span> = None<span class="p">, </span><span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSnsArgs]</span> = None<span class="p">, </span><span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSqsArgs]</span> = None<span class="p">, </span><span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicRuleStepFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> TopicRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleCloudwatchAlarmArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleCloudwatchMetricArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleDynamodbArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TopicRuleDynamodbv2Args]]]]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleElasticsearchArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleErrorActionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleFirehoseArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TopicRuleIotAnalyticArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TopicRuleIotEventArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleKinesisArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleLambdaArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleRepublishArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleS3Args]]</span> = None<span class="p">,</span>
+        <span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleSnsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TopicRuleSqsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TopicRuleStepFunctionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> TopicRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopicRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TopicRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TopicRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopicRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TopicRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TopicRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TopicRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TopicRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TopicRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TopicRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1816,7 +1879,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -1825,7 +1888,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatchalarm_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1896,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatchmetric_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1904,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1850,7 +1913,7 @@ The following state arguments are supported:
 <a href="#state_dynamodb_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Dynamodb<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1921,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbv2s_nodejs" style="color: inherit; text-decoration: inherit;">dynamodbv2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">Topic<wbr>Rule<wbr>Dynamodbv2[]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">pulumi.<wbr>Input<pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Dynamodbv2Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1866,7 +1929,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1874,7 +1937,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1883,7 +1946,7 @@ The following state arguments are supported:
 <a href="#state_erroraction_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action</a></span>
+        <span class="property-type"><a href="#topicruleerroraction">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1892,7 +1955,7 @@ The following state arguments are supported:
 <a href="#state_firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Firehose<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1900,7 +1963,7 @@ The following state arguments are supported:
 <a href="#state_iotanalytics_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">Topic<wbr>Rule<wbr>Iot<wbr>Analytic[]</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">pulumi.<wbr>Input<pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1908,7 +1971,7 @@ The following state arguments are supported:
 <a href="#state_iotevents_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">Topic<wbr>Rule<wbr>Iot<wbr>Event[]</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">pulumi.<wbr>Input<pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1916,7 +1979,7 @@ The following state arguments are supported:
 <a href="#state_kinesis_nodejs" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Kinesis<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1987,7 @@ The following state arguments are supported:
 <a href="#state_lambda_nodejs" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda</a></span>
+        <span class="property-type"><a href="#topicrulelambda">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Lambda<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1932,7 +1995,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +2004,7 @@ The following state arguments are supported:
 <a href="#state_republish_nodejs" style="color: inherit; text-decoration: inherit;">republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Republish<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +2012,7 @@ The following state arguments are supported:
 <a href="#state_s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3</a></span>
+        <span class="property-type"><a href="#topicrules3">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>S3Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +2020,7 @@ The following state arguments are supported:
 <a href="#state_sns_nodejs" style="color: inherit; text-decoration: inherit;">sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns</a></span>
+        <span class="property-type"><a href="#topicrulesns">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Sns<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +2028,7 @@ The following state arguments are supported:
 <a href="#state_sql_nodejs" style="color: inherit; text-decoration: inherit;">sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1974,7 +2037,7 @@ The following state arguments are supported:
 <a href="#state_sqlversion_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1983,7 +2046,7 @@ The following state arguments are supported:
 <a href="#state_sqs_nodejs" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs</a></span>
+        <span class="property-type"><a href="#topicrulesqs">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Sqs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2054,7 @@ The following state arguments are supported:
 <a href="#state_stepfunctions_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">Topic<wbr>Rule<wbr>Step<wbr>Function[]</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">pulumi.<wbr>Input<pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +2062,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -2012,7 +2075,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +2084,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatch_alarm_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Input[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatch_metric_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Input[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2100,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +2109,7 @@ The following state arguments are supported:
 <a href="#state_dynamodb_python" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Input[Topic<wbr>Rule<wbr>Dynamodb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2054,7 +2117,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbv2s_python" style="color: inherit; text-decoration: inherit;">dynamodbv2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">Sequence[Topic<wbr>Rule<wbr>Dynamodbv2Args]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">Input[Topic<wbr>Rule<wbr>Dynamodbv2Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2062,7 +2125,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Input[Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2070,7 +2133,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the rule is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2142,7 @@ The following state arguments are supported:
 <a href="#state_error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroraction">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2151,7 @@ The following state arguments are supported:
 <a href="#state_firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Input[Topic<wbr>Rule<wbr>Firehose<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2096,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">Sequence[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">Input[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2104,7 +2167,7 @@ The following state arguments are supported:
 <a href="#state_iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">Sequence[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">Input[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2112,7 +2175,7 @@ The following state arguments are supported:
 <a href="#state_kinesis_python" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Input[Topic<wbr>Rule<wbr>Kinesis<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2120,7 +2183,7 @@ The following state arguments are supported:
 <a href="#state_lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Input[Topic<wbr>Rule<wbr>Lambda<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2128,7 +2191,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2200,7 @@ The following state arguments are supported:
 <a href="#state_republish_python" style="color: inherit; text-decoration: inherit;">republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Input[Topic<wbr>Rule<wbr>Republish<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#topicrules3">Input[Topic<wbr>Rule<wbr>S3Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2216,7 @@ The following state arguments are supported:
 <a href="#state_sns_python" style="color: inherit; text-decoration: inherit;">sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulesns">Input[Topic<wbr>Rule<wbr>Sns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2161,7 +2224,7 @@ The following state arguments are supported:
 <a href="#state_sql_python" style="color: inherit; text-decoration: inherit;">sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2170,7 +2233,7 @@ The following state arguments are supported:
 <a href="#state_sql_version_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the SQL rules engine to use when evaluating the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2179,7 +2242,7 @@ The following state arguments are supported:
 <a href="#state_sqs_python" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Input[Topic<wbr>Rule<wbr>Sqs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2250,7 @@ The following state arguments are supported:
 <a href="#state_step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">Sequence[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">Input[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2258,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd></dl>
@@ -2299,7 +2362,7 @@ The following state arguments are supported:
 <a href="#alarmname_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch alarm name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2308,7 +2371,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd><dt class="property-required"
@@ -2317,7 +2380,7 @@ The following state arguments are supported:
 <a href="#statereason_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The reason for the alarm change.
 {{% /md %}}</dd><dt class="property-required"
@@ -2326,7 +2389,7 @@ The following state arguments are supported:
 <a href="#statevalue_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
 {{% /md %}}</dd></dl>
@@ -2339,7 +2402,7 @@ The following state arguments are supported:
 <a href="#alarm_name_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch alarm name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2348,7 +2411,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd><dt class="property-required"
@@ -2357,7 +2420,7 @@ The following state arguments are supported:
 <a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">state_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The reason for the alarm change.
 {{% /md %}}</dd><dt class="property-required"
@@ -2366,7 +2429,7 @@ The following state arguments are supported:
 <a href="#state_value_python" style="color: inherit; text-decoration: inherit;">state_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
 {{% /md %}}</dd></dl>
@@ -2497,7 +2560,7 @@ The following state arguments are supported:
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2506,7 +2569,7 @@ The following state arguments are supported:
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric namespace name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2515,7 +2578,7 @@ The following state arguments are supported:
 <a href="#metricunit_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
 {{% /md %}}</dd><dt class="property-required"
@@ -2524,7 +2587,7 @@ The following state arguments are supported:
 <a href="#metricvalue_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric value.
 {{% /md %}}</dd><dt class="property-required"
@@ -2533,7 +2596,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2542,7 +2605,7 @@ The following state arguments are supported:
 <a href="#metrictimestamp_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
 {{% /md %}}</dd></dl>
@@ -2555,7 +2618,7 @@ The following state arguments are supported:
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2564,7 +2627,7 @@ The following state arguments are supported:
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric namespace name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2573,7 +2636,7 @@ The following state arguments are supported:
 <a href="#metric_unit_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
 {{% /md %}}</dd><dt class="property-required"
@@ -2582,7 +2645,7 @@ The following state arguments are supported:
 <a href="#metric_value_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric value.
 {{% /md %}}</dd><dt class="property-required"
@@ -2591,7 +2654,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2600,7 +2663,7 @@ The following state arguments are supported:
 <a href="#metric_timestamp_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
 {{% /md %}}</dd></dl>
@@ -2803,7 +2866,7 @@ The following state arguments are supported:
 <a href="#hashkeyfield_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hash key name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2812,7 +2875,7 @@ The following state arguments are supported:
 <a href="#hashkeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hash key value.
 {{% /md %}}</dd><dt class="property-required"
@@ -2821,7 +2884,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
 {{% /md %}}</dd><dt class="property-required"
@@ -2830,7 +2893,7 @@ The following state arguments are supported:
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2839,7 +2902,7 @@ The following state arguments are supported:
 <a href="#hashkeytype_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2848,7 +2911,7 @@ The following state arguments are supported:
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2857,7 +2920,7 @@ The following state arguments are supported:
 <a href="#payloadfield_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action payload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2866,7 +2929,7 @@ The following state arguments are supported:
 <a href="#rangekeyfield_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range key name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2875,7 +2938,7 @@ The following state arguments are supported:
 <a href="#rangekeytype_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2884,7 +2947,7 @@ The following state arguments are supported:
 <a href="#rangekeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range key value.
 {{% /md %}}</dd></dl>
@@ -2897,7 +2960,7 @@ The following state arguments are supported:
 <a href="#hash_key_field_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hash key name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2906,7 +2969,7 @@ The following state arguments are supported:
 <a href="#hash_key_value_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hash key value.
 {{% /md %}}</dd><dt class="property-required"
@@ -2915,7 +2978,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
 {{% /md %}}</dd><dt class="property-required"
@@ -2924,7 +2987,7 @@ The following state arguments are supported:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2933,7 +2996,7 @@ The following state arguments are supported:
 <a href="#hash_key_type_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2942,7 +3005,7 @@ The following state arguments are supported:
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2951,7 +3014,7 @@ The following state arguments are supported:
 <a href="#payload_field_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action payload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2960,7 +3023,7 @@ The following state arguments are supported:
 <a href="#range_key_field_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range key name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2969,7 +3032,7 @@ The following state arguments are supported:
 <a href="#range_key_type_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +3041,7 @@ The following state arguments are supported:
 <a href="#range_key_value_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range key value.
 {{% /md %}}</dd></dl>
@@ -3037,7 +3100,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3046,7 +3109,7 @@ The following state arguments are supported:
 <a href="#putitem_nodejs" style="color: inherit; text-decoration: inherit;">put<wbr>Item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -3059,7 +3122,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3068,7 +3131,7 @@ The following state arguments are supported:
 <a href="#put_item_python" style="color: inherit; text-decoration: inherit;">put_<wbr>item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Input[Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -3109,7 +3172,7 @@ The following state arguments are supported:
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd></dl>
@@ -3122,7 +3185,7 @@ The following state arguments are supported:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd></dl>
@@ -3235,7 +3298,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint of your Elasticsearch domain.
 {{% /md %}}</dd><dt class="property-required"
@@ -3244,7 +3307,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the document you are storing.
 {{% /md %}}</dd><dt class="property-required"
@@ -3253,7 +3316,7 @@ The following state arguments are supported:
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Elasticsearch index where you want to store your data.
 {{% /md %}}</dd><dt class="property-required"
@@ -3262,7 +3325,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that has access to Elasticsearch.
 {{% /md %}}</dd><dt class="property-required"
@@ -3271,7 +3334,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of document you are storing.
 {{% /md %}}</dd></dl>
@@ -3284,7 +3347,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint of your Elasticsearch domain.
 {{% /md %}}</dd><dt class="property-required"
@@ -3293,7 +3356,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the document you are storing.
 {{% /md %}}</dd><dt class="property-required"
@@ -3302,7 +3365,7 @@ The following state arguments are supported:
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Elasticsearch index where you want to store your data.
 {{% /md %}}</dd><dt class="property-required"
@@ -3311,7 +3374,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that has access to Elasticsearch.
 {{% /md %}}</dd><dt class="property-required"
@@ -3320,7 +3383,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of document you are storing.
 {{% /md %}}</dd></dl>
@@ -3583,7 +3646,7 @@ The following state arguments are supported:
 <a href="#cloudwatchalarm_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3591,7 +3654,7 @@ The following state arguments are supported:
 <a href="#cloudwatchmetric_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3599,7 +3662,7 @@ The following state arguments are supported:
 <a href="#dynamodb_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3607,7 +3670,7 @@ The following state arguments are supported:
 <a href="#dynamodbv2_nodejs" style="color: inherit; text-decoration: inherit;">dynamodbv2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3615,7 +3678,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3623,7 +3686,7 @@ The following state arguments are supported:
 <a href="#firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose</a></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3631,7 +3694,7 @@ The following state arguments are supported:
 <a href="#iotanalytics_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3639,7 +3702,7 @@ The following state arguments are supported:
 <a href="#iotevents_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3710,7 @@ The following state arguments are supported:
 <a href="#kinesis_nodejs" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis</a></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,7 +3718,7 @@ The following state arguments are supported:
 <a href="#lambda_nodejs" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda</a></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3663,7 +3726,7 @@ The following state arguments are supported:
 <a href="#republish_nodejs" style="color: inherit; text-decoration: inherit;">republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish</a></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3671,7 +3734,7 @@ The following state arguments are supported:
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3</a></span>
+        <span class="property-type"><a href="#topicruleerroractions3">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3679,7 +3742,7 @@ The following state arguments are supported:
 <a href="#sns_nodejs" style="color: inherit; text-decoration: inherit;">sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3687,7 +3750,7 @@ The following state arguments are supported:
 <a href="#sqs_nodejs" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3695,7 +3758,7 @@ The following state arguments are supported:
 <a href="#stepfunctions_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions</a></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3707,7 +3770,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_alarm_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3715,7 +3778,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_metric_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3723,7 +3786,7 @@ The following state arguments are supported:
 <a href="#dynamodb_python" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3731,7 +3794,7 @@ The following state arguments are supported:
 <a href="#dynamodbv2_python" style="color: inherit; text-decoration: inherit;">dynamodbv2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3739,7 +3802,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3747,7 +3810,7 @@ The following state arguments are supported:
 <a href="#firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3755,7 +3818,7 @@ The following state arguments are supported:
 <a href="#iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3763,7 +3826,7 @@ The following state arguments are supported:
 <a href="#iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3834,7 @@ The following state arguments are supported:
 <a href="#kinesis_python" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3779,7 +3842,7 @@ The following state arguments are supported:
 <a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3787,7 +3850,7 @@ The following state arguments are supported:
 <a href="#republish_python" style="color: inherit; text-decoration: inherit;">republish</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3795,7 +3858,7 @@ The following state arguments are supported:
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3803,7 +3866,7 @@ The following state arguments are supported:
 <a href="#sns_python" style="color: inherit; text-decoration: inherit;">sns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3811,7 +3874,7 @@ The following state arguments are supported:
 <a href="#sqs_python" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3819,7 +3882,7 @@ The following state arguments are supported:
 <a href="#step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3913,7 +3976,7 @@ The following state arguments are supported:
 <a href="#alarmname_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch alarm name.
 {{% /md %}}</dd><dt class="property-required"
@@ -3922,7 +3985,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd><dt class="property-required"
@@ -3931,7 +3994,7 @@ The following state arguments are supported:
 <a href="#statereason_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The reason for the alarm change.
 {{% /md %}}</dd><dt class="property-required"
@@ -3940,7 +4003,7 @@ The following state arguments are supported:
 <a href="#statevalue_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
 {{% /md %}}</dd></dl>
@@ -3953,7 +4016,7 @@ The following state arguments are supported:
 <a href="#alarm_name_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch alarm name.
 {{% /md %}}</dd><dt class="property-required"
@@ -3962,7 +4025,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd><dt class="property-required"
@@ -3971,7 +4034,7 @@ The following state arguments are supported:
 <a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">state_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The reason for the alarm change.
 {{% /md %}}</dd><dt class="property-required"
@@ -3980,7 +4043,7 @@ The following state arguments are supported:
 <a href="#state_value_python" style="color: inherit; text-decoration: inherit;">state_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
 {{% /md %}}</dd></dl>
@@ -4111,7 +4174,7 @@ The following state arguments are supported:
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric name.
 {{% /md %}}</dd><dt class="property-required"
@@ -4120,7 +4183,7 @@ The following state arguments are supported:
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric namespace name.
 {{% /md %}}</dd><dt class="property-required"
@@ -4129,7 +4192,7 @@ The following state arguments are supported:
 <a href="#metricunit_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
 {{% /md %}}</dd><dt class="property-required"
@@ -4138,7 +4201,7 @@ The following state arguments are supported:
 <a href="#metricvalue_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric value.
 {{% /md %}}</dd><dt class="property-required"
@@ -4147,7 +4210,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4156,7 +4219,7 @@ The following state arguments are supported:
 <a href="#metrictimestamp_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
 {{% /md %}}</dd></dl>
@@ -4169,7 +4232,7 @@ The following state arguments are supported:
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric name.
 {{% /md %}}</dd><dt class="property-required"
@@ -4178,7 +4241,7 @@ The following state arguments are supported:
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric namespace name.
 {{% /md %}}</dd><dt class="property-required"
@@ -4187,7 +4250,7 @@ The following state arguments are supported:
 <a href="#metric_unit_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
 {{% /md %}}</dd><dt class="property-required"
@@ -4196,7 +4259,7 @@ The following state arguments are supported:
 <a href="#metric_value_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric value.
 {{% /md %}}</dd><dt class="property-required"
@@ -4205,7 +4268,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4214,7 +4277,7 @@ The following state arguments are supported:
 <a href="#metric_timestamp_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
 {{% /md %}}</dd></dl>
@@ -4417,7 +4480,7 @@ The following state arguments are supported:
 <a href="#hashkeyfield_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hash key name.
 {{% /md %}}</dd><dt class="property-required"
@@ -4426,7 +4489,7 @@ The following state arguments are supported:
 <a href="#hashkeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hash key value.
 {{% /md %}}</dd><dt class="property-required"
@@ -4435,7 +4498,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
 {{% /md %}}</dd><dt class="property-required"
@@ -4444,7 +4507,7 @@ The following state arguments are supported:
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4453,7 +4516,7 @@ The following state arguments are supported:
 <a href="#hashkeytype_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd><dt class="property-optional"
@@ -4462,7 +4525,7 @@ The following state arguments are supported:
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
 {{% /md %}}</dd><dt class="property-optional"
@@ -4471,7 +4534,7 @@ The following state arguments are supported:
 <a href="#payloadfield_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action payload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4480,7 +4543,7 @@ The following state arguments are supported:
 <a href="#rangekeyfield_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range key name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4489,7 +4552,7 @@ The following state arguments are supported:
 <a href="#rangekeytype_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd><dt class="property-optional"
@@ -4498,7 +4561,7 @@ The following state arguments are supported:
 <a href="#rangekeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range key value.
 {{% /md %}}</dd></dl>
@@ -4511,7 +4574,7 @@ The following state arguments are supported:
 <a href="#hash_key_field_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hash key name.
 {{% /md %}}</dd><dt class="property-required"
@@ -4520,7 +4583,7 @@ The following state arguments are supported:
 <a href="#hash_key_value_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hash key value.
 {{% /md %}}</dd><dt class="property-required"
@@ -4529,7 +4592,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to the DynamoDB table.
 {{% /md %}}</dd><dt class="property-required"
@@ -4538,7 +4601,7 @@ The following state arguments are supported:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4547,7 +4610,7 @@ The following state arguments are supported:
 <a href="#hash_key_type_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hash key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd><dt class="property-optional"
@@ -4556,7 +4619,7 @@ The following state arguments are supported:
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
 {{% /md %}}</dd><dt class="property-optional"
@@ -4565,7 +4628,7 @@ The following state arguments are supported:
 <a href="#payload_field_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action payload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4574,7 +4637,7 @@ The following state arguments are supported:
 <a href="#range_key_field_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range key name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4583,7 +4646,7 @@ The following state arguments are supported:
 <a href="#range_key_type_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range key type. Valid values are "STRING" or "NUMBER".
 {{% /md %}}</dd><dt class="property-optional"
@@ -4592,7 +4655,7 @@ The following state arguments are supported:
 <a href="#range_key_value_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range key value.
 {{% /md %}}</dd></dl>
@@ -4651,7 +4714,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4660,7 +4723,7 @@ The following state arguments are supported:
 <a href="#putitem_nodejs" style="color: inherit; text-decoration: inherit;">put<wbr>Item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">pulumi.<wbr>Input<Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -4673,7 +4736,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4682,7 +4745,7 @@ The following state arguments are supported:
 <a href="#put_item_python" style="color: inherit; text-decoration: inherit;">put_<wbr>item</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Input[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd></dl>
@@ -4723,7 +4786,7 @@ The following state arguments are supported:
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd></dl>
@@ -4736,7 +4799,7 @@ The following state arguments are supported:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the DynamoDB table.
 {{% /md %}}</dd></dl>
@@ -4849,7 +4912,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint of your Elasticsearch domain.
 {{% /md %}}</dd><dt class="property-required"
@@ -4858,7 +4921,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the document you are storing.
 {{% /md %}}</dd><dt class="property-required"
@@ -4867,7 +4930,7 @@ The following state arguments are supported:
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Elasticsearch index where you want to store your data.
 {{% /md %}}</dd><dt class="property-required"
@@ -4876,7 +4939,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that has access to Elasticsearch.
 {{% /md %}}</dd><dt class="property-required"
@@ -4885,7 +4948,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of document you are storing.
 {{% /md %}}</dd></dl>
@@ -4898,7 +4961,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint of your Elasticsearch domain.
 {{% /md %}}</dd><dt class="property-required"
@@ -4907,7 +4970,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the document you are storing.
 {{% /md %}}</dd><dt class="property-required"
@@ -4916,7 +4979,7 @@ The following state arguments are supported:
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Elasticsearch index where you want to store your data.
 {{% /md %}}</dd><dt class="property-required"
@@ -4925,7 +4988,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that has access to Elasticsearch.
 {{% /md %}}</dd><dt class="property-required"
@@ -4934,7 +4997,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of document you are storing.
 {{% /md %}}</dd></dl>
@@ -5011,7 +5074,7 @@ The following state arguments are supported:
 <a href="#deliverystreamname_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The delivery stream name.
 {{% /md %}}</dd><dt class="property-required"
@@ -5020,7 +5083,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5029,7 +5092,7 @@ The following state arguments are supported:
 <a href="#separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
 {{% /md %}}</dd></dl>
@@ -5042,7 +5105,7 @@ The following state arguments are supported:
 <a href="#delivery_stream_name_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The delivery stream name.
 {{% /md %}}</dd><dt class="property-required"
@@ -5051,7 +5114,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5060,7 +5123,7 @@ The following state arguments are supported:
 <a href="#separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
 {{% /md %}}</dd></dl>
@@ -5119,7 +5182,7 @@ The following state arguments are supported:
 <a href="#channelname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of AWS IOT Analytics channel.
 {{% /md %}}</dd><dt class="property-required"
@@ -5128,7 +5191,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd></dl>
@@ -5141,7 +5204,7 @@ The following state arguments are supported:
 <a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of AWS IOT Analytics channel.
 {{% /md %}}</dd><dt class="property-required"
@@ -5150,7 +5213,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd></dl>
@@ -5227,7 +5290,7 @@ The following state arguments are supported:
 <a href="#inputname_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the AWS IoT Events input.
 {{% /md %}}</dd><dt class="property-required"
@@ -5236,7 +5299,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5245,7 +5308,7 @@ The following state arguments are supported:
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
 {{% /md %}}</dd></dl>
@@ -5258,7 +5321,7 @@ The following state arguments are supported:
 <a href="#input_name_python" style="color: inherit; text-decoration: inherit;">input_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the AWS IoT Events input.
 {{% /md %}}</dd><dt class="property-required"
@@ -5267,7 +5330,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5276,7 +5339,7 @@ The following state arguments are supported:
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
 {{% /md %}}</dd></dl>
@@ -5353,7 +5416,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to the Amazon Kinesis stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -5362,7 +5425,7 @@ The following state arguments are supported:
 <a href="#streamname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon Kinesis stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5371,7 +5434,7 @@ The following state arguments are supported:
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The partition key.
 {{% /md %}}</dd></dl>
@@ -5384,7 +5447,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to the Amazon Kinesis stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -5393,7 +5456,7 @@ The following state arguments are supported:
 <a href="#stream_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon Kinesis stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5402,7 +5465,7 @@ The following state arguments are supported:
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The partition key.
 {{% /md %}}</dd></dl>
@@ -5443,7 +5506,7 @@ The following state arguments are supported:
 <a href="#functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function.
 {{% /md %}}</dd></dl>
@@ -5456,7 +5519,7 @@ The following state arguments are supported:
 <a href="#function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function.
 {{% /md %}}</dd></dl>
@@ -5533,7 +5596,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -5542,7 +5605,7 @@ The following state arguments are supported:
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5551,7 +5614,7 @@ The following state arguments are supported:
 <a href="#qos_nodejs" style="color: inherit; text-decoration: inherit;">qos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd></dl>
@@ -5564,7 +5627,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -5573,7 +5636,7 @@ The following state arguments are supported:
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5582,7 +5645,7 @@ The following state arguments are supported:
 <a href="#qos_python" style="color: inherit; text-decoration: inherit;">qos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd></dl>
@@ -5659,7 +5722,7 @@ The following state arguments are supported:
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket name.
 {{% /md %}}</dd><dt class="property-required"
@@ -5668,7 +5731,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object key.
 {{% /md %}}</dd><dt class="property-required"
@@ -5677,7 +5740,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd></dl>
@@ -5690,7 +5753,7 @@ The following state arguments are supported:
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket name.
 {{% /md %}}</dd><dt class="property-required"
@@ -5699,7 +5762,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object key.
 {{% /md %}}</dd><dt class="property-required"
@@ -5708,7 +5771,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd></dl>
@@ -5785,7 +5848,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -5794,7 +5857,7 @@ The following state arguments are supported:
 <a href="#targetarn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5803,7 +5866,7 @@ The following state arguments are supported:
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
 {{% /md %}}</dd></dl>
@@ -5816,7 +5879,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -5825,7 +5888,7 @@ The following state arguments are supported:
 <a href="#target_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5834,7 +5897,7 @@ The following state arguments are supported:
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
 {{% /md %}}</dd></dl>
@@ -5911,7 +5974,7 @@ The following state arguments are supported:
 <a href="#queueurl_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL of the Amazon SQS queue.
 {{% /md %}}</dd><dt class="property-required"
@@ -5920,7 +5983,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -5929,7 +5992,7 @@ The following state arguments are supported:
 <a href="#usebase64_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use Base64 encoding.
 {{% /md %}}</dd></dl>
@@ -5942,7 +6005,7 @@ The following state arguments are supported:
 <a href="#queue_url_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL of the Amazon SQS queue.
 {{% /md %}}</dd><dt class="property-required"
@@ -5951,7 +6014,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -5960,7 +6023,7 @@ The following state arguments are supported:
 <a href="#use_base64_python" style="color: inherit; text-decoration: inherit;">use_<wbr>base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use Base64 encoding.
 {{% /md %}}</dd></dl>
@@ -6037,7 +6100,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -6046,7 +6109,7 @@ The following state arguments are supported:
 <a href="#statemachinename_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6055,7 +6118,7 @@ The following state arguments are supported:
 <a href="#executionnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
 {{% /md %}}</dd></dl>
@@ -6068,7 +6131,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -6077,7 +6140,7 @@ The following state arguments are supported:
 <a href="#state_machine_name_python" style="color: inherit; text-decoration: inherit;">state_<wbr>machine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6086,7 +6149,7 @@ The following state arguments are supported:
 <a href="#execution_name_prefix_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
 {{% /md %}}</dd></dl>
@@ -6163,7 +6226,7 @@ The following state arguments are supported:
 <a href="#deliverystreamname_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The delivery stream name.
 {{% /md %}}</dd><dt class="property-required"
@@ -6172,7 +6235,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6181,7 +6244,7 @@ The following state arguments are supported:
 <a href="#separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
 {{% /md %}}</dd></dl>
@@ -6194,7 +6257,7 @@ The following state arguments are supported:
 <a href="#delivery_stream_name_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The delivery stream name.
 {{% /md %}}</dd><dt class="property-required"
@@ -6203,7 +6266,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6212,7 +6275,7 @@ The following state arguments are supported:
 <a href="#separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
 {{% /md %}}</dd></dl>
@@ -6271,7 +6334,7 @@ The following state arguments are supported:
 <a href="#channelname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of AWS IOT Analytics channel.
 {{% /md %}}</dd><dt class="property-required"
@@ -6280,7 +6343,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd></dl>
@@ -6293,7 +6356,7 @@ The following state arguments are supported:
 <a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of AWS IOT Analytics channel.
 {{% /md %}}</dd><dt class="property-required"
@@ -6302,7 +6365,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd></dl>
@@ -6379,7 +6442,7 @@ The following state arguments are supported:
 <a href="#inputname_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the AWS IoT Events input.
 {{% /md %}}</dd><dt class="property-required"
@@ -6388,7 +6451,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6397,7 +6460,7 @@ The following state arguments are supported:
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
 {{% /md %}}</dd></dl>
@@ -6410,7 +6473,7 @@ The following state arguments are supported:
 <a href="#input_name_python" style="color: inherit; text-decoration: inherit;">input_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the AWS IoT Events input.
 {{% /md %}}</dd><dt class="property-required"
@@ -6419,7 +6482,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6428,7 +6491,7 @@ The following state arguments are supported:
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
 {{% /md %}}</dd></dl>
@@ -6505,7 +6568,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to the Amazon Kinesis stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -6514,7 +6577,7 @@ The following state arguments are supported:
 <a href="#streamname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon Kinesis stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6523,7 +6586,7 @@ The following state arguments are supported:
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The partition key.
 {{% /md %}}</dd></dl>
@@ -6536,7 +6599,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to the Amazon Kinesis stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -6545,7 +6608,7 @@ The following state arguments are supported:
 <a href="#stream_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon Kinesis stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6554,7 +6617,7 @@ The following state arguments are supported:
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The partition key.
 {{% /md %}}</dd></dl>
@@ -6595,7 +6658,7 @@ The following state arguments are supported:
 <a href="#functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function.
 {{% /md %}}</dd></dl>
@@ -6608,7 +6671,7 @@ The following state arguments are supported:
 <a href="#function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function.
 {{% /md %}}</dd></dl>
@@ -6685,7 +6748,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -6694,7 +6757,7 @@ The following state arguments are supported:
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6703,7 +6766,7 @@ The following state arguments are supported:
 <a href="#qos_nodejs" style="color: inherit; text-decoration: inherit;">qos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd></dl>
@@ -6716,7 +6779,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -6725,7 +6788,7 @@ The following state arguments are supported:
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the MQTT topic the message should be republished to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6734,7 +6797,7 @@ The following state arguments are supported:
 <a href="#qos_python" style="color: inherit; text-decoration: inherit;">qos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
 {{% /md %}}</dd></dl>
@@ -6811,7 +6874,7 @@ The following state arguments are supported:
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket name.
 {{% /md %}}</dd><dt class="property-required"
@@ -6820,7 +6883,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object key.
 {{% /md %}}</dd><dt class="property-required"
@@ -6829,7 +6892,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd></dl>
@@ -6842,7 +6905,7 @@ The following state arguments are supported:
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket name.
 {{% /md %}}</dd><dt class="property-required"
@@ -6851,7 +6914,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object key.
 {{% /md %}}</dd><dt class="property-required"
@@ -6860,7 +6923,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IAM role ARN that allows access to the CloudWatch alarm.
 {{% /md %}}</dd></dl>
@@ -6937,7 +7000,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -6946,7 +7009,7 @@ The following state arguments are supported:
 <a href="#targetarn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6955,7 +7018,7 @@ The following state arguments are supported:
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
 {{% /md %}}</dd></dl>
@@ -6968,7 +7031,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -6977,7 +7040,7 @@ The following state arguments are supported:
 <a href="#target_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6986,7 +7049,7 @@ The following state arguments are supported:
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message format of the message to publish. Accepted values are "JSON" and "RAW".
 {{% /md %}}</dd></dl>
@@ -7063,7 +7126,7 @@ The following state arguments are supported:
 <a href="#queueurl_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL of the Amazon SQS queue.
 {{% /md %}}</dd><dt class="property-required"
@@ -7072,7 +7135,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -7081,7 +7144,7 @@ The following state arguments are supported:
 <a href="#usebase64_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether to use Base64 encoding.
 {{% /md %}}</dd></dl>
@@ -7094,7 +7157,7 @@ The following state arguments are supported:
 <a href="#queue_url_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL of the Amazon SQS queue.
 {{% /md %}}</dd><dt class="property-required"
@@ -7103,7 +7166,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access.
 {{% /md %}}</dd><dt class="property-required"
@@ -7112,7 +7175,7 @@ The following state arguments are supported:
 <a href="#use_base64_python" style="color: inherit; text-decoration: inherit;">use_<wbr>base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use Base64 encoding.
 {{% /md %}}</dd></dl>
@@ -7189,7 +7252,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -7198,7 +7261,7 @@ The following state arguments are supported:
 <a href="#statemachinename_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7207,7 +7270,7 @@ The following state arguments are supported:
 <a href="#executionnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
 {{% /md %}}</dd></dl>
@@ -7220,7 +7283,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that grants access to start execution of the state machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -7229,7 +7292,7 @@ The following state arguments are supported:
 <a href="#state_machine_name_python" style="color: inherit; text-decoration: inherit;">state_<wbr>machine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Step Functions state machine whose execution will be started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7238,7 +7301,7 @@ The following state arguments are supported:
 <a href="#execution_name_prefix_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The prefix used to generate, along with a UUID, the unique state machine execution name.
 {{% /md %}}</dd></dl>

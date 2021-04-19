@@ -23,107 +23,6 @@ a conflict of rule settings and will overwrite rules.
 > **NOTE:** Setting `protocol = "all"` or `protocol = -1` with `from_port` and `to_port` will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by this provider and may generate warnings in the future.
 
 > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
-## Usage with prefix list IDs
-
-Prefix Lists are either managed by AWS internally, or created by the customer using a
-Managed Prefix List resource. Prefix Lists provided by
-AWS are associated with a prefix list name, or service name, that is linked to a specific region.
-
-Prefix list IDs are exported on VPC Endpoints, so you can use this format:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// ...
-const myEndpoint = new aws.ec2.VpcEndpoint("myEndpoint", {});
-// ...
-const allowAll = new aws.ec2.SecurityGroupRule("allowAll", {
-    type: "egress",
-    toPort: 0,
-    protocol: "-1",
-    prefixListIds: [myEndpoint.prefixListId],
-    fromPort: 0,
-    securityGroupId: "sg-123456",
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-# ...
-my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
-# ...
-allow_all = aws.ec2.SecurityGroupRule("allowAll",
-    type="egress",
-    to_port=0,
-    protocol="-1",
-    prefix_list_ids=[my_endpoint.prefix_list_id],
-    from_port=0,
-    security_group_id="sg-123456")
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // ...
-        var myEndpoint = new Aws.Ec2.VpcEndpoint("myEndpoint", new Aws.Ec2.VpcEndpointArgs
-        {
-        });
-        // ...
-        var allowAll = new Aws.Ec2.SecurityGroupRule("allowAll", new Aws.Ec2.SecurityGroupRuleArgs
-        {
-            Type = "egress",
-            ToPort = 0,
-            Protocol = "-1",
-            PrefixListIds = 
-            {
-                myEndpoint.PrefixListId,
-            },
-            FromPort = 0,
-            SecurityGroupId = "sg-123456",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myEndpoint, err := ec2.NewVpcEndpoint(ctx, "myEndpoint", nil)
-		if err != nil {
-			return err
-		}
-		_, err = ec2.NewSecurityGroupRule(ctx, "allowAll", &ec2.SecurityGroupRuleArgs{
-			Type:     pulumi.String("egress"),
-			ToPort:   pulumi.Int(0),
-			Protocol: pulumi.String("-1"),
-			PrefixListIds: pulumi.StringArray{
-				myEndpoint.PrefixListId,
-			},
-			FromPort:        pulumi.Int(0),
-			SecurityGroupId: pulumi.String("sg-123456"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-You can also find a specific Prefix List using the `aws.ec2.getPrefixList` data source.
 
 {{% examples %}}
 
@@ -155,6 +54,10 @@ class MyStack : Stack
             {
                 aws_vpc.Example.Cidr_block,
             },
+            Ipv6CidrBlocks = 
+            {
+                aws_vpc.Example.Ipv6_cidr_block,
+            },
             SecurityGroupId = "sg-123456",
         });
     }
@@ -185,6 +88,7 @@ example = aws.ec2.SecurityGroupRule("example",
     to_port=65535,
     protocol="tcp",
     cidr_blocks=[aws_vpc["example"]["cidr_block"]],
+    ipv6_cidr_blocks=[aws_vpc["example"]["ipv6_cidr_block"]],
     security_group_id="sg-123456")
 ```
 
@@ -205,6 +109,132 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     toPort: 65535,
     protocol: "tcp",
     cidrBlocks: [aws_vpc.example.cidr_block],
+    ipv6CidrBlocks: [aws_vpc.example.ipv6_cidr_block],
+    securityGroupId: "sg-123456",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Usage With Prefix List IDs
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // ...
+        var myEndpoint = new Aws.Ec2.VpcEndpoint("myEndpoint", new Aws.Ec2.VpcEndpointArgs
+        {
+        });
+        // ...
+        var allowAll = new Aws.Ec2.SecurityGroupRule("allowAll", new Aws.Ec2.SecurityGroupRuleArgs
+        {
+            Type = "egress",
+            ToPort = 0,
+            Protocol = "-1",
+            PrefixListIds = 
+            {
+                myEndpoint.PrefixListId,
+            },
+            FromPort = 0,
+            SecurityGroupId = "sg-123456",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myEndpoint, err := ec2.NewVpcEndpoint(ctx, "myEndpoint", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewSecurityGroupRule(ctx, "allowAll", &ec2.SecurityGroupRuleArgs{
+			Type:     pulumi.String("egress"),
+			ToPort:   pulumi.Int(0),
+			Protocol: pulumi.String("-1"),
+			PrefixListIds: pulumi.StringArray{
+				myEndpoint.PrefixListId,
+			},
+			FromPort:        pulumi.Int(0),
+			SecurityGroupId: pulumi.String("sg-123456"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+# ...
+my_endpoint = aws.ec2.VpcEndpoint("myEndpoint")
+# ...
+allow_all = aws.ec2.SecurityGroupRule("allowAll",
+    type="egress",
+    to_port=0,
+    protocol="-1",
+    prefix_list_ids=[my_endpoint.prefix_list_id],
+    from_port=0,
+    security_group_id="sg-123456")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// ...
+const myEndpoint = new aws.ec2.VpcEndpoint("myEndpoint", {});
+// ...
+const allowAll = new aws.ec2.SecurityGroupRule("allowAll", {
+    type: "egress",
+    toPort: 0,
+    protocol: "-1",
+    prefixListIds: [myEndpoint.prefixListId],
+    fromPort: 0,
     securityGroupId: "sg-123456",
 });
 ```
@@ -226,19 +256,36 @@ const example = new aws.ec2.SecurityGroupRule("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityGroupRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityGroupRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityGroupRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecurityGroupRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prefix_list_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProtocolType]]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecurityGroupRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                      <span class="nx">ipv6_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">prefix_list_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ProtocolType]]]</span> = None<span class="p">,</span>
+                      <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">self</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                      <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecurityGroupRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityGroupRuleArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityGroupRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityGroupRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityGroupRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityGroupRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityGroupRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityGroupRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecurityGroupRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityGroupRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurityGroupRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -273,22 +320,32 @@ const example = new aws.ec2.SecurityGroupRule("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecurityGroupRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,7 +354,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -321,7 +378,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -378,7 +435,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -387,7 +444,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#protocoltype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Protocol<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+    <dd>{{% md %}}Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_csharp">
@@ -396,7 +453,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
+    <dd>{{% md %}}Security group to apply this rule to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
@@ -405,7 +462,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -414,7 +471,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
+    <dd>{{% md %}}Type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,8 +517,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_csharp">
@@ -470,8 +526,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security group id to allow access to/from,
-depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -484,7 +539,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -493,7 +548,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#protocoltype">Protocol<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+    <dd>{{% md %}}Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_go">
@@ -502,7 +557,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
+    <dd>{{% md %}}Security group to apply this rule to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
@@ -511,7 +566,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -520,7 +575,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
+    <dd>{{% md %}}Type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,8 +621,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_go">
@@ -576,8 +630,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security group id to allow access to/from,
-depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -588,45 +641,45 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protocoltype">Protocol<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protocoltype">pulumi.<wbr>Input<Protocol<wbr>Type></a></span>
     </dt>
-    <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+    <dd>{{% md %}}Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
+    <dd>{{% md %}}Security group to apply this rule to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
+    <dd>{{% md %}}Type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +687,7 @@ or `egress` (outbound).
 <a href="#cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +696,7 @@ or `egress` (outbound).
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +705,7 @@ or `egress` (outbound).
 <a href="#ipv6cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +714,7 @@ or `egress` (outbound).
 <a href="#prefixlistids_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>List<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -670,20 +723,18 @@ or `egress` (outbound).
 <a href="#self_nodejs" style="color: inherit; text-decoration: inherit;">self</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_nodejs">
 <a href="#sourcesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The security group id to allow access to/from,
-depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -694,45 +745,45 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protocoltype">Protocol<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protocoltype">Input[Protocol<wbr>Type]</a></span>
     </dt>
-    <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+    <dd>{{% md %}}Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_group_id_python">
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
+    <dd>{{% md %}}Security group to apply this rule to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
+    <dd>{{% md %}}Type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +791,7 @@ or `egress` (outbound).
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -749,7 +800,7 @@ or `egress` (outbound).
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -758,7 +809,7 @@ or `egress` (outbound).
 <a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +818,7 @@ or `egress` (outbound).
 <a href="#prefix_list_ids_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -776,20 +827,18 @@ or `egress` (outbound).
 <a href="#self_python" style="color: inherit; text-decoration: inherit;">self</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_security_group_id_python">
 <a href="#source_security_group_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The security group id to allow access to/from,
-depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -856,20 +905,33 @@ Get an existing SecurityGroupRule resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecurityGroupRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecurityGroupRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecurityGroupRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecurityGroupRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prefix_list_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProtocolType]]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityGroupRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ipv6_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">prefix_list_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ProtocolType]]]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">self</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> SecurityGroupRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecurityGroupRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityGroupRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecurityGroupRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityGroupRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecurityGroupRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecurityGroupRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecurityGroupRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecurityGroupRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -998,7 +1060,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblocks_csharp">
@@ -1025,7 +1087,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#protocoltype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Protocol<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+    <dd>{{% md %}}Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_csharp">
@@ -1034,7 +1096,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
+    <dd>{{% md %}}Security group to apply this rule to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_csharp">
@@ -1043,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_csharp">
@@ -1053,8 +1114,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security group id to allow access to/from,
-depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_csharp">
@@ -1063,7 +1123,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1072,7 +1132,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
+    <dd>{{% md %}}Type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1104,7 +1164,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblocks_go">
@@ -1131,7 +1191,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#protocoltype">Protocol<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+    <dd>{{% md %}}Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_go">
@@ -1140,7 +1200,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
+    <dd>{{% md %}}Security group to apply this rule to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_go">
@@ -1149,8 +1209,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_go">
@@ -1159,8 +1218,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security group id to allow access to/from,
-depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_go">
@@ -1169,7 +1227,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -1178,7 +1236,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
+    <dd>{{% md %}}Type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1190,7 +1248,7 @@ or `egress` (outbound).
 <a href="#state_cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1199,7 +1257,7 @@ or `egress` (outbound).
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,16 +1266,16 @@ or `egress` (outbound).
 <a href="#state_fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblocks_nodejs">
 <a href="#state_ipv6cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1284,7 @@ or `egress` (outbound).
 <a href="#state_prefixlistids_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>List<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,56 +1293,54 @@ or `egress` (outbound).
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protocoltype">Protocol<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protocoltype">pulumi.<wbr>Input<Protocol<wbr>Type></a></span>
     </dt>
-    <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+    <dd>{{% md %}}Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_nodejs">
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
+    <dd>{{% md %}}Security group to apply this rule to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_nodejs">
 <a href="#state_self_nodejs" style="color: inherit; text-decoration: inherit;">self</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_nodejs">
 <a href="#state_sourcesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The security group id to allow access to/from,
-depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_nodejs">
 <a href="#state_toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
-    <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
+    <dd>{{% md %}}Type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1296,7 +1352,7 @@ or `egress` (outbound).
 <a href="#state_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1361,7 @@ or `egress` (outbound).
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,16 +1370,16 @@ or `egress` (outbound).
 <a href="#state_from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
+    <dd>{{% md %}}Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_cidr_blocks_python">
 <a href="#state_ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1332,7 +1388,7 @@ or `egress` (outbound).
 <a href="#state_prefix_list_ids_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,56 +1397,54 @@ or `egress` (outbound).
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protocoltype">Protocol<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protocoltype">Input[Protocol<wbr>Type]</a></span>
     </dt>
-    <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+    <dd>{{% md %}}Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_id_python">
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
+    <dd>{{% md %}}Security group to apply this rule to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_python">
 <a href="#state_self_python" style="color: inherit; text-decoration: inherit;">self</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
-    <dd>{{% md %}}If true, the security group itself will be added as
-a source to this ingress rule. Cannot be specified with `source_security_group_id`.
+    <dd>{{% md %}}Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_security_group_id_python">
 <a href="#state_source_security_group_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The security group id to allow access to/from,
-depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
+    <dd>{{% md %}}Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_to_port_python">
 <a href="#state_to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
-    <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
+    <dd>{{% md %}}End port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
+    <dd>{{% md %}}Type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1440,7 +1494,7 @@ or `egress` (outbound).
 ## Import
 
 
-### Examples Import an ingress rule in security group `sg-6e616f6d69` for TCP port 8000 with an IPv4 destination CIDR of `10.0.3.0/24`console
+Security Group Rules can be imported using the `security_group_id`, `type`, `protocol`, `from_port`, `to_port`, and source(s)/destination(s) (e.g. `cidr_block`) separated by underscores (`_`). All parts are required. Not all rule permissions (e.g., not all of a rule's CIDR blocks) need to be imported for this provider to manage rule permissions. However, importing some of a rule's permissions but not others, and then making changes to the rule will result in the creation of an additional rule to capture the updated permissions. Rule permissions that were not imported are left intact in the original rule. Import an ingress rule in security group `sg-6e616f6d69` for TCP port 8000 with an IPv4 destination CIDR of `10.0.3.0/24`console
 
 ```sh
  $ pulumi import aws:ec2/securityGroupRule:SecurityGroupRule ingress sg-6e616f6d69_ingress_tcp_8000_8000_10.0.3.0/24

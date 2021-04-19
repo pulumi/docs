@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/opsworks"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -113,19 +113,48 @@ const db = new aws.opsworks.MysqlLayer("db", {stackId: aws_opsworks_stack.main.i
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MysqlLayer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MysqlLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MysqlLayer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MysqlLayerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MysqlLayer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_assign_elastic_ips</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_assign_public_ips</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_configure_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_deploy_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_instance_profile_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_setup_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_shutdown_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_undeploy_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">drain_elb_on_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[MysqlLayerEbsVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_updates_on_boot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_shutdown_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_password_on_all_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stack_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">use_ebs_optimized_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MysqlLayer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">auto_assign_elastic_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">auto_assign_public_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">custom_configure_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">custom_deploy_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">custom_instance_profile_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">custom_json</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">custom_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">custom_setup_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">custom_shutdown_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">custom_undeploy_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">drain_elb_on_shutdown</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">ebs_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MysqlLayerEbsVolumeArgs]]]]</span> = None<span class="p">,</span>
+               <span class="nx">elastic_load_balancer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">install_updates_on_boot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">instance_shutdown_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">root_password_on_all_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">stack_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">system_packages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">use_ebs_optimized_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MysqlLayer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MysqlLayerArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMysqlLayer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MysqlLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MysqlLayer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMysqlLayer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MysqlLayerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MysqlLayer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MysqlLayer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MysqlLayerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MysqlLayer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MysqlLayerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -160,22 +189,32 @@ const db = new aws.opsworks.MysqlLayer("db", {stackId: aws_opsworks_stack.main.i
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MysqlLayerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -184,7 +223,7 @@ const db = new aws.opsworks.MysqlLayer("db", {stackId: aws_opsworks_stack.main.i
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -208,7 +247,7 @@ const db = new aws.opsworks.MysqlLayer("db", {stackId: aws_opsworks_stack.main.i
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -675,7 +714,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -684,7 +723,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#autoassignelasticips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -693,7 +732,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#autoassignpublicips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -702,7 +741,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#autohealing_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -711,7 +750,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customconfigurerecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Configure<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -719,7 +758,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customdeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +766,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custominstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +775,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customjson_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +784,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +793,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customsetuprecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +801,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customshutdownrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shutdown<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +809,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#customundeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Undeploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +817,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#drainelbonshutdown_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd><dt class="property-optional"
@@ -787,7 +826,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ebsvolumes_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqllayerebsvolume">Mysql<wbr>Layer<wbr>Ebs<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#mysqllayerebsvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Mysql<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +835,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#elasticloadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +844,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#installupdatesonboot_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +853,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#instanceshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -823,7 +862,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +871,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Root password to use for MySQL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +880,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#rootpasswordonallinstances_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password<wbr>On<wbr>All<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to set the root user password to all instances in the stack so they can access the instances in this layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -850,7 +889,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#systempackages_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -859,7 +898,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -868,7 +907,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useebsoptimizedinstances_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd></dl>
@@ -881,7 +920,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +929,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#auto_assign_elastic_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>elastic_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +938,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#auto_assign_public_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +947,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#auto_healing_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -917,7 +956,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custom_configure_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>configure_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +964,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custom_deploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deploy_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +972,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custom_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>instance_<wbr>profile_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -942,7 +981,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custom_json_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -951,7 +990,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custom_security_group_ids_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +999,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custom_setup_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +1007,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custom_shutdown_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>shutdown_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +1015,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#custom_undeploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>undeploy_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -984,7 +1023,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#drain_elb_on_shutdown_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>elb_<wbr>on_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +1032,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#ebs_volumes_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqllayerebsvolume">Sequence[Mysql<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mysqllayerebsvolume">Input[Mysql<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +1041,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#elastic_load_balancer_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +1050,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#install_updates_on_boot_python" style="color: inherit; text-decoration: inherit;">install_<wbr>updates_<wbr>on_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1059,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#instance_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>shutdown_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1068,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1077,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Root password to use for MySQL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1086,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#root_password_on_all_instances_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password_<wbr>on_<wbr>all_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to set the root user password to all instances in the stack so they can access the instances in this layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1095,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#system_packages_python" style="color: inherit; text-decoration: inherit;">system_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1065,7 +1104,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1074,7 +1113,7 @@ The MysqlLayer resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#use_ebs_optimized_instances_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd></dl>
@@ -1179,20 +1218,46 @@ Get an existing MysqlLayer resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MysqlLayerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MysqlLayer</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MysqlLayerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MysqlLayer</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_assign_elastic_ips</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_assign_public_ips</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_configure_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_deploy_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_instance_profile_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_setup_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_shutdown_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_undeploy_recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">drain_elb_on_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[MysqlLayerEbsVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_updates_on_boot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_shutdown_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_password_on_all_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stack_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">use_ebs_optimized_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MysqlLayer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_assign_elastic_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_assign_public_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_configure_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_deploy_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_instance_profile_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_json</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_setup_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_shutdown_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_undeploy_recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">drain_elb_on_shutdown</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MysqlLayerEbsVolumeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">elastic_load_balancer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">install_updates_on_boot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_shutdown_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">root_password_on_all_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">stack_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">system_packages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">use_ebs_optimized_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> MysqlLayer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMysqlLayer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MysqlLayerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MysqlLayer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMysqlLayer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MysqlLayerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MysqlLayer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MysqlLayer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MysqlLayerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MysqlLayer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MysqlLayerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1731,7 +1796,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1805,7 @@ The following state arguments are supported:
 <a href="#state_autoassignelasticips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1814,7 @@ The following state arguments are supported:
 <a href="#state_autoassignpublicips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1823,7 @@ The following state arguments are supported:
 <a href="#state_autohealing_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1832,7 @@ The following state arguments are supported:
 <a href="#state_customconfigurerecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Configure<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_customdeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1848,7 @@ The following state arguments are supported:
 <a href="#state_custominstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1857,7 @@ The following state arguments are supported:
 <a href="#state_customjson_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1866,7 @@ The following state arguments are supported:
 <a href="#state_customsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1875,7 @@ The following state arguments are supported:
 <a href="#state_customsetuprecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1818,7 +1883,7 @@ The following state arguments are supported:
 <a href="#state_customshutdownrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shutdown<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1891,7 @@ The following state arguments are supported:
 <a href="#state_customundeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Undeploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1899,7 @@ The following state arguments are supported:
 <a href="#state_drainelbonshutdown_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1843,7 +1908,7 @@ The following state arguments are supported:
 <a href="#state_ebsvolumes_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqllayerebsvolume">Mysql<wbr>Layer<wbr>Ebs<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#mysqllayerebsvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Mysql<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1917,7 @@ The following state arguments are supported:
 <a href="#state_elasticloadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1926,7 @@ The following state arguments are supported:
 <a href="#state_installupdatesonboot_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1935,7 @@ The following state arguments are supported:
 <a href="#state_instanceshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1944,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1953,7 @@ The following state arguments are supported:
 <a href="#state_rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Root password to use for MySQL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1962,7 @@ The following state arguments are supported:
 <a href="#state_rootpasswordonallinstances_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password<wbr>On<wbr>All<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to set the root user password to all instances in the stack so they can access the instances in this layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1906,7 +1971,7 @@ The following state arguments are supported:
 <a href="#state_stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1980,7 @@ The following state arguments are supported:
 <a href="#state_systempackages_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1989,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1998,7 @@ The following state arguments are supported:
 <a href="#state_useebsoptimizedinstances_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd></dl>
@@ -1946,7 +2011,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1955,7 +2020,7 @@ The following state arguments are supported:
 <a href="#state_auto_assign_elastic_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>elastic_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1964,7 +2029,7 @@ The following state arguments are supported:
 <a href="#state_auto_assign_public_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1973,7 +2038,7 @@ The following state arguments are supported:
 <a href="#state_auto_healing_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1982,7 +2047,7 @@ The following state arguments are supported:
 <a href="#state_custom_configure_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>configure_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +2055,7 @@ The following state arguments are supported:
 <a href="#state_custom_deploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deploy_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +2063,7 @@ The following state arguments are supported:
 <a href="#state_custom_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>instance_<wbr>profile_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2007,7 +2072,7 @@ The following state arguments are supported:
 <a href="#state_custom_json_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +2081,7 @@ The following state arguments are supported:
 <a href="#state_custom_security_group_ids_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2025,7 +2090,7 @@ The following state arguments are supported:
 <a href="#state_custom_setup_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2098,7 @@ The following state arguments are supported:
 <a href="#state_custom_shutdown_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>shutdown_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2106,7 @@ The following state arguments are supported:
 <a href="#state_custom_undeploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>undeploy_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_drain_elb_on_shutdown_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>elb_<wbr>on_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2058,7 +2123,7 @@ The following state arguments are supported:
 <a href="#state_ebs_volumes_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqllayerebsvolume">Sequence[Mysql<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mysqllayerebsvolume">Input[Mysql<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2067,7 +2132,7 @@ The following state arguments are supported:
 <a href="#state_elastic_load_balancer_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd><dt class="property-optional"
@@ -2076,7 +2141,7 @@ The following state arguments are supported:
 <a href="#state_install_updates_on_boot_python" style="color: inherit; text-decoration: inherit;">install_<wbr>updates_<wbr>on_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2085,7 +2150,7 @@ The following state arguments are supported:
 <a href="#state_instance_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>shutdown_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2168,7 @@ The following state arguments are supported:
 <a href="#state_root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Root password to use for MySQL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_root_password_on_all_instances_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password_<wbr>on_<wbr>all_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to set the root user password to all instances in the stack so they can access the instances in this layer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2186,7 @@ The following state arguments are supported:
 <a href="#state_stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2195,7 @@ The following state arguments are supported:
 <a href="#state_system_packages_python" style="color: inherit; text-decoration: inherit;">system_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2139,7 +2204,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2148,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_use_ebs_optimized_instances_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd></dl>
@@ -2304,7 +2369,7 @@ The following state arguments are supported:
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd><dt class="property-required"
@@ -2313,7 +2378,7 @@ The following state arguments are supported:
 <a href="#numberofdisks_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd><dt class="property-required"
@@ -2322,7 +2387,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2331,7 +2396,7 @@ The following state arguments are supported:
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2339,7 +2404,7 @@ The following state arguments are supported:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2348,7 +2413,7 @@ The following state arguments are supported:
 <a href="#raidlevel_nodejs" style="color: inherit; text-decoration: inherit;">raid<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2357,7 +2422,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd></dl>
@@ -2370,7 +2435,7 @@ The following state arguments are supported:
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd><dt class="property-required"
@@ -2379,7 +2444,7 @@ The following state arguments are supported:
 <a href="#number_of_disks_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd><dt class="property-required"
@@ -2388,7 +2453,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2397,7 +2462,7 @@ The following state arguments are supported:
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2405,7 +2470,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2414,7 +2479,7 @@ The following state arguments are supported:
 <a href="#raid_level_python" style="color: inherit; text-decoration: inherit;">raid_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2423,7 +2488,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd></dl>

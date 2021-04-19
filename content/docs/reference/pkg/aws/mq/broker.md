@@ -257,19 +257,44 @@ const example = new aws.mq.Broker("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Broker</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BrokerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Broker</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BrokerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Broker</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">authentication_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[BrokerConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_options</span><span class="p">:</span> <span class="nx">Optional[BrokerEncryptionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ldap_server_metadata</span><span class="p">:</span> <span class="nx">Optional[BrokerLdapServerMetadataArgs]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[BrokerLogsArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_start_time</span><span class="p">:</span> <span class="nx">Optional[BrokerMaintenanceWindowStartTimeArgs]</span> = None<span class="p">, </span><span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[BrokerUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Broker</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">authentication_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerConfigurationArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">encryption_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerEncryptionOptionsArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">host_instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">ldap_server_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerLdapServerMetadataArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerLogsArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">maintenance_window_start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerMaintenanceWindowStartTimeArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BrokerUserArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Broker</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BrokerArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBroker</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BrokerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Broker</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBroker</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BrokerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Broker</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Broker</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BrokerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Broker</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BrokerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -304,22 +329,32 @@ const example = new aws.mq.Broker("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BrokerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -328,7 +363,7 @@ const example = new aws.mq.Broker("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -352,7 +387,7 @@ const example = new aws.mq.Broker("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -757,7 +792,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#brokername_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the broker.
 {{% /md %}}</dd><dt class="property-required"
@@ -766,7 +801,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#enginetype_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-required"
@@ -775,7 +810,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions. For example, `5.15.0`.
 {{% /md %}}</dd><dt class="property-required"
@@ -784,7 +819,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#hostinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
 {{% /md %}}</dd><dt class="property-required"
@@ -793,7 +828,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">Broker<wbr>User[]</a></span>
+        <span class="property-type"><a href="#brokeruser">pulumi.<wbr>Input<pulumi.<wbr>Input<Broker<wbr>User<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +837,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +846,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authenticationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +855,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +864,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">pulumi.<wbr>Input<Broker<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +873,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -847,7 +882,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryptionoptions_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">pulumi.<wbr>Input<Broker<wbr>Encryption<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +891,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ldapservermetadata_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Server<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#brokerldapservermetadata">pulumi.<wbr>Input<Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +900,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#brokerlogs">pulumi.<wbr>Input<Broker<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the logging configuration of the broker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +909,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#maintenancewindowstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">pulumi.<wbr>Input<Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the maintenance window start time. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +918,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +927,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of security group IDs assigned to the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +936,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +945,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +954,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the broker.
 {{% /md %}}</dd></dl>
@@ -932,7 +967,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#broker_name_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the broker.
 {{% /md %}}</dd><dt class="property-required"
@@ -941,7 +976,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#engine_type_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-required"
@@ -950,7 +985,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions. For example, `5.15.0`.
 {{% /md %}}</dd><dt class="property-required"
@@ -959,7 +994,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#host_instance_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
 {{% /md %}}</dd><dt class="property-required"
@@ -968,7 +1003,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">Sequence[Broker<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#brokeruser">Input[Broker<wbr>User<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -977,7 +1012,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +1021,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authentication_strategy_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +1030,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1039,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Input[Broker<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1048,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +1057,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryption_options_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Input[Broker<wbr>Encryption<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1066,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ldap_server_metadata_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>server_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokerldapservermetadata">Input[Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1075,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokerlogs">Input[Broker<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the logging configuration of the broker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1084,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Input[Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the maintenance window start time. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1093,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1102,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of security group IDs assigned to the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1111,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1120,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1129,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the broker.
 {{% /md %}}</dd></dl>
@@ -1279,20 +1314,43 @@ Get an existing Broker resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BrokerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Broker</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BrokerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Broker</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[BrokerConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_options</span><span class="p">:</span> <span class="nx">Optional[BrokerEncryptionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[BrokerInstanceArgs]]</span> = None<span class="p">, </span><span class="nx">ldap_server_metadata</span><span class="p">:</span> <span class="nx">Optional[BrokerLdapServerMetadataArgs]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[BrokerLogsArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_start_time</span><span class="p">:</span> <span class="nx">Optional[BrokerMaintenanceWindowStartTimeArgs]</span> = None<span class="p">, </span><span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[BrokerUserArgs]]</span> = None<span class="p">) -&gt;</span> Broker</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">authentication_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerEncryptionOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">host_instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BrokerInstanceArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ldap_server_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerLdapServerMetadataArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerLogsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BrokerMaintenanceWindowStartTimeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BrokerUserArgs]]]]</span> = None<span class="p">) -&gt;</span> Broker</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBroker<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BrokerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Broker</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBroker<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BrokerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Broker</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Broker</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BrokerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Broker</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BrokerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1809,7 +1867,7 @@ The following state arguments are supported:
 <a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1818,7 +1876,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1827,7 +1885,7 @@ The following state arguments are supported:
 <a href="#state_authenticationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1836,7 +1894,7 @@ The following state arguments are supported:
 <a href="#state_autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1845,7 +1903,7 @@ The following state arguments are supported:
 <a href="#state_brokername_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1912,7 @@ The following state arguments are supported:
 <a href="#state_configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">pulumi.<wbr>Input<Broker<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1921,7 @@ The following state arguments are supported:
 <a href="#state_deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1930,7 @@ The following state arguments are supported:
 <a href="#state_encryptionoptions_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">pulumi.<wbr>Input<Broker<wbr>Encryption<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1881,7 +1939,7 @@ The following state arguments are supported:
 <a href="#state_enginetype_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1890,7 +1948,7 @@ The following state arguments are supported:
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions. For example, `5.15.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1899,7 +1957,7 @@ The following state arguments are supported:
 <a href="#state_hostinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1908,7 +1966,7 @@ The following state arguments are supported:
 <a href="#state_instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerinstance">Broker<wbr>Instance[]</a></span>
+        <span class="property-type"><a href="#brokerinstance">pulumi.<wbr>Input<pulumi.<wbr>Input<Broker<wbr>Instance<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -1928,7 +1986,7 @@ The following state arguments are supported:
 <a href="#state_ldapservermetadata_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Server<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#brokerldapservermetadata">pulumi.<wbr>Input<Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1937,7 +1995,7 @@ The following state arguments are supported:
 <a href="#state_logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#brokerlogs">pulumi.<wbr>Input<Broker<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the logging configuration of the broker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1946,7 +2004,7 @@ The following state arguments are supported:
 <a href="#state_maintenancewindowstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">pulumi.<wbr>Input<Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the maintenance window start time. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1955,7 +2013,7 @@ The following state arguments are supported:
 <a href="#state_publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1964,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of security group IDs assigned to the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1973,7 +2031,7 @@ The following state arguments are supported:
 <a href="#state_storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1982,7 +2040,7 @@ The following state arguments are supported:
 <a href="#state_subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1991,7 +2049,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2000,7 +2058,7 @@ The following state arguments are supported:
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">Broker<wbr>User[]</a></span>
+        <span class="property-type"><a href="#brokeruser">pulumi.<wbr>Input<pulumi.<wbr>Input<Broker<wbr>User<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2013,7 +2071,7 @@ The following state arguments are supported:
 <a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +2080,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2031,7 +2089,7 @@ The following state arguments are supported:
 <a href="#state_authentication_strategy_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2040,7 +2098,7 @@ The following state arguments are supported:
 <a href="#state_auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2049,7 +2107,7 @@ The following state arguments are supported:
 <a href="#state_broker_name_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2058,7 +2116,7 @@ The following state arguments are supported:
 <a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Input[Broker<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2067,7 +2125,7 @@ The following state arguments are supported:
 <a href="#state_deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2076,7 +2134,7 @@ The following state arguments are supported:
 <a href="#state_encryption_options_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Input[Broker<wbr>Encryption<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2085,7 +2143,7 @@ The following state arguments are supported:
 <a href="#state_engine_type_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2152,7 @@ The following state arguments are supported:
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions. For example, `5.15.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2161,7 @@ The following state arguments are supported:
 <a href="#state_host_instance_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2170,7 @@ The following state arguments are supported:
 <a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerinstance">Sequence[Broker<wbr>Instance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#brokerinstance">Input[Broker<wbr>Instance<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -2132,7 +2190,7 @@ The following state arguments are supported:
 <a href="#state_ldap_server_metadata_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>server_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerldapservermetadata">Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokerldapservermetadata">Input[Broker<wbr>Ldap<wbr>Server<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2199,7 @@ The following state arguments are supported:
 <a href="#state_logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokerlogs">Input[Broker<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the logging configuration of the broker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Input[Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the maintenance window start time. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2217,7 @@ The following state arguments are supported:
 <a href="#state_publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2226,7 @@ The following state arguments are supported:
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of security group IDs assigned to the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2235,7 @@ The following state arguments are supported:
 <a href="#state_storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2186,7 +2244,7 @@ The following state arguments are supported:
 <a href="#state_subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2253,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the broker.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2262,7 @@ The following state arguments are supported:
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">Sequence[Broker<wbr>User<wbr>Args]</a></span>
+        <span class="property-type"><a href="#brokeruser">Input[Broker<wbr>User<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2272,7 +2330,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2281,7 +2339,7 @@ The following state arguments are supported:
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
 {{% /md %}}</dd></dl>
@@ -2294,7 +2352,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2303,7 +2361,7 @@ The following state arguments are supported:
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
 {{% /md %}}</dd></dl>
@@ -2362,7 +2420,7 @@ The following state arguments are supported:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2371,7 +2429,7 @@ The following state arguments are supported:
 <a href="#useawsownedkey_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Aws<wbr>Owned<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable an AWS-owned KMS CMK that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS-managed CMK aliased to `aws/mq` in your account.
 {{% /md %}}</dd></dl>
@@ -2384,7 +2442,7 @@ The following state arguments are supported:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2393,7 +2451,7 @@ The following state arguments are supported:
 <a href="#use_aws_owned_key_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aws_<wbr>owned_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable an AWS-owned KMS CMK that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS-managed CMK aliased to `aws/mq` in your account.
 {{% /md %}}</dd></dl>
@@ -2464,7 +2522,7 @@ The following state arguments are supported:
 <a href="#consoleurl_nodejs" style="color: inherit; text-decoration: inherit;">console<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2472,7 +2530,7 @@ The following state arguments are supported:
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2480,7 +2538,7 @@ The following state arguments are supported:
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2492,7 +2550,7 @@ The following state arguments are supported:
 <a href="#console_url_python" style="color: inherit; text-decoration: inherit;">console_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2500,7 +2558,7 @@ The following state arguments are supported:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2508,7 +2566,7 @@ The following state arguments are supported:
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2728,7 +2786,7 @@ The following state arguments are supported:
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of a fully qualified domain name of the LDAP server and an optional failover server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2737,7 +2795,7 @@ The following state arguments are supported:
 <a href="#rolebase_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Base</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified name of the directory to search for a user’s groups.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2746,7 +2804,7 @@ The following state arguments are supported:
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2755,7 +2813,7 @@ The following state arguments are supported:
 <a href="#rolesearchmatching_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Search<wbr>Matching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Search criteria for groups.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2764,7 +2822,7 @@ The following state arguments are supported:
 <a href="#rolesearchsubtree_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Search<wbr>Subtree</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the directory search scope is the entire sub-tree.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2773,7 +2831,7 @@ The following state arguments are supported:
 <a href="#serviceaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service account password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2782,7 +2840,7 @@ The following state arguments are supported:
 <a href="#serviceaccountusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service account username.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2791,7 +2849,7 @@ The following state arguments are supported:
 <a href="#userbase_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Base</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified name of the directory where you want to search for users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2800,7 +2858,7 @@ The following state arguments are supported:
 <a href="#userrolename_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute for the user group membership.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2809,7 +2867,7 @@ The following state arguments are supported:
 <a href="#usersearchmatching_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Matching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Search criteria for users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2818,7 +2876,7 @@ The following state arguments are supported:
 <a href="#usersearchsubtree_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Search<wbr>Subtree</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the directory search scope is the entire sub-tree.
 {{% /md %}}</dd></dl>
@@ -2831,7 +2889,7 @@ The following state arguments are supported:
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of a fully qualified domain name of the LDAP server and an optional failover server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2898,7 @@ The following state arguments are supported:
 <a href="#role_base_python" style="color: inherit; text-decoration: inherit;">role_<wbr>base</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified name of the directory to search for a user’s groups.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2907,7 @@ The following state arguments are supported:
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2858,7 +2916,7 @@ The following state arguments are supported:
 <a href="#role_search_matching_python" style="color: inherit; text-decoration: inherit;">role_<wbr>search_<wbr>matching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Search criteria for groups.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2867,7 +2925,7 @@ The following state arguments are supported:
 <a href="#role_search_subtree_python" style="color: inherit; text-decoration: inherit;">role_<wbr>search_<wbr>subtree</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the directory search scope is the entire sub-tree.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2876,7 +2934,7 @@ The following state arguments are supported:
 <a href="#service_account_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service account password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2885,7 +2943,7 @@ The following state arguments are supported:
 <a href="#service_account_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service account username.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2894,7 +2952,7 @@ The following state arguments are supported:
 <a href="#user_base_python" style="color: inherit; text-decoration: inherit;">user_<wbr>base</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified name of the directory where you want to search for users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2903,7 +2961,7 @@ The following state arguments are supported:
 <a href="#user_role_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute for the user group membership.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2912,7 +2970,7 @@ The following state arguments are supported:
 <a href="#user_search_matching_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>matching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Search criteria for users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2921,7 +2979,7 @@ The following state arguments are supported:
 <a href="#user_search_subtree_python" style="color: inherit; text-decoration: inherit;">user_<wbr>search_<wbr>subtree</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the directory search scope is the entire sub-tree.
 {{% /md %}}</dd></dl>
@@ -2980,7 +3038,7 @@ The following state arguments are supported:
 <a href="#audit_nodejs" style="color: inherit; text-decoration: inherit;">audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables audit logging. Auditing is only possible for `engine_type` of `ActiveMQ`. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2989,7 +3047,7 @@ The following state arguments are supported:
 <a href="#general_nodejs" style="color: inherit; text-decoration: inherit;">general</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3002,7 +3060,7 @@ The following state arguments are supported:
 <a href="#audit_python" style="color: inherit; text-decoration: inherit;">audit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables audit logging. Auditing is only possible for `engine_type` of `ActiveMQ`. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3011,7 +3069,7 @@ The following state arguments are supported:
 <a href="#general_python" style="color: inherit; text-decoration: inherit;">general</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3088,7 +3146,7 @@ The following state arguments are supported:
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Day of the week, e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3097,7 +3155,7 @@ The following state arguments are supported:
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time, in 24-hour format, e.g. `02:00`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3106,7 +3164,7 @@ The following state arguments are supported:
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g. `CET`.
 {{% /md %}}</dd></dl>
@@ -3119,7 +3177,7 @@ The following state arguments are supported:
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Day of the week, e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3128,7 +3186,7 @@ The following state arguments are supported:
 <a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time, in 24-hour format, e.g. `02:00`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3137,7 +3195,7 @@ The following state arguments are supported:
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time zone in either the Country/City format or the UTC offset format, e.g. `CET`.
 {{% /md %}}</dd></dl>
@@ -3232,7 +3290,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
 {{% /md %}}</dd><dt class="property-required"
@@ -3241,7 +3299,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3250,7 +3308,7 @@ The following state arguments are supported:
 <a href="#consoleaccess_nodejs" style="color: inherit; text-decoration: inherit;">console<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user. Applies to `engine_type` of `ActiveMQ` only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3259,7 +3317,7 @@ The following state arguments are supported:
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of groups (20 maximum) to which the ActiveMQ user belongs. Applies to `engine_type` of `ActiveMQ` only.
 {{% /md %}}</dd></dl>
@@ -3272,7 +3330,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
 {{% /md %}}</dd><dt class="property-required"
@@ -3281,7 +3339,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username of the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3290,7 +3348,7 @@ The following state arguments are supported:
 <a href="#console_access_python" style="color: inherit; text-decoration: inherit;">console_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user. Applies to `engine_type` of `ActiveMQ` only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3299,7 +3357,7 @@ The following state arguments are supported:
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of groups (20 maximum) to which the ActiveMQ user belongs. Applies to `engine_type` of `ActiveMQ` only.
 {{% /md %}}</dd></dl>

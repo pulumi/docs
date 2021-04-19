@@ -61,8 +61,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/synthetics"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/synthetics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -146,19 +146,41 @@ const some = new aws.synthetics.Canary("some", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Canary</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CanaryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Canary</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CanaryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Canary</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_s3_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failure_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">handler</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_config</span><span class="p">:</span> <span class="nx">Optional[CanaryRunConfigArgs]</span> = None<span class="p">, </span><span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[CanaryScheduleArgs]</span> = None<span class="p">, </span><span class="nx">start_canary</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">success_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[CanaryVpcConfigArgs]</span> = None<span class="p">, </span><span class="nx">zip_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Canary</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">artifact_s3_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">failure_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+           <span class="nx">handler</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">run_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CanaryRunConfigArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">s3_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">s3_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">s3_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CanaryScheduleArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">start_canary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">success_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CanaryVpcConfigArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">zip_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Canary</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CanaryArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCanary</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CanaryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Canary</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCanary</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CanaryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Canary</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Canary</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CanaryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Canary</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CanaryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -193,22 +215,32 @@ const some = new aws.synthetics.Canary("some", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CanaryArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,7 +249,7 @@ const some = new aws.synthetics.Canary("some", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -241,7 +273,7 @@ const some = new aws.synthetics.Canary("some", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -592,7 +624,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#artifacts3location_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>S3Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary.
 {{% /md %}}</dd><dt class="property-required"
@@ -601,7 +633,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#executionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role to be used to run the canary. see [AWS Docs](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CreateCanary.html#API_CreateCanary_RequestSyntax) for permissions needs for IAM Role.
 {{% /md %}}</dd><dt class="property-required"
@@ -610,7 +642,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Entry point to use for the source code when running the canary. This value must end with the string `.handler` .
 {{% /md %}}</dd><dt class="property-required"
@@ -619,7 +651,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Runtime version to use for the canary. Versions change often so consult the [Amazon CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html) for the latest valid versions. Values include `syn-python-selenium-1.0`, `syn-nodejs-puppeteer-3.0`, `syn-nodejs-2.2`, `syn-nodejs-2.1`, `syn-nodejs-2.0`, and `syn-1.0`.
 {{% /md %}}</dd><dt class="property-required"
@@ -628,7 +660,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryschedule">Canary<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#canaryschedule">pulumi.<wbr>Input<Canary<wbr>Schedule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -637,7 +669,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#failureretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -646,7 +678,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name for this canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -655,7 +687,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#runconfig_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryrunconfig">Canary<wbr>Run<wbr>Config</a></span>
+        <span class="property-type"><a href="#canaryrunconfig">pulumi.<wbr>Input<Canary<wbr>Run<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for individual canary runs. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -664,7 +696,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Full bucket name which is used if your canary script is located in S3. The bucket must already exist. Specify the full bucket name including s3:// as the start of the bucket name. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -673,7 +705,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#s3key_nodejs" style="color: inherit; text-decoration: inherit;">s3Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 key of your script. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -682,7 +714,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#s3version_nodejs" style="color: inherit; text-decoration: inherit;">s3Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 version ID of your script. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -691,7 +723,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#startcanary_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Canary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to run or stop the canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -700,7 +732,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#successretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of days to retain data about successful runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -709,7 +741,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -718,7 +750,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryvpcconfig">Canary<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#canaryvpcconfig">pulumi.<wbr>Input<Canary<wbr>Vpc<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -727,7 +759,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#zipfile_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
 {{% /md %}}</dd></dl>
@@ -740,7 +772,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#artifact_s3_location_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>s3_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary.
 {{% /md %}}</dd><dt class="property-required"
@@ -749,7 +781,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#execution_role_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role to be used to run the canary. see [AWS Docs](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CreateCanary.html#API_CreateCanary_RequestSyntax) for permissions needs for IAM Role.
 {{% /md %}}</dd><dt class="property-required"
@@ -758,7 +790,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Entry point to use for the source code when running the canary. This value must end with the string `.handler` .
 {{% /md %}}</dd><dt class="property-required"
@@ -767,7 +799,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Runtime version to use for the canary. Versions change often so consult the [Amazon CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html) for the latest valid versions. Values include `syn-python-selenium-1.0`, `syn-nodejs-puppeteer-3.0`, `syn-nodejs-2.2`, `syn-nodejs-2.1`, `syn-nodejs-2.0`, and `syn-1.0`.
 {{% /md %}}</dd><dt class="property-required"
@@ -776,7 +808,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryschedule">Canary<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#canaryschedule">Input[Canary<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -785,7 +817,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#failure_retention_period_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -794,7 +826,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name for this canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -803,7 +835,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#run_config_python" style="color: inherit; text-decoration: inherit;">run_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryrunconfig">Canary<wbr>Run<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#canaryrunconfig">Input[Canary<wbr>Run<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for individual canary runs. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -812,7 +844,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Full bucket name which is used if your canary script is located in S3. The bucket must already exist. Specify the full bucket name including s3:// as the start of the bucket name. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +853,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#s3_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 key of your script. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +862,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#s3_version_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 version ID of your script. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +871,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#start_canary_python" style="color: inherit; text-decoration: inherit;">start_<wbr>canary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to run or stop the canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +880,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#success_retention_period_python" style="color: inherit; text-decoration: inherit;">success_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of days to retain data about successful runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +889,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +898,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryvpcconfig">Canary<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#canaryvpcconfig">Input[Canary<wbr>Vpc<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -875,7 +907,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#zip_file_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
 {{% /md %}}</dd></dl>
@@ -1124,20 +1156,43 @@ Get an existing Canary resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CanaryState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Canary</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CanaryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Canary</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifact_s3_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failure_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">handler</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_config</span><span class="p">:</span> <span class="nx">Optional[CanaryRunConfigArgs]</span> = None<span class="p">, </span><span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[CanaryScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source_location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_canary</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">success_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timelines</span><span class="p">:</span> <span class="nx">Optional[Sequence[CanaryTimelineArgs]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[CanaryVpcConfigArgs]</span> = None<span class="p">, </span><span class="nx">zip_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Canary</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">artifact_s3_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">failure_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">handler</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">run_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CanaryRunConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">runtime_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">s3_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CanaryScheduleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">source_location_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">start_canary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">success_retention_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">timelines</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CanaryTimelineArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CanaryVpcConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">zip_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Canary</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCanary<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CanaryState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Canary</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCanary<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CanaryState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Canary</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Canary</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CanaryState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Canary</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CanaryState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1632,7 +1687,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1696,7 @@ The following state arguments are supported:
 <a href="#state_artifacts3location_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>S3Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1650,7 +1705,7 @@ The following state arguments are supported:
 <a href="#state_enginearn_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function that is used as your canary's engine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1659,7 +1714,7 @@ The following state arguments are supported:
 <a href="#state_executionrolearn_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role to be used to run the canary. see [AWS Docs](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CreateCanary.html#API_CreateCanary_RequestSyntax) for permissions needs for IAM Role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1723,7 @@ The following state arguments are supported:
 <a href="#state_failureretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Entry point to use for the source code when running the canary. This value must end with the string `.handler` .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name for this canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_runconfig_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryrunconfig">Canary<wbr>Run<wbr>Config</a></span>
+        <span class="property-type"><a href="#canaryrunconfig">pulumi.<wbr>Input<Canary<wbr>Run<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for individual canary runs. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Runtime version to use for the canary. Versions change often so consult the [Amazon CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html) for the latest valid versions. Values include `syn-python-selenium-1.0`, `syn-nodejs-puppeteer-3.0`, `syn-nodejs-2.2`, `syn-nodejs-2.1`, `syn-nodejs-2.0`, and `syn-1.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Full bucket name which is used if your canary script is located in S3. The bucket must already exist. Specify the full bucket name including s3:// as the start of the bucket name. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1777,7 @@ The following state arguments are supported:
 <a href="#state_s3key_nodejs" style="color: inherit; text-decoration: inherit;">s3Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 key of your script. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_s3version_nodejs" style="color: inherit; text-decoration: inherit;">s3Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 version ID of your script. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1795,7 @@ The following state arguments are supported:
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryschedule">Canary<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#canaryschedule">pulumi.<wbr>Input<Canary<wbr>Schedule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_sourcelocationarn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda layer where Synthetics stores the canary script code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1813,7 @@ The following state arguments are supported:
 <a href="#state_startcanary_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Canary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to run or stop the canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1822,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Canary status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1831,7 @@ The following state arguments are supported:
 <a href="#state_successretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of days to retain data about successful runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1794,7 +1849,7 @@ The following state arguments are supported:
 <a href="#state_timelines_nodejs" style="color: inherit; text-decoration: inherit;">timelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canarytimeline">Canary<wbr>Timeline[]</a></span>
+        <span class="property-type"><a href="#canarytimeline">pulumi.<wbr>Input<pulumi.<wbr>Input<Canary<wbr>Timeline<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Structure that contains information about when the canary was created, modified, and most recently run. see Timeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1858,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryvpcconfig">Canary<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#canaryvpcconfig">pulumi.<wbr>Input<Canary<wbr>Vpc<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1867,7 @@ The following state arguments are supported:
 <a href="#state_zipfile_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
 {{% /md %}}</dd></dl>
@@ -1825,7 +1880,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1834,7 +1889,7 @@ The following state arguments are supported:
 <a href="#state_artifact_s3_location_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>s3_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1843,7 +1898,7 @@ The following state arguments are supported:
 <a href="#state_engine_arn_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function that is used as your canary's engine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1907,7 @@ The following state arguments are supported:
 <a href="#state_execution_role_arn_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the IAM role to be used to run the canary. see [AWS Docs](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CreateCanary.html#API_CreateCanary_RequestSyntax) for permissions needs for IAM Role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1916,7 @@ The following state arguments are supported:
 <a href="#state_failure_retention_period_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1925,7 @@ The following state arguments are supported:
 <a href="#state_handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Entry point to use for the source code when running the canary. This value must end with the string `.handler` .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1934,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name for this canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1943,7 @@ The following state arguments are supported:
 <a href="#state_run_config_python" style="color: inherit; text-decoration: inherit;">run_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryrunconfig">Canary<wbr>Run<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#canaryrunconfig">Input[Canary<wbr>Run<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for individual canary runs. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1952,7 @@ The following state arguments are supported:
 <a href="#state_runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Runtime version to use for the canary. Versions change often so consult the [Amazon CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html) for the latest valid versions. Values include `syn-python-selenium-1.0`, `syn-nodejs-puppeteer-3.0`, `syn-nodejs-2.2`, `syn-nodejs-2.1`, `syn-nodejs-2.0`, and `syn-1.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1906,7 +1961,7 @@ The following state arguments are supported:
 <a href="#state_s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Full bucket name which is used if your canary script is located in S3. The bucket must already exist. Specify the full bucket name including s3:// as the start of the bucket name. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1970,7 @@ The following state arguments are supported:
 <a href="#state_s3_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 key of your script. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1979,7 @@ The following state arguments are supported:
 <a href="#state_s3_version_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 version ID of your script. **Conflicts with `zip_file`.**
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1988,7 @@ The following state arguments are supported:
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryschedule">Canary<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#canaryschedule">Input[Canary<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1942,7 +1997,7 @@ The following state arguments are supported:
 <a href="#state_source_location_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda layer where Synthetics stores the canary script code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1951,7 +2006,7 @@ The following state arguments are supported:
 <a href="#state_start_canary_python" style="color: inherit; text-decoration: inherit;">start_<wbr>canary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to run or stop the canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +2015,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Canary status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1969,7 +2024,7 @@ The following state arguments are supported:
 <a href="#state_success_retention_period_python" style="color: inherit; text-decoration: inherit;">success_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of days to retain data about successful runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1978,7 +2033,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +2042,7 @@ The following state arguments are supported:
 <a href="#state_timelines_python" style="color: inherit; text-decoration: inherit;">timelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canarytimeline">Sequence[Canary<wbr>Timeline<wbr>Args]</a></span>
+        <span class="property-type"><a href="#canarytimeline">Input[Canary<wbr>Timeline<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Structure that contains information about when the canary was created, modified, and most recently run. see Timeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +2051,7 @@ The following state arguments are supported:
 <a href="#state_vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryvpcconfig">Canary<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#canaryvpcconfig">Input[Canary<wbr>Vpc<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2005,7 +2060,7 @@ The following state arguments are supported:
 <a href="#state_zip_file_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
 {{% /md %}}</dd></dl>
@@ -2091,7 +2146,7 @@ The following state arguments are supported:
 <a href="#activetracing_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Tracing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether this canary is to use active AWS X-Ray tracing when it runs. You can enable active tracing only for canaries that use version syn-nodejs-2.0 or later for their canary runtime.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2100,7 +2155,7 @@ The following state arguments are supported:
 <a href="#memoryinmb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2164,7 @@ The following state arguments are supported:
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of seconds the canary is allowed to run before it must stop. If you omit this field, the frequency of the canary is used, up to a maximum of 840 (14 minutes).
 {{% /md %}}</dd></dl>
@@ -2122,7 +2177,7 @@ The following state arguments are supported:
 <a href="#active_tracing_python" style="color: inherit; text-decoration: inherit;">active_<wbr>tracing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether this canary is to use active AWS X-Ray tracing when it runs. You can enable active tracing only for canaries that use version syn-nodejs-2.0 or later for their canary runtime.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2186,7 @@ The following state arguments are supported:
 <a href="#memory_in_mb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2140,7 +2195,7 @@ The following state arguments are supported:
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of seconds the canary is allowed to run before it must stop. If you omit this field, the frequency of the canary is used, up to a maximum of 840 (14 minutes).
 {{% /md %}}</dd></dl>
@@ -2199,7 +2254,7 @@ The following state arguments are supported:
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Rate expression that defines how often the canary is to run. The syntax is rate(number unit). unit can be minute, minutes, or hour.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2263,7 @@ The following state arguments are supported:
 <a href="#durationinseconds_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Duration in seconds, for the canary to continue making regular runs according to the schedule in the Expression value.
 {{% /md %}}</dd></dl>
@@ -2221,7 +2276,7 @@ The following state arguments are supported:
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Rate expression that defines how often the canary is to run. The syntax is rate(number unit). unit can be minute, minutes, or hour.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2230,7 +2285,7 @@ The following state arguments are supported:
 <a href="#duration_in_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Duration in seconds, for the canary to continue making regular runs according to the schedule in the Expression value.
 {{% /md %}}</dd></dl>
@@ -2325,7 +2380,7 @@ The following state arguments are supported:
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date and time the canary was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2334,7 +2389,7 @@ The following state arguments are supported:
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date and time the canary was most recently modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2343,7 +2398,7 @@ The following state arguments are supported:
 <a href="#laststarted_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Started</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date and time that the canary's most recent run started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2352,7 +2407,7 @@ The following state arguments are supported:
 <a href="#laststopped_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Stopped</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date and time that the canary's most recent run ended.
 {{% /md %}}</dd></dl>
@@ -2365,7 +2420,7 @@ The following state arguments are supported:
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date and time the canary was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2374,7 +2429,7 @@ The following state arguments are supported:
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date and time the canary was most recently modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2383,7 +2438,7 @@ The following state arguments are supported:
 <a href="#last_started_python" style="color: inherit; text-decoration: inherit;">last_<wbr>started</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date and time that the canary's most recent run started.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2392,7 +2447,7 @@ The following state arguments are supported:
 <a href="#last_stopped_python" style="color: inherit; text-decoration: inherit;">last_<wbr>stopped</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date and time that the canary's most recent run ended.
 {{% /md %}}</dd></dl>
@@ -2469,7 +2524,7 @@ The following state arguments are supported:
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}IDs of the security groups for this canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2478,7 +2533,7 @@ The following state arguments are supported:
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}IDs of the subnets where this canary is to run.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2487,7 +2542,7 @@ The following state arguments are supported:
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the VPC where this canary is to run.
 {{% /md %}}</dd></dl>
@@ -2500,7 +2555,7 @@ The following state arguments are supported:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}IDs of the security groups for this canary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2564,7 @@ The following state arguments are supported:
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}IDs of the subnets where this canary is to run.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2518,7 +2573,7 @@ The following state arguments are supported:
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the VPC where this canary is to run.
 {{% /md %}}</dd></dl>

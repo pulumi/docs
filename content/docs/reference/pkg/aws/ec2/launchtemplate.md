@@ -19,19 +19,58 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LaunchTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">LaunchTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LaunchTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">LaunchTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LaunchTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCapacityReservationSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateElasticGpuSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateElasticInferenceAcceleratorArgs]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateHibernationOptionsArgs]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateIamInstanceProfileArgs]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateInstanceMarketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateLicenseSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplatePlacementArgs]</span> = None<span class="p">, </span><span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">LaunchTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateBlockDeviceMappingArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateCapacityReservationSpecificationArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateCpuOptionsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateCreditSpecificationArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateElasticGpuSpecificationArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateElasticInferenceAcceleratorArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateEnclaveOptionsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateHibernationOptionsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateIamInstanceProfileArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateInstanceMarketOptionsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateLicenseSpecificationArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateMetadataOptionsArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateMonitoringArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplatePlacementArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateTagSpecificationArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">LaunchTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[LaunchTemplateArgs]</a></span> = None<span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLaunchTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">LaunchTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LaunchTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLaunchTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">LaunchTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LaunchTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LaunchTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LaunchTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LaunchTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LaunchTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -66,22 +105,32 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">LaunchTemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -90,7 +139,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -114,7 +163,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -789,7 +838,7 @@ Interfaces below for more details.
 <a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -799,7 +848,7 @@ See Block Devices below for details.
 <a href="#capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -808,7 +857,7 @@ See Block Devices below for details.
 <a href="#cpuoptions_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -817,7 +866,7 @@ See Block Devices below for details.
 <a href="#creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -827,7 +876,7 @@ Specification below for more details.
 <a href="#defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Default Version of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -836,7 +885,7 @@ Specification below for more details.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -845,7 +894,7 @@ Specification below for more details.
 <a href="#disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -855,7 +904,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +913,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#elasticgpuspecifications_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Gpu<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -874,7 +923,7 @@ below for more details.
 <a href="#elasticinferenceaccelerator_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Inference<wbr>Accelerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +932,7 @@ below for more details.
 <a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +941,7 @@ below for more details.
 <a href="#hibernationoptions_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +950,7 @@ below for more details.
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -911,7 +960,7 @@ below for more details.
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +969,7 @@ below for more details.
 <a href="#instanceinitiatedshutdownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -930,7 +979,7 @@ below for more details.
 <a href="#instancemarketoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Market<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -940,7 +989,7 @@ below for details.
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -949,7 +998,7 @@ below for details.
 <a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -958,7 +1007,7 @@ below for details.
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +1016,7 @@ below for details.
 <a href="#licensespecifications_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -976,7 +1025,7 @@ below for details.
 <a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +1034,7 @@ below for details.
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Monitoring<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +1043,7 @@ below for details.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1003,7 +1052,7 @@ below for details.
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +1061,7 @@ below for details.
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -1022,7 +1071,7 @@ Interfaces below for more details.
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Placement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1080,7 @@ Interfaces below for more details.
 <a href="#ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1089,7 @@ Interfaces below for more details.
 <a href="#securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -1050,7 +1099,7 @@ Interfaces below for more details.
 <a href="#tagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1108,7 @@ Interfaces below for more details.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1068,7 +1117,7 @@ Interfaces below for more details.
 <a href="#updatedefaultversion_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Default<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to update Default Version each update. Conflicts with `default_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1126,7 @@ Interfaces below for more details.
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1135,7 @@ Interfaces below for more details.
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd></dl>
@@ -1099,7 +1148,7 @@ Interfaces below for more details.
 <a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Sequence[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Input[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -1109,7 +1158,7 @@ See Block Devices below for details.
 <a href="#capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Input[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1118,7 +1167,7 @@ See Block Devices below for details.
 <a href="#cpu_options_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Input[Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1127,7 +1176,7 @@ See Block Devices below for details.
 <a href="#credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Input[Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -1137,7 +1186,7 @@ Specification below for more details.
 <a href="#default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Default Version of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1195,7 @@ Specification below for more details.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1204,7 @@ Specification below for more details.
 <a href="#disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -1165,7 +1214,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1223,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#elastic_gpu_specifications_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>gpu_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Sequence[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Input[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -1184,7 +1233,7 @@ below for more details.
 <a href="#elastic_inference_accelerator_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>inference_<wbr>accelerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Input[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1193,7 +1242,7 @@ below for more details.
 <a href="#enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Input[Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1251,7 @@ below for more details.
 <a href="#hibernation_options_python" style="color: inherit; text-decoration: inherit;">hibernation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Input[Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1211,7 +1260,7 @@ below for more details.
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Input[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -1221,7 +1270,7 @@ below for more details.
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1279,7 @@ below for more details.
 <a href="#instance_initiated_shutdown_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -1240,7 +1289,7 @@ below for more details.
 <a href="#instance_market_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>market_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Input[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -1250,7 +1299,7 @@ below for details.
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1308,7 @@ below for details.
 <a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1317,7 @@ below for details.
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1326,7 @@ below for details.
 <a href="#license_specifications_python" style="color: inherit; text-decoration: inherit;">license_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">Sequence[Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">Input[Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1335,7 @@ below for details.
 <a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Input[Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1295,7 +1344,7 @@ below for details.
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Input[Launch<wbr>Template<wbr>Monitoring<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1353,7 @@ below for details.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1362,7 @@ below for details.
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1371,7 @@ below for details.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">Sequence[Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">Input[Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -1332,7 +1381,7 @@ Interfaces below for more details.
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Input[Launch<wbr>Template<wbr>Placement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,7 +1390,7 @@ Interfaces below for more details.
 <a href="#ram_disk_id_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1399,7 @@ Interfaces below for more details.
 <a href="#security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -1360,7 +1409,7 @@ Interfaces below for more details.
 <a href="#tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">Sequence[Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">Input[Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1418,7 @@ Interfaces below for more details.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1427,7 @@ Interfaces below for more details.
 <a href="#update_default_version_python" style="color: inherit; text-decoration: inherit;">update_<wbr>default_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to update Default Version each update. Conflicts with `default_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1436,7 @@ Interfaces below for more details.
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1445,7 @@ Interfaces below for more details.
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd></dl>
@@ -1537,20 +1586,57 @@ Get an existing LaunchTemplate resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LaunchTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LaunchTemplate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">LaunchTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LaunchTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCapacityReservationSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateElasticGpuSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateElasticInferenceAcceleratorArgs]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateHibernationOptionsArgs]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateIamInstanceProfileArgs]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateInstanceMarketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latest_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateLicenseSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplatePlacementArgs]</span> = None<span class="p">, </span><span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> LaunchTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateBlockDeviceMappingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateCapacityReservationSpecificationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateCpuOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateCreditSpecificationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateElasticGpuSpecificationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateElasticInferenceAcceleratorArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateEnclaveOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateHibernationOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateIamInstanceProfileArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateInstanceMarketOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">latest_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateLicenseSpecificationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateMetadataOptionsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplateMonitoringArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LaunchTemplatePlacementArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LaunchTemplateTagSpecificationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> LaunchTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLaunchTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LaunchTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LaunchTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLaunchTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">LaunchTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LaunchTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LaunchTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LaunchTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LaunchTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">LaunchTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2315,7 +2401,7 @@ Interfaces below for more details.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2410,7 @@ Interfaces below for more details.
 <a href="#state_blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -2334,7 +2420,7 @@ See Block Devices below for details.
 <a href="#state_capacityreservationspecification_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2343,7 +2429,7 @@ See Block Devices below for details.
 <a href="#state_cpuoptions_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2352,7 +2438,7 @@ See Block Devices below for details.
 <a href="#state_creditspecification_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -2362,7 +2448,7 @@ Specification below for more details.
 <a href="#state_defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Default Version of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2371,7 +2457,7 @@ Specification below for more details.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2380,7 +2466,7 @@ Specification below for more details.
 <a href="#state_disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -2390,7 +2476,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#state_ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2399,7 +2485,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#state_elasticgpuspecifications_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Gpu<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -2409,7 +2495,7 @@ below for more details.
 <a href="#state_elasticinferenceaccelerator_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Inference<wbr>Accelerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2418,7 +2504,7 @@ below for more details.
 <a href="#state_enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2427,7 +2513,7 @@ below for more details.
 <a href="#state_hibernationoptions_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2436,7 +2522,7 @@ below for more details.
 <a href="#state_iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -2446,7 +2532,7 @@ below for more details.
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2541,7 @@ below for more details.
 <a href="#state_instanceinitiatedshutdownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -2465,7 +2551,7 @@ below for more details.
 <a href="#state_instancemarketoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Market<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -2475,7 +2561,7 @@ below for details.
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2570,7 @@ below for details.
 <a href="#state_kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2579,7 @@ below for details.
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2588,7 @@ below for details.
 <a href="#state_latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2511,7 +2597,7 @@ below for details.
 <a href="#state_licensespecifications_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2520,7 +2606,7 @@ below for details.
 <a href="#state_metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2529,7 +2615,7 @@ below for details.
 <a href="#state_monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Monitoring<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2538,7 +2624,7 @@ below for details.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2547,7 +2633,7 @@ below for details.
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2556,7 +2642,7 @@ below for details.
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -2566,7 +2652,7 @@ Interfaces below for more details.
 <a href="#state_placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Placement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2575,7 +2661,7 @@ Interfaces below for more details.
 <a href="#state_ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2584,7 +2670,7 @@ Interfaces below for more details.
 <a href="#state_securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -2594,7 +2680,7 @@ Interfaces below for more details.
 <a href="#state_tagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">pulumi.<wbr>Input<pulumi.<wbr>Input<Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2603,7 +2689,7 @@ Interfaces below for more details.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2612,7 +2698,7 @@ Interfaces below for more details.
 <a href="#state_updatedefaultversion_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Default<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to update Default Version each update. Conflicts with `default_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2621,7 +2707,7 @@ Interfaces below for more details.
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2630,7 +2716,7 @@ Interfaces below for more details.
 <a href="#state_vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd></dl>
@@ -2643,7 +2729,7 @@ Interfaces below for more details.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,7 +2738,7 @@ Interfaces below for more details.
 <a href="#state_block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Sequence[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Input[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -2662,7 +2748,7 @@ See Block Devices below for details.
 <a href="#state_capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Input[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2757,7 @@ See Block Devices below for details.
 <a href="#state_cpu_options_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Input[Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2680,7 +2766,7 @@ See Block Devices below for details.
 <a href="#state_credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Input[Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -2690,7 +2776,7 @@ Specification below for more details.
 <a href="#state_default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Default Version of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2699,7 +2785,7 @@ Specification below for more details.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2708,7 +2794,7 @@ Specification below for more details.
 <a href="#state_disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -2718,7 +2804,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#state_ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2727,7 +2813,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#state_elastic_gpu_specifications_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>gpu_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Sequence[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Input[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -2737,7 +2823,7 @@ below for more details.
 <a href="#state_elastic_inference_accelerator_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>inference_<wbr>accelerator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Input[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2746,7 +2832,7 @@ below for more details.
 <a href="#state_enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Input[Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2755,7 +2841,7 @@ below for more details.
 <a href="#state_hibernation_options_python" style="color: inherit; text-decoration: inherit;">hibernation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Input[Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2764,7 +2850,7 @@ below for more details.
 <a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Input[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -2774,7 +2860,7 @@ below for more details.
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,7 +2869,7 @@ below for more details.
 <a href="#state_instance_initiated_shutdown_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -2793,7 +2879,7 @@ below for more details.
 <a href="#state_instance_market_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>market_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Input[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -2803,7 +2889,7 @@ below for details.
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2812,7 +2898,7 @@ below for details.
 <a href="#state_kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2821,7 +2907,7 @@ below for details.
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2830,7 +2916,7 @@ below for details.
 <a href="#state_latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2839,7 +2925,7 @@ below for details.
 <a href="#state_license_specifications_python" style="color: inherit; text-decoration: inherit;">license_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">Sequence[Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">Input[Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2848,7 +2934,7 @@ below for details.
 <a href="#state_metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Input[Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2857,7 +2943,7 @@ below for details.
 <a href="#state_monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Input[Launch<wbr>Template<wbr>Monitoring<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2866,7 +2952,7 @@ below for details.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2875,7 +2961,7 @@ below for details.
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2884,7 +2970,7 @@ below for details.
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">Sequence[Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">Input[Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -2894,7 +2980,7 @@ Interfaces below for more details.
 <a href="#state_placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Input[Launch<wbr>Template<wbr>Placement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2903,7 +2989,7 @@ Interfaces below for more details.
 <a href="#state_ram_disk_id_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2912,7 +2998,7 @@ Interfaces below for more details.
 <a href="#state_security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -2922,7 +3008,7 @@ Interfaces below for more details.
 <a href="#state_tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">Sequence[Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">Input[Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2931,7 +3017,7 @@ Interfaces below for more details.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2940,7 +3026,7 @@ Interfaces below for more details.
 <a href="#state_update_default_version_python" style="color: inherit; text-decoration: inherit;">update_<wbr>default_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to update Default Version each update. Conflicts with `default_version`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2949,7 +3035,7 @@ Interfaces below for more details.
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2958,7 +3044,7 @@ Interfaces below for more details.
 <a href="#state_vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd></dl>
@@ -3066,7 +3152,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3075,7 +3161,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#ebs_nodejs" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configure EBS volume properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3084,7 +3170,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#nodevice_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3093,7 +3179,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -3108,7 +3194,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3117,7 +3203,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Input[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configure EBS volume properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3126,7 +3212,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3135,7 +3221,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -3312,7 +3398,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3321,7 +3407,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
 on the volume (Default: `false`). Cannot be used with `snapshot_id`.
@@ -3331,7 +3417,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -3342,7 +3428,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 `encrypted` must be set to `true` when this is set.
@@ -3352,7 +3438,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3361,7 +3447,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3370,7 +3456,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3379,7 +3465,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
 {{% /md %}}</dd></dl>
@@ -3392,7 +3478,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3401,7 +3487,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
 on the volume (Default: `false`). Cannot be used with `snapshot_id`.
@@ -3411,7 +3497,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -3422,7 +3508,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 `encrypted` must be set to `true` when this is set.
@@ -3432,7 +3518,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3441,7 +3527,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g. 500), with a maximum of 1,000 MiB/s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3450,7 +3536,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3459,7 +3545,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
 {{% /md %}}</dd></dl>
@@ -3518,7 +3604,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#capacityreservationpreference_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3527,7 +3613,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#capacityreservationtarget_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Used to target a specific Capacity Reservation:
 {{% /md %}}</dd></dl>
@@ -3540,7 +3626,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#capacity_reservation_preference_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3549,7 +3635,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#capacity_reservation_target_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Input[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to target a specific Capacity Reservation:
 {{% /md %}}</dd></dl>
@@ -3590,7 +3676,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#capacityreservationid_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Capacity Reservation to target.
 {{% /md %}}</dd></dl>
@@ -3603,7 +3689,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
 <a href="#capacity_reservation_id_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Capacity Reservation to target.
 {{% /md %}}</dd></dl>
@@ -3664,7 +3750,7 @@ Otherwise, specify the default value of 2.
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of CPU cores for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3673,7 +3759,7 @@ Otherwise, specify the default value of 2.
 <a href="#threadspercore_nodejs" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of threads per CPU core. To disable Intel Hyper-Threading Technology for the instance, specify a value of 1.
 Otherwise, specify the default value of 2.
@@ -3687,7 +3773,7 @@ Otherwise, specify the default value of 2.
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of CPU cores for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3696,7 +3782,7 @@ Otherwise, specify the default value of 2.
 <a href="#threads_per_core_python" style="color: inherit; text-decoration: inherit;">threads_<wbr>per_<wbr>core</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of threads per CPU core. To disable Intel Hyper-Threading Technology for the instance, specify a value of 1.
 Otherwise, specify the default value of 2.
@@ -3738,7 +3824,7 @@ Otherwise, specify the default value of 2.
 <a href="#cpucredits_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd></dl>
@@ -3751,7 +3837,7 @@ Otherwise, specify the default value of 2.
 <a href="#cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd></dl>
@@ -3792,7 +3878,7 @@ Otherwise, specify the default value of 2.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The [Elastic GPU Type](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html#elastic-gpus-basics)
 {{% /md %}}</dd></dl>
@@ -3805,7 +3891,7 @@ Otherwise, specify the default value of 2.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The [Elastic GPU Type](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html#elastic-gpus-basics)
 {{% /md %}}</dd></dl>
@@ -3846,7 +3932,7 @@ Otherwise, specify the default value of 2.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Accelerator type.
 {{% /md %}}</dd></dl>
@@ -3859,7 +3945,7 @@ Otherwise, specify the default value of 2.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Accelerator type.
 {{% /md %}}</dd></dl>
@@ -3900,7 +3986,7 @@ Otherwise, specify the default value of 2.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, Nitro Enclaves will be enabled on the instance.
 {{% /md %}}</dd></dl>
@@ -3913,7 +3999,7 @@ Otherwise, specify the default value of 2.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, Nitro Enclaves will be enabled on the instance.
 {{% /md %}}</dd></dl>
@@ -3954,7 +4040,7 @@ Otherwise, specify the default value of 2.
 <a href="#configured_nodejs" style="color: inherit; text-decoration: inherit;">configured</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the launched EC2 instance will hibernation enabled.
 {{% /md %}}</dd></dl>
@@ -3967,7 +4053,7 @@ Otherwise, specify the default value of 2.
 <a href="#configured_python" style="color: inherit; text-decoration: inherit;">configured</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the launched EC2 instance will hibernation enabled.
 {{% /md %}}</dd></dl>
@@ -4026,7 +4112,7 @@ Otherwise, specify the default value of 2.
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4035,7 +4121,7 @@ Otherwise, specify the default value of 2.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the instance profile.
 {{% /md %}}</dd></dl>
@@ -4048,7 +4134,7 @@ Otherwise, specify the default value of 2.
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4057,7 +4143,7 @@ Otherwise, specify the default value of 2.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the instance profile.
 {{% /md %}}</dd></dl>
@@ -4116,7 +4202,7 @@ Otherwise, specify the default value of 2.
 <a href="#markettype_nodejs" style="color: inherit; text-decoration: inherit;">market<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The market type. Can be `spot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4125,7 +4211,7 @@ Otherwise, specify the default value of 2.
 <a href="#spotoptions_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">pulumi.<wbr>Input<Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 {{% /md %}}</dd></dl>
@@ -4138,7 +4224,7 @@ Otherwise, specify the default value of 2.
 <a href="#market_type_python" style="color: inherit; text-decoration: inherit;">market_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The market type. Can be `spot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4147,7 +4233,7 @@ Otherwise, specify the default value of 2.
 <a href="#spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Input[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 {{% /md %}}</dd></dl>
@@ -4262,7 +4348,7 @@ Otherwise, specify the default value of 2.
 <a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The required duration in minutes. This value must be a multiple of 60.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4271,7 +4357,7 @@ Otherwise, specify the default value of 2.
 <a href="#instanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The behavior when a Spot Instance is interrupted. Can be `hibernate`,
 `stop`, or `terminate`. (Default: `terminate`).
@@ -4281,7 +4367,7 @@ Otherwise, specify the default value of 2.
 <a href="#maxprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum hourly price you're willing to pay for the Spot Instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4290,7 +4376,7 @@ Otherwise, specify the default value of 2.
 <a href="#spotinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Spot Instance request type. Can be `one-time`, or `persistent`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4299,7 +4385,7 @@ Otherwise, specify the default value of 2.
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end date of the request.
 {{% /md %}}</dd></dl>
@@ -4312,7 +4398,7 @@ Otherwise, specify the default value of 2.
 <a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The required duration in minutes. This value must be a multiple of 60.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4321,7 +4407,7 @@ Otherwise, specify the default value of 2.
 <a href="#instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The behavior when a Spot Instance is interrupted. Can be `hibernate`,
 `stop`, or `terminate`. (Default: `terminate`).
@@ -4331,7 +4417,7 @@ Otherwise, specify the default value of 2.
 <a href="#max_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum hourly price you're willing to pay for the Spot Instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4340,7 +4426,7 @@ Otherwise, specify the default value of 2.
 <a href="#spot_instance_type_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Spot Instance request type. Can be `one-time`, or `persistent`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4349,7 +4435,7 @@ Otherwise, specify the default value of 2.
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end date of the request.
 {{% /md %}}</dd></dl>
@@ -4390,7 +4476,7 @@ Otherwise, specify the default value of 2.
 <a href="#licenseconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Configuration<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARN of the license configuration.
 {{% /md %}}</dd></dl>
@@ -4403,7 +4489,7 @@ Otherwise, specify the default value of 2.
 <a href="#license_configuration_arn_python" style="color: inherit; text-decoration: inherit;">license_<wbr>configuration_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARN of the license configuration.
 {{% /md %}}</dd></dl>
@@ -4480,7 +4566,7 @@ Otherwise, specify the default value of 2.
 <a href="#httpendpoint_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4489,7 +4575,7 @@ Otherwise, specify the default value of 2.
 <a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4498,7 +4584,7 @@ Otherwise, specify the default value of 2.
 <a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd></dl>
@@ -4511,7 +4597,7 @@ Otherwise, specify the default value of 2.
 <a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4520,7 +4606,7 @@ Otherwise, specify the default value of 2.
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4529,7 +4615,7 @@ Otherwise, specify the default value of 2.
 <a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd></dl>
@@ -4570,7 +4656,7 @@ Otherwise, specify the default value of 2.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will have detailed monitoring enabled.
 {{% /md %}}</dd></dl>
@@ -4583,7 +4669,7 @@ Otherwise, specify the default value of 2.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will have detailed monitoring enabled.
 {{% /md %}}</dd></dl>
@@ -4840,7 +4926,7 @@ Otherwise, specify the default value of 2.
 <a href="#associatecarrieripaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Carrier<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Associate a Carrier IP address with `eth0` for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. Boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4849,7 +4935,7 @@ Otherwise, specify the default value of 2.
 <a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with the network interface.  Boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4858,7 +4944,7 @@ Otherwise, specify the default value of 2.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4867,7 +4953,7 @@ Otherwise, specify the default value of 2.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the network interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4876,7 +4962,7 @@ Otherwise, specify the default value of 2.
 <a href="#deviceindex_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4885,7 +4971,7 @@ Otherwise, specify the default value of 2.
 <a href="#ipv4addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4894,7 +4980,7 @@ Otherwise, specify the default value of 2.
 <a href="#ipv4addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4903,7 +4989,7 @@ Otherwise, specify the default value of 2.
 <a href="#ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4912,7 +4998,7 @@ Otherwise, specify the default value of 2.
 <a href="#ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4921,7 +5007,7 @@ Otherwise, specify the default value of 2.
 <a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4930,7 +5016,7 @@ Otherwise, specify the default value of 2.
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary private IPv4 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4939,7 +5025,7 @@ Otherwise, specify the default value of 2.
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4948,7 +5034,7 @@ Otherwise, specify the default value of 2.
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to associate.
 {{% /md %}}</dd></dl>
@@ -4961,7 +5047,7 @@ Otherwise, specify the default value of 2.
 <a href="#associate_carrier_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>carrier_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Associate a Carrier IP address with `eth0` for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. Boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4970,7 +5056,7 @@ Otherwise, specify the default value of 2.
 <a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with the network interface.  Boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4979,7 +5065,7 @@ Otherwise, specify the default value of 2.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4988,7 +5074,7 @@ Otherwise, specify the default value of 2.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the network interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4997,7 +5083,7 @@ Otherwise, specify the default value of 2.
 <a href="#device_index_python" style="color: inherit; text-decoration: inherit;">device_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5006,7 +5092,7 @@ Otherwise, specify the default value of 2.
 <a href="#ipv4_address_count_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5015,7 +5101,7 @@ Otherwise, specify the default value of 2.
 <a href="#ipv4_addresses_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5024,7 +5110,7 @@ Otherwise, specify the default value of 2.
 <a href="#ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5033,7 +5119,7 @@ Otherwise, specify the default value of 2.
 <a href="#ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
 {{% /md %}}</dd><dt class="property-optional"
@@ -5042,7 +5128,7 @@ Otherwise, specify the default value of 2.
 <a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5051,7 +5137,7 @@ Otherwise, specify the default value of 2.
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary private IPv4 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5060,7 +5146,7 @@ Otherwise, specify the default value of 2.
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5069,7 +5155,7 @@ Otherwise, specify the default value of 2.
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to associate.
 {{% /md %}}</dd></dl>
@@ -5218,7 +5304,7 @@ Otherwise, specify the default value of 2.
 <a href="#affinity_nodejs" style="color: inherit; text-decoration: inherit;">affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The affinity setting for an instance on a Dedicated Host.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5227,7 +5313,7 @@ Otherwise, specify the default value of 2.
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5236,7 +5322,7 @@ Otherwise, specify the default value of 2.
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the placement group for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5245,7 +5331,7 @@ Otherwise, specify the default value of 2.
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5254,7 +5340,7 @@ Otherwise, specify the default value of 2.
 <a href="#partitionnumber_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5263,7 +5349,7 @@ Otherwise, specify the default value of 2.
 <a href="#spreaddomain_nodejs" style="color: inherit; text-decoration: inherit;">spread<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Reserved for future use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5272,7 +5358,7 @@ Otherwise, specify the default value of 2.
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
 {{% /md %}}</dd></dl>
@@ -5285,7 +5371,7 @@ Otherwise, specify the default value of 2.
 <a href="#affinity_python" style="color: inherit; text-decoration: inherit;">affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The affinity setting for an instance on a Dedicated Host.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5294,7 +5380,7 @@ Otherwise, specify the default value of 2.
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5303,7 +5389,7 @@ Otherwise, specify the default value of 2.
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the placement group for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5312,7 +5398,7 @@ Otherwise, specify the default value of 2.
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5321,7 +5407,7 @@ Otherwise, specify the default value of 2.
 <a href="#partition_number_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5330,7 +5416,7 @@ Otherwise, specify the default value of 2.
 <a href="#spread_domain_python" style="color: inherit; text-decoration: inherit;">spread_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5339,7 +5425,7 @@ Otherwise, specify the default value of 2.
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
 {{% /md %}}</dd></dl>
@@ -5398,7 +5484,7 @@ Otherwise, specify the default value of 2.
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of resource to tag. Valid values are `instance`, `volume`, `elastic-gpu` and `spot-instances-request`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5407,7 +5493,7 @@ Otherwise, specify the default value of 2.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -5420,7 +5506,7 @@ Otherwise, specify the default value of 2.
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of resource to tag. Valid values are `instance`, `volume`, `elastic-gpu` and `spot-instances-request`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5429,7 +5515,7 @@ Otherwise, specify the default value of 2.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>

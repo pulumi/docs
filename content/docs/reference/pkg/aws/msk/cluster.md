@@ -190,15 +190,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/msk"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -567,19 +567,36 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">broker_node_group_info</span><span class="p">:</span> <span class="nx">Optional[ClusterBrokerNodeGroupInfoArgs]</span> = None<span class="p">, </span><span class="nx">client_authentication</span><span class="p">:</span> <span class="nx">Optional[ClusterClientAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_info</span><span class="p">:</span> <span class="nx">Optional[ClusterConfigurationInfoArgs]</span> = None<span class="p">, </span><span class="nx">encryption_info</span><span class="p">:</span> <span class="nx">Optional[ClusterEncryptionInfoArgs]</span> = None<span class="p">, </span><span class="nx">enhanced_monitoring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_info</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingInfoArgs]</span> = None<span class="p">, </span><span class="nx">number_of_broker_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">open_monitoring</span><span class="p">:</span> <span class="nx">Optional[ClusterOpenMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">broker_node_group_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterBrokerNodeGroupInfoArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">client_authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterClientAuthenticationArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">configuration_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterConfigurationInfoArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">encryption_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterEncryptionInfoArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">enhanced_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">kafka_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">logging_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterLoggingInfoArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">number_of_broker_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">open_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterOpenMonitoringArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -614,22 +631,32 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -638,7 +665,7 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -662,7 +689,7 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -923,7 +950,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#brokernodegroupinfo_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Node<wbr>Group<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterbrokernodegroupinfo">pulumi.<wbr>Input<Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -932,7 +959,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkaversion_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd><dt class="property-required"
@@ -941,7 +968,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#numberofbrokernodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Broker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -950,7 +977,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientauthentication_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#clusterclientauthentication">pulumi.<wbr>Input<Cluster<wbr>Client<wbr>Authentication<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -959,7 +986,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +995,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configurationinfo_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterconfigurationinfo">pulumi.<wbr>Input<Cluster<wbr>Configuration<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -977,7 +1004,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptioninfo_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfo">pulumi.<wbr>Input<Cluster<wbr>Encryption<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying encryption. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +1013,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enhancedmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +1022,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logginginfo_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfo">Cluster<wbr>Logging<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterlogginginfo">pulumi.<wbr>Input<Cluster<wbr>Logging<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1031,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#openmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoring">pulumi.<wbr>Input<Cluster<wbr>Open<wbr>Monitoring<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX and Node monitoring for the MSK cluster. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1040,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd></dl>
@@ -1026,7 +1053,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#broker_node_group_info_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>node_<wbr>group_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Input[Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -1035,7 +1062,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd><dt class="property-required"
@@ -1044,7 +1071,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#number_of_broker_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>broker_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1053,7 +1080,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#client_authentication_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthentication">Input[Cluster<wbr>Client<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1089,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1098,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configuration_info_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterconfigurationinfo">Input[Cluster<wbr>Configuration<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1107,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_info_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfo">Input[Cluster<wbr>Encryption<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying encryption. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1116,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enhanced_monitoring_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1098,7 +1125,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logging_info_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfo">Cluster<wbr>Logging<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfo">Input[Cluster<wbr>Logging<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1134,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#open_monitoring_python" style="color: inherit; text-decoration: inherit;">open_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoring">Input[Cluster<wbr>Open<wbr>Monitoring<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX and Node monitoring for the MSK cluster. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1143,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd></dl>
@@ -1405,20 +1432,39 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_brokers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_brokers_sasl_scram</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_brokers_tls</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">broker_node_group_info</span><span class="p">:</span> <span class="nx">Optional[ClusterBrokerNodeGroupInfoArgs]</span> = None<span class="p">, </span><span class="nx">client_authentication</span><span class="p">:</span> <span class="nx">Optional[ClusterClientAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_info</span><span class="p">:</span> <span class="nx">Optional[ClusterConfigurationInfoArgs]</span> = None<span class="p">, </span><span class="nx">current_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_info</span><span class="p">:</span> <span class="nx">Optional[ClusterEncryptionInfoArgs]</span> = None<span class="p">, </span><span class="nx">enhanced_monitoring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_info</span><span class="p">:</span> <span class="nx">Optional[ClusterLoggingInfoArgs]</span> = None<span class="p">, </span><span class="nx">number_of_broker_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">open_monitoring</span><span class="p">:</span> <span class="nx">Optional[ClusterOpenMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zookeeper_connect_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bootstrap_brokers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bootstrap_brokers_sasl_scram</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bootstrap_brokers_tls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">broker_node_group_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterBrokerNodeGroupInfoArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">client_authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterClientAuthenticationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">configuration_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterConfigurationInfoArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">current_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterEncryptionInfoArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">enhanced_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterLoggingInfoArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">number_of_broker_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">open_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterOpenMonitoringArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">zookeeper_connect_string</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1843,7 +1889,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1898,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1907,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokerssaslscram_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers<wbr>Sasl<wbr>Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1916,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokerstls_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1925,7 @@ The following state arguments are supported:
 <a href="#state_brokernodegroupinfo_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Node<wbr>Group<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterbrokernodegroupinfo">pulumi.<wbr>Input<Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1934,7 @@ The following state arguments are supported:
 <a href="#state_clientauthentication_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#clusterclientauthentication">pulumi.<wbr>Input<Cluster<wbr>Client<wbr>Authentication<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1943,7 @@ The following state arguments are supported:
 <a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1906,7 +1952,7 @@ The following state arguments are supported:
 <a href="#state_configurationinfo_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterconfigurationinfo">pulumi.<wbr>Input<Cluster<wbr>Configuration<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1961,7 @@ The following state arguments are supported:
 <a href="#state_currentversion_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -1925,7 +1971,7 @@ The following state arguments are supported:
 <a href="#state_encryptioninfo_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfo">pulumi.<wbr>Input<Cluster<wbr>Encryption<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying encryption. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1980,7 @@ The following state arguments are supported:
 <a href="#state_enhancedmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +1989,7 @@ The following state arguments are supported:
 <a href="#state_kafkaversion_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +1998,7 @@ The following state arguments are supported:
 <a href="#state_logginginfo_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfo">Cluster<wbr>Logging<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterlogginginfo">pulumi.<wbr>Input<Cluster<wbr>Logging<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +2007,7 @@ The following state arguments are supported:
 <a href="#state_numberofbrokernodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Broker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +2016,7 @@ The following state arguments are supported:
 <a href="#state_openmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoring">pulumi.<wbr>Input<Cluster<wbr>Open<wbr>Monitoring<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX and Node monitoring for the MSK cluster. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +2025,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -1988,7 +2034,7 @@ The following state arguments are supported:
 <a href="#state_zookeeperconnectstring_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Connect<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
@@ -2001,7 +2047,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +2056,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_brokers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2019,7 +2065,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_brokers_sasl_scram_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers_<wbr>sasl_<wbr>scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2028,7 +2074,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_brokers_tls_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +2083,7 @@ The following state arguments are supported:
 <a href="#state_broker_node_group_info_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>node_<wbr>group_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Input[Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_client_authentication_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthentication">Input[Cluster<wbr>Client<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2055,7 +2101,7 @@ The following state arguments are supported:
 <a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2064,7 +2110,7 @@ The following state arguments are supported:
 <a href="#state_configuration_info_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterconfigurationinfo">Input[Cluster<wbr>Configuration<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2073,7 +2119,7 @@ The following state arguments are supported:
 <a href="#state_current_version_python" style="color: inherit; text-decoration: inherit;">current_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -2083,7 +2129,7 @@ The following state arguments are supported:
 <a href="#state_encryption_info_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfo">Input[Cluster<wbr>Encryption<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying encryption. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2092,7 +2138,7 @@ The following state arguments are supported:
 <a href="#state_enhanced_monitoring_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2147,7 @@ The following state arguments are supported:
 <a href="#state_kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2110,7 +2156,7 @@ The following state arguments are supported:
 <a href="#state_logging_info_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfo">Cluster<wbr>Logging<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfo">Input[Cluster<wbr>Logging<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2119,7 +2165,7 @@ The following state arguments are supported:
 <a href="#state_number_of_broker_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>broker_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2128,7 +2174,7 @@ The following state arguments are supported:
 <a href="#state_open_monitoring_python" style="color: inherit; text-decoration: inherit;">open_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoring">Input[Cluster<wbr>Open<wbr>Monitoring<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX and Node monitoring for the MSK cluster. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2183,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -2146,7 +2192,7 @@ The following state arguments are supported:
 <a href="#state_zookeeper_connect_string_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>connect_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
 {{% /md %}}</dd></dl>
@@ -2268,7 +2314,7 @@ The following state arguments are supported:
 <a href="#clientsubnets_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
 {{% /md %}}</dd><dt class="property-required"
@@ -2277,7 +2323,7 @@ The following state arguments are supported:
 <a href="#ebsvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size in GiB of the EBS volume for the data drive on each broker node.
 {{% /md %}}</dd><dt class="property-required"
@@ -2286,7 +2332,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
 {{% /md %}}</dd><dt class="property-required"
@@ -2295,7 +2341,7 @@ The following state arguments are supported:
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2304,7 +2350,7 @@ The following state arguments are supported:
 <a href="#azdistribution_nodejs" style="color: inherit; text-decoration: inherit;">az<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
 {{% /md %}}</dd></dl>
@@ -2317,7 +2363,7 @@ The following state arguments are supported:
 <a href="#client_subnets_python" style="color: inherit; text-decoration: inherit;">client_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
 {{% /md %}}</dd><dt class="property-required"
@@ -2326,7 +2372,7 @@ The following state arguments are supported:
 <a href="#ebs_volume_size_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size in GiB of the EBS volume for the data drive on each broker node.
 {{% /md %}}</dd><dt class="property-required"
@@ -2335,7 +2381,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
 {{% /md %}}</dd><dt class="property-required"
@@ -2344,7 +2390,7 @@ The following state arguments are supported:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2353,7 +2399,7 @@ The following state arguments are supported:
 <a href="#az_distribution_python" style="color: inherit; text-decoration: inherit;">az_<wbr>distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
 {{% /md %}}</dd></dl>
@@ -2412,7 +2458,7 @@ The following state arguments are supported:
 <a href="#sasl_nodejs" style="color: inherit; text-decoration: inherit;">sasl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationsasl">Cluster<wbr>Client<wbr>Authentication<wbr>Sasl</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationsasl">pulumi.<wbr>Input<Cluster<wbr>Client<wbr>Authentication<wbr>Sasl<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying SASL client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2421,7 +2467,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationtls">pulumi.<wbr>Input<Cluster<wbr>Client<wbr>Authentication<wbr>Tls<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying TLS client authentication. See below.
 {{% /md %}}</dd></dl>
@@ -2434,7 +2480,7 @@ The following state arguments are supported:
 <a href="#sasl_python" style="color: inherit; text-decoration: inherit;">sasl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationsasl">Cluster<wbr>Client<wbr>Authentication<wbr>Sasl<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationsasl">Input[Cluster<wbr>Client<wbr>Authentication<wbr>Sasl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying SASL client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2443,7 +2489,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationtls">Input[Cluster<wbr>Client<wbr>Authentication<wbr>Tls<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying TLS client authentication. See below.
 {{% /md %}}</dd></dl>
@@ -2484,7 +2530,7 @@ The following state arguments are supported:
 <a href="#scram_nodejs" style="color: inherit; text-decoration: inherit;">scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2497,7 +2543,7 @@ The following state arguments are supported:
 <a href="#scram_python" style="color: inherit; text-decoration: inherit;">scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2538,7 +2584,7 @@ The following state arguments are supported:
 <a href="#certificateauthorityarns_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of ACM Certificate Authority Amazon Resource Names (ARNs).
 {{% /md %}}</dd></dl>
@@ -2551,7 +2597,7 @@ The following state arguments are supported:
 <a href="#certificate_authority_arns_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of ACM Certificate Authority Amazon Resource Names (ARNs).
 {{% /md %}}</dd></dl>
@@ -2610,7 +2656,7 @@ The following state arguments are supported:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -2619,7 +2665,7 @@ The following state arguments are supported:
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Revision of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd></dl>
@@ -2632,7 +2678,7 @@ The following state arguments are supported:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -2641,7 +2687,7 @@ The following state arguments are supported:
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Revision of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd></dl>
@@ -2700,7 +2746,7 @@ The following state arguments are supported:
 <a href="#encryptionatrestkmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Rest<wbr>Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS ('aws/msk' managed service) key will be used for encrypting the data at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2709,7 +2755,7 @@ The following state arguments are supported:
 <a href="#encryptionintransit_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>In<wbr>Transit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">pulumi.<wbr>Input<Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block to specify encryption in transit. See below.
 {{% /md %}}</dd></dl>
@@ -2722,7 +2768,7 @@ The following state arguments are supported:
 <a href="#encryption_at_rest_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>rest_<wbr>kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS ('aws/msk' managed service) key will be used for encrypting the data at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2731,7 +2777,7 @@ The following state arguments are supported:
 <a href="#encryption_in_transit_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>in_<wbr>transit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Input[Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to specify encryption in transit. See below.
 {{% /md %}}</dd></dl>
@@ -2790,7 +2836,7 @@ The following state arguments are supported:
 <a href="#clientbroker_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2799,7 +2845,7 @@ The following state arguments are supported:
 <a href="#incluster_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether data communication among broker nodes is encrypted. Default value: `true`.
 {{% /md %}}</dd></dl>
@@ -2812,7 +2858,7 @@ The following state arguments are supported:
 <a href="#client_broker_python" style="color: inherit; text-decoration: inherit;">client_<wbr>broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2821,7 +2867,7 @@ The following state arguments are supported:
 <a href="#in_cluster_python" style="color: inherit; text-decoration: inherit;">in_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether data communication among broker nodes is encrypted. Default value: `true`.
 {{% /md %}}</dd></dl>
@@ -2862,7 +2908,7 @@ The following state arguments are supported:
 <a href="#brokerlogs_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">pulumi.<wbr>Input<Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Broker Logs settings for logging info. See below.
 {{% /md %}}</dd></dl>
@@ -2875,7 +2921,7 @@ The following state arguments are supported:
 <a href="#broker_logs_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Input[Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Broker Logs settings for logging info. See below.
 {{% /md %}}</dd></dl>
@@ -2946,7 +2992,7 @@ The following state arguments are supported:
 <a href="#cloudwatchlogs_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">pulumi.<wbr>Input<Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2954,7 +3000,7 @@ The following state arguments are supported:
 <a href="#firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">pulumi.<wbr>Input<Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2962,7 +3008,7 @@ The following state arguments are supported:
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">pulumi.<wbr>Input<Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2974,7 +3020,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_logs_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Input[Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2982,7 +3028,7 @@ The following state arguments are supported:
 <a href="#firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Input[Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2990,7 +3036,7 @@ The following state arguments are supported:
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Input[Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3048,7 +3094,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3057,7 +3103,7 @@ The following state arguments are supported:
 <a href="#loggroup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Cloudwatch Log Group to deliver logs to.
 {{% /md %}}</dd></dl>
@@ -3070,7 +3116,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3079,7 +3125,7 @@ The following state arguments are supported:
 <a href="#log_group_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Cloudwatch Log Group to deliver logs to.
 {{% /md %}}</dd></dl>
@@ -3138,7 +3184,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3147,7 +3193,7 @@ The following state arguments are supported:
 <a href="#deliverystream_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Data Firehose delivery stream to deliver logs to.
 {{% /md %}}</dd></dl>
@@ -3160,7 +3206,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3169,7 +3215,7 @@ The following state arguments are supported:
 <a href="#delivery_stream_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Data Firehose delivery stream to deliver logs to.
 {{% /md %}}</dd></dl>
@@ -3246,7 +3292,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3255,7 +3301,7 @@ The following state arguments are supported:
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket to deliver logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3264,7 +3310,7 @@ The following state arguments are supported:
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Prefix to append to the folder name.
 {{% /md %}}</dd></dl>
@@ -3277,7 +3323,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3286,7 +3332,7 @@ The following state arguments are supported:
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket to deliver logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3295,7 +3341,7 @@ The following state arguments are supported:
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Prefix to append to the folder name.
 {{% /md %}}</dd></dl>
@@ -3336,7 +3382,7 @@ The following state arguments are supported:
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheus">pulumi.<wbr>Input<Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Prometheus settings for open monitoring. See below.
 {{% /md %}}</dd></dl>
@@ -3349,7 +3395,7 @@ The following state arguments are supported:
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Input[Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Prometheus settings for open monitoring. See below.
 {{% /md %}}</dd></dl>
@@ -3408,7 +3454,7 @@ The following state arguments are supported:
 <a href="#jmxexporter_nodejs" style="color: inherit; text-decoration: inherit;">jmx<wbr>Exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">pulumi.<wbr>Input<Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX Exporter. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3417,7 +3463,7 @@ The following state arguments are supported:
 <a href="#nodeexporter_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">pulumi.<wbr>Input<Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Node Exporter. See below.
 {{% /md %}}</dd></dl>
@@ -3430,7 +3476,7 @@ The following state arguments are supported:
 <a href="#jmx_exporter_python" style="color: inherit; text-decoration: inherit;">jmx_<wbr>exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Input[Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX Exporter. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3439,7 +3485,7 @@ The following state arguments are supported:
 <a href="#node_exporter_python" style="color: inherit; text-decoration: inherit;">node_<wbr>exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Input[Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Node Exporter. See below.
 {{% /md %}}</dd></dl>
@@ -3480,7 +3526,7 @@ The following state arguments are supported:
 <a href="#enabledinbroker_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>In<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd></dl>
@@ -3493,7 +3539,7 @@ The following state arguments are supported:
 <a href="#enabled_in_broker_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>in_<wbr>broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd></dl>
@@ -3534,7 +3580,7 @@ The following state arguments are supported:
 <a href="#enabledinbroker_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>In<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd></dl>
@@ -3547,7 +3593,7 @@ The following state arguments are supported:
 <a href="#enabled_in_broker_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>in_<wbr>broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd></dl>

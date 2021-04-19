@@ -165,8 +165,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -458,19 +458,37 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[IntentConclusionStatementArgs]</span> = None<span class="p">, </span><span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentConfirmationPromptArgs]</span> = None<span class="p">, </span><span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[IntentDialogCodeHookArgs]</span> = None<span class="p">, </span><span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentFollowUpPromptArgs]</span> = None<span class="p">, </span><span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[IntentFulfillmentActivityArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[IntentRejectionStatementArgs]</span> = None<span class="p">, </span><span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentSlotArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentConclusionStatementArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentConfirmationPromptArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentDialogCodeHookArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentFollowUpPromptArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentFulfillmentActivityArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentRejectionStatementArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntentSlotArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -505,22 +523,32 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IntentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -529,7 +557,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -553,7 +581,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -874,7 +902,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#fulfillmentactivity_nodejs" style="color: inherit; text-decoration: inherit;">fulfillment<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivity">pulumi.<wbr>Input<Intent<wbr>Fulfillment<wbr>Activity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
@@ -885,7 +913,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#conclusionstatement_nodejs" style="color: inherit; text-decoration: inherit;">conclusion<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentconclusionstatement">pulumi.<wbr>Input<Intent<wbr>Conclusion<wbr>Statement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
 after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
@@ -898,7 +926,7 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 <a href="#confirmationprompt_nodejs" style="color: inherit; text-decoration: inherit;">confirmation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentconfirmationprompt">pulumi.<wbr>Input<Intent<wbr>Confirmation<wbr>Prompt<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Prompts the user to confirm the intent. This question should
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
@@ -909,7 +937,7 @@ or neither. Attributes are documented under prompt.
 <a href="#createversion_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
@@ -919,7 +947,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +956,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#dialogcodehook_nodejs" style="color: inherit; text-decoration: inherit;">dialog<wbr>Code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
+        <span class="property-type"><a href="#intentdialogcodehook">pulumi.<wbr>Input<Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
@@ -938,7 +966,7 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
 <a href="#followupprompt_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Up<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentfollowupprompt">pulumi.<wbr>Input<Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
@@ -950,7 +978,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -959,7 +987,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 <a href="#parentintentsignature_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Intent<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
@@ -971,7 +999,7 @@ in the Alexa Skills Kit.
 <a href="#rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentrejectionstatement">pulumi.<wbr>Input<Intent<wbr>Rejection<wbr>Statement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -982,7 +1010,7 @@ documented below under statement.
 <a href="#sampleutterances_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Utterances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
@@ -993,7 +1021,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#slots_nodejs" style="color: inherit; text-decoration: inherit;">slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslot">Intent<wbr>Slot[]</a></span>
+        <span class="property-type"><a href="#intentslot">pulumi.<wbr>Input<pulumi.<wbr>Input<Intent<wbr>Slot<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
@@ -1007,7 +1035,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#fulfillment_activity_python" style="color: inherit; text-decoration: inherit;">fulfillment_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivity">Input[Intent<wbr>Fulfillment<wbr>Activity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
@@ -1018,7 +1046,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#conclusion_statement_python" style="color: inherit; text-decoration: inherit;">conclusion_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentconclusionstatement">Input[Intent<wbr>Conclusion<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
 after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
@@ -1031,7 +1059,7 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 <a href="#confirmation_prompt_python" style="color: inherit; text-decoration: inherit;">confirmation_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentconfirmationprompt">Input[Intent<wbr>Confirmation<wbr>Prompt<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Prompts the user to confirm the intent. This question should
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
@@ -1042,7 +1070,7 @@ or neither. Attributes are documented under prompt.
 <a href="#create_version_python" style="color: inherit; text-decoration: inherit;">create_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
@@ -1052,7 +1080,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1061,7 +1089,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#dialog_code_hook_python" style="color: inherit; text-decoration: inherit;">dialog_<wbr>code_<wbr>hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentdialogcodehook">Input[Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
@@ -1071,7 +1099,7 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
 <a href="#follow_up_prompt_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>up_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowupprompt">Input[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
@@ -1083,7 +1111,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1120,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 <a href="#parent_intent_signature_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>intent_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
@@ -1104,7 +1132,7 @@ in the Alexa Skills Kit.
 <a href="#rejection_statement_python" style="color: inherit; text-decoration: inherit;">rejection_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentrejectionstatement">Input[Intent<wbr>Rejection<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -1115,7 +1143,7 @@ documented below under statement.
 <a href="#sample_utterances_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>utterances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
@@ -1126,7 +1154,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#slots_python" style="color: inherit; text-decoration: inherit;">slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslot">Sequence[Intent<wbr>Slot<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentslot">Input[Intent<wbr>Slot<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
@@ -1380,20 +1408,39 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IntentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Intent</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IntentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Intent</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[IntentConclusionStatementArgs]</span> = None<span class="p">, </span><span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentConfirmationPromptArgs]</span> = None<span class="p">, </span><span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[IntentDialogCodeHookArgs]</span> = None<span class="p">, </span><span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentFollowUpPromptArgs]</span> = None<span class="p">, </span><span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[IntentFulfillmentActivityArgs]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[IntentRejectionStatementArgs]</span> = None<span class="p">, </span><span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentSlotArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Intent</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentConclusionStatementArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentConfirmationPromptArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentDialogCodeHookArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentFollowUpPromptArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentFulfillmentActivityArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntentRejectionStatementArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IntentSlotArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Intent</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IntentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IntentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Intent</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IntentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Intent</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IntentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1860,7 +1907,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1916,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#state_checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
@@ -1879,7 +1926,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_conclusionstatement_nodejs" style="color: inherit; text-decoration: inherit;">conclusion<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentconclusionstatement">pulumi.<wbr>Input<Intent<wbr>Conclusion<wbr>Statement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
 after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
@@ -1892,7 +1939,7 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 <a href="#state_confirmationprompt_nodejs" style="color: inherit; text-decoration: inherit;">confirmation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentconfirmationprompt">pulumi.<wbr>Input<Intent<wbr>Confirmation<wbr>Prompt<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Prompts the user to confirm the intent. This question should
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
@@ -1903,7 +1950,7 @@ or neither. Attributes are documented under prompt.
 <a href="#state_createversion_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
@@ -1913,7 +1960,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1969,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1978,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#state_dialogcodehook_nodejs" style="color: inherit; text-decoration: inherit;">dialog<wbr>Code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
+        <span class="property-type"><a href="#intentdialogcodehook">pulumi.<wbr>Input<Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
@@ -1941,7 +1988,7 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
 <a href="#state_followupprompt_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Up<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentfollowupprompt">pulumi.<wbr>Input<Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
@@ -1953,7 +2000,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 <a href="#state_fulfillmentactivity_nodejs" style="color: inherit; text-decoration: inherit;">fulfillment<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivity">pulumi.<wbr>Input<Intent<wbr>Fulfillment<wbr>Activity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
@@ -1964,7 +2011,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1973,7 +2020,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1982,7 +2029,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#state_parentintentsignature_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Intent<wbr>Signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
@@ -1994,7 +2041,7 @@ in the Alexa Skills Kit.
 <a href="#state_rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentrejectionstatement">pulumi.<wbr>Input<Intent<wbr>Rejection<wbr>Statement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -2005,7 +2052,7 @@ documented below under statement.
 <a href="#state_sampleutterances_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Utterances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
@@ -2016,7 +2063,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#state_slots_nodejs" style="color: inherit; text-decoration: inherit;">slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslot">Intent<wbr>Slot[]</a></span>
+        <span class="property-type"><a href="#intentslot">pulumi.<wbr>Input<pulumi.<wbr>Input<Intent<wbr>Slot<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
@@ -2026,7 +2073,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd></dl>
@@ -2039,7 +2086,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lex intent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +2095,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#state_checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the intent that was created. The checksum is not
 included as an argument because the resource will add it automatically when updating the intent.
@@ -2058,7 +2105,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_conclusion_statement_python" style="color: inherit; text-decoration: inherit;">conclusion_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentconclusionstatement">Input[Intent<wbr>Conclusion<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
 after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
@@ -2071,7 +2118,7 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 <a href="#state_confirmation_prompt_python" style="color: inherit; text-decoration: inherit;">confirmation_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentconfirmationprompt">Input[Intent<wbr>Confirmation<wbr>Prompt<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Prompts the user to confirm the intent. This question should
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
@@ -2082,7 +2129,7 @@ or neither. Attributes are documented under prompt.
 <a href="#state_create_version_python" style="color: inherit; text-decoration: inherit;">create_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines if a new slot type version is created when the initial
 resource is created and on each update. Defaults to `false`.
@@ -2092,7 +2139,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date when the intent version was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2148,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2110,7 +2157,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#state_dialog_code_hook_python" style="color: inherit; text-decoration: inherit;">dialog_<wbr>code_<wbr>hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentdialogcodehook">Input[Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
@@ -2120,7 +2167,7 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
 <a href="#state_follow_up_prompt_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>up_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowupprompt">Input[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
@@ -2132,7 +2179,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 <a href="#state_fulfillment_activity_python" style="color: inherit; text-decoration: inherit;">fulfillment_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivity">Input[Intent<wbr>Fulfillment<wbr>Activity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
@@ -2143,7 +2190,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this intent was updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2152,7 +2199,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2161,7 +2208,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#state_parent_intent_signature_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>intent_<wbr>signature</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the built-in intent to base this
 intent on. To find the signature for an intent, see
@@ -2173,7 +2220,7 @@ in the Alexa Skills Kit.
 <a href="#state_rejection_statement_python" style="color: inherit; text-decoration: inherit;">rejection_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentrejectionstatement">Input[Intent<wbr>Rejection<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -2184,7 +2231,7 @@ documented below under statement.
 <a href="#state_sample_utterances_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>utterances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
@@ -2195,7 +2242,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#state_slots_python" style="color: inherit; text-decoration: inherit;">slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslot">Sequence[Intent<wbr>Slot<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentslot">Input[Intent<wbr>Slot<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
@@ -2205,7 +2252,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the bot.
 {{% /md %}}</dd></dl>
@@ -2281,7 +2328,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatementmessage">Intent<wbr>Conclusion<wbr>Statement<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentconclusionstatementmessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2292,7 +2339,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -2307,7 +2354,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatementmessage">Sequence[Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentconclusionstatementmessage">Input[Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2318,7 +2365,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -2399,7 +2446,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -2408,7 +2455,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2417,7 +2464,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -2431,7 +2478,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -2440,7 +2487,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2449,7 +2496,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -2535,7 +2582,7 @@ slot values into the response card. For more information, see
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd><dt class="property-required"
@@ -2544,7 +2591,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationpromptmessage">Intent<wbr>Confirmation<wbr>Prompt<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentconfirmationpromptmessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2555,7 +2602,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -2570,7 +2617,7 @@ slot values into the response card. For more information, see
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd><dt class="property-required"
@@ -2579,7 +2626,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationpromptmessage">Sequence[Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentconfirmationpromptmessage">Input[Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2590,7 +2637,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -2671,7 +2718,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -2680,7 +2727,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2689,7 +2736,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -2703,7 +2750,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -2712,7 +2759,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2721,7 +2768,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -2785,7 +2832,7 @@ to invoke your Lambda function. For more information, see
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
@@ -2796,7 +2843,7 @@ to invoke your Lambda function. For more information, see
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd></dl>
@@ -2809,7 +2856,7 @@ to invoke your Lambda function. For more information, see
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
@@ -2820,7 +2867,7 @@ to invoke your Lambda function. For more information, see
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd></dl>
@@ -2883,7 +2930,7 @@ documented below under statement.
 <a href="#prompt_nodejs" style="color: inherit; text-decoration: inherit;">prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptprompt">pulumi.<wbr>Input<Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-required"
@@ -2892,7 +2939,7 @@ documented below under statement.
 <a href="#rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">pulumi.<wbr>Input<Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -2907,7 +2954,7 @@ documented below under statement.
 <a href="#prompt_python" style="color: inherit; text-decoration: inherit;">prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptprompt">Input[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-required"
@@ -2916,7 +2963,7 @@ documented below under statement.
 <a href="#rejection_statement_python" style="color: inherit; text-decoration: inherit;">rejection_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Input[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -3003,7 +3050,7 @@ slot values into the response card. For more information, see
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd><dt class="property-required"
@@ -3012,7 +3059,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3023,7 +3070,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -3038,7 +3085,7 @@ slot values into the response card. For more information, see
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd><dt class="property-required"
@@ -3047,7 +3094,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Sequence[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Input[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3058,7 +3105,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -3139,7 +3186,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3148,7 +3195,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3157,7 +3204,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -3171,7 +3218,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3180,7 +3227,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3189,7 +3236,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -3257,7 +3304,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3268,7 +3315,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -3283,7 +3330,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Sequence[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Input[Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3294,7 +3341,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -3375,7 +3422,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3384,7 +3431,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3393,7 +3440,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -3407,7 +3454,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3416,7 +3463,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3425,7 +3472,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -3489,7 +3536,7 @@ Required if type is CodeHook. Attributes are documented under code_hook.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the intent should be fulfilled, either by running a Lambda function or by
 returning the slot data to the client application.
@@ -3499,7 +3546,7 @@ returning the slot data to the client application.
 <a href="#codehook_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">pulumi.<wbr>Input<Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
@@ -3513,7 +3560,7 @@ Required if type is CodeHook. Attributes are documented under code_hook.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the intent should be fulfilled, either by running a Lambda function or by
 returning the slot data to the client application.
@@ -3523,7 +3570,7 @@ returning the slot data to the client application.
 <a href="#code_hook_python" style="color: inherit; text-decoration: inherit;">code_<wbr>hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Input[Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
@@ -3587,7 +3634,7 @@ to invoke your Lambda function. For more information, see
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
@@ -3598,7 +3645,7 @@ to invoke your Lambda function. For more information, see
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd></dl>
@@ -3611,7 +3658,7 @@ to invoke your Lambda function. For more information, see
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the request-response that you want Amazon Lex to use
 to invoke your Lambda function. For more information, see
@@ -3622,7 +3669,7 @@ to invoke your Lambda function. For more information, see
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda function.
 {{% /md %}}</dd></dl>
@@ -3689,7 +3736,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatementmessage">Intent<wbr>Rejection<wbr>Statement<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentrejectionstatementmessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3700,7 +3747,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -3715,7 +3762,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatementmessage">Sequence[Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentrejectionstatementmessage">Input[Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3726,7 +3773,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -3807,7 +3854,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3816,7 +3863,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3825,7 +3872,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -3839,7 +3886,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3848,7 +3895,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3857,7 +3904,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -4061,7 +4108,7 @@ from the user. Attributes are documented under prompt.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -4070,7 +4117,7 @@ from the user. Attributes are documented under prompt.
 <a href="#slotconstraint_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the slot is required or optional.
 {{% /md %}}</dd><dt class="property-required"
@@ -4079,7 +4126,7 @@ from the user. Attributes are documented under prompt.
 <a href="#slottype_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
 the built-in slot types. Must be less than or equal to 100 characters in length.
@@ -4089,7 +4136,7 @@ the built-in slot types. Must be less than or equal to 100 characters in length.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4098,7 +4145,7 @@ the built-in slot types. Must be less than or equal to 100 characters in length.
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
@@ -4110,7 +4157,7 @@ values is arbitrary. Must be between 1 and 100.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -4121,7 +4168,7 @@ slot values into the response card. For more information, see
 <a href="#sampleutterances_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Utterances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
@@ -4132,7 +4179,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#slottypeversion_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Type<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4141,7 +4188,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#valueelicitationprompt_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Elicitation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationprompt">pulumi.<wbr>Input<Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
@@ -4155,7 +4202,7 @@ from the user. Attributes are documented under prompt.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -4164,7 +4211,7 @@ from the user. Attributes are documented under prompt.
 <a href="#slot_constraint_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the slot is required or optional.
 {{% /md %}}</dd><dt class="property-required"
@@ -4173,7 +4220,7 @@ from the user. Attributes are documented under prompt.
 <a href="#slot_type_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the slot, either a custom slot type that you defined or one of
 the built-in slot types. Must be less than or equal to 100 characters in length.
@@ -4183,7 +4230,7 @@ the built-in slot types. Must be less than or equal to 100 characters in length.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the bot. Must be less than or equal to 200 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4192,7 +4239,7 @@ the built-in slot types. Must be less than or equal to 100 characters in length.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Directs Lex the order in which to elicit this slot value from the user.
 For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
@@ -4204,7 +4251,7 @@ values is arbitrary. Must be between 1 and 100.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -4215,7 +4262,7 @@ slot values into the response card. For more information, see
 <a href="#sample_utterances_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>utterances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If you know a specific pattern with which users might respond to
 an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
@@ -4226,7 +4273,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#slot_type_version_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>type_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the slot type. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4235,7 +4282,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#value_elicitation_prompt_python" style="color: inherit; text-decoration: inherit;">value_<wbr>elicitation_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Input[Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
@@ -4321,7 +4368,7 @@ slot values into the response card. For more information, see
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd><dt class="property-required"
@@ -4330,7 +4377,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">pulumi.<wbr>Input<pulumi.<wbr>Input<Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -4341,7 +4388,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#responsecard_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -4356,7 +4403,7 @@ slot values into the response card. For more information, see
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
 {{% /md %}}</dd><dt class="property-required"
@@ -4365,7 +4412,7 @@ slot values into the response card. For more information, see
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Sequence[Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args]</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Input[Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -4376,7 +4423,7 @@ Attributes are documented under message. Must contain between 1 and 15 messages.
 <a href="#response_card_python" style="color: inherit; text-decoration: inherit;">response_<wbr>card</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The response card. Amazon Lex will substitute session attributes and
 slot values into the response card. For more information, see
@@ -4457,7 +4504,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -4466,7 +4513,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4475,7 +4522,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#groupnumber_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
@@ -4489,7 +4536,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The text of the message. Must be less than or equal to 1000 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -4498,7 +4545,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content type of the message string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4507,7 +4554,7 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 <a href="#group_number_python" style="color: inherit; text-decoration: inherit;">group_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Identifies the message group that the message belongs to. When a group
 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
