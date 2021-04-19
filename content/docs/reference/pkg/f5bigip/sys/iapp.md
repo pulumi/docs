@@ -117,7 +117,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -164,19 +164,42 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">IAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">IAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execute_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jsonfile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppListArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_updates</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tables</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppTableArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_prerequisite_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">devicegroup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">execute_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">inherited_devicegroup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">inherited_traffic_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">jsonfile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IAppListArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IAppMetadataArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">strict_updates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">tables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IAppTableArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">template_modified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">template_prerequisite_errors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">traffic_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IAppVariableArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[IAppArgs]</a></span> = None<span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">IAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">IAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IAppArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IAppArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,22 +234,32 @@ import * as pulumi from "@pulumi/pulumi";
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IAppArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -235,7 +268,7 @@ import * as pulumi from "@pulumi/pulumi";
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -259,7 +292,7 @@ import * as pulumi from "@pulumi/pulumi";
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -620,7 +653,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address of the Iapp which needs to be Iappensed
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +662,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#devicegroup_nodejs" style="color: inherit; text-decoration: inherit;">devicegroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +671,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#executeaction_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +680,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#inheriteddevicegroup_nodejs" style="color: inherit; text-decoration: inherit;">inherited<wbr>Devicegroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +689,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#inheritedtrafficgroup_nodejs" style="color: inherit; text-decoration: inherit;">inherited<wbr>Traffic<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +698,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#jsonfile_nodejs" style="color: inherit; text-decoration: inherit;">jsonfile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Refer to the Json file which will be deployed on F5 BIG-IP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +707,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#lists_nodejs" style="color: inherit; text-decoration: inherit;">lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapplist">IApp<wbr>List[]</a></span>
+        <span class="property-type"><a href="#iapplist">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>List<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +715,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadatas_nodejs" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappmetadata">IApp<wbr>Metadata[]</a></span>
+        <span class="property-type"><a href="#iappmetadata">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>Metadata<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +723,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the iApp.
 {{% /md %}}</dd><dt class="property-optional"
@@ -699,7 +732,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address of the Iapp which needs to be Iappensed
 {{% /md %}}</dd><dt class="property-optional"
@@ -708,7 +741,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#strictupdates_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +750,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptable">IApp<wbr>Table[]</a></span>
+        <span class="property-type"><a href="#iapptable">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>Table<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +758,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +767,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#templatemodified_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +776,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#templateprerequisiteerrors_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Prerequisite<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +785,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#trafficgroup_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +794,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappvariable">IApp<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#iappvariable">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +806,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address of the Iapp which needs to be Iappensed
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +815,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#devicegroup_python" style="color: inherit; text-decoration: inherit;">devicegroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +824,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#execute_action_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +833,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#inherited_devicegroup_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>devicegroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +842,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#inherited_traffic_group_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>traffic_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -818,7 +851,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#jsonfile_python" style="color: inherit; text-decoration: inherit;">jsonfile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Refer to the Json file which will be deployed on F5 BIG-IP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -827,7 +860,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#lists_python" style="color: inherit; text-decoration: inherit;">lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapplist">Sequence[IApp<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapplist">Input[IApp<wbr>List<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -835,7 +868,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappmetadata">Sequence[IApp<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iappmetadata">Input[IApp<wbr>Metadata<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,7 +876,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the iApp.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +885,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address of the Iapp which needs to be Iappensed
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +894,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#strict_updates_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +903,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptable">Sequence[IApp<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapptable">Input[IApp<wbr>Table<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +911,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -887,7 +920,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#template_modified_python" style="color: inherit; text-decoration: inherit;">template_<wbr>modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -896,7 +929,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#template_prerequisite_errors_python" style="color: inherit; text-decoration: inherit;">template_<wbr>prerequisite_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -905,7 +938,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#traffic_group_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +947,7 @@ The IApp resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappvariable">Sequence[IApp<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iappvariable">Input[IApp<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -982,20 +1015,39 @@ Get an existing IApp resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IAppState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IApp</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IAppState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IApp</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execute_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_devicegroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inherited_traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jsonfile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppListArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strict_updates</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tables</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppTableArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_prerequisite_errors</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAppVariableArgs]]</span> = None<span class="p">) -&gt;</span> IApp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">devicegroup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">execute_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">inherited_devicegroup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">inherited_traffic_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">jsonfile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IAppListArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IAppMetadataArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">strict_updates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IAppTableArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">template_modified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">template_prerequisite_errors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">traffic_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IAppVariableArgs]]]]</span> = None<span class="p">) -&gt;</span> IApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IAppState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IAppState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IApp</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IAppState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IApp</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IAppState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1410,7 +1462,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address of the Iapp which needs to be Iappensed
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1471,7 @@ The following state arguments are supported:
 <a href="#state_devicegroup_nodejs" style="color: inherit; text-decoration: inherit;">devicegroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1480,7 @@ The following state arguments are supported:
 <a href="#state_executeaction_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1489,7 @@ The following state arguments are supported:
 <a href="#state_inheriteddevicegroup_nodejs" style="color: inherit; text-decoration: inherit;">inherited<wbr>Devicegroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1498,7 @@ The following state arguments are supported:
 <a href="#state_inheritedtrafficgroup_nodejs" style="color: inherit; text-decoration: inherit;">inherited<wbr>Traffic<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1507,7 @@ The following state arguments are supported:
 <a href="#state_jsonfile_nodejs" style="color: inherit; text-decoration: inherit;">jsonfile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Refer to the Json file which will be deployed on F5 BIG-IP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_lists_nodejs" style="color: inherit; text-decoration: inherit;">lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapplist">IApp<wbr>List[]</a></span>
+        <span class="property-type"><a href="#iapplist">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>List<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1472,7 +1524,7 @@ The following state arguments are supported:
 <a href="#state_metadatas_nodejs" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappmetadata">IApp<wbr>Metadata[]</a></span>
+        <span class="property-type"><a href="#iappmetadata">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>Metadata<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1480,7 +1532,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the iApp.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1541,7 @@ The following state arguments are supported:
 <a href="#state_partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address of the Iapp which needs to be Iappensed
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1550,7 @@ The following state arguments are supported:
 <a href="#state_strictupdates_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1559,7 @@ The following state arguments are supported:
 <a href="#state_tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptable">IApp<wbr>Table[]</a></span>
+        <span class="property-type"><a href="#iapptable">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>Table<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1515,7 +1567,7 @@ The following state arguments are supported:
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1524,7 +1576,7 @@ The following state arguments are supported:
 <a href="#state_templatemodified_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1533,7 +1585,7 @@ The following state arguments are supported:
 <a href="#state_templateprerequisiteerrors_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Prerequisite<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1594,7 @@ The following state arguments are supported:
 <a href="#state_trafficgroup_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1603,7 @@ The following state arguments are supported:
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappvariable">IApp<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#iappvariable">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1563,7 +1615,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address of the Iapp which needs to be Iappensed
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1624,7 @@ The following state arguments are supported:
 <a href="#state_devicegroup_python" style="color: inherit; text-decoration: inherit;">devicegroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1633,7 @@ The following state arguments are supported:
 <a href="#state_execute_action_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_inherited_devicegroup_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>devicegroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1651,7 @@ The following state arguments are supported:
 <a href="#state_inherited_traffic_group_python" style="color: inherit; text-decoration: inherit;">inherited_<wbr>traffic_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1660,7 @@ The following state arguments are supported:
 <a href="#state_jsonfile_python" style="color: inherit; text-decoration: inherit;">jsonfile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Refer to the Json file which will be deployed on F5 BIG-IP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1669,7 @@ The following state arguments are supported:
 <a href="#state_lists_python" style="color: inherit; text-decoration: inherit;">lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapplist">Sequence[IApp<wbr>List<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapplist">Input[IApp<wbr>List<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1625,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappmetadata">Sequence[IApp<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iappmetadata">Input[IApp<wbr>Metadata<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,7 +1685,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the iApp.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1694,7 @@ The following state arguments are supported:
 <a href="#state_partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address of the Iapp which needs to be Iappensed
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_strict_updates_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptable">Sequence[IApp<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapptable">Input[IApp<wbr>Table<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1668,7 +1720,7 @@ The following state arguments are supported:
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1729,7 @@ The following state arguments are supported:
 <a href="#state_template_modified_python" style="color: inherit; text-decoration: inherit;">template_<wbr>modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1738,7 @@ The following state arguments are supported:
 <a href="#state_template_prerequisite_errors_python" style="color: inherit; text-decoration: inherit;">template_<wbr>prerequisite_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1747,7 @@ The following state arguments are supported:
 <a href="#state_traffic_group_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BIG-IP password
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1756,7 @@ The following state arguments are supported:
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iappvariable">Sequence[IApp<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iappvariable">Input[IApp<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1767,7 +1819,7 @@ The following state arguments are supported:
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1827,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1787,7 +1839,7 @@ The following state arguments are supported:
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1847,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1849,7 +1901,7 @@ The following state arguments are supported:
 <a href="#persists_nodejs" style="color: inherit; text-decoration: inherit;">persists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1909,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1869,7 +1921,7 @@ The following state arguments are supported:
 <a href="#persists_python" style="color: inherit; text-decoration: inherit;">persists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1929,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1965,7 +2017,7 @@ The following state arguments are supported:
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +2025,7 @@ The following state arguments are supported:
 <a href="#encryptedcolumns_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +2033,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the iApp.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1990,7 +2042,7 @@ The following state arguments are supported:
 <a href="#rows_nodejs" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptablerow">IApp<wbr>Table<wbr>Row[]</a></span>
+        <span class="property-type"><a href="#iapptablerow">pulumi.<wbr>Input<pulumi.<wbr>Input<IApp<wbr>Table<wbr>Row<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2002,7 +2054,7 @@ The following state arguments are supported:
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2062,7 @@ The following state arguments are supported:
 <a href="#encrypted_columns_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2070,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the iApp.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2027,7 +2079,7 @@ The following state arguments are supported:
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iapptablerow">Sequence[IApp<wbr>Table<wbr>Row<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iapptablerow">Input[IApp<wbr>Table<wbr>Row<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2065,7 +2117,7 @@ The following state arguments are supported:
 <a href="#rows_nodejs" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2077,7 +2129,7 @@ The following state arguments are supported:
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2149,7 +2201,7 @@ The following state arguments are supported:
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2209,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the iApp.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2218,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2178,7 +2230,7 @@ The following state arguments are supported:
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2186,7 +2238,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the iApp.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2247,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
