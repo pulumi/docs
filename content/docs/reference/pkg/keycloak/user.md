@@ -61,6 +61,7 @@ class MyStack : Stack
             Attributes = 
             {
                 { "foo", "bar" },
+                { "multivalue", "value1##value2" },
             },
             InitialPassword = new Keycloak.Inputs.UserInitialPasswordArgs
             {
@@ -83,8 +84,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -115,7 +116,8 @@ func main() {
 			FirstName: pulumi.String("Alice"),
 			LastName:  pulumi.String("Aliceberg"),
 			Attributes: pulumi.StringMap{
-				"foo": pulumi.String("bar"),
+				"foo":        pulumi.String("bar"),
+				"multivalue": pulumi.String("value1##value2"),
 			},
 			InitialPassword: &keycloak.UserInitialPasswordArgs{
 				Value:     pulumi.String("some password"),
@@ -159,6 +161,7 @@ user_with_initial_password = keycloak.User("userWithInitialPassword",
     last_name="Aliceberg",
     attributes={
         "foo": "bar",
+        "multivalue": "value1##value2",
     },
     initial_password=keycloak.UserInitialPasswordArgs(
         value="some password",
@@ -198,6 +201,7 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
     lastName: "Aliceberg",
     attributes: {
         foo: "bar",
+        multivalue: "value1##value2",
     },
     initialPassword: {
         value: "some password",
@@ -223,19 +227,35 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">federated_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserFederatedIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_password</span><span class="p">:</span> <span class="nx">Optional[UserInitialPasswordArgs]</span> = None<span class="p">, </span><span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+         <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">email_verified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">federated_identities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[UserFederatedIdentityArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">initial_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserInitialPasswordArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -270,22 +290,32 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -294,7 +324,7 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -318,7 +348,7 @@ const userWithInitialPassword = new keycloak.User("userWithInitialPassword", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -393,7 +423,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A map representing attributes for the user
+    <dd>{{% md %}}A map representing attributes for the user. In order to add multivalue attributes, use `##` to seperate the values. Max length for each value is 255 chars
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
@@ -486,7 +516,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A map representing attributes for the user
+    <dd>{{% md %}}A map representing attributes for the user. In order to add multivalue attributes, use `##` to seperate the values. Max length for each value is 255 chars
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_go">
@@ -559,7 +589,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -568,7 +598,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -577,16 +607,16 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
-    <dd>{{% md %}}A map representing attributes for the user
+    <dd>{{% md %}}A map representing attributes for the user. In order to add multivalue attributes, use `##` to seperate the values. Max length for each value is 255 chars
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd><dt class="property-optional"
@@ -595,7 +625,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#emailverified_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -604,7 +634,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -613,7 +643,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#federatedidentities_nodejs" style="color: inherit; text-decoration: inherit;">federated<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederatedidentity">User<wbr>Federated<wbr>Identity[]</a></span>
+        <span class="property-type"><a href="#userfederatedidentity">pulumi<wbr>Input<pulumi<wbr>Input<User<wbr>Federated<wbr>Identity<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +651,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +660,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#initialpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password</a></span>
+        <span class="property-type"><a href="#userinitialpassword">pulumi<wbr>Input<User<wbr>Initial<wbr>Password<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +669,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd></dl>
@@ -652,7 +682,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -661,7 +691,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -670,16 +700,16 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
-    <dd>{{% md %}}A map representing attributes for the user
+    <dd>{{% md %}}A map representing attributes for the user. In order to add multivalue attributes, use `##` to seperate the values. Max length for each value is 255 chars
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +718,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#email_verified_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +727,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +736,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#federated_identities_python" style="color: inherit; text-decoration: inherit;">federated_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederatedidentity">Sequence[User<wbr>Federated<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userfederatedidentity">Input[User<wbr>Federated<wbr>Identity<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +744,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +753,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#initial_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinitialpassword">Input[User<wbr>Initial<wbr>Password<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +762,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd></dl>
@@ -801,20 +831,32 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verified</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">federated_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserFederatedIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_password</span><span class="p">:</span> <span class="nx">Optional[UserInitialPasswordArgs]</span> = None<span class="p">, </span><span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">email_verified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">federated_identities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[UserFederatedIdentityArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">first_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">initial_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserInitialPasswordArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">last_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -925,7 +967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}A map representing attributes for the user
+    <dd>{{% md %}}A map representing attributes for the user. In order to add multivalue attributes, use `##` to seperate the values. Max length for each value is 255 chars
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_csharp">
@@ -1018,7 +1060,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}A map representing attributes for the user
+    <dd>{{% md %}}A map representing attributes for the user. In order to add multivalue attributes, use `##` to seperate the values. Max length for each value is 255 chars
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_go">
@@ -1109,16 +1151,16 @@ The following state arguments are supported:
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
-    <dd>{{% md %}}A map representing attributes for the user
+    <dd>{{% md %}}A map representing attributes for the user. In order to add multivalue attributes, use `##` to seperate the values. Max length for each value is 255 chars
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_nodejs">
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1127,7 +1169,7 @@ The following state arguments are supported:
 <a href="#state_emailverified_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1136,7 +1178,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1145,7 +1187,7 @@ The following state arguments are supported:
 <a href="#state_federatedidentities_nodejs" style="color: inherit; text-decoration: inherit;">federated<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederatedidentity">User<wbr>Federated<wbr>Identity[]</a></span>
+        <span class="property-type"><a href="#userfederatedidentity">pulumi<wbr>Input<pulumi<wbr>Input<User<wbr>Federated<wbr>Identity<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1195,7 @@ The following state arguments are supported:
 <a href="#state_firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_initialpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password</a></span>
+        <span class="property-type"><a href="#userinitialpassword">pulumi<wbr>Input<User<wbr>Initial<wbr>Password<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1213,7 @@ The following state arguments are supported:
 <a href="#state_lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1189,7 +1231,7 @@ The following state arguments are supported:
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd></dl>
@@ -1202,16 +1244,16 @@ The following state arguments are supported:
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
-    <dd>{{% md %}}A map representing attributes for the user
+    <dd>{{% md %}}A map representing attributes for the user. In order to add multivalue attributes, use `##` to seperate the values. Max length for each value is 255 chars
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_python">
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user's email.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1220,7 +1262,7 @@ The following state arguments are supported:
 <a href="#state_email_verified_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the email address was validated or not. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1271,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When false, this user cannot log in. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1280,7 @@ The following state arguments are supported:
 <a href="#state_federated_identities_python" style="color: inherit; text-decoration: inherit;">federated_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederatedidentity">Sequence[User<wbr>Federated<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userfederatedidentity">Input[User<wbr>Federated<wbr>Identity<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1288,7 @@ The following state arguments are supported:
 <a href="#state_first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user's first name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1255,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_initial_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinitialpassword">User<wbr>Initial<wbr>Password<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinitialpassword">Input[User<wbr>Initial<wbr>Password<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}When given, the user's initial password will be set. This attribute is only respected during initial user creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1264,7 +1306,7 @@ The following state arguments are supported:
 <a href="#state_last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user's last name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1315,7 @@ The following state arguments are supported:
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm this user belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1282,7 +1324,7 @@ The following state arguments are supported:
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique username of this user.
 {{% /md %}}</dd></dl>
@@ -1368,7 +1410,7 @@ The following state arguments are supported:
 <a href="#identityprovider_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the identity provider
 {{% /md %}}</dd><dt class="property-required"
@@ -1377,7 +1419,7 @@ The following state arguments are supported:
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the user defined in the identity provider
 {{% /md %}}</dd><dt class="property-required"
@@ -1386,7 +1428,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user name of the user defined in the identity provider
 {{% /md %}}</dd></dl>
@@ -1399,7 +1441,7 @@ The following state arguments are supported:
 <a href="#identity_provider_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the identity provider
 {{% /md %}}</dd><dt class="property-required"
@@ -1408,7 +1450,7 @@ The following state arguments are supported:
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the user defined in the identity provider
 {{% /md %}}</dd><dt class="property-required"
@@ -1417,7 +1459,7 @@ The following state arguments are supported:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user name of the user defined in the identity provider
 {{% /md %}}</dd></dl>
@@ -1476,7 +1518,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The initial password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1485,7 +1527,7 @@ The following state arguments are supported:
 <a href="#temporary_nodejs" style="color: inherit; text-decoration: inherit;">temporary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the initial password is set up for renewal on first use. Default to `false`.
 {{% /md %}}</dd></dl>
@@ -1498,7 +1540,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The initial password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1549,7 @@ The following state arguments are supported:
 <a href="#temporary_python" style="color: inherit; text-decoration: inherit;">temporary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the initial password is set up for renewal on first use. Default to `false`.
 {{% /md %}}</dd></dl>

@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -129,17 +129,27 @@ const group = new keycloak.Role("group", {realmId: realm.then(realm => realm.id)
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRealm<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRealmArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRealmResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRealm<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRealmArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRealmResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_realm(</span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">default_default_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_optional_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internationalizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmInternationalizationArgs]]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSecurityDefenseArgs]]</span> = None<span class="p">, </span><span class="nx">smtp_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSmtpServerArgs]]</span> = None<span class="p">, </span><span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPasswordlessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRealmResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_realm(</span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+              <span class="nx">default_default_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">default_optional_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">internationalizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmInternationalization]]</span> = None<span class="p">,</span>
+              <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSecurityDefense]]</span> = None<span class="p">,</span>
+              <span class="nx">smtp_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSmtpServer]]</span> = None<span class="p">,</span>
+              <span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPasswordlessPolicy]</span> = None<span class="p">,</span>
+              <span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPolicy]</span> = None<span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRealmResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRealm<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRealmArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRealmResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRealm<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRealmArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRealmResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRealm` in the Go SDK.
 
@@ -148,7 +158,7 @@ const group = new keycloak.Role("group", {realmId: realm.then(realm => realm.id)
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRealm </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetRealmResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRealmArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRealmResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRealmArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -205,7 +215,7 @@ The following arguments are supported:
 <a href="#internationalizations_csharp" style="color: inherit; text-decoration: inherit;">Internationalizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealminternationalization">List&lt;Get<wbr>Realm<wbr>Internationalization<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getrealminternationalization">List&lt;Get<wbr>Realm<wbr>Internationalization&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -213,7 +223,7 @@ The following arguments are supported:
 <a href="#securitydefenses_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Defenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefense">List&lt;Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefense">List&lt;Get<wbr>Realm<wbr>Security<wbr>Defense&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -221,7 +231,7 @@ The following arguments are supported:
 <a href="#smtpservers_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsmtpserver">List&lt;Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getrealmsmtpserver">List&lt;Get<wbr>Realm<wbr>Smtp<wbr>Server&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -229,7 +239,7 @@ The following arguments are supported:
 <a href="#webauthnpasswordlesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmwebauthnpasswordlesspolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getrealmwebauthnpasswordlesspolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -237,7 +247,7 @@ The following arguments are supported:
 <a href="#webauthnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Authn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmwebauthnpolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getrealmwebauthnpolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -460,7 +470,7 @@ The following arguments are supported:
 <a href="#internationalizations_python" style="color: inherit; text-decoration: inherit;">internationalizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealminternationalization">Sequence[Get<wbr>Realm<wbr>Internationalization<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrealminternationalization">Sequence[Get<wbr>Realm<wbr>Internationalization]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -468,7 +478,7 @@ The following arguments are supported:
 <a href="#security_defenses_python" style="color: inherit; text-decoration: inherit;">security_<wbr>defenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefense">Sequence[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefense">Sequence[Get<wbr>Realm<wbr>Security<wbr>Defense]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -476,7 +486,7 @@ The following arguments are supported:
 <a href="#smtp_servers_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsmtpserver">Sequence[Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrealmsmtpserver">Sequence[Get<wbr>Realm<wbr>Smtp<wbr>Server]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -484,7 +494,7 @@ The following arguments are supported:
 <a href="#web_authn_passwordless_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>passwordless_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmwebauthnpasswordlesspolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getrealmwebauthnpasswordlesspolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -492,7 +502,7 @@ The following arguments are supported:
 <a href="#web_authn_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmwebauthnpolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#getrealmwebauthnpolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2291,7 +2301,7 @@ The following output properties are available:
 <a href="#bruteforcedetections_csharp" style="color: inherit; text-decoration: inherit;">Brute<wbr>Force<wbr>Detections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefensebruteforcedetection">List&lt;Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefensebruteforcedetection">List&lt;Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2299,7 +2309,7 @@ The following output properties are available:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefenseheader">List&lt;Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefenseheader">List&lt;Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2351,7 +2361,7 @@ The following output properties are available:
 <a href="#brute_force_detections_python" style="color: inherit; text-decoration: inherit;">brute_<wbr>force_<wbr>detections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefensebruteforcedetection">Sequence[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefensebruteforcedetection">Sequence[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2359,7 +2369,7 @@ The following output properties are available:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefenseheader">Sequence[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefenseheader">Sequence[Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2863,7 +2873,7 @@ The following output properties are available:
 <a href="#auths_csharp" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsmtpserverauth">List&lt;Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getrealmsmtpserverauth">List&lt;Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3115,7 +3125,7 @@ The following output properties are available:
 <a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsmtpserverauth">Sequence[Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getrealmsmtpserverauth">Sequence[Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

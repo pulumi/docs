@@ -82,9 +82,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak"
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/ldap"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak/ldap"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -218,19 +218,54 @@ const ldapUserFederation = new keycloak.ldap.UserFederation("ldapUserFederation"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserFederation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserFederationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserFederation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserFederationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserFederation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">batch_size_for_sync</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">bind_credential</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bind_dn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[UserFederationCacheArgs]</span> = None<span class="p">, </span><span class="nx">cache_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">changed_sync_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_user_search_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edit_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_sync_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">import_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos</span><span class="p">:</span> <span class="nx">Optional[UserFederationKerberosArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pagination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rdn_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_registrations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_truststore_spi</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_object_classes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users_dn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uuid_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validate_password_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vendor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UserFederation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">batch_size_for_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">bind_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">bind_dn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserFederationCacheArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">changed_sync_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">connection_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">connection_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">custom_user_search_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">edit_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">full_sync_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">import_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">kerberos</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserFederationKerberosArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">pagination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">rdn_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">read_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">search_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">sync_registrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">use_truststore_spi</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">user_object_classes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">username_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">users_dn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">uuid_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">validate_password_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">vendor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UserFederation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserFederationArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserFederation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserFederationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserFederation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserFederation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserFederationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserFederation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserFederation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserFederationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserFederation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserFederationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -265,22 +300,32 @@ const ldapUserFederation = new keycloak.ldap.UserFederation("ldapUserFederation"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserFederationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -289,7 +334,7 @@ const ldapUserFederation = new keycloak.ldap.UserFederation("ldapUserFederation"
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -313,7 +358,7 @@ const ldapUserFederation = new keycloak.ldap.UserFederation("ldapUserFederation"
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -461,16 +506,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#userfederationcache">User<wbr>Federation<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block containing the cache settings.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="cachepolicy_csharp">
-<a href="#cachepolicy_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use cache.policy instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changedsyncperiod_csharp">
 <a href="#changedsyncperiod_csharp" style="color: inherit; text-decoration: inherit;">Changed<wbr>Sync<wbr>Period</a>
@@ -598,6 +634,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustemail_csharp">
+<a href="#trustemail_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetruststorespi_csharp">
@@ -728,16 +773,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#userfederationcache">User<wbr>Federation<wbr>Cache</a></span>
     </dt>
     <dd>{{% md %}}A block containing the cache settings.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="cachepolicy_go">
-<a href="#cachepolicy_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use cache.policy instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changedsyncperiod_go">
 <a href="#changedsyncperiod_go" style="color: inherit; text-decoration: inherit;">Changed<wbr>Sync<wbr>Period</a>
@@ -867,6 +903,15 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="trustemail_go">
+<a href="#trustemail_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="usetruststorespi_go">
 <a href="#usetruststorespi_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Truststore<wbr>Spi</a>
 </span>
@@ -902,7 +947,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
 {{% /md %}}</dd><dt class="property-required"
@@ -911,7 +956,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rdnldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">rdn<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd><dt class="property-required"
@@ -920,7 +965,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd><dt class="property-required"
@@ -929,7 +974,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#userobjectclasses_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.
 {{% /md %}}</dd><dt class="property-required"
@@ -938,7 +983,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#usernameldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
 {{% /md %}}</dd><dt class="property-required"
@@ -947,7 +992,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#usersdn_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Full DN of LDAP tree where your users are.
 {{% /md %}}</dd><dt class="property-required"
@@ -956,7 +1001,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#uuidldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">uuid<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -965,7 +1010,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#batchsizeforsync_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>For<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of users to sync within a single transaction. Defaults to `1000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -974,7 +1019,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#bindcredential_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password of LDAP admin. This attribute must be set if `bind_dn` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -983,7 +1028,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#binddn_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if `bind_credential` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,25 +1037,16 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederationcache">User<wbr>Federation<wbr>Cache</a></span>
+        <span class="property-type"><a href="#userfederationcache">pulumi.<wbr>Input<User<wbr>Federation<wbr>Cache<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A block containing the cache settings.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="cachepolicy_nodejs">
-<a href="#cachepolicy_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use cache.policy instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changedsyncperiod_nodejs">
 <a href="#changedsyncperiod_nodejs" style="color: inherit; text-decoration: inherit;">changed<wbr>Sync<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +1055,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connectiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP connection timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1028,7 +1064,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customusersearchfilter_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>User<wbr>Search<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with `(` and end with `)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1037,7 +1073,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#editmode_nodejs" style="color: inherit; text-decoration: inherit;">edit<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user data to be imported but not synced back to LDAP. Defaults to `READ_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1082,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1091,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#fullsyncperiod_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Sync<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1100,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#importenabled_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, LDAP users will be imported into the Keycloak database. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1073,7 +1109,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kerberos_nodejs" style="color: inherit; text-decoration: inherit;">kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos</a></span>
+        <span class="property-type"><a href="#userfederationkerberos">pulumi.<wbr>Input<User<wbr>Federation<wbr>Kerberos<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A block containing the kerberos settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1082,7 +1118,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of the provider when displayed in the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1127,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#pagination_nodejs" style="color: inherit; text-decoration: inherit;">pagination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1136,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1145,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#readtimeout_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1118,7 +1154,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#searchscope_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `ONE_LEVEL` or `SUBTREE`:
 - `ONE_LEVEL`: Only search for users in the DN specified by `user_dn`.
@@ -1129,16 +1165,25 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#syncregistrations_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustemail_nodejs">
+<a href="#trustemail_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+    </dt>
+    <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetruststorespi_nodejs">
 <a href="#usetruststorespi_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Truststore<wbr>Spi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1192,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#validatepasswordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1201,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vendor_nodejs" style="color: inherit; text-decoration: inherit;">vendor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `OTHER`, `EDIRECTORY`, `AD`, `RHDS`, or `TIVOLI`. When this is selected in the GUI, it provides reasonable defaults for other fields. When used with the Keycloak API, this attribute does nothing, but is still required. Defaults to `OTHER`.
 {{% /md %}}</dd></dl>
@@ -1169,7 +1214,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
 {{% /md %}}</dd><dt class="property-required"
@@ -1178,7 +1223,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rdn_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">rdn_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd><dt class="property-required"
@@ -1187,7 +1232,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd><dt class="property-required"
@@ -1196,7 +1241,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#user_object_classes_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.
 {{% /md %}}</dd><dt class="property-required"
@@ -1205,7 +1250,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#username_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">username_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
 {{% /md %}}</dd><dt class="property-required"
@@ -1214,7 +1259,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#users_dn_python" style="color: inherit; text-decoration: inherit;">users_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Full DN of LDAP tree where your users are.
 {{% /md %}}</dd><dt class="property-required"
@@ -1223,7 +1268,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#uuid_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">uuid_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1277,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#batch_size_for_sync_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>for_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of users to sync within a single transaction. Defaults to `1000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1286,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#bind_credential_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password of LDAP admin. This attribute must be set if `bind_dn` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1295,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#bind_dn_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if `bind_credential` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,25 +1304,16 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederationcache">User<wbr>Federation<wbr>Cache<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfederationcache">Input[User<wbr>Federation<wbr>Cache<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block containing the cache settings.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="cache_policy_python">
-<a href="#cache_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use cache.policy instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changed_sync_period_python">
 <a href="#changed_sync_period_python" style="color: inherit; text-decoration: inherit;">changed_<wbr>sync_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1322,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connection_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP connection timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1295,7 +1331,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#custom_user_search_filter_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>user_<wbr>search_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with `(` and end with `)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1340,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#edit_mode_python" style="color: inherit; text-decoration: inherit;">edit_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user data to be imported but not synced back to LDAP. Defaults to `READ_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1349,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1358,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#full_sync_period_python" style="color: inherit; text-decoration: inherit;">full_<wbr>sync_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1367,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#import_enabled_python" style="color: inherit; text-decoration: inherit;">import_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, LDAP users will be imported into the Keycloak database. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1340,7 +1376,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kerberos_python" style="color: inherit; text-decoration: inherit;">kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfederationkerberos">Input[User<wbr>Federation<wbr>Kerberos<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block containing the kerberos settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1385,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of the provider when displayed in the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1358,7 +1394,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#pagination_python" style="color: inherit; text-decoration: inherit;">pagination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1367,7 +1403,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1412,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#read_timeout_python" style="color: inherit; text-decoration: inherit;">read_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1421,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#search_scope_python" style="color: inherit; text-decoration: inherit;">search_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `ONE_LEVEL` or `SUBTREE`:
 - `ONE_LEVEL`: Only search for users in the DN specified by `user_dn`.
@@ -1396,16 +1432,25 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sync_registrations_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trust_email_python">
+<a href="#trust_email_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+    </dt>
+    <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_truststore_spi_python">
 <a href="#use_truststore_spi_python" style="color: inherit; text-decoration: inherit;">use_<wbr>truststore_<wbr>spi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1459,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#validate_password_policy_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1468,7 @@ The UserFederation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vendor_python" style="color: inherit; text-decoration: inherit;">vendor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `OTHER`, `EDIRECTORY`, `AD`, `RHDS`, or `TIVOLI`. When this is selected in the GUI, it provides reasonable defaults for other fields. When used with the Keycloak API, this attribute does nothing, but is still required. Defaults to `OTHER`.
 {{% /md %}}</dd></dl>
@@ -1492,20 +1537,51 @@ Get an existing UserFederation resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserFederationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserFederation</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserFederationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserFederation</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">batch_size_for_sync</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">bind_credential</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bind_dn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[UserFederationCacheArgs]</span> = None<span class="p">, </span><span class="nx">cache_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">changed_sync_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_user_search_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edit_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_sync_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">import_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos</span><span class="p">:</span> <span class="nx">Optional[UserFederationKerberosArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pagination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rdn_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_registrations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_truststore_spi</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_object_classes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users_dn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uuid_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">validate_password_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vendor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserFederation</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">batch_size_for_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">bind_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bind_dn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserFederationCacheArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">changed_sync_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">connection_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">connection_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_user_search_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">edit_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">full_sync_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">import_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">kerberos</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserFederationKerberosArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pagination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">rdn_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">read_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">search_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sync_registrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">use_truststore_spi</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_object_classes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">username_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">users_dn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">uuid_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">validate_password_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">vendor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> UserFederation</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserFederation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserFederationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserFederation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserFederation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserFederationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserFederation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserFederation</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserFederationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserFederation</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserFederationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1644,16 +1720,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userfederationcache">User<wbr>Federation<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block containing the cache settings.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_cachepolicy_csharp">
-<a href="#state_cachepolicy_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use cache.policy instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_changedsyncperiod_csharp">
 <a href="#state_changedsyncperiod_csharp" style="color: inherit; text-decoration: inherit;">Changed<wbr>Sync<wbr>Period</a>
@@ -1810,6 +1877,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_trustemail_csharp">
+<a href="#state_trustemail_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_usetruststorespi_csharp">
 <a href="#state_usetruststorespi_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Truststore<wbr>Spi</a>
 </span>
@@ -1911,16 +1987,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userfederationcache">User<wbr>Federation<wbr>Cache</a></span>
     </dt>
     <dd>{{% md %}}A block containing the cache settings.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_cachepolicy_go">
-<a href="#state_cachepolicy_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use cache.policy instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_changedsyncperiod_go">
 <a href="#state_changedsyncperiod_go" style="color: inherit; text-decoration: inherit;">Changed<wbr>Sync<wbr>Period</a>
@@ -2077,6 +2144,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_trustemail_go">
+<a href="#state_trustemail_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_usetruststorespi_go">
 <a href="#state_usetruststorespi_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Truststore<wbr>Spi</a>
 </span>
@@ -2148,7 +2224,7 @@ The following state arguments are supported:
 <a href="#state_batchsizeforsync_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>For<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of users to sync within a single transaction. Defaults to `1000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2157,7 +2233,7 @@ The following state arguments are supported:
 <a href="#state_bindcredential_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password of LDAP admin. This attribute must be set if `bind_dn` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2242,7 @@ The following state arguments are supported:
 <a href="#state_binddn_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if `bind_credential` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2175,25 +2251,16 @@ The following state arguments are supported:
 <a href="#state_cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederationcache">User<wbr>Federation<wbr>Cache</a></span>
+        <span class="property-type"><a href="#userfederationcache">pulumi.<wbr>Input<User<wbr>Federation<wbr>Cache<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A block containing the cache settings.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_cachepolicy_nodejs">
-<a href="#state_cachepolicy_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use cache.policy instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_changedsyncperiod_nodejs">
 <a href="#state_changedsyncperiod_nodejs" style="color: inherit; text-decoration: inherit;">changed<wbr>Sync<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2202,7 +2269,7 @@ The following state arguments are supported:
 <a href="#state_connectiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP connection timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2211,7 +2278,7 @@ The following state arguments are supported:
 <a href="#state_connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2220,7 +2287,7 @@ The following state arguments are supported:
 <a href="#state_customusersearchfilter_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>User<wbr>Search<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with `(` and end with `)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2296,7 @@ The following state arguments are supported:
 <a href="#state_editmode_nodejs" style="color: inherit; text-decoration: inherit;">edit<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user data to be imported but not synced back to LDAP. Defaults to `READ_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2238,7 +2305,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2314,7 @@ The following state arguments are supported:
 <a href="#state_fullsyncperiod_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Sync<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2256,7 +2323,7 @@ The following state arguments are supported:
 <a href="#state_importenabled_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, LDAP users will be imported into the Keycloak database. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2265,7 +2332,7 @@ The following state arguments are supported:
 <a href="#state_kerberos_nodejs" style="color: inherit; text-decoration: inherit;">kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos</a></span>
+        <span class="property-type"><a href="#userfederationkerberos">pulumi.<wbr>Input<User<wbr>Federation<wbr>Kerberos<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A block containing the kerberos settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2274,7 +2341,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of the provider when displayed in the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2283,7 +2350,7 @@ The following state arguments are supported:
 <a href="#state_pagination_nodejs" style="color: inherit; text-decoration: inherit;">pagination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2292,7 +2359,7 @@ The following state arguments are supported:
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2368,7 @@ The following state arguments are supported:
 <a href="#state_rdnldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">rdn<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2310,7 +2377,7 @@ The following state arguments are supported:
 <a href="#state_readtimeout_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2319,7 +2386,7 @@ The following state arguments are supported:
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2328,7 +2395,7 @@ The following state arguments are supported:
 <a href="#state_searchscope_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `ONE_LEVEL` or `SUBTREE`:
 - `ONE_LEVEL`: Only search for users in the DN specified by `user_dn`.
@@ -2339,16 +2406,25 @@ The following state arguments are supported:
 <a href="#state_syncregistrations_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trustemail_nodejs">
+<a href="#state_trustemail_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+    </dt>
+    <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetruststorespi_nodejs">
 <a href="#state_usetruststorespi_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Truststore<wbr>Spi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2357,7 +2433,7 @@ The following state arguments are supported:
 <a href="#state_userobjectclasses_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2366,7 +2442,7 @@ The following state arguments are supported:
 <a href="#state_usernameldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2451,7 @@ The following state arguments are supported:
 <a href="#state_usersdn_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Full DN of LDAP tree where your users are.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2460,7 @@ The following state arguments are supported:
 <a href="#state_uuidldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">uuid<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2393,7 +2469,7 @@ The following state arguments are supported:
 <a href="#state_validatepasswordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2478,7 @@ The following state arguments are supported:
 <a href="#state_vendor_nodejs" style="color: inherit; text-decoration: inherit;">vendor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `OTHER`, `EDIRECTORY`, `AD`, `RHDS`, or `TIVOLI`. When this is selected in the GUI, it provides reasonable defaults for other fields. When used with the Keycloak API, this attribute does nothing, but is still required. Defaults to `OTHER`.
 {{% /md %}}</dd></dl>
@@ -2415,7 +2491,7 @@ The following state arguments are supported:
 <a href="#state_batch_size_for_sync_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>for_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of users to sync within a single transaction. Defaults to `1000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2424,7 +2500,7 @@ The following state arguments are supported:
 <a href="#state_bind_credential_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password of LDAP admin. This attribute must be set if `bind_dn` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2433,7 +2509,7 @@ The following state arguments are supported:
 <a href="#state_bind_dn_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server. This attribute must be set if `bind_credential` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2442,25 +2518,16 @@ The following state arguments are supported:
 <a href="#state_cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederationcache">User<wbr>Federation<wbr>Cache<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfederationcache">Input[User<wbr>Federation<wbr>Cache<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block containing the cache settings.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_cache_policy_python">
-<a href="#state_cache_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}**Deprecated** Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use cache.policy instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_changed_sync_period_python">
 <a href="#state_changed_sync_period_python" style="color: inherit; text-decoration: inherit;">changed_<wbr>sync_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2469,7 +2536,7 @@ The following state arguments are supported:
 <a href="#state_connection_timeout_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP connection timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2478,7 +2545,7 @@ The following state arguments are supported:
 <a href="#state_connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2487,7 +2554,7 @@ The following state arguments are supported:
 <a href="#state_custom_user_search_filter_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>user_<wbr>search_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with `(` and end with `)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2496,7 +2563,7 @@ The following state arguments are supported:
 <a href="#state_edit_mode_python" style="color: inherit; text-decoration: inherit;">edit_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `WRITABLE`, or `UNSYNCED`. `UNSYNCED` allows user data to be imported but not synced back to LDAP. Defaults to `READ_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2505,7 +2572,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `false`, this provider will not be used when performing queries for users. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2514,7 +2581,7 @@ The following state arguments are supported:
 <a href="#state_full_sync_period_python" style="color: inherit; text-decoration: inherit;">full_<wbr>sync_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2523,7 +2590,7 @@ The following state arguments are supported:
 <a href="#state_import_enabled_python" style="color: inherit; text-decoration: inherit;">import_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, LDAP users will be imported into the Keycloak database. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2532,7 +2599,7 @@ The following state arguments are supported:
 <a href="#state_kerberos_python" style="color: inherit; text-decoration: inherit;">kerberos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfederationkerberos">User<wbr>Federation<wbr>Kerberos<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfederationkerberos">Input[User<wbr>Federation<wbr>Kerberos<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block containing the kerberos settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2608,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of the provider when displayed in the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2617,7 @@ The following state arguments are supported:
 <a href="#state_pagination_python" style="color: inherit; text-decoration: inherit;">pagination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2626,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2635,7 @@ The following state arguments are supported:
 <a href="#state_rdn_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">rdn_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2577,7 +2644,7 @@ The following state arguments are supported:
 <a href="#state_read_timeout_python" style="color: inherit; text-decoration: inherit;">read_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP read timeout in the format of a [Go duration string](https://golang.org/pkg/time/#Duration.String).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2586,7 +2653,7 @@ The following state arguments are supported:
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm that this provider will provide user federation for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2595,7 +2662,7 @@ The following state arguments are supported:
 <a href="#state_search_scope_python" style="color: inherit; text-decoration: inherit;">search_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `ONE_LEVEL` or `SUBTREE`:
 - `ONE_LEVEL`: Only search for users in the DN specified by `user_dn`.
@@ -2606,16 +2673,25 @@ The following state arguments are supported:
 <a href="#state_sync_registrations_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, newly created users will be synced back to LDAP. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_trust_email_python">
+<a href="#state_trust_email_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+    </dt>
+    <dd>{{% md %}}If enabled, email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_truststore_spi_python">
 <a href="#state_use_truststore_spi_python" style="color: inherit; text-decoration: inherit;">use_<wbr>truststore_<wbr>spi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `ALWAYS`, `ONLY_FOR_LDAPS`, or `NEVER`:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2624,7 +2700,7 @@ The following state arguments are supported:
 <a href="#state_user_object_classes_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of all values of LDAP objectClass attribute for users in LDAP. Must contain at least one.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2633,7 +2709,7 @@ The following state arguments are supported:
 <a href="#state_username_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">username_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2642,7 +2718,7 @@ The following state arguments are supported:
 <a href="#state_users_dn_python" style="color: inherit; text-decoration: inherit;">users_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Full DN of LDAP tree where your users are.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2651,7 +2727,7 @@ The following state arguments are supported:
 <a href="#state_uuid_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">uuid_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2660,7 +2736,7 @@ The following state arguments are supported:
 <a href="#state_validate_password_policy_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2669,7 +2745,7 @@ The following state arguments are supported:
 <a href="#state_vendor_python" style="color: inherit; text-decoration: inherit;">vendor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `OTHER`, `EDIRECTORY`, `AD`, `RHDS`, or `TIVOLI`. When this is selected in the GUI, it provides reasonable defaults for other fields. When used with the Keycloak API, this attribute does nothing, but is still required. Defaults to `OTHER`.
 {{% /md %}}</dd></dl>
@@ -2789,7 +2865,7 @@ The following state arguments are supported:
 <a href="#evictionday_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minute of day the entry will become invalid on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2874,7 @@ The following state arguments are supported:
 <a href="#evictionhour_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Hour of day the entry will become invalid on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2807,7 +2883,7 @@ The following state arguments are supported:
 <a href="#evictionminute_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Minute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2815,7 +2891,7 @@ The following state arguments are supported:
 <a href="#maxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Max lifespan of cache entry (duration string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2824,7 +2900,7 @@ The following state arguments are supported:
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
 {{% /md %}}</dd></dl>
@@ -2837,7 +2913,7 @@ The following state arguments are supported:
 <a href="#eviction_day_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minute of day the entry will become invalid on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2846,7 +2922,7 @@ The following state arguments are supported:
 <a href="#eviction_hour_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Hour of day the entry will become invalid on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2855,7 +2931,7 @@ The following state arguments are supported:
 <a href="#eviction_minute_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>minute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2863,7 +2939,7 @@ The following state arguments are supported:
 <a href="#max_lifespan_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Max lifespan of cache entry (duration string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2872,7 +2948,7 @@ The following state arguments are supported:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
 {{% /md %}}</dd></dl>
@@ -2967,7 +3043,7 @@ The following state arguments are supported:
 <a href="#kerberosrealm_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the kerberos realm, e.g. FOO.LOCAL.
 {{% /md %}}</dd><dt class="property-required"
@@ -2976,7 +3052,7 @@ The following state arguments are supported:
 <a href="#keytab_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Tab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to the kerberos keytab file on the server with credentials of the service principal.
 {{% /md %}}</dd><dt class="property-required"
@@ -2985,7 +3061,7 @@ The following state arguments are supported:
 <a href="#serverprincipal_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kerberos server principal, e.g. 'HTTP/host.foo.com@FOO.LOCAL'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2994,7 +3070,7 @@ The following state arguments are supported:
 <a href="#usekerberosforpasswordauthentication_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Kerberos<wbr>For<wbr>Password<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use kerberos login module instead of ldap service api. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3007,7 +3083,7 @@ The following state arguments are supported:
 <a href="#kerberos_realm_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the kerberos realm, e.g. FOO.LOCAL.
 {{% /md %}}</dd><dt class="property-required"
@@ -3016,7 +3092,7 @@ The following state arguments are supported:
 <a href="#key_tab_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to the kerberos keytab file on the server with credentials of the service principal.
 {{% /md %}}</dd><dt class="property-required"
@@ -3025,7 +3101,7 @@ The following state arguments are supported:
 <a href="#server_principal_python" style="color: inherit; text-decoration: inherit;">server_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kerberos server principal, e.g. 'HTTP/host.foo.com@FOO.LOCAL'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3034,7 +3110,7 @@ The following state arguments are supported:
 <a href="#use_kerberos_for_password_authentication_python" style="color: inherit; text-decoration: inherit;">use_<wbr>kerberos_<wbr>for_<wbr>password_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use kerberos login module instead of ldap service api. Defaults to `false`.
 {{% /md %}}</dd></dl>

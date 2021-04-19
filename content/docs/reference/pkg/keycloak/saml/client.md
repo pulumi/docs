@@ -130,19 +130,55 @@ const samlClient = new keycloak.saml.Client("samlClient", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Client</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Client</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClientArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Client</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assertion_consumer_post_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assertion_consumer_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_signature_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encrypt_assertions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_name_id_format</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_post_binding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">front_channel_logout</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idp_initiated_sso_relay_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idp_initiated_sso_url_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_authn_statement</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logout_service_post_binding_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logout_service_redirect_binding_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_saml_processing_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_id_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sign_assertions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sign_documents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Client</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">assertion_consumer_post_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">assertion_consumer_redirect_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClientAuthenticationFlowBindingOverridesArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">client_signature_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">encrypt_assertions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">encryption_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">force_name_id_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">force_post_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">front_channel_logout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">idp_initiated_sso_relay_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">idp_initiated_sso_url_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">include_authn_statement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">logout_service_post_binding_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">logout_service_redirect_binding_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">master_saml_processing_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">name_id_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">sign_assertions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">sign_documents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">signing_private_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Client</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClientArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClient</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Client</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClient</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClientArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Client</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Client</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClientArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Client</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClientArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -177,22 +213,32 @@ const samlClient = new keycloak.saml.Client("samlClient", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClientArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -201,7 +247,7 @@ const samlClient = new keycloak.saml.Client("samlClient", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -225,7 +271,7 @@ const samlClient = new keycloak.saml.Client("samlClient", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -828,7 +874,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique ID of this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd><dt class="property-required"
@@ -837,7 +883,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +892,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#assertionconsumerposturl_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Consumer<wbr>Post<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML POST Binding URL for the client's assertion consumer service (login responses).
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +901,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#assertionconsumerredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Consumer<wbr>Redirect<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML Redirect Binding URL for the client's assertion consumer service (login responses).
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +910,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authenticationflowbindingoverrides_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
+        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">pulumi.<wbr>Input<Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +919,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +928,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#clientsignaturerequired_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Signature<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +937,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -900,7 +946,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When false, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +955,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryptassertions_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +964,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryptioncertificate_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,7 +973,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#forcenameidformat_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +982,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#forcepostbinding_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Post<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -945,7 +991,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#frontchannellogout_nodejs" style="color: inherit; text-decoration: inherit;">front<wbr>Channel<wbr>Logout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -954,7 +1000,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#fullscopeallowed_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Scope<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}- Allow to include all roles mappings in the access token
 {{% /md %}}</dd><dt class="property-optional"
@@ -963,7 +1009,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#idpinitiatedssorelaystate_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Initiated<wbr>Sso<wbr>Relay<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Relay state you want to send with SAML request when you want to do IDP Initiated SSO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +1018,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#idpinitiatedssourlname_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Initiated<wbr>Sso<wbr>Url<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL fragment name to reference client when you want to do IDP Initiated SSO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -981,7 +1027,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#includeauthnstatement_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Authn<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -990,7 +1036,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logoutservicepostbindingurl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Service<wbr>Post<wbr>Binding<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML POST Binding URL for the client's single logout service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +1045,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logoutserviceredirectbindingurl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Service<wbr>Redirect<wbr>Binding<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML Redirect Binding URL for the client's single logout service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1054,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#mastersamlprocessingurl_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Saml<wbr>Processing<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When specified, this URL will be used for all SAML requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1063,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1072,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#nameidformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the Name ID format for the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1081,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#rooturl_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When specified, this value is prepended to all relative URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1044,7 +1090,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#signassertions_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1053,7 +1099,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#signdocuments_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1108,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1117,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this certificate will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1126,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#signingprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this private key will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1135,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#validredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Redirect<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.
 {{% /md %}}</dd></dl>
@@ -1102,7 +1148,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique ID of this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd><dt class="property-required"
@@ -1111,7 +1157,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1166,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#assertion_consumer_post_url_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>consumer_<wbr>post_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML POST Binding URL for the client's assertion consumer service (login responses).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1129,7 +1175,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#assertion_consumer_redirect_url_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>consumer_<wbr>redirect_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML Redirect Binding URL for the client's assertion consumer service (login responses).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1184,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authentication_flow_binding_overrides_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>flow_<wbr>binding_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Input[Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1193,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1202,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#client_signature_required_python" style="color: inherit; text-decoration: inherit;">client_<wbr>signature_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1211,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1220,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When false, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1229,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encrypt_assertions_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1192,7 +1238,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryption_certificate_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1201,7 +1247,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#force_name_id_format_python" style="color: inherit; text-decoration: inherit;">force_<wbr>name_<wbr>id_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1210,7 +1256,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#force_post_binding_python" style="color: inherit; text-decoration: inherit;">force_<wbr>post_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1219,7 +1265,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#front_channel_logout_python" style="color: inherit; text-decoration: inherit;">front_<wbr>channel_<wbr>logout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1228,7 +1274,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#full_scope_allowed_python" style="color: inherit; text-decoration: inherit;">full_<wbr>scope_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}- Allow to include all roles mappings in the access token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1237,7 +1283,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#idp_initiated_sso_relay_state_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>initiated_<wbr>sso_<wbr>relay_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Relay state you want to send with SAML request when you want to do IDP Initiated SSO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1246,7 +1292,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#idp_initiated_sso_url_name_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>initiated_<wbr>sso_<wbr>url_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL fragment name to reference client when you want to do IDP Initiated SSO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1255,7 +1301,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#include_authn_statement_python" style="color: inherit; text-decoration: inherit;">include_<wbr>authn_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1264,7 +1310,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logout_service_post_binding_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>service_<wbr>post_<wbr>binding_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML POST Binding URL for the client's single logout service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1319,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logout_service_redirect_binding_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>service_<wbr>redirect_<wbr>binding_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML Redirect Binding URL for the client's single logout service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1282,7 +1328,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#master_saml_processing_url_python" style="color: inherit; text-decoration: inherit;">master_<wbr>saml_<wbr>processing_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When specified, this URL will be used for all SAML requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1291,7 +1337,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1300,7 +1346,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_id_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>id_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the Name ID format for the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1309,7 +1355,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#root_url_python" style="color: inherit; text-decoration: inherit;">root_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When specified, this value is prepended to all relative URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1364,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sign_assertions_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1327,7 +1373,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sign_documents_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1336,7 +1382,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1391,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this certificate will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1400,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#signing_private_key_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this private key will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1409,7 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#valid_redirect_uris_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>redirect_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.
 {{% /md %}}</dd></dl>
@@ -1432,20 +1478,52 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClientState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Client</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClientState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Client</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assertion_consumer_post_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assertion_consumer_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[ClientAuthenticationFlowBindingOverridesArgs]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_signature_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encrypt_assertions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_name_id_format</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_post_binding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">front_channel_logout</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idp_initiated_sso_relay_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">idp_initiated_sso_url_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_authn_statement</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logout_service_post_binding_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logout_service_redirect_binding_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_saml_processing_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_id_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sign_assertions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sign_documents</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signing_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Client</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">assertion_consumer_post_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">assertion_consumer_redirect_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">authentication_flow_binding_overrides</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClientAuthenticationFlowBindingOverridesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_signature_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">encrypt_assertions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">encryption_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">force_name_id_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">force_post_binding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">front_channel_logout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">full_scope_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">idp_initiated_sso_relay_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">idp_initiated_sso_url_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">include_authn_statement</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">logout_service_post_binding_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">logout_service_redirect_binding_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">master_saml_processing_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name_id_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sign_assertions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">sign_documents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">signing_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">signing_private_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Client</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClientState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Client</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClientState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Client</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Client</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClientState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Client</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClientState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2102,7 +2180,7 @@ The following state arguments are supported:
 <a href="#state_assertionconsumerposturl_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Consumer<wbr>Post<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML POST Binding URL for the client's assertion consumer service (login responses).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2111,7 +2189,7 @@ The following state arguments are supported:
 <a href="#state_assertionconsumerredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Consumer<wbr>Redirect<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML Redirect Binding URL for the client's assertion consumer service (login responses).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2120,7 +2198,7 @@ The following state arguments are supported:
 <a href="#state_authenticationflowbindingoverrides_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
+        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">pulumi.<wbr>Input<Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2207,7 @@ The following state arguments are supported:
 <a href="#state_baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2216,7 @@ The following state arguments are supported:
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique ID of this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2225,7 @@ The following state arguments are supported:
 <a href="#state_clientsignaturerequired_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Signature<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2156,7 +2234,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2165,7 +2243,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When false, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2174,7 +2252,7 @@ The following state arguments are supported:
 <a href="#state_encryptassertions_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2183,7 +2261,7 @@ The following state arguments are supported:
 <a href="#state_encryptioncertificate_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2192,7 +2270,7 @@ The following state arguments are supported:
 <a href="#state_forcenameidformat_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2279,7 @@ The following state arguments are supported:
 <a href="#state_forcepostbinding_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Post<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2288,7 @@ The following state arguments are supported:
 <a href="#state_frontchannellogout_nodejs" style="color: inherit; text-decoration: inherit;">front<wbr>Channel<wbr>Logout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2297,7 @@ The following state arguments are supported:
 <a href="#state_fullscopeallowed_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Scope<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}- Allow to include all roles mappings in the access token
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2306,7 @@ The following state arguments are supported:
 <a href="#state_idpinitiatedssorelaystate_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Initiated<wbr>Sso<wbr>Relay<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Relay state you want to send with SAML request when you want to do IDP Initiated SSO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2315,7 @@ The following state arguments are supported:
 <a href="#state_idpinitiatedssourlname_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Initiated<wbr>Sso<wbr>Url<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL fragment name to reference client when you want to do IDP Initiated SSO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2246,7 +2324,7 @@ The following state arguments are supported:
 <a href="#state_includeauthnstatement_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Authn<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2255,7 +2333,7 @@ The following state arguments are supported:
 <a href="#state_logoutservicepostbindingurl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Service<wbr>Post<wbr>Binding<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML POST Binding URL for the client's single logout service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2264,7 +2342,7 @@ The following state arguments are supported:
 <a href="#state_logoutserviceredirectbindingurl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Service<wbr>Redirect<wbr>Binding<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SAML Redirect Binding URL for the client's single logout service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2273,7 +2351,7 @@ The following state arguments are supported:
 <a href="#state_mastersamlprocessingurl_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Saml<wbr>Processing<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When specified, this URL will be used for all SAML requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2282,7 +2360,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2291,7 +2369,7 @@ The following state arguments are supported:
 <a href="#state_nameidformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Id<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the Name ID format for the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2300,7 +2378,7 @@ The following state arguments are supported:
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2309,7 +2387,7 @@ The following state arguments are supported:
 <a href="#state_rooturl_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When specified, this value is prepended to all relative URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2318,7 +2396,7 @@ The following state arguments are supported:
 <a href="#state_signassertions_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2327,7 +2405,7 @@ The following state arguments are supported:
 <a href="#state_signdocuments_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2414,7 @@ The following state arguments are supported:
 <a href="#state_signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2423,7 @@ The following state arguments are supported:
 <a href="#state_signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this certificate will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2354,7 +2432,7 @@ The following state arguments are supported:
 <a href="#state_signingprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this private key will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2363,7 +2441,7 @@ The following state arguments are supported:
 <a href="#state_validredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Redirect<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.
 {{% /md %}}</dd></dl>
@@ -2376,7 +2454,7 @@ The following state arguments are supported:
 <a href="#state_assertion_consumer_post_url_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>consumer_<wbr>post_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML POST Binding URL for the client's assertion consumer service (login responses).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2385,7 +2463,7 @@ The following state arguments are supported:
 <a href="#state_assertion_consumer_redirect_url_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>consumer_<wbr>redirect_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML Redirect Binding URL for the client's assertion consumer service (login responses).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2394,7 +2472,7 @@ The following state arguments are supported:
 <a href="#state_authentication_flow_binding_overrides_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>flow_<wbr>binding_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientauthenticationflowbindingoverrides">Input[Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Override realm authentication flow bindings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2403,7 +2481,7 @@ The following state arguments are supported:
 <a href="#state_base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When specified, this URL will be used whenever Keycloak needs to link to this client.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2412,7 +2490,7 @@ The following state arguments are supported:
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique ID of this client, referenced in the URI during authentication and in issued tokens.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2421,7 +2499,7 @@ The following state arguments are supported:
 <a href="#state_client_signature_required_python" style="color: inherit; text-decoration: inherit;">client_<wbr>signature_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via `signing_certificate` and `signing_private_key`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2430,7 +2508,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of this client in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2439,7 +2517,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When false, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2526,7 @@ The following state arguments are supported:
 <a href="#state_encrypt_assertions_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML assertions will be encrypted by Keycloak using the client's public key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2535,7 @@ The following state arguments are supported:
 <a href="#state_encryption_certificate_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If assertions for the client are encrypted, this certificate will be used for encryption.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2544,7 @@ The following state arguments are supported:
 <a href="#state_force_name_id_format_python" style="color: inherit; text-decoration: inherit;">force_<wbr>name_<wbr>id_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Ignore requested NameID subject format and use the one defined in `name_id_format` instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2553,7 @@ The following state arguments are supported:
 <a href="#state_force_post_binding_python" style="color: inherit; text-decoration: inherit;">force_<wbr>post_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will always respond to an authentication request via the SAML POST Binding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2562,7 @@ The following state arguments are supported:
 <a href="#state_front_channel_logout_python" style="color: inherit; text-decoration: inherit;">front_<wbr>channel_<wbr>logout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, this client will require a browser redirect in order to perform a logout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2571,7 @@ The following state arguments are supported:
 <a href="#state_full_scope_allowed_python" style="color: inherit; text-decoration: inherit;">full_<wbr>scope_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}- Allow to include all roles mappings in the access token
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2580,7 @@ The following state arguments are supported:
 <a href="#state_idp_initiated_sso_relay_state_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>initiated_<wbr>sso_<wbr>relay_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Relay state you want to send with SAML request when you want to do IDP Initiated SSO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2511,7 +2589,7 @@ The following state arguments are supported:
 <a href="#state_idp_initiated_sso_url_name_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>initiated_<wbr>sso_<wbr>url_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL fragment name to reference client when you want to do IDP Initiated SSO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2520,7 +2598,7 @@ The following state arguments are supported:
 <a href="#state_include_authn_statement_python" style="color: inherit; text-decoration: inherit;">include_<wbr>authn_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, an `AuthnStatement` will be included in the SAML response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2529,7 +2607,7 @@ The following state arguments are supported:
 <a href="#state_logout_service_post_binding_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>service_<wbr>post_<wbr>binding_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML POST Binding URL for the client's single logout service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2538,7 +2616,7 @@ The following state arguments are supported:
 <a href="#state_logout_service_redirect_binding_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>service_<wbr>redirect_<wbr>binding_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SAML Redirect Binding URL for the client's single logout service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2547,7 +2625,7 @@ The following state arguments are supported:
 <a href="#state_master_saml_processing_url_python" style="color: inherit; text-decoration: inherit;">master_<wbr>saml_<wbr>processing_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When specified, this URL will be used for all SAML requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2556,7 +2634,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of this client in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2565,7 +2643,7 @@ The following state arguments are supported:
 <a href="#state_name_id_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>id_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the Name ID format for the subject.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2574,7 +2652,7 @@ The following state arguments are supported:
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm this client is attached to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2583,7 +2661,7 @@ The following state arguments are supported:
 <a href="#state_root_url_python" style="color: inherit; text-decoration: inherit;">root_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When specified, this value is prepended to all relative URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2592,7 +2670,7 @@ The following state arguments are supported:
 <a href="#state_sign_assertions_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>assertions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2601,7 +2679,7 @@ The following state arguments are supported:
 <a href="#state_sign_documents_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, the SAML document will be signed by Keycloak using the realm's private key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2610,7 +2688,7 @@ The following state arguments are supported:
 <a href="#state_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to sign documents. Should be one of "RSA_SHA1", "RSA_SHA256", "RSA_SHA512", or "DSA_SHA1".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2619,7 +2697,7 @@ The following state arguments are supported:
 <a href="#state_signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this certificate will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2628,7 +2706,7 @@ The following state arguments are supported:
 <a href="#state_signing_private_key_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If documents or assertions from the client are signed, this private key will be used to verify the signature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2637,7 +2715,7 @@ The following state arguments are supported:
 <a href="#state_valid_redirect_uris_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>redirect_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.
 {{% /md %}}</dd></dl>
@@ -2705,7 +2783,7 @@ The following state arguments are supported:
 <a href="#browserid_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Browser flow id, (flow needs to exist)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2714,7 +2792,7 @@ The following state arguments are supported:
 <a href="#directgrantid_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Grant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Direct grant flow id (flow needs to exist)
 {{% /md %}}</dd></dl>
@@ -2727,7 +2805,7 @@ The following state arguments are supported:
 <a href="#browser_id_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Browser flow id, (flow needs to exist)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2736,7 +2814,7 @@ The following state arguments are supported:
 <a href="#direct_grant_id_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>grant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Direct grant flow id (flow needs to exist)
 {{% /md %}}</dd></dl>

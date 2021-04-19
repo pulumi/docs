@@ -122,8 +122,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -348,19 +348,75 @@ const realm = new keycloak.Realm("realm", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Realm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RealmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Realm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RealmArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Realm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_code_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_code_lifespan_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_code_lifespan_user_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token_lifespan_for_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">action_token_generated_by_admin_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">action_token_generated_by_user_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">browser_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_default_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_optional_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_grant_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duplicate_emails_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">edit_username_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">email_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internationalization</span><span class="p">:</span> <span class="nx">Optional[RealmInternationalizationArgs]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_with_email_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_session_max_lifespan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_token_max_reuse</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">registration_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">registration_email_as_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">registration_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remember_me</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reset_credentials_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reset_password_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">revoke_refresh_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[RealmSecurityDefensesArgs]</span> = None<span class="p">, </span><span class="nx">smtp_server</span><span class="p">:</span> <span class="nx">Optional[RealmSmtpServerArgs]</span> = None<span class="p">, </span><span class="nx">ssl_required</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_idle_timeout_remember_me</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_max_lifespan_remember_me</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_managed_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[RealmWebAuthnPasswordlessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[RealmWebAuthnPolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Realm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">access_code_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">access_code_lifespan_login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">access_code_lifespan_user_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">access_token_lifespan_for_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">account_theme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">action_token_generated_by_admin_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">action_token_generated_by_user_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">admin_theme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+          <span class="nx">browser_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">client_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">default_default_client_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+          <span class="nx">default_optional_client_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+          <span class="nx">default_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">direct_grant_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">docker_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">duplicate_emails_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">edit_username_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">email_theme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">internationalization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmInternationalizationArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">login_with_email_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">offline_session_max_lifespan_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">refresh_token_max_reuse</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+          <span class="nx">registration_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">registration_email_as_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">registration_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">remember_me</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">reset_credentials_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">reset_password_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">revoke_refresh_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmSecurityDefensesArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">smtp_server</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmSmtpServerArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">ssl_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">sso_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">sso_session_idle_timeout_remember_me</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">sso_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">sso_session_max_lifespan_remember_me</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">user_managed_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmWebAuthnPasswordlessPolicyArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmWebAuthnPolicyArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Realm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RealmArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRealm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RealmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Realm</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRealm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RealmArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Realm</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Realm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RealmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Realm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RealmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -395,22 +451,32 @@ const realm = new keycloak.Realm("realm", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RealmArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -419,7 +485,7 @@ const realm = new keycloak.Realm("realm", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -443,7 +509,7 @@ const realm = new keycloak.Realm("realm", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1392,7 +1458,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1467,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accesscodelifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1476,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accesscodelifespanlogin_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1485,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accesscodelifespanuseraction_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan<wbr>User<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1494,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accesstokenlifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1503,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accesstokenlifespanforimplicitflow_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan<wbr>For<wbr>Implicit<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1512,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#accounttheme_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1521,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#actiontokengeneratedbyadminlifespan_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Token<wbr>Generated<wbr>By<wbr>Admin<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1530,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#actiontokengeneratedbyuserlifespan_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Token<wbr>Generated<wbr>By<wbr>User<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1539,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#admintheme_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1482,7 +1548,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1491,7 +1557,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#browserflow_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1500,7 +1566,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#clientauthenticationflow_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1509,7 +1575,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#defaultdefaultclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Default<wbr>Client<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1583,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#defaultoptionalclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Optional<wbr>Client<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1591,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#defaultsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1534,7 +1600,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directgrantflow_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Grant<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1543,7 +1609,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1618,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#displaynamehtml_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1627,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dockerauthenticationflow_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Authentication<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1570,7 +1636,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#duplicateemailsallowed_nodejs" style="color: inherit; text-decoration: inherit;">duplicate<wbr>Emails<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1579,7 +1645,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#editusernameallowed_nodejs" style="color: inherit; text-decoration: inherit;">edit<wbr>Username<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,7 +1654,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#emailtheme_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1597,7 +1663,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1606,7 +1672,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#internationalization_nodejs" style="color: inherit; text-decoration: inherit;">internationalization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization</a></span>
+        <span class="property-type"><a href="#realminternationalization">pulumi<wbr>Input<Realm<wbr>Internationalization<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1680,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1689,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#loginwithemailallowed_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>With<wbr>Email<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1698,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#offlinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1707,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#offlinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1650,7 +1716,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#offlinesessionmaxlifespanenabled_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1659,7 +1725,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1734,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#refreshtokenmaxreuse_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Max<wbr>Reuse</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1743,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#registrationallowed_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1752,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#registrationemailasusername_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Email<wbr>As<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1761,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#registrationflow_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1770,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#rememberme_nodejs" style="color: inherit; text-decoration: inherit;">remember<wbr>Me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1779,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resetcredentialsflow_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Credentials<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1788,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resetpasswordallowed_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Password<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1797,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#revokerefreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">revoke<wbr>Refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1806,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#securitydefenses_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Defenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses</a></span>
+        <span class="property-type"><a href="#realmsecuritydefenses">pulumi<wbr>Input<Realm<wbr>Security<wbr>Defenses<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1748,7 +1814,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server</a></span>
+        <span class="property-type"><a href="#realmsmtpserver">pulumi<wbr>Input<Realm<wbr>Smtp<wbr>Server<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1822,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sslrequired_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1831,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ssosessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1840,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ssosessionidletimeoutrememberme_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Idle<wbr>Timeout<wbr>Remember<wbr>Me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1782,7 +1848,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ssosessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Max<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1791,7 +1857,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ssosessionmaxlifespanrememberme_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Remember<wbr>Me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1799,7 +1865,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#usermanagedaccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1874,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#verifyemail_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1883,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#webauthnpasswordlesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a></span>
+        <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">pulumi<wbr>Input<Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1892,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#webauthnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Authn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy</a></span>
+        <span class="property-type"><a href="#realmwebauthnpolicy">pulumi<wbr>Input<Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
 {{% /md %}}</dd></dl>
@@ -1839,7 +1905,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1848,7 +1914,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#access_code_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1923,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#access_code_lifespan_login_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1932,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#access_code_lifespan_user_action_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan_<wbr>user_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1941,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#access_token_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1950,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#access_token_lifespan_for_implicit_flow_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan_<wbr>for_<wbr>implicit_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1959,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#account_theme_python" style="color: inherit; text-decoration: inherit;">account_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1902,7 +1968,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#action_token_generated_by_admin_lifespan_python" style="color: inherit; text-decoration: inherit;">action_<wbr>token_<wbr>generated_<wbr>by_<wbr>admin_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1911,7 +1977,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#action_token_generated_by_user_lifespan_python" style="color: inherit; text-decoration: inherit;">action_<wbr>token_<wbr>generated_<wbr>by_<wbr>user_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1920,7 +1986,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#admin_theme_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1929,7 +1995,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1938,7 +2004,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#browser_flow_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1947,7 +2013,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#client_authentication_flow_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1956,7 +2022,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#default_default_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>default_<wbr>client_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1964,7 +2030,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#default_optional_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>optional_<wbr>client_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1972,7 +2038,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#default_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">default_<wbr>signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1981,7 +2047,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#direct_grant_flow_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>grant_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1990,7 +2056,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1999,7 +2065,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#display_name_html_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2008,7 +2074,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#docker_authentication_flow_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>authentication_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2017,7 +2083,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#duplicate_emails_allowed_python" style="color: inherit; text-decoration: inherit;">duplicate_<wbr>emails_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2026,7 +2092,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#edit_username_allowed_python" style="color: inherit; text-decoration: inherit;">edit_<wbr>username_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2035,7 +2101,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#email_theme_python" style="color: inherit; text-decoration: inherit;">email_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2044,7 +2110,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2053,7 +2119,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#internationalization_python" style="color: inherit; text-decoration: inherit;">internationalization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization<wbr>Args</a></span>
+        <span class="property-type"><a href="#realminternationalization">Input[Realm<wbr>Internationalization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2061,7 +2127,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2070,7 +2136,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#login_with_email_allowed_python" style="color: inherit; text-decoration: inherit;">login_<wbr>with_<wbr>email_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2145,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2154,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2097,7 +2163,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#offline_session_max_lifespan_enabled_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>max_<wbr>lifespan_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2106,7 +2172,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2115,7 +2181,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#refresh_token_max_reuse_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>max_<wbr>reuse</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2124,7 +2190,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#registration_allowed_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2133,7 +2199,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#registration_email_as_username_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>email_<wbr>as_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2142,7 +2208,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#registration_flow_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2151,7 +2217,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#remember_me_python" style="color: inherit; text-decoration: inherit;">remember_<wbr>me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2160,7 +2226,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#reset_credentials_flow_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>credentials_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2169,7 +2235,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#reset_password_allowed_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>password_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2178,7 +2244,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#revoke_refresh_token_python" style="color: inherit; text-decoration: inherit;">revoke_<wbr>refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2253,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#security_defenses_python" style="color: inherit; text-decoration: inherit;">security_<wbr>defenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmsecuritydefenses">Input[Realm<wbr>Security<wbr>Defenses<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2261,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmsmtpserver">Input[Realm<wbr>Smtp<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2269,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ssl_required_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
 {{% /md %}}</dd><dt class="property-optional"
@@ -2212,7 +2278,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sso_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2221,7 +2287,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sso_session_idle_timeout_remember_me_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>idle_<wbr>timeout_<wbr>remember_<wbr>me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2229,7 +2295,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sso_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>max_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2238,7 +2304,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sso_session_max_lifespan_remember_me_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>max_<wbr>lifespan_<wbr>remember_<wbr>me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2246,7 +2312,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#user_managed_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2255,7 +2321,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#verify_email_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2264,7 +2330,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#web_authn_passwordless_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>passwordless_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Input[Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2273,7 +2339,7 @@ The Realm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#web_authn_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmwebauthnpolicy">Input[Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
 {{% /md %}}</dd></dl>
@@ -2374,20 +2440,73 @@ Get an existing Realm resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RealmState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Realm</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RealmState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Realm</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_code_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_code_lifespan_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_code_lifespan_user_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_token_lifespan_for_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">action_token_generated_by_admin_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">action_token_generated_by_user_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">browser_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_default_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_optional_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direct_grant_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">docker_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duplicate_emails_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">edit_username_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">email_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">internal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internationalization</span><span class="p">:</span> <span class="nx">Optional[RealmInternationalizationArgs]</span> = None<span class="p">, </span><span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_with_email_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_session_max_lifespan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_token_max_reuse</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">registration_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">registration_email_as_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">registration_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remember_me</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reset_credentials_flow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reset_password_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">revoke_refresh_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[RealmSecurityDefensesArgs]</span> = None<span class="p">, </span><span class="nx">smtp_server</span><span class="p">:</span> <span class="nx">Optional[RealmSmtpServerArgs]</span> = None<span class="p">, </span><span class="nx">ssl_required</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_idle_timeout_remember_me</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_session_max_lifespan_remember_me</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_managed_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[RealmWebAuthnPasswordlessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[RealmWebAuthnPolicyArgs]</span> = None<span class="p">) -&gt;</span> Realm</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_code_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">access_code_lifespan_login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">access_code_lifespan_user_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">access_token_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">access_token_lifespan_for_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">account_theme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">action_token_generated_by_admin_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">action_token_generated_by_user_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">admin_theme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">browser_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_default_client_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">default_optional_client_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">default_signature_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">direct_grant_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">docker_authentication_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">duplicate_emails_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">edit_username_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">email_theme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">internal_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">internationalization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmInternationalizationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">login_theme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">login_with_email_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">offline_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">offline_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">offline_session_max_lifespan_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">refresh_token_max_reuse</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">registration_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">registration_email_as_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">registration_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">remember_me</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">reset_credentials_flow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">reset_password_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">revoke_refresh_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmSecurityDefensesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">smtp_server</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmSmtpServerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ssl_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_session_idle_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_session_idle_timeout_remember_me</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_session_max_lifespan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sso_session_max_lifespan_remember_me</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_managed_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">verify_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmWebAuthnPasswordlessPolicyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RealmWebAuthnPolicyArgs]]</span> = None<span class="p">) -&gt;</span> Realm</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRealm<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RealmState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Realm</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRealm<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RealmState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Realm</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Realm</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RealmState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Realm</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RealmState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3406,7 +3525,7 @@ The following state arguments are supported:
 <a href="#state_accesscodelifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3415,7 +3534,7 @@ The following state arguments are supported:
 <a href="#state_accesscodelifespanlogin_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3424,7 +3543,7 @@ The following state arguments are supported:
 <a href="#state_accesscodelifespanuseraction_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Code<wbr>Lifespan<wbr>User<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3433,7 +3552,7 @@ The following state arguments are supported:
 <a href="#state_accesstokenlifespan_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3442,7 +3561,7 @@ The following state arguments are supported:
 <a href="#state_accesstokenlifespanforimplicitflow_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifespan<wbr>For<wbr>Implicit<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3451,7 +3570,7 @@ The following state arguments are supported:
 <a href="#state_accounttheme_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3460,7 +3579,7 @@ The following state arguments are supported:
 <a href="#state_actiontokengeneratedbyadminlifespan_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Token<wbr>Generated<wbr>By<wbr>Admin<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3469,7 +3588,7 @@ The following state arguments are supported:
 <a href="#state_actiontokengeneratedbyuserlifespan_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Token<wbr>Generated<wbr>By<wbr>User<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3478,7 +3597,7 @@ The following state arguments are supported:
 <a href="#state_admintheme_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3487,7 +3606,7 @@ The following state arguments are supported:
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3496,7 +3615,7 @@ The following state arguments are supported:
 <a href="#state_browserflow_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3505,7 +3624,7 @@ The following state arguments are supported:
 <a href="#state_clientauthenticationflow_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3514,7 +3633,7 @@ The following state arguments are supported:
 <a href="#state_defaultdefaultclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Default<wbr>Client<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3522,7 +3641,7 @@ The following state arguments are supported:
 <a href="#state_defaultoptionalclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Optional<wbr>Client<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3530,7 +3649,7 @@ The following state arguments are supported:
 <a href="#state_defaultsignaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Signature<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3539,7 +3658,7 @@ The following state arguments are supported:
 <a href="#state_directgrantflow_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Grant<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3548,7 +3667,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3557,7 +3676,7 @@ The following state arguments are supported:
 <a href="#state_displaynamehtml_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3566,7 +3685,7 @@ The following state arguments are supported:
 <a href="#state_dockerauthenticationflow_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Authentication<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3575,7 +3694,7 @@ The following state arguments are supported:
 <a href="#state_duplicateemailsallowed_nodejs" style="color: inherit; text-decoration: inherit;">duplicate<wbr>Emails<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3584,7 +3703,7 @@ The following state arguments are supported:
 <a href="#state_editusernameallowed_nodejs" style="color: inherit; text-decoration: inherit;">edit<wbr>Username<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3593,7 +3712,7 @@ The following state arguments are supported:
 <a href="#state_emailtheme_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3602,7 +3721,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3611,7 +3730,7 @@ The following state arguments are supported:
 <a href="#state_internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3619,7 +3738,7 @@ The following state arguments are supported:
 <a href="#state_internationalization_nodejs" style="color: inherit; text-decoration: inherit;">internationalization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization</a></span>
+        <span class="property-type"><a href="#realminternationalization">pulumi<wbr>Input<Realm<wbr>Internationalization<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3627,7 +3746,7 @@ The following state arguments are supported:
 <a href="#state_logintheme_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3636,7 +3755,7 @@ The following state arguments are supported:
 <a href="#state_loginwithemailallowed_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>With<wbr>Email<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3645,7 +3764,7 @@ The following state arguments are supported:
 <a href="#state_offlinesessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3654,7 +3773,7 @@ The following state arguments are supported:
 <a href="#state_offlinesessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Max<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3663,7 +3782,7 @@ The following state arguments are supported:
 <a href="#state_offlinesessionmaxlifespanenabled_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3672,7 +3791,7 @@ The following state arguments are supported:
 <a href="#state_passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3681,7 +3800,7 @@ The following state arguments are supported:
 <a href="#state_realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3690,7 +3809,7 @@ The following state arguments are supported:
 <a href="#state_refreshtokenmaxreuse_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Max<wbr>Reuse</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3699,7 +3818,7 @@ The following state arguments are supported:
 <a href="#state_registrationallowed_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3708,7 +3827,7 @@ The following state arguments are supported:
 <a href="#state_registrationemailasusername_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Email<wbr>As<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3717,7 +3836,7 @@ The following state arguments are supported:
 <a href="#state_registrationflow_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3726,7 +3845,7 @@ The following state arguments are supported:
 <a href="#state_rememberme_nodejs" style="color: inherit; text-decoration: inherit;">remember<wbr>Me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3735,7 +3854,7 @@ The following state arguments are supported:
 <a href="#state_resetcredentialsflow_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Credentials<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3744,7 +3863,7 @@ The following state arguments are supported:
 <a href="#state_resetpasswordallowed_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Password<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3753,7 +3872,7 @@ The following state arguments are supported:
 <a href="#state_revokerefreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">revoke<wbr>Refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3762,7 +3881,7 @@ The following state arguments are supported:
 <a href="#state_securitydefenses_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Defenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses</a></span>
+        <span class="property-type"><a href="#realmsecuritydefenses">pulumi<wbr>Input<Realm<wbr>Security<wbr>Defenses<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3770,7 +3889,7 @@ The following state arguments are supported:
 <a href="#state_smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server</a></span>
+        <span class="property-type"><a href="#realmsmtpserver">pulumi<wbr>Input<Realm<wbr>Smtp<wbr>Server<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3778,7 +3897,7 @@ The following state arguments are supported:
 <a href="#state_sslrequired_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
 {{% /md %}}</dd><dt class="property-optional"
@@ -3787,7 +3906,7 @@ The following state arguments are supported:
 <a href="#state_ssosessionidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3796,7 +3915,7 @@ The following state arguments are supported:
 <a href="#state_ssosessionidletimeoutrememberme_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Idle<wbr>Timeout<wbr>Remember<wbr>Me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3804,7 +3923,7 @@ The following state arguments are supported:
 <a href="#state_ssosessionmaxlifespan_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Max<wbr>Lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3813,7 +3932,7 @@ The following state arguments are supported:
 <a href="#state_ssosessionmaxlifespanrememberme_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Session<wbr>Max<wbr>Lifespan<wbr>Remember<wbr>Me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3821,7 +3940,7 @@ The following state arguments are supported:
 <a href="#state_usermanagedaccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3830,7 +3949,7 @@ The following state arguments are supported:
 <a href="#state_verifyemail_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3839,7 +3958,7 @@ The following state arguments are supported:
 <a href="#state_webauthnpasswordlesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Authn<wbr>Passwordless<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</a></span>
+        <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">pulumi<wbr>Input<Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3848,7 +3967,7 @@ The following state arguments are supported:
 <a href="#state_webauthnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Authn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy</a></span>
+        <span class="property-type"><a href="#realmwebauthnpolicy">pulumi<wbr>Input<Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
 {{% /md %}}</dd></dl>
@@ -3861,7 +3980,7 @@ The following state arguments are supported:
 <a href="#state_access_code_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a client has to finish the authorization code flow.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3870,7 +3989,7 @@ The following state arguments are supported:
 <a href="#state_access_code_lifespan_login_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user is permitted to stay on the login page before the authentication process must be restarted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3879,7 +3998,7 @@ The following state arguments are supported:
 <a href="#state_access_code_lifespan_user_action_python" style="color: inherit; text-decoration: inherit;">access_<wbr>code_<wbr>lifespan_<wbr>user_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time a user has to complete login related actions, such as updating a password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3888,7 +4007,7 @@ The following state arguments are supported:
 <a href="#state_access_token_lifespan_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token can be used before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3897,7 +4016,7 @@ The following state arguments are supported:
 <a href="#state_access_token_lifespan_for_implicit_flow_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifespan_<wbr>for_<wbr>implicit_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time an access token issued with the OpenID Connect Implicit Flow can be used before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3906,7 +4025,7 @@ The following state arguments are supported:
 <a href="#state_account_theme_python" style="color: inherit; text-decoration: inherit;">account_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for account management pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3915,7 +4034,7 @@ The following state arguments are supported:
 <a href="#state_action_token_generated_by_admin_lifespan_python" style="color: inherit; text-decoration: inherit;">action_<wbr>token_<wbr>generated_<wbr>by_<wbr>admin_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use an admin-generated permit before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3924,7 +4043,7 @@ The following state arguments are supported:
 <a href="#state_action_token_generated_by_user_lifespan_python" style="color: inherit; text-decoration: inherit;">action_<wbr>token_<wbr>generated_<wbr>by_<wbr>user_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum time a user has to use a user-generated permit before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3933,7 +4052,7 @@ The following state arguments are supported:
 <a href="#state_admin_theme_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3942,7 +4061,7 @@ The following state arguments are supported:
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A map of custom attributes to add to the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3951,7 +4070,7 @@ The following state arguments are supported:
 <a href="#state_browser_flow_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for browser authentication. Defaults to `browser`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3960,7 +4079,7 @@ The following state arguments are supported:
 <a href="#state_client_authentication_flow_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for client authentication. Defaults to `clients`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3969,7 +4088,7 @@ The following state arguments are supported:
 <a href="#state_default_default_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>default_<wbr>client_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3977,7 +4096,7 @@ The following state arguments are supported:
 <a href="#state_default_optional_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>optional_<wbr>client_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3985,7 +4104,7 @@ The following state arguments are supported:
 <a href="#state_default_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">default_<wbr>signature_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default algorithm used to sign tokens for the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3994,7 +4113,7 @@ The following state arguments are supported:
 <a href="#state_direct_grant_flow_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>grant_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for direct access authentication. Defaults to `direct grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4003,7 +4122,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4012,7 +4131,7 @@ The following state arguments are supported:
 <a href="#state_display_name_html_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>html</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is rendered as HTML on the screen when logging in to the admin console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4021,7 +4140,7 @@ The following state arguments are supported:
 <a href="#state_docker_authentication_flow_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>authentication_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for Docker authentication. Defaults to `docker auth`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4030,7 +4149,7 @@ The following state arguments are supported:
 <a href="#state_duplicate_emails_allowed_python" style="color: inherit; text-decoration: inherit;">duplicate_<wbr>emails_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, multiple users will be allowed to have the same email address. This argument must be set to `false` if `login_with_email_allowed` is set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4039,7 +4158,7 @@ The following state arguments are supported:
 <a href="#state_edit_username_allowed_python" style="color: inherit; text-decoration: inherit;">edit_<wbr>username_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, the username field is editable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4048,7 +4167,7 @@ The following state arguments are supported:
 <a href="#state_email_theme_python" style="color: inherit; text-decoration: inherit;">email_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for emails that are sent by Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4057,7 +4176,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4066,7 +4185,7 @@ The following state arguments are supported:
 <a href="#state_internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4074,7 +4193,7 @@ The following state arguments are supported:
 <a href="#state_internationalization_python" style="color: inherit; text-decoration: inherit;">internationalization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realminternationalization">Realm<wbr>Internationalization<wbr>Args</a></span>
+        <span class="property-type"><a href="#realminternationalization">Input[Realm<wbr>Internationalization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4082,7 +4201,7 @@ The following state arguments are supported:
 <a href="#state_login_theme_python" style="color: inherit; text-decoration: inherit;">login_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for the login, forgot password, and registration pages.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4091,7 +4210,7 @@ The following state arguments are supported:
 <a href="#state_login_with_email_allowed_python" style="color: inherit; text-decoration: inherit;">login_<wbr>with_<wbr>email_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, users may log in with their email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4100,7 +4219,7 @@ The following state arguments are supported:
 <a href="#state_offline_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time an offline session can be idle before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4109,7 +4228,7 @@ The following state arguments are supported:
 <a href="#state_offline_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>max_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before an offline session expires regardless of activity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4118,7 +4237,7 @@ The following state arguments are supported:
 <a href="#state_offline_session_max_lifespan_enabled_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>session_<wbr>max_<wbr>lifespan_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable `offline_session_max_lifespan`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4127,7 +4246,7 @@ The following state arguments are supported:
 <a href="#state_password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password policy for users within the realm.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4136,7 +4255,7 @@ The following state arguments are supported:
 <a href="#state_realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak. This will also be used as the realm's internal ID within Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4145,7 +4264,7 @@ The following state arguments are supported:
 <a href="#state_refresh_token_max_reuse_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>max_<wbr>reuse</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of times a refresh token can be reused before they are revoked. If unspecified and 'revoke_refresh_token' is enabled the default value is 0 and refresh tokens can not be reused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4154,7 +4273,7 @@ The following state arguments are supported:
 <a href="#state_registration_allowed_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, user registration will be enabled, and a link for registration will be displayed on the login page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4163,7 +4282,7 @@ The following state arguments are supported:
 <a href="#state_registration_email_as_username_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>email_<wbr>as_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, the user's email will be used as their username during registration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4172,7 +4291,7 @@ The following state arguments are supported:
 <a href="#state_registration_flow_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow for user registration. Defaults to `registration`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4181,7 +4300,7 @@ The following state arguments are supported:
 <a href="#state_remember_me_python" style="color: inherit; text-decoration: inherit;">remember_<wbr>me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, a "remember me" checkbox will be displayed on the login page, and the user's session will not expire between browser restarts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4190,7 +4309,7 @@ The following state arguments are supported:
 <a href="#state_reset_credentials_flow_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>credentials_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired flow to use when a user attempts to reset their credentials. Defaults to `reset credentials`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4199,7 +4318,7 @@ The following state arguments are supported:
 <a href="#state_reset_password_allowed_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>password_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, a "forgot password" link will be displayed on the login page.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4208,7 +4327,7 @@ The following state arguments are supported:
 <a href="#state_revoke_refresh_token_python" style="color: inherit; text-decoration: inherit;">revoke_<wbr>refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If enabled a refresh token can only be used number of times specified in 'refresh_token_max_reuse' before they are revoked. If unspecified, refresh tokens can be reused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4217,7 +4336,7 @@ The following state arguments are supported:
 <a href="#state_security_defenses_python" style="color: inherit; text-decoration: inherit;">security_<wbr>defenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefenses">Realm<wbr>Security<wbr>Defenses<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmsecuritydefenses">Input[Realm<wbr>Security<wbr>Defenses<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4225,7 +4344,7 @@ The following state arguments are supported:
 <a href="#state_smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserver">Realm<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmsmtpserver">Input[Realm<wbr>Smtp<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4233,7 +4352,7 @@ The following state arguments are supported:
 <a href="#state_ssl_required_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of following values: 'none, 'external' or 'all'
 {{% /md %}}</dd><dt class="property-optional"
@@ -4242,7 +4361,7 @@ The following state arguments are supported:
 <a href="#state_sso_session_idle_timeout_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time a session can be idle before it expires.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4251,7 +4370,7 @@ The following state arguments are supported:
 <a href="#state_sso_session_idle_timeout_remember_me_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>idle_<wbr>timeout_<wbr>remember_<wbr>me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4259,7 +4378,7 @@ The following state arguments are supported:
 <a href="#state_sso_session_max_lifespan_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>max_<wbr>lifespan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time before a session expires regardless of activity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4268,7 +4387,7 @@ The following state arguments are supported:
 <a href="#state_sso_session_max_lifespan_remember_me_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>session_<wbr>max_<wbr>lifespan_<wbr>remember_<wbr>me</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4276,7 +4395,7 @@ The following state arguments are supported:
 <a href="#state_user_managed_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, users are allowed to manage their own resources. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4285,7 +4404,7 @@ The following state arguments are supported:
 <a href="#state_verify_email_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When true, users are required to verify their email address after registration and after email address changes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4294,7 +4413,7 @@ The following state arguments are supported:
 <a href="#state_web_authn_passwordless_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>passwordless_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmwebauthnpasswordlesspolicy">Input[Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Passwordless Policy authentication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4303,7 +4422,7 @@ The following state arguments are supported:
 <a href="#state_web_authn_policy_python" style="color: inherit; text-decoration: inherit;">web_<wbr>authn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmwebauthnpolicy">Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmwebauthnpolicy">Input[Realm<wbr>Web<wbr>Authn<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for WebAuthn Policy authentication.
 {{% /md %}}</dd></dl>
@@ -4371,7 +4490,7 @@ The following state arguments are supported:
 <a href="#defaultlocale_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The locale to use by default. This locale code must be present within the `supported_locales` list.
 {{% /md %}}</dd><dt class="property-required"
@@ -4380,7 +4499,7 @@ The following state arguments are supported:
 <a href="#supportedlocales_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Locales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) locale codes that the realm should support.
 {{% /md %}}</dd></dl>
@@ -4393,7 +4512,7 @@ The following state arguments are supported:
 <a href="#default_locale_python" style="color: inherit; text-decoration: inherit;">default_<wbr>locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The locale to use by default. This locale code must be present within the `supported_locales` list.
 {{% /md %}}</dd><dt class="property-required"
@@ -4402,7 +4521,7 @@ The following state arguments are supported:
 <a href="#supported_locales_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>locales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) locale codes that the realm should support.
 {{% /md %}}</dd></dl>
@@ -4457,7 +4576,7 @@ The following state arguments are supported:
 <a href="#bruteforcedetection_nodejs" style="color: inherit; text-decoration: inherit;">brute<wbr>Force<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection</a></span>
+        <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">pulumi<wbr>Input<Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4465,7 +4584,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefensesheaders">Realm<wbr>Security<wbr>Defenses<wbr>Headers</a></span>
+        <span class="property-type"><a href="#realmsecuritydefensesheaders">pulumi<wbr>Input<Realm<wbr>Security<wbr>Defenses<wbr>Headers<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4477,7 +4596,7 @@ The following state arguments are supported:
 <a href="#brute_force_detection_python" style="color: inherit; text-decoration: inherit;">brute_<wbr>force_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmsecuritydefensesbruteforcedetection">Input[Realm<wbr>Security<wbr>Defenses<wbr>Brute<wbr>Force<wbr>Detection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4485,7 +4604,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsecuritydefensesheaders">Realm<wbr>Security<wbr>Defenses<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmsecuritydefensesheaders">Input[Realm<wbr>Security<wbr>Defenses<wbr>Headers<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4633,7 +4752,7 @@ The following state arguments are supported:
 <a href="#failureresettimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Reset<wbr>Time<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When will failure count be reset?
 {{% /md %}}</dd><dt class="property-optional"
@@ -4642,7 +4761,7 @@ The following state arguments are supported:
 <a href="#maxfailurewaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failure<wbr>Wait<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4650,7 +4769,7 @@ The following state arguments are supported:
 <a href="#maxloginfailures_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Login<wbr>Failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many failures before wait is triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4659,7 +4778,7 @@ The following state arguments are supported:
 <a href="#minimumquickloginwaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Quick<wbr>Login<wbr>Wait<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long to wait after a quick login failure.
 - `max_failure_wait_seconds ` - (Optional) Max. time a user will be locked out.
@@ -4669,7 +4788,7 @@ The following state arguments are supported:
 <a href="#permanentlockout_nodejs" style="color: inherit; text-decoration: inherit;">permanent<wbr>Lockout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, this will lock the user permanently when the user exceeds the maximum login failures.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4678,7 +4797,7 @@ The following state arguments are supported:
 <a href="#quicklogincheckmilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">quick<wbr>Login<wbr>Check<wbr>Milli<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Configures the amount of time, in milliseconds, for consecutive failures to lock a user out.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4687,7 +4806,7 @@ The following state arguments are supported:
 <a href="#waitincrementseconds_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Increment<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}This represents the amount of time a user should be locked out when the login failure threshold has been met.
 {{% /md %}}</dd></dl>
@@ -4700,7 +4819,7 @@ The following state arguments are supported:
 <a href="#failure_reset_time_seconds_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reset_<wbr>time_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When will failure count be reset?
 {{% /md %}}</dd><dt class="property-optional"
@@ -4709,7 +4828,7 @@ The following state arguments are supported:
 <a href="#max_failure_wait_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failure_<wbr>wait_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4717,7 +4836,7 @@ The following state arguments are supported:
 <a href="#max_login_failures_python" style="color: inherit; text-decoration: inherit;">max_<wbr>login_<wbr>failures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many failures before wait is triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4726,7 +4845,7 @@ The following state arguments are supported:
 <a href="#minimum_quick_login_wait_seconds_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>quick_<wbr>login_<wbr>wait_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long to wait after a quick login failure.
 - `max_failure_wait_seconds ` - (Optional) Max. time a user will be locked out.
@@ -4736,7 +4855,7 @@ The following state arguments are supported:
 <a href="#permanent_lockout_python" style="color: inherit; text-decoration: inherit;">permanent_<wbr>lockout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, this will lock the user permanently when the user exceeds the maximum login failures.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4745,7 +4864,7 @@ The following state arguments are supported:
 <a href="#quick_login_check_milli_seconds_python" style="color: inherit; text-decoration: inherit;">quick_<wbr>login_<wbr>check_<wbr>milli_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Configures the amount of time, in milliseconds, for consecutive failures to lock a user out.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4754,7 +4873,7 @@ The following state arguments are supported:
 <a href="#wait_increment_seconds_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>increment_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}This represents the amount of time a user should be locked out when the login failure threshold has been met.
 {{% /md %}}</dd></dl>
@@ -4903,7 +5022,7 @@ The following state arguments are supported:
 <a href="#contentsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the Content Security Policy, which can be used for prevent pages from being included by non-origin iframes. More information can be found in the [W3C-CSP](https://www.w3.org/TR/CSP/) Abstract.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4912,7 +5031,7 @@ The following state arguments are supported:
 <a href="#contentsecuritypolicyreportonly_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Security<wbr>Policy<wbr>Report<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for testing Content Security Policies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4921,7 +5040,7 @@ The following state arguments are supported:
 <a href="#stricttransportsecurity_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Transport<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Script-Transport-Security HTTP header tells browsers to always use HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4930,7 +5049,7 @@ The following state arguments are supported:
 <a href="#xcontenttypeoptions_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Content<wbr>Type<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the X-Content-Type-Options, which can be used for prevent MIME-sniffing a response away from the declared content-type
 {{% /md %}}</dd><dt class="property-optional"
@@ -4939,7 +5058,7 @@ The following state arguments are supported:
 <a href="#xframeoptions_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Frame<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the x-frame-option, which can be used to prevent pages from being included by non-origin iframes. More information can be found in the [RFC7034](https://tools.ietf.org/html/rfc7034)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4948,7 +5067,7 @@ The following state arguments are supported:
 <a href="#xrobotstag_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Robots<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Prevent pages from appearing in search engines.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4957,7 +5076,7 @@ The following state arguments are supported:
 <a href="#xxssprotection_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Xss<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This header configures the Cross-site scripting (XSS) filter in your browser.
 {{% /md %}}</dd></dl>
@@ -4970,7 +5089,7 @@ The following state arguments are supported:
 <a href="#content_security_policy_python" style="color: inherit; text-decoration: inherit;">content_<wbr>security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the Content Security Policy, which can be used for prevent pages from being included by non-origin iframes. More information can be found in the [W3C-CSP](https://www.w3.org/TR/CSP/) Abstract.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4979,7 +5098,7 @@ The following state arguments are supported:
 <a href="#content_security_policy_report_only_python" style="color: inherit; text-decoration: inherit;">content_<wbr>security_<wbr>policy_<wbr>report_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for testing Content Security Policies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4988,7 +5107,7 @@ The following state arguments are supported:
 <a href="#strict_transport_security_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>transport_<wbr>security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Script-Transport-Security HTTP header tells browsers to always use HTTPS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4997,7 +5116,7 @@ The following state arguments are supported:
 <a href="#x_content_type_options_python" style="color: inherit; text-decoration: inherit;">x_<wbr>content_<wbr>type_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the X-Content-Type-Options, which can be used for prevent MIME-sniffing a response away from the declared content-type
 {{% /md %}}</dd><dt class="property-optional"
@@ -5006,7 +5125,7 @@ The following state arguments are supported:
 <a href="#x_frame_options_python" style="color: inherit; text-decoration: inherit;">x_<wbr>frame_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the x-frame-option, which can be used to prevent pages from being included by non-origin iframes. More information can be found in the [RFC7034](https://tools.ietf.org/html/rfc7034)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5015,7 +5134,7 @@ The following state arguments are supported:
 <a href="#x_robots_tag_python" style="color: inherit; text-decoration: inherit;">x_<wbr>robots_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Prevent pages from appearing in search engines.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5024,7 +5143,7 @@ The following state arguments are supported:
 <a href="#x_xss_protection_python" style="color: inherit; text-decoration: inherit;">x_<wbr>xss_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This header configures the Cross-site scripting (XSS) filter in your browser.
 {{% /md %}}</dd></dl>
@@ -5227,7 +5346,7 @@ The following state arguments are supported:
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address for the sender.
 {{% /md %}}</dd><dt class="property-required"
@@ -5236,7 +5355,7 @@ The following state arguments are supported:
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The host of the SMTP server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5245,7 +5364,7 @@ The following state arguments are supported:
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserverauth">Realm<wbr>Smtp<wbr>Server<wbr>Auth</a></span>
+        <span class="property-type"><a href="#realmsmtpserverauth">pulumi<wbr>Input<Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enables authentication to the SMTP server.  This block supports the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
@@ -5254,7 +5373,7 @@ The following state arguments are supported:
 <a href="#envelopefrom_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address uses for bounces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5263,7 +5382,7 @@ The following state arguments are supported:
 <a href="#fromdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of the sender email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5272,7 +5391,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The port of the SMTP server (defaults to 25).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5281,7 +5400,7 @@ The following state arguments are supported:
 <a href="#replyto_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "reply to" email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5290,7 +5409,7 @@ The following state arguments are supported:
 <a href="#replytodisplayname_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of the "reply to" email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5299,7 +5418,7 @@ The following state arguments are supported:
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, enables SSL. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5308,7 +5427,7 @@ The following state arguments are supported:
 <a href="#starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, enables StartTLS. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -5321,7 +5440,7 @@ The following state arguments are supported:
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address for the sender.
 {{% /md %}}</dd><dt class="property-required"
@@ -5330,7 +5449,7 @@ The following state arguments are supported:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The host of the SMTP server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5339,7 +5458,7 @@ The following state arguments are supported:
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#realmsmtpserverauth">Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#realmsmtpserverauth">Input[Realm<wbr>Smtp<wbr>Server<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enables authentication to the SMTP server.  This block supports the following arguments:
 {{% /md %}}</dd><dt class="property-optional"
@@ -5348,7 +5467,7 @@ The following state arguments are supported:
 <a href="#envelope_from_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address uses for bounces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5357,7 +5476,7 @@ The following state arguments are supported:
 <a href="#from_display_name_python" style="color: inherit; text-decoration: inherit;">from_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of the sender email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5366,7 +5485,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The port of the SMTP server (defaults to 25).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5375,7 +5494,7 @@ The following state arguments are supported:
 <a href="#reply_to_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "reply to" email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5384,7 +5503,7 @@ The following state arguments are supported:
 <a href="#reply_to_display_name_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of the "reply to" email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5393,7 +5512,7 @@ The following state arguments are supported:
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, enables SSL. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5402,7 +5521,7 @@ The following state arguments are supported:
 <a href="#starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, enables StartTLS. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -5461,7 +5580,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SMTP server password.
 {{% /md %}}</dd><dt class="property-required"
@@ -5470,7 +5589,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SMTP server username.
 {{% /md %}}</dd></dl>
@@ -5483,7 +5602,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SMTP server password.
 {{% /md %}}</dd><dt class="property-required"
@@ -5492,7 +5611,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SMTP server username.
 {{% /md %}}</dd></dl>
@@ -5695,7 +5814,7 @@ The following state arguments are supported:
 <a href="#acceptableaaguids_nodejs" style="color: inherit; text-decoration: inherit;">acceptable<wbr>Aaguids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5704,7 +5823,7 @@ The following state arguments are supported:
 <a href="#attestationconveyancepreference_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Conveyance<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5713,7 +5832,7 @@ The following state arguments are supported:
 <a href="#authenticatorattachment_nodejs" style="color: inherit; text-decoration: inherit;">authenticator<wbr>Attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5722,7 +5841,7 @@ The following state arguments are supported:
 <a href="#avoidsameauthenticatorregister_nodejs" style="color: inherit; text-decoration: inherit;">avoid<wbr>Same<wbr>Authenticator<wbr>Register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5731,7 +5850,7 @@ The following state arguments are supported:
 <a href="#createtimeout_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5740,7 +5859,7 @@ The following state arguments are supported:
 <a href="#relyingpartyentityname_nodejs" style="color: inherit; text-decoration: inherit;">relying<wbr>Party<wbr>Entity<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5749,7 +5868,7 @@ The following state arguments are supported:
 <a href="#relyingpartyid_nodejs" style="color: inherit; text-decoration: inherit;">relying<wbr>Party<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5758,7 +5877,7 @@ The following state arguments are supported:
 <a href="#requireresidentkey_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Resident<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5767,7 +5886,7 @@ The following state arguments are supported:
 <a href="#signaturealgorithms_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5776,7 +5895,7 @@ The following state arguments are supported:
 <a href="#userverificationrequirement_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Verification<wbr>Requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
 {{% /md %}}</dd></dl>
@@ -5789,7 +5908,7 @@ The following state arguments are supported:
 <a href="#acceptable_aaguids_python" style="color: inherit; text-decoration: inherit;">acceptable_<wbr>aaguids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5798,7 +5917,7 @@ The following state arguments are supported:
 <a href="#attestation_conveyance_preference_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>conveyance_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5807,7 +5926,7 @@ The following state arguments are supported:
 <a href="#authenticator_attachment_python" style="color: inherit; text-decoration: inherit;">authenticator_<wbr>attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5816,7 +5935,7 @@ The following state arguments are supported:
 <a href="#avoid_same_authenticator_register_python" style="color: inherit; text-decoration: inherit;">avoid_<wbr>same_<wbr>authenticator_<wbr>register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5825,7 +5944,7 @@ The following state arguments are supported:
 <a href="#create_timeout_python" style="color: inherit; text-decoration: inherit;">create_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5834,7 +5953,7 @@ The following state arguments are supported:
 <a href="#relying_party_entity_name_python" style="color: inherit; text-decoration: inherit;">relying_<wbr>party_<wbr>entity_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5843,7 +5962,7 @@ The following state arguments are supported:
 <a href="#relying_party_id_python" style="color: inherit; text-decoration: inherit;">relying_<wbr>party_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5852,7 +5971,7 @@ The following state arguments are supported:
 <a href="#require_resident_key_python" style="color: inherit; text-decoration: inherit;">require_<wbr>resident_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5861,7 +5980,7 @@ The following state arguments are supported:
 <a href="#signature_algorithms_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5870,7 +5989,7 @@ The following state arguments are supported:
 <a href="#user_verification_requirement_python" style="color: inherit; text-decoration: inherit;">user_<wbr>verification_<wbr>requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
 {{% /md %}}</dd></dl>
@@ -6073,7 +6192,7 @@ The following state arguments are supported:
 <a href="#acceptableaaguids_nodejs" style="color: inherit; text-decoration: inherit;">acceptable<wbr>Aaguids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6082,7 +6201,7 @@ The following state arguments are supported:
 <a href="#attestationconveyancepreference_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Conveyance<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6091,7 +6210,7 @@ The following state arguments are supported:
 <a href="#authenticatorattachment_nodejs" style="color: inherit; text-decoration: inherit;">authenticator<wbr>Attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6100,7 +6219,7 @@ The following state arguments are supported:
 <a href="#avoidsameauthenticatorregister_nodejs" style="color: inherit; text-decoration: inherit;">avoid<wbr>Same<wbr>Authenticator<wbr>Register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6109,7 +6228,7 @@ The following state arguments are supported:
 <a href="#createtimeout_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6118,7 +6237,7 @@ The following state arguments are supported:
 <a href="#relyingpartyentityname_nodejs" style="color: inherit; text-decoration: inherit;">relying<wbr>Party<wbr>Entity<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6127,7 +6246,7 @@ The following state arguments are supported:
 <a href="#relyingpartyid_nodejs" style="color: inherit; text-decoration: inherit;">relying<wbr>Party<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6136,7 +6255,7 @@ The following state arguments are supported:
 <a href="#requireresidentkey_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Resident<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6145,7 +6264,7 @@ The following state arguments are supported:
 <a href="#signaturealgorithms_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6154,7 +6273,7 @@ The following state arguments are supported:
 <a href="#userverificationrequirement_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Verification<wbr>Requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
 {{% /md %}}</dd></dl>
@@ -6167,7 +6286,7 @@ The following state arguments are supported:
 <a href="#acceptable_aaguids_python" style="color: inherit; text-decoration: inherit;">acceptable_<wbr>aaguids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of AAGUIDs for which an authenticator can be registered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6176,7 +6295,7 @@ The following state arguments are supported:
 <a href="#attestation_conveyance_preference_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>conveyance_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6185,7 +6304,7 @@ The following state arguments are supported:
 <a href="#authenticator_attachment_python" style="color: inherit; text-decoration: inherit;">authenticator_<wbr>attachment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6194,7 +6313,7 @@ The following state arguments are supported:
 <a href="#avoid_same_authenticator_register_python" style="color: inherit; text-decoration: inherit;">avoid_<wbr>same_<wbr>authenticator_<wbr>register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6203,7 +6322,7 @@ The following state arguments are supported:
 <a href="#create_timeout_python" style="color: inherit; text-decoration: inherit;">create_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6212,7 +6331,7 @@ The following state arguments are supported:
 <a href="#relying_party_entity_name_python" style="color: inherit; text-decoration: inherit;">relying_<wbr>party_<wbr>entity_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6221,7 +6340,7 @@ The following state arguments are supported:
 <a href="#relying_party_id_python" style="color: inherit; text-decoration: inherit;">relying_<wbr>party_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The WebAuthn relying party ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6230,7 +6349,7 @@ The following state arguments are supported:
 <a href="#require_resident_key_python" style="color: inherit; text-decoration: inherit;">require_<wbr>resident_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6239,7 +6358,7 @@ The following state arguments are supported:
 <a href="#signature_algorithms_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6248,7 +6367,7 @@ The following state arguments are supported:
 <a href="#user_verification_requirement_python" style="color: inherit; text-decoration: inherit;">user_<wbr>verification_<wbr>requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
 {{% /md %}}</dd></dl>

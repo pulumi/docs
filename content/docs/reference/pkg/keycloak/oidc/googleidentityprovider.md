@@ -66,9 +66,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak"
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/oidc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak/oidc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -166,19 +166,45 @@ const google = new keycloak.oidc.GoogleIdentityProvider("google", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GoogleIdentityProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GoogleIdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GoogleIdentityProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GoogleIdentityProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GoogleIdentityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accepts_prompt_none_forward_from_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">add_read_token_role_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">authenticate_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_scopes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_user_info</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hide_on_login_page</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosted_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_refresh_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">store_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_user_ip_param</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GoogleIdentityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">accepts_prompt_none_forward_from_client</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">add_read_token_role_on_create</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">authenticate_by_default</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">default_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">disable_user_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                           <span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">hide_on_login_page</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">hosted_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">link_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">post_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">request_refresh_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">store_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">use_user_ip_param</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GoogleIdentityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GoogleIdentityProviderArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGoogleIdentityProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GoogleIdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GoogleIdentityProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGoogleIdentityProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GoogleIdentityProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GoogleIdentityProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GoogleIdentityProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GoogleIdentityProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GoogleIdentityProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GoogleIdentityProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -213,22 +239,32 @@ const google = new keycloak.oidc.GoogleIdentityProvider("google", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GoogleIdentityProviderArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -237,7 +273,7 @@ const google = new keycloak.oidc.GoogleIdentityProvider("google", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -261,7 +297,7 @@ const google = new keycloak.oidc.GoogleIdentityProvider("google", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -682,7 +718,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
 {{% /md %}}</dd><dt class="property-required"
@@ -691,7 +727,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
 {{% /md %}}</dd><dt class="property-required"
@@ -700,7 +736,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -709,7 +745,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#acceptspromptnoneforwardfromclient_nodejs" style="color: inherit; text-decoration: inherit;">accepts<wbr>Prompt<wbr>None<wbr>Forward<wbr>From<wbr>Client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -718,7 +754,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#addreadtokenroleoncreate_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -727,7 +763,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#authenticatebydefault_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>By<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +772,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#defaultscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +781,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#disableuserinfo_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +790,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -763,7 +799,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -771,7 +807,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +816,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#hideonloginpage_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>On<wbr>Login<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +825,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#hosteddomain_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -798,7 +834,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#linkonly_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +843,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#postbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +852,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#providerid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +861,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#requestrefreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +870,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#storetoken_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +879,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#trustemail_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +888,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#useuseripparam_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>User<wbr>Ip<wbr>Param</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
 {{% /md %}}</dd></dl>
@@ -865,7 +901,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
 {{% /md %}}</dd><dt class="property-required"
@@ -874,7 +910,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
 {{% /md %}}</dd><dt class="property-required"
@@ -883,7 +919,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +928,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#accepts_prompt_none_forward_from_client_python" style="color: inherit; text-decoration: inherit;">accepts_<wbr>prompt_<wbr>none_<wbr>forward_<wbr>from_<wbr>client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +937,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#add_read_token_role_on_create_python" style="color: inherit; text-decoration: inherit;">add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +946,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#authenticate_by_default_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>by_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +955,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#default_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +964,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#disable_user_info_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>user_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +973,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +982,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +990,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -963,7 +999,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#hide_on_login_page_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>on_<wbr>login_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +1008,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#hosted_domain_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -981,7 +1017,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#link_only_python" style="color: inherit; text-decoration: inherit;">link_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -990,7 +1026,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#post_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">post_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +1035,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#provider_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1044,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#request_refresh_token_python" style="color: inherit; text-decoration: inherit;">request_<wbr>refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1053,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#store_token_python" style="color: inherit; text-decoration: inherit;">store_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1062,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#trust_email_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1071,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 <a href="#use_user_ip_param_python" style="color: inherit; text-decoration: inherit;">use_<wbr>user_<wbr>ip_<wbr>param</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
 {{% /md %}}</dd></dl>
@@ -1212,20 +1248,45 @@ Get an existing GoogleIdentityProvider resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GoogleIdentityProviderState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GoogleIdentityProvider</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GoogleIdentityProviderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GoogleIdentityProvider</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accepts_prompt_none_forward_from_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">add_read_token_role_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authenticate_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_scopes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_user_info</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hide_on_login_page</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosted_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_refresh_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">store_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_user_ip_param</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> GoogleIdentityProvider</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accepts_prompt_none_forward_from_client</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">add_read_token_role_on_create</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">authenticate_by_default</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disable_user_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">first_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">hide_on_login_page</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">hosted_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">internal_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">link_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">post_broker_login_flow_alias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">provider_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">request_refresh_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">store_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">trust_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">use_user_ip_param</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> GoogleIdentityProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGoogleIdentityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GoogleIdentityProviderState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GoogleIdentityProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGoogleIdentityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GoogleIdentityProviderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GoogleIdentityProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GoogleIdentityProvider</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GoogleIdentityProviderState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GoogleIdentityProvider</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GoogleIdentityProviderState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1754,7 +1815,7 @@ The following state arguments are supported:
 <a href="#state_acceptspromptnoneforwardfromclient_nodejs" style="color: inherit; text-decoration: inherit;">accepts<wbr>Prompt<wbr>None<wbr>Forward<wbr>From<wbr>Client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1824,7 @@ The following state arguments are supported:
 <a href="#state_addreadtokenroleoncreate_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1833,7 @@ The following state arguments are supported:
 <a href="#state_alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1842,7 @@ The following state arguments are supported:
 <a href="#state_authenticatebydefault_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>By<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1851,7 @@ The following state arguments are supported:
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1860,7 @@ The following state arguments are supported:
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1869,7 @@ The following state arguments are supported:
 <a href="#state_defaultscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1878,7 @@ The following state arguments are supported:
 <a href="#state_disableuserinfo_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1887,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1896,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1844,7 +1905,7 @@ The following state arguments are supported:
 <a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1852,7 +1913,7 @@ The following state arguments are supported:
 <a href="#state_firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1922,7 @@ The following state arguments are supported:
 <a href="#state_hideonloginpage_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>On<wbr>Login<wbr>Page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1931,7 @@ The following state arguments are supported:
 <a href="#state_hosteddomain_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1940,7 @@ The following state arguments are supported:
 <a href="#state_internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1949,7 @@ The following state arguments are supported:
 <a href="#state_linkonly_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1958,7 @@ The following state arguments are supported:
 <a href="#state_postbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1906,7 +1967,7 @@ The following state arguments are supported:
 <a href="#state_providerid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1976,7 @@ The following state arguments are supported:
 <a href="#state_realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1985,7 @@ The following state arguments are supported:
 <a href="#state_requestrefreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1994,7 @@ The following state arguments are supported:
 <a href="#state_storetoken_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1942,7 +2003,7 @@ The following state arguments are supported:
 <a href="#state_trustemail_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1951,7 +2012,7 @@ The following state arguments are supported:
 <a href="#state_useuseripparam_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>User<wbr>Ip<wbr>Param</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
 {{% /md %}}</dd></dl>
@@ -1964,7 +2025,7 @@ The following state arguments are supported:
 <a href="#state_accepts_prompt_none_forward_from_client_python" style="color: inherit; text-decoration: inherit;">accepts_<wbr>prompt_<wbr>none_<wbr>forward_<wbr>from_<wbr>client</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1973,7 +2034,7 @@ The following state arguments are supported:
 <a href="#state_add_read_token_role_on_create_python" style="color: inherit; text-decoration: inherit;">add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1982,7 +2043,7 @@ The following state arguments are supported:
 <a href="#state_alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1991,7 +2052,7 @@ The following state arguments are supported:
 <a href="#state_authenticate_by_default_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>by_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2000,7 +2061,7 @@ The following state arguments are supported:
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2009,7 +2070,7 @@ The following state arguments are supported:
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2018,7 +2079,7 @@ The following state arguments are supported:
 <a href="#state_default_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2027,7 +2088,7 @@ The following state arguments are supported:
 <a href="#state_disable_user_info_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>user_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2036,7 +2097,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2045,7 +2106,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2054,7 +2115,7 @@ The following state arguments are supported:
 <a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2062,7 +2123,7 @@ The following state arguments are supported:
 <a href="#state_first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2071,7 +2132,7 @@ The following state arguments are supported:
 <a href="#state_hide_on_login_page_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>on_<wbr>login_<wbr>page</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2080,7 +2141,7 @@ The following state arguments are supported:
 <a href="#state_hosted_domain_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2150,7 @@ The following state arguments are supported:
 <a href="#state_internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2098,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_link_only_python" style="color: inherit; text-decoration: inherit;">link_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2168,7 @@ The following state arguments are supported:
 <a href="#state_post_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">post_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2116,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_provider_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2125,7 +2186,7 @@ The following state arguments are supported:
 <a href="#state_realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2134,7 +2195,7 @@ The following state arguments are supported:
 <a href="#state_request_refresh_token_python" style="color: inherit; text-decoration: inherit;">request_<wbr>refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2143,7 +2204,7 @@ The following state arguments are supported:
 <a href="#state_store_token_python" style="color: inherit; text-decoration: inherit;">store_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2152,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_trust_email_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2161,7 +2222,7 @@ The following state arguments are supported:
 <a href="#state_use_user_ip_param_python" style="color: inherit; text-decoration: inherit;">use_<wbr>user_<wbr>ip_<wbr>param</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
 {{% /md %}}</dd></dl>

@@ -86,9 +86,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak"
-	"github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/ldap"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak"
+	"github.com/pulumi/pulumi-keycloak/sdk/v4/go/keycloak/ldap"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -235,19 +235,43 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMapper</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMapperArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMapper</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMapperArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GroupMapper</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drop_non_existing_groups_during_sync</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_name_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_object_classes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups_ldap_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ignore_missing_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ldap_groups_dn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ldap_user_federation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapped_group_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">memberof_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">membership_attribute_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">membership_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">membership_user_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preserve_group_inheritance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_roles_retrieve_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GroupMapper</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">drop_non_existing_groups_during_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">group_name_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">group_object_classes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">groups_ldap_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">groups_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">ignore_missing_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">ldap_groups_dn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">ldap_user_federation_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">mapped_group_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">memberof_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">membership_attribute_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">membership_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">membership_user_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">preserve_group_inheritance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">user_roles_retrieve_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GroupMapper</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMapperArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMapper</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMapperArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMapper</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMapper</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMapperArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMapper</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMapper</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GroupMapperArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMapper</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GroupMapperArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -282,22 +306,32 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GroupMapperArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +340,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -330,7 +364,7 @@ const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldapGroupMapper", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -717,7 +751,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#groupnameldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
 {{% /md %}}</dd><dt class="property-required"
@@ -726,7 +760,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#groupobjectclasses_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Object<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
 {{% /md %}}</dd><dt class="property-required"
@@ -735,7 +769,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ldapgroupsdn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Groups<wbr>Dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
 {{% /md %}}</dd><dt class="property-required"
@@ -744,7 +778,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ldapuserfederationid_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>User<wbr>Federation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
 {{% /md %}}</dd><dt class="property-required"
@@ -753,7 +787,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#membershipldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
 {{% /md %}}</dd><dt class="property-required"
@@ -762,7 +796,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#membershipuserldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>User<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
 {{% /md %}}</dd><dt class="property-required"
@@ -771,7 +805,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +814,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dropnonexistinggroupsduringsync_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Non<wbr>Existing<wbr>Groups<wbr>During<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +823,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#groupsldapfilter_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Ldap<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -798,7 +832,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#groupspath_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +841,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ignoremissinggroups_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +850,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mappedgroupattributes_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Group<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +859,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#memberofldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">memberof<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +868,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#membershipattributetype_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Attribute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +877,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +886,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +895,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#preservegroupinheritance_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Group<wbr>Inheritance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +904,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#userrolesretrievestrategy_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Roles<wbr>Retrieve<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
 {{% /md %}}</dd></dl>
@@ -883,7 +917,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#group_name_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
 {{% /md %}}</dd><dt class="property-required"
@@ -892,7 +926,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#group_object_classes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>object_<wbr>classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
 {{% /md %}}</dd><dt class="property-required"
@@ -901,7 +935,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ldap_groups_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>groups_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
 {{% /md %}}</dd><dt class="property-required"
@@ -910,7 +944,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ldap_user_federation_id_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>user_<wbr>federation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
 {{% /md %}}</dd><dt class="property-required"
@@ -919,7 +953,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#membership_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
 {{% /md %}}</dd><dt class="property-required"
@@ -928,7 +962,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#membership_user_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>user_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
 {{% /md %}}</dd><dt class="property-required"
@@ -937,7 +971,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +980,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#drop_non_existing_groups_during_sync_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>non_<wbr>existing_<wbr>groups_<wbr>during_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +989,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#groups_ldap_filter_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>ldap_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +998,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#groups_path_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +1007,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ignore_missing_groups_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +1016,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mapped_group_attributes_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>group_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +1025,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#memberof_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">memberof_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1000,7 +1034,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#membership_attribute_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>attribute_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +1043,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +1052,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +1061,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#preserve_group_inheritance_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>group_<wbr>inheritance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1070,7 @@ The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#user_roles_retrieve_strategy_python" style="color: inherit; text-decoration: inherit;">user_<wbr>roles_<wbr>retrieve_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
 {{% /md %}}</dd></dl>
@@ -1105,20 +1139,40 @@ Get an existing GroupMapper resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupMapperState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GroupMapper</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupMapperState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GroupMapper</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drop_non_existing_groups_during_sync</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_name_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_object_classes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups_ldap_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ignore_missing_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ldap_groups_dn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ldap_user_federation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapped_group_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">memberof_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">membership_attribute_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">membership_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">membership_user_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preserve_group_inheritance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_roles_retrieve_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GroupMapper</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">drop_non_existing_groups_during_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">group_name_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">group_object_classes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">groups_ldap_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groups_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_missing_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ldap_groups_dn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ldap_user_federation_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mapped_group_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">memberof_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">membership_attribute_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">membership_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">membership_user_ldap_attribute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">preserve_group_inheritance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_roles_retrieve_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> GroupMapper</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMapper<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GroupMapperState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMapper</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMapper<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GroupMapperState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMapper</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GroupMapper</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GroupMapperState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GroupMapper</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GroupMapperState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1559,7 +1613,7 @@ The following state arguments are supported:
 <a href="#state_dropnonexistinggroupsduringsync_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Non<wbr>Existing<wbr>Groups<wbr>During<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1568,7 +1622,7 @@ The following state arguments are supported:
 <a href="#state_groupnameldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1577,7 +1631,7 @@ The following state arguments are supported:
 <a href="#state_groupobjectclasses_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Object<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1586,7 +1640,7 @@ The following state arguments are supported:
 <a href="#state_groupsldapfilter_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Ldap<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1649,7 @@ The following state arguments are supported:
 <a href="#state_groupspath_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1658,7 @@ The following state arguments are supported:
 <a href="#state_ignoremissinggroups_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1667,7 @@ The following state arguments are supported:
 <a href="#state_ldapgroupsdn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Groups<wbr>Dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1676,7 @@ The following state arguments are supported:
 <a href="#state_ldapuserfederationid_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>User<wbr>Federation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1685,7 @@ The following state arguments are supported:
 <a href="#state_mappedgroupattributes_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Group<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1694,7 @@ The following state arguments are supported:
 <a href="#state_memberofldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">memberof<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_membershipattributetype_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Attribute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_membershipldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_membershipuserldapattribute_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>User<wbr>Ldap<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1730,7 @@ The following state arguments are supported:
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_preservegroupinheritance_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Group<wbr>Inheritance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1757,7 @@ The following state arguments are supported:
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1766,7 @@ The following state arguments are supported:
 <a href="#state_userrolesretrievestrategy_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Roles<wbr>Retrieve<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
 {{% /md %}}</dd></dl>
@@ -1725,7 +1779,7 @@ The following state arguments are supported:
 <a href="#state_drop_non_existing_groups_during_sync_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>non_<wbr>existing_<wbr>groups_<wbr>during_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1788,7 @@ The following state arguments are supported:
 <a href="#state_group_name_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used in group objects for the name and RDN of the group. Typically `cn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1797,7 @@ The following state arguments are supported:
 <a href="#state_group_object_classes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>object_<wbr>classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of strings representing the object classes for the group. Must contain at least one.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1806,7 @@ The following state arguments are supported:
 <a href="#state_groups_ldap_filter_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>ldap_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When specified, adds an additional custom filter to be used when querying for groups. Must start with `(` and end with `)`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1815,7 @@ The following state arguments are supported:
 <a href="#state_groups_path_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Keycloak group path the LDAP groups are added to. For example if value `/Applications/App1` is used, then LDAP groups will be available in Keycloak under group `App1`, which is the child of top level group `Applications`. The configured group path must already exist in Keycloak when creating this mapper.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1824,7 @@ The following state arguments are supported:
 <a href="#state_ignore_missing_groups_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, missing groups in the hierarchy will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1833,7 @@ The following state arguments are supported:
 <a href="#state_ldap_groups_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>groups_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The LDAP DN where groups can be found.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1842,7 @@ The following state arguments are supported:
 <a href="#state_ldap_user_federation_id_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>user_<wbr>federation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the LDAP user federation provider to attach this mapper to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1851,7 @@ The following state arguments are supported:
 <a href="#state_mapped_group_attributes_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>group_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1860,7 @@ The following state arguments are supported:
 <a href="#state_memberof_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">memberof_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the LDAP attribute on the LDAP user that contains the groups the user is a member of. Defaults to `memberOf`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1869,7 @@ The following state arguments are supported:
 <a href="#state_membership_attribute_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>attribute_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `DN` or `UID`. Defaults to `DN`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1878,7 @@ The following state arguments are supported:
 <a href="#state_membership_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute that is used for membership mappings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1887,7 @@ The following state arguments are supported:
 <a href="#state_membership_user_ldap_attribute_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>user_<wbr>ldap_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the LDAP attribute on a user that is used for membership mappings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1896,7 @@ The following state arguments are supported:
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `READ_ONLY`, `LDAP_ONLY` or `IMPORT`. Defaults to `READ_ONLY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1905,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of this mapper when displayed in the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1914,7 @@ The following state arguments are supported:
 <a href="#state_preserve_group_inheritance_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>group_<wbr>inheritance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When `true`, group inheritance will be propagated from LDAP to Keycloak. When `false`, all LDAP groups will be propagated as top level groups within Keycloak.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1923,7 @@ The following state arguments are supported:
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm that this LDAP mapper will exist in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1932,7 @@ The following state arguments are supported:
 <a href="#state_user_roles_retrieve_strategy_python" style="color: inherit; text-decoration: inherit;">user_<wbr>roles_<wbr>retrieve_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be one of `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`, `GET_GROUPS_FROM_USER_MEMBEROF_ATTRIBUTE`, or `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE_RECURSIVELY`. Defaults to `LOAD_GROUPS_BY_MEMBER_ATTRIBUTE`.
 {{% /md %}}</dd></dl>

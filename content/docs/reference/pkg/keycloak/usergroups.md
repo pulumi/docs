@@ -1,8 +1,8 @@
 
 ---
-title: "GroupMemberships"
-title_tag: "keycloak.GroupMemberships"
-meta_desc: "Documentation for the keycloak.GroupMemberships resource with examples, input properties, output properties, lookup functions, and supporting types."
+title: "UserGroups"
+title_tag: "keycloak.UserGroups"
+meta_desc: "Documentation for the keycloak.UserGroups resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,38 +12,39 @@ meta_desc: "Documentation for the keycloak.GroupMemberships resource with exampl
 
 ## Import
 
-This resource does not support import. Instead of importing, feel free to create this resource as if it did not already exist on the server. [1]/docs/resources/user_groups.html
+This resource does not support import. Instead of importing, feel free to create this resource as if it did not already exist on the server.
 
 
 
 
-## Create a GroupMemberships Resource {#create}
+## Create a UserGroups Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMemberships</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMembershipsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserGroups</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserGroupsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GroupMemberships</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class="k">def </span><span class="nx">UserGroups</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">exhaustive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GroupMemberships</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMembershipsArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">UserGroups</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserGroupsArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMemberships</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMembershipsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMemberships</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserGroups</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserGroupsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserGroups</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMemberships</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GroupMembershipsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserGroups</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -60,7 +61,7 @@ This resource does not support import. Instead of importing, feel free to create
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GroupMembershipsArgs</a></span>
+        <span class="property-type"><a href="#inputs">UserGroupsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -90,7 +91,7 @@ This resource does not support import. Instead of importing, feel free to create
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GroupMembershipsArgs</a></span>
+        <span class="property-type"><a href="#inputs">UserGroupsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -128,7 +129,7 @@ This resource does not support import. Instead of importing, feel free to create
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GroupMembershipsArgs</a></span>
+        <span class="property-type"><a href="#inputs">UserGroupsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -158,7 +159,7 @@ This resource does not support import. Instead of importing, feel free to create
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GroupMembershipsArgs</a></span>
+        <span class="property-type"><a href="#inputs">UserGroupsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -174,26 +175,26 @@ This resource does not support import. Instead of importing, feel free to create
 
 {{% /choosable %}}
 
-## GroupMemberships Resource Properties {#properties}
+## UserGroups Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GroupMemberships resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
+The UserGroups resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="members_csharp">
-<a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
+        <span id="groupids_csharp">
+<a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of usernames that belong to this group.
+    <dd>{{% md %}}A list of group IDs that the user is member of.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_csharp">
@@ -203,28 +204,37 @@ The GroupMemberships resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this group exists in.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="groupid_csharp">
-<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userid_csharp">
+<a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the group this resource should manage memberships for.
+    <dd>{{% md %}}The ID of the user this resource should manage groups for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exhaustive_csharp">
+<a href="#exhaustive_csharp" style="color: inherit; text-decoration: inherit;">Exhaustive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the list of the user's groups is exhaustive. In this case, groups that are manually added to the user will be removed. Defaults to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="members_go">
-<a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+        <span id="groupids_go">
+<a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of usernames that belong to this group.
+    <dd>{{% md %}}A list of group IDs that the user is member of.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_go">
@@ -234,28 +244,37 @@ The GroupMemberships resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this group exists in.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="groupid_go">
-<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userid_go">
+<a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the group this resource should manage memberships for.
+    <dd>{{% md %}}The ID of the user this resource should manage groups for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exhaustive_go">
+<a href="#exhaustive_go" style="color: inherit; text-decoration: inherit;">Exhaustive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the list of the user's groups is exhaustive. In this case, groups that are manually added to the user will be removed. Defaults to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="members_nodejs">
-<a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+        <span id="groupids_nodejs">
+<a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
-    <dd>{{% md %}}A list of usernames that belong to this group.
+    <dd>{{% md %}}A list of group IDs that the user is member of.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_nodejs">
@@ -265,28 +284,37 @@ The GroupMemberships resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm this group exists in.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="groupid_nodejs">
-<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userid_nodejs">
+<a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
-    <dd>{{% md %}}The ID of the group this resource should manage memberships for.
+    <dd>{{% md %}}The ID of the user this resource should manage groups for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exhaustive_nodejs">
+<a href="#exhaustive_nodejs" style="color: inherit; text-decoration: inherit;">exhaustive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+    </dt>
+    <dd>{{% md %}}Indicates if the list of the user's groups is exhaustive. In this case, groups that are manually added to the user will be removed. Defaults to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="members_python">
-<a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
+        <span id="group_ids_python">
+<a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Input[str]]]</span>
     </dt>
-    <dd>{{% md %}}A list of usernames that belong to this group.
+    <dd>{{% md %}}A list of group IDs that the user is member of.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_id_python">
@@ -296,22 +324,31 @@ The GroupMemberships resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm this group exists in.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="group_id_python">
-<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_id_python">
+<a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
-    <dd>{{% md %}}The ID of the group this resource should manage memberships for.
+    <dd>{{% md %}}The ID of the user this resource should manage groups for.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exhaustive_python">
+<a href="#exhaustive_python" style="color: inherit; text-decoration: inherit;">exhaustive</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+    </dt>
+    <dd>{{% md %}}Indicates if the list of the user's groups is exhaustive. In this case, groups that are manually added to the user will be removed. Defaults to `true`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the GroupMemberships resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the UserGroups resource produces the following output properties:
 
 
 
@@ -365,13 +402,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-## Look up an Existing GroupMemberships Resource {#look-up}
+## Look up an Existing UserGroups Resource {#look-up}
 
-Get an existing GroupMemberships resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+Get an existing UserGroups resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupMembershipsState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GroupMemberships</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserGroupsState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserGroups</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -379,17 +416,18 @@ Get an existing GroupMemberships resource's state with the given name, ID, and o
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> GroupMemberships</code></pre></div>
+        <span class="nx">exhaustive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> UserGroups</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMemberships<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GroupMembershipsState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMemberships</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserGroupsState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserGroups</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GroupMemberships</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GroupMembershipsState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserGroups</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserGroupsState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -494,22 +532,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_groupid_csharp">
-<a href="#state_groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+        <span id="state_exhaustive_csharp">
+<a href="#state_exhaustive_csharp" style="color: inherit; text-decoration: inherit;">Exhaustive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The ID of the group this resource should manage memberships for.
+    <dd>{{% md %}}Indicates if the list of the user's groups is exhaustive. In this case, groups that are manually added to the user will be removed. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_members_csharp">
-<a href="#state_members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
+        <span id="state_groupids_csharp">
+<a href="#state_groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of usernames that belong to this group.
+    <dd>{{% md %}}A list of group IDs that the user is member of.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_csharp">
@@ -519,28 +557,37 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this group exists in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_userid_csharp">
+<a href="#state_userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the user this resource should manage groups for.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_groupid_go">
-<a href="#state_groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+        <span id="state_exhaustive_go">
+<a href="#state_exhaustive_go" style="color: inherit; text-decoration: inherit;">Exhaustive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The ID of the group this resource should manage memberships for.
+    <dd>{{% md %}}Indicates if the list of the user's groups is exhaustive. In this case, groups that are manually added to the user will be removed. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_members_go">
-<a href="#state_members_go" style="color: inherit; text-decoration: inherit;">Members</a>
+        <span id="state_groupids_go">
+<a href="#state_groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of usernames that belong to this group.
+    <dd>{{% md %}}A list of group IDs that the user is member of.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_go">
@@ -550,28 +597,37 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this group exists in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_userid_go">
+<a href="#state_userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the user this resource should manage groups for.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_groupid_nodejs">
-<a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+        <span id="state_exhaustive_nodejs">
+<a href="#state_exhaustive_nodejs" style="color: inherit; text-decoration: inherit;">exhaustive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
-    <dd>{{% md %}}The ID of the group this resource should manage memberships for.
+    <dd>{{% md %}}Indicates if the list of the user's groups is exhaustive. In this case, groups that are manually added to the user will be removed. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_members_nodejs">
-<a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
+        <span id="state_groupids_nodejs">
+<a href="#state_groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
-    <dd>{{% md %}}A list of usernames that belong to this group.
+    <dd>{{% md %}}A list of group IDs that the user is member of.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_nodejs">
@@ -581,28 +637,37 @@ The following state arguments are supported:
         <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The realm this group exists in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_userid_nodejs">
+<a href="#state_userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The ID of the user this resource should manage groups for.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_group_id_python">
-<a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+        <span id="state_exhaustive_python">
+<a href="#state_exhaustive_python" style="color: inherit; text-decoration: inherit;">exhaustive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
-    <dd>{{% md %}}The ID of the group this resource should manage memberships for.
+    <dd>{{% md %}}Indicates if the list of the user's groups is exhaustive. In this case, groups that are manually added to the user will be removed. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_members_python">
-<a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
+        <span id="state_group_ids_python">
+<a href="#state_group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Input[str]]]</span>
     </dt>
-    <dd>{{% md %}}A list of usernames that belong to this group.
+    <dd>{{% md %}}A list of group IDs that the user is member of.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_id_python">
@@ -612,6 +677,15 @@ The following state arguments are supported:
         <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The realm this group exists in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_user_id_python">
+<a href="#state_user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the user this resource should manage groups for.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
