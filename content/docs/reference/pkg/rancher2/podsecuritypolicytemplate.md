@@ -186,8 +186,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -545,19 +545,53 @@ const foo = new rancher2.PodSecurityPolicyTemplate("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PodSecurityPolicyTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PodSecurityPolicyTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_csi_drivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[PodSecurityPolicyTemplateAllowedCsiDriverArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_flex_volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[PodSecurityPolicyTemplateAllowedFlexVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_host_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[PodSecurityPolicyTemplateAllowedHostPathArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_proc_mount_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_unsafe_sysctls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">default_add_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forbidden_sysctls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">fs_group</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateFsGroupArgs]</span> = None<span class="p">, </span><span class="nx">host_ipc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_network</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_pid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[PodSecurityPolicyTemplateHostPortArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only_root_filesystem</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_drop_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">run_as_group</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateRunAsGroupArgs]</span> = None<span class="p">, </span><span class="nx">run_as_user</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateRunAsUserArgs]</span> = None<span class="p">, </span><span class="nx">runtime_class</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateRuntimeClassArgs]</span> = None<span class="p">, </span><span class="nx">se_linux</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateSeLinuxArgs]</span> = None<span class="p">, </span><span class="nx">supplemental_group</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateSupplementalGroupArgs]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">allowed_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">allowed_csi_drivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PodSecurityPolicyTemplateAllowedCsiDriverArgs]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">allowed_flex_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PodSecurityPolicyTemplateAllowedFlexVolumeArgs]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">allowed_host_paths</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PodSecurityPolicyTemplateAllowedHostPathArgs]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">allowed_proc_mount_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">allowed_unsafe_sysctls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                              <span class="nx">default_add_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">default_allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">forbidden_sysctls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">fs_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateFsGroupArgs]]</span> = None<span class="p">,</span>
+                              <span class="nx">host_ipc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">host_network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">host_pid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">host_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PodSecurityPolicyTemplateHostPortArgs]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">read_only_root_filesystem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">required_drop_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">run_as_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateRunAsGroupArgs]]</span> = None<span class="p">,</span>
+                              <span class="nx">run_as_user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateRunAsUserArgs]]</span> = None<span class="p">,</span>
+                              <span class="nx">runtime_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateRuntimeClassArgs]]</span> = None<span class="p">,</span>
+                              <span class="nx">se_linux</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateSeLinuxArgs]]</span> = None<span class="p">,</span>
+                              <span class="nx">supplemental_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateSupplementalGroupArgs]]</span> = None<span class="p">,</span>
+                              <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodSecurityPolicyTemplateArgs]</a></span> = None<span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PodSecurityPolicyTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PodSecurityPolicyTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PodSecurityPolicyTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PodSecurityPolicyTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PodSecurityPolicyTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PodSecurityPolicyTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PodSecurityPolicyTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -592,22 +626,32 @@ const foo = new rancher2.PodSecurityPolicyTemplate("foo", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PodSecurityPolicyTemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -616,7 +660,7 @@ const foo = new rancher2.PodSecurityPolicyTemplate("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -640,7 +684,7 @@ const foo = new rancher2.PodSecurityPolicyTemplate("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1207,7 +1251,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Privilege<wbr>Escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1260,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowedcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1269,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowedcsidrivers_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Csi<wbr>Drivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedcsidriver">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedcsidriver">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1278,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowedflexvolumes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Flex<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedflexvolume">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedflexvolume">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1287,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowedhostpaths_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Host<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedhostpath">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedhostpath">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1252,7 +1296,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowedprocmounttypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Proc<wbr>Mount<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1261,7 +1305,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowedunsafesysctls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Unsafe<wbr>Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1314,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1323,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#defaultaddcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Add<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1332,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#defaultallowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Allow<wbr>Privilege<wbr>Escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1341,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PodSecurityPolicyTemplate description (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1350,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#forbiddensysctls_nodejs" style="color: inherit; text-decoration: inherit;">forbidden<wbr>Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1359,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#fsgroup_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatefsgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatefsgroup">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1368,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#hostipc_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Ipc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1377,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#hostnetwork_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1386,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#hostpid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1395,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#hostports_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatehostport">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatehostport">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1404,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1413,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1422,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1431,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#readonlyrootfilesystem_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Root<wbr>Filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1440,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#requireddropcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Drop<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1449,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#runasgroup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgroup">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1458,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuser">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuser">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1467,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#runtimeclass_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateruntimeclass">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateruntimeclass">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1476,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#selinux_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateselinux">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateselinux">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1485,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#supplementalgroup_nodejs" style="color: inherit; text-decoration: inherit;">supplemental<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgroup">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1494,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -1463,7 +1507,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>privilege_<wbr>escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1516,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowed_capabilities_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1525,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowed_csi_drivers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>csi_<wbr>drivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedcsidriver">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedcsidriver">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1534,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowed_flex_volumes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>flex_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedflexvolume">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedflexvolume">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1543,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowed_host_paths_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>host_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedhostpath">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedhostpath">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1552,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowed_proc_mount_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>proc_<wbr>mount_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1561,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#allowed_unsafe_sysctls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>unsafe_<wbr>sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1570,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1535,7 +1579,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#default_add_capabilities_python" style="color: inherit; text-decoration: inherit;">default_<wbr>add_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1588,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#default_allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>allow_<wbr>privilege_<wbr>escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1553,7 +1597,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PodSecurityPolicyTemplate description (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1562,7 +1606,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#forbidden_sysctls_python" style="color: inherit; text-decoration: inherit;">forbidden_<wbr>sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1615,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#fs_group_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatefsgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatefsgroup">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1624,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#host_ipc_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ipc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1633,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#host_network_python" style="color: inherit; text-decoration: inherit;">host_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1598,7 +1642,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#host_pid_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1607,7 +1651,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#host_ports_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatehostport">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatehostport">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1616,7 +1660,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1625,7 +1669,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1634,7 +1678,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1687,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#read_only_root_filesystem_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>root_<wbr>filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1696,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#required_drop_capabilities_python" style="color: inherit; text-decoration: inherit;">required_<wbr>drop_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1705,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#run_as_group_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgroup">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1714,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuser">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuser">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1679,7 +1723,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#runtime_class_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateruntimeclass">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateruntimeclass">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1732,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#se_linux_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateselinux">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateselinux">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1697,7 +1741,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#supplemental_group_python" style="color: inherit; text-decoration: inherit;">supplemental_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgroup">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1706,7 +1750,7 @@ The PodSecurityPolicyTemplate resource accepts the following [input]({{< relref 
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -1775,20 +1819,50 @@ Get an existing PodSecurityPolicyTemplate resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PodSecurityPolicyTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PodSecurityPolicyTemplate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PodSecurityPolicyTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PodSecurityPolicyTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_csi_drivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[PodSecurityPolicyTemplateAllowedCsiDriverArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_flex_volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[PodSecurityPolicyTemplateAllowedFlexVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_host_paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[PodSecurityPolicyTemplateAllowedHostPathArgs]]</span> = None<span class="p">, </span><span class="nx">allowed_proc_mount_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_unsafe_sysctls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">default_add_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">forbidden_sysctls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">fs_group</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateFsGroupArgs]</span> = None<span class="p">, </span><span class="nx">host_ipc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_network</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_pid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[PodSecurityPolicyTemplateHostPortArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only_root_filesystem</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_drop_capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">run_as_group</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateRunAsGroupArgs]</span> = None<span class="p">, </span><span class="nx">run_as_user</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateRunAsUserArgs]</span> = None<span class="p">, </span><span class="nx">runtime_class</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateRuntimeClassArgs]</span> = None<span class="p">, </span><span class="nx">se_linux</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateSeLinuxArgs]</span> = None<span class="p">, </span><span class="nx">supplemental_group</span><span class="p">:</span> <span class="nx">Optional[PodSecurityPolicyTemplateSupplementalGroupArgs]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> PodSecurityPolicyTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_csi_drivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PodSecurityPolicyTemplateAllowedCsiDriverArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_flex_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PodSecurityPolicyTemplateAllowedFlexVolumeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_host_paths</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PodSecurityPolicyTemplateAllowedHostPathArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_proc_mount_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_unsafe_sysctls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">default_add_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">default_allow_privilege_escalation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">forbidden_sysctls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">fs_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateFsGroupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">host_ipc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">host_network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">host_pid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">host_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PodSecurityPolicyTemplateHostPortArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">read_only_root_filesystem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">required_drop_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">run_as_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateRunAsGroupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">run_as_user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateRunAsUserArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">runtime_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateRuntimeClassArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">se_linux</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateSeLinuxArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">supplemental_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PodSecurityPolicyTemplateSupplementalGroupArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> PodSecurityPolicyTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PodSecurityPolicyTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PodSecurityPolicyTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PodSecurityPolicyTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PodSecurityPolicyTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PodSecurityPolicyTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PodSecurityPolicyTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PodSecurityPolicyTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PodSecurityPolicyTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2409,7 +2483,7 @@ The following state arguments are supported:
 <a href="#state_allowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Privilege<wbr>Escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2418,7 +2492,7 @@ The following state arguments are supported:
 <a href="#state_allowedcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2427,7 +2501,7 @@ The following state arguments are supported:
 <a href="#state_allowedcsidrivers_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Csi<wbr>Drivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedcsidriver">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedcsidriver">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2436,7 +2510,7 @@ The following state arguments are supported:
 <a href="#state_allowedflexvolumes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Flex<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedflexvolume">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedflexvolume">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2445,7 +2519,7 @@ The following state arguments are supported:
 <a href="#state_allowedhostpaths_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Host<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedhostpath">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedhostpath">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2454,7 +2528,7 @@ The following state arguments are supported:
 <a href="#state_allowedprocmounttypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Proc<wbr>Mount<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2463,7 +2537,7 @@ The following state arguments are supported:
 <a href="#state_allowedunsafesysctls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Unsafe<wbr>Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2472,7 +2546,7 @@ The following state arguments are supported:
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2481,7 +2555,7 @@ The following state arguments are supported:
 <a href="#state_defaultaddcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Add<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2490,7 +2564,7 @@ The following state arguments are supported:
 <a href="#state_defaultallowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Allow<wbr>Privilege<wbr>Escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2499,7 +2573,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PodSecurityPolicyTemplate description (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2508,7 +2582,7 @@ The following state arguments are supported:
 <a href="#state_forbiddensysctls_nodejs" style="color: inherit; text-decoration: inherit;">forbidden<wbr>Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2517,7 +2591,7 @@ The following state arguments are supported:
 <a href="#state_fsgroup_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatefsgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatefsgroup">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2526,7 +2600,7 @@ The following state arguments are supported:
 <a href="#state_hostipc_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Ipc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2535,7 +2609,7 @@ The following state arguments are supported:
 <a href="#state_hostnetwork_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2618,7 @@ The following state arguments are supported:
 <a href="#state_hostpid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2627,7 @@ The following state arguments are supported:
 <a href="#state_hostports_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatehostport">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatehostport">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2562,7 +2636,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2571,7 +2645,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2580,7 +2654,7 @@ The following state arguments are supported:
 <a href="#state_privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2589,7 +2663,7 @@ The following state arguments are supported:
 <a href="#state_readonlyrootfilesystem_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Root<wbr>Filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2598,7 +2672,7 @@ The following state arguments are supported:
 <a href="#state_requireddropcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Drop<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2607,7 +2681,7 @@ The following state arguments are supported:
 <a href="#state_runasgroup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgroup">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2616,7 +2690,7 @@ The following state arguments are supported:
 <a href="#state_runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuser">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuser">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2625,7 +2699,7 @@ The following state arguments are supported:
 <a href="#state_runtimeclass_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateruntimeclass">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateruntimeclass">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2634,7 +2708,7 @@ The following state arguments are supported:
 <a href="#state_selinux_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateselinux">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateselinux">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2643,7 +2717,7 @@ The following state arguments are supported:
 <a href="#state_supplementalgroup_nodejs" style="color: inherit; text-decoration: inherit;">supplemental<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgroup">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,7 +2726,7 @@ The following state arguments are supported:
 <a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -2665,7 +2739,7 @@ The following state arguments are supported:
 <a href="#state_allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>privilege_<wbr>escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}= (Optional)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2674,7 +2748,7 @@ The following state arguments are supported:
 <a href="#state_allowed_capabilities_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2683,7 +2757,7 @@ The following state arguments are supported:
 <a href="#state_allowed_csi_drivers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>csi_<wbr>drivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedcsidriver">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedcsidriver">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2692,7 +2766,7 @@ The following state arguments are supported:
 <a href="#state_allowed_flex_volumes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>flex_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedflexvolume">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedflexvolume">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2701,7 +2775,7 @@ The following state arguments are supported:
 <a href="#state_allowed_host_paths_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>host_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateallowedhostpath">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateallowedhostpath">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2710,7 +2784,7 @@ The following state arguments are supported:
 <a href="#state_allowed_proc_mount_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>proc_<wbr>mount_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2719,7 +2793,7 @@ The following state arguments are supported:
 <a href="#state_allowed_unsafe_sysctls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>unsafe_<wbr>sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2728,7 +2802,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2737,7 +2811,7 @@ The following state arguments are supported:
 <a href="#state_default_add_capabilities_python" style="color: inherit; text-decoration: inherit;">default_<wbr>add_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2746,7 +2820,7 @@ The following state arguments are supported:
 <a href="#state_default_allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>allow_<wbr>privilege_<wbr>escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2755,7 +2829,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PodSecurityPolicyTemplate description (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2764,7 +2838,7 @@ The following state arguments are supported:
 <a href="#state_forbidden_sysctls_python" style="color: inherit; text-decoration: inherit;">forbidden_<wbr>sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2773,7 +2847,7 @@ The following state arguments are supported:
 <a href="#state_fs_group_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatefsgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatefsgroup">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2782,7 +2856,7 @@ The following state arguments are supported:
 <a href="#state_host_ipc_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ipc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2791,7 +2865,7 @@ The following state arguments are supported:
 <a href="#state_host_network_python" style="color: inherit; text-decoration: inherit;">host_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2800,7 +2874,7 @@ The following state arguments are supported:
 <a href="#state_host_pid_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2809,7 +2883,7 @@ The following state arguments are supported:
 <a href="#state_host_ports_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatehostport">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatehostport">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2818,7 +2892,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for PodSecurityPolicyTemplate object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2827,7 +2901,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2836,7 +2910,7 @@ The following state arguments are supported:
 <a href="#state_privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2845,7 +2919,7 @@ The following state arguments are supported:
 <a href="#state_read_only_root_filesystem_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>root_<wbr>filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2854,7 +2928,7 @@ The following state arguments are supported:
 <a href="#state_required_drop_capabilities_python" style="color: inherit; text-decoration: inherit;">required_<wbr>drop_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2863,7 +2937,7 @@ The following state arguments are supported:
 <a href="#state_run_as_group_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgroup">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2872,7 +2946,7 @@ The following state arguments are supported:
 <a href="#state_run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuser">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuser">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2881,7 +2955,7 @@ The following state arguments are supported:
 <a href="#state_runtime_class_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateruntimeclass">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateruntimeclass">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2890,7 +2964,7 @@ The following state arguments are supported:
 <a href="#state_se_linux_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateselinux">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateselinux">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2899,7 +2973,7 @@ The following state arguments are supported:
 <a href="#state_supplemental_group_python" style="color: inherit; text-decoration: inherit;">supplemental_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgroup">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgroup">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2908,7 +2982,7 @@ The following state arguments are supported:
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -2958,7 +3032,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
 {{% /md %}}</dd></dl>
@@ -2971,7 +3045,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the PodSecurityPolicyTemplate (string)
 {{% /md %}}</dd></dl>
@@ -3010,7 +3084,7 @@ The following state arguments are supported:
 <a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3022,7 +3096,7 @@ The following state arguments are supported:
 <a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3080,7 +3154,7 @@ The following state arguments are supported:
 <a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3089,7 +3163,7 @@ The following state arguments are supported:
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -3102,7 +3176,7 @@ The following state arguments are supported:
 <a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3111,7 +3185,7 @@ The following state arguments are supported:
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -3170,7 +3244,7 @@ The following state arguments are supported:
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatefsgrouprange">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatefsgrouprange">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3179,7 +3253,7 @@ The following state arguments are supported:
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -3192,7 +3266,7 @@ The following state arguments are supported:
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatefsgrouprange">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatefsgrouprange">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3201,7 +3275,7 @@ The following state arguments are supported:
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -3260,7 +3334,7 @@ The following state arguments are supported:
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -3269,7 +3343,7 @@ The following state arguments are supported:
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -3282,7 +3356,7 @@ The following state arguments are supported:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -3291,7 +3365,7 @@ The following state arguments are supported:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -3350,7 +3424,7 @@ The following state arguments are supported:
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -3359,7 +3433,7 @@ The following state arguments are supported:
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -3372,7 +3446,7 @@ The following state arguments are supported:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -3381,7 +3455,7 @@ The following state arguments are supported:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -3440,7 +3514,7 @@ The following state arguments are supported:
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3449,7 +3523,7 @@ The following state arguments are supported:
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgrouprange">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgrouprange">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -3462,7 +3536,7 @@ The following state arguments are supported:
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3471,7 +3545,7 @@ The following state arguments are supported:
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgrouprange">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasgrouprange">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -3530,7 +3604,7 @@ The following state arguments are supported:
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -3539,7 +3613,7 @@ The following state arguments are supported:
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -3552,7 +3626,7 @@ The following state arguments are supported:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -3561,7 +3635,7 @@ The following state arguments are supported:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -3620,7 +3694,7 @@ The following state arguments are supported:
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3629,7 +3703,7 @@ The following state arguments are supported:
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuserrange">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuserrange">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -3642,7 +3716,7 @@ The following state arguments are supported:
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3651,7 +3725,7 @@ The following state arguments are supported:
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuserrange">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplaterunasuserrange">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd></dl>
@@ -3710,7 +3784,7 @@ The following state arguments are supported:
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -3719,7 +3793,7 @@ The following state arguments are supported:
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -3732,7 +3806,7 @@ The following state arguments are supported:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -3741,7 +3815,7 @@ The following state arguments are supported:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -3800,7 +3874,7 @@ The following state arguments are supported:
 <a href="#allowedruntimeclassnames_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Runtime<wbr>Class<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3809,7 +3883,7 @@ The following state arguments are supported:
 <a href="#defaultruntimeclassname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Runtime<wbr>Class<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -3822,7 +3896,7 @@ The following state arguments are supported:
 <a href="#allowed_runtime_class_names_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>runtime_<wbr>class_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3831,7 +3905,7 @@ The following state arguments are supported:
 <a href="#default_runtime_class_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>runtime_<wbr>class_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -3890,7 +3964,7 @@ The following state arguments are supported:
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3899,7 +3973,7 @@ The following state arguments are supported:
 <a href="#selinuxoption_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateselinuxselinuxoption">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateselinuxselinuxoption">pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -3912,7 +3986,7 @@ The following state arguments are supported:
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3921,7 +3995,7 @@ The following state arguments are supported:
 <a href="#se_linux_option_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplateselinuxselinuxoption">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplateselinuxselinuxoption">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -4016,7 +4090,7 @@ The following state arguments are supported:
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4025,7 +4099,7 @@ The following state arguments are supported:
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4034,7 +4108,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4043,7 +4117,7 @@ The following state arguments are supported:
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -4056,7 +4130,7 @@ The following state arguments are supported:
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4065,7 +4139,7 @@ The following state arguments are supported:
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4074,7 +4148,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4083,7 +4157,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -4142,7 +4216,7 @@ The following state arguments are supported:
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgrouprange">Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgrouprange">pulumi<wbr>Input<pulumi<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4151,7 +4225,7 @@ The following state arguments are supported:
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -4164,7 +4238,7 @@ The following state arguments are supported:
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgrouprange">Sequence[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicytemplatesupplementalgrouprange">Input[Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4173,7 +4247,7 @@ The following state arguments are supported:
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(string)
 {{% /md %}}</dd></dl>
@@ -4232,7 +4306,7 @@ The following state arguments are supported:
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -4241,7 +4315,7 @@ The following state arguments are supported:
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>
@@ -4254,7 +4328,7 @@ The following state arguments are supported:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd><dt class="property-required"
@@ -4263,7 +4337,7 @@ The following state arguments are supported:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(int)
 {{% /md %}}</dd></dl>

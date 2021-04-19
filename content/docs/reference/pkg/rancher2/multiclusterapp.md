@@ -26,19 +26,39 @@ Multi cluster app can be imported using the multi cluster app ID in the format `
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MultiClusterApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MultiClusterAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MultiClusterApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MultiClusterAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MultiClusterApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[MultiClusterAppAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[MultiClusterAppMemberArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision_history_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[MultiClusterAppTargetArgs]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_strategy</span><span class="p">:</span> <span class="nx">Optional[MultiClusterAppUpgradeStrategyArgs]</span> = None<span class="p">, </span><span class="nx">wait</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MultiClusterApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                    <span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MultiClusterAppAnswerArgs]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                    <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MultiClusterAppMemberArgs]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">revision_history_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">revision_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MultiClusterAppTargetArgs]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">upgrade_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MultiClusterAppUpgradeStrategyArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">wait</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MultiClusterApp</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MultiClusterAppArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMultiClusterApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MultiClusterAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MultiClusterApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMultiClusterApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MultiClusterAppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MultiClusterApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MultiClusterApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MultiClusterAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MultiClusterApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MultiClusterAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +93,32 @@ Multi cluster app can be imported using the multi cluster app ID in the format `
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MultiClusterAppArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +127,7 @@ Multi cluster app can be imported using the multi cluster app ID in the format `
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +151,7 @@ Multi cluster app can be imported using the multi cluster app ID in the format `
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -436,7 +466,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#catalogname_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -445,7 +475,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
 {{% /md %}}</dd><dt class="property-required"
@@ -454,7 +484,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">Multi<wbr>Cluster<wbr>App<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#multiclusterapptarget">pulumi<wbr>Input<pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
 {{% /md %}}</dd><dt class="property-required"
@@ -463,7 +493,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -472,7 +502,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -481,7 +511,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]</a></span>
+        <span class="property-type"><a href="#multiclusterappanswer">pulumi<wbr>Input<pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -490,7 +520,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -499,7 +529,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]</a></span>
+        <span class="property-type"><a href="#multiclusterappmember">pulumi<wbr>Input<pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -508,7 +538,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -517,7 +547,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#revisionhistorylimit_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>History<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -526,7 +556,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#revisionid_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -535,7 +565,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#templateversion_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -544,7 +574,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#upgradestrategy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +583,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#wait_nodejs" style="color: inherit; text-decoration: inherit;">wait</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -566,7 +596,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#catalog_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -575,7 +605,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
 {{% /md %}}</dd><dt class="property-required"
@@ -584,7 +614,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multiclusterapptarget">Input[Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
 {{% /md %}}</dd><dt class="property-required"
@@ -593,7 +623,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +632,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -611,7 +641,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multiclusterappanswer">Input[Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +650,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +659,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multiclusterappmember">Input[Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +668,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +677,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#revision_history_limit_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>history_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +686,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#revision_id_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +695,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#template_version_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +704,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Input[Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +713,7 @@ The MultiClusterApp resource accepts the following [input]({{< relref "/docs/int
 <a href="#wait_python" style="color: inherit; text-decoration: inherit;">wait</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -788,20 +818,37 @@ Get an existing MultiClusterApp resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MultiClusterAppState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MultiClusterApp</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MultiClusterAppState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MultiClusterApp</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[MultiClusterAppAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[MultiClusterAppMemberArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision_history_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[MultiClusterAppTargetArgs]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_strategy</span><span class="p">:</span> <span class="nx">Optional[MultiClusterAppUpgradeStrategyArgs]</span> = None<span class="p">, </span><span class="nx">wait</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MultiClusterApp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MultiClusterAppAnswerArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">catalog_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MultiClusterAppMemberArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">revision_history_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">revision_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">targets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MultiClusterAppTargetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">template_version_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_strategy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MultiClusterAppUpgradeStrategyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">wait</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> MultiClusterApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMultiClusterApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MultiClusterAppState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MultiClusterApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMultiClusterApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MultiClusterAppState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MultiClusterApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MultiClusterApp</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MultiClusterAppState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MultiClusterApp</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MultiClusterAppState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1188,7 +1235,7 @@ The following state arguments are supported:
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1244,7 @@ The following state arguments are supported:
 <a href="#state_answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">Multi<wbr>Cluster<wbr>App<wbr>Answer[]</a></span>
+        <span class="property-type"><a href="#multiclusterappanswer">pulumi<wbr>Input<pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1253,7 @@ The following state arguments are supported:
 <a href="#state_catalogname_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1262,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1271,7 @@ The following state arguments are supported:
 <a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">Multi<wbr>Cluster<wbr>App<wbr>Member[]</a></span>
+        <span class="property-type"><a href="#multiclusterappmember">pulumi<wbr>Input<pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1233,7 +1280,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1289,7 @@ The following state arguments are supported:
 <a href="#state_revisionhistorylimit_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>History<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1298,7 @@ The following state arguments are supported:
 <a href="#state_revisionid_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1307,7 @@ The following state arguments are supported:
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1316,7 @@ The following state arguments are supported:
 <a href="#state_targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">Multi<wbr>Cluster<wbr>App<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#multiclusterapptarget">pulumi<wbr>Input<pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1325,7 @@ The following state arguments are supported:
 <a href="#state_templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1334,7 @@ The following state arguments are supported:
 <a href="#state_templateversion_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1343,7 @@ The following state arguments are supported:
 <a href="#state_templateversionid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1352,7 @@ The following state arguments are supported:
 <a href="#state_upgradestrategy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_wait_nodejs" style="color: inherit; text-decoration: inherit;">wait</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -1327,7 +1374,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for multi cluster app object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1336,7 +1383,7 @@ The following state arguments are supported:
 <a href="#state_answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappanswer">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multiclusterappanswer">Input[Multi<wbr>Cluster<wbr>App<wbr>Answer<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1392,7 @@ The following state arguments are supported:
 <a href="#state_catalog_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app catalog name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for multi cluster app object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1410,7 @@ The following state arguments are supported:
 <a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappmember">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multiclusterappmember">Input[Multi<wbr>Cluster<wbr>App<wbr>Member<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app answers (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1419,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1428,7 @@ The following state arguments are supported:
 <a href="#state_revision_history_limit_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>history_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app revision history limit. Default `10` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1437,7 @@ The following state arguments are supported:
 <a href="#state_revision_id_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Current revision id for the multi cluster app (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1446,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app roles (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1455,7 @@ The following state arguments are supported:
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterapptarget">Sequence[Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#multiclusterapptarget">Input[Multi<wbr>Cluster<wbr>App<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app target projects (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1464,7 @@ The following state arguments are supported:
 <a href="#state_template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1473,7 @@ The following state arguments are supported:
 <a href="#state_template_version_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multi cluster app template version. Default: `latest` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1482,7 @@ The following state arguments are supported:
 <a href="#state_template_version_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) The multi cluster app template version ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1491,7 @@ The following state arguments are supported:
 <a href="#state_upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategy">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategy">Input[Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The multi cluster app upgrade strategy (list MaxItems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1500,7 @@ The following state arguments are supported:
 <a href="#state_wait_python" style="color: inherit; text-decoration: inherit;">wait</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Wait until the multi cluster app is active. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -1539,7 +1586,7 @@ The following state arguments are supported:
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1548,7 +1595,7 @@ The following state arguments are supported:
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1604,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
 {{% /md %}}</dd></dl>
@@ -1570,7 +1617,7 @@ The following state arguments are supported:
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster ID for answer (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1579,7 +1626,7 @@ The following state arguments are supported:
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,7 +1635,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Key/values for answer (map)
 {{% /md %}}</dd></dl>
@@ -1665,7 +1712,7 @@ The following state arguments are supported:
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1674,7 +1721,7 @@ The following state arguments are supported:
 <a href="#groupprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1683,7 +1730,7 @@ The following state arguments are supported:
 <a href="#userprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd></dl>
@@ -1696,7 +1743,7 @@ The following state arguments are supported:
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["member" | "owner" | "read-only"]` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1752,7 @@ The following state arguments are supported:
 <a href="#group_principal_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1761,7 @@ The following state arguments are supported:
 <a href="#user_principal_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd></dl>
@@ -1809,7 +1856,7 @@ The following state arguments are supported:
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1818,7 +1865,7 @@ The following state arguments are supported:
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}App ID for target (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1827,7 +1874,7 @@ The following state arguments are supported:
 <a href="#healthstate_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}App health state for target (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1836,7 +1883,7 @@ The following state arguments are supported:
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}App state for target (string)
 {{% /md %}}</dd></dl>
@@ -1849,7 +1896,7 @@ The following state arguments are supported:
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Project ID for target (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1858,7 +1905,7 @@ The following state arguments are supported:
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}App ID for target (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1867,7 +1914,7 @@ The following state arguments are supported:
 <a href="#health_state_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}App health state for target (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1876,7 +1923,7 @@ The following state arguments are supported:
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}App state for target (string)
 {{% /md %}}</dd></dl>
@@ -1917,7 +1964,7 @@ The following state arguments are supported:
 <a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">pulumi<wbr>Input<Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
 {{% /md %}}</dd></dl>
@@ -1930,7 +1977,7 @@ The following state arguments are supported:
 <a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#multiclusterappupgradestrategyrollingupdate">Input[Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Upgrade strategy rolling update (list MaxItems:1)
 {{% /md %}}</dd></dl>
@@ -1989,7 +2036,7 @@ The following state arguments are supported:
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1998,7 +2045,7 @@ The following state arguments are supported:
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
 {{% /md %}}</dd></dl>
@@ -2011,7 +2058,7 @@ The following state arguments are supported:
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Rolling update batch size. Default `1` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +2067,7 @@ The following state arguments are supported:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Rolling update interval. Default `1` (int)
 {{% /md %}}</dd></dl>

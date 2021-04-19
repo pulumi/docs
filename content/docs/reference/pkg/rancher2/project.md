@@ -74,8 +74,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -194,19 +194,36 @@ const foo = new rancher2.Project("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_resource_limit</span><span class="p">:</span> <span class="nx">Optional[ProjectContainerResourceLimitArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_project_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ProjectProjectMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">resource_quota</span><span class="p">:</span> <span class="nx">Optional[ProjectResourceQuotaArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">container_resource_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectContainerResourceLimitArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">enable_project_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">project_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectProjectMonitoringInputArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_quota</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectResourceQuotaArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">wait_for_cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -241,22 +258,32 @@ const foo = new rancher2.Project("foo", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -265,7 +292,7 @@ const foo = new rancher2.Project("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -289,7 +316,7 @@ const foo = new rancher2.Project("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -550,7 +577,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster id where create project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -559,7 +586,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -568,7 +595,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#containerresourcelimit_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">pulumi<wbr>Input<Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -577,7 +604,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A project description (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -586,7 +613,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enableprojectmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Project<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -595,7 +622,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -604,7 +631,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -613,7 +640,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#podsecuritypolicytemplateid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -622,7 +649,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#projectmonitoringinput_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Monitoring<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">pulumi<wbr>Input<Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -631,7 +658,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcequota_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota</a></span>
+        <span class="property-type"><a href="#projectresourcequota">pulumi<wbr>Input<Project<wbr>Resource<wbr>Quota<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -640,7 +667,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#waitforcluster_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd></dl>
@@ -653,7 +680,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster id where create project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -662,7 +689,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -671,7 +698,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Input[Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -680,7 +707,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A project description (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -689,7 +716,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_project_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>project_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +725,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -707,7 +734,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +743,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#pod_security_policy_template_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -725,7 +752,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#project_monitoring_input_python" style="color: inherit; text-decoration: inherit;">project_<wbr>monitoring_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Input[Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +761,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectresourcequota">Input[Project<wbr>Resource<wbr>Quota<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +770,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#wait_for_cluster_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd></dl>
@@ -812,20 +839,33 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_resource_limit</span><span class="p">:</span> <span class="nx">Optional[ProjectContainerResourceLimitArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_project_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[ProjectProjectMonitoringInputArgs]</span> = None<span class="p">, </span><span class="nx">resource_quota</span><span class="p">:</span> <span class="nx">Optional[ProjectResourceQuotaArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">container_resource_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectContainerResourceLimitArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_project_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pod_security_policy_template_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_monitoring_input</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectProjectMonitoringInputArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_quota</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectResourceQuotaArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1140,7 +1180,7 @@ The following state arguments are supported:
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1149,7 +1189,7 @@ The following state arguments are supported:
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster id where create project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1198,7 @@ The following state arguments are supported:
 <a href="#state_containerresourcelimit_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">pulumi<wbr>Input<Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1207,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A project description (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1216,7 @@ The following state arguments are supported:
 <a href="#state_enableprojectmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Project<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1185,7 +1225,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1234,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1243,7 @@ The following state arguments are supported:
 <a href="#state_podsecuritypolicytemplateid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1252,7 @@ The following state arguments are supported:
 <a href="#state_projectmonitoringinput_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Monitoring<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">pulumi<wbr>Input<Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1261,7 @@ The following state arguments are supported:
 <a href="#state_resourcequota_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota</a></span>
+        <span class="property-type"><a href="#projectresourcequota">pulumi<wbr>Input<Project<wbr>Resource<wbr>Quota<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1270,7 @@ The following state arguments are supported:
 <a href="#state_waitforcluster_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd></dl>
@@ -1243,7 +1283,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1252,7 +1292,7 @@ The following state arguments are supported:
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster id where create project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1261,7 +1301,7 @@ The following state arguments are supported:
 <a href="#state_container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Input[Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1310,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A project description (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1319,7 @@ The following state arguments are supported:
 <a href="#state_enable_project_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>project_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1328,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1346,7 @@ The following state arguments are supported:
 <a href="#state_pod_security_policy_template_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1355,7 @@ The following state arguments are supported:
 <a href="#state_project_monitoring_input_python" style="color: inherit; text-decoration: inherit;">project_<wbr>monitoring_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Input[Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1364,7 @@ The following state arguments are supported:
 <a href="#state_resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectresourcequota">Input[Project<wbr>Resource<wbr>Quota<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1373,7 @@ The following state arguments are supported:
 <a href="#state_wait_for_cluster_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd></dl>
@@ -1437,7 +1477,7 @@ The following state arguments are supported:
 <a href="#limitscpu_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1486,7 @@ The following state arguments are supported:
 <a href="#limitsmemory_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1495,7 @@ The following state arguments are supported:
 <a href="#requestscpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1504,7 @@ The following state arguments are supported:
 <a href="#requestsmemory_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in project (string)
 {{% /md %}}</dd></dl>
@@ -1477,7 +1517,7 @@ The following state arguments are supported:
 <a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1526,7 @@ The following state arguments are supported:
 <a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1535,7 @@ The following state arguments are supported:
 <a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1544,7 @@ The following state arguments are supported:
 <a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in project (string)
 {{% /md %}}</dd></dl>
@@ -1563,7 +1603,7 @@ The following state arguments are supported:
 <a href="#answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Key/value answers for monitor input (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1612,7 @@ The following state arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}rancher-monitoring chart version (string)
 {{% /md %}}</dd></dl>
@@ -1585,7 +1625,7 @@ The following state arguments are supported:
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Key/value answers for monitor input (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1634,7 @@ The following state arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}rancher-monitoring chart version (string)
 {{% /md %}}</dd></dl>
@@ -1653,7 +1693,7 @@ The following state arguments are supported:
 <a href="#namespacedefaultlimit_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Default<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit</a></span>
+        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">pulumi<wbr>Input<Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Default resource quota limit for  namespaces in project (list maxitems:1)
 {{% /md %}}</dd><dt class="property-required"
@@ -1662,7 +1702,7 @@ The following state arguments are supported:
 <a href="#projectlimit_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit</a></span>
+        <span class="property-type"><a href="#projectresourcequotaprojectlimit">pulumi<wbr>Input<Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource quota limit for project (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -1675,7 +1715,7 @@ The following state arguments are supported:
 <a href="#namespace_default_limit_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>default_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Input[Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Default resource quota limit for  namespaces in project (list maxitems:1)
 {{% /md %}}</dd><dt class="property-required"
@@ -1684,7 +1724,7 @@ The following state arguments are supported:
 <a href="#project_limit_python" style="color: inherit; text-decoration: inherit;">project_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Input[Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource quota limit for project (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -1939,7 +1979,7 @@ The following state arguments are supported:
 <a href="#configmaps_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for config maps in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1948,7 +1988,7 @@ The following state arguments are supported:
 <a href="#limitscpu_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1957,7 +1997,7 @@ The following state arguments are supported:
 <a href="#limitsmemory_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +2006,7 @@ The following state arguments are supported:
 <a href="#persistentvolumeclaims_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for persistent volume claims in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1975,7 +2015,7 @@ The following state arguments are supported:
 <a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for pods in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1984,7 +2024,7 @@ The following state arguments are supported:
 <a href="#replicationcontrollers_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for replication controllers in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1993,7 +2033,7 @@ The following state arguments are supported:
 <a href="#requestscpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2002,7 +2042,7 @@ The following state arguments are supported:
 <a href="#requestsmemory_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2011,7 +2051,7 @@ The following state arguments are supported:
 <a href="#requestsstorage_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for requests storage in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +2060,7 @@ The following state arguments are supported:
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for secrets in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2029,7 +2069,7 @@ The following state arguments are supported:
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2077,7 @@ The following state arguments are supported:
 <a href="#servicesloadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for services load balancers in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +2086,7 @@ The following state arguments are supported:
 <a href="#servicesnodeports_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for services node ports in project (string)
 {{% /md %}}</dd></dl>
@@ -2059,7 +2099,7 @@ The following state arguments are supported:
 <a href="#config_maps_python" style="color: inherit; text-decoration: inherit;">config_<wbr>maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for config maps in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2068,7 +2108,7 @@ The following state arguments are supported:
 <a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2077,7 +2117,7 @@ The following state arguments are supported:
 <a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2086,7 +2126,7 @@ The following state arguments are supported:
 <a href="#persistent_volume_claims_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for persistent volume claims in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2135,7 @@ The following state arguments are supported:
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for pods in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2144,7 @@ The following state arguments are supported:
 <a href="#replication_controllers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>controllers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for replication controllers in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2113,7 +2153,7 @@ The following state arguments are supported:
 <a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2122,7 +2162,7 @@ The following state arguments are supported:
 <a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2171,7 @@ The following state arguments are supported:
 <a href="#requests_storage_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for requests storage in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2140,7 +2180,7 @@ The following state arguments are supported:
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for secrets in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2189,7 @@ The following state arguments are supported:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2197,7 @@ The following state arguments are supported:
 <a href="#services_load_balancers_python" style="color: inherit; text-decoration: inherit;">services_<wbr>load_<wbr>balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for services load balancers in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2206,7 @@ The following state arguments are supported:
 <a href="#services_node_ports_python" style="color: inherit; text-decoration: inherit;">services_<wbr>node_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for services node ports in project (string)
 {{% /md %}}</dd></dl>
@@ -2421,7 +2461,7 @@ The following state arguments are supported:
 <a href="#configmaps_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for config maps in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2430,7 +2470,7 @@ The following state arguments are supported:
 <a href="#limitscpu_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2439,7 +2479,7 @@ The following state arguments are supported:
 <a href="#limitsmemory_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2488,7 @@ The following state arguments are supported:
 <a href="#persistentvolumeclaims_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for persistent volume claims in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2497,7 @@ The following state arguments are supported:
 <a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for pods in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2506,7 @@ The following state arguments are supported:
 <a href="#replicationcontrollers_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for replication controllers in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2515,7 @@ The following state arguments are supported:
 <a href="#requestscpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2524,7 @@ The following state arguments are supported:
 <a href="#requestsmemory_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2533,7 @@ The following state arguments are supported:
 <a href="#requestsstorage_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for requests storage in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2542,7 @@ The following state arguments are supported:
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for secrets in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2511,7 +2551,7 @@ The following state arguments are supported:
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2519,7 +2559,7 @@ The following state arguments are supported:
 <a href="#servicesloadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for services load balancers in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2568,7 @@ The following state arguments are supported:
 <a href="#servicesnodeports_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit for services node ports in project (string)
 {{% /md %}}</dd></dl>
@@ -2541,7 +2581,7 @@ The following state arguments are supported:
 <a href="#config_maps_python" style="color: inherit; text-decoration: inherit;">config_<wbr>maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for config maps in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2590,7 @@ The following state arguments are supported:
 <a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2599,7 @@ The following state arguments are supported:
 <a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2608,7 @@ The following state arguments are supported:
 <a href="#persistent_volume_claims_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for persistent volume claims in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2577,7 +2617,7 @@ The following state arguments are supported:
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for pods in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2586,7 +2626,7 @@ The following state arguments are supported:
 <a href="#replication_controllers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>controllers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for replication controllers in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2595,7 +2635,7 @@ The following state arguments are supported:
 <a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2644,7 @@ The following state arguments are supported:
 <a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2653,7 @@ The following state arguments are supported:
 <a href="#requests_storage_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for requests storage in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2622,7 +2662,7 @@ The following state arguments are supported:
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for secrets in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2631,7 +2671,7 @@ The following state arguments are supported:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2639,7 +2679,7 @@ The following state arguments are supported:
 <a href="#services_load_balancers_python" style="color: inherit; text-decoration: inherit;">services_<wbr>load_<wbr>balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for services load balancers in project (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2648,7 +2688,7 @@ The following state arguments are supported:
 <a href="#services_node_ports_python" style="color: inherit; text-decoration: inherit;">services_<wbr>node_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit for services node ports in project (string)
 {{% /md %}}</dd></dl>

@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -135,19 +135,32 @@ const foo = new rancher2.GlobalDnsProvider("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalDnsProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalDnsProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalDnsProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalDnsProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GlobalDnsProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alidns_config</span><span class="p">:</span> <span class="nx">Optional[GlobalDnsProviderAlidnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cloudflare_config</span><span class="p">:</span> <span class="nx">Optional[GlobalDnsProviderCloudflareConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route53_config</span><span class="p">:</span> <span class="nx">Optional[GlobalDnsProviderRoute53ConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalDnsProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">alidns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalDnsProviderAlidnsConfigArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                      <span class="nx">cloudflare_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalDnsProviderCloudflareConfigArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">root_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">route53_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalDnsProviderRoute53ConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GlobalDnsProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalDnsProviderArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalDnsProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalDnsProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalDnsProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalDnsProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalDnsProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalDnsProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalDnsProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlobalDnsProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalDnsProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlobalDnsProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,22 +195,32 @@ const foo = new rancher2.GlobalDnsProvider("foo", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GlobalDnsProviderArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,7 +229,7 @@ const foo = new rancher2.GlobalDnsProvider("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -230,7 +253,7 @@ const foo = new rancher2.GlobalDnsProvider("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -413,7 +436,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#rootdomain_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user ID to assign Global DNS Provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -422,7 +445,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#alidnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">alidns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsprovideralidnsconfig">Global<wbr>Dns<wbr>Provider<wbr>Alidns<wbr>Config</a></span>
+        <span class="property-type"><a href="#globaldnsprovideralidnsconfig">pulumi<wbr>Input<Global<wbr>Dns<wbr>Provider<wbr>Alidns<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +453,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for Global DNS Provider (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -439,7 +462,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#cloudflareconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloudflare<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsprovidercloudflareconfig">Global<wbr>Dns<wbr>Provider<wbr>Cloudflare<wbr>Config</a></span>
+        <span class="property-type"><a href="#globaldnsprovidercloudflareconfig">pulumi<wbr>Input<Global<wbr>Dns<wbr>Provider<wbr>Cloudflare<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -447,7 +470,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for Global DNS Provider (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -456,7 +479,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Global DNS Provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -465,7 +488,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#route53config_nodejs" style="color: inherit; text-decoration: inherit;">route53Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsproviderroute53config">Global<wbr>Dns<wbr>Provider<wbr>Route53Config</a></span>
+        <span class="property-type"><a href="#globaldnsproviderroute53config">pulumi<wbr>Input<Global<wbr>Dns<wbr>Provider<wbr>Route53Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -477,7 +500,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#root_domain_python" style="color: inherit; text-decoration: inherit;">root_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user ID to assign Global DNS Provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -486,7 +509,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#alidns_config_python" style="color: inherit; text-decoration: inherit;">alidns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsprovideralidnsconfig">Global<wbr>Dns<wbr>Provider<wbr>Alidns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#globaldnsprovideralidnsconfig">Input[Global<wbr>Dns<wbr>Provider<wbr>Alidns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +517,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for Global DNS Provider (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -503,7 +526,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#cloudflare_config_python" style="color: inherit; text-decoration: inherit;">cloudflare_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsprovidercloudflareconfig">Global<wbr>Dns<wbr>Provider<wbr>Cloudflare<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#globaldnsprovidercloudflareconfig">Input[Global<wbr>Dns<wbr>Provider<wbr>Cloudflare<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +534,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for Global DNS Provider (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -520,7 +543,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Global DNS Provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -529,7 +552,7 @@ The GlobalDnsProvider resource accepts the following [input]({{< relref "/docs/i
 <a href="#route53_config_python" style="color: inherit; text-decoration: inherit;">route53_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsproviderroute53config">Global<wbr>Dns<wbr>Provider<wbr>Route53Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#globaldnsproviderroute53config">Input[Global<wbr>Dns<wbr>Provider<wbr>Route53Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -633,20 +656,30 @@ Get an existing GlobalDnsProvider resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalDnsProviderState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalDnsProvider</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalDnsProviderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalDnsProvider</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alidns_config</span><span class="p">:</span> <span class="nx">Optional[GlobalDnsProviderAlidnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cloudflare_config</span><span class="p">:</span> <span class="nx">Optional[GlobalDnsProviderCloudflareConfigArgs]</span> = None<span class="p">, </span><span class="nx">dns_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route53_config</span><span class="p">:</span> <span class="nx">Optional[GlobalDnsProviderRoute53ConfigArgs]</span> = None<span class="p">) -&gt;</span> GlobalDnsProvider</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">alidns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalDnsProviderAlidnsConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">cloudflare_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalDnsProviderCloudflareConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">root_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">route53_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GlobalDnsProviderRoute53ConfigArgs]]</span> = None<span class="p">) -&gt;</span> GlobalDnsProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalDnsProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalDnsProviderState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalDnsProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalDnsProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalDnsProviderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalDnsProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalDnsProvider</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GlobalDnsProviderState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalDnsProvider</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GlobalDnsProviderState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -901,7 +934,7 @@ The following state arguments are supported:
 <a href="#state_alidnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">alidns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsprovideralidnsconfig">Global<wbr>Dns<wbr>Provider<wbr>Alidns<wbr>Config</a></span>
+        <span class="property-type"><a href="#globaldnsprovideralidnsconfig">pulumi<wbr>Input<Global<wbr>Dns<wbr>Provider<wbr>Alidns<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +942,7 @@ The following state arguments are supported:
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for Global DNS Provider (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,7 +951,7 @@ The following state arguments are supported:
 <a href="#state_cloudflareconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloudflare<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsprovidercloudflareconfig">Global<wbr>Dns<wbr>Provider<wbr>Cloudflare<wbr>Config</a></span>
+        <span class="property-type"><a href="#globaldnsprovidercloudflareconfig">pulumi<wbr>Input<Global<wbr>Dns<wbr>Provider<wbr>Cloudflare<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +959,7 @@ The following state arguments are supported:
 <a href="#state_dnsprovider_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) The Global DNS Provider `alidns, cloudflare, route53` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,7 +968,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for Global DNS Provider (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +977,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Global DNS Provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +986,7 @@ The following state arguments are supported:
 <a href="#state_rootdomain_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user ID to assign Global DNS Provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -962,7 +995,7 @@ The following state arguments are supported:
 <a href="#state_route53config_nodejs" style="color: inherit; text-decoration: inherit;">route53Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsproviderroute53config">Global<wbr>Dns<wbr>Provider<wbr>Route53Config</a></span>
+        <span class="property-type"><a href="#globaldnsproviderroute53config">pulumi<wbr>Input<Global<wbr>Dns<wbr>Provider<wbr>Route53Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -974,7 +1007,7 @@ The following state arguments are supported:
 <a href="#state_alidns_config_python" style="color: inherit; text-decoration: inherit;">alidns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsprovideralidnsconfig">Global<wbr>Dns<wbr>Provider<wbr>Alidns<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#globaldnsprovideralidnsconfig">Input[Global<wbr>Dns<wbr>Provider<wbr>Alidns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1015,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for Global DNS Provider (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +1024,7 @@ The following state arguments are supported:
 <a href="#state_cloudflare_config_python" style="color: inherit; text-decoration: inherit;">cloudflare_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsprovidercloudflareconfig">Global<wbr>Dns<wbr>Provider<wbr>Cloudflare<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#globaldnsprovidercloudflareconfig">Input[Global<wbr>Dns<wbr>Provider<wbr>Cloudflare<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,7 +1032,7 @@ The following state arguments are supported:
 <a href="#state_dns_provider_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) The Global DNS Provider `alidns, cloudflare, route53` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1041,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for Global DNS Provider (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1050,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Global DNS Provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1059,7 @@ The following state arguments are supported:
 <a href="#state_root_domain_python" style="color: inherit; text-decoration: inherit;">root_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user ID to assign Global DNS Provider (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1068,7 @@ The following state arguments are supported:
 <a href="#state_route53_config_python" style="color: inherit; text-decoration: inherit;">route53_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaldnsproviderroute53config">Global<wbr>Dns<wbr>Provider<wbr>Route53Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#globaldnsproviderroute53config">Input[Global<wbr>Dns<wbr>Provider<wbr>Route53Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1102,7 +1135,7 @@ The following state arguments are supported:
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS Access key (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1111,7 +1144,7 @@ The following state arguments are supported:
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS Secret key (string)
 {{% /md %}}</dd></dl>
@@ -1124,7 +1157,7 @@ The following state arguments are supported:
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS Access key (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1133,7 +1166,7 @@ The following state arguments are supported:
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS Secret key (string)
 {{% /md %}}</dd></dl>
@@ -1210,7 +1243,7 @@ The following state arguments are supported:
 <a href="#apiemail_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudFlare API Email (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1219,7 +1252,7 @@ The following state arguments are supported:
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CloudFlare API Key (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1228,7 +1261,7 @@ The following state arguments are supported:
 <a href="#proxysetting_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}CloudFlare Proxy Setting. Default: `false` (bool)
 {{% /md %}}</dd></dl>
@@ -1241,7 +1274,7 @@ The following state arguments are supported:
 <a href="#api_email_python" style="color: inherit; text-decoration: inherit;">api_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudFlare API Email (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1250,7 +1283,7 @@ The following state arguments are supported:
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CloudFlare API Key (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1292,7 @@ The following state arguments are supported:
 <a href="#proxy_setting_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}CloudFlare Proxy Setting. Default: `false` (bool)
 {{% /md %}}</dd></dl>
@@ -1390,7 +1423,7 @@ The following state arguments are supported:
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS Access key (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1399,7 +1432,7 @@ The following state arguments are supported:
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS Secret key (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1441,7 @@ The following state arguments are supported:
 <a href="#credentialspath_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS credentials path. Default: `"/.aws"` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1450,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS Region. Default: `"us-west-2"` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1459,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS Role ARN (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1468,7 @@ The following state arguments are supported:
 <a href="#zonetype_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Route53 zone type `public, private`. Default: `"public"` (string)
 {{% /md %}}</dd></dl>
@@ -1448,7 +1481,7 @@ The following state arguments are supported:
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS Access key (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1457,7 +1490,7 @@ The following state arguments are supported:
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS Secret key (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1499,7 @@ The following state arguments are supported:
 <a href="#credentials_path_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS credentials path. Default: `"/.aws"` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1508,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS Region. Default: `"us-west-2"` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1517,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS Role ARN (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1526,7 @@ The following state arguments are supported:
 <a href="#zone_type_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Route53 zone type `public, private`. Default: `"public"` (string)
 {{% /md %}}</dd></dl>

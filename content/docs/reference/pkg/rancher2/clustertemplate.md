@@ -88,8 +88,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -221,19 +221,31 @@ const foo = new rancher2.ClusterTemplate("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTemplateMemberArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_revisions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTemplateTemplateRevisionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                    <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterTemplateMemberArgs]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">template_revisions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterTemplateTemplateRevisionArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterTemplateArgs]</a></span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -268,22 +280,32 @@ const foo = new rancher2.ClusterTemplate("foo", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterTemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -292,7 +314,7 @@ const foo = new rancher2.ClusterTemplate("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -316,7 +338,7 @@ const foo = new rancher2.ClusterTemplate("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -487,7 +509,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -496,7 +518,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd><dt class="property-optional"
@@ -505,7 +527,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -514,7 +536,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">Cluster<wbr>Template<wbr>Member[]</a></span>
+        <span class="property-type"><a href="#clustertemplatemember">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Member<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Cluster template members (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -523,7 +545,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -532,7 +554,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#templaterevisions_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Revisions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision[]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevision">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd></dl>
@@ -545,7 +567,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +576,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +585,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +594,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">Sequence[Cluster<wbr>Template<wbr>Member<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatemember">Input[Cluster<wbr>Template<wbr>Member<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template members (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -581,7 +603,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +612,7 @@ The ClusterTemplate resource accepts the following [input]({{< relref "/docs/int
 <a href="#template_revisions_python" style="color: inherit; text-decoration: inherit;">template_<wbr>revisions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">Sequence[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevision">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd></dl>
@@ -695,20 +717,29 @@ Get an existing ClusterTemplate resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ClusterTemplate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ClusterTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">default_revision_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTemplateMemberArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_revisions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTemplateTemplateRevisionArgs]]</span> = None<span class="p">) -&gt;</span> ClusterTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">default_revision_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterTemplateMemberArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">template_revisions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterTemplateTemplateRevisionArgs]]]]</span> = None<span class="p">) -&gt;</span> ClusterTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ClusterTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ClusterTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -951,7 +982,7 @@ The following state arguments are supported:
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +991,7 @@ The following state arguments are supported:
 <a href="#state_defaultrevisionid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Revision<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -969,7 +1000,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd><dt class="property-optional"
@@ -978,7 +1009,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +1018,7 @@ The following state arguments are supported:
 <a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">Cluster<wbr>Template<wbr>Member[]</a></span>
+        <span class="property-type"><a href="#clustertemplatemember">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Member<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Cluster template members (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +1027,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1005,7 +1036,7 @@ The following state arguments are supported:
 <a href="#state_templaterevisions_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Revisions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision[]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevision">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd></dl>
@@ -1018,7 +1049,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +1058,7 @@ The following state arguments are supported:
 <a href="#state_default_revision_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>revision_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1067,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1076,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1085,7 @@ The following state arguments are supported:
 <a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">Sequence[Cluster<wbr>Template<wbr>Member<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatemember">Input[Cluster<wbr>Template<wbr>Member<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template members (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1094,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1103,7 @@ The following state arguments are supported:
 <a href="#state_template_revisions_python" style="color: inherit; text-decoration: inherit;">template_<wbr>revisions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">Sequence[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevision">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd></dl>
@@ -1158,7 +1189,7 @@ The following state arguments are supported:
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["read-only" | "owner"]` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1198,7 @@ The following state arguments are supported:
 <a href="#groupprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1207,7 @@ The following state arguments are supported:
 <a href="#userprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd></dl>
@@ -1189,7 +1220,7 @@ The following state arguments are supported:
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["read-only" | "owner"]` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1198,7 +1229,7 @@ The following state arguments are supported:
 <a href="#group_principal_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1207,7 +1238,7 @@ The following state arguments are supported:
 <a href="#user_principal_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd></dl>
@@ -1392,7 +1423,7 @@ The following state arguments are supported:
 <a href="#clusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfig">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration (list maxitem: 1)
 {{% /md %}}</dd><dt class="property-required"
@@ -1401,7 +1432,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1441,7 @@ The following state arguments are supported:
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1450,7 @@ The following state arguments are supported:
 <a href="#clustertemplateid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster template ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1459,7 @@ The following state arguments are supported:
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1468,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1477,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster template revision ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1486,7 @@ The following state arguments are supported:
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1495,7 @@ The following state arguments are supported:
 <a href="#questions_nodejs" style="color: inherit; text-decoration: inherit;">questions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionquestion">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question[]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionquestion">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Cluster template questions (list)
 {{% /md %}}</dd></dl>
@@ -1477,7 +1508,7 @@ The following state arguments are supported:
 <a href="#cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfig">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration (list maxitem: 1)
 {{% /md %}}</dd><dt class="property-required"
@@ -1486,7 +1517,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1526,7 @@ The following state arguments are supported:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1535,7 @@ The following state arguments are supported:
 <a href="#cluster_template_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster template ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1544,7 @@ The following state arguments are supported:
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1553,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1562,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster template revision ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1571,7 @@ The following state arguments are supported:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1580,7 @@ The following state arguments are supported:
 <a href="#questions_python" style="color: inherit; text-decoration: inherit;">questions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionquestion">Sequence[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionquestion">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template questions (list)
 {{% /md %}}</dd></dl>
@@ -1788,7 +1819,7 @@ The following state arguments are supported:
 <a href="#rkeconfig_nodejs" style="color: inherit; text-decoration: inherit;">rke<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Rancher Kubernetes Engine Config (list maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1828,7 @@ The following state arguments are supported:
 <a href="#clusterauthendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Auth<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Local cluster auth endpoint (list maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1837,7 @@ The following state arguments are supported:
 <a href="#defaultclusterroleforprojectmembers_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cluster<wbr>Role<wbr>For<wbr>Project<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default cluster role for project members (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1846,7 @@ The following state arguments are supported:
 <a href="#defaultpodsecuritypolicytemplateid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default pod security policy template ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1855,7 @@ The following state arguments are supported:
 <a href="#desiredagentimage_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Agent<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Desired agent image (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1864,7 @@ The following state arguments are supported:
 <a href="#desiredauthimage_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Auth<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Desired auth image (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1873,7 @@ The following state arguments are supported:
 <a href="#dockerrootdir_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Root<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Desired auth image (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1882,7 @@ The following state arguments are supported:
 <a href="#enableclusteralerting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cluster<wbr>Alerting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable built-in cluster alerting. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1891,7 @@ The following state arguments are supported:
 <a href="#enableclustermonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cluster<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable built-in cluster monitoring. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1900,7 @@ The following state arguments are supported:
 <a href="#enablenetworkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Network<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1909,7 @@ The following state arguments are supported:
 <a href="#scheduledclusterscan_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Cluster<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1918,7 @@ The following state arguments are supported:
 <a href="#windowspreferedcluster_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Prefered<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Windows prefered cluster. Default: `false` (bool)
 {{% /md %}}</dd></dl>
@@ -1900,7 +1931,7 @@ The following state arguments are supported:
 <a href="#rke_config_python" style="color: inherit; text-decoration: inherit;">rke_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rancher Kubernetes Engine Config (list maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1940,7 @@ The following state arguments are supported:
 <a href="#cluster_auth_endpoint_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>auth_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Local cluster auth endpoint (list maxitems: 1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1949,7 @@ The following state arguments are supported:
 <a href="#default_cluster_role_for_project_members_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cluster_<wbr>role_<wbr>for_<wbr>project_<wbr>members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default cluster role for project members (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +1958,7 @@ The following state arguments are supported:
 <a href="#default_pod_security_policy_template_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default pod security policy template ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +1967,7 @@ The following state arguments are supported:
 <a href="#desired_agent_image_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>agent_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Desired agent image (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +1976,7 @@ The following state arguments are supported:
 <a href="#desired_auth_image_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>auth_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Desired auth image (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1954,7 +1985,7 @@ The following state arguments are supported:
 <a href="#docker_root_dir_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>root_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Desired auth image (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1963,7 +1994,7 @@ The following state arguments are supported:
 <a href="#enable_cluster_alerting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cluster_<wbr>alerting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable built-in cluster alerting. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +2003,7 @@ The following state arguments are supported:
 <a href="#enable_cluster_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cluster_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable built-in cluster monitoring. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1981,7 +2012,7 @@ The following state arguments are supported:
 <a href="#enable_network_policy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>network_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1990,7 +2021,7 @@ The following state arguments are supported:
 <a href="#scheduled_cluster_scan_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>cluster_<wbr>scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1999,7 +2030,7 @@ The following state arguments are supported:
 <a href="#windows_prefered_cluster_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>prefered_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Windows prefered cluster. Default: `false` (bool)
 {{% /md %}}</dd></dl>
@@ -2072,7 +2103,7 @@ The following state arguments are supported:
 <a href="#cacerts_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2080,7 +2111,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2120,7 @@ The following state arguments are supported:
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2101,7 +2132,7 @@ The following state arguments are supported:
 <a href="#ca_certs_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2140,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2149,7 @@ The following state arguments are supported:
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2492,7 +2523,7 @@ The following state arguments are supported:
 <a href="#addonjobtimeout_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Job<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2500,7 +2531,7 @@ The following state arguments are supported:
 <a href="#addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2508,7 +2539,7 @@ The following state arguments are supported:
 <a href="#addonsincludes_nodejs" style="color: inherit; text-decoration: inherit;">addons<wbr>Includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2516,7 +2547,7 @@ The following state arguments are supported:
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2524,7 +2555,7 @@ The following state arguments are supported:
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2532,7 +2563,7 @@ The following state arguments are supported:
 <a href="#bastionhost_nodejs" style="color: inherit; text-decoration: inherit;">bastion<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2540,7 +2571,7 @@ The following state arguments are supported:
 <a href="#cloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2548,7 +2579,7 @@ The following state arguments are supported:
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2556,7 +2587,7 @@ The following state arguments are supported:
 <a href="#ignoredockerversion_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Docker<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2564,7 +2595,7 @@ The following state arguments are supported:
 <a href="#ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2572,7 +2603,7 @@ The following state arguments are supported:
 <a href="#kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2580,7 +2611,7 @@ The following state arguments are supported:
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2619,7 @@ The following state arguments are supported:
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2627,7 @@ The following state arguments are supported:
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignode">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node[]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignode">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2635,7 @@ The following state arguments are supported:
 <a href="#prefixpath_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2612,7 +2643,7 @@ The following state arguments are supported:
 <a href="#privateregistries_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry[]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2620,7 +2651,7 @@ The following state arguments are supported:
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2628,7 +2659,7 @@ The following state arguments are supported:
 <a href="#sshagentauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Agent<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2636,7 +2667,7 @@ The following state arguments are supported:
 <a href="#sshcertpath_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Cert<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2644,7 +2675,7 @@ The following state arguments are supported:
 <a href="#sshkeypath_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2683,7 @@ The following state arguments are supported:
 <a href="#upgradestrategy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2660,7 +2691,7 @@ The following state arguments are supported:
 <a href="#winprefixpath_nodejs" style="color: inherit; text-decoration: inherit;">win<wbr>Prefix<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2672,7 +2703,7 @@ The following state arguments are supported:
 <a href="#addon_job_timeout_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>job_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2680,7 +2711,7 @@ The following state arguments are supported:
 <a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2688,7 +2719,7 @@ The following state arguments are supported:
 <a href="#addons_includes_python" style="color: inherit; text-decoration: inherit;">addons_<wbr>includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2696,7 +2727,7 @@ The following state arguments are supported:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2704,7 +2735,7 @@ The following state arguments are supported:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2743,7 @@ The following state arguments are supported:
 <a href="#bastion_host_python" style="color: inherit; text-decoration: inherit;">bastion_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2720,7 +2751,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2728,7 +2759,7 @@ The following state arguments are supported:
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2736,7 +2767,7 @@ The following state arguments are supported:
 <a href="#ignore_docker_version_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>docker_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2775,7 @@ The following state arguments are supported:
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2752,7 +2783,7 @@ The following state arguments are supported:
 <a href="#kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2760,7 +2791,7 @@ The following state arguments are supported:
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2768,7 +2799,7 @@ The following state arguments are supported:
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2776,7 +2807,7 @@ The following state arguments are supported:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignode">Sequence[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignode">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2784,7 +2815,7 @@ The following state arguments are supported:
 <a href="#prefix_path_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2792,7 +2823,7 @@ The following state arguments are supported:
 <a href="#private_registries_python" style="color: inherit; text-decoration: inherit;">private_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Sequence[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2800,7 +2831,7 @@ The following state arguments are supported:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2808,7 +2839,7 @@ The following state arguments are supported:
 <a href="#ssh_agent_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>agent_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2816,7 +2847,7 @@ The following state arguments are supported:
 <a href="#ssh_cert_path_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>cert_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2824,7 +2855,7 @@ The following state arguments are supported:
 <a href="#ssh_key_path_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2832,7 +2863,7 @@ The following state arguments are supported:
 <a href="#upgrade_strategy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2840,7 +2871,7 @@ The following state arguments are supported:
 <a href="#win_prefix_path_python" style="color: inherit; text-decoration: inherit;">win_<wbr>prefix_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2894,7 +2925,7 @@ The following state arguments are supported:
 <a href="#sans_nodejs" style="color: inherit; text-decoration: inherit;">sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2902,7 +2933,7 @@ The following state arguments are supported:
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2914,7 +2945,7 @@ The following state arguments are supported:
 <a href="#sans_python" style="color: inherit; text-decoration: inherit;">sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2922,7 +2953,7 @@ The following state arguments are supported:
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2976,7 +3007,7 @@ The following state arguments are supported:
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2984,7 +3015,7 @@ The following state arguments are supported:
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2996,7 +3027,7 @@ The following state arguments are supported:
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3004,7 +3035,7 @@ The following state arguments are supported:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3122,7 +3153,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3130,7 +3161,7 @@ The following state arguments are supported:
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3138,7 +3169,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3146,7 +3177,7 @@ The following state arguments are supported:
 <a href="#sshagentauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Agent<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3154,7 +3185,7 @@ The following state arguments are supported:
 <a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3162,7 +3193,7 @@ The following state arguments are supported:
 <a href="#sshkeypath_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3174,7 +3205,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3182,7 +3213,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3190,7 +3221,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3198,7 +3229,7 @@ The following state arguments are supported:
 <a href="#ssh_agent_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>agent_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3206,7 +3237,7 @@ The following state arguments are supported:
 <a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3214,7 +3245,7 @@ The following state arguments are supported:
 <a href="#ssh_key_path_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3334,7 +3365,7 @@ The following state arguments are supported:
 <a href="#awscloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3342,7 +3373,7 @@ The following state arguments are supported:
 <a href="#azurecloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3350,7 +3381,7 @@ The following state arguments are supported:
 <a href="#customcloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3358,7 +3389,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3367,7 +3398,7 @@ The following state arguments are supported:
 <a href="#openstackcloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">openstack<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3375,7 +3406,7 @@ The following state arguments are supported:
 <a href="#vspherecloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3387,7 +3418,7 @@ The following state arguments are supported:
 <a href="#aws_cloud_provider_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3395,7 +3426,7 @@ The following state arguments are supported:
 <a href="#azure_cloud_provider_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3403,7 +3434,7 @@ The following state arguments are supported:
 <a href="#custom_cloud_provider_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3411,7 +3442,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3420,7 +3451,7 @@ The following state arguments are supported:
 <a href="#openstack_cloud_provider_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3428,7 +3459,7 @@ The following state arguments are supported:
 <a href="#vsphere_cloud_provider_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3482,7 +3513,7 @@ The following state arguments are supported:
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3490,7 +3521,7 @@ The following state arguments are supported:
 <a href="#serviceoverrides_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3502,7 +3533,7 @@ The following state arguments are supported:
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3510,7 +3541,7 @@ The following state arguments are supported:
 <a href="#service_overrides_python" style="color: inherit; text-decoration: inherit;">service_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Sequence[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3692,7 +3723,7 @@ The following state arguments are supported:
 <a href="#disablesecuritygroupingress_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Security<wbr>Group<wbr>Ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3700,7 +3731,7 @@ The following state arguments are supported:
 <a href="#disablestrictzonecheck_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Strict<wbr>Zone<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3708,7 +3739,7 @@ The following state arguments are supported:
 <a href="#elbsecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">elb<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3716,7 +3747,7 @@ The following state arguments are supported:
 <a href="#kubernetesclusterid_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3724,7 +3755,7 @@ The following state arguments are supported:
 <a href="#kubernetesclustertag_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Cluster<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3732,7 +3763,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3740,7 +3771,7 @@ The following state arguments are supported:
 <a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3748,7 +3779,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3756,7 +3787,7 @@ The following state arguments are supported:
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3764,7 +3795,7 @@ The following state arguments are supported:
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3776,7 +3807,7 @@ The following state arguments are supported:
 <a href="#disable_security_group_ingress_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>security_<wbr>group_<wbr>ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3784,7 +3815,7 @@ The following state arguments are supported:
 <a href="#disable_strict_zone_check_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>strict_<wbr>zone_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3792,7 +3823,7 @@ The following state arguments are supported:
 <a href="#elb_security_group_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3800,7 +3831,7 @@ The following state arguments are supported:
 <a href="#kubernetes_cluster_id_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3808,7 +3839,7 @@ The following state arguments are supported:
 <a href="#kubernetes_cluster_tag_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>cluster_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3816,7 +3847,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3824,7 +3855,7 @@ The following state arguments are supported:
 <a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3832,7 +3863,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3840,7 +3871,7 @@ The following state arguments are supported:
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3848,7 +3879,7 @@ The following state arguments are supported:
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3966,7 +3997,7 @@ The following state arguments are supported:
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3974,7 +4005,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3982,7 +4013,7 @@ The following state arguments are supported:
 <a href="#signingmethod_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3990,7 +4021,7 @@ The following state arguments are supported:
 <a href="#signingname_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3998,7 +4029,7 @@ The following state arguments are supported:
 <a href="#signingregion_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4006,7 +4037,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4018,7 +4049,7 @@ The following state arguments are supported:
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4026,7 +4057,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4034,7 +4065,7 @@ The following state arguments are supported:
 <a href="#signing_method_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4042,7 +4073,7 @@ The following state arguments are supported:
 <a href="#signing_name_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4050,7 +4081,7 @@ The following state arguments are supported:
 <a href="#signing_region_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4058,7 +4089,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4544,7 +4575,7 @@ The following state arguments are supported:
 <a href="#aadclientid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4552,7 +4583,7 @@ The following state arguments are supported:
 <a href="#aadclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4560,7 +4591,7 @@ The following state arguments are supported:
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4568,7 +4599,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4576,7 +4607,7 @@ The following state arguments are supported:
 <a href="#aadclientcertpassword_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Client<wbr>Cert<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4584,7 +4615,7 @@ The following state arguments are supported:
 <a href="#aadclientcertpath_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Client<wbr>Cert<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4592,7 +4623,7 @@ The following state arguments are supported:
 <a href="#cloud_nodejs" style="color: inherit; text-decoration: inherit;">cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4600,7 +4631,7 @@ The following state arguments are supported:
 <a href="#cloudproviderbackoff_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4608,7 +4639,7 @@ The following state arguments are supported:
 <a href="#cloudproviderbackoffduration_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4616,7 +4647,7 @@ The following state arguments are supported:
 <a href="#cloudproviderbackoffexponent_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider<wbr>Backoff<wbr>Exponent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4624,7 +4655,7 @@ The following state arguments are supported:
 <a href="#cloudproviderbackoffjitter_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider<wbr>Backoff<wbr>Jitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4632,7 +4663,7 @@ The following state arguments are supported:
 <a href="#cloudproviderbackoffretries_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider<wbr>Backoff<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4640,7 +4671,7 @@ The following state arguments are supported:
 <a href="#cloudproviderratelimit_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider<wbr>Rate<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4648,7 +4679,7 @@ The following state arguments are supported:
 <a href="#cloudproviderratelimitbucket_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4656,7 +4687,7 @@ The following state arguments are supported:
 <a href="#cloudproviderratelimitqps_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Qps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4664,7 +4695,7 @@ The following state arguments are supported:
 <a href="#loadbalancersku_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4672,7 +4703,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4680,7 +4711,7 @@ The following state arguments are supported:
 <a href="#maximumloadbalancerrulecount_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Load<wbr>Balancer<wbr>Rule<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4688,7 +4719,7 @@ The following state arguments are supported:
 <a href="#primaryavailabilitysetname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Availability<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4696,7 +4727,7 @@ The following state arguments are supported:
 <a href="#primaryscalesetname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Scale<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4704,7 +4735,7 @@ The following state arguments are supported:
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4712,7 +4743,7 @@ The following state arguments are supported:
 <a href="#routetablename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4720,7 +4751,7 @@ The following state arguments are supported:
 <a href="#securitygroupname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4728,7 +4759,7 @@ The following state arguments are supported:
 <a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4736,7 +4767,7 @@ The following state arguments are supported:
 <a href="#useinstancemetadata_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Instance<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4744,7 +4775,7 @@ The following state arguments are supported:
 <a href="#usemanagedidentityextension_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Managed<wbr>Identity<wbr>Extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4752,7 +4783,7 @@ The following state arguments are supported:
 <a href="#vmtype_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4760,7 +4791,7 @@ The following state arguments are supported:
 <a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4768,7 +4799,7 @@ The following state arguments are supported:
 <a href="#vnetresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4780,7 +4811,7 @@ The following state arguments are supported:
 <a href="#aad_client_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4788,7 +4819,7 @@ The following state arguments are supported:
 <a href="#aad_client_secret_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4796,7 +4827,7 @@ The following state arguments are supported:
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4804,7 +4835,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4812,7 +4843,7 @@ The following state arguments are supported:
 <a href="#aad_client_cert_password_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>client_<wbr>cert_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4820,7 +4851,7 @@ The following state arguments are supported:
 <a href="#aad_client_cert_path_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>client_<wbr>cert_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4828,7 +4859,7 @@ The following state arguments are supported:
 <a href="#cloud_python" style="color: inherit; text-decoration: inherit;">cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4836,7 +4867,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4844,7 +4875,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_duration_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4852,7 +4883,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_exponent_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>exponent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4860,7 +4891,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_jitter_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>jitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4868,7 +4899,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_backoff_retries_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>backoff_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4876,7 +4907,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_rate_limit_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>rate_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4884,7 +4915,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_rate_limit_bucket_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>rate_<wbr>limit_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4892,7 +4923,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_rate_limit_qps_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider_<wbr>rate_<wbr>limit_<wbr>qps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4900,7 +4931,7 @@ The following state arguments are supported:
 <a href="#load_balancer_sku_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4908,7 +4939,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4916,7 +4947,7 @@ The following state arguments are supported:
 <a href="#maximum_load_balancer_rule_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>load_<wbr>balancer_<wbr>rule_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4924,7 +4955,7 @@ The following state arguments are supported:
 <a href="#primary_availability_set_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>availability_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4932,7 +4963,7 @@ The following state arguments are supported:
 <a href="#primary_scale_set_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>scale_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4940,7 +4971,7 @@ The following state arguments are supported:
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4948,7 +4979,7 @@ The following state arguments are supported:
 <a href="#route_table_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4956,7 +4987,7 @@ The following state arguments are supported:
 <a href="#security_group_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4964,7 +4995,7 @@ The following state arguments are supported:
 <a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4972,7 +5003,7 @@ The following state arguments are supported:
 <a href="#use_instance_metadata_python" style="color: inherit; text-decoration: inherit;">use_<wbr>instance_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4980,7 +5011,7 @@ The following state arguments are supported:
 <a href="#use_managed_identity_extension_python" style="color: inherit; text-decoration: inherit;">use_<wbr>managed_<wbr>identity_<wbr>extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4988,7 +5019,7 @@ The following state arguments are supported:
 <a href="#vm_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4996,7 +5027,7 @@ The following state arguments are supported:
 <a href="#vnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5004,7 +5035,7 @@ The following state arguments are supported:
 <a href="#vnet_resource_group_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5106,7 +5137,7 @@ The following state arguments are supported:
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5114,7 +5145,7 @@ The following state arguments are supported:
 <a href="#blockstorage_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5122,7 +5153,7 @@ The following state arguments are supported:
 <a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5130,7 +5161,7 @@ The following state arguments are supported:
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5138,7 +5169,7 @@ The following state arguments are supported:
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5150,7 +5181,7 @@ The following state arguments are supported:
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5158,7 +5189,7 @@ The following state arguments are supported:
 <a href="#block_storage_python" style="color: inherit; text-decoration: inherit;">block_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5166,7 +5197,7 @@ The following state arguments are supported:
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5174,7 +5205,7 @@ The following state arguments are supported:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5182,7 +5213,7 @@ The following state arguments are supported:
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5252,7 +5283,7 @@ The following state arguments are supported:
 <a href="#bsversion_nodejs" style="color: inherit; text-decoration: inherit;">bs<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5260,7 +5291,7 @@ The following state arguments are supported:
 <a href="#ignorevolumeaz_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Volume<wbr>Az</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5268,7 +5299,7 @@ The following state arguments are supported:
 <a href="#trustdevicepath_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Device<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5280,7 +5311,7 @@ The following state arguments are supported:
 <a href="#bs_version_python" style="color: inherit; text-decoration: inherit;">bs_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5288,7 +5319,7 @@ The following state arguments are supported:
 <a href="#ignore_volume_az_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>volume_<wbr>az</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5296,7 +5327,7 @@ The following state arguments are supported:
 <a href="#trust_device_path_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>device_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5478,7 +5509,7 @@ The following state arguments are supported:
 <a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5486,7 +5517,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5494,7 +5525,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5502,7 +5533,7 @@ The following state arguments are supported:
 <a href="#cafile_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5510,7 +5541,7 @@ The following state arguments are supported:
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5518,7 +5549,7 @@ The following state arguments are supported:
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5526,7 +5557,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5534,7 +5565,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5542,7 +5573,7 @@ The following state arguments are supported:
 <a href="#tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5550,7 +5581,7 @@ The following state arguments are supported:
 <a href="#trustid_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5562,7 +5593,7 @@ The following state arguments are supported:
 <a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5570,7 +5601,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5578,7 +5609,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5586,7 +5617,7 @@ The following state arguments are supported:
 <a href="#ca_file_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5594,7 +5625,7 @@ The following state arguments are supported:
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5602,7 +5633,7 @@ The following state arguments are supported:
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5610,7 +5641,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5618,7 +5649,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5626,7 +5657,7 @@ The following state arguments are supported:
 <a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5634,7 +5665,7 @@ The following state arguments are supported:
 <a href="#trust_id_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5832,7 +5863,7 @@ The following state arguments are supported:
 <a href="#createmonitor_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5840,7 +5871,7 @@ The following state arguments are supported:
 <a href="#floatingnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5848,7 +5879,7 @@ The following state arguments are supported:
 <a href="#lbmethod_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5856,7 +5887,7 @@ The following state arguments are supported:
 <a href="#lbprovider_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5864,7 +5895,7 @@ The following state arguments are supported:
 <a href="#lbversion_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5872,7 +5903,7 @@ The following state arguments are supported:
 <a href="#managesecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5880,7 +5911,7 @@ The following state arguments are supported:
 <a href="#monitordelay_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5888,7 +5919,7 @@ The following state arguments are supported:
 <a href="#monitormaxretries_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5896,7 +5927,7 @@ The following state arguments are supported:
 <a href="#monitortimeout_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5904,7 +5935,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5912,7 +5943,7 @@ The following state arguments are supported:
 <a href="#useoctavia_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Octavia</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5924,7 +5955,7 @@ The following state arguments are supported:
 <a href="#create_monitor_python" style="color: inherit; text-decoration: inherit;">create_<wbr>monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5932,7 +5963,7 @@ The following state arguments are supported:
 <a href="#floating_network_id_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5940,7 +5971,7 @@ The following state arguments are supported:
 <a href="#lb_method_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5948,7 +5979,7 @@ The following state arguments are supported:
 <a href="#lb_provider_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5956,7 +5987,7 @@ The following state arguments are supported:
 <a href="#lb_version_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5964,7 +5995,7 @@ The following state arguments are supported:
 <a href="#manage_security_groups_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5972,7 +6003,7 @@ The following state arguments are supported:
 <a href="#monitor_delay_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5980,7 +6011,7 @@ The following state arguments are supported:
 <a href="#monitor_max_retries_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5988,7 +6019,7 @@ The following state arguments are supported:
 <a href="#monitor_timeout_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5996,7 +6027,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6004,7 +6035,7 @@ The following state arguments are supported:
 <a href="#use_octavia_python" style="color: inherit; text-decoration: inherit;">use_<wbr>octavia</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6058,7 +6089,7 @@ The following state arguments are supported:
 <a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6066,7 +6097,7 @@ The following state arguments are supported:
 <a href="#searchorder_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6078,7 +6109,7 @@ The following state arguments are supported:
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6086,7 +6117,7 @@ The following state arguments are supported:
 <a href="#search_order_python" style="color: inherit; text-decoration: inherit;">search_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6124,7 +6155,7 @@ The following state arguments are supported:
 <a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6136,7 +6167,7 @@ The following state arguments are supported:
 <a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6238,7 +6269,7 @@ The following state arguments are supported:
 <a href="#virtualcenters_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Centers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center[]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6246,7 +6277,7 @@ The following state arguments are supported:
 <a href="#workspace_nodejs" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6254,7 +6285,7 @@ The following state arguments are supported:
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6262,7 +6293,7 @@ The following state arguments are supported:
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6270,7 +6301,7 @@ The following state arguments are supported:
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6282,7 +6313,7 @@ The following state arguments are supported:
 <a href="#virtual_centers_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>centers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Sequence[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6290,7 +6321,7 @@ The following state arguments are supported:
 <a href="#workspace_python" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6298,7 +6329,7 @@ The following state arguments are supported:
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6306,7 +6337,7 @@ The following state arguments are supported:
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6314,7 +6345,7 @@ The following state arguments are supported:
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6352,7 +6383,7 @@ The following state arguments are supported:
 <a href="#scsicontrollertype_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6364,7 +6395,7 @@ The following state arguments are supported:
 <a href="#scsi_controller_type_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>controller_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6482,7 +6513,7 @@ The following state arguments are supported:
 <a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6490,7 +6521,7 @@ The following state arguments are supported:
 <a href="#insecureflag_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6498,7 +6529,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6506,7 +6537,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6514,7 +6545,7 @@ The following state arguments are supported:
 <a href="#soaproundtripcount_nodejs" style="color: inherit; text-decoration: inherit;">soap<wbr>Roundtrip<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6522,7 +6553,7 @@ The following state arguments are supported:
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6534,7 +6565,7 @@ The following state arguments are supported:
 <a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6542,7 +6573,7 @@ The following state arguments are supported:
 <a href="#insecure_flag_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6550,7 +6581,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6558,7 +6589,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6566,7 +6597,7 @@ The following state arguments are supported:
 <a href="#soap_roundtrip_count_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>roundtrip_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6574,7 +6605,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6612,7 +6643,7 @@ The following state arguments are supported:
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6624,7 +6655,7 @@ The following state arguments are supported:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6744,7 +6775,7 @@ The following state arguments are supported:
 <a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6752,7 +6783,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -6761,7 +6792,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6769,7 +6800,7 @@ The following state arguments are supported:
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6777,7 +6808,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6785,7 +6816,7 @@ The following state arguments are supported:
 <a href="#soaproundtripcount_nodejs" style="color: inherit; text-decoration: inherit;">soap<wbr>Roundtrip<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6797,7 +6828,7 @@ The following state arguments are supported:
 <a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6805,7 +6836,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -6814,7 +6845,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6822,7 +6853,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6830,7 +6861,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6838,7 +6869,7 @@ The following state arguments are supported:
 <a href="#soap_roundtrip_count_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>roundtrip_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6940,7 +6971,7 @@ The following state arguments are supported:
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6948,7 +6979,7 @@ The following state arguments are supported:
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6956,7 +6987,7 @@ The following state arguments are supported:
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6964,7 +6995,7 @@ The following state arguments are supported:
 <a href="#defaultdatastore_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Datastore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6972,7 +7003,7 @@ The following state arguments are supported:
 <a href="#resourcepoolpath_nodejs" style="color: inherit; text-decoration: inherit;">resourcepool<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6984,7 +7015,7 @@ The following state arguments are supported:
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6992,7 +7023,7 @@ The following state arguments are supported:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7000,7 +7031,7 @@ The following state arguments are supported:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7008,7 +7039,7 @@ The following state arguments are supported:
 <a href="#default_datastore_python" style="color: inherit; text-decoration: inherit;">default_<wbr>datastore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7016,7 +7047,7 @@ The following state arguments are supported:
 <a href="#resourcepool_path_python" style="color: inherit; text-decoration: inherit;">resourcepool_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7150,7 +7181,7 @@ The following state arguments are supported:
 <a href="#linearautoscalerparams_nodejs" style="color: inherit; text-decoration: inherit;">linear<wbr>Autoscaler<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7158,7 +7189,7 @@ The following state arguments are supported:
 <a href="#nodeselector_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7166,7 +7197,7 @@ The following state arguments are supported:
 <a href="#nodelocal_nodejs" style="color: inherit; text-decoration: inherit;">nodelocal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7174,7 +7205,7 @@ The following state arguments are supported:
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7182,7 +7213,7 @@ The following state arguments are supported:
 <a href="#reversecidrs_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7190,7 +7221,7 @@ The following state arguments are supported:
 <a href="#updatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7198,7 +7229,7 @@ The following state arguments are supported:
 <a href="#upstreamnameservers_nodejs" style="color: inherit; text-decoration: inherit;">upstream<wbr>Nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7210,7 +7241,7 @@ The following state arguments are supported:
 <a href="#linear_autoscaler_params_python" style="color: inherit; text-decoration: inherit;">linear_<wbr>autoscaler_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7218,7 +7249,7 @@ The following state arguments are supported:
 <a href="#node_selector_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7226,7 +7257,7 @@ The following state arguments are supported:
 <a href="#nodelocal_python" style="color: inherit; text-decoration: inherit;">nodelocal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7234,7 +7265,7 @@ The following state arguments are supported:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7242,7 +7273,7 @@ The following state arguments are supported:
 <a href="#reverse_cidrs_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7250,7 +7281,7 @@ The following state arguments are supported:
 <a href="#update_strategy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7258,7 +7289,7 @@ The following state arguments are supported:
 <a href="#upstream_nameservers_python" style="color: inherit; text-decoration: inherit;">upstream_<wbr>nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7360,7 +7391,7 @@ The following state arguments are supported:
 <a href="#coresperreplica_nodejs" style="color: inherit; text-decoration: inherit;">cores<wbr>Per<wbr>Replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7368,7 +7399,7 @@ The following state arguments are supported:
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7376,7 +7407,7 @@ The following state arguments are supported:
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7384,7 +7415,7 @@ The following state arguments are supported:
 <a href="#nodesperreplica_nodejs" style="color: inherit; text-decoration: inherit;">nodes<wbr>Per<wbr>Replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7392,7 +7423,7 @@ The following state arguments are supported:
 <a href="#preventsinglepointfailure_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Single<wbr>Point<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7404,7 +7435,7 @@ The following state arguments are supported:
 <a href="#cores_per_replica_python" style="color: inherit; text-decoration: inherit;">cores_<wbr>per_<wbr>replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7412,7 +7443,7 @@ The following state arguments are supported:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7420,7 +7451,7 @@ The following state arguments are supported:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7428,7 +7459,7 @@ The following state arguments are supported:
 <a href="#nodes_per_replica_python" style="color: inherit; text-decoration: inherit;">nodes_<wbr>per_<wbr>replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7436,7 +7467,7 @@ The following state arguments are supported:
 <a href="#prevent_single_point_failure_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>single_<wbr>point_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7490,7 +7521,7 @@ The following state arguments are supported:
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7498,7 +7529,7 @@ The following state arguments are supported:
 <a href="#nodeselector_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7510,7 +7541,7 @@ The following state arguments are supported:
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7518,7 +7549,7 @@ The following state arguments are supported:
 <a href="#node_selector_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7572,7 +7603,7 @@ The following state arguments are supported:
 <a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7580,7 +7611,7 @@ The following state arguments are supported:
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7592,7 +7623,7 @@ The following state arguments are supported:
 <a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7600,7 +7631,7 @@ The following state arguments are supported:
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7654,7 +7685,7 @@ The following state arguments are supported:
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7662,7 +7693,7 @@ The following state arguments are supported:
 <a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7674,7 +7705,7 @@ The following state arguments are supported:
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7682,7 +7713,7 @@ The following state arguments are supported:
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7784,7 +7815,7 @@ The following state arguments are supported:
 <a href="#dnspolicy_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7792,7 +7823,7 @@ The following state arguments are supported:
 <a href="#extraargs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7800,7 +7831,7 @@ The following state arguments are supported:
 <a href="#nodeselector_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7808,7 +7839,7 @@ The following state arguments are supported:
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7816,7 +7847,7 @@ The following state arguments are supported:
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7828,7 +7859,7 @@ The following state arguments are supported:
 <a href="#dns_policy_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7836,7 +7867,7 @@ The following state arguments are supported:
 <a href="#extra_args_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7844,7 +7875,7 @@ The following state arguments are supported:
 <a href="#node_selector_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7852,7 +7883,7 @@ The following state arguments are supported:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7860,7 +7891,7 @@ The following state arguments are supported:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7962,7 +7993,7 @@ The following state arguments are supported:
 <a href="#nodeselector_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7970,7 +8001,7 @@ The following state arguments are supported:
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7978,7 +8009,7 @@ The following state arguments are supported:
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7986,7 +8017,7 @@ The following state arguments are supported:
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7994,7 +8025,7 @@ The following state arguments are supported:
 <a href="#updatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8006,7 +8037,7 @@ The following state arguments are supported:
 <a href="#node_selector_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8014,7 +8045,7 @@ The following state arguments are supported:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8022,7 +8053,7 @@ The following state arguments are supported:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8030,7 +8061,7 @@ The following state arguments are supported:
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8038,7 +8069,7 @@ The following state arguments are supported:
 <a href="#update_strategy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8092,7 +8123,7 @@ The following state arguments are supported:
 <a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8100,7 +8131,7 @@ The following state arguments are supported:
 <a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8112,7 +8143,7 @@ The following state arguments are supported:
 <a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8120,7 +8151,7 @@ The following state arguments are supported:
 <a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8174,7 +8205,7 @@ The following state arguments are supported:
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8182,7 +8213,7 @@ The following state arguments are supported:
 <a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8194,7 +8225,7 @@ The following state arguments are supported:
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8202,7 +8233,7 @@ The following state arguments are supported:
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8336,7 +8367,7 @@ The following state arguments are supported:
 <a href="#caliconetworkprovider_nodejs" style="color: inherit; text-decoration: inherit;">calico<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8344,7 +8375,7 @@ The following state arguments are supported:
 <a href="#canalnetworkprovider_nodejs" style="color: inherit; text-decoration: inherit;">canal<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8352,7 +8383,7 @@ The following state arguments are supported:
 <a href="#flannelnetworkprovider_nodejs" style="color: inherit; text-decoration: inherit;">flannel<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8360,7 +8391,7 @@ The following state arguments are supported:
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8368,7 +8399,7 @@ The following state arguments are supported:
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8376,7 +8407,7 @@ The following state arguments are supported:
 <a href="#plugin_nodejs" style="color: inherit; text-decoration: inherit;">plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8384,7 +8415,7 @@ The following state arguments are supported:
 <a href="#weavenetworkprovider_nodejs" style="color: inherit; text-decoration: inherit;">weave<wbr>Network<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8396,7 +8427,7 @@ The following state arguments are supported:
 <a href="#calico_network_provider_python" style="color: inherit; text-decoration: inherit;">calico_<wbr>network_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8404,7 +8435,7 @@ The following state arguments are supported:
 <a href="#canal_network_provider_python" style="color: inherit; text-decoration: inherit;">canal_<wbr>network_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8412,7 +8443,7 @@ The following state arguments are supported:
 <a href="#flannel_network_provider_python" style="color: inherit; text-decoration: inherit;">flannel_<wbr>network_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8420,7 +8451,7 @@ The following state arguments are supported:
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8428,7 +8459,7 @@ The following state arguments are supported:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8436,7 +8467,7 @@ The following state arguments are supported:
 <a href="#plugin_python" style="color: inherit; text-decoration: inherit;">plugin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8444,7 +8475,7 @@ The following state arguments are supported:
 <a href="#weave_network_provider_python" style="color: inherit; text-decoration: inherit;">weave_<wbr>network_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8482,7 +8513,7 @@ The following state arguments are supported:
 <a href="#cloudprovider_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8494,7 +8525,7 @@ The following state arguments are supported:
 <a href="#cloud_provider_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8532,7 +8563,7 @@ The following state arguments are supported:
 <a href="#iface_nodejs" style="color: inherit; text-decoration: inherit;">iface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8544,7 +8575,7 @@ The following state arguments are supported:
 <a href="#iface_python" style="color: inherit; text-decoration: inherit;">iface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8582,7 +8613,7 @@ The following state arguments are supported:
 <a href="#iface_nodejs" style="color: inherit; text-decoration: inherit;">iface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8594,7 +8625,7 @@ The following state arguments are supported:
 <a href="#iface_python" style="color: inherit; text-decoration: inherit;">iface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8632,7 +8663,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8644,7 +8675,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8860,7 +8891,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8868,7 +8899,7 @@ The following state arguments are supported:
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8876,7 +8907,7 @@ The following state arguments are supported:
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8884,7 +8915,7 @@ The following state arguments are supported:
 <a href="#dockersocket_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8892,7 +8923,7 @@ The following state arguments are supported:
 <a href="#hostnameoverride_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8900,7 +8931,7 @@ The following state arguments are supported:
 <a href="#internaladdress_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8908,7 +8939,7 @@ The following state arguments are supported:
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8917,7 +8948,7 @@ The following state arguments are supported:
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8925,7 +8956,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8933,7 +8964,7 @@ The following state arguments are supported:
 <a href="#sshagentauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Agent<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8941,7 +8972,7 @@ The following state arguments are supported:
 <a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8949,7 +8980,7 @@ The following state arguments are supported:
 <a href="#sshkeypath_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8961,7 +8992,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8969,7 +9000,7 @@ The following state arguments are supported:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8977,7 +9008,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8985,7 +9016,7 @@ The following state arguments are supported:
 <a href="#docker_socket_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8993,7 +9024,7 @@ The following state arguments are supported:
 <a href="#hostname_override_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9001,7 +9032,7 @@ The following state arguments are supported:
 <a href="#internal_address_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9009,7 +9040,7 @@ The following state arguments are supported:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9018,7 +9049,7 @@ The following state arguments are supported:
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9026,7 +9057,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9034,7 +9065,7 @@ The following state arguments are supported:
 <a href="#ssh_agent_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>agent_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9042,7 +9073,7 @@ The following state arguments are supported:
 <a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9050,7 +9081,7 @@ The following state arguments are supported:
 <a href="#ssh_key_path_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9136,7 +9167,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9144,7 +9175,7 @@ The following state arguments are supported:
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9152,7 +9183,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9160,7 +9191,7 @@ The following state arguments are supported:
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9172,7 +9203,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9180,7 +9211,7 @@ The following state arguments are supported:
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9188,7 +9219,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9196,7 +9227,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9314,7 +9345,7 @@ The following state arguments are supported:
 <a href="#etcd_nodejs" style="color: inherit; text-decoration: inherit;">etcd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9322,7 +9353,7 @@ The following state arguments are supported:
 <a href="#kubeapi_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9330,7 +9361,7 @@ The following state arguments are supported:
 <a href="#kubecontroller_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9338,7 +9369,7 @@ The following state arguments are supported:
 <a href="#kubelet_nodejs" style="color: inherit; text-decoration: inherit;">kubelet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9346,7 +9377,7 @@ The following state arguments are supported:
 <a href="#kubeproxy_nodejs" style="color: inherit; text-decoration: inherit;">kubeproxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9354,7 +9385,7 @@ The following state arguments are supported:
 <a href="#scheduler_nodejs" style="color: inherit; text-decoration: inherit;">scheduler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9366,7 +9397,7 @@ The following state arguments are supported:
 <a href="#etcd_python" style="color: inherit; text-decoration: inherit;">etcd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9374,7 +9405,7 @@ The following state arguments are supported:
 <a href="#kube_api_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9382,7 +9413,7 @@ The following state arguments are supported:
 <a href="#kube_controller_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9390,7 +9421,7 @@ The following state arguments are supported:
 <a href="#kubelet_python" style="color: inherit; text-decoration: inherit;">kubelet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9398,7 +9429,7 @@ The following state arguments are supported:
 <a href="#kubeproxy_python" style="color: inherit; text-decoration: inherit;">kubeproxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9406,7 +9437,7 @@ The following state arguments are supported:
 <a href="#scheduler_python" style="color: inherit; text-decoration: inherit;">scheduler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9668,7 +9699,7 @@ The following state arguments are supported:
 <a href="#backupconfig_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9676,7 +9707,7 @@ The following state arguments are supported:
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9684,7 +9715,7 @@ The following state arguments are supported:
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9692,7 +9723,7 @@ The following state arguments are supported:
 <a href="#creation_nodejs" style="color: inherit; text-decoration: inherit;">creation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9700,7 +9731,7 @@ The following state arguments are supported:
 <a href="#externalurls_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9708,7 +9739,7 @@ The following state arguments are supported:
 <a href="#extraargs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9716,7 +9747,7 @@ The following state arguments are supported:
 <a href="#extrabinds_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9724,7 +9755,7 @@ The following state arguments are supported:
 <a href="#extraenvs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9732,7 +9763,7 @@ The following state arguments are supported:
 <a href="#gid_nodejs" style="color: inherit; text-decoration: inherit;">gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9740,7 +9771,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9748,7 +9779,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9756,7 +9787,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9764,7 +9795,7 @@ The following state arguments are supported:
 <a href="#retention_nodejs" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9772,7 +9803,7 @@ The following state arguments are supported:
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9780,7 +9811,7 @@ The following state arguments are supported:
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9792,7 +9823,7 @@ The following state arguments are supported:
 <a href="#backup_config_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9800,7 +9831,7 @@ The following state arguments are supported:
 <a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9808,7 +9839,7 @@ The following state arguments are supported:
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9816,7 +9847,7 @@ The following state arguments are supported:
 <a href="#creation_python" style="color: inherit; text-decoration: inherit;">creation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9824,7 +9855,7 @@ The following state arguments are supported:
 <a href="#external_urls_python" style="color: inherit; text-decoration: inherit;">external_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9832,7 +9863,7 @@ The following state arguments are supported:
 <a href="#extra_args_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9840,7 +9871,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9848,7 +9879,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9856,7 +9887,7 @@ The following state arguments are supported:
 <a href="#gid_python" style="color: inherit; text-decoration: inherit;">gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9864,7 +9895,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9872,7 +9903,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9880,7 +9911,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9888,7 +9919,7 @@ The following state arguments are supported:
 <a href="#retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9896,7 +9927,7 @@ The following state arguments are supported:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9904,7 +9935,7 @@ The following state arguments are supported:
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10024,7 +10055,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -10033,7 +10064,7 @@ The following state arguments are supported:
 <a href="#intervalhours_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10041,7 +10072,7 @@ The following state arguments are supported:
 <a href="#retention_nodejs" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10049,7 +10080,7 @@ The following state arguments are supported:
 <a href="#s3backupconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10057,7 +10088,7 @@ The following state arguments are supported:
 <a href="#safetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">safe<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10065,7 +10096,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10077,7 +10108,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -10086,7 +10117,7 @@ The following state arguments are supported:
 <a href="#interval_hours_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10094,7 +10125,7 @@ The following state arguments are supported:
 <a href="#retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10102,7 +10133,7 @@ The following state arguments are supported:
 <a href="#s3_backup_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10110,7 +10141,7 @@ The following state arguments are supported:
 <a href="#safe_timestamp_python" style="color: inherit; text-decoration: inherit;">safe_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10118,7 +10149,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10252,7 +10283,7 @@ The following state arguments are supported:
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10260,7 +10291,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10268,7 +10299,7 @@ The following state arguments are supported:
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10276,7 +10307,7 @@ The following state arguments are supported:
 <a href="#customca_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10284,7 +10315,7 @@ The following state arguments are supported:
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10292,7 +10323,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10300,7 +10331,7 @@ The following state arguments are supported:
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10312,7 +10343,7 @@ The following state arguments are supported:
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10320,7 +10351,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10328,7 +10359,7 @@ The following state arguments are supported:
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10336,7 +10367,7 @@ The following state arguments are supported:
 <a href="#custom_ca_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10344,7 +10375,7 @@ The following state arguments are supported:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10352,7 +10383,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10360,7 +10391,7 @@ The following state arguments are supported:
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10574,7 +10605,7 @@ The following state arguments are supported:
 <a href="#admissionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10582,7 +10613,7 @@ The following state arguments are supported:
 <a href="#alwayspullimages_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pull<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10590,7 +10621,7 @@ The following state arguments are supported:
 <a href="#auditlog_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10598,7 +10629,7 @@ The following state arguments are supported:
 <a href="#eventratelimit_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rate<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10606,7 +10637,7 @@ The following state arguments are supported:
 <a href="#extraargs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10614,7 +10645,7 @@ The following state arguments are supported:
 <a href="#extrabinds_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10622,7 +10653,7 @@ The following state arguments are supported:
 <a href="#extraenvs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10630,7 +10661,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10638,7 +10669,7 @@ The following state arguments are supported:
 <a href="#podsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10646,7 +10677,7 @@ The following state arguments are supported:
 <a href="#secretsencryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">secrets<wbr>Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10654,7 +10685,7 @@ The following state arguments are supported:
 <a href="#serviceclusteriprange_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cluster<wbr>Ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10662,7 +10693,7 @@ The following state arguments are supported:
 <a href="#servicenodeportrange_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Node<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10674,7 +10705,7 @@ The following state arguments are supported:
 <a href="#admission_configuration_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10682,7 +10713,7 @@ The following state arguments are supported:
 <a href="#always_pull_images_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pull_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10690,7 +10721,7 @@ The following state arguments are supported:
 <a href="#audit_log_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10698,7 +10729,7 @@ The following state arguments are supported:
 <a href="#event_rate_limit_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rate_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10706,7 +10737,7 @@ The following state arguments are supported:
 <a href="#extra_args_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10714,7 +10745,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10722,7 +10753,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10730,7 +10761,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10738,7 +10769,7 @@ The following state arguments are supported:
 <a href="#pod_security_policy_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10746,7 +10777,7 @@ The following state arguments are supported:
 <a href="#secrets_encryption_config_python" style="color: inherit; text-decoration: inherit;">secrets_<wbr>encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10754,7 +10785,7 @@ The following state arguments are supported:
 <a href="#service_cluster_ip_range_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cluster_<wbr>ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10762,7 +10793,7 @@ The following state arguments are supported:
 <a href="#service_node_port_range_python" style="color: inherit; text-decoration: inherit;">service_<wbr>node_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10818,7 +10849,7 @@ The following state arguments are supported:
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10826,7 +10857,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -10839,7 +10870,7 @@ The following state arguments are supported:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10847,7 +10878,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -10966,7 +10997,7 @@ The following state arguments are supported:
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10974,7 +11005,7 @@ The following state arguments are supported:
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10982,7 +11013,7 @@ The following state arguments are supported:
 <a href="#maxbackup_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10990,7 +11021,7 @@ The following state arguments are supported:
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10998,7 +11029,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11006,7 +11037,7 @@ The following state arguments are supported:
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11018,7 +11049,7 @@ The following state arguments are supported:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11026,7 +11057,7 @@ The following state arguments are supported:
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11034,7 +11065,7 @@ The following state arguments are supported:
 <a href="#max_backup_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11042,7 +11073,7 @@ The following state arguments are supported:
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11050,7 +11081,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11058,7 +11089,7 @@ The following state arguments are supported:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11114,7 +11145,7 @@ The following state arguments are supported:
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11122,7 +11153,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -11135,7 +11166,7 @@ The following state arguments are supported:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11143,7 +11174,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -11200,7 +11231,7 @@ The following state arguments are supported:
 <a href="#customconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11208,7 +11239,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -11221,7 +11252,7 @@ The following state arguments are supported:
 <a href="#custom_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11229,7 +11260,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -11348,7 +11379,7 @@ The following state arguments are supported:
 <a href="#clustercidr_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11356,7 +11387,7 @@ The following state arguments are supported:
 <a href="#extraargs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11364,7 +11395,7 @@ The following state arguments are supported:
 <a href="#extrabinds_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11372,7 +11403,7 @@ The following state arguments are supported:
 <a href="#extraenvs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11380,7 +11411,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11388,7 +11419,7 @@ The following state arguments are supported:
 <a href="#serviceclusteriprange_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cluster<wbr>Ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11400,7 +11431,7 @@ The following state arguments are supported:
 <a href="#cluster_cidr_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11408,7 +11439,7 @@ The following state arguments are supported:
 <a href="#extra_args_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11416,7 +11447,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11424,7 +11455,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11432,7 +11463,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11440,7 +11471,7 @@ The following state arguments are supported:
 <a href="#service_cluster_ip_range_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cluster_<wbr>ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11606,7 +11637,7 @@ The following state arguments are supported:
 <a href="#clusterdnsserver_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Dns<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11614,7 +11645,7 @@ The following state arguments are supported:
 <a href="#clusterdomain_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11622,7 +11653,7 @@ The following state arguments are supported:
 <a href="#extraargs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11630,7 +11661,7 @@ The following state arguments are supported:
 <a href="#extrabinds_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11638,7 +11669,7 @@ The following state arguments are supported:
 <a href="#extraenvs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11646,7 +11677,7 @@ The following state arguments are supported:
 <a href="#failswapon_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Swap<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11654,7 +11685,7 @@ The following state arguments are supported:
 <a href="#generateservingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Serving<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11662,7 +11693,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11670,7 +11701,7 @@ The following state arguments are supported:
 <a href="#infracontainerimage_nodejs" style="color: inherit; text-decoration: inherit;">infra<wbr>Container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11682,7 +11713,7 @@ The following state arguments are supported:
 <a href="#cluster_dns_server_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>dns_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11690,7 +11721,7 @@ The following state arguments are supported:
 <a href="#cluster_domain_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11698,7 +11729,7 @@ The following state arguments are supported:
 <a href="#extra_args_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11706,7 +11737,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11714,7 +11745,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11722,7 +11753,7 @@ The following state arguments are supported:
 <a href="#fail_swap_on_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>swap_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11730,7 +11761,7 @@ The following state arguments are supported:
 <a href="#generate_serving_certificate_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>serving_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11738,7 +11769,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11746,7 +11777,7 @@ The following state arguments are supported:
 <a href="#infra_container_image_python" style="color: inherit; text-decoration: inherit;">infra_<wbr>container_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11832,7 +11863,7 @@ The following state arguments are supported:
 <a href="#extraargs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11840,7 +11871,7 @@ The following state arguments are supported:
 <a href="#extrabinds_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11848,7 +11879,7 @@ The following state arguments are supported:
 <a href="#extraenvs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11856,7 +11887,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11868,7 +11899,7 @@ The following state arguments are supported:
 <a href="#extra_args_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11876,7 +11907,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11884,7 +11915,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11892,7 +11923,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11978,7 +12009,7 @@ The following state arguments are supported:
 <a href="#extraargs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11986,7 +12017,7 @@ The following state arguments are supported:
 <a href="#extrabinds_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11994,7 +12025,7 @@ The following state arguments are supported:
 <a href="#extraenvs_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12002,7 +12033,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12014,7 +12045,7 @@ The following state arguments are supported:
 <a href="#extra_args_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12022,7 +12053,7 @@ The following state arguments are supported:
 <a href="#extra_binds_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>binds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12030,7 +12061,7 @@ The following state arguments are supported:
 <a href="#extra_envs_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12038,7 +12069,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12124,7 +12155,7 @@ The following state arguments are supported:
 <a href="#drain_nodejs" style="color: inherit; text-decoration: inherit;">drain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12132,7 +12163,7 @@ The following state arguments are supported:
 <a href="#draininput_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12140,7 +12171,7 @@ The following state arguments are supported:
 <a href="#maxunavailablecontrolplane_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Controlplane</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12148,7 +12179,7 @@ The following state arguments are supported:
 <a href="#maxunavailableworker_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Worker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12160,7 +12191,7 @@ The following state arguments are supported:
 <a href="#drain_python" style="color: inherit; text-decoration: inherit;">drain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12168,7 +12199,7 @@ The following state arguments are supported:
 <a href="#drain_input_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12176,7 +12207,7 @@ The following state arguments are supported:
 <a href="#max_unavailable_controlplane_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>controlplane</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12184,7 +12215,7 @@ The following state arguments are supported:
 <a href="#max_unavailable_worker_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>worker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12286,7 +12317,7 @@ The following state arguments are supported:
 <a href="#deletelocaldata_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Local<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12294,7 +12325,7 @@ The following state arguments are supported:
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12302,7 +12333,7 @@ The following state arguments are supported:
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12310,7 +12341,7 @@ The following state arguments are supported:
 <a href="#ignoredaemonsets_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Daemon<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12318,7 +12349,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12330,7 +12361,7 @@ The following state arguments are supported:
 <a href="#delete_local_data_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>local_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12338,7 +12369,7 @@ The following state arguments are supported:
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12346,7 +12377,7 @@ The following state arguments are supported:
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12354,7 +12385,7 @@ The following state arguments are supported:
 <a href="#ignore_daemon_sets_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>daemon_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12362,7 +12393,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12434,7 +12465,7 @@ The following state arguments are supported:
 <a href="#scanconfig_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12442,7 +12473,7 @@ The following state arguments are supported:
 <a href="#scheduleconfig_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12450,7 +12481,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -12463,7 +12494,7 @@ The following state arguments are supported:
 <a href="#scan_config_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12471,7 +12502,7 @@ The following state arguments are supported:
 <a href="#schedule_config_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12479,7 +12510,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd></dl>
@@ -12518,7 +12549,7 @@ The following state arguments are supported:
 <a href="#cisscanconfig_nodejs" style="color: inherit; text-decoration: inherit;">cis<wbr>Scan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">pulumi<wbr>Input<Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12530,7 +12561,7 @@ The following state arguments are supported:
 <a href="#cis_scan_config_python" style="color: inherit; text-decoration: inherit;">cis_<wbr>scan_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Input[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12632,7 +12663,7 @@ The following state arguments are supported:
 <a href="#debugmaster_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12640,7 +12671,7 @@ The following state arguments are supported:
 <a href="#debugworker_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Worker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12648,7 +12679,7 @@ The following state arguments are supported:
 <a href="#overridebenchmarkversion_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Benchmark<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12656,7 +12687,7 @@ The following state arguments are supported:
 <a href="#overrideskips_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Skips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12664,7 +12695,7 @@ The following state arguments are supported:
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12676,7 +12707,7 @@ The following state arguments are supported:
 <a href="#debug_master_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12684,7 +12715,7 @@ The following state arguments are supported:
 <a href="#debug_worker_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>worker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12692,7 +12723,7 @@ The following state arguments are supported:
 <a href="#override_benchmark_version_python" style="color: inherit; text-decoration: inherit;">override_<wbr>benchmark_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12700,7 +12731,7 @@ The following state arguments are supported:
 <a href="#override_skips_python" style="color: inherit; text-decoration: inherit;">override_<wbr>skips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12708,7 +12739,7 @@ The following state arguments are supported:
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12762,7 +12793,7 @@ The following state arguments are supported:
 <a href="#cronschedule_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12770,7 +12801,7 @@ The following state arguments are supported:
 <a href="#retention_nodejs" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12782,7 +12813,7 @@ The following state arguments are supported:
 <a href="#cron_schedule_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12790,7 +12821,7 @@ The following state arguments are supported:
 <a href="#retention_python" style="color: inherit; text-decoration: inherit;">retention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12884,7 +12915,7 @@ The following state arguments are supported:
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -12893,7 +12924,7 @@ The following state arguments are supported:
 <a href="#variable_nodejs" style="color: inherit; text-decoration: inherit;">variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Variable name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12902,7 +12933,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Required variable. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12911,7 +12942,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd></dl>
@@ -12924,7 +12955,7 @@ The following state arguments are supported:
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -12933,7 +12964,7 @@ The following state arguments are supported:
 <a href="#variable_python" style="color: inherit; text-decoration: inherit;">variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Variable name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12942,7 +12973,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Required variable. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -12951,7 +12982,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd></dl>

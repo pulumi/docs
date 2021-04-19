@@ -70,8 +70,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -208,8 +208,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -317,19 +317,50 @@ const myHetznerNodeTemplate = new rancher2.NodeTemplate("myHetznerNodeTemplate",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hetzner_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateHetznerConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeTemplateNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateAmazonec2ConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                 <span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateAzureConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateDigitaloceanConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                 <span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                 <span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                 <span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">hetzner_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateHetznerConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                 <span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateLinodeConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodeTemplateNodeTaintArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateOpennebulaConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateOpenstackConfigArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateVsphereConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[NodeTemplateArgs]</a></span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NodeTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -364,22 +395,32 @@ const myHetznerNodeTemplate = new rancher2.NodeTemplate("myHetznerNodeTemplate",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NodeTemplateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -388,7 +429,7 @@ const myHetznerNodeTemplate = new rancher2.NodeTemplate("myHetznerNodeTemplate",
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -412,7 +453,7 @@ const myHetznerNodeTemplate = new rancher2.NodeTemplate("myHetznerNodeTemplate",
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -925,7 +966,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#amazonec2config_nodejs" style="color: inherit; text-decoration: inherit;">amazonec2Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config</a></span>
+        <span class="property-type"><a href="#nodetemplateamazonec2config">pulumi<wbr>Input<Node<wbr>Template<wbr>Amazonec2Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +975,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +984,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authcertificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +993,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authkey_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +1002,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#azureconfig_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplateazureconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +1011,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cloudcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Credential<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -979,7 +1020,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -988,7 +1029,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#digitaloceanconfig_nodejs" style="color: inherit; text-decoration: inherit;">digitalocean<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +1038,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#driverid_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +1047,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engineenv_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1056,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engineinsecureregistries_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Insecure<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1065,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engineinstallurl_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Install<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +1074,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#enginelabel_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1042,7 +1083,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engineopt_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Opt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1051,7 +1092,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engineregistrymirrors_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Registry<wbr>Mirrors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1060,7 +1101,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#enginestoragedriver_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Storage<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +1110,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hetznerconfig_nodejs" style="color: inherit; text-decoration: inherit;">hetzner<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplatehetznerconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1119,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1128,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#linodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linode<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplatelinodeconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1137,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1146,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetaint">Node<wbr>Template<wbr>Node<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">pulumi<wbr>Input<pulumi<wbr>Input<Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1155,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#opennebulaconfig_nodejs" style="color: inherit; text-decoration: inherit;">opennebula<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplateopennebulaconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1123,7 +1164,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#openstackconfig_nodejs" style="color: inherit; text-decoration: inherit;">openstack<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplateopenstackconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1173,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#useinternalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Internal<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1182,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vsphereconfig_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplatevsphereconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -1154,7 +1195,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#amazonec2_config_python" style="color: inherit; text-decoration: inherit;">amazonec2_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplateamazonec2config">Input[Node<wbr>Template<wbr>Amazonec2Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1163,7 +1204,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1172,7 +1213,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#auth_certificate_authority_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1181,7 +1222,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#auth_key_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1190,7 +1231,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#azure_config_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplateazureconfig">Input[Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1199,7 +1240,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cloud_credential_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>credential_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1249,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1258,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#digitalocean_config_python" style="color: inherit; text-decoration: inherit;">digitalocean_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Input[Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1267,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#driver_id_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1276,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_env_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1285,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_insecure_registries_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>insecure_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1294,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_install_url_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>install_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1303,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_label_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1312,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_opt_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>opt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1321,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_registry_mirrors_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>registry_<wbr>mirrors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1330,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#engine_storage_driver_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>storage_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1339,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hetzner_config_python" style="color: inherit; text-decoration: inherit;">hetzner_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplatehetznerconfig">Input[Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1348,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1357,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#linode_config_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplatelinodeconfig">Input[Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1366,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1375,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetaint">Sequence[Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">Input[Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1384,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#opennebula_config_python" style="color: inherit; text-decoration: inherit;">opennebula_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Input[Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1393,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#openstack_config_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplateopenstackconfig">Input[Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1402,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#use_internal_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>internal_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1411,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vsphere_config_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplatevsphereconfig">Input[Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -1475,20 +1516,48 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NodeTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NodeTemplate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NodeTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NodeTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hetzner_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateHetznerConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeTemplateNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">) -&gt;</span> NodeTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateAmazonec2ConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateAzureConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateDigitaloceanConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">hetzner_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateHetznerConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateLinodeConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodeTemplateNodeTaintArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateOpennebulaConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateOpenstackConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodeTemplateVsphereConfigArgs]]</span> = None<span class="p">) -&gt;</span> NodeTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NodeTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NodeTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NodeTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NodeTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NodeTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NodeTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2073,7 +2142,7 @@ The following state arguments are supported:
 <a href="#state_amazonec2config_nodejs" style="color: inherit; text-decoration: inherit;">amazonec2Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config</a></span>
+        <span class="property-type"><a href="#nodetemplateamazonec2config">pulumi<wbr>Input<Node<wbr>Template<wbr>Amazonec2Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2082,7 +2151,7 @@ The following state arguments are supported:
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2091,7 +2160,7 @@ The following state arguments are supported:
 <a href="#state_authcertificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2100,7 +2169,7 @@ The following state arguments are supported:
 <a href="#state_authkey_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2178,7 @@ The following state arguments are supported:
 <a href="#state_azureconfig_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplateazureconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2187,7 @@ The following state arguments are supported:
 <a href="#state_cloudcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Credential<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2127,7 +2196,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2136,7 +2205,7 @@ The following state arguments are supported:
 <a href="#state_digitaloceanconfig_nodejs" style="color: inherit; text-decoration: inherit;">digitalocean<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2145,7 +2214,7 @@ The following state arguments are supported:
 <a href="#state_driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +2223,7 @@ The following state arguments are supported:
 <a href="#state_driverid_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2163,7 +2232,7 @@ The following state arguments are supported:
 <a href="#state_engineenv_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2172,7 +2241,7 @@ The following state arguments are supported:
 <a href="#state_engineinsecureregistries_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Insecure<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2181,7 +2250,7 @@ The following state arguments are supported:
 <a href="#state_engineinstallurl_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Install<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2190,7 +2259,7 @@ The following state arguments are supported:
 <a href="#state_enginelabel_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2199,7 +2268,7 @@ The following state arguments are supported:
 <a href="#state_engineopt_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Opt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2277,7 @@ The following state arguments are supported:
 <a href="#state_engineregistrymirrors_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Registry<wbr>Mirrors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2217,7 +2286,7 @@ The following state arguments are supported:
 <a href="#state_enginestoragedriver_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Storage<wbr>Driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2295,7 @@ The following state arguments are supported:
 <a href="#state_hetznerconfig_nodejs" style="color: inherit; text-decoration: inherit;">hetzner<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplatehetznerconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2304,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2244,7 +2313,7 @@ The following state arguments are supported:
 <a href="#state_linodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linode<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplatelinodeconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2322,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2331,7 @@ The following state arguments are supported:
 <a href="#state_nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetaint">Node<wbr>Template<wbr>Node<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">pulumi<wbr>Input<pulumi<wbr>Input<Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2340,7 @@ The following state arguments are supported:
 <a href="#state_opennebulaconfig_nodejs" style="color: inherit; text-decoration: inherit;">opennebula<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplateopennebulaconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2280,7 +2349,7 @@ The following state arguments are supported:
 <a href="#state_openstackconfig_nodejs" style="color: inherit; text-decoration: inherit;">openstack<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplateopenstackconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2289,7 +2358,7 @@ The following state arguments are supported:
 <a href="#state_useinternalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Internal<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2298,7 +2367,7 @@ The following state arguments are supported:
 <a href="#state_vsphereconfig_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodetemplatevsphereconfig">pulumi<wbr>Input<Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -2311,7 +2380,7 @@ The following state arguments are supported:
 <a href="#state_amazonec2_config_python" style="color: inherit; text-decoration: inherit;">amazonec2_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplateamazonec2config">Input[Node<wbr>Template<wbr>Amazonec2Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2320,7 +2389,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Template object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2329,7 +2398,7 @@ The following state arguments are supported:
 <a href="#state_auth_certificate_authority_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auth certificate authority for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2338,7 +2407,7 @@ The following state arguments are supported:
 <a href="#state_auth_key_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auth key for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2416,7 @@ The following state arguments are supported:
 <a href="#state_azure_config_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplateazureconfig">Input[Node<wbr>Template<wbr>Azure<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2356,7 +2425,7 @@ The following state arguments are supported:
 <a href="#state_cloud_credential_id_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>credential_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2365,7 +2434,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description for the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2374,7 +2443,7 @@ The following state arguments are supported:
 <a href="#state_digitalocean_config_python" style="color: inherit; text-decoration: inherit;">digitalocean_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplatedigitaloceanconfig">Input[Node<wbr>Template<wbr>Digitalocean<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Digitalocean config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2383,7 +2452,7 @@ The following state arguments are supported:
 <a href="#state_driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2392,7 +2461,7 @@ The following state arguments are supported:
 <a href="#state_driver_id_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The node driver id used by the node template. It's required if the node driver isn't built in Rancher (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2401,7 +2470,7 @@ The following state arguments are supported:
 <a href="#state_engine_env_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Engine environment for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2410,7 +2479,7 @@ The following state arguments are supported:
 <a href="#state_engine_insecure_registries_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>insecure_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Insecure registry for the node template (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2419,7 +2488,7 @@ The following state arguments are supported:
 <a href="#state_engine_install_url_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>install_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Docker engine install URL for the node template. Default `https://releases.rancher.com/install-docker/18.09.sh`. Available install docker versions at `https://github.com/rancher/install-docker` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2428,7 +2497,7 @@ The following state arguments are supported:
 <a href="#state_engine_label_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Engine label for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2437,7 +2506,7 @@ The following state arguments are supported:
 <a href="#state_engine_opt_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>opt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Engine options for the node template (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2446,7 +2515,7 @@ The following state arguments are supported:
 <a href="#state_engine_registry_mirrors_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>registry_<wbr>mirrors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Engine registry mirror for the node template (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2524,7 @@ The following state arguments are supported:
 <a href="#state_engine_storage_driver_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>storage_<wbr>driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2464,7 +2533,7 @@ The following state arguments are supported:
 <a href="#state_hetzner_config_python" style="color: inherit; text-decoration: inherit;">hetzner_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatehetznerconfig">Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplatehetznerconfig">Input[Node<wbr>Template<wbr>Hetzner<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hetzner config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2473,7 +2542,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Template object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2551,7 @@ The following state arguments are supported:
 <a href="#state_linode_config_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplatelinodeconfig">Input[Node<wbr>Template<wbr>Linode<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Linode config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2491,7 +2560,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2500,7 +2569,7 @@ The following state arguments are supported:
 <a href="#state_node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetaint">Sequence[Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">Input[Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2578,7 @@ The following state arguments are supported:
 <a href="#state_opennebula_config_python" style="color: inherit; text-decoration: inherit;">opennebula_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplateopennebulaconfig">Input[Node<wbr>Template<wbr>Opennebula<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opennebula config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2518,7 +2587,7 @@ The following state arguments are supported:
 <a href="#state_openstack_config_python" style="color: inherit; text-decoration: inherit;">openstack_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplateopenstackconfig">Input[Node<wbr>Template<wbr>Openstack<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Openstack config for the Node Template (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2527,7 +2596,7 @@ The following state arguments are supported:
 <a href="#state_use_internal_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>internal_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Engine storage driver for the node template (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2536,7 +2605,7 @@ The following state arguments are supported:
 <a href="#state_vsphere_config_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodetemplatevsphereconfig">Input[Node<wbr>Template<wbr>Vsphere<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Node Template (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -3162,7 +3231,7 @@ The following state arguments are supported:
 <a href="#ami_nodejs" style="color: inherit; text-decoration: inherit;">ami</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS machine image (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3171,7 +3240,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3180,7 +3249,7 @@ The following state arguments are supported:
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}AWS VPC security group. (list)
 {{% /md %}}</dd><dt class="property-required"
@@ -3189,7 +3258,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS VPC subnet id (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3198,7 +3267,7 @@ The following state arguments are supported:
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS VPC id. (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3207,7 +3276,7 @@ The following state arguments are supported:
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS zone for instance (i.e. a,b,c,d,e) (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3216,7 +3285,7 @@ The following state arguments are supported:
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3225,7 +3294,7 @@ The following state arguments are supported:
 <a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS spot instance duration in minutes (60, 120, 180, 240, 300, or 360). Default `0` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3234,7 +3303,7 @@ The following state arguments are supported:
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS root device name. Default `/dev/sda1` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3243,7 +3312,7 @@ The following state arguments are supported:
 <a href="#encryptebsvolume_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Ebs<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3252,7 +3321,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional endpoint URL (hostname only or fully qualified URI) (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3261,7 +3330,7 @@ The following state arguments are supported:
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS IAM Instance Profile (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3270,7 +3339,7 @@ The following state arguments are supported:
 <a href="#insecuretransport_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Disable SSL when sending requests (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3279,7 +3348,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3288,7 +3357,7 @@ The following state arguments are supported:
 <a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">keypair<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3297,7 +3366,7 @@ The following state arguments are supported:
 <a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3306,7 +3375,7 @@ The following state arguments are supported:
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3315,7 +3384,7 @@ The following state arguments are supported:
 <a href="#openports_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3324,7 +3393,7 @@ The following state arguments are supported:
 <a href="#privateaddressonly_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Address<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Only use a private IP address. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3333,7 +3402,7 @@ The following state arguments are supported:
 <a href="#requestspotinstance_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Spot<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this flag to request spot instance. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3342,7 +3411,7 @@ The following state arguments are supported:
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set retry count for recoverable failures (use -1 to disable). Default `5` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3351,7 +3420,7 @@ The following state arguments are supported:
 <a href="#rootsize_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS root disk size (in GB). Default `16` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3360,7 +3429,7 @@ The following state arguments are supported:
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3369,7 +3438,7 @@ The following state arguments are supported:
 <a href="#securitygroupreadonly_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Readonly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Skip adding default rules to security groups (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3378,7 +3447,7 @@ The following state arguments are supported:
 <a href="#sessiontoken_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS Session Token (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3387,7 +3456,7 @@ The following state arguments are supported:
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS spot instance bid price (in dollar). Default `0.50` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3396,7 +3465,7 @@ The following state arguments are supported:
 <a href="#sshkeypath_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keypath</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSH Key for Instance (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3405,7 +3474,7 @@ The following state arguments are supported:
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3414,7 +3483,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3423,7 +3492,7 @@ The following state arguments are supported:
 <a href="#useebsoptimizedinstance_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Create an EBS optimized instance. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3432,7 +3501,7 @@ The following state arguments are supported:
 <a href="#useprivateaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Force the usage of private IP address. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3441,7 +3510,7 @@ The following state arguments are supported:
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">userdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3450,7 +3519,7 @@ The following state arguments are supported:
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd></dl>
@@ -3463,7 +3532,7 @@ The following state arguments are supported:
 <a href="#ami_python" style="color: inherit; text-decoration: inherit;">ami</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS machine image (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3472,7 +3541,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3481,7 +3550,7 @@ The following state arguments are supported:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}AWS VPC security group. (list)
 {{% /md %}}</dd><dt class="property-required"
@@ -3490,7 +3559,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS VPC subnet id (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3499,7 +3568,7 @@ The following state arguments are supported:
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS VPC id. (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3508,7 +3577,7 @@ The following state arguments are supported:
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS zone for instance (i.e. a,b,c,d,e) (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3517,7 +3586,7 @@ The following state arguments are supported:
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS access key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3526,7 +3595,7 @@ The following state arguments are supported:
 <a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS spot instance duration in minutes (60, 120, 180, 240, 300, or 360). Default `0` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3535,7 +3604,7 @@ The following state arguments are supported:
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS root device name. Default `/dev/sda1` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3544,7 +3613,7 @@ The following state arguments are supported:
 <a href="#encrypt_ebs_volume_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>ebs_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Encrypt EBS volume. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3553,7 +3622,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional endpoint URL (hostname only or fully qualified URI) (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3562,7 +3631,7 @@ The following state arguments are supported:
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS IAM Instance Profile (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3571,7 +3640,7 @@ The following state arguments are supported:
 <a href="#insecure_transport_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Disable SSL when sending requests (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3580,7 +3649,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3589,7 +3658,7 @@ The following state arguments are supported:
 <a href="#keypair_name_python" style="color: inherit; text-decoration: inherit;">keypair_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3598,7 +3667,7 @@ The following state arguments are supported:
 <a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom KMS key ID using the AWS Managed CMK (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3607,7 +3676,7 @@ The following state arguments are supported:
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3616,7 +3685,7 @@ The following state arguments are supported:
 <a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3625,7 +3694,7 @@ The following state arguments are supported:
 <a href="#private_address_only_python" style="color: inherit; text-decoration: inherit;">private_<wbr>address_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Only use a private IP address. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3634,7 +3703,7 @@ The following state arguments are supported:
 <a href="#request_spot_instance_python" style="color: inherit; text-decoration: inherit;">request_<wbr>spot_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this flag to request spot instance. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3643,7 +3712,7 @@ The following state arguments are supported:
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set retry count for recoverable failures (use -1 to disable). Default `5` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3652,7 +3721,7 @@ The following state arguments are supported:
 <a href="#root_size_python" style="color: inherit; text-decoration: inherit;">root_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS root disk size (in GB). Default `16` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3661,7 +3730,7 @@ The following state arguments are supported:
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS secret key. Required on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3670,7 +3739,7 @@ The following state arguments are supported:
 <a href="#security_group_readonly_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>readonly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Skip adding default rules to security groups (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3679,7 +3748,7 @@ The following state arguments are supported:
 <a href="#session_token_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS Session Token (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3688,7 +3757,7 @@ The following state arguments are supported:
 <a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS spot instance bid price (in dollar). Default `0.50` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3697,7 +3766,7 @@ The following state arguments are supported:
 <a href="#ssh_keypath_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keypath</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSH Key for Instance (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3706,7 +3775,7 @@ The following state arguments are supported:
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3715,7 +3784,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3724,7 +3793,7 @@ The following state arguments are supported:
 <a href="#use_ebs_optimized_instance_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Create an EBS optimized instance. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3733,7 +3802,7 @@ The following state arguments are supported:
 <a href="#use_private_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Force the usage of private IP address. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3742,7 +3811,7 @@ The following state arguments are supported:
 <a href="#userdata_python" style="color: inherit; text-decoration: inherit;">userdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3751,7 +3820,7 @@ The following state arguments are supported:
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd></dl>
@@ -4260,7 +4329,7 @@ The following state arguments are supported:
 <a href="#availabilityset_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Availability Set to place the virtual machine into. Default `docker-machine` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4269,7 +4338,7 @@ The following state arguments are supported:
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4278,7 +4347,7 @@ The following state arguments are supported:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4287,7 +4356,7 @@ The following state arguments are supported:
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to file with custom-data (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4296,7 +4365,7 @@ The following state arguments are supported:
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4305,7 +4374,7 @@ The following state arguments are supported:
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique DNS label for the public IP adddress (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4314,7 +4383,7 @@ The following state arguments are supported:
 <a href="#dockerport_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4323,7 +4392,7 @@ The following state arguments are supported:
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4332,7 +4401,7 @@ The following state arguments are supported:
 <a href="#faultdomaincount_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4341,7 +4410,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4350,7 +4419,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure region to create the virtual machine. Default `westus` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4359,7 +4428,7 @@ The following state arguments are supported:
 <a href="#manageddisks_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Configures VM and availability set for managed disks. Just for Rancher v2.3.x and above. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4368,7 +4437,7 @@ The following state arguments are supported:
 <a href="#nopublicip_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4377,7 +4446,7 @@ The following state arguments are supported:
 <a href="#nsg_nodejs" style="color: inherit; text-decoration: inherit;">nsg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4386,7 +4455,7 @@ The following state arguments are supported:
 <a href="#openports_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4395,7 +4464,7 @@ The following state arguments are supported:
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify a static private IP address for the machine. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4404,7 +4473,7 @@ The following state arguments are supported:
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Resource Group name (will be created if missing). Default `docker-machine` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4413,7 +4482,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4422,7 +4491,7 @@ The following state arguments are supported:
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4431,7 +4500,7 @@ The following state arguments are supported:
 <a href="#staticpublicip_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Assign a static public IP address to the machine. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4440,7 +4509,7 @@ The following state arguments are supported:
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of Storage Account to host the OS Disk for the machine. Default `Standard_LRS` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4449,7 +4518,7 @@ The following state arguments are supported:
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Subnet Name to be used within the Virtual Network. Default `docker-machine` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4458,7 +4527,7 @@ The following state arguments are supported:
 <a href="#subnetprefix_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private CIDR block to be used for the new subnet, should comply RFC 1918. Default `192.168.0.0/16` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4467,7 +4536,7 @@ The following state arguments are supported:
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4476,7 +4545,7 @@ The following state arguments are supported:
 <a href="#updatedomaincount_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Domain<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Update domain count to use for availability set. Default `5` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4485,7 +4554,7 @@ The following state arguments are supported:
 <a href="#useprivateip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use private IP address of the machine to connect. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4494,7 +4563,7 @@ The following state arguments are supported:
 <a href="#vnet_nodejs" style="color: inherit; text-decoration: inherit;">vnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Virtual Network name to connect the virtual machine (in [resourcegroup:]name format). Default `docker-machine-vnet` (string)
 {{% /md %}}</dd></dl>
@@ -4507,7 +4576,7 @@ The following state arguments are supported:
 <a href="#availability_set_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Availability Set to place the virtual machine into. Default `docker-machine` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4516,7 +4585,7 @@ The following state arguments are supported:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4525,7 +4594,7 @@ The following state arguments are supported:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Service Principal Account password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4534,7 +4603,7 @@ The following state arguments are supported:
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to file with custom-data (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4543,7 +4612,7 @@ The following state arguments are supported:
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4552,7 +4621,7 @@ The following state arguments are supported:
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique DNS label for the public IP adddress (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4561,7 +4630,7 @@ The following state arguments are supported:
 <a href="#docker_port_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4570,7 +4639,7 @@ The following state arguments are supported:
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure environment (e.g. AzurePublicCloud, AzureChinaCloud). Default `AzurePublicCloud` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4579,7 +4648,7 @@ The following state arguments are supported:
 <a href="#fault_domain_count_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>domain_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fault domain count to use for availability set. Default `3` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4588,7 +4657,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4597,7 +4666,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure region to create the virtual machine. Default `westus` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4606,7 +4675,7 @@ The following state arguments are supported:
 <a href="#managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Configures VM and availability set for managed disks. Just for Rancher v2.3.x and above. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4615,7 +4684,7 @@ The following state arguments are supported:
 <a href="#no_public_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not create a public IP address for the machine. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4624,7 +4693,7 @@ The following state arguments are supported:
 <a href="#nsg_python" style="color: inherit; text-decoration: inherit;">nsg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Network Security Group to assign this node to (accepts either a name or resource ID, default is to create a new NSG for each machine). Default `docker-machine-nsg` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4633,7 +4702,7 @@ The following state arguments are supported:
 <a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Make the specified port number accessible from the Internet. (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4642,7 +4711,7 @@ The following state arguments are supported:
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify a static private IP address for the machine. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4651,7 +4720,7 @@ The following state arguments are supported:
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group name (will be created if missing). Default `docker-machine` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4660,7 +4729,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4669,7 +4738,7 @@ The following state arguments are supported:
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4678,7 +4747,7 @@ The following state arguments are supported:
 <a href="#static_public_ip_python" style="color: inherit; text-decoration: inherit;">static_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Assign a static public IP address to the machine. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4687,7 +4756,7 @@ The following state arguments are supported:
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of Storage Account to host the OS Disk for the machine. Default `Standard_LRS` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4696,7 +4765,7 @@ The following state arguments are supported:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Subnet Name to be used within the Virtual Network. Default `docker-machine` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4705,7 +4774,7 @@ The following state arguments are supported:
 <a href="#subnet_prefix_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private CIDR block to be used for the new subnet, should comply RFC 1918. Default `192.168.0.0/16` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4714,7 +4783,7 @@ The following state arguments are supported:
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Subscription ID. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4723,7 +4792,7 @@ The following state arguments are supported:
 <a href="#update_domain_count_python" style="color: inherit; text-decoration: inherit;">update_<wbr>domain_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Update domain count to use for availability set. Default `5` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4732,7 +4801,7 @@ The following state arguments are supported:
 <a href="#use_private_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use private IP address of the machine to connect. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -4741,7 +4810,7 @@ The following state arguments are supported:
 <a href="#vnet_python" style="color: inherit; text-decoration: inherit;">vnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Virtual Network name to connect the virtual machine (in [resourcegroup:]name format). Default `docker-machine-vnet` (string)
 {{% /md %}}</dd></dl>
@@ -5016,7 +5085,7 @@ The following state arguments are supported:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5025,7 +5094,7 @@ The following state arguments are supported:
 <a href="#backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable backups for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5034,7 +5103,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5043,7 +5112,7 @@ The following state arguments are supported:
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable ipv6 for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5052,7 +5121,7 @@ The following state arguments are supported:
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5061,7 +5130,7 @@ The following state arguments are supported:
 <a href="#privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable private networking for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5070,7 +5139,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5079,7 +5148,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5088,7 +5157,7 @@ The following state arguments are supported:
 <a href="#sshkeyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSH key fingerprint (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5097,7 +5166,7 @@ The following state arguments are supported:
 <a href="#sshkeypath_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSH private key path (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5106,7 +5175,7 @@ The following state arguments are supported:
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5115,7 +5184,7 @@ The following state arguments are supported:
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5124,7 +5193,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5133,7 +5202,7 @@ The following state arguments are supported:
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">userdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
 {{% /md %}}</dd></dl>
@@ -5146,7 +5215,7 @@ The following state arguments are supported:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Digital Ocean access token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5155,7 +5224,7 @@ The following state arguments are supported:
 <a href="#backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable backups for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5164,7 +5233,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5173,7 +5242,7 @@ The following state arguments are supported:
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable ipv6 for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5182,7 +5251,7 @@ The following state arguments are supported:
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable monitoring for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5191,7 +5260,7 @@ The following state arguments are supported:
 <a href="#private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable private networking for droplet. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5200,7 +5269,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5209,7 +5278,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Digital Ocean size. Default `s-1vcpu-1gb` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5218,7 +5287,7 @@ The following state arguments are supported:
 <a href="#ssh_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSH key fingerprint (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5227,7 +5296,7 @@ The following state arguments are supported:
 <a href="#ssh_key_path_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSH private key path (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5236,7 +5305,7 @@ The following state arguments are supported:
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5245,7 +5314,7 @@ The following state arguments are supported:
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5254,7 +5323,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5263,7 +5332,7 @@ The following state arguments are supported:
 <a href="#userdata_python" style="color: inherit; text-decoration: inherit;">userdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
 {{% /md %}}</dd></dl>
@@ -5430,7 +5499,7 @@ The following state arguments are supported:
 <a href="#apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud project API token (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5439,7 +5508,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5448,7 +5517,7 @@ The following state arguments are supported:
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma-separated list of network IDs or names which should be attached to the server private network interface (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5457,7 +5526,7 @@ The following state arguments are supported:
 <a href="#serverlocation_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud datacenter. Default `nbg1` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5466,7 +5535,7 @@ The following state arguments are supported:
 <a href="#servertype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5475,7 +5544,7 @@ The following state arguments are supported:
 <a href="#useprivatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use private network. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5484,7 +5553,7 @@ The following state arguments are supported:
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">userdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5493,7 +5562,7 @@ The following state arguments are supported:
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma-separated list of volume IDs or names which should be attached to the server (string)
 {{% /md %}}</dd></dl>
@@ -5506,7 +5575,7 @@ The following state arguments are supported:
 <a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud project API token (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5515,7 +5584,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5524,7 +5593,7 @@ The following state arguments are supported:
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of network IDs or names which should be attached to the server private network interface (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5533,7 +5602,7 @@ The following state arguments are supported:
 <a href="#server_location_python" style="color: inherit; text-decoration: inherit;">server_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud datacenter. Default `nbg1` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5542,7 +5611,7 @@ The following state arguments are supported:
 <a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hetzner Cloud server type. Default `cx11` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5551,7 +5620,7 @@ The following state arguments are supported:
 <a href="#use_private_network_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use private network. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5560,7 +5629,7 @@ The following state arguments are supported:
 <a href="#userdata_python" style="color: inherit; text-decoration: inherit;">userdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to file with cloud-init user-data (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5569,7 +5638,7 @@ The following state arguments are supported:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of volume IDs or names which should be attached to the server (string)
 {{% /md %}}</dd></dl>
@@ -5880,7 +5949,7 @@ The following state arguments are supported:
 <a href="#authorizedusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Linode user accounts (seperated by commas) whose Linode SSH keys will be permitted root access to the created node. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5889,7 +5958,7 @@ The following state arguments are supported:
 <a href="#createprivateip_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Create private IP for the instance. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5898,7 +5967,7 @@ The following state arguments are supported:
 <a href="#dockerport_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5907,7 +5976,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5916,7 +5985,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5925,7 +5994,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Linode Instance Label. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5934,7 +6003,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5943,7 +6012,7 @@ The following state arguments are supported:
 <a href="#rootpass_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Root Password (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5952,7 +6021,7 @@ The following state arguments are supported:
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5961,7 +6030,7 @@ The following state arguments are supported:
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5970,7 +6039,7 @@ The following state arguments are supported:
 <a href="#stackscript_nodejs" style="color: inherit; text-decoration: inherit;">stackscript</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Linode StackScript to use to create the instance. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5979,7 +6048,7 @@ The following state arguments are supported:
 <a href="#stackscriptdata_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A JSON string specifying data for the selected StackScript. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5988,7 +6057,7 @@ The following state arguments are supported:
 <a href="#swapsize_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Linode Instance Swap Size (MB). Default `512` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -5997,7 +6066,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6006,7 +6075,7 @@ The following state arguments are supported:
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6015,7 +6084,7 @@ The following state arguments are supported:
 <a href="#uaprefix_nodejs" style="color: inherit; text-decoration: inherit;">ua<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Prefix the User-Agent in Linode API calls with some 'product/version' (string)
 {{% /md %}}</dd></dl>
@@ -6028,7 +6097,7 @@ The following state arguments are supported:
 <a href="#authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Linode user accounts (seperated by commas) whose Linode SSH keys will be permitted root access to the created node. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6037,7 +6106,7 @@ The following state arguments are supported:
 <a href="#create_private_ip_python" style="color: inherit; text-decoration: inherit;">create_<wbr>private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Create private IP for the instance. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6046,7 +6115,7 @@ The following state arguments are supported:
 <a href="#docker_port_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Docker Port. Default `2376` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6055,7 +6124,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance image which determines the OS distribution and base files. Default `linode/ubuntu18.04` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6064,7 +6133,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode Instance type which determines CPU, memory, disk size, etc. Default `g6-standard-4` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6073,7 +6142,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Linode Instance Label. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6082,7 +6151,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6091,7 +6160,7 @@ The following state arguments are supported:
 <a href="#root_pass_python" style="color: inherit; text-decoration: inherit;">root_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Root Password (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6100,7 +6169,7 @@ The following state arguments are supported:
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6109,7 +6178,7 @@ The following state arguments are supported:
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6118,7 +6187,7 @@ The following state arguments are supported:
 <a href="#stackscript_python" style="color: inherit; text-decoration: inherit;">stackscript</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Linode StackScript to use to create the instance. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6127,7 +6196,7 @@ The following state arguments are supported:
 <a href="#stackscript_data_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A JSON string specifying data for the selected StackScript. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6136,7 +6205,7 @@ The following state arguments are supported:
 <a href="#swap_size_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Linode Instance Swap Size (MB). Default `512` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6145,7 +6214,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6154,7 +6223,7 @@ The following state arguments are supported:
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Linode API token. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6163,7 +6232,7 @@ The following state arguments are supported:
 <a href="#ua_prefix_python" style="color: inherit; text-decoration: inherit;">ua_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Prefix the User-Agent in Linode API calls with some 'product/version' (string)
 {{% /md %}}</dd></dl>
@@ -6258,7 +6327,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Taint key (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -6267,7 +6336,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Taint value (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6276,7 +6345,7 @@ The following state arguments are supported:
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6285,7 +6354,7 @@ The following state arguments are supported:
 <a href="#timeadded_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Added</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Taint time added (string)
 {{% /md %}}</dd></dl>
@@ -6298,7 +6367,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Taint key (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -6307,7 +6376,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Taint value (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6316,7 +6385,7 @@ The following state arguments are supported:
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6325,7 +6394,7 @@ The following state arguments are supported:
 <a href="#time_added_python" style="color: inherit; text-decoration: inherit;">time_<wbr>added</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Taint time added (string)
 {{% /md %}}</dd></dl>
@@ -6690,7 +6759,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -6699,7 +6768,7 @@ The following state arguments are supported:
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set the user for the XML-RPC API authentication (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -6708,7 +6777,7 @@ The following state arguments are supported:
 <a href="#xmlrpcurl_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Rpc<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set the url for the Opennebula XML-RPC API (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6717,7 +6786,7 @@ The following state arguments are supported:
 <a href="#b2dsize_nodejs" style="color: inherit; text-decoration: inherit;">b2d<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of the Volatile disk in MB - only for b2d (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6726,7 +6795,7 @@ The following state arguments are supported:
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CPU value for the VM (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6735,7 +6804,7 @@ The following state arguments are supported:
 <a href="#devprefix_nodejs" style="color: inherit; text-decoration: inherit;">dev<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dev prefix to use for the images. E.g.: 'vd', 'sd', 'hd' (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6744,7 +6813,7 @@ The following state arguments are supported:
 <a href="#disablevnc_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Vnc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}VNC is enabled by default. Disable it with this flag (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6753,7 +6822,7 @@ The following state arguments are supported:
 <a href="#diskresize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Resize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of the disk for the VM in MB (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6762,7 +6831,7 @@ The following state arguments are supported:
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6771,7 +6840,7 @@ The following state arguments are supported:
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6780,7 +6849,7 @@ The following state arguments are supported:
 <a href="#imageowner_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6789,7 +6858,7 @@ The following state arguments are supported:
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of the memory for the VM in MB (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6798,7 +6867,7 @@ The following state arguments are supported:
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Opennebula network ID to connect the machine to. Conflicts with `network_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6807,7 +6876,7 @@ The following state arguments are supported:
 <a href="#networkname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Opennebula network to connect the machine to. Conflicts with `network_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6816,7 +6885,7 @@ The following state arguments are supported:
 <a href="#networkowner_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Opennebula user ID of the Network to connect the machine to (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6825,7 +6894,7 @@ The following state arguments are supported:
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6834,7 +6903,7 @@ The following state arguments are supported:
 <a href="#templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Opennebula template ID to use. Conflicts with `template_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6843,7 +6912,7 @@ The following state arguments are supported:
 <a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Opennbula template to use. Conflicts with `template_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6852,7 +6921,7 @@ The following state arguments are supported:
 <a href="#vcpu_nodejs" style="color: inherit; text-decoration: inherit;">vcpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}VCPUs for the VM (string)
 {{% /md %}}</dd></dl>
@@ -6865,7 +6934,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -6874,7 +6943,7 @@ The following state arguments are supported:
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set the user for the XML-RPC API authentication (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -6883,7 +6952,7 @@ The following state arguments are supported:
 <a href="#xml_rpc_url_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>rpc_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set the url for the Opennebula XML-RPC API (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6892,7 +6961,7 @@ The following state arguments are supported:
 <a href="#b2d_size_python" style="color: inherit; text-decoration: inherit;">b2d_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of the Volatile disk in MB - only for b2d (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6901,7 +6970,7 @@ The following state arguments are supported:
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CPU value for the VM (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6910,7 +6979,7 @@ The following state arguments are supported:
 <a href="#dev_prefix_python" style="color: inherit; text-decoration: inherit;">dev_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dev prefix to use for the images. E.g.: 'vd', 'sd', 'hd' (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6919,7 +6988,7 @@ The following state arguments are supported:
 <a href="#disable_vnc_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>vnc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}VNC is enabled by default. Disable it with this flag (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6928,7 +6997,7 @@ The following state arguments are supported:
 <a href="#disk_resize_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>resize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of the disk for the VM in MB (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6937,7 +7006,7 @@ The following state arguments are supported:
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6946,7 +7015,7 @@ The following state arguments are supported:
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6955,7 +7024,7 @@ The following state arguments are supported:
 <a href="#image_owner_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Owner of the image to use as the VM OS (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6964,7 +7033,7 @@ The following state arguments are supported:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of the memory for the VM in MB (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6973,7 +7042,7 @@ The following state arguments are supported:
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Opennebula network ID to connect the machine to. Conflicts with `network_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6982,7 +7051,7 @@ The following state arguments are supported:
 <a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Opennebula network to connect the machine to. Conflicts with `network_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -6991,7 +7060,7 @@ The following state arguments are supported:
 <a href="#network_owner_python" style="color: inherit; text-decoration: inherit;">network_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Opennebula user ID of the Network to connect the machine to (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7000,7 +7069,7 @@ The following state arguments are supported:
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7009,7 +7078,7 @@ The following state arguments are supported:
 <a href="#template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Opennebula template ID to use. Conflicts with `template_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7018,7 +7087,7 @@ The following state arguments are supported:
 <a href="#template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Opennbula template to use. Conflicts with `template_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7027,7 +7096,7 @@ The following state arguments are supported:
 <a href="#vcpu_python" style="color: inherit; text-decoration: inherit;">vcpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}VCPUs for the VM (string)
 {{% /md %}}</dd></dl>
@@ -7734,7 +7803,7 @@ The following state arguments are supported:
 <a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack authentication URL (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -7743,7 +7812,7 @@ The following state arguments are supported:
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack availability zone (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -7752,7 +7821,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7761,7 +7830,7 @@ The following state arguments are supported:
 <a href="#activetimeout_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7770,7 +7839,7 @@ The following state arguments are supported:
 <a href="#applicationcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7779,7 +7848,7 @@ The following state arguments are supported:
 <a href="#applicationcredentialname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7788,7 +7857,7 @@ The following state arguments are supported:
 <a href="#applicationcredentialsecret_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Credential<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7797,7 +7866,7 @@ The following state arguments are supported:
 <a href="#bootfromvolume_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>From<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7806,7 +7875,7 @@ The following state arguments are supported:
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">cacert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CA certificate bundle to verify against (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7815,7 +7884,7 @@ The following state arguments are supported:
 <a href="#configdrive_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Drive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables the OpenStack config drive for the instance. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7824,7 +7893,7 @@ The following state arguments are supported:
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack domain ID. Identity v3 only. Conflicts with `domain_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7833,7 +7902,7 @@ The following state arguments are supported:
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack domain name. Identity v3 only. Conflicts with `domain_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7842,7 +7911,7 @@ The following state arguments are supported:
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack endpoint type. adminURL, internalURL or publicURL (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7851,7 +7920,7 @@ The following state arguments are supported:
 <a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack flavor id to use for the instance. Conflicts with `flavor_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7860,7 +7929,7 @@ The following state arguments are supported:
 <a href="#flavorname_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack flavor name to use for the instance. Conflicts with `flavor_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7869,7 +7938,7 @@ The following state arguments are supported:
 <a href="#floatingippool_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack floating IP pool to get an IP from to assign to the instance (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7878,7 +7947,7 @@ The following state arguments are supported:
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7887,7 +7956,7 @@ The following state arguments are supported:
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7896,7 +7965,7 @@ The following state arguments are supported:
 <a href="#insecure_nodejs" style="color: inherit; text-decoration: inherit;">insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Disable TLS credential checking. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7905,7 +7974,7 @@ The following state arguments are supported:
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack version of IP address assigned for the machine Default `4` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7914,7 +7983,7 @@ The following state arguments are supported:
 <a href="#keypairname_nodejs" style="color: inherit; text-decoration: inherit;">keypair<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7923,7 +7992,7 @@ The following state arguments are supported:
 <a href="#netid_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack network id the machine will be connected on. Conflicts with `net_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7932,7 +8001,7 @@ The following state arguments are supported:
 <a href="#netname_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack network name the machine will be connected on. Conflicts with `net_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7941,7 +8010,7 @@ The following state arguments are supported:
 <a href="#novanetwork_nodejs" style="color: inherit; text-decoration: inherit;">nova<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use the nova networking services instead of neutron (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7950,7 +8019,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7959,7 +8028,7 @@ The following state arguments are supported:
 <a href="#privatekeyfile_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private key content to use for SSH (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7968,7 +8037,7 @@ The following state arguments are supported:
 <a href="#secgroups_nodejs" style="color: inherit; text-decoration: inherit;">sec<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack comma separated security groups for the machine (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7977,7 +8046,7 @@ The following state arguments are supported:
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7986,7 +8055,7 @@ The following state arguments are supported:
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7995,7 +8064,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack tenant id. Conflicts with `tenant_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8004,7 +8073,7 @@ The following state arguments are supported:
 <a href="#tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8013,7 +8082,7 @@ The following state arguments are supported:
 <a href="#userdatafile_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}File containing an openstack userdata script (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8022,7 +8091,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8031,7 +8100,7 @@ The following state arguments are supported:
 <a href="#volumedevicepath_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Device<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8040,7 +8109,7 @@ The following state arguments are supported:
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8049,7 +8118,7 @@ The following state arguments are supported:
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8058,7 +8127,7 @@ The following state arguments are supported:
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8067,7 +8136,7 @@ The following state arguments are supported:
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd></dl>
@@ -8080,7 +8149,7 @@ The following state arguments are supported:
 <a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack authentication URL (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -8089,7 +8158,7 @@ The following state arguments are supported:
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack availability zone (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -8098,7 +8167,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack region name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8107,7 +8176,7 @@ The following state arguments are supported:
 <a href="#active_timeout_python" style="color: inherit; text-decoration: inherit;">active_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack active timeout Default `200` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8116,7 +8185,7 @@ The following state arguments are supported:
 <a href="#application_credential_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential id. Conflicts with `application_credential_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8125,7 +8194,7 @@ The following state arguments are supported:
 <a href="#application_credential_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential name. Conflicts with `application_credential_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8134,7 +8203,7 @@ The following state arguments are supported:
 <a href="#application_credential_secret_python" style="color: inherit; text-decoration: inherit;">application_<wbr>credential_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8143,7 +8212,7 @@ The following state arguments are supported:
 <a href="#boot_from_volume_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>from_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8152,7 +8221,7 @@ The following state arguments are supported:
 <a href="#cacert_python" style="color: inherit; text-decoration: inherit;">cacert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CA certificate bundle to verify against (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8161,7 +8230,7 @@ The following state arguments are supported:
 <a href="#config_drive_python" style="color: inherit; text-decoration: inherit;">config_<wbr>drive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables the OpenStack config drive for the instance. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8170,7 +8239,7 @@ The following state arguments are supported:
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack domain ID. Identity v3 only. Conflicts with `domain_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8179,7 +8248,7 @@ The following state arguments are supported:
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack domain name. Identity v3 only. Conflicts with `domain_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8188,7 +8257,7 @@ The following state arguments are supported:
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack endpoint type. adminURL, internalURL or publicURL (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8197,7 +8266,7 @@ The following state arguments are supported:
 <a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor id to use for the instance. Conflicts with `flavor_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8206,7 +8275,7 @@ The following state arguments are supported:
 <a href="#flavor_name_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack flavor name to use for the instance. Conflicts with `flavor_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8215,7 +8284,7 @@ The following state arguments are supported:
 <a href="#floating_ip_pool_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack floating IP pool to get an IP from to assign to the instance (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8224,7 +8293,7 @@ The following state arguments are supported:
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack image id to use for the instance. Conflicts with `image_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8233,7 +8302,7 @@ The following state arguments are supported:
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack image name to use for the instance. Conflicts with `image_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8242,7 +8311,7 @@ The following state arguments are supported:
 <a href="#insecure_python" style="color: inherit; text-decoration: inherit;">insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Disable TLS credential checking. Default `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8251,7 +8320,7 @@ The following state arguments are supported:
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack version of IP address assigned for the machine Default `4` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8260,7 +8329,7 @@ The following state arguments are supported:
 <a href="#keypair_name_python" style="color: inherit; text-decoration: inherit;">keypair_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack keypair to use to SSH to the instance (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8269,7 +8338,7 @@ The following state arguments are supported:
 <a href="#net_id_python" style="color: inherit; text-decoration: inherit;">net_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack network id the machine will be connected on. Conflicts with `net_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8278,7 +8347,7 @@ The following state arguments are supported:
 <a href="#net_name_python" style="color: inherit; text-decoration: inherit;">net_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack network name the machine will be connected on. Conflicts with `net_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8287,7 +8356,7 @@ The following state arguments are supported:
 <a href="#nova_network_python" style="color: inherit; text-decoration: inherit;">nova_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use the nova networking services instead of neutron (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8296,7 +8365,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8305,7 +8374,7 @@ The following state arguments are supported:
 <a href="#private_key_file_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private key content to use for SSH (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8314,7 +8383,7 @@ The following state arguments are supported:
 <a href="#sec_groups_python" style="color: inherit; text-decoration: inherit;">sec_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack comma separated security groups for the machine (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8323,7 +8392,7 @@ The following state arguments are supported:
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8332,7 +8401,7 @@ The following state arguments are supported:
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8341,7 +8410,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant id. Conflicts with `tenant_name` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8350,7 +8419,7 @@ The following state arguments are supported:
 <a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8359,7 +8428,7 @@ The following state arguments are supported:
 <a href="#user_data_file_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}File containing an openstack userdata script (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8368,7 +8437,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8377,7 +8446,7 @@ The following state arguments are supported:
 <a href="#volume_device_path_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>device_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8386,7 +8455,7 @@ The following state arguments are supported:
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8395,7 +8464,7 @@ The following state arguments are supported:
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8404,7 +8473,7 @@ The following state arguments are supported:
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8413,7 +8482,7 @@ The following state arguments are supported:
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd></dl>
@@ -8994,7 +9063,7 @@ The following state arguments are supported:
 <a href="#boot2dockerurl_nodejs" style="color: inherit; text-decoration: inherit;">boot2docker<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere URL for boot2docker iso image. Default `https://releases.rancher.com/os/latest/rancheros-vmware.iso` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9003,7 +9072,7 @@ The following state arguments are supported:
 <a href="#cfgparams_nodejs" style="color: inherit; text-decoration: inherit;">cfgparams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}vSphere vm configuration parameters (used for guestinfo) (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9012,7 +9081,7 @@ The following state arguments are supported:
 <a href="#clonefrom_nodejs" style="color: inherit; text-decoration: inherit;">clone<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9021,7 +9090,7 @@ The following state arguments are supported:
 <a href="#cloudconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Filepath to a cloud-config yaml file to put into the ISO user-data. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9030,7 +9099,7 @@ The following state arguments are supported:
 <a href="#cloudinit_nodejs" style="color: inherit; text-decoration: inherit;">cloudinit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere cloud-init file or url to set in the guestinfo (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9039,7 +9108,7 @@ The following state arguments are supported:
 <a href="#contentlibrary_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Library</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If you choose to clone from a content library template specify the name of the library. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9048,7 +9117,7 @@ The following state arguments are supported:
 <a href="#cpucount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere CPU number for docker VM. Default `2` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9057,7 +9126,7 @@ The following state arguments are supported:
 <a href="#creationtype_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creation type when creating a new virtual machine. Supported values: vm, template, library, legacy. Default `legacy`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9066,7 +9135,7 @@ The following state arguments are supported:
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}vSphere custom attributes, format key/value e.g. `200=my custom value`. From Rancher v2.3.3 (List)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9075,7 +9144,7 @@ The following state arguments are supported:
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere datacenter for docker VM (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9084,7 +9153,7 @@ The following state arguments are supported:
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere datastore for docker VM (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9093,7 +9162,7 @@ The following state arguments are supported:
 <a href="#datastorecluster_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere datastore cluster for virtual machine. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9102,7 +9171,7 @@ The following state arguments are supported:
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9111,7 +9180,7 @@ The following state arguments are supported:
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere folder for the docker VM. This folder must already exist in the datacenter (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9120,7 +9189,7 @@ The following state arguments are supported:
 <a href="#hostsystem_nodejs" style="color: inherit; text-decoration: inherit;">hostsystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere compute resource where the docker VM will be instantiated. This can be omitted if using a cluster with DRS (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9129,7 +9198,7 @@ The following state arguments are supported:
 <a href="#memorysize_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere size of memory for docker VM (in MB). Default `2048` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9138,7 +9207,7 @@ The following state arguments are supported:
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}vSphere network where the docker VM will be attached (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9147,7 +9216,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9156,7 +9225,7 @@ The following state arguments are supported:
 <a href="#pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere resource pool for docker VM (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9165,7 +9234,7 @@ The following state arguments are supported:
 <a href="#sshpassword_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh password. Default `tcuser`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9174,7 +9243,7 @@ The following state arguments are supported:
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9183,7 +9252,7 @@ The following state arguments are supported:
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9192,7 +9261,7 @@ The following state arguments are supported:
 <a href="#sshusergroup_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image the uploaded keys will need chown'ed. Default `staff`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9201,7 +9270,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9210,7 +9279,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9219,7 +9288,7 @@ The following state arguments are supported:
 <a href="#vappipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP allocation policy. Supported values are: `dhcp`, `fixed`, `transient` and `fixedAllocated` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9228,7 +9297,7 @@ The following state arguments are supported:
 <a href="#vappipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP protocol for this deployment. Supported values are: `IPv4` and `IPv6` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9237,7 +9306,7 @@ The following state arguments are supported:
 <a href="#vappproperties_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}vSphere vApp properties (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9246,7 +9315,7 @@ The following state arguments are supported:
 <a href="#vapptransport_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere OVF environment transports to use for properties. Supported values are: `iso` and `com.vmware.guestInfo` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9255,7 +9324,7 @@ The following state arguments are supported:
 <a href="#vcenter_nodejs" style="color: inherit; text-decoration: inherit;">vcenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9264,7 +9333,7 @@ The following state arguments are supported:
 <a href="#vcenterport_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
 {{% /md %}}</dd></dl>
@@ -9277,7 +9346,7 @@ The following state arguments are supported:
 <a href="#boot2docker_url_python" style="color: inherit; text-decoration: inherit;">boot2docker_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere URL for boot2docker iso image. Default `https://releases.rancher.com/os/latest/rancheros-vmware.iso` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9286,7 +9355,7 @@ The following state arguments are supported:
 <a href="#cfgparams_python" style="color: inherit; text-decoration: inherit;">cfgparams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}vSphere vm configuration parameters (used for guestinfo) (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9295,7 +9364,7 @@ The following state arguments are supported:
 <a href="#clone_from_python" style="color: inherit; text-decoration: inherit;">clone_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If you choose creation type vm (clone vm) a name of what vm you want to clone is required. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9304,7 +9373,7 @@ The following state arguments are supported:
 <a href="#cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Filepath to a cloud-config yaml file to put into the ISO user-data. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9313,7 +9382,7 @@ The following state arguments are supported:
 <a href="#cloudinit_python" style="color: inherit; text-decoration: inherit;">cloudinit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere cloud-init file or url to set in the guestinfo (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9322,7 +9391,7 @@ The following state arguments are supported:
 <a href="#content_library_python" style="color: inherit; text-decoration: inherit;">content_<wbr>library</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If you choose to clone from a content library template specify the name of the library. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9331,7 +9400,7 @@ The following state arguments are supported:
 <a href="#cpu_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere CPU number for docker VM. Default `2` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9340,7 +9409,7 @@ The following state arguments are supported:
 <a href="#creation_type_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creation type when creating a new virtual machine. Supported values: vm, template, library, legacy. Default `legacy`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9349,7 +9418,7 @@ The following state arguments are supported:
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}vSphere custom attributes, format key/value e.g. `200=my custom value`. From Rancher v2.3.3 (List)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9358,7 +9427,7 @@ The following state arguments are supported:
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere datacenter for docker VM (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9367,7 +9436,7 @@ The following state arguments are supported:
 <a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere datastore for docker VM (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9376,7 +9445,7 @@ The following state arguments are supported:
 <a href="#datastore_cluster_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere datastore cluster for virtual machine. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9385,7 +9454,7 @@ The following state arguments are supported:
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere size of disk for docker VM (in MB). Default `20480` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9394,7 +9463,7 @@ The following state arguments are supported:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere folder for the docker VM. This folder must already exist in the datacenter (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9403,7 +9472,7 @@ The following state arguments are supported:
 <a href="#hostsystem_python" style="color: inherit; text-decoration: inherit;">hostsystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere compute resource where the docker VM will be instantiated. This can be omitted if using a cluster with DRS (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9412,7 +9481,7 @@ The following state arguments are supported:
 <a href="#memory_size_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere size of memory for docker VM (in MB). Default `2048` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9421,7 +9490,7 @@ The following state arguments are supported:
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}vSphere network where the docker VM will be attached (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9430,7 +9499,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere password. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9439,7 +9508,7 @@ The following state arguments are supported:
 <a href="#pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere resource pool for docker VM (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9448,7 +9517,7 @@ The following state arguments are supported:
 <a href="#ssh_password_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh password. Default `tcuser`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9457,7 +9526,7 @@ The following state arguments are supported:
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh port. Default `22`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9466,7 +9535,7 @@ The following state arguments are supported:
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image you can specify the ssh user. Default `docker`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9475,7 +9544,7 @@ The following state arguments are supported:
 <a href="#ssh_user_group_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If using a non-B2D image the uploaded keys will need chown'ed. Default `staff`. From Rancher v2.3.3 (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9484,7 +9553,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}vSphere tags id e.g. `urn:xxx`. From Rancher v2.3.3 (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9493,7 +9562,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9502,7 +9571,7 @@ The following state arguments are supported:
 <a href="#vapp_ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>ip_<wbr>allocation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP allocation policy. Supported values are: `dhcp`, `fixed`, `transient` and `fixedAllocated` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9511,7 +9580,7 @@ The following state arguments are supported:
 <a href="#vapp_ip_protocol_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere vApp IP protocol for this deployment. Supported values are: `IPv4` and `IPv6` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9520,7 +9589,7 @@ The following state arguments are supported:
 <a href="#vapp_properties_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}vSphere vApp properties (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9529,7 +9598,7 @@ The following state arguments are supported:
 <a href="#vapp_transport_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>transport</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere OVF environment transports to use for properties. Supported values are: `iso` and `com.vmware.guestInfo` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9538,7 +9607,7 @@ The following state arguments are supported:
 <a href="#vcenter_python" style="color: inherit; text-decoration: inherit;">vcenter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere IP/hostname for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -9547,7 +9616,7 @@ The following state arguments are supported:
 <a href="#vcenter_port_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x. Default `443` (string)
 {{% /md %}}</dd></dl>

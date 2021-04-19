@@ -60,8 +60,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -147,19 +147,40 @@ const foo = new rancher2.ProjectLogging("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProjectLogging</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectLoggingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProjectLogging</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectLoggingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProjectLogging</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">custom_target_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingCustomTargetConfigArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingElasticsearchConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_json_parsing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fluentd_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingFluentdConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingKafkaConfigArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_flush_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">output_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">splunk_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingSplunkConfigArgs]</span> = None<span class="p">, </span><span class="nx">syslog_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingSyslogConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProjectLogging</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                   <span class="nx">custom_target_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingCustomTargetConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingElasticsearchConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">enable_json_parsing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">fluentd_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingFluentdConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">kafka_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingKafkaConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">output_flush_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">output_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                   <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">splunk_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingSplunkConfigArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">syslog_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingSyslogConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProjectLogging</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectLoggingArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProjectLogging</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectLoggingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProjectLogging</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProjectLogging</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectLoggingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProjectLogging</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProjectLogging</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectLoggingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProjectLogging</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProjectLoggingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -194,22 +215,32 @@ const foo = new rancher2.ProjectLogging("foo", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProjectLoggingArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -218,7 +249,7 @@ const foo = new rancher2.ProjectLogging("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -242,7 +273,7 @@ const foo = new rancher2.ProjectLogging("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -575,7 +606,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -584,7 +615,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project id to configure logging (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -593,7 +624,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for Project Logging object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +633,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customtargetconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Target<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -611,7 +642,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#elasticsearchconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +651,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#enablejsonparsing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Json<wbr>Parsing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +660,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#fluentdconfig_nodejs" style="color: inherit; text-decoration: inherit;">fluentd<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +669,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kafkaconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +678,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for Project Logging object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +687,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Project Logging config (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +696,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace id from Project logging (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +705,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#outputflushinterval_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Flush<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +714,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#outputtags_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -692,7 +723,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#splunkconfig_nodejs" style="color: inherit; text-decoration: inherit;">splunk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -701,7 +732,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#syslogconfig_nodejs" style="color: inherit; text-decoration: inherit;">syslog<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -714,7 +745,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -723,7 +754,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project id to configure logging (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +763,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for Project Logging object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +772,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#custom_target_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>target_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Input[Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +781,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Input[Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +790,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#enable_json_parsing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>json_<wbr>parsing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +799,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#fluentd_config_python" style="color: inherit; text-decoration: inherit;">fluentd_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">Input[Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +808,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kafka_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">Input[Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +817,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for Project Logging object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +826,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Project Logging config (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +835,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace id from Project logging (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +844,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#output_flush_interval_python" style="color: inherit; text-decoration: inherit;">output_<wbr>flush_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +853,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#output_tags_python" style="color: inherit; text-decoration: inherit;">output_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +862,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#splunk_config_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">Input[Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +871,7 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 <a href="#syslog_config_python" style="color: inherit; text-decoration: inherit;">syslog_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">Input[Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -909,20 +940,37 @@ Get an existing ProjectLogging resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectLoggingState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ProjectLogging</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectLoggingState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ProjectLogging</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">custom_target_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingCustomTargetConfigArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingElasticsearchConfigArgs]</span> = None<span class="p">, </span><span class="nx">enable_json_parsing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fluentd_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingFluentdConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingKafkaConfigArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_flush_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">output_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">splunk_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingSplunkConfigArgs]</span> = None<span class="p">, </span><span class="nx">syslog_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLoggingSyslogConfigArgs]</span> = None<span class="p">) -&gt;</span> ProjectLogging</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_target_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingCustomTargetConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingElasticsearchConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_json_parsing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">fluentd_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingFluentdConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingKafkaConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">output_flush_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">output_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">splunk_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingSplunkConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">syslog_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLoggingSyslogConfigArgs]]</span> = None<span class="p">) -&gt;</span> ProjectLogging</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjectLogging<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectLoggingState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProjectLogging</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjectLogging<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectLoggingState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProjectLogging</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ProjectLogging</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProjectLoggingState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ProjectLogging</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProjectLoggingState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1309,7 +1357,7 @@ The following state arguments are supported:
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations for Project Logging object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1366,7 @@ The following state arguments are supported:
 <a href="#state_customtargetconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Target<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1327,7 +1375,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearchconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1336,7 +1384,7 @@ The following state arguments are supported:
 <a href="#state_enablejsonparsing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Json<wbr>Parsing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1393,7 @@ The following state arguments are supported:
 <a href="#state_fluentdconfig_nodejs" style="color: inherit; text-decoration: inherit;">fluentd<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1402,7 @@ The following state arguments are supported:
 <a href="#state_kafkaconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1411,7 @@ The following state arguments are supported:
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1420,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels for Project Logging object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1429,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Project Logging config (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1438,7 @@ The following state arguments are supported:
 <a href="#state_namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace id from Project logging (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1447,7 @@ The following state arguments are supported:
 <a href="#state_outputflushinterval_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Flush<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1456,7 @@ The following state arguments are supported:
 <a href="#state_outputtags_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1465,7 @@ The following state arguments are supported:
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project id to configure logging (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1474,7 @@ The following state arguments are supported:
 <a href="#state_splunkconfig_nodejs" style="color: inherit; text-decoration: inherit;">splunk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1483,7 @@ The following state arguments are supported:
 <a href="#state_syslogconfig_nodejs" style="color: inherit; text-decoration: inherit;">syslog<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">pulumi<wbr>Input<Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -1448,7 +1496,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations for Project Logging object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1505,7 @@ The following state arguments are supported:
 <a href="#state_custom_target_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>target_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingcustomtargetconfig">Input[Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The custom target config for Cluster Logging. For `kind = custom`. Conflicts with `elasticsearch_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1514,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingelasticsearchconfig">Input[Project<wbr>Logging<wbr>Elasticsearch<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The elasticsearch config for Project Logging. For `kind = elasticsearch`. Conflicts with `custom_target_config`, `fluentd_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1523,7 @@ The following state arguments are supported:
 <a href="#state_enable_json_parsing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>json_<wbr>parsing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable json log parsing. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1532,7 @@ The following state arguments are supported:
 <a href="#state_fluentd_config_python" style="color: inherit; text-decoration: inherit;">fluentd_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfig">Input[Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fluentd config for Project Logging. For `kind = fluentd`. Conflicts with `custom_target_config`, `elasticsearch_config`, `kafka_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1541,7 @@ The following state arguments are supported:
 <a href="#state_kafka_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingkafkaconfig">Input[Project<wbr>Logging<wbr>Kafka<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The kafka config for Project Logging. For `kind = kafka`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `splunk_config` and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1550,7 @@ The following state arguments are supported:
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The kind of the Project Logging. `elasticsearch`, `fluentd`, `kafka`, `splunk` and `syslog` are supported (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1559,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels for Project Logging object (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1568,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Project Logging config (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1577,7 @@ The following state arguments are supported:
 <a href="#state_namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace id from Project logging (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1586,7 @@ The following state arguments are supported:
 <a href="#state_output_flush_interval_python" style="color: inherit; text-decoration: inherit;">output_<wbr>flush_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How often buffered logs would be flushed. Default: `3` seconds (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1595,7 @@ The following state arguments are supported:
 <a href="#state_output_tags_python" style="color: inherit; text-decoration: inherit;">output_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The output tags for Project Logging (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1556,7 +1604,7 @@ The following state arguments are supported:
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project id to configure logging (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1565,7 +1613,7 @@ The following state arguments are supported:
 <a href="#state_splunk_config_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingsplunkconfig">Input[Project<wbr>Logging<wbr>Splunk<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The splunk config for Project Logging. For `kind = splunk`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `syslog_config` (list maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1574,7 +1622,7 @@ The following state arguments are supported:
 <a href="#state_syslog_config_python" style="color: inherit; text-decoration: inherit;">syslog_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectloggingsyslogconfig">Input[Project<wbr>Logging<wbr>Syslog<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The syslog config for Project Logging. For `kind = syslog`. Conflicts with `custom_target_config`, `elasticsearch_config`, `fluentd_config`, `kafka_config`, and `splunk_config` (list maxitems:1)
 {{% /md %}}</dd></dl>
@@ -1678,7 +1726,7 @@ The following state arguments are supported:
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom target config content (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1687,7 +1735,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1696,7 +1744,7 @@ The following state arguments are supported:
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1753,7 @@ The following state arguments are supported:
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd></dl>
@@ -1718,7 +1766,7 @@ The following state arguments are supported:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom target config content (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1727,7 +1775,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1736,7 +1784,7 @@ The following state arguments are supported:
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1793,7 @@ The following state arguments are supported:
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd></dl>
@@ -1966,7 +2014,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1975,7 +2023,7 @@ The following state arguments are supported:
 <a href="#authpassword_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User password for the elascticsearch service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1984,7 +2032,7 @@ The following state arguments are supported:
 <a href="#authusername_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username for the elascticsearch service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1993,7 +2041,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2002,7 +2050,7 @@ The following state arguments are supported:
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2011,7 +2059,7 @@ The following state arguments are supported:
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +2068,7 @@ The following state arguments are supported:
 <a href="#clientkeypass_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client key password for the splunk service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2029,7 +2077,7 @@ The following state arguments are supported:
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2038,7 +2086,7 @@ The following state arguments are supported:
 <a href="#indexprefix_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Index prefix for the elascticsearch logs. Default: `local` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2047,7 +2095,7 @@ The following state arguments are supported:
 <a href="#sslverify_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2056,7 +2104,7 @@ The following state arguments are supported:
 <a href="#sslversion_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL version for the elascticsearch service (string)
 {{% /md %}}</dd></dl>
@@ -2069,7 +2117,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2078,7 +2126,7 @@ The following state arguments are supported:
 <a href="#auth_password_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User password for the elascticsearch service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2135,7 @@ The following state arguments are supported:
 <a href="#auth_username_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username for the elascticsearch service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2144,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2153,7 @@ The following state arguments are supported:
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2162,7 @@ The following state arguments are supported:
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2171,7 @@ The following state arguments are supported:
 <a href="#client_key_pass_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client key password for the splunk service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2180,7 @@ The following state arguments are supported:
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date format for the elascticsearch logs. Default: `YYYY-MM-DD` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2189,7 @@ The following state arguments are supported:
 <a href="#index_prefix_python" style="color: inherit; text-decoration: inherit;">index_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Index prefix for the elascticsearch logs. Default: `local` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2198,7 @@ The following state arguments are supported:
 <a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2207,7 @@ The following state arguments are supported:
 <a href="#ssl_version_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL version for the elascticsearch service (string)
 {{% /md %}}</dd></dl>
@@ -2254,7 +2302,7 @@ The following state arguments are supported:
 <a href="#fluentservers_nodejs" style="color: inherit; text-decoration: inherit;">fluent<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfigfluentserver">Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server[]</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfigfluentserver">pulumi<wbr>Input<pulumi<wbr>Input<Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Servers for the fluentd service (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2263,7 +2311,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2272,7 +2320,7 @@ The following state arguments are supported:
 <a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Compress data for the fluentd service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2281,7 +2329,7 @@ The following state arguments are supported:
 <a href="#enabletls_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable TLS for the fluentd service (bool)
 {{% /md %}}</dd></dl>
@@ -2294,7 +2342,7 @@ The following state arguments are supported:
 <a href="#fluent_servers_python" style="color: inherit; text-decoration: inherit;">fluent_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectloggingfluentdconfigfluentserver">Sequence[Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectloggingfluentdconfigfluentserver">Input[Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Servers for the fluentd service (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2303,7 +2351,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2312,7 +2360,7 @@ The following state arguments are supported:
 <a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Compress data for the fluentd service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2369,7 @@ The following state arguments are supported:
 <a href="#enable_tls_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable TLS for the fluentd service (bool)
 {{% /md %}}</dd></dl>
@@ -2470,7 +2518,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2479,7 +2527,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hostname of the fluentd service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2488,7 +2536,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User password of the fluentd service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2497,7 +2545,7 @@ The following state arguments are supported:
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Shared key of the fluentd service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2506,7 +2554,7 @@ The following state arguments are supported:
 <a href="#standby_nodejs" style="color: inherit; text-decoration: inherit;">standby</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Standby server of the fluentd service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2515,7 +2563,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username of the fluentd service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2524,7 +2572,7 @@ The following state arguments are supported:
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Weight of the fluentd server (int)
 {{% /md %}}</dd></dl>
@@ -2537,7 +2585,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2546,7 +2594,7 @@ The following state arguments are supported:
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hostname of the fluentd service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2603,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User password of the fluentd service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2612,7 @@ The following state arguments are supported:
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Shared key of the fluentd service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2573,7 +2621,7 @@ The following state arguments are supported:
 <a href="#standby_python" style="color: inherit; text-decoration: inherit;">standby</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Standby server of the fluentd service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2630,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username of the fluentd service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2591,7 +2639,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Weight of the fluentd server (int)
 {{% /md %}}</dd></dl>
@@ -2722,7 +2770,7 @@ The following state arguments are supported:
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Topic to publish on the kafka service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2731,7 +2779,7 @@ The following state arguments are supported:
 <a href="#brokerendpoints_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Kafka endpoints for kafka service. Conflicts with `zookeeper_endpoint` (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2740,7 +2788,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2797,7 @@ The following state arguments are supported:
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2758,7 +2806,7 @@ The following state arguments are supported:
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2767,7 +2815,7 @@ The following state arguments are supported:
 <a href="#zookeeperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Zookeeper endpoint for kafka service. Conflicts with `broker_endpoints` (string)
 {{% /md %}}</dd></dl>
@@ -2780,7 +2828,7 @@ The following state arguments are supported:
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Topic to publish on the kafka service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2789,7 +2837,7 @@ The following state arguments are supported:
 <a href="#broker_endpoints_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Kafka endpoints for kafka service. Conflicts with `zookeeper_endpoint` (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2846,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2807,7 +2855,7 @@ The following state arguments are supported:
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2816,7 +2864,7 @@ The following state arguments are supported:
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2825,7 +2873,7 @@ The following state arguments are supported:
 <a href="#zookeeper_endpoint_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Zookeeper endpoint for kafka service. Conflicts with `broker_endpoints` (string)
 {{% /md %}}</dd></dl>
@@ -3010,7 +3058,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3019,7 +3067,7 @@ The following state arguments are supported:
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3028,7 +3076,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3037,7 +3085,7 @@ The following state arguments are supported:
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3046,7 +3094,7 @@ The following state arguments are supported:
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3055,7 +3103,7 @@ The following state arguments are supported:
 <a href="#clientkeypass_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client key password for the splunk service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3064,7 +3112,7 @@ The following state arguments are supported:
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Index prefix for the splunk logs (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3073,7 +3121,7 @@ The following state arguments are supported:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date format for the splunk logs (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3082,7 +3130,7 @@ The following state arguments are supported:
 <a href="#sslverify_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd></dl>
@@ -3095,7 +3143,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -3104,7 +3152,7 @@ The following state arguments are supported:
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3113,7 +3161,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3122,7 +3170,7 @@ The following state arguments are supported:
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3131,7 +3179,7 @@ The following state arguments are supported:
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3140,7 +3188,7 @@ The following state arguments are supported:
 <a href="#client_key_pass_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client key password for the splunk service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3149,7 +3197,7 @@ The following state arguments are supported:
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Index prefix for the splunk logs (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3158,7 +3206,7 @@ The following state arguments are supported:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date format for the splunk logs (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3167,7 +3215,7 @@ The following state arguments are supported:
 <a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd></dl>
@@ -3370,7 +3418,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3379,7 +3427,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3388,7 +3436,7 @@ The following state arguments are supported:
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3397,7 +3445,7 @@ The following state arguments are supported:
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3406,7 +3454,7 @@ The following state arguments are supported:
 <a href="#enabletls_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable TLS for the fluentd service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3415,7 +3463,7 @@ The following state arguments are supported:
 <a href="#program_nodejs" style="color: inherit; text-decoration: inherit;">program</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Program for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3424,7 +3472,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protocol for the syslog service. `tcp` and `udp` are supported. Default: `udp` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3433,7 +3481,7 @@ The following state arguments are supported:
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date format for the syslog logs. `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info` and `debug` are supported. Default: `notice` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3442,7 +3490,7 @@ The following state arguments are supported:
 <a href="#sslverify_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3451,7 +3499,7 @@ The following state arguments are supported:
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd></dl>
@@ -3464,7 +3512,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Endpoint of the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3473,7 +3521,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3482,7 +3530,7 @@ The following state arguments are supported:
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client certificate for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3491,7 +3539,7 @@ The following state arguments are supported:
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SSL client key for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3500,7 +3548,7 @@ The following state arguments are supported:
 <a href="#enable_tls_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable TLS for the fluentd service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3509,7 +3557,7 @@ The following state arguments are supported:
 <a href="#program_python" style="color: inherit; text-decoration: inherit;">program</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Program for the syslog service (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3518,7 +3566,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protocol for the syslog service. `tcp` and `udp` are supported. Default: `udp` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3527,7 +3575,7 @@ The following state arguments are supported:
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date format for the syslog logs. `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info` and `debug` are supported. Default: `notice` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3536,7 +3584,7 @@ The following state arguments are supported:
 <a href="#ssl_verify_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}SSL verify for the syslog service (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3545,7 +3593,7 @@ The following state arguments are supported:
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token for the syslog service (string)
 {{% /md %}}</dd></dl>

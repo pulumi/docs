@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-rancher2/sdk/v3/go/rancher2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -160,19 +160,39 @@ const fooClusterAlertRule = new rancher2.ClusterAlertRule("fooClusterAlertRule",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterAlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterAlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterAlertRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ClusterAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleEventRuleArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleNodeRuleArgs]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_service_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleSystemServiceRuleArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ClusterAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                     <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">event_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAlertRuleEventRuleArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                     <span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                     <span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                     <span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAlertRuleMetricRuleArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">node_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAlertRuleNodeRuleArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                     <span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">system_service_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAlertRuleSystemServiceRuleArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ClusterAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterAlertRuleArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterAlertRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterAlertRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterAlertRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterAlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterAlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterAlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterAlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -207,22 +227,32 @@ const fooClusterAlertRule = new rancher2.ClusterAlertRule("fooClusterAlertRule",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterAlertRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -231,7 +261,7 @@ const fooClusterAlertRule = new rancher2.ClusterAlertRule("fooClusterAlertRule",
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -255,7 +285,7 @@ const fooClusterAlertRule = new rancher2.ClusterAlertRule("fooClusterAlertRule",
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -570,7 +600,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster id where create cluster alert rule (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -579,7 +609,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule alert group ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -588,7 +618,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule annotations (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -597,7 +627,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#eventrule_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">pulumi<wbr>Input<Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +636,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#groupintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Interval<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -615,7 +645,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#groupwaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Wait<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +654,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#inherited_nodejs" style="color: inherit; text-decoration: inherit;">inherited</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule inherited. Default: `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -633,7 +663,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule labels (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +672,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#metricrule_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">pulumi<wbr>Input<Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -651,7 +681,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -660,7 +690,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#noderule_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">pulumi<wbr>Input<Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -669,7 +699,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#repeatintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Interval<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -678,7 +708,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -687,7 +717,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#systemservicerule_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">pulumi<wbr>Input<Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd></dl>
@@ -700,7 +730,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster id where create cluster alert rule (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -709,7 +739,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule alert group ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -718,7 +748,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule annotations (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -727,7 +757,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#event_rule_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Input[Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +766,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +775,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +784,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#inherited_python" style="color: inherit; text-decoration: inherit;">inherited</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule inherited. Default: `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -763,7 +793,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule labels (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -772,7 +802,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#metric_rule_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Input[Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -781,7 +811,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -790,7 +820,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#node_rule_python" style="color: inherit; text-decoration: inherit;">node_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Input[Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -799,7 +829,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -808,7 +838,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -817,7 +847,7 @@ The ClusterAlertRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#system_service_rule_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Input[Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd></dl>
@@ -886,20 +916,36 @@ Get an existing ClusterAlertRule resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterAlertRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ClusterAlertRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterAlertRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ClusterAlertRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleEventRuleArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleMetricRuleArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleNodeRuleArgs]</span> = None<span class="p">, </span><span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_service_rule</span><span class="p">:</span> <span class="nx">Optional[ClusterAlertRuleSystemServiceRuleArgs]</span> = None<span class="p">) -&gt;</span> ClusterAlertRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">event_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAlertRuleEventRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">group_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">group_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">inherited</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">metric_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAlertRuleMetricRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAlertRuleNodeRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">repeat_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">system_service_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAlertRuleSystemServiceRuleArgs]]</span> = None<span class="p">) -&gt;</span> ClusterAlertRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterAlertRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterAlertRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterAlertRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterAlertRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterAlertRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterAlertRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ClusterAlertRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterAlertRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ClusterAlertRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterAlertRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1268,7 +1314,7 @@ The following state arguments are supported:
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule annotations (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1323,7 @@ The following state arguments are supported:
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster id where create cluster alert rule (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1332,7 @@ The following state arguments are supported:
 <a href="#state_eventrule_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">pulumi<wbr>Input<Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1295,7 +1341,7 @@ The following state arguments are supported:
 <a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule alert group ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1350,7 @@ The following state arguments are supported:
 <a href="#state_groupintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Interval<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1359,7 @@ The following state arguments are supported:
 <a href="#state_groupwaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Wait<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1368,7 @@ The following state arguments are supported:
 <a href="#state_inherited_nodejs" style="color: inherit; text-decoration: inherit;">inherited</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule inherited. Default: `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1377,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule labels (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1340,7 +1386,7 @@ The following state arguments are supported:
 <a href="#state_metricrule_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">pulumi<wbr>Input<Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1395,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1358,7 +1404,7 @@ The following state arguments are supported:
 <a href="#state_noderule_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">pulumi<wbr>Input<Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1367,7 +1413,7 @@ The following state arguments are supported:
 <a href="#state_repeatintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Interval<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1422,7 @@ The following state arguments are supported:
 <a href="#state_severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1431,7 @@ The following state arguments are supported:
 <a href="#state_systemservicerule_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">pulumi<wbr>Input<Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd></dl>
@@ -1398,7 +1444,7 @@ The following state arguments are supported:
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule annotations (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1453,7 @@ The following state arguments are supported:
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster id where create cluster alert rule (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1462,7 @@ The following state arguments are supported:
 <a href="#state_event_rule_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertruleeventrule">Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertruleeventrule">Input[Cluster<wbr>Alert<wbr>Rule<wbr>Event<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule event rule. ConflictsWith: `"metric_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1471,7 @@ The following state arguments are supported:
 <a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule alert group ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1480,7 @@ The following state arguments are supported:
 <a href="#state_group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1489,7 @@ The following state arguments are supported:
 <a href="#state_group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1498,7 @@ The following state arguments are supported:
 <a href="#state_inherited_python" style="color: inherit; text-decoration: inherit;">inherited</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule inherited. Default: `true` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1507,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule labels (map)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1470,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_metric_rule_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulemetricrule">Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulemetricrule">Input[Cluster<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule metric rule. ConflictsWith: `"event_rule", "node_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1525,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule name (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1488,7 +1534,7 @@ The following state arguments are supported:
 <a href="#state_node_rule_python" style="color: inherit; text-decoration: inherit;">node_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulenoderule">Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulenoderule">Input[Cluster<wbr>Alert<wbr>Rule<wbr>Node<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule node rule. ConflictsWith: `"event_rule", "metric_rule", "system_service_rule"`` (list Maxitems:1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1497,7 +1543,7 @@ The following state arguments are supported:
 <a href="#state_repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1506,7 +1552,7 @@ The following state arguments are supported:
 <a href="#state_severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The cluster alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1515,7 +1561,7 @@ The following state arguments are supported:
 <a href="#state_system_service_rule_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteralertrulesystemservicerule">Input[Cluster<wbr>Alert<wbr>Rule<wbr>System<wbr>Service<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert rule system service rule. ConflictsWith: `"event_rule", "metric_rule", "node_rule"` (list Maxitems:1)
 {{% /md %}}</dd></dl>
@@ -1583,7 +1629,7 @@ The following state arguments are supported:
 <a href="#resourcekind_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource kind. Supported values : `"DaemonSet" | "Deployment" | "Node" | "Pod" | "StatefulSet"` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1592,7 +1638,7 @@ The following state arguments are supported:
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Event type. Supported values : `"Warning" | "Normal"`. Default: `Warning` (string)
 {{% /md %}}</dd></dl>
@@ -1605,7 +1651,7 @@ The following state arguments are supported:
 <a href="#resource_kind_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource kind. Supported values : `"DaemonSet" | "Deployment" | "Node" | "Pod" | "StatefulSet"` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1660,7 @@ The following state arguments are supported:
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Event type. Supported values : `"Warning" | "Normal"`. Default: `Warning` (string)
 {{% /md %}}</dd></dl>
@@ -1727,7 +1773,7 @@ The following state arguments are supported:
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Metric rule duration (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1736,7 +1782,7 @@ The following state arguments are supported:
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Metric rule expression (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1745,7 +1791,7 @@ The following state arguments are supported:
 <a href="#thresholdvalue_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Metric rule threshold value (float64)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1800,7 @@ The following state arguments are supported:
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1809,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
 {{% /md %}}</dd></dl>
@@ -1776,7 +1822,7 @@ The following state arguments are supported:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Metric rule duration (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1785,7 +1831,7 @@ The following state arguments are supported:
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Metric rule expression (string)
 {{% /md %}}</dd><dt class="property-required"
@@ -1794,7 +1840,7 @@ The following state arguments are supported:
 <a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Metric rule threshold value (float64)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1849,7 @@ The following state arguments are supported:
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1858,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
 {{% /md %}}</dd></dl>
@@ -1925,7 +1971,7 @@ The following state arguments are supported:
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}System service rule condition. Supported values : `"controller-manager" | "etcd" | "scheduler"`. Default: `scheduler` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1980,7 @@ The following state arguments are supported:
 <a href="#cputhreshold_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Node rule cpu threshold. Default: `70` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +1989,7 @@ The following state arguments are supported:
 <a href="#memthreshold_nodejs" style="color: inherit; text-decoration: inherit;">mem<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Node rule mem threshold. Default: `70` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +1998,7 @@ The following state arguments are supported:
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Node ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +2007,7 @@ The following state arguments are supported:
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Node rule selector (map)
 {{% /md %}}</dd></dl>
@@ -1974,7 +2020,7 @@ The following state arguments are supported:
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}System service rule condition. Supported values : `"controller-manager" | "etcd" | "scheduler"`. Default: `scheduler` (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1983,7 +2029,7 @@ The following state arguments are supported:
 <a href="#cpu_threshold_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Node rule cpu threshold. Default: `70` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1992,7 +2038,7 @@ The following state arguments are supported:
 <a href="#mem_threshold_python" style="color: inherit; text-decoration: inherit;">mem_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Node rule mem threshold. Default: `70` (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2001,7 +2047,7 @@ The following state arguments are supported:
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Node ID (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +2056,7 @@ The following state arguments are supported:
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Node rule selector (map)
 {{% /md %}}</dd></dl>
@@ -2051,7 +2097,7 @@ The following state arguments are supported:
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}System service rule condition. Supported values : `"controller-manager" | "etcd" | "scheduler"`. Default: `scheduler` (string)
 {{% /md %}}</dd></dl>
@@ -2064,7 +2110,7 @@ The following state arguments are supported:
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}System service rule condition. Supported values : `"controller-manager" | "etcd" | "scheduler"`. Default: `scheduler` (string)
 {{% /md %}}</dd></dl>

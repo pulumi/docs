@@ -18,19 +18,31 @@ meta_desc: "Documentation for the rancher2.ClusterSync resource with examples, i
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterSyncArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterSyncArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_catalogs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">wait_catalogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterSyncArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterSync</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterSyncArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterSync</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterSync</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterSyncArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterSync</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterSyncArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterSync</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterSyncArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +77,32 @@ meta_desc: "Documentation for the rancher2.ClusterSync resource with examples, i
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterSyncArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +111,7 @@ meta_desc: "Documentation for the rancher2.ClusterSync resource with examples, i
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +135,7 @@ meta_desc: "Documentation for the rancher2.ClusterSync resource with examples, i
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -282,7 +304,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -291,7 +313,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nodepoolids_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pool<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The node pool IDs used by the cluster id (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -300,7 +322,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#stateconfirm_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Confirm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Wait until active status is confirmed a number of times (wait interval of 5s). Default: `1` means no confirmation (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -309,7 +331,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#synced_nodejs" style="color: inherit; text-decoration: inherit;">synced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -317,7 +339,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#waitcatalogs_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Catalogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -326,7 +348,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#waitmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Wait until monitoring is up and running. Default: `false` (bool)
 {{% /md %}}</dd></dl>
@@ -339,7 +361,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -348,7 +370,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#node_pool_ids_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pool_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The node pool IDs used by the cluster id (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -357,7 +379,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#state_confirm_python" style="color: inherit; text-decoration: inherit;">state_<wbr>confirm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Wait until active status is confirmed a number of times (wait interval of 5s). Default: `1` means no confirmation (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -366,7 +388,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#synced_python" style="color: inherit; text-decoration: inherit;">synced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +396,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#wait_catalogs_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>catalogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -383,7 +405,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#wait_monitoring_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Wait until monitoring is up and running. Default: `false` (bool)
 {{% /md %}}</dd></dl>
@@ -596,20 +618,32 @@ Get an existing ClusterSync resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterSyncState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ClusterSync</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterSyncState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ClusterSync</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSyncNodeArgs]]</span> = None<span class="p">, </span><span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_catalogs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ClusterSync</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterSyncNodeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">wait_catalogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> ClusterSync</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterSync<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterSyncState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterSync</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterSync<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterSyncState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterSync</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ClusterSync</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterSyncState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ClusterSync</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterSyncState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -904,7 +938,7 @@ The following state arguments are supported:
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -913,7 +947,7 @@ The following state arguments are supported:
 <a href="#state_defaultprojectid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) Default project ID for the cluster sync (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -922,7 +956,7 @@ The following state arguments are supported:
 <a href="#state_kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed/Sensitive) Kube Config generated for the cluster sync (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -931,7 +965,7 @@ The following state arguments are supported:
 <a href="#state_nodepoolids_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pool<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The node pool IDs used by the cluster id (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -940,7 +974,7 @@ The following state arguments are supported:
 <a href="#state_nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersyncnode">Cluster<wbr>Sync<wbr>Node[]</a></span>
+        <span class="property-type"><a href="#clustersyncnode">pulumi<wbr>Input<pulumi<wbr>Input<Cluster<wbr>Sync<wbr>Node<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster nodes (list).
 {{% /md %}}</dd><dt class="property-optional"
@@ -949,7 +983,7 @@ The following state arguments are supported:
 <a href="#state_stateconfirm_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Confirm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Wait until active status is confirmed a number of times (wait interval of 5s). Default: `1` means no confirmation (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -958,7 +992,7 @@ The following state arguments are supported:
 <a href="#state_synced_nodejs" style="color: inherit; text-decoration: inherit;">synced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1000,7 @@ The following state arguments are supported:
 <a href="#state_systemprojectid_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Computed) System project ID for the cluster sync (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +1009,7 @@ The following state arguments are supported:
 <a href="#state_waitcatalogs_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Catalogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +1018,7 @@ The following state arguments are supported:
 <a href="#state_waitmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Wait until monitoring is up and running. Default: `false` (bool)
 {{% /md %}}</dd></dl>
@@ -997,7 +1031,7 @@ The following state arguments are supported:
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +1040,7 @@ The following state arguments are supported:
 <a href="#state_default_project_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) Default project ID for the cluster sync (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1049,7 @@ The following state arguments are supported:
 <a href="#state_kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed/Sensitive) Kube Config generated for the cluster sync (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1058,7 @@ The following state arguments are supported:
 <a href="#state_node_pool_ids_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pool_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The node pool IDs used by the cluster id (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +1067,7 @@ The following state arguments are supported:
 <a href="#state_nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersyncnode">Sequence[Cluster<wbr>Sync<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustersyncnode">Input[Cluster<wbr>Sync<wbr>Node<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The cluster nodes (list).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1042,7 +1076,7 @@ The following state arguments are supported:
 <a href="#state_state_confirm_python" style="color: inherit; text-decoration: inherit;">state_<wbr>confirm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Wait until active status is confirmed a number of times (wait interval of 5s). Default: `1` means no confirmation (int)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1051,7 +1085,7 @@ The following state arguments are supported:
 <a href="#state_synced_python" style="color: inherit; text-decoration: inherit;">synced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1093,7 @@ The following state arguments are supported:
 <a href="#state_system_project_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Computed) System project ID for the cluster sync (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1068,7 +1102,7 @@ The following state arguments are supported:
 <a href="#state_wait_catalogs_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>catalogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Wait until all catalogs are downloaded and active. Default: `false` (bool)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1111,7 @@ The following state arguments are supported:
 <a href="#state_wait_monitoring_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Wait until monitoring is up and running. Default: `false` (bool)
 {{% /md %}}</dd></dl>
@@ -1397,7 +1431,7 @@ The following state arguments are supported:
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Annotations of the node (map).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1440,7 @@ The following state arguments are supported:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The total resources of a node (map).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1449,7 @@ The following state arguments are supported:
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1458,7 @@ The following state arguments are supported:
 <a href="#externalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external IP address of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1467,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1442,7 +1476,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the node (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1485,7 @@ The following state arguments are supported:
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private IP address of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1494,7 @@ The following state arguments are supported:
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Labels of the node (map).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1503,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1512,7 @@ The following state arguments are supported:
 <a href="#nodepoolid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Node Pool ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1487,7 +1521,7 @@ The following state arguments are supported:
 <a href="#nodetemplateid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Node Template ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1530,7 @@ The following state arguments are supported:
 <a href="#providerid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Provider ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1539,7 @@ The following state arguments are supported:
 <a href="#requestedhostname_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The requested hostname (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1548,7 @@ The following state arguments are supported:
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Roles of the node. `controlplane`, `etcd` and `worker`. (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1523,7 +1557,7 @@ The following state arguments are supported:
 <a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user to connect to the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1532,7 +1566,7 @@ The following state arguments are supported:
 <a href="#systeminfo_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}General information about the node, such as kernel version, kubelet and kube-proxy version, Docker version (if used), and OS name.
 {{% /md %}}</dd></dl>
@@ -1545,7 +1579,7 @@ The following state arguments are supported:
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Annotations of the node (map).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1554,7 +1588,7 @@ The following state arguments are supported:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The total resources of a node (map).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1597,7 @@ The following state arguments are supported:
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1606,7 @@ The following state arguments are supported:
 <a href="#external_ip_address_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external IP address of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1615,7 @@ The following state arguments are supported:
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1624,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the node (string)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1633,7 @@ The following state arguments are supported:
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private IP address of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1642,7 @@ The following state arguments are supported:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Labels of the node (map).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1651,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1660,7 @@ The following state arguments are supported:
 <a href="#node_pool_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Node Pool ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1669,7 @@ The following state arguments are supported:
 <a href="#node_template_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Node Template ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,7 +1678,7 @@ The following state arguments are supported:
 <a href="#provider_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Provider ID of the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1687,7 @@ The following state arguments are supported:
 <a href="#requested_hostname_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The requested hostname (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1662,7 +1696,7 @@ The following state arguments are supported:
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Roles of the node. `controlplane`, `etcd` and `worker`. (list)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1705,7 @@ The following state arguments are supported:
 <a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user to connect to the node (string).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1680,7 +1714,7 @@ The following state arguments are supported:
 <a href="#system_info_python" style="color: inherit; text-decoration: inherit;">system_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}General information about the node, such as kernel version, kubelet and kube-proxy version, Docker version (if used), and OS name.
 {{% /md %}}</dd></dl>
