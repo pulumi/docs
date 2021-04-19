@@ -18,19 +18,115 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DistributedVirtualSwitch</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DistributedVirtualSwitch</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DistributedVirtualSwitch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">contact_detail</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">contact_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">faulttolerance_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">faulttolerance_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">faulttolerance_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">faulttolerance_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hbr_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hbr_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hbr_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hbr_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedVirtualSwitchHostArgs]]</span> = None<span class="p">, </span><span class="nx">ignore_other_pvlan_mappings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv4_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iscsi_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iscsi_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iscsi_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iscsi_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lacp_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_discovery_operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_discovery_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">management_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">management_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">management_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multicast_filtering_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_active_flow_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netflow_collector_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_collector_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_idle_flow_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netflow_internal_flows_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_observation_domain_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netflow_sampling_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_resource_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_resource_control_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">nfs_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">nfs_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">nfs_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">pvlan_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedVirtualSwitchPvlanMappingArgs]]</span> = None<span class="p">, </span><span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vdp_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vdp_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vdp_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vdp_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtualmachine_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtualmachine_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtualmachine_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtualmachine_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedVirtualSwitchVlanRangeArgs]]</span> = None<span class="p">, </span><span class="nx">vmotion_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vmotion_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vmotion_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vmotion_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vsan_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vsan_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vsan_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vsan_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DistributedVirtualSwitch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                             <span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                             <span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">contact_detail</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">contact_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                             <span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">faulttolerance_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">faulttolerance_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">faulttolerance_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">faulttolerance_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">hbr_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">hbr_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">hbr_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">hbr_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributedVirtualSwitchHostArgs]]]]</span> = None<span class="p">,</span>
+                             <span class="nx">ignore_other_pvlan_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">ipv4_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">iscsi_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">iscsi_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">iscsi_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">iscsi_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">lacp_api_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">link_discovery_operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">link_discovery_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">management_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">management_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">management_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">management_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">max_mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">multicast_filtering_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">netflow_active_flow_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">netflow_collector_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">netflow_collector_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">netflow_idle_flow_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">netflow_internal_flows_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">netflow_observation_domain_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">netflow_sampling_rate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">network_resource_control_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">network_resource_control_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">nfs_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">nfs_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">nfs_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">nfs_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">pvlan_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributedVirtualSwitchPvlanMappingArgs]]]]</span> = None<span class="p">,</span>
+                             <span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                             <span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                             <span class="nx">vdp_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vdp_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vdp_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vdp_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">virtualmachine_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">virtualmachine_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">virtualmachine_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">virtualmachine_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributedVirtualSwitchVlanRangeArgs]]]]</span> = None<span class="p">,</span>
+                             <span class="nx">vmotion_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vmotion_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vmotion_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vmotion_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">vsan_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vsan_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vsan_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                             <span class="nx">vsan_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DistributedVirtualSwitch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistributedVirtualSwitch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedVirtualSwitch</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistributedVirtualSwitch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedVirtualSwitch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DistributedVirtualSwitch</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DistributedVirtualSwitch</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DistributedVirtualSwitchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +161,32 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DistributedVirtualSwitchArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +195,7 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +219,7 @@ meta_desc: "Documentation for the vsphere.DistributedVirtualSwitch resource with
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1938,7 +2044,7 @@ below:
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -1948,7 +2054,7 @@ virtual switch will be created. Forces a new resource if changed.
 <a href="#activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -1960,7 +2066,7 @@ here for more details.
 <a href="#allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -1971,7 +2077,7 @@ address than that of its own.
 <a href="#allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -1981,7 +2087,7 @@ Control (MAC) address can be changed.
 <a href="#allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -1991,7 +2097,7 @@ flag indicates whether or not all traffic is seen on a given port.
 <a href="#blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -2002,7 +2108,7 @@ virtual devices.
 <a href="#checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -2012,7 +2118,7 @@ to detect NIC failure.
 <a href="#contactdetail_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -2022,7 +2128,7 @@ who is responsible for the DVS.
 <a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -2032,7 +2138,7 @@ DVS.
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
@@ -2042,7 +2148,7 @@ value strings to set for virtual switch.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2157,7 @@ value strings to set for virtual switch.
 <a href="#directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -2061,7 +2167,7 @@ for which this policy applies to.
 <a href="#egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -2071,7 +2177,7 @@ per second if egress traffic shaping is enabled on the port.
 <a href="#egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -2081,7 +2187,7 @@ bytes if egress traffic shaping is enabled on the port.
 <a href="#egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -2091,7 +2197,7 @@ on the port for egress traffic.
 <a href="#egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -2101,7 +2207,7 @@ in bits per second if egress traffic shaping is enabled on the port.
 <a href="#failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -2111,7 +2217,7 @@ uplinks higher in precedence when they come back up.
 <a href="#faulttolerancemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2120,7 +2226,7 @@ uplinks higher in precedence when they come back up.
 <a href="#faulttolerancereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2235,7 @@ uplinks higher in precedence when they come back up.
 <a href="#faulttolerancesharecount_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2244,7 @@ uplinks higher in precedence when they come back up.
 <a href="#faulttolerancesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2253,7 @@ uplinks higher in precedence when they come back up.
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -2157,7 +2263,7 @@ if changed.
 <a href="#hbrmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2272,7 @@ if changed.
 <a href="#hbrreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2175,7 +2281,7 @@ if changed.
 <a href="#hbrsharecount_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2184,7 +2290,7 @@ if changed.
 <a href="#hbrsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2193,7 +2299,7 @@ if changed.
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchhost">Distributed<wbr>Virtual<wbr>Switch<wbr>Host[]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchhost">pulumi<wbr>Input<pulumi<wbr>Input<Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
@@ -2203,7 +2309,7 @@ options are:
 <a href="#ignoreotherpvlanmappings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Other<wbr>Pvlan<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
@@ -2213,7 +2319,7 @@ mappings not managed by this resource. Defaults to false.
 <a href="#ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -2223,7 +2329,7 @@ bits per second if ingress traffic shaping is enabled on the port.
 <a href="#ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -2233,7 +2339,7 @@ bytes if ingress traffic shaping is enabled on the port.
 <a href="#ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -2243,7 +2349,7 @@ enabled on the port for ingress traffic.
 <a href="#ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -2253,7 +2359,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -2264,7 +2370,7 @@ below.
 <a href="#iscsimaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2273,7 +2379,7 @@ below.
 <a href="#iscsireservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2282,7 +2388,7 @@ below.
 <a href="#iscsisharecount_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2291,7 +2397,7 @@ below.
 <a href="#iscsisharelevel_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2300,7 +2406,7 @@ below.
 <a href="#lacpapiversion_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -2311,7 +2417,7 @@ version to use with the switch. Possible values are `singleLag` and
 <a href="#lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -2321,7 +2427,7 @@ applies to.
 <a href="#lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2436,7 @@ applies to.
 <a href="#linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -2340,7 +2446,7 @@ for link discovery traffic.
 <a href="#linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -2350,7 +2456,7 @@ types are `cdp` and `lldp`.
 <a href="#managementmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2359,7 +2465,7 @@ types are `cdp` and `lldp`.
 <a href="#managementreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2368,7 +2474,7 @@ types are `cdp` and `lldp`.
 <a href="#managementsharecount_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2483,7 @@ types are `cdp` and `lldp`.
 <a href="#managementsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2386,7 +2492,7 @@ types are `cdp` and `lldp`.
 <a href="#maxmtu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -2396,7 +2502,7 @@ switch.
 <a href="#multicastfilteringmode_nodejs" style="color: inherit; text-decoration: inherit;">multicast<wbr>Filtering<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -2406,7 +2512,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2415,7 +2521,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 <a href="#netflowactiveflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -2426,7 +2532,7 @@ active flows are forced to be exported to the collector. Allowed range is
 <a href="#netflowcollectoripaddress_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -2437,7 +2543,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 <a href="#netflowcollectorport_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -2447,7 +2553,7 @@ must be set before Netflow can be enabled.
 <a href="#netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -2457,7 +2563,7 @@ applies to.
 <a href="#netflowidleflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -2468,7 +2574,7 @@ to `600`. Default: `15`.
 <a href="#netflowinternalflowsonly_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -2479,7 +2585,7 @@ Default: `false`.
 <a href="#netflowobservationdomainid_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -2489,7 +2595,7 @@ the Netflow collector.
 <a href="#netflowsamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -2501,7 +2607,7 @@ indicates an analysis rate of 0.001%.
 <a href="#networkresourcecontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -2511,7 +2617,7 @@ network I/O control. Default: `false`.
 <a href="#networkresourcecontrolversion_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -2521,7 +2627,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#nfsmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2530,7 +2636,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#nfsreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2539,7 +2645,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#nfssharecount_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2548,7 +2654,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#nfssharelevel_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2557,7 +2663,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -2567,7 +2673,7 @@ broadcast network of an uplink failover, triggering cache updates.
 <a href="#portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -2577,7 +2683,7 @@ ID when using private VLANs.
 <a href="#pvlanmappings_nodejs" style="color: inherit; text-decoration: inherit;">pvlan<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">pulumi<wbr>Input<pulumi<wbr>Input<Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
@@ -2587,7 +2693,7 @@ private VLAN mapping. The options are:
 <a href="#standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -2599,7 +2705,7 @@ here for more details.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2608,7 +2714,7 @@ here for more details.
 <a href="#teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -2619,7 +2725,7 @@ here for more details.
 <a href="#txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -2629,7 +2735,7 @@ this policy applies to its DVS uplinks.
 <a href="#uplinks_nodejs" style="color: inherit; text-decoration: inherit;">uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -2642,7 +2748,7 @@ use this option.
 <a href="#vdpmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2651,7 +2757,7 @@ use this option.
 <a href="#vdpreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2660,7 +2766,7 @@ use this option.
 <a href="#vdpsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2669,7 +2775,7 @@ use this option.
 <a href="#vdpsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2678,7 +2784,7 @@ use this option.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -2690,7 +2796,7 @@ downgraded.
 <a href="#virtualmachinemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2699,7 +2805,7 @@ downgraded.
 <a href="#virtualmachinereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2708,7 +2814,7 @@ downgraded.
 <a href="#virtualmachinesharecount_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2717,7 +2823,7 @@ downgraded.
 <a href="#virtualmachinesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2726,7 +2832,7 @@ downgraded.
 <a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2735,7 +2841,7 @@ downgraded.
 <a href="#vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">pulumi<wbr>Input<pulumi<wbr>Input<Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Used to denote VLAN trunking. Use the `min_vlan`
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
@@ -2747,7 +2853,7 @@ below:
 <a href="#vmotionmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2756,7 +2862,7 @@ below:
 <a href="#vmotionreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2765,7 +2871,7 @@ below:
 <a href="#vmotionsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2774,7 +2880,7 @@ below:
 <a href="#vmotionsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,7 +2889,7 @@ below:
 <a href="#vsanmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2792,7 +2898,7 @@ below:
 <a href="#vsanreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2801,7 +2907,7 @@ below:
 <a href="#vsansharecount_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2916,7 @@ below:
 <a href="#vsansharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd></dl>
@@ -2823,7 +2929,7 @@ below:
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -2833,7 +2939,7 @@ virtual switch will be created. Forces a new resource if changed.
 <a href="#active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -2845,7 +2951,7 @@ here for more details.
 <a href="#allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -2856,7 +2962,7 @@ address than that of its own.
 <a href="#allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -2866,7 +2972,7 @@ Control (MAC) address can be changed.
 <a href="#allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -2876,7 +2982,7 @@ flag indicates whether or not all traffic is seen on a given port.
 <a href="#block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -2887,7 +2993,7 @@ virtual devices.
 <a href="#check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -2897,7 +3003,7 @@ to detect NIC failure.
 <a href="#contact_detail_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -2907,7 +3013,7 @@ who is responsible for the DVS.
 <a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -2917,7 +3023,7 @@ DVS.
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
@@ -2927,7 +3033,7 @@ value strings to set for virtual switch.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2936,7 +3042,7 @@ value strings to set for virtual switch.
 <a href="#directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -2946,7 +3052,7 @@ for which this policy applies to.
 <a href="#egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -2956,7 +3062,7 @@ per second if egress traffic shaping is enabled on the port.
 <a href="#egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -2966,7 +3072,7 @@ bytes if egress traffic shaping is enabled on the port.
 <a href="#egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -2976,7 +3082,7 @@ on the port for egress traffic.
 <a href="#egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -2986,7 +3092,7 @@ in bits per second if egress traffic shaping is enabled on the port.
 <a href="#failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -2996,7 +3102,7 @@ uplinks higher in precedence when they come back up.
 <a href="#faulttolerance_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +3111,7 @@ uplinks higher in precedence when they come back up.
 <a href="#faulttolerance_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3014,7 +3120,7 @@ uplinks higher in precedence when they come back up.
 <a href="#faulttolerance_share_count_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3023,7 +3129,7 @@ uplinks higher in precedence when they come back up.
 <a href="#faulttolerance_share_level_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3032,7 +3138,7 @@ uplinks higher in precedence when they come back up.
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -3042,7 +3148,7 @@ if changed.
 <a href="#hbr_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3051,7 +3157,7 @@ if changed.
 <a href="#hbr_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3060,7 +3166,7 @@ if changed.
 <a href="#hbr_share_count_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3069,7 +3175,7 @@ if changed.
 <a href="#hbr_share_level_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3078,7 +3184,7 @@ if changed.
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchhost">Sequence[Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchhost">Input[Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
@@ -3088,7 +3194,7 @@ options are:
 <a href="#ignore_other_pvlan_mappings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>other_<wbr>pvlan_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
@@ -3098,7 +3204,7 @@ mappings not managed by this resource. Defaults to false.
 <a href="#ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -3108,7 +3214,7 @@ bits per second if ingress traffic shaping is enabled on the port.
 <a href="#ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -3118,7 +3224,7 @@ bytes if ingress traffic shaping is enabled on the port.
 <a href="#ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -3128,7 +3234,7 @@ enabled on the port for ingress traffic.
 <a href="#ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -3138,7 +3244,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -3149,7 +3255,7 @@ below.
 <a href="#iscsi_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3158,7 +3264,7 @@ below.
 <a href="#iscsi_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3167,7 +3273,7 @@ below.
 <a href="#iscsi_share_count_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3176,7 +3282,7 @@ below.
 <a href="#iscsi_share_level_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3185,7 +3291,7 @@ below.
 <a href="#lacp_api_version_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -3196,7 +3302,7 @@ version to use with the switch. Possible values are `singleLag` and
 <a href="#lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -3206,7 +3312,7 @@ applies to.
 <a href="#lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3215,7 +3321,7 @@ applies to.
 <a href="#link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -3225,7 +3331,7 @@ for link discovery traffic.
 <a href="#link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -3235,7 +3341,7 @@ types are `cdp` and `lldp`.
 <a href="#management_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3244,7 +3350,7 @@ types are `cdp` and `lldp`.
 <a href="#management_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3253,7 +3359,7 @@ types are `cdp` and `lldp`.
 <a href="#management_share_count_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3262,7 +3368,7 @@ types are `cdp` and `lldp`.
 <a href="#management_share_level_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3271,7 +3377,7 @@ types are `cdp` and `lldp`.
 <a href="#max_mtu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -3281,7 +3387,7 @@ switch.
 <a href="#multicast_filtering_mode_python" style="color: inherit; text-decoration: inherit;">multicast_<wbr>filtering_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -3291,7 +3397,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3300,7 +3406,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 <a href="#netflow_active_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>active_<wbr>flow_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -3311,7 +3417,7 @@ active flows are forced to be exported to the collector. Allowed range is
 <a href="#netflow_collector_ip_address_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -3322,7 +3428,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 <a href="#netflow_collector_port_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -3332,7 +3438,7 @@ must be set before Netflow can be enabled.
 <a href="#netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -3342,7 +3448,7 @@ applies to.
 <a href="#netflow_idle_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>idle_<wbr>flow_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -3353,7 +3459,7 @@ to `600`. Default: `15`.
 <a href="#netflow_internal_flows_only_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>internal_<wbr>flows_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -3364,7 +3470,7 @@ Default: `false`.
 <a href="#netflow_observation_domain_id_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>observation_<wbr>domain_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -3374,7 +3480,7 @@ the Netflow collector.
 <a href="#netflow_sampling_rate_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>sampling_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -3386,7 +3492,7 @@ indicates an analysis rate of 0.001%.
 <a href="#network_resource_control_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -3396,7 +3502,7 @@ network I/O control. Default: `false`.
 <a href="#network_resource_control_version_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -3406,7 +3512,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#nfs_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3415,7 +3521,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#nfs_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3424,7 +3530,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#nfs_share_count_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3433,7 +3539,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#nfs_share_level_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3442,7 +3548,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -3452,7 +3558,7 @@ broadcast network of an uplink failover, triggering cache updates.
 <a href="#port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -3462,7 +3568,7 @@ ID when using private VLANs.
 <a href="#pvlan_mappings_python" style="color: inherit; text-decoration: inherit;">pvlan_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">Sequence[Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">Input[Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
@@ -3472,7 +3578,7 @@ private VLAN mapping. The options are:
 <a href="#standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -3484,7 +3590,7 @@ here for more details.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3493,7 +3599,7 @@ here for more details.
 <a href="#teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -3504,7 +3610,7 @@ here for more details.
 <a href="#tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -3514,7 +3620,7 @@ this policy applies to its DVS uplinks.
 <a href="#uplinks_python" style="color: inherit; text-decoration: inherit;">uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -3527,7 +3633,7 @@ use this option.
 <a href="#vdp_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3536,7 +3642,7 @@ use this option.
 <a href="#vdp_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3545,7 +3651,7 @@ use this option.
 <a href="#vdp_share_count_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3554,7 +3660,7 @@ use this option.
 <a href="#vdp_share_level_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3563,7 +3669,7 @@ use this option.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -3575,7 +3681,7 @@ downgraded.
 <a href="#virtualmachine_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3584,7 +3690,7 @@ downgraded.
 <a href="#virtualmachine_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3593,7 +3699,7 @@ downgraded.
 <a href="#virtualmachine_share_count_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3602,7 +3708,7 @@ downgraded.
 <a href="#virtualmachine_share_level_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3611,7 +3717,7 @@ downgraded.
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3620,7 +3726,7 @@ downgraded.
 <a href="#vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">Sequence[Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">Input[Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Used to denote VLAN trunking. Use the `min_vlan`
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
@@ -3632,7 +3738,7 @@ below:
 <a href="#vmotion_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3641,7 +3747,7 @@ below:
 <a href="#vmotion_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3650,7 +3756,7 @@ below:
 <a href="#vmotion_share_count_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3659,7 +3765,7 @@ below:
 <a href="#vmotion_share_level_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3668,7 +3774,7 @@ below:
 <a href="#vsan_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3677,7 +3783,7 @@ below:
 <a href="#vsan_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3686,7 +3792,7 @@ below:
 <a href="#vsan_share_count_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3695,7 +3801,7 @@ below:
 <a href="#vsan_share_level_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd></dl>
@@ -3800,20 +3906,113 @@ Get an existing DistributedVirtualSwitch resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributedVirtualSwitchState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DistributedVirtualSwitch</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributedVirtualSwitchState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DistributedVirtualSwitch</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">contact_detail</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">contact_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">faulttolerance_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">faulttolerance_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">faulttolerance_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">faulttolerance_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hbr_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hbr_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hbr_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">hbr_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedVirtualSwitchHostArgs]]</span> = None<span class="p">, </span><span class="nx">ignore_other_pvlan_mappings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv4_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iscsi_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iscsi_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iscsi_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iscsi_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lacp_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_discovery_operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_discovery_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">management_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">management_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">management_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multicast_filtering_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_active_flow_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netflow_collector_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_collector_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_idle_flow_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netflow_internal_flows_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_observation_domain_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netflow_sampling_rate</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_resource_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_resource_control_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nfs_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">nfs_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">nfs_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">nfs_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">pvlan_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedVirtualSwitchPvlanMappingArgs]]</span> = None<span class="p">, </span><span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vdp_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vdp_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vdp_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vdp_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtualmachine_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtualmachine_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtualmachine_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">virtualmachine_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedVirtualSwitchVlanRangeArgs]]</span> = None<span class="p">, </span><span class="nx">vmotion_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vmotion_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vmotion_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vmotion_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vsan_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vsan_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vsan_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vsan_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DistributedVirtualSwitch</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">contact_detail</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">contact_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">faulttolerance_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">faulttolerance_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">faulttolerance_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">faulttolerance_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">hbr_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">hbr_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">hbr_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">hbr_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributedVirtualSwitchHostArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_other_pvlan_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ipv4_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">iscsi_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">iscsi_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">iscsi_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">iscsi_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">lacp_api_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">link_discovery_operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">link_discovery_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">management_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">management_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">management_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">management_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">max_mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">multicast_filtering_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_active_flow_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_collector_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_collector_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_idle_flow_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_internal_flows_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_observation_domain_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_sampling_rate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">network_resource_control_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">network_resource_control_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nfs_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">nfs_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">nfs_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">nfs_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">pvlan_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributedVirtualSwitchPvlanMappingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vdp_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vdp_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vdp_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vdp_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">virtualmachine_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">virtualmachine_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">virtualmachine_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">virtualmachine_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributedVirtualSwitchVlanRangeArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vmotion_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vmotion_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vmotion_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vmotion_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vsan_maximum_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vsan_reservation_mbit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vsan_share_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vsan_share_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> DistributedVirtualSwitch</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DistributedVirtualSwitchState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedVirtualSwitch</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DistributedVirtualSwitchState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedVirtualSwitch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DistributedVirtualSwitch</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DistributedVirtualSwitchState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DistributedVirtualSwitch</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DistributedVirtualSwitchState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5710,7 +5909,7 @@ below:
 <a href="#state_activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -5722,7 +5921,7 @@ here for more details.
 <a href="#state_allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -5733,7 +5932,7 @@ address than that of its own.
 <a href="#state_allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -5743,7 +5942,7 @@ Control (MAC) address can be changed.
 <a href="#state_allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -5753,7 +5952,7 @@ flag indicates whether or not all traffic is seen on a given port.
 <a href="#state_blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -5764,7 +5963,7 @@ virtual devices.
 <a href="#state_checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -5774,7 +5973,7 @@ to detect NIC failure.
 <a href="#state_configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5783,7 +5982,7 @@ to detect NIC failure.
 <a href="#state_contactdetail_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -5793,7 +5992,7 @@ who is responsible for the DVS.
 <a href="#state_contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -5803,7 +6002,7 @@ DVS.
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
@@ -5813,7 +6012,7 @@ value strings to set for virtual switch.
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -5823,7 +6022,7 @@ virtual switch will be created. Forces a new resource if changed.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5832,7 +6031,7 @@ virtual switch will be created. Forces a new resource if changed.
 <a href="#state_directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -5842,7 +6041,7 @@ for which this policy applies to.
 <a href="#state_egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -5852,7 +6051,7 @@ per second if egress traffic shaping is enabled on the port.
 <a href="#state_egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -5862,7 +6061,7 @@ bytes if egress traffic shaping is enabled on the port.
 <a href="#state_egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -5872,7 +6071,7 @@ on the port for egress traffic.
 <a href="#state_egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -5882,7 +6081,7 @@ in bits per second if egress traffic shaping is enabled on the port.
 <a href="#state_failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -5892,7 +6091,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_faulttolerancemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5901,7 +6100,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_faulttolerancereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5910,7 +6109,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_faulttolerancesharecount_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5919,7 +6118,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_faulttolerancesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">faulttolerance<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5928,7 +6127,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -5938,7 +6137,7 @@ if changed.
 <a href="#state_hbrmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5947,7 +6146,7 @@ if changed.
 <a href="#state_hbrreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5956,7 +6155,7 @@ if changed.
 <a href="#state_hbrsharecount_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5965,7 +6164,7 @@ if changed.
 <a href="#state_hbrsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">hbr<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5974,7 +6173,7 @@ if changed.
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchhost">Distributed<wbr>Virtual<wbr>Switch<wbr>Host[]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchhost">pulumi<wbr>Input<pulumi<wbr>Input<Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
@@ -5984,7 +6183,7 @@ options are:
 <a href="#state_ignoreotherpvlanmappings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Other<wbr>Pvlan<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
@@ -5994,7 +6193,7 @@ mappings not managed by this resource. Defaults to false.
 <a href="#state_ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -6004,7 +6203,7 @@ bits per second if ingress traffic shaping is enabled on the port.
 <a href="#state_ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -6014,7 +6213,7 @@ bytes if ingress traffic shaping is enabled on the port.
 <a href="#state_ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -6024,7 +6223,7 @@ enabled on the port for ingress traffic.
 <a href="#state_ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -6034,7 +6233,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 <a href="#state_ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -6045,7 +6244,7 @@ below.
 <a href="#state_iscsimaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6054,7 +6253,7 @@ below.
 <a href="#state_iscsireservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6063,7 +6262,7 @@ below.
 <a href="#state_iscsisharecount_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6072,7 +6271,7 @@ below.
 <a href="#state_iscsisharelevel_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6081,7 +6280,7 @@ below.
 <a href="#state_lacpapiversion_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -6092,7 +6291,7 @@ version to use with the switch. Possible values are `singleLag` and
 <a href="#state_lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -6102,7 +6301,7 @@ applies to.
 <a href="#state_lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6111,7 +6310,7 @@ applies to.
 <a href="#state_linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -6121,7 +6320,7 @@ for link discovery traffic.
 <a href="#state_linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -6131,7 +6330,7 @@ types are `cdp` and `lldp`.
 <a href="#state_managementmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6140,7 +6339,7 @@ types are `cdp` and `lldp`.
 <a href="#state_managementreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6149,7 +6348,7 @@ types are `cdp` and `lldp`.
 <a href="#state_managementsharecount_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6158,7 +6357,7 @@ types are `cdp` and `lldp`.
 <a href="#state_managementsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6167,7 +6366,7 @@ types are `cdp` and `lldp`.
 <a href="#state_maxmtu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -6177,7 +6376,7 @@ switch.
 <a href="#state_multicastfilteringmode_nodejs" style="color: inherit; text-decoration: inherit;">multicast<wbr>Filtering<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -6187,7 +6386,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6196,7 +6395,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 <a href="#state_netflowactiveflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Active<wbr>Flow<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -6207,7 +6406,7 @@ active flows are forced to be exported to the collector. Allowed range is
 <a href="#state_netflowcollectoripaddress_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -6218,7 +6417,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 <a href="#state_netflowcollectorport_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Collector<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -6228,7 +6427,7 @@ must be set before Netflow can be enabled.
 <a href="#state_netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -6238,7 +6437,7 @@ applies to.
 <a href="#state_netflowidleflowtimeout_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Idle<wbr>Flow<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -6249,7 +6448,7 @@ to `600`. Default: `15`.
 <a href="#state_netflowinternalflowsonly_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Internal<wbr>Flows<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -6260,7 +6459,7 @@ Default: `false`.
 <a href="#state_netflowobservationdomainid_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Observation<wbr>Domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -6270,7 +6469,7 @@ the Netflow collector.
 <a href="#state_netflowsamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -6282,7 +6481,7 @@ indicates an analysis rate of 0.001%.
 <a href="#state_networkresourcecontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -6292,7 +6491,7 @@ network I/O control. Default: `false`.
 <a href="#state_networkresourcecontrolversion_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Control<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -6302,7 +6501,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_nfsmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6311,7 +6510,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_nfsreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6320,7 +6519,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_nfssharecount_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6329,7 +6528,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_nfssharelevel_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6338,7 +6537,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -6348,7 +6547,7 @@ broadcast network of an uplink failover, triggering cache updates.
 <a href="#state_portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -6358,7 +6557,7 @@ ID when using private VLANs.
 <a href="#state_pvlanmappings_nodejs" style="color: inherit; text-decoration: inherit;">pvlan<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">pulumi<wbr>Input<pulumi<wbr>Input<Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
@@ -6368,7 +6567,7 @@ private VLAN mapping. The options are:
 <a href="#state_standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -6380,7 +6579,7 @@ here for more details.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6389,7 +6588,7 @@ here for more details.
 <a href="#state_teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -6400,7 +6599,7 @@ here for more details.
 <a href="#state_txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -6410,7 +6609,7 @@ this policy applies to its DVS uplinks.
 <a href="#state_uplinks_nodejs" style="color: inherit; text-decoration: inherit;">uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -6423,7 +6622,7 @@ use this option.
 <a href="#state_vdpmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6432,7 +6631,7 @@ use this option.
 <a href="#state_vdpreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6441,7 +6640,7 @@ use this option.
 <a href="#state_vdpsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6450,7 +6649,7 @@ use this option.
 <a href="#state_vdpsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vdp<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6459,7 +6658,7 @@ use this option.
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -6471,7 +6670,7 @@ downgraded.
 <a href="#state_virtualmachinemaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6480,7 +6679,7 @@ downgraded.
 <a href="#state_virtualmachinereservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6489,7 +6688,7 @@ downgraded.
 <a href="#state_virtualmachinesharecount_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6498,7 +6697,7 @@ downgraded.
 <a href="#state_virtualmachinesharelevel_nodejs" style="color: inherit; text-decoration: inherit;">virtualmachine<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6507,7 +6706,7 @@ downgraded.
 <a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6516,7 +6715,7 @@ downgraded.
 <a href="#state_vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">pulumi<wbr>Input<pulumi<wbr>Input<Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Used to denote VLAN trunking. Use the `min_vlan`
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
@@ -6528,7 +6727,7 @@ below:
 <a href="#state_vmotionmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6537,7 +6736,7 @@ below:
 <a href="#state_vmotionreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6546,7 +6745,7 @@ below:
 <a href="#state_vmotionsharecount_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6555,7 +6754,7 @@ below:
 <a href="#state_vmotionsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6564,7 +6763,7 @@ below:
 <a href="#state_vsanmaximummbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Maximum<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6573,7 +6772,7 @@ below:
 <a href="#state_vsanreservationmbit_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Reservation<wbr>Mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6582,7 +6781,7 @@ below:
 <a href="#state_vsansharecount_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6591,7 +6790,7 @@ below:
 <a href="#state_vsansharelevel_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Share<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd></dl>
@@ -6604,7 +6803,7 @@ below:
 <a href="#state_active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -6616,7 +6815,7 @@ here for more details.
 <a href="#state_allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -6627,7 +6826,7 @@ address than that of its own.
 <a href="#state_allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -6637,7 +6836,7 @@ Control (MAC) address can be changed.
 <a href="#state_allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -6647,7 +6846,7 @@ flag indicates whether or not all traffic is seen on a given port.
 <a href="#state_block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -6658,7 +6857,7 @@ virtual devices.
 <a href="#state_check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -6668,7 +6867,7 @@ to detect NIC failure.
 <a href="#state_config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6677,7 +6876,7 @@ to detect NIC failure.
 <a href="#state_contact_detail_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -6687,7 +6886,7 @@ who is responsible for the DVS.
 <a href="#state_contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -6697,7 +6896,7 @@ DVS.
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual switch.
@@ -6707,7 +6906,7 @@ value strings to set for virtual switch.
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -6717,7 +6916,7 @@ virtual switch will be created. Forces a new resource if changed.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6726,7 +6925,7 @@ virtual switch will be created. Forces a new resource if changed.
 <a href="#state_directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -6736,7 +6935,7 @@ for which this policy applies to.
 <a href="#state_egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -6746,7 +6945,7 @@ per second if egress traffic shaping is enabled on the port.
 <a href="#state_egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -6756,7 +6955,7 @@ bytes if egress traffic shaping is enabled on the port.
 <a href="#state_egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -6766,7 +6965,7 @@ on the port for egress traffic.
 <a href="#state_egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -6776,7 +6975,7 @@ in bits per second if egress traffic shaping is enabled on the port.
 <a href="#state_failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -6786,7 +6985,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_faulttolerance_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6795,7 +6994,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_faulttolerance_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6804,7 +7003,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_faulttolerance_share_count_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6813,7 +7012,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_faulttolerance_share_level_python" style="color: inherit; text-decoration: inherit;">faulttolerance_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6822,7 +7021,7 @@ uplinks higher in precedence when they come back up.
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -6832,7 +7031,7 @@ if changed.
 <a href="#state_hbr_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6841,7 +7040,7 @@ if changed.
 <a href="#state_hbr_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6850,7 +7049,7 @@ if changed.
 <a href="#state_hbr_share_count_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6859,7 +7058,7 @@ if changed.
 <a href="#state_hbr_share_level_python" style="color: inherit; text-decoration: inherit;">hbr_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6868,7 +7067,7 @@ if changed.
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchhost">Sequence[Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchhost">Input[Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
@@ -6878,7 +7077,7 @@ options are:
 <a href="#state_ignore_other_pvlan_mappings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>other_<wbr>pvlan_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to ignore existing PVLAN
 mappings not managed by this resource. Defaults to false.
@@ -6888,7 +7087,7 @@ mappings not managed by this resource. Defaults to false.
 <a href="#state_ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -6898,7 +7097,7 @@ bits per second if ingress traffic shaping is enabled on the port.
 <a href="#state_ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -6908,7 +7107,7 @@ bytes if ingress traffic shaping is enabled on the port.
 <a href="#state_ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -6918,7 +7117,7 @@ enabled on the port for ingress traffic.
 <a href="#state_ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -6928,7 +7127,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
 <a href="#state_ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -6939,7 +7138,7 @@ below.
 <a href="#state_iscsi_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6948,7 +7147,7 @@ below.
 <a href="#state_iscsi_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6957,7 +7156,7 @@ below.
 <a href="#state_iscsi_share_count_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6966,7 +7165,7 @@ below.
 <a href="#state_iscsi_share_level_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6975,7 +7174,7 @@ below.
 <a href="#state_lacp_api_version_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -6986,7 +7185,7 @@ version to use with the switch. Possible values are `singleLag` and
 <a href="#state_lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -6996,7 +7195,7 @@ applies to.
 <a href="#state_lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7005,7 +7204,7 @@ applies to.
 <a href="#state_link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -7015,7 +7214,7 @@ for link discovery traffic.
 <a href="#state_link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -7025,7 +7224,7 @@ types are `cdp` and `lldp`.
 <a href="#state_management_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7034,7 +7233,7 @@ types are `cdp` and `lldp`.
 <a href="#state_management_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">management_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7043,7 +7242,7 @@ types are `cdp` and `lldp`.
 <a href="#state_management_share_count_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7052,7 +7251,7 @@ types are `cdp` and `lldp`.
 <a href="#state_management_share_level_python" style="color: inherit; text-decoration: inherit;">management_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7061,7 +7260,7 @@ types are `cdp` and `lldp`.
 <a href="#state_max_mtu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -7071,7 +7270,7 @@ switch.
 <a href="#state_multicast_filtering_mode_python" style="color: inherit; text-decoration: inherit;">multicast_<wbr>filtering_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -7081,7 +7280,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7090,7 +7289,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
 <a href="#state_netflow_active_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>active_<wbr>flow_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -7101,7 +7300,7 @@ active flows are forced to be exported to the collector. Allowed range is
 <a href="#state_netflow_collector_ip_address_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -7112,7 +7311,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 <a href="#state_netflow_collector_port_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>collector_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -7122,7 +7321,7 @@ must be set before Netflow can be enabled.
 <a href="#state_netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -7132,7 +7331,7 @@ applies to.
 <a href="#state_netflow_idle_flow_timeout_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>idle_<wbr>flow_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -7143,7 +7342,7 @@ to `600`. Default: `15`.
 <a href="#state_netflow_internal_flows_only_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>internal_<wbr>flows_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -7154,7 +7353,7 @@ Default: `false`.
 <a href="#state_netflow_observation_domain_id_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>observation_<wbr>domain_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -7164,7 +7363,7 @@ the Netflow collector.
 <a href="#state_netflow_sampling_rate_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>sampling_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -7176,7 +7375,7 @@ indicates an analysis rate of 0.001%.
 <a href="#state_network_resource_control_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -7186,7 +7385,7 @@ network I/O control. Default: `false`.
 <a href="#state_network_resource_control_version_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>control_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -7196,7 +7395,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_nfs_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7205,7 +7404,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_nfs_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7214,7 +7413,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_nfs_share_count_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7223,7 +7422,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_nfs_share_level_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7232,7 +7431,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
 <a href="#state_notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -7242,7 +7441,7 @@ broadcast network of an uplink failover, triggering cache updates.
 <a href="#state_port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -7252,7 +7451,7 @@ ID when using private VLANs.
 <a href="#state_pvlan_mappings_python" style="color: inherit; text-decoration: inherit;">pvlan_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">Sequence[Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">Input[Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
@@ -7262,7 +7461,7 @@ private VLAN mapping. The options are:
 <a href="#state_standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -7274,7 +7473,7 @@ here for more details.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7283,7 +7482,7 @@ here for more details.
 <a href="#state_teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -7294,7 +7493,7 @@ here for more details.
 <a href="#state_tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -7304,7 +7503,7 @@ this policy applies to its DVS uplinks.
 <a href="#state_uplinks_python" style="color: inherit; text-decoration: inherit;">uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -7317,7 +7516,7 @@ use this option.
 <a href="#state_vdp_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7326,7 +7525,7 @@ use this option.
 <a href="#state_vdp_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7335,7 +7534,7 @@ use this option.
 <a href="#state_vdp_share_count_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7344,7 +7543,7 @@ use this option.
 <a href="#state_vdp_share_level_python" style="color: inherit; text-decoration: inherit;">vdp_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7353,7 +7552,7 @@ use this option.
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -7365,7 +7564,7 @@ downgraded.
 <a href="#state_virtualmachine_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7374,7 +7573,7 @@ downgraded.
 <a href="#state_virtualmachine_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7383,7 +7582,7 @@ downgraded.
 <a href="#state_virtualmachine_share_count_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7392,7 +7591,7 @@ downgraded.
 <a href="#state_virtualmachine_share_level_python" style="color: inherit; text-decoration: inherit;">virtualmachine_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7401,7 +7600,7 @@ downgraded.
 <a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7410,7 +7609,7 @@ downgraded.
 <a href="#state_vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">Sequence[Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">Input[Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Used to denote VLAN trunking. Use the `min_vlan`
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
@@ -7422,7 +7621,7 @@ below:
 <a href="#state_vmotion_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7431,7 +7630,7 @@ below:
 <a href="#state_vmotion_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7440,7 +7639,7 @@ below:
 <a href="#state_vmotion_share_count_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7449,7 +7648,7 @@ below:
 <a href="#state_vmotion_share_level_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7458,7 +7657,7 @@ below:
 <a href="#state_vsan_maximum_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>maximum_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7467,7 +7666,7 @@ below:
 <a href="#state_vsan_reservation_mbit_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>reservation_<wbr>mbit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7476,7 +7675,7 @@ below:
 <a href="#state_vsan_share_count_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7485,7 +7684,7 @@ below:
 <a href="#state_vsan_share_level_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>share_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd></dl>
@@ -7557,7 +7756,7 @@ DVS.
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
@@ -7567,7 +7766,7 @@ added in order they are specified.
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
@@ -7581,7 +7780,7 @@ DVS.
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
@@ -7591,7 +7790,7 @@ added in order they are specified.
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
@@ -7675,7 +7874,7 @@ and 4095 are reserved and cannot be used in this property.
 <a href="#primaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The primary VLAN ID. The VLAN IDs of 0 and
 4095 are reserved and cannot be used in this property.
@@ -7685,7 +7884,7 @@ and 4095 are reserved and cannot be used in this property.
 <a href="#pvlantype_nodejs" style="color: inherit; text-decoration: inherit;">pvlan<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private VLAN type. Valid values are
 promiscuous, community and isolated.
@@ -7695,7 +7894,7 @@ promiscuous, community and isolated.
 <a href="#secondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID. The VLAN IDs of 0
 and 4095 are reserved and cannot be used in this property.
@@ -7709,7 +7908,7 @@ and 4095 are reserved and cannot be used in this property.
 <a href="#primary_vlan_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The primary VLAN ID. The VLAN IDs of 0 and
 4095 are reserved and cannot be used in this property.
@@ -7719,7 +7918,7 @@ and 4095 are reserved and cannot be used in this property.
 <a href="#pvlan_type_python" style="color: inherit; text-decoration: inherit;">pvlan_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private VLAN type. Valid values are
 promiscuous, community and isolated.
@@ -7729,7 +7928,7 @@ promiscuous, community and isolated.
 <a href="#secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID. The VLAN IDs of 0
 and 4095 are reserved and cannot be used in this property.
@@ -7785,7 +7984,7 @@ and 4095 are reserved and cannot be used in this property.
 <a href="#maxvlan_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7793,7 +7992,7 @@ and 4095 are reserved and cannot be used in this property.
 <a href="#minvlan_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7805,7 +8004,7 @@ and 4095 are reserved and cannot be used in this property.
 <a href="#max_vlan_python" style="color: inherit; text-decoration: inherit;">max_<wbr>vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7813,7 +8012,7 @@ and 4095 are reserved and cannot be used in this property.
 <a href="#min_vlan_python" style="color: inherit; text-decoration: inherit;">min_<wbr>vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

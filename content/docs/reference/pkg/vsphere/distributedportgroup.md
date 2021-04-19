@@ -18,19 +18,71 @@ meta_desc: "Documentation for the vsphere.DistributedPortGroup resource with exa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DistributedPortGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributedPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DistributedPortGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributedPortGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DistributedPortGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_expand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">distributed_virtual_switch_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_port_moving_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">port_config_reset_at_disconnect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">security_policy_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shaping_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_filter_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uplink_teaming_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vlan_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedPortGroupVlanRangeArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DistributedPortGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">auto_expand</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">block_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">distributed_virtual_switch_uuid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">live_port_moving_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">netflow_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">network_resource_pool_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">network_resource_pool_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">port_config_reset_at_disconnect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">port_name_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">security_policy_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">shaping_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">traffic_filter_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">uplink_teaming_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                         <span class="nx">vlan_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributedPortGroupVlanRangeArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DistributedPortGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributedPortGroupArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistributedPortGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributedPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedPortGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistributedPortGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributedPortGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedPortGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DistributedPortGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DistributedPortGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DistributedPortGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DistributedPortGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +117,32 @@ meta_desc: "Documentation for the vsphere.DistributedPortGroup resource with exa
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DistributedPortGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +151,7 @@ meta_desc: "Documentation for the vsphere.DistributedPortGroup resource with exa
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +175,7 @@ meta_desc: "Documentation for the vsphere.DistributedPortGroup resource with exa
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1056,7 +1118,7 @@ on this port group to be overridden on an individual port.
 <a href="#distributedvirtualswitchuuid_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
@@ -1066,7 +1128,7 @@ port group to. Forces a new resource if changed.
 <a href="#activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1075,7 +1137,7 @@ port group to. Forces a new resource if changed.
 <a href="#allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -1085,7 +1147,7 @@ that of its own.
 <a href="#allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1156,7 @@ that of its own.
 <a href="#allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1165,7 @@ that of its own.
 <a href="#autoexpand_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Expand</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
@@ -1113,7 +1175,7 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
 <a href="#blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1122,7 +1184,7 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
 <a href="#blockoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
@@ -1132,7 +1194,7 @@ policy to be overridden on an individual port.
 <a href="#checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1203,7 @@ policy to be overridden on an individual port.
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
@@ -1151,7 +1213,7 @@ value string to set for port group.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1160,7 +1222,7 @@ value string to set for port group.
 <a href="#directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1169,7 +1231,7 @@ value string to set for port group.
 <a href="#egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1178,7 +1240,7 @@ value string to set for port group.
 <a href="#egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1249,7 @@ value string to set for port group.
 <a href="#egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1258,7 @@ value string to set for port group.
 <a href="#egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1267,7 @@ value string to set for port group.
 <a href="#failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1276,7 @@ value string to set for port group.
 <a href="#ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1285,7 @@ value string to set for port group.
 <a href="#ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1294,7 @@ value string to set for port group.
 <a href="#ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1303,7 @@ value string to set for port group.
 <a href="#ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1312,7 @@ value string to set for port group.
 <a href="#lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1321,7 @@ value string to set for port group.
 <a href="#lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1330,7 @@ value string to set for port group.
 <a href="#liveportmovingallowed_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Port<wbr>Moving<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
@@ -1278,7 +1340,7 @@ moved to another port group while it is connected.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1349,7 @@ moved to another port group while it is connected.
 <a href="#netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1358,7 @@ moved to another port group while it is connected.
 <a href="#netflowoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
@@ -1307,7 +1369,7 @@ port.
 <a href="#networkresourcepoolkey_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Pool<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
@@ -1318,7 +1380,7 @@ association.
 <a href="#networkresourcepooloverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Pool<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
@@ -1328,7 +1390,7 @@ resource pool set on this port group to be overridden on an individual port.
 <a href="#notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1337,7 +1399,7 @@ resource pool set on this port group to be overridden on an individual port.
 <a href="#numberofports_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
@@ -1347,7 +1409,7 @@ group. Cannot be decreased below the amount of used ports on the port group.
 <a href="#portconfigresetatdisconnect_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Config<wbr>Reset<wbr>At<wbr>Disconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
@@ -1357,7 +1419,7 @@ settings defined on this port group policy when the port disconnects.
 <a href="#portnameformat_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
@@ -1368,7 +1430,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 <a href="#portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1439,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 <a href="#securitypolicyoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
@@ -1388,7 +1450,7 @@ overridden on an individual port.
 <a href="#shapingoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
@@ -1399,7 +1461,7 @@ on an individual port.
 <a href="#standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1470,7 @@ on an individual port.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1479,7 @@ on an individual port.
 <a href="#teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
@@ -1427,7 +1489,7 @@ failover_explicit, or loadbalance_loadbased.
 <a href="#trafficfilteroverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Filter<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
@@ -1437,7 +1499,7 @@ this port group to be overridden on an individual port.
 <a href="#txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
@@ -1447,7 +1509,7 @@ forwarded done by the switch.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
@@ -1457,7 +1519,7 @@ binding) or `ephemeral`. Default: `earlyBinding`.
 <a href="#uplinkteamingoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">uplink<wbr>Teaming<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
@@ -1468,7 +1530,7 @@ individual port.
 <a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1539,7 @@ individual port.
 <a href="#vlanoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
@@ -1487,7 +1549,7 @@ on this port group to be overridden on an individual port.
 <a href="#vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedportgroupvlanrange">Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#distributedportgroupvlanrange">pulumi<wbr>Input<pulumi<wbr>Input<Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd></dl>
@@ -1500,7 +1562,7 @@ on this port group to be overridden on an individual port.
 <a href="#distributed_virtual_switch_uuid_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>virtual_<wbr>switch_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
@@ -1510,7 +1572,7 @@ port group to. Forces a new resource if changed.
 <a href="#active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1581,7 @@ port group to. Forces a new resource if changed.
 <a href="#allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -1529,7 +1591,7 @@ that of its own.
 <a href="#allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1600,7 @@ that of its own.
 <a href="#allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1609,7 @@ that of its own.
 <a href="#auto_expand_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>expand</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
@@ -1557,7 +1619,7 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
 <a href="#block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1566,7 +1628,7 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
 <a href="#block_override_allowed_python" style="color: inherit; text-decoration: inherit;">block_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
@@ -1576,7 +1638,7 @@ policy to be overridden on an individual port.
 <a href="#check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1647,7 @@ policy to be overridden on an individual port.
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
@@ -1595,7 +1657,7 @@ value string to set for port group.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1666,7 @@ value string to set for port group.
 <a href="#directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1675,7 @@ value string to set for port group.
 <a href="#egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1684,7 @@ value string to set for port group.
 <a href="#egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1693,7 @@ value string to set for port group.
 <a href="#egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1702,7 @@ value string to set for port group.
 <a href="#egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1711,7 @@ value string to set for port group.
 <a href="#failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1720,7 @@ value string to set for port group.
 <a href="#ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1729,7 @@ value string to set for port group.
 <a href="#ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1738,7 @@ value string to set for port group.
 <a href="#ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1747,7 @@ value string to set for port group.
 <a href="#ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1756,7 @@ value string to set for port group.
 <a href="#lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1765,7 @@ value string to set for port group.
 <a href="#lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1774,7 @@ value string to set for port group.
 <a href="#live_port_moving_allowed_python" style="color: inherit; text-decoration: inherit;">live_<wbr>port_<wbr>moving_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
@@ -1722,7 +1784,7 @@ moved to another port group while it is connected.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1793,7 @@ moved to another port group while it is connected.
 <a href="#netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1802,7 @@ moved to another port group while it is connected.
 <a href="#netflow_override_allowed_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
@@ -1751,7 +1813,7 @@ port.
 <a href="#network_resource_pool_key_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>pool_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
@@ -1762,7 +1824,7 @@ association.
 <a href="#network_resource_pool_override_allowed_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>pool_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
@@ -1772,7 +1834,7 @@ resource pool set on this port group to be overridden on an individual port.
 <a href="#notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1843,7 @@ resource pool set on this port group to be overridden on an individual port.
 <a href="#number_of_ports_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
@@ -1791,7 +1853,7 @@ group. Cannot be decreased below the amount of used ports on the port group.
 <a href="#port_config_reset_at_disconnect_python" style="color: inherit; text-decoration: inherit;">port_<wbr>config_<wbr>reset_<wbr>at_<wbr>disconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
@@ -1801,7 +1863,7 @@ settings defined on this port group policy when the port disconnects.
 <a href="#port_name_format_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
@@ -1812,7 +1874,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 <a href="#port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1883,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 <a href="#security_policy_override_allowed_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
@@ -1832,7 +1894,7 @@ overridden on an individual port.
 <a href="#shaping_override_allowed_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
@@ -1843,7 +1905,7 @@ on an individual port.
 <a href="#standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1914,7 @@ on an individual port.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1923,7 @@ on an individual port.
 <a href="#teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
@@ -1871,7 +1933,7 @@ failover_explicit, or loadbalance_loadbased.
 <a href="#traffic_filter_override_allowed_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>filter_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
@@ -1881,7 +1943,7 @@ this port group to be overridden on an individual port.
 <a href="#tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
@@ -1891,7 +1953,7 @@ forwarded done by the switch.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
@@ -1901,7 +1963,7 @@ binding) or `ephemeral`. Default: `earlyBinding`.
 <a href="#uplink_teaming_override_allowed_python" style="color: inherit; text-decoration: inherit;">uplink_<wbr>teaming_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
@@ -1912,7 +1974,7 @@ individual port.
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1921,7 +1983,7 @@ individual port.
 <a href="#vlan_override_allowed_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
@@ -1931,7 +1993,7 @@ on this port group to be overridden on an individual port.
 <a href="#vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedportgroupvlanrange">Sequence[Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributedportgroupvlanrange">Input[Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd></dl>
@@ -2072,20 +2134,70 @@ Get an existing DistributedPortGroup resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributedPortGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DistributedPortGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributedPortGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DistributedPortGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_expand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">distributed_virtual_switch_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_port_moving_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">port_config_reset_at_disconnect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">security_policy_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shaping_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_filter_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uplink_teaming_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vlan_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedPortGroupVlanRangeArgs]]</span> = None<span class="p">) -&gt;</span> DistributedPortGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_expand</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">block_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">distributed_virtual_switch_uuid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">live_port_moving_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">netflow_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">network_resource_pool_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_resource_pool_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">port_config_reset_at_disconnect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">port_name_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">security_policy_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">shaping_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">traffic_filter_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">uplink_teaming_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">vlan_override_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributedPortGroupVlanRangeArgs]]]]</span> = None<span class="p">) -&gt;</span> DistributedPortGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedPortGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DistributedPortGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedPortGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedPortGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DistributedPortGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DistributedPortGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DistributedPortGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DistributedPortGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DistributedPortGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DistributedPortGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3118,7 +3230,7 @@ on this port group to be overridden on an individual port.
 <a href="#state_activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3127,7 +3239,7 @@ on this port group to be overridden on an individual port.
 <a href="#state_allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -3137,7 +3249,7 @@ that of its own.
 <a href="#state_allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3146,7 +3258,7 @@ that of its own.
 <a href="#state_allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3155,7 +3267,7 @@ that of its own.
 <a href="#state_autoexpand_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Expand</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
@@ -3165,7 +3277,7 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
 <a href="#state_blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3174,7 +3286,7 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
 <a href="#state_blockoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
@@ -3184,7 +3296,7 @@ policy to be overridden on an individual port.
 <a href="#state_checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3193,7 +3305,7 @@ policy to be overridden on an individual port.
 <a href="#state_configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3202,7 +3314,7 @@ policy to be overridden on an individual port.
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
@@ -3212,7 +3324,7 @@ value string to set for port group.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3221,7 +3333,7 @@ value string to set for port group.
 <a href="#state_directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3230,7 +3342,7 @@ value string to set for port group.
 <a href="#state_distributedvirtualswitchuuid_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
@@ -3240,7 +3352,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3249,7 +3361,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3258,7 +3370,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3267,7 +3379,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3276,7 +3388,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3285,7 +3397,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3294,7 +3406,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3303,7 +3415,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3312,7 +3424,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3321,7 +3433,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3330,7 +3442,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3339,7 +3451,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3348,7 +3460,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_liveportmovingallowed_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Port<wbr>Moving<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
@@ -3358,7 +3470,7 @@ moved to another port group while it is connected.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3367,7 +3479,7 @@ moved to another port group while it is connected.
 <a href="#state_netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3376,7 +3488,7 @@ moved to another port group while it is connected.
 <a href="#state_netflowoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
@@ -3387,7 +3499,7 @@ port.
 <a href="#state_networkresourcepoolkey_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Pool<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
@@ -3398,7 +3510,7 @@ association.
 <a href="#state_networkresourcepooloverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Pool<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
@@ -3408,7 +3520,7 @@ resource pool set on this port group to be overridden on an individual port.
 <a href="#state_notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3417,7 +3529,7 @@ resource pool set on this port group to be overridden on an individual port.
 <a href="#state_numberofports_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
@@ -3427,7 +3539,7 @@ group. Cannot be decreased below the amount of used ports on the port group.
 <a href="#state_portconfigresetatdisconnect_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Config<wbr>Reset<wbr>At<wbr>Disconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
@@ -3437,7 +3549,7 @@ settings defined on this port group policy when the port disconnects.
 <a href="#state_portnameformat_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
@@ -3448,7 +3560,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 <a href="#state_portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3457,7 +3569,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 <a href="#state_securitypolicyoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
@@ -3468,7 +3580,7 @@ overridden on an individual port.
 <a href="#state_shapingoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
@@ -3479,7 +3591,7 @@ on an individual port.
 <a href="#state_standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3488,7 +3600,7 @@ on an individual port.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3497,7 +3609,7 @@ on an individual port.
 <a href="#state_teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
@@ -3507,7 +3619,7 @@ failover_explicit, or loadbalance_loadbased.
 <a href="#state_trafficfilteroverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Filter<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
@@ -3517,7 +3629,7 @@ this port group to be overridden on an individual port.
 <a href="#state_txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
@@ -3527,7 +3639,7 @@ forwarded done by the switch.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
@@ -3537,7 +3649,7 @@ binding) or `ephemeral`. Default: `earlyBinding`.
 <a href="#state_uplinkteamingoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">uplink<wbr>Teaming<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
@@ -3548,7 +3660,7 @@ individual port.
 <a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3557,7 +3669,7 @@ individual port.
 <a href="#state_vlanoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Override<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
@@ -3567,7 +3679,7 @@ on this port group to be overridden on an individual port.
 <a href="#state_vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedportgroupvlanrange">Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#distributedportgroupvlanrange">pulumi<wbr>Input<pulumi<wbr>Input<Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd></dl>
@@ -3580,7 +3692,7 @@ on this port group to be overridden on an individual port.
 <a href="#state_active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3589,7 +3701,7 @@ on this port group to be overridden on an individual port.
 <a href="#state_allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -3599,7 +3711,7 @@ that of its own.
 <a href="#state_allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3608,7 +3720,7 @@ that of its own.
 <a href="#state_allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3617,7 +3729,7 @@ that of its own.
 <a href="#state_auto_expand_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>expand</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
@@ -3627,7 +3739,7 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
 <a href="#state_block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3636,7 +3748,7 @@ past the limit specified in `number_of_ports` if necessary. Default: `true`.
 <a href="#state_block_override_allowed_python" style="color: inherit; text-decoration: inherit;">block_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
@@ -3646,7 +3758,7 @@ policy to be overridden on an individual port.
 <a href="#state_check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3655,7 +3767,7 @@ policy to be overridden on an individual port.
 <a href="#state_config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3664,7 +3776,7 @@ policy to be overridden on an individual port.
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
@@ -3674,7 +3786,7 @@ value string to set for port group.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3683,7 +3795,7 @@ value string to set for port group.
 <a href="#state_directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3692,7 +3804,7 @@ value string to set for port group.
 <a href="#state_distributed_virtual_switch_uuid_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>virtual_<wbr>switch_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
@@ -3702,7 +3814,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3711,7 +3823,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3720,7 +3832,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3729,7 +3841,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3738,7 +3850,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3747,7 +3859,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3756,7 +3868,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3765,7 +3877,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3774,7 +3886,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3783,7 +3895,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3792,7 +3904,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3801,7 +3913,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3810,7 +3922,7 @@ port group to. Forces a new resource if changed.
 <a href="#state_live_port_moving_allowed_python" style="color: inherit; text-decoration: inherit;">live_<wbr>port_<wbr>moving_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
@@ -3820,7 +3932,7 @@ moved to another port group while it is connected.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3829,7 +3941,7 @@ moved to another port group while it is connected.
 <a href="#state_netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3838,7 +3950,7 @@ moved to another port group while it is connected.
 <a href="#state_netflow_override_allowed_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
@@ -3849,7 +3961,7 @@ port.
 <a href="#state_network_resource_pool_key_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>pool_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
@@ -3860,7 +3972,7 @@ association.
 <a href="#state_network_resource_pool_override_allowed_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>pool_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
@@ -3870,7 +3982,7 @@ resource pool set on this port group to be overridden on an individual port.
 <a href="#state_notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3879,7 +3991,7 @@ resource pool set on this port group to be overridden on an individual port.
 <a href="#state_number_of_ports_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
@@ -3889,7 +4001,7 @@ group. Cannot be decreased below the amount of used ports on the port group.
 <a href="#state_port_config_reset_at_disconnect_python" style="color: inherit; text-decoration: inherit;">port_<wbr>config_<wbr>reset_<wbr>at_<wbr>disconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
@@ -3899,7 +4011,7 @@ settings defined on this port group policy when the port disconnects.
 <a href="#state_port_name_format_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
@@ -3910,7 +4022,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 <a href="#state_port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3919,7 +4031,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 <a href="#state_security_policy_override_allowed_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
@@ -3930,7 +4042,7 @@ overridden on an individual port.
 <a href="#state_shaping_override_allowed_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
@@ -3941,7 +4053,7 @@ on an individual port.
 <a href="#state_standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3950,7 +4062,7 @@ on an individual port.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3959,7 +4071,7 @@ on an individual port.
 <a href="#state_teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
@@ -3969,7 +4081,7 @@ failover_explicit, or loadbalance_loadbased.
 <a href="#state_traffic_filter_override_allowed_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>filter_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
@@ -3979,7 +4091,7 @@ this port group to be overridden on an individual port.
 <a href="#state_tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
@@ -3989,7 +4101,7 @@ forwarded done by the switch.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
@@ -3999,7 +4111,7 @@ binding) or `ephemeral`. Default: `earlyBinding`.
 <a href="#state_uplink_teaming_override_allowed_python" style="color: inherit; text-decoration: inherit;">uplink_<wbr>teaming_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
@@ -4010,7 +4122,7 @@ individual port.
 <a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4019,7 +4131,7 @@ individual port.
 <a href="#state_vlan_override_allowed_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>override_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
@@ -4029,7 +4141,7 @@ on this port group to be overridden on an individual port.
 <a href="#state_vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedportgroupvlanrange">Sequence[Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributedportgroupvlanrange">Input[Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd></dl>
@@ -4093,7 +4205,7 @@ on this port group to be overridden on an individual port.
 <a href="#maxvlan_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4101,7 +4213,7 @@ on this port group to be overridden on an individual port.
 <a href="#minvlan_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4113,7 +4225,7 @@ on this port group to be overridden on an individual port.
 <a href="#max_vlan_python" style="color: inherit; text-decoration: inherit;">max_<wbr>vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4121,7 +4233,7 @@ on this port group to be overridden on an individual port.
 <a href="#min_vlan_python" style="color: inherit; text-decoration: inherit;">min_<wbr>vlan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

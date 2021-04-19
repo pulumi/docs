@@ -23,19 +23,38 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_unverified_ssl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">api_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">client_debug</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_debug_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_debug_path_run</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_session</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">rest_session_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vcenter_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vim_keep_alive</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vim_session_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vsphere_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">allow_unverified_ssl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">api_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">client_debug</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">client_debug_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">client_debug_path_run</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">persist_session</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">rest_session_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vcenter_server</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vim_keep_alive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">vim_session_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vsphere_server</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -70,22 +89,32 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -94,7 +123,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -118,7 +147,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -413,7 +442,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd><dt class="property-required"
@@ -422,7 +451,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -431,7 +460,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#allowunverifiedssl_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unverified<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
  It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd><dt class="property-optional"
@@ -440,7 +469,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#apitimeout_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}API timeout in minutes (Default: 5)
 {{% /md %}}</dd><dt class="property-optional"
@@ -449,7 +478,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clientdebug_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}govmomi debug
  It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd><dt class="property-optional"
@@ -458,7 +487,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clientdebugpath_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
  It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd><dt class="property-optional"
@@ -467,7 +496,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clientdebugpathrun_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug<wbr>Path<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
  It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd><dt class="property-optional"
@@ -476,7 +505,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#persistsession_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
  It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd><dt class="property-optional"
@@ -485,7 +514,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#restsessionpath_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Session<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
  It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -494,7 +523,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vcenterserver_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +531,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vimkeepalive_nodejs" style="color: inherit; text-decoration: inherit;">vim<wbr>Keep<wbr>Alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
  It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd><dt class="property-optional"
@@ -511,7 +540,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vimsessionpath_nodejs" style="color: inherit; text-decoration: inherit;">vim<wbr>Session<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
  It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional"
@@ -520,7 +549,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vsphereserver_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd></dl>
@@ -533,7 +562,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd><dt class="property-required"
@@ -542,7 +571,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -551,7 +580,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#allow_unverified_ssl_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>unverified_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
  It can also be sourced from the following environment variable: `VSPHERE_ALLOW_UNVERIFIED_SSL`{{% /md %}}</dd><dt class="property-optional"
@@ -560,7 +589,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#api_timeout_python" style="color: inherit; text-decoration: inherit;">api_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}API timeout in minutes (Default: 5)
 {{% /md %}}</dd><dt class="property-optional"
@@ -569,7 +598,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#client_debug_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}govmomi debug
  It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG`{{% /md %}}</dd><dt class="property-optional"
@@ -578,7 +607,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#client_debug_path_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
  It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH`{{% /md %}}</dd><dt class="property-optional"
@@ -587,7 +616,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#client_debug_path_run_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug_<wbr>path_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
  It can also be sourced from the following environment variable: `VSPHERE_CLIENT_DEBUG_PATH_RUN`{{% /md %}}</dd><dt class="property-optional"
@@ -596,7 +625,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#persist_session_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
  It can also be sourced from the following environment variable: `VSPHERE_PERSIST_SESSION`{{% /md %}}</dd><dt class="property-optional"
@@ -605,7 +634,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rest_session_path_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>session_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
  It can also be sourced from the following environment variable: `VSPHERE_REST_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -614,7 +643,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vcenter_server_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +651,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vim_keep_alive_python" style="color: inherit; text-decoration: inherit;">vim_<wbr>keep_<wbr>alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
  It can also be sourced from the following environment variable: `VSPHERE_VIM_KEEP_ALIVE`{{% /md %}}</dd><dt class="property-optional"
@@ -631,7 +660,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vim_session_path_python" style="color: inherit; text-decoration: inherit;">vim_<wbr>session_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
  It can also be sourced from the following environment variable: `VSPHERE_VIM_SESSION_PATH`{{% /md %}}</dd><dt class="property-optional"
@@ -640,7 +669,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vsphere_server_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd></dl>
