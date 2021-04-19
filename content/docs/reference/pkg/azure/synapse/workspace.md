@@ -82,10 +82,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/synapse"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/synapse"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -226,19 +226,38 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">, </span><span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">, </span><span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WorkspaceAadAdminArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WorkspaceAzureDevopsRepoArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WorkspaceGithubRepoArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -273,22 +292,32 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,7 +326,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -321,7 +350,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -618,7 +647,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -627,7 +656,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sqladministratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -636,7 +665,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sqladministratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
 {{% /md %}}</dd><dt class="property-required"
@@ -645,7 +674,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#storagedatalakegen2filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -654,7 +683,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#aadadmin_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
+        <span class="property-type"><a href="#workspaceaadadmin">pulumi.<wbr>Input<Workspace<wbr>Aad<wbr>Admin<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -663,7 +692,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#azuredevopsrepo_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Devops<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
+        <span class="property-type"><a href="#workspaceazuredevopsrepo">pulumi.<wbr>Input<Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -672,7 +701,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#githubrepo_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
+        <span class="property-type"><a href="#workspacegithubrepo">pulumi.<wbr>Input<Workspace<wbr>Github<wbr>Repo<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -681,7 +710,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -690,7 +719,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#managedresourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -699,7 +728,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#managedvirtualnetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -708,7 +737,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +746,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sqlidentitycontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
 {{% /md %}}</dd><dt class="property-optional"
@@ -726,7 +755,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
 {{% /md %}}</dd></dl>
@@ -739,7 +768,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -748,7 +777,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sql_administrator_login_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -757,7 +786,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sql_administrator_login_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
 {{% /md %}}</dd><dt class="property-required"
@@ -766,7 +795,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#storage_data_lake_gen2_filesystem_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>lake_<wbr>gen2_<wbr>filesystem_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -775,7 +804,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#aad_admin_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceaadadmin">Input[Workspace<wbr>Aad<wbr>Admin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -784,7 +813,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#azure_devops_repo_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>devops_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceazuredevopsrepo">Input[Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +822,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#github_repo_python" style="color: inherit; text-decoration: inherit;">github_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacegithubrepo">Input[Workspace<wbr>Github<wbr>Repo<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +831,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +840,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#managed_resource_group_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +849,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#managed_virtual_network_enabled_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +858,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +867,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sql_identity_control_enabled_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>identity_<wbr>control_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
 {{% /md %}}</dd><dt class="property-optional"
@@ -847,7 +876,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
 {{% /md %}}</dd></dl>
@@ -988,20 +1017,37 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">WorkspaceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Workspace</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">WorkspaceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Workspace</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">, </span><span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">, </span><span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">, </span><span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkspaceIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Workspace</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WorkspaceAadAdminArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WorkspaceAzureDevopsRepoArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WorkspaceGithubRepoArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[WorkspaceIdentityArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">managed_virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sql_identity_control_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_data_lake_gen2_filesystem_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Workspace</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">WorkspaceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">WorkspaceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Workspace</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">WorkspaceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Workspace</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">WorkspaceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1388,7 +1434,7 @@ The following state arguments are supported:
 <a href="#state_aadadmin_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
+        <span class="property-type"><a href="#workspaceaadadmin">pulumi.<wbr>Input<Workspace<wbr>Aad<wbr>Admin<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1443,7 @@ The following state arguments are supported:
 <a href="#state_azuredevopsrepo_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Devops<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
+        <span class="property-type"><a href="#workspaceazuredevopsrepo">pulumi.<wbr>Input<Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1452,7 @@ The following state arguments are supported:
 <a href="#state_connectivityendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1461,7 @@ The following state arguments are supported:
 <a href="#state_githubrepo_nodejs" style="color: inherit; text-decoration: inherit;">github<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
+        <span class="property-type"><a href="#workspacegithubrepo">pulumi.<wbr>Input<Workspace<wbr>Github<wbr>Repo<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1470,7 @@ The following state arguments are supported:
 <a href="#state_identities_nodejs" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceidentity">Workspace<wbr>Identity[]</a></span>
+        <span class="property-type"><a href="#workspaceidentity">pulumi.<wbr>Input<pulumi.<wbr>Input<Workspace<wbr>Identity<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1479,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1442,7 +1488,7 @@ The following state arguments are supported:
 <a href="#state_managedresourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1451,7 +1497,7 @@ The following state arguments are supported:
 <a href="#state_managedvirtualnetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1506,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1515,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1524,7 @@ The following state arguments are supported:
 <a href="#state_sqladministratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1487,7 +1533,7 @@ The following state arguments are supported:
 <a href="#state_sqladministratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1542,7 @@ The following state arguments are supported:
 <a href="#state_sqlidentitycontrolenabled_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Identity<wbr>Control<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1551,7 @@ The following state arguments are supported:
 <a href="#state_storagedatalakegen2filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1560,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
 {{% /md %}}</dd></dl>
@@ -1527,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_aad_admin_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceaadadmin">Input[Workspace<wbr>Aad<wbr>Admin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1536,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_azure_devops_repo_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>devops_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceazuredevopsrepo">Input[Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1591,7 @@ The following state arguments are supported:
 <a href="#state_connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Connectivity endpoints for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1554,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_github_repo_python" style="color: inherit; text-decoration: inherit;">github_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacegithubrepo">Input[Workspace<wbr>Github<wbr>Repo<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1609,7 @@ The following state arguments are supported:
 <a href="#state_identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceidentity">Sequence[Workspace<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workspaceidentity">Input[Workspace<wbr>Identity<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1618,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1627,7 @@ The following state arguments are supported:
 <a href="#state_managed_resource_group_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workspace managed resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_managed_virtual_network_enabled_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Virtual Network enabled for all computes in this workspace? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name which should be used for this synapse Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1654,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group where the synapse Workspace should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1663,7 @@ The following state arguments are supported:
 <a href="#state_sql_administrator_login_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies The Login Name of the SQL administrator. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1672,7 @@ The following state arguments are supported:
 <a href="#state_sql_administrator_login_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Password associated with the `sql_administrator_login` for the SQL administrator.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1681,7 @@ The following state arguments are supported:
 <a href="#state_sql_identity_control_enabled_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>identity_<wbr>control_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,7 +1690,7 @@ The following state arguments are supported:
 <a href="#state_storage_data_lake_gen2_filesystem_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>data_<wbr>lake_<wbr>gen2_<wbr>filesystem_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of storage data lake gen2 filesystem resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1699,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Workspace.
 {{% /md %}}</dd></dl>
@@ -1739,7 +1785,7 @@ The following state arguments are supported:
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -1748,7 +1794,7 @@ The following state arguments are supported:
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -1757,7 +1803,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
 {{% /md %}}</dd></dl>
@@ -1770,7 +1816,7 @@ The following state arguments are supported:
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The login name of the Azure AD Administrator of this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -1779,7 +1825,7 @@ The following state arguments are supported:
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object id of the Azure AD Administrator of this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -1788,7 +1834,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
 {{% /md %}}</dd></dl>
@@ -1901,7 +1947,7 @@ The following state arguments are supported:
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure DevOps account name.
 {{% /md %}}</dd><dt class="property-required"
@@ -1910,7 +1956,7 @@ The following state arguments are supported:
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
 {{% /md %}}</dd><dt class="property-required"
@@ -1919,7 +1965,7 @@ The following state arguments are supported:
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure DevOps project.
 {{% /md %}}</dd><dt class="property-required"
@@ -1928,7 +1974,7 @@ The following state arguments are supported:
 <a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
 {{% /md %}}</dd><dt class="property-required"
@@ -1937,7 +1983,7 @@ The following state arguments are supported:
 <a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
 {{% /md %}}</dd></dl>
@@ -1950,7 +1996,7 @@ The following state arguments are supported:
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure DevOps account name.
 {{% /md %}}</dd><dt class="property-required"
@@ -1959,7 +2005,7 @@ The following state arguments are supported:
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
 {{% /md %}}</dd><dt class="property-required"
@@ -1968,7 +2014,7 @@ The following state arguments are supported:
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure DevOps project.
 {{% /md %}}</dd><dt class="property-required"
@@ -1977,7 +2023,7 @@ The following state arguments are supported:
 <a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
 {{% /md %}}</dd><dt class="property-required"
@@ -1986,7 +2032,7 @@ The following state arguments are supported:
 <a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
 {{% /md %}}</dd></dl>
@@ -2099,7 +2145,7 @@ The following state arguments are supported:
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub account name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2108,7 +2154,7 @@ The following state arguments are supported:
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
 {{% /md %}}</dd><dt class="property-required"
@@ -2117,7 +2163,7 @@ The following state arguments are supported:
 <a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
 {{% /md %}}</dd><dt class="property-required"
@@ -2126,7 +2172,7 @@ The following state arguments are supported:
 <a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2135,7 +2181,7 @@ The following state arguments are supported:
 <a href="#giturl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
 {{% /md %}}</dd></dl>
@@ -2148,7 +2194,7 @@ The following state arguments are supported:
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub account name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2157,7 +2203,7 @@ The following state arguments are supported:
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the collaboration branch of the repository to get code from.
 {{% /md %}}</dd><dt class="property-required"
@@ -2166,7 +2212,7 @@ The following state arguments are supported:
 <a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the git repository.
 {{% /md %}}</dd><dt class="property-required"
@@ -2175,7 +2221,7 @@ The following state arguments are supported:
 <a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2184,7 +2230,7 @@ The following state arguments are supported:
 <a href="#git_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the GitHub Enterprise host name. For example: https://github.mydomain.com.
 {{% /md %}}</dd></dl>
@@ -2261,7 +2307,7 @@ The following state arguments are supported:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2316,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2325,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Identity Type for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
 {{% /md %}}</dd></dl>
@@ -2292,7 +2338,7 @@ The following state arguments are supported:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2347,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Azure AD Administrator of this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2310,7 +2356,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Identity Type for the Service Principal associated with the Managed Service Identity of this Synapse Workspace.
 {{% /md %}}</dd></dl>

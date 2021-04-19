@@ -26,19 +26,43 @@ CDN Endpoints can be imported using the `resource id`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointDeliveryRuleArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointGeoFilterArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointGlobalDeliveryRuleArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointOriginArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +97,32 @@ CDN Endpoints can be imported using the `resource id`, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +131,7 @@ CDN Endpoints can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +155,7 @@ CDN Endpoints can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -508,7 +542,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">Endpoint<wbr>Origin[]</a></span>
+        <span class="property-type"><a href="#endpointorigin">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Origin<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -517,7 +551,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -526,7 +560,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -535,7 +569,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contenttypestocompresses_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -544,7 +578,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deliveryrules_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +587,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geofilters_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Geo<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -562,7 +596,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#globaldeliveryrule_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Delivery<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">pulumi.<wbr>Input<Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -571,7 +605,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -580,7 +614,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ishttpallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Http<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +623,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ishttpsallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Https<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -598,7 +632,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -607,7 +641,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -616,7 +650,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#optimizationtype_nodejs" style="color: inherit; text-decoration: inherit;">optimization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -625,7 +659,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#originhostheader_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Host<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,7 +668,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +677,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +686,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#querystringcachingbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">querystring<wbr>Caching<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +695,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -674,7 +708,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">Sequence[Endpoint<wbr>Origin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointorigin">Input[Endpoint<wbr>Origin<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -683,7 +717,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -692,7 +726,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -701,7 +735,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#content_types_to_compresses_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -710,7 +744,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#delivery_rules_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -719,7 +753,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">Sequence[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">Input[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -728,7 +762,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#global_delivery_rule_python" style="color: inherit; text-decoration: inherit;">global_<wbr>delivery_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">Input[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -737,7 +771,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +780,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#is_http_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>http_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +789,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#is_https_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>https_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +798,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +807,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +816,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#optimization_type_python" style="color: inherit; text-decoration: inherit;">optimization_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +825,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origin_host_header_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>host_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +834,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +843,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -818,7 +852,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#querystring_caching_behaviour_python" style="color: inherit; text-decoration: inherit;">querystring_<wbr>caching_<wbr>behaviour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -827,7 +861,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -932,20 +966,41 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Endpoint</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Endpoint</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointDeliveryRuleArgs]]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[EndpointGlobalDeliveryRuleArgs]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">content_types_to_compresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">delivery_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointDeliveryRuleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointGeoFilterArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">global_delivery_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointGlobalDeliveryRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointOriginArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">querystring_caching_behaviour</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Endpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EndpointState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Endpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EndpointState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1404,7 +1459,7 @@ The following state arguments are supported:
 <a href="#state_contenttypestocompresses_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1413,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_deliveryrules_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1422,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_geofilters_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Geo<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1486,7 @@ The following state arguments are supported:
 <a href="#state_globaldeliveryrule_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Delivery<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">pulumi.<wbr>Input<Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1495,7 @@ The following state arguments are supported:
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1449,7 +1504,7 @@ The following state arguments are supported:
 <a href="#state_iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1458,7 +1513,7 @@ The following state arguments are supported:
 <a href="#state_ishttpallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Http<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1467,7 +1522,7 @@ The following state arguments are supported:
 <a href="#state_ishttpsallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Https<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1476,7 +1531,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1485,7 +1540,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1494,7 +1549,7 @@ The following state arguments are supported:
 <a href="#state_optimizationtype_nodejs" style="color: inherit; text-decoration: inherit;">optimization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1503,7 +1558,7 @@ The following state arguments are supported:
 <a href="#state_originhostheader_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Host<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1512,7 +1567,7 @@ The following state arguments are supported:
 <a href="#state_originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1521,7 +1576,7 @@ The following state arguments are supported:
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">Endpoint<wbr>Origin[]</a></span>
+        <span class="property-type"><a href="#endpointorigin">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Origin<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1530,7 +1585,7 @@ The following state arguments are supported:
 <a href="#state_probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1539,7 +1594,7 @@ The following state arguments are supported:
 <a href="#state_profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1548,7 +1603,7 @@ The following state arguments are supported:
 <a href="#state_querystringcachingbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">querystring<wbr>Caching<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1612,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1566,7 +1621,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1579,7 +1634,7 @@ The following state arguments are supported:
 <a href="#state_content_types_to_compresses_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,7 +1643,7 @@ The following state arguments are supported:
 <a href="#state_delivery_rules_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1597,7 +1652,7 @@ The following state arguments are supported:
 <a href="#state_geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">Sequence[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">Input[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1606,7 +1661,7 @@ The following state arguments are supported:
 <a href="#state_global_delivery_rule_python" style="color: inherit; text-decoration: inherit;">global_<wbr>delivery_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">Input[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1615,7 +1670,7 @@ The following state arguments are supported:
 <a href="#state_host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1624,7 +1679,7 @@ The following state arguments are supported:
 <a href="#state_is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1688,7 @@ The following state arguments are supported:
 <a href="#state_is_http_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>http_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1697,7 @@ The following state arguments are supported:
 <a href="#state_is_https_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>https_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1706,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1715,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1669,7 +1724,7 @@ The following state arguments are supported:
 <a href="#state_optimization_type_python" style="color: inherit; text-decoration: inherit;">optimization_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1678,7 +1733,7 @@ The following state arguments are supported:
 <a href="#state_origin_host_header_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>host_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1687,7 +1742,7 @@ The following state arguments are supported:
 <a href="#state_origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1696,7 +1751,7 @@ The following state arguments are supported:
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">Sequence[Endpoint<wbr>Origin<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointorigin">Input[Endpoint<wbr>Origin<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1760,7 @@ The following state arguments are supported:
 <a href="#state_probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1769,7 @@ The following state arguments are supported:
 <a href="#state_profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1723,7 +1778,7 @@ The following state arguments are supported:
 <a href="#state_querystring_caching_behaviour_python" style="color: inherit; text-decoration: inherit;">querystring_<wbr>caching_<wbr>behaviour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1787,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1741,7 +1796,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -2169,7 +2224,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Delivery Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -2178,7 +2233,7 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The order used for this rule, which must be larger than 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2242,7 @@ The following state arguments are supported:
 <a href="#cacheexpirationaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2196,7 +2251,7 @@ The following state arguments are supported:
 <a href="#cachekeyquerystringaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2205,7 +2260,7 @@ The following state arguments are supported:
 <a href="#cookiesconditions_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2214,7 +2269,7 @@ The following state arguments are supported:
 <a href="#devicecondition_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2223,7 +2278,7 @@ The following state arguments are supported:
 <a href="#httpversionconditions_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2232,7 +2287,7 @@ The following state arguments are supported:
 <a href="#modifyrequestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2296,7 @@ The following state arguments are supported:
 <a href="#modifyresponseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2305,7 @@ The following state arguments are supported:
 <a href="#postargconditions_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Arg<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2259,7 +2314,7 @@ The following state arguments are supported:
 <a href="#querystringconditions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,7 +2323,7 @@ The following state arguments are supported:
 <a href="#remoteaddressconditions_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2332,7 @@ The following state arguments are supported:
 <a href="#requestbodyconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2286,7 +2341,7 @@ The following state arguments are supported:
 <a href="#requestheaderconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2295,7 +2350,7 @@ The following state arguments are supported:
 <a href="#requestmethodcondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2304,7 +2359,7 @@ The following state arguments are supported:
 <a href="#requestschemecondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Scheme<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2368,7 @@ The following state arguments are supported:
 <a href="#requesturiconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Uri<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2322,7 +2377,7 @@ The following state arguments are supported:
 <a href="#urlfileextensionconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Extension<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2331,7 +2386,7 @@ The following state arguments are supported:
 <a href="#urlfilenameconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Name<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2340,7 +2395,7 @@ The following state arguments are supported:
 <a href="#urlpathconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2404,7 @@ The following state arguments are supported:
 <a href="#urlredirectaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2358,7 +2413,7 @@ The following state arguments are supported:
 <a href="#urlrewriteaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">pulumi.<wbr>Input<Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2371,7 +2426,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Delivery Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -2380,7 +2435,7 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The order used for this rule, which must be larger than 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2389,7 +2444,7 @@ The following state arguments are supported:
 <a href="#cache_expiration_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>expiration_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2398,7 +2453,7 @@ The following state arguments are supported:
 <a href="#cache_key_query_string_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>query_<wbr>string_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2407,7 +2462,7 @@ The following state arguments are supported:
 <a href="#cookies_conditions_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2416,7 +2471,7 @@ The following state arguments are supported:
 <a href="#device_condition_python" style="color: inherit; text-decoration: inherit;">device_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2425,7 +2480,7 @@ The following state arguments are supported:
 <a href="#http_version_conditions_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2434,7 +2489,7 @@ The following state arguments are supported:
 <a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2443,7 +2498,7 @@ The following state arguments are supported:
 <a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2452,7 +2507,7 @@ The following state arguments are supported:
 <a href="#post_arg_conditions_python" style="color: inherit; text-decoration: inherit;">post_<wbr>arg_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2461,7 +2516,7 @@ The following state arguments are supported:
 <a href="#query_string_conditions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2470,7 +2525,7 @@ The following state arguments are supported:
 <a href="#remote_address_conditions_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2479,7 +2534,7 @@ The following state arguments are supported:
 <a href="#request_body_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2488,7 +2543,7 @@ The following state arguments are supported:
 <a href="#request_header_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2497,7 +2552,7 @@ The following state arguments are supported:
 <a href="#request_method_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2506,7 +2561,7 @@ The following state arguments are supported:
 <a href="#request_scheme_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>scheme_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2515,7 +2570,7 @@ The following state arguments are supported:
 <a href="#request_uri_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>uri_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2524,7 +2579,7 @@ The following state arguments are supported:
 <a href="#url_file_extension_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>extension_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2533,7 +2588,7 @@ The following state arguments are supported:
 <a href="#url_file_name_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>name_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2542,7 +2597,7 @@ The following state arguments are supported:
 <a href="#url_path_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2551,7 +2606,7 @@ The following state arguments are supported:
 <a href="#url_redirect_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2560,7 +2615,7 @@ The following state arguments are supported:
 <a href="#url_rewrite_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Input[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2619,7 +2674,7 @@ The following state arguments are supported:
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2628,7 +2683,7 @@ The following state arguments are supported:
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
 {{% /md %}}</dd></dl>
@@ -2641,7 +2696,7 @@ The following state arguments are supported:
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2650,7 +2705,7 @@ The following state arguments are supported:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
 {{% /md %}}</dd></dl>
@@ -2709,7 +2764,7 @@ The following state arguments are supported:
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2718,7 +2773,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
 {{% /md %}}</dd></dl>
@@ -2731,7 +2786,7 @@ The following state arguments are supported:
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2740,7 +2795,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
 {{% /md %}}</dd></dl>
@@ -2853,7 +2908,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2862,7 +2917,7 @@ The following state arguments are supported:
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2871,7 +2926,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of values for the cookie. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2880,7 +2935,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2889,7 +2944,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -2902,7 +2957,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2911,7 +2966,7 @@ The following state arguments are supported:
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2920,7 +2975,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of values for the cookie. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +2984,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2938,7 +2993,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -3015,7 +3070,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Desktop` and `Mobile`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3024,7 +3079,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3033,7 +3088,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
 {{% /md %}}</dd></dl>
@@ -3046,7 +3101,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Desktop` and `Mobile`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3055,7 +3110,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3064,7 +3119,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
 {{% /md %}}</dd></dl>
@@ -3141,7 +3196,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `0.9`, `1.0`, `1.1` and `2.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3205,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3159,7 +3214,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
 {{% /md %}}</dd></dl>
@@ -3172,7 +3227,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `0.9`, `1.0`, `1.1` and `2.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3181,7 +3236,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3190,7 +3245,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
 {{% /md %}}</dd></dl>
@@ -3267,7 +3322,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3276,7 +3331,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3285,7 +3340,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
 {{% /md %}}</dd></dl>
@@ -3298,7 +3353,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3307,7 +3362,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3316,7 +3371,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
 {{% /md %}}</dd></dl>
@@ -3393,7 +3448,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3402,7 +3457,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3411,7 +3466,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
 {{% /md %}}</dd></dl>
@@ -3424,7 +3479,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3433,7 +3488,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3442,7 +3497,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
 {{% /md %}}</dd></dl>
@@ -3555,7 +3610,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3564,7 +3619,7 @@ The following state arguments are supported:
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the post arg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3573,7 +3628,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3582,7 +3637,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3591,7 +3646,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -3604,7 +3659,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3613,7 +3668,7 @@ The following state arguments are supported:
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the post arg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3622,7 +3677,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3631,7 +3686,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3640,7 +3695,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -3735,7 +3790,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3744,7 +3799,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3753,7 +3808,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3762,7 +3817,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -3775,7 +3830,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3784,7 +3839,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3793,7 +3848,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3802,7 +3857,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -3879,7 +3934,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `GeoMatch` and `IPMatch`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3888,7 +3943,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of string values. For `GeoMatch` `operator` this should be a list of country codes (e.g. `US` or `DE`). List of IP address if `operator` equals to `IPMatch`. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3897,7 +3952,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3910,7 +3965,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `GeoMatch` and `IPMatch`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3919,7 +3974,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of string values. For `GeoMatch` `operator` this should be a list of country codes (e.g. `US` or `DE`). List of IP address if `operator` equals to `IPMatch`. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3928,7 +3983,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4023,7 +4078,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4032,7 +4087,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4041,7 +4096,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4050,7 +4105,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4063,7 +4118,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4072,7 +4127,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4081,7 +4136,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4090,7 +4145,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4203,7 +4258,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4212,7 +4267,7 @@ The following state arguments are supported:
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4221,7 +4276,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of header values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4230,7 +4285,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4239,7 +4294,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4252,7 +4307,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4261,7 +4316,7 @@ The following state arguments are supported:
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4270,7 +4325,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of header values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4279,7 +4334,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4288,7 +4343,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4365,7 +4420,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `POST` and `PUT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4374,7 +4429,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4383,7 +4438,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
 {{% /md %}}</dd></dl>
@@ -4396,7 +4451,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `POST` and `PUT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4405,7 +4460,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4414,7 +4469,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
 {{% /md %}}</dd></dl>
@@ -4491,7 +4546,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `HTTP` and `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4500,7 +4555,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4509,7 +4564,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
 {{% /md %}}</dd></dl>
@@ -4522,7 +4577,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `HTTP` and `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4531,7 +4586,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4540,7 +4595,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
 {{% /md %}}</dd></dl>
@@ -4635,7 +4690,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4644,7 +4699,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4653,7 +4708,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4662,7 +4717,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4675,7 +4730,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4684,7 +4739,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4693,7 +4748,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4702,7 +4757,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4797,7 +4852,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4806,7 +4861,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4815,7 +4870,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4824,7 +4879,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4837,7 +4892,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4846,7 +4901,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4855,7 +4910,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4864,7 +4919,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4959,7 +5014,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4968,7 +5023,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4977,7 +5032,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4986,7 +5041,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -4999,7 +5054,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5008,7 +5063,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5017,7 +5072,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5026,7 +5081,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -5121,7 +5176,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5130,7 +5185,7 @@ The following state arguments are supported:
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5139,7 +5194,7 @@ The following state arguments are supported:
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5148,7 +5203,7 @@ The following state arguments are supported:
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -5161,7 +5216,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5170,7 +5225,7 @@ The following state arguments are supported:
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5179,7 +5234,7 @@ The following state arguments are supported:
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5188,7 +5243,7 @@ The following state arguments are supported:
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
 {{% /md %}}</dd></dl>
@@ -5319,7 +5374,7 @@ The following state arguments are supported:
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5328,7 +5383,7 @@ The following state arguments are supported:
 <a href="#fragment_nodejs" style="color: inherit; text-decoration: inherit;">fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5337,7 +5392,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5346,7 +5401,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5355,7 +5410,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5364,7 +5419,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
 {{% /md %}}</dd></dl>
@@ -5377,7 +5432,7 @@ The following state arguments are supported:
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5386,7 +5441,7 @@ The following state arguments are supported:
 <a href="#fragment_python" style="color: inherit; text-decoration: inherit;">fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5395,7 +5450,7 @@ The following state arguments are supported:
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5404,7 +5459,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5413,7 +5468,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5422,7 +5477,7 @@ The following state arguments are supported:
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
 {{% /md %}}</dd></dl>
@@ -5499,7 +5554,7 @@ The following state arguments are supported:
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
 {{% /md %}}</dd><dt class="property-required"
@@ -5508,7 +5563,7 @@ The following state arguments are supported:
 <a href="#sourcepattern_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5517,7 +5572,7 @@ The following state arguments are supported:
 <a href="#preserveunmatchedpath_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -5530,7 +5585,7 @@ The following state arguments are supported:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
 {{% /md %}}</dd><dt class="property-required"
@@ -5539,7 +5594,7 @@ The following state arguments are supported:
 <a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5548,7 +5603,7 @@ The following state arguments are supported:
 <a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -5625,7 +5680,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Action of the Geo Filter. Possible values include `Allow` and `Block`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5634,7 +5689,7 @@ The following state arguments are supported:
 <a href="#countrycodes_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A List of two letter country codes (e.g. `US`, `GB`) to be associated with this Geo Filter.
 {{% /md %}}</dd><dt class="property-required"
@@ -5643,7 +5698,7 @@ The following state arguments are supported:
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative path applicable to geo filter.
 {{% /md %}}</dd></dl>
@@ -5656,7 +5711,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Action of the Geo Filter. Possible values include `Allow` and `Block`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5665,7 +5720,7 @@ The following state arguments are supported:
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A List of two letter country codes (e.g. `US`, `GB`) to be associated with this Geo Filter.
 {{% /md %}}</dd><dt class="property-required"
@@ -5674,7 +5729,7 @@ The following state arguments are supported:
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative path applicable to geo filter.
 {{% /md %}}</dd></dl>
@@ -5805,7 +5860,7 @@ The following state arguments are supported:
 <a href="#cacheexpirationaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">pulumi.<wbr>Input<Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5814,7 +5869,7 @@ The following state arguments are supported:
 <a href="#cachekeyquerystringaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">pulumi.<wbr>Input<Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5823,7 +5878,7 @@ The following state arguments are supported:
 <a href="#modifyrequestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5832,7 +5887,7 @@ The following state arguments are supported:
 <a href="#modifyresponseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5841,7 +5896,7 @@ The following state arguments are supported:
 <a href="#urlredirectaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">pulumi.<wbr>Input<Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5850,7 +5905,7 @@ The following state arguments are supported:
 <a href="#urlrewriteaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">pulumi.<wbr>Input<Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5863,7 +5918,7 @@ The following state arguments are supported:
 <a href="#cache_expiration_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>expiration_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Input[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5872,7 +5927,7 @@ The following state arguments are supported:
 <a href="#cache_key_query_string_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>query_<wbr>string_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Input[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5881,7 +5936,7 @@ The following state arguments are supported:
 <a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Input[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5890,7 +5945,7 @@ The following state arguments are supported:
 <a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Input[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5899,7 +5954,7 @@ The following state arguments are supported:
 <a href="#url_redirect_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Input[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5908,7 +5963,7 @@ The following state arguments are supported:
 <a href="#url_rewrite_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Input[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5967,7 +6022,7 @@ The following state arguments are supported:
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5976,7 +6031,7 @@ The following state arguments are supported:
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
 {{% /md %}}</dd></dl>
@@ -5989,7 +6044,7 @@ The following state arguments are supported:
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5998,7 +6053,7 @@ The following state arguments are supported:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
 {{% /md %}}</dd></dl>
@@ -6057,7 +6112,7 @@ The following state arguments are supported:
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6066,7 +6121,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
 {{% /md %}}</dd></dl>
@@ -6079,7 +6134,7 @@ The following state arguments are supported:
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6088,7 +6143,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
 {{% /md %}}</dd></dl>
@@ -6165,7 +6220,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6174,7 +6229,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6183,7 +6238,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
 {{% /md %}}</dd></dl>
@@ -6196,7 +6251,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6205,7 +6260,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6214,7 +6269,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
 {{% /md %}}</dd></dl>
@@ -6291,7 +6346,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6300,7 +6355,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6309,7 +6364,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
 {{% /md %}}</dd></dl>
@@ -6322,7 +6377,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6331,7 +6386,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The header name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6340,7 +6395,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
 {{% /md %}}</dd></dl>
@@ -6471,7 +6526,7 @@ The following state arguments are supported:
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6480,7 +6535,7 @@ The following state arguments are supported:
 <a href="#fragment_nodejs" style="color: inherit; text-decoration: inherit;">fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6489,7 +6544,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6498,7 +6553,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6507,7 +6562,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6516,7 +6571,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
 {{% /md %}}</dd></dl>
@@ -6529,7 +6584,7 @@ The following state arguments are supported:
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6538,7 +6593,7 @@ The following state arguments are supported:
 <a href="#fragment_python" style="color: inherit; text-decoration: inherit;">fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6547,7 +6602,7 @@ The following state arguments are supported:
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6556,7 +6611,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6565,7 +6620,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6574,7 +6629,7 @@ The following state arguments are supported:
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
 {{% /md %}}</dd></dl>
@@ -6651,7 +6706,7 @@ The following state arguments are supported:
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
 {{% /md %}}</dd><dt class="property-required"
@@ -6660,7 +6715,7 @@ The following state arguments are supported:
 <a href="#sourcepattern_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6669,7 +6724,7 @@ The following state arguments are supported:
 <a href="#preserveunmatchedpath_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -6682,7 +6737,7 @@ The following state arguments are supported:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
 {{% /md %}}</dd><dt class="property-required"
@@ -6691,7 +6746,7 @@ The following state arguments are supported:
 <a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6700,7 +6755,7 @@ The following state arguments are supported:
 <a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -6795,7 +6850,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -6804,7 +6859,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6813,7 +6868,7 @@ The following state arguments are supported:
 <a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The HTTP port of the origin. Defaults to `80`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6822,7 +6877,7 @@ The following state arguments are supported:
 <a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The HTTPS port of the origin. Defaults to `443`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -6835,7 +6890,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -6844,7 +6899,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6853,7 +6908,7 @@ The following state arguments are supported:
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The HTTP port of the origin. Defaults to `80`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6862,7 +6917,7 @@ The following state arguments are supported:
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The HTTPS port of the origin. Defaults to `443`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>

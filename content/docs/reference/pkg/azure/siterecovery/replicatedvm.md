@@ -19,19 +19,39 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicatedVM</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicatedVMArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicatedVM</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicatedVMArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicatedVM</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">managed_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicatedVMManagedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicatedVMNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">recovery_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_fabric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_protection_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicatedVM</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">managed_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReplicatedVMManagedDiskArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReplicatedVMNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">recovery_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">source_recovery_fabric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">source_recovery_protection_container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">source_vm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">target_availability_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">target_network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">target_recovery_fabric_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">target_recovery_protection_container_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">target_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicatedVM</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicatedVMArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicatedVM</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicatedVMArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicatedVM</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicatedVM</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicatedVMArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicatedVM</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicatedVM</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicatedVMArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicatedVM</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicatedVMArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -66,22 +86,32 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReplicatedVMArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -90,7 +120,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -114,7 +144,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -427,7 +457,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recoveryreplicationpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -435,7 +465,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd><dt class="property-required"
@@ -444,7 +474,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd><dt class="property-required"
@@ -453,7 +483,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sourcerecoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd><dt class="property-required"
@@ -462,7 +492,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sourcerecoveryprotectioncontainername_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd><dt class="property-required"
@@ -471,7 +501,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd><dt class="property-required"
@@ -480,7 +510,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targetrecoveryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd><dt class="property-required"
@@ -489,7 +519,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targetrecoveryprotectioncontainerid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd><dt class="property-required"
@@ -498,7 +528,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targetresourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -507,7 +537,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#manageddisks_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Replicated<wbr>VMManaged<wbr>Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -516,7 +546,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -525,7 +555,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmnetworkinterface">Replicated<wbr>VMNetwork<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -534,7 +564,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -543,7 +573,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd></dl>
@@ -556,7 +586,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recovery_replication_policy_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>replication_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -564,7 +594,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd><dt class="property-required"
@@ -573,7 +603,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd><dt class="property-required"
@@ -582,7 +612,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#source_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd><dt class="property-required"
@@ -591,7 +621,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#source_recovery_protection_container_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd><dt class="property-required"
@@ -600,7 +630,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd><dt class="property-required"
@@ -609,7 +639,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#target_recovery_fabric_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>fabric_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd><dt class="property-required"
@@ -618,7 +648,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#target_recovery_protection_container_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd><dt class="property-required"
@@ -627,7 +657,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#target_resource_group_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -636,7 +666,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">Sequence[Replicated<wbr>VMManaged<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">Input[Replicated<wbr>VMManaged<wbr>Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -645,7 +675,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -654,7 +684,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmnetworkinterface">Sequence[Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">Input[Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -663,7 +693,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -672,7 +702,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd></dl>
@@ -741,20 +771,36 @@ Get an existing ReplicatedVM resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ReplicatedVMState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ReplicatedVM</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ReplicatedVMState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ReplicatedVM</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">managed_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicatedVMManagedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicatedVMNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">recovery_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_recovery_protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_fabric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_recovery_protection_container_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ReplicatedVM</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">managed_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReplicatedVMManagedDiskArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ReplicatedVMNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">recovery_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_recovery_fabric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_recovery_protection_container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_vm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">target_availability_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">target_network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">target_recovery_fabric_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">target_recovery_protection_container_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">target_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ReplicatedVM</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReplicatedVM<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ReplicatedVMState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicatedVM</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReplicatedVM<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ReplicatedVMState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicatedVM</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ReplicatedVM</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ReplicatedVMState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ReplicatedVM</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ReplicatedVMState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1121,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_manageddisks_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Replicated<wbr>VMManaged<wbr>Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1130,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1139,7 +1185,7 @@ The following state arguments are supported:
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmnetworkinterface">Replicated<wbr>VMNetwork<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1148,7 +1194,7 @@ The following state arguments are supported:
 <a href="#state_recoveryreplicationpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1202,7 @@ The following state arguments are supported:
 <a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1211,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1220,7 @@ The following state arguments are supported:
 <a href="#state_sourcerecoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1229,7 @@ The following state arguments are supported:
 <a href="#state_sourcerecoveryprotectioncontainername_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1192,7 +1238,7 @@ The following state arguments are supported:
 <a href="#state_sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd><dt class="property-optional"
@@ -1201,7 +1247,7 @@ The following state arguments are supported:
 <a href="#state_targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1210,7 +1256,7 @@ The following state arguments are supported:
 <a href="#state_targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1219,7 +1265,7 @@ The following state arguments are supported:
 <a href="#state_targetrecoveryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1228,7 +1274,7 @@ The following state arguments are supported:
 <a href="#state_targetrecoveryprotectioncontainerid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1237,7 +1283,7 @@ The following state arguments are supported:
 <a href="#state_targetresourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd></dl>
@@ -1250,7 +1296,7 @@ The following state arguments are supported:
 <a href="#state_managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">Sequence[Replicated<wbr>VMManaged<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">Input[Replicated<wbr>VMManaged<wbr>Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1305,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1314,7 @@ The following state arguments are supported:
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmnetworkinterface">Sequence[Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">Input[Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1323,7 @@ The following state arguments are supported:
 <a href="#state_recovery_replication_policy_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>replication_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1340,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1349,7 @@ The following state arguments are supported:
 <a href="#state_source_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1312,7 +1358,7 @@ The following state arguments are supported:
 <a href="#state_source_recovery_protection_container_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1321,7 +1367,7 @@ The following state arguments are supported:
 <a href="#state_source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd><dt class="property-optional"
@@ -1330,7 +1376,7 @@ The following state arguments are supported:
 <a href="#state_target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1385,7 @@ The following state arguments are supported:
 <a href="#state_target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1348,7 +1394,7 @@ The following state arguments are supported:
 <a href="#state_target_recovery_fabric_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>fabric_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1357,7 +1403,7 @@ The following state arguments are supported:
 <a href="#state_target_recovery_protection_container_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1366,7 +1412,7 @@ The following state arguments are supported:
 <a href="#state_target_resource_group_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd></dl>
@@ -1488,7 +1534,7 @@ The following state arguments are supported:
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
 {{% /md %}}</dd><dt class="property-required"
@@ -1497,7 +1543,7 @@ The following state arguments are supported:
 <a href="#stagingstorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
 {{% /md %}}</dd><dt class="property-required"
@@ -1506,7 +1552,7 @@ The following state arguments are supported:
 <a href="#targetdisktype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
 {{% /md %}}</dd><dt class="property-required"
@@ -1515,7 +1561,7 @@ The following state arguments are supported:
 <a href="#targetreplicadisktype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Replica<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
 {{% /md %}}</dd><dt class="property-required"
@@ -1524,7 +1570,7 @@ The following state arguments are supported:
 <a href="#targetresourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
 {{% /md %}}</dd></dl>
@@ -1537,7 +1583,7 @@ The following state arguments are supported:
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
 {{% /md %}}</dd><dt class="property-required"
@@ -1546,7 +1592,7 @@ The following state arguments are supported:
 <a href="#staging_storage_account_id_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
 {{% /md %}}</dd><dt class="property-required"
@@ -1555,7 +1601,7 @@ The following state arguments are supported:
 <a href="#target_disk_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
 {{% /md %}}</dd><dt class="property-required"
@@ -1564,7 +1610,7 @@ The following state arguments are supported:
 <a href="#target_replica_disk_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>replica_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
 {{% /md %}}</dd><dt class="property-required"
@@ -1573,7 +1619,7 @@ The following state arguments are supported:
 <a href="#target_resource_group_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
 {{% /md %}}</dd></dl>
@@ -1668,7 +1714,7 @@ The following state arguments are supported:
 <a href="#recoverypublicipaddressid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Public<wbr>Ip<wbr>Address<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the public IP object to use when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1723,7 @@ The following state arguments are supported:
 <a href="#sourcenetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Interface<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id source network interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1732,7 @@ The following state arguments are supported:
 <a href="#targetstaticip_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Static<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Static IP to assign when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1741,7 @@ The following state arguments are supported:
 <a href="#targetsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the subnet to to use when a failover is done.
 {{% /md %}}</dd></dl>
@@ -1708,7 +1754,7 @@ The following state arguments are supported:
 <a href="#recovery_public_ip_address_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>public_<wbr>ip_<wbr>address_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the public IP object to use when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1717,7 +1763,7 @@ The following state arguments are supported:
 <a href="#source_network_interface_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network_<wbr>interface_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id source network interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1726,7 +1772,7 @@ The following state arguments are supported:
 <a href="#target_static_ip_python" style="color: inherit; text-decoration: inherit;">target_<wbr>static_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Static IP to assign when a failover is done.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1735,7 +1781,7 @@ The following state arguments are supported:
 <a href="#target_subnet_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>subnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to to use when a failover is done.
 {{% /md %}}</dd></dl>

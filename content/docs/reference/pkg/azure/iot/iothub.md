@@ -165,11 +165,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventhub"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/eventhub"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/iot"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -484,19 +484,40 @@ const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IoTHub</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IoTHubArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IoTHub</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IoTHubArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IoTHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">enrichments</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEnrichmentArgs]]</span> = None<span class="p">, </span><span class="nx">event_hub_partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_hub_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_route</span><span class="p">:</span> <span class="nx">Optional[IoTHubFallbackRouteArgs]</span> = None<span class="p">, </span><span class="nx">file_upload</span><span class="p">:</span> <span class="nx">Optional[IoTHubFileUploadArgs]</span> = None<span class="p">, </span><span class="nx">ip_filter_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubIpFilterRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubRouteArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IoTHubSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IoTHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubEndpointArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">enrichments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubEnrichmentArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">event_hub_partition_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+           <span class="nx">event_hub_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+           <span class="nx">fallback_route</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IoTHubFallbackRouteArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">file_upload</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IoTHubFileUploadArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">ip_filter_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubIpFilterRuleArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubRouteArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IoTHubSkuArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IoTHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IoTHubArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIoTHub</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IoTHubArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IoTHub</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIoTHub</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IoTHubArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IoTHub</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IoTHub</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IoTHubArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IoTHub</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IoTHubArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -531,22 +552,32 @@ const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IoTHubArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -555,7 +586,7 @@ const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -579,7 +610,7 @@ const exampleIoTHub = new azure.iot.IoTHub("exampleIoTHub", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -912,7 +943,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -921,7 +952,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsku">Io<wbr>THub<wbr>Sku</a></span>
+        <span class="property-type"><a href="#iothubsku">pulumi.<wbr>Input<Io<wbr>THub<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -930,7 +961,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubendpoint">Io<wbr>THub<wbr>Endpoint[]</a></span>
+        <span class="property-type"><a href="#iothubendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Endpoint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +970,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#enrichments_nodejs" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubenrichment">Io<wbr>THub<wbr>Enrichment[]</a></span>
+        <span class="property-type"><a href="#iothubenrichment">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Enrichment<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `enrichment` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -948,7 +979,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#eventhubpartitioncount_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of device-to-cloud partitions used by backing event hubs. Must be between `2` and `128`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -957,7 +988,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#eventhubretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The event hub retention to use in days. Must be between `1` and `7`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -966,7 +997,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#fallbackroute_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfallbackroute">Io<wbr>THub<wbr>Fallback<wbr>Route</a></span>
+        <span class="property-type"><a href="#iothubfallbackroute">pulumi.<wbr>Input<Io<wbr>THub<wbr>Fallback<wbr>Route<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `fallback_route` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +1006,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#fileupload_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfileupload">Io<wbr>THub<wbr>File<wbr>Upload</a></span>
+        <span class="property-type"><a href="#iothubfileupload">pulumi.<wbr>Input<Io<wbr>THub<wbr>File<wbr>Upload<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `file_upload` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +1015,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubipfilterrule">Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#iothubipfilterrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_filter_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +1024,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +1033,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. The only valid value is `1.2`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +1042,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1051,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the IotHub resource accessible from a public network?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1060,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubroute">Io<wbr>THub<wbr>Route[]</a></span>
+        <span class="property-type"><a href="#iothubroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Route<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1069,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1051,7 +1082,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1060,7 +1091,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsku">Io<wbr>THub<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#iothubsku">Input[Io<wbr>THub<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +1100,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubendpoint">Sequence[Io<wbr>THub<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubendpoint">Input[Io<wbr>THub<wbr>Endpoint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1109,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubenrichment">Sequence[Io<wbr>THub<wbr>Enrichment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubenrichment">Input[Io<wbr>THub<wbr>Enrichment<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `enrichment` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1118,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#event_hub_partition_count_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>partition_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of device-to-cloud partitions used by backing event hubs. Must be between `2` and `128`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1127,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#event_hub_retention_in_days_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The event hub retention to use in days. Must be between `1` and `7`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1136,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#fallback_route_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfallbackroute">Io<wbr>THub<wbr>Fallback<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#iothubfallbackroute">Input[Io<wbr>THub<wbr>Fallback<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `fallback_route` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1145,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#file_upload_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfileupload">Io<wbr>THub<wbr>File<wbr>Upload<wbr>Args</a></span>
+        <span class="property-type"><a href="#iothubfileupload">Input[Io<wbr>THub<wbr>File<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `file_upload` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1123,7 +1154,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubipfilterrule">Sequence[Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubipfilterrule">Input[Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_filter_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1163,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1172,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. The only valid value is `1.2`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1150,7 +1181,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1190,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the IotHub resource accessible from a public network?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1199,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubroute">Sequence[Io<wbr>THub<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubroute">Input[Io<wbr>THub<wbr>Route<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1208,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1498,20 +1529,44 @@ Get an existing IoTHub resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IoTHubState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IoTHub</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IoTHubState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IoTHub</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">enrichments</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubEnrichmentArgs]]</span> = None<span class="p">, </span><span class="nx">event_hub_events_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_events_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_operations_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_operations_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_hub_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_route</span><span class="p">:</span> <span class="nx">Optional[IoTHubFallbackRouteArgs]</span> = None<span class="p">, </span><span class="nx">file_upload</span><span class="p">:</span> <span class="nx">Optional[IoTHubFileUploadArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_filter_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubIpFilterRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubRouteArgs]]</span> = None<span class="p">, </span><span class="nx">shared_access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[IoTHubSharedAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IoTHubSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IoTHub</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubEndpointArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">enrichments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubEnrichmentArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">event_hub_events_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">event_hub_events_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">event_hub_operations_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">event_hub_operations_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">event_hub_partition_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">event_hub_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">fallback_route</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IoTHubFallbackRouteArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">file_upload</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IoTHubFileUploadArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ip_filter_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubIpFilterRuleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubRouteArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">shared_access_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IoTHubSharedAccessPolicyArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IoTHubSkuArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> IoTHub</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIoTHub<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IoTHubState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IoTHub</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIoTHub<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IoTHubState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IoTHub</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IoTHub</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IoTHubState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IoTHub</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IoTHubState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2024,7 +2079,7 @@ The following state arguments are supported:
 <a href="#state_endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubendpoint">Io<wbr>THub<wbr>Endpoint[]</a></span>
+        <span class="property-type"><a href="#iothubendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Endpoint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2033,7 +2088,7 @@ The following state arguments are supported:
 <a href="#state_enrichments_nodejs" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubenrichment">Io<wbr>THub<wbr>Enrichment[]</a></span>
+        <span class="property-type"><a href="#iothubenrichment">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Enrichment<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `enrichment` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2097,7 @@ The following state arguments are supported:
 <a href="#state_eventhubeventsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Events<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EventHub compatible endpoint for events data
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2106,7 @@ The following state arguments are supported:
 <a href="#state_eventhubeventspath_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Events<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EventHub compatible path for events data
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2115,7 @@ The following state arguments are supported:
 <a href="#state_eventhuboperationsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Operations<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EventHub compatible endpoint for operational data
 {{% /md %}}</dd><dt class="property-optional"
@@ -2069,7 +2124,7 @@ The following state arguments are supported:
 <a href="#state_eventhuboperationspath_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Operations<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EventHub compatible path for operational data
 {{% /md %}}</dd><dt class="property-optional"
@@ -2078,7 +2133,7 @@ The following state arguments are supported:
 <a href="#state_eventhubpartitioncount_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of device-to-cloud partitions used by backing event hubs. Must be between `2` and `128`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2142,7 @@ The following state arguments are supported:
 <a href="#state_eventhubretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The event hub retention to use in days. Must be between `1` and `7`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2151,7 @@ The following state arguments are supported:
 <a href="#state_fallbackroute_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfallbackroute">Io<wbr>THub<wbr>Fallback<wbr>Route</a></span>
+        <span class="property-type"><a href="#iothubfallbackroute">pulumi.<wbr>Input<Io<wbr>THub<wbr>Fallback<wbr>Route<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `fallback_route` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2160,7 @@ The following state arguments are supported:
 <a href="#state_fileupload_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfileupload">Io<wbr>THub<wbr>File<wbr>Upload</a></span>
+        <span class="property-type"><a href="#iothubfileupload">pulumi.<wbr>Input<Io<wbr>THub<wbr>File<wbr>Upload<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `file_upload` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2169,7 @@ The following state arguments are supported:
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname of the IotHub Resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2178,7 @@ The following state arguments are supported:
 <a href="#state_ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubipfilterrule">Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#iothubipfilterrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_filter_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2187,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2196,7 @@ The following state arguments are supported:
 <a href="#state_mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. The only valid value is `1.2`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2205,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2214,7 @@ The following state arguments are supported:
 <a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the IotHub resource accessible from a public network?
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2223,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2232,7 @@ The following state arguments are supported:
 <a href="#state_routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubroute">Io<wbr>THub<wbr>Route[]</a></span>
+        <span class="property-type"><a href="#iothubroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Route<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2186,7 +2241,7 @@ The following state arguments are supported:
 <a href="#state_sharedaccesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsharedaccesspolicy">Io<wbr>THub<wbr>Shared<wbr>Access<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#iothubsharedaccesspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Io<wbr>THub<wbr>Shared<wbr>Access<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `shared_access_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2250,7 @@ The following state arguments are supported:
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsku">Io<wbr>THub<wbr>Sku</a></span>
+        <span class="property-type"><a href="#iothubsku">pulumi.<wbr>Input<Io<wbr>THub<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2259,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,7 +2268,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the endpoint. Possible values are `AzureIotHub.StorageContainer`, `AzureIotHub.ServiceBusQueue`, `AzureIotHub.ServiceBusTopic` or `AzureIotHub.EventHub`.
 {{% /md %}}</dd></dl>
@@ -2226,7 +2281,7 @@ The following state arguments are supported:
 <a href="#state_endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubendpoint">Sequence[Io<wbr>THub<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubendpoint">Input[Io<wbr>THub<wbr>Endpoint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2290,7 @@ The following state arguments are supported:
 <a href="#state_enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubenrichment">Sequence[Io<wbr>THub<wbr>Enrichment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubenrichment">Input[Io<wbr>THub<wbr>Enrichment<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `enrichment` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2244,7 +2299,7 @@ The following state arguments are supported:
 <a href="#state_event_hub_events_endpoint_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>events_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EventHub compatible endpoint for events data
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2308,7 @@ The following state arguments are supported:
 <a href="#state_event_hub_events_path_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>events_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EventHub compatible path for events data
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2317,7 @@ The following state arguments are supported:
 <a href="#state_event_hub_operations_endpoint_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>operations_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EventHub compatible endpoint for operational data
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2326,7 @@ The following state arguments are supported:
 <a href="#state_event_hub_operations_path_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>operations_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EventHub compatible path for operational data
 {{% /md %}}</dd><dt class="property-optional"
@@ -2280,7 +2335,7 @@ The following state arguments are supported:
 <a href="#state_event_hub_partition_count_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>partition_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of device-to-cloud partitions used by backing event hubs. Must be between `2` and `128`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2289,7 +2344,7 @@ The following state arguments are supported:
 <a href="#state_event_hub_retention_in_days_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The event hub retention to use in days. Must be between `1` and `7`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2298,7 +2353,7 @@ The following state arguments are supported:
 <a href="#state_fallback_route_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfallbackroute">Io<wbr>THub<wbr>Fallback<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#iothubfallbackroute">Input[Io<wbr>THub<wbr>Fallback<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `fallback_route` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2307,7 +2362,7 @@ The following state arguments are supported:
 <a href="#state_file_upload_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfileupload">Io<wbr>THub<wbr>File<wbr>Upload<wbr>Args</a></span>
+        <span class="property-type"><a href="#iothubfileupload">Input[Io<wbr>THub<wbr>File<wbr>Upload<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `file_upload` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2316,7 +2371,7 @@ The following state arguments are supported:
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname of the IotHub Resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2325,7 +2380,7 @@ The following state arguments are supported:
 <a href="#state_ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubipfilterrule">Sequence[Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubipfilterrule">Input[Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_filter_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2334,7 +2389,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2343,7 +2398,7 @@ The following state arguments are supported:
 <a href="#state_min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. The only valid value is `1.2`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2352,7 +2407,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2361,7 +2416,7 @@ The following state arguments are supported:
 <a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the IotHub resource accessible from a public network?
 {{% /md %}}</dd><dt class="property-optional"
@@ -2370,7 +2425,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2379,7 +2434,7 @@ The following state arguments are supported:
 <a href="#state_routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubroute">Sequence[Io<wbr>THub<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubroute">Input[Io<wbr>THub<wbr>Route<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2388,7 +2443,7 @@ The following state arguments are supported:
 <a href="#state_shared_access_policies_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsharedaccesspolicy">Sequence[Io<wbr>THub<wbr>Shared<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubsharedaccesspolicy">Input[Io<wbr>THub<wbr>Shared<wbr>Access<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `shared_access_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2397,7 +2452,7 @@ The following state arguments are supported:
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsku">Io<wbr>THub<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#iothubsku">Input[Io<wbr>THub<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2406,7 +2461,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2415,7 +2470,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the endpoint. Possible values are `AzureIotHub.StorageContainer`, `AzureIotHub.ServiceBusQueue`, `AzureIotHub.ServiceBusTopic` or `AzureIotHub.EventHub`.
 {{% /md %}}</dd></dl>
@@ -2609,7 +2664,7 @@ The following state arguments are supported:
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection string for the endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -2618,7 +2673,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint. The name must be unique across endpoint types. The following names are reserved:  `events`, `operationsMonitoringEvents`, `fileNotifications` and `$default`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2627,7 +2682,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the endpoint. Possible values are `AzureIotHub.StorageContainer`, `AzureIotHub.ServiceBusQueue`, `AzureIotHub.ServiceBusTopic` or `AzureIotHub.EventHub`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2636,7 +2691,7 @@ The following state arguments are supported:
 <a href="#batchfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds. This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2645,7 +2700,7 @@ The following state arguments are supported:
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of storage container in the storage account. This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2654,7 +2709,7 @@ The following state arguments are supported:
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro' and 'avrodeflate'. Default value is 'avro'. This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2663,7 +2718,7 @@ The following state arguments are supported:
 <a href="#filenameformat_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}File name format for the blob. Default format is ``{iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}``. All parameters are mandatory but can be reordered. This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2672,7 +2727,7 @@ The following state arguments are supported:
 <a href="#maxchunksizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Chunk<wbr>Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB). This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2681,7 +2736,7 @@ The following state arguments are supported:
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group in which the endpoint will be created.
 {{% /md %}}</dd></dl>
@@ -2694,7 +2749,7 @@ The following state arguments are supported:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection string for the endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -2703,7 +2758,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint. The name must be unique across endpoint types. The following names are reserved:  `events`, `operationsMonitoringEvents`, `fileNotifications` and `$default`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2712,7 +2767,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the endpoint. Possible values are `AzureIotHub.StorageContainer`, `AzureIotHub.ServiceBusQueue`, `AzureIotHub.ServiceBusTopic` or `AzureIotHub.EventHub`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2721,7 +2776,7 @@ The following state arguments are supported:
 <a href="#batch_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds. This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2730,7 +2785,7 @@ The following state arguments are supported:
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of storage container in the storage account. This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2739,7 +2794,7 @@ The following state arguments are supported:
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Encoding that is used to serialize messages to blobs. Supported values are 'avro' and 'avrodeflate'. Default value is 'avro'. This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2748,7 +2803,7 @@ The following state arguments are supported:
 <a href="#file_name_format_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}File name format for the blob. Default format is ``{iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}``. All parameters are mandatory but can be reordered. This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2757,7 +2812,7 @@ The following state arguments are supported:
 <a href="#max_chunk_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>chunk_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB). This attribute is mandatory for endpoint type `AzureIotHub.StorageContainer`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2766,7 +2821,7 @@ The following state arguments are supported:
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group in which the endpoint will be created.
 {{% /md %}}</dd></dl>
@@ -2843,7 +2898,7 @@ The following state arguments are supported:
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of endpoints which will be enriched.
 {{% /md %}}</dd><dt class="property-required"
@@ -2852,7 +2907,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key of the enrichment.
 {{% /md %}}</dd><dt class="property-required"
@@ -2861,7 +2916,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the enrichment. Value can be any static string, the name of the IoT hub sending the message (use `$iothubname`) or information from the device twin (ex: `$twin.tags.latitude`)
 {{% /md %}}</dd></dl>
@@ -2874,7 +2929,7 @@ The following state arguments are supported:
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of endpoints which will be enriched.
 {{% /md %}}</dd><dt class="property-required"
@@ -2883,7 +2938,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key of the enrichment.
 {{% /md %}}</dd><dt class="property-required"
@@ -2892,7 +2947,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the enrichment. Value can be any static string, the name of the IoT hub sending the message (use `$iothubname`) or information from the device twin (ex: `$twin.tags.latitude`)
 {{% /md %}}</dd></dl>
@@ -2987,7 +3042,7 @@ The following state arguments are supported:
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2996,7 +3051,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Used to specify whether the fallback route is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +3060,7 @@ The following state arguments are supported:
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The endpoints to which messages that satisfy the condition are routed. Currently only 1 endpoint is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3014,7 +3069,7 @@ The following state arguments are supported:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source that the routing rule is to be applied to, such as `DeviceMessages`. Possible values include: `RoutingSourceInvalid`, `RoutingSourceDeviceMessages`, `RoutingSourceTwinChangeEvents`, `RoutingSourceDeviceLifecycleEvents`, `RoutingSourceDeviceJobLifecycleEvents`.
 {{% /md %}}</dd></dl>
@@ -3027,7 +3082,7 @@ The following state arguments are supported:
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3036,7 +3091,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Used to specify whether the fallback route is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3045,7 +3100,7 @@ The following state arguments are supported:
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The endpoints to which messages that satisfy the condition are routed. Currently only 1 endpoint is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3054,7 +3109,7 @@ The following state arguments are supported:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source that the routing rule is to be applied to, such as `DeviceMessages`. Possible values include: `RoutingSourceInvalid`, `RoutingSourceDeviceMessages`, `RoutingSourceTwinChangeEvents`, `RoutingSourceDeviceLifecycleEvents`, `RoutingSourceDeviceJobLifecycleEvents`.
 {{% /md %}}</dd></dl>
@@ -3203,7 +3258,7 @@ The following state arguments are supported:
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.
 {{% /md %}}</dd><dt class="property-required"
@@ -3212,7 +3267,7 @@ The following state arguments are supported:
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connection_string specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3221,7 +3276,7 @@ The following state arguments are supported:
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The period of time for which a file upload notification message is available to consume before it is expired by the IoT hub, specified as an [ISO 8601 timespan duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This value must be between 1 minute and 48 hours, and evaluates to 'PT1H' by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3230,7 +3285,7 @@ The following state arguments are supported:
 <a href="#lockduration_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The lock duration for the file upload notifications queue, specified as an [ISO 8601 timespan duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This value must be between 5 and 300 seconds, and evaluates to 'PT1M' by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3239,7 +3294,7 @@ The following state arguments are supported:
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of times the IoT hub attempts to deliver a file upload notification message. It evaluates to 10 by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3248,7 +3303,7 @@ The following state arguments are supported:
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Used to specify whether file notifications are sent to IoT Hub on upload. It evaluates to false by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3257,7 +3312,7 @@ The following state arguments are supported:
 <a href="#sasttl_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid, specified as an [ISO 8601 timespan duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This value must be between 1 minute and 24 hours, and evaluates to 'PT1H' by default.
 {{% /md %}}</dd></dl>
@@ -3270,7 +3325,7 @@ The following state arguments are supported:
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection string for the Azure Storage account to which files are uploaded.
 {{% /md %}}</dd><dt class="property-required"
@@ -3279,7 +3334,7 @@ The following state arguments are supported:
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the root container where you upload files. The container need not exist but should be creatable using the connection_string specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3288,7 +3343,7 @@ The following state arguments are supported:
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The period of time for which a file upload notification message is available to consume before it is expired by the IoT hub, specified as an [ISO 8601 timespan duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This value must be between 1 minute and 48 hours, and evaluates to 'PT1H' by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3297,7 +3352,7 @@ The following state arguments are supported:
 <a href="#lock_duration_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The lock duration for the file upload notifications queue, specified as an [ISO 8601 timespan duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This value must be between 5 and 300 seconds, and evaluates to 'PT1M' by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3306,7 +3361,7 @@ The following state arguments are supported:
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of times the IoT hub attempts to deliver a file upload notification message. It evaluates to 10 by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3315,7 +3370,7 @@ The following state arguments are supported:
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Used to specify whether file notifications are sent to IoT Hub on upload. It evaluates to false by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3324,7 +3379,7 @@ The following state arguments are supported:
 <a href="#sas_ttl_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The period of time for which the SAS URI generated by IoT Hub for file upload is valid, specified as an [ISO 8601 timespan duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This value must be between 1 minute and 24 hours, and evaluates to 'PT1H' by default.
 {{% /md %}}</dd></dl>
@@ -3401,7 +3456,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired action for requests captured by this rule. Possible values are  `Accept`, `Reject`
 {{% /md %}}</dd><dt class="property-required"
@@ -3410,7 +3465,7 @@ The following state arguments are supported:
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IP address range in CIDR notation for the rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -3419,7 +3474,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the filter.
 {{% /md %}}</dd></dl>
@@ -3432,7 +3487,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired action for requests captured by this rule. Possible values are  `Accept`, `Reject`
 {{% /md %}}</dd><dt class="property-required"
@@ -3441,7 +3496,7 @@ The following state arguments are supported:
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IP address range in CIDR notation for the rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -3450,7 +3505,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the filter.
 {{% /md %}}</dd></dl>
@@ -3563,7 +3618,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Used to specify whether a route is enabled.
 {{% /md %}}</dd><dt class="property-required"
@@ -3572,7 +3627,7 @@ The following state arguments are supported:
 <a href="#endpointnames_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed.
 {{% /md %}}</dd><dt class="property-required"
@@ -3581,7 +3636,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the route.
 {{% /md %}}</dd><dt class="property-required"
@@ -3590,7 +3645,7 @@ The following state arguments are supported:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source that the routing rule is to be applied to, such as `DeviceMessages`. Possible values include: `RoutingSourceInvalid`, `RoutingSourceDeviceMessages`, `RoutingSourceTwinChangeEvents`, `RoutingSourceDeviceLifecycleEvents`, `RoutingSourceDeviceJobLifecycleEvents`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3599,7 +3654,7 @@ The following state arguments are supported:
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language.
 {{% /md %}}</dd></dl>
@@ -3612,7 +3667,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Used to specify whether a route is enabled.
 {{% /md %}}</dd><dt class="property-required"
@@ -3621,7 +3676,7 @@ The following state arguments are supported:
 <a href="#endpoint_names_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of endpoints to which messages that satisfy the condition are routed.
 {{% /md %}}</dd><dt class="property-required"
@@ -3630,7 +3685,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the route.
 {{% /md %}}</dd><dt class="property-required"
@@ -3639,7 +3694,7 @@ The following state arguments are supported:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source that the routing rule is to be applied to, such as `DeviceMessages`. Possible values include: `RoutingSourceInvalid`, `RoutingSourceDeviceMessages`, `RoutingSourceTwinChangeEvents`, `RoutingSourceDeviceLifecycleEvents`, `RoutingSourceDeviceJobLifecycleEvents`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3648,7 +3703,7 @@ The following state arguments are supported:
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language.
 {{% /md %}}</dd></dl>
@@ -3743,7 +3798,7 @@ The following state arguments are supported:
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the shared access policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3752,7 +3807,7 @@ The following state arguments are supported:
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The permissions assigned to the shared access policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3761,7 +3816,7 @@ The following state arguments are supported:
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3770,7 +3825,7 @@ The following state arguments are supported:
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secondary key.
 {{% /md %}}</dd></dl>
@@ -3783,7 +3838,7 @@ The following state arguments are supported:
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the shared access policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3792,7 +3847,7 @@ The following state arguments are supported:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The permissions assigned to the shared access policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3801,7 +3856,7 @@ The following state arguments are supported:
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3810,7 +3865,7 @@ The following state arguments are supported:
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secondary key.
 {{% /md %}}</dd></dl>
@@ -3869,7 +3924,7 @@ The following state arguments are supported:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Hub units.
 {{% /md %}}</dd><dt class="property-required"
@@ -3878,7 +3933,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the sku. Possible values are `B1`, `B2`, `B3`, `F1`, `S1`, `S2`, and `S3`.
 {{% /md %}}</dd></dl>
@@ -3891,7 +3946,7 @@ The following state arguments are supported:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Hub units.
 {{% /md %}}</dd><dt class="property-required"
@@ -3900,7 +3955,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the sku. Possible values are `B1`, `B2`, `B3`, `F1`, `S1`, `S2`, and `S3`.
 {{% /md %}}</dd></dl>

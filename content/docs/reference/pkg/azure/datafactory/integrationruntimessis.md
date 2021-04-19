@@ -63,9 +63,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -159,19 +159,38 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_info</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisCatalogInfoArgs]</span> = None<span class="p">, </span><span class="nx">custom_setup_script</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisCustomSetupScriptArgs]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisVnetIntegrationArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">catalog_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntegrationRuntimeSsisCatalogInfoArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">custom_setup_script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntegrationRuntimeSsisCustomSetupScriptArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntegrationRuntimeSsisVnetIntegrationArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeSsis</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeSsis</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -206,22 +225,32 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -230,7 +259,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -254,7 +283,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -551,7 +580,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -560,7 +589,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
 {{% /md %}}</dd><dt class="property-required"
@@ -569,7 +598,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -578,7 +607,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -587,7 +616,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#customsetupscript_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -596,7 +625,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -605,7 +634,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -614,7 +643,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -623,7 +652,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -632,7 +661,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -641,7 +670,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -650,7 +679,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -659,7 +688,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#vnetintegration_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</a></span>
+        <span class="property-type"><a href="#integrationruntimessisvnetintegration">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -672,7 +701,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -681,7 +710,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
 {{% /md %}}</dd><dt class="property-required"
@@ -690,7 +719,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -699,7 +728,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -708,7 +737,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#custom_setup_script_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +746,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -726,7 +755,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +764,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +773,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +782,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +791,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -771,7 +800,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +809,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 <a href="#vnet_integration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessisvnetintegration">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -849,20 +878,35 @@ Get an existing IntegrationRuntimeSsis resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IntegrationRuntimeSsisState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IntegrationRuntimeSsis</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IntegrationRuntimeSsisState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IntegrationRuntimeSsis</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_info</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisCatalogInfoArgs]</span> = None<span class="p">, </span><span class="nx">custom_setup_script</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisCustomSetupScriptArgs]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisVnetIntegrationArgs]</span> = None<span class="p">) -&gt;</span> IntegrationRuntimeSsis</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">catalog_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntegrationRuntimeSsisCatalogInfoArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_setup_script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntegrationRuntimeSsisCustomSetupScriptArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IntegrationRuntimeSsisVnetIntegrationArgs]]</span> = None<span class="p">) -&gt;</span> IntegrationRuntimeSsis</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeSsis<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationRuntimeSsisState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeSsis</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeSsis<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationRuntimeSsisState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeSsis</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IntegrationRuntimeSsis</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IntegrationRuntimeSsisState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IntegrationRuntimeSsis</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IntegrationRuntimeSsisState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1213,7 +1257,7 @@ The following state arguments are supported:
 <a href="#state_cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1266,7 @@ The following state arguments are supported:
 <a href="#state_customsetupscript_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1275,7 @@ The following state arguments are supported:
 <a href="#state_datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1284,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1293,7 @@ The following state arguments are supported:
 <a href="#state_edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1302,7 @@ The following state arguments are supported:
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1311,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1320,7 @@ The following state arguments are supported:
 <a href="#state_maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1329,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1338,7 @@ The following state arguments are supported:
 <a href="#state_nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1347,7 @@ The following state arguments are supported:
 <a href="#state_numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1312,7 +1356,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1321,7 +1365,7 @@ The following state arguments are supported:
 <a href="#state_vnetintegration_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</a></span>
+        <span class="property-type"><a href="#integrationruntimessisvnetintegration">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1334,7 +1378,7 @@ The following state arguments are supported:
 <a href="#state_catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1387,7 @@ The following state arguments are supported:
 <a href="#state_custom_setup_script_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1396,7 @@ The following state arguments are supported:
 <a href="#state_data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1405,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1414,7 @@ The following state arguments are supported:
 <a href="#state_edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1423,7 @@ The following state arguments are supported:
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1432,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1441,7 @@ The following state arguments are supported:
 <a href="#state_max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1450,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1459,7 @@ The following state arguments are supported:
 <a href="#state_node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1442,7 +1486,7 @@ The following state arguments are supported:
 <a href="#state_vnet_integration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessisvnetintegration">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1546,7 +1590,7 @@ The following state arguments are supported:
 <a href="#serverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1599,7 @@ The following state arguments are supported:
 <a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1608,7 @@ The following state arguments are supported:
 <a href="#administratorpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1617,7 @@ The following state arguments are supported:
 <a href="#pricingtier_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pricing tier for the database that will be created for the SSIS catalog. Valid values are: `Basic`, `Standard`, `Premium` and `PremiumRS`.
 {{% /md %}}</dd></dl>
@@ -1586,7 +1630,7 @@ The following state arguments are supported:
 <a href="#server_endpoint_python" style="color: inherit; text-decoration: inherit;">server_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1639,7 @@ The following state arguments are supported:
 <a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1648,7 @@ The following state arguments are supported:
 <a href="#administrator_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1657,7 @@ The following state arguments are supported:
 <a href="#pricing_tier_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pricing tier for the database that will be created for the SSIS catalog. Valid values are: `Basic`, `Standard`, `Premium` and `PremiumRS`.
 {{% /md %}}</dd></dl>
@@ -1672,7 +1716,7 @@ The following state arguments are supported:
 <a href="#blobcontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1681,7 +1725,7 @@ The following state arguments are supported:
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A container SAS token that gives access to the files. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
 {{% /md %}}</dd></dl>
@@ -1694,7 +1738,7 @@ The following state arguments are supported:
 <a href="#blob_container_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -1703,7 +1747,7 @@ The following state arguments are supported:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A container SAS token that gives access to the files. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
 {{% /md %}}</dd></dl>
@@ -1762,7 +1806,7 @@ The following state arguments are supported:
 <a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
 {{% /md %}}</dd><dt class="property-required"
@@ -1771,7 +1815,7 @@ The following state arguments are supported:
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
 {{% /md %}}</dd></dl>
@@ -1784,7 +1828,7 @@ The following state arguments are supported:
 <a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
 {{% /md %}}</dd><dt class="property-required"
@@ -1793,7 +1837,7 @@ The following state arguments are supported:
 <a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
 {{% /md %}}</dd></dl>

@@ -88,9 +88,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -214,19 +214,41 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KeyVault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyVaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KeyVault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyVaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KeyVault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultContactArgs]]</span> = None<span class="p">, </span><span class="nx">enable_rbac_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[KeyVaultNetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">soft_delete_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KeyVault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KeyVaultAccessPolicyArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KeyVaultContactArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">enable_rbac_authorization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KeyVaultNetworkAclsArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">soft_delete_retention_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KeyVault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyVaultArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKeyVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KeyVaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyVault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKeyVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KeyVaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyVault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KeyVault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KeyVaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KeyVault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KeyVaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -261,22 +283,32 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KeyVaultArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -285,7 +317,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -309,7 +341,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -658,7 +690,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -667,7 +699,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Key Vault. Possible values are `standard` and `premium`.
 {{% /md %}}</dd><dt class="property-required"
@@ -676,7 +708,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -685,7 +717,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultaccesspolicy">Key<wbr>Vault<wbr>Access<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#keyvaultaccesspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -694,7 +726,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contacts_nodejs" style="color: inherit; text-decoration: inherit;">contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcontact">Key<wbr>Vault<wbr>Contact[]</a></span>
+        <span class="property-type"><a href="#keyvaultcontact">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>Vault<wbr>Contact<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -703,7 +735,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enablerbacauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rbac<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Key Vault uses Role Based Access Control (RBAC) for authorization of data actions. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -712,7 +744,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enabledfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -721,7 +753,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enabledfordiskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -730,7 +762,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enabledfortemplatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Template<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -739,7 +771,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -748,7 +780,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -757,7 +789,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls</a></span>
+        <span class="property-type"><a href="#keyvaultnetworkacls">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -766,7 +798,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#purgeprotectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Protection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -775,7 +807,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#softdeleteenabled_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Azure has removed support for disabling Soft Delete as of 2020-12-15, as such this field is no longer configurable and can be safely removed. This field will be removed in version 3.0 of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +815,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#softdeleteretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days that items should be retained for once soft-deleted. This value can be between `7` and `90` (the default) days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +824,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -805,7 +837,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -814,7 +846,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Key Vault. Possible values are `standard` and `premium`.
 {{% /md %}}</dd><dt class="property-required"
@@ -823,7 +855,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +864,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultaccesspolicy">Sequence[Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultaccesspolicy">Input[Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +873,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contacts_python" style="color: inherit; text-decoration: inherit;">contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcontact">Sequence[Key<wbr>Vault<wbr>Contact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultcontact">Input[Key<wbr>Vault<wbr>Contact<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -850,7 +882,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enable_rbac_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rbac_<wbr>authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Key Vault uses Role Based Access Control (RBAC) for authorization of data actions. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -859,7 +891,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enabled_for_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -868,7 +900,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enabled_for_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>disk_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -877,7 +909,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#enabled_for_template_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>template_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -886,7 +918,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -895,7 +927,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -904,7 +936,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultnetworkacls">Input[Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -913,7 +945,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#purge_protection_enabled_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>protection_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -922,7 +954,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#soft_delete_enabled_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Azure has removed support for disabling Soft Delete as of 2020-12-15, as such this field is no longer configurable and can be safely removed. This field will be removed in version 3.0 of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +962,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#soft_delete_retention_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days that items should be retained for once soft-deleted. This value can be between `7` and `90` (the default) days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +971,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1044,20 +1076,39 @@ Get an existing KeyVault resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KeyVaultState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KeyVault</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">KeyVaultState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KeyVault</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyVaultContactArgs]]</span> = None<span class="p">, </span><span class="nx">enable_rbac_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[KeyVaultNetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">soft_delete_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyVault</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KeyVaultAccessPolicyArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">contacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KeyVaultContactArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_rbac_authorization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KeyVaultNetworkAclsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">soft_delete_retention_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vault_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> KeyVault</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeyVault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KeyVaultState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyVault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeyVault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">KeyVaultState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyVault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KeyVault</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KeyVaultState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KeyVault</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">KeyVaultState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1478,7 +1529,7 @@ The following state arguments are supported:
 <a href="#state_accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultaccesspolicy">Key<wbr>Vault<wbr>Access<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#keyvaultaccesspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1487,7 +1538,7 @@ The following state arguments are supported:
 <a href="#state_contacts_nodejs" style="color: inherit; text-decoration: inherit;">contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcontact">Key<wbr>Vault<wbr>Contact[]</a></span>
+        <span class="property-type"><a href="#keyvaultcontact">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>Vault<wbr>Contact<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_enablerbacauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rbac<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Key Vault uses Role Based Access Control (RBAC) for authorization of data actions. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_enabledfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1565,7 @@ The following state arguments are supported:
 <a href="#state_enabledfordiskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1523,7 +1574,7 @@ The following state arguments are supported:
 <a href="#state_enabledfortemplatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Template<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1532,7 +1583,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1541,7 +1592,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1550,7 +1601,7 @@ The following state arguments are supported:
 <a href="#state_networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls</a></span>
+        <span class="property-type"><a href="#keyvaultnetworkacls">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1559,7 +1610,7 @@ The following state arguments are supported:
 <a href="#state_purgeprotectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Protection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1568,7 +1619,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1577,7 +1628,7 @@ The following state arguments are supported:
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Key Vault. Possible values are `standard` and `premium`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1586,7 +1637,7 @@ The following state arguments are supported:
 <a href="#state_softdeleteenabled_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Azure has removed support for disabling Soft Delete as of 2020-12-15, as such this field is no longer configurable and can be safely removed. This field will be removed in version 3.0 of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1594,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_softdeleteretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days that items should be retained for once soft-deleted. This value can be between `7` and `90` (the default) days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1654,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1663,7 @@ The following state arguments are supported:
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1672,7 @@ The following state arguments are supported:
 <a href="#state_vaulturi_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI of the Key Vault, used for performing operations on keys and secrets.
 {{% /md %}}</dd></dl>
@@ -1634,7 +1685,7 @@ The following state arguments are supported:
 <a href="#state_access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultaccesspolicy">Sequence[Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultaccesspolicy">Input[Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1694,7 @@ The following state arguments are supported:
 <a href="#state_contacts_python" style="color: inherit; text-decoration: inherit;">contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcontact">Sequence[Key<wbr>Vault<wbr>Contact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultcontact">Input[Key<wbr>Vault<wbr>Contact<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_enable_rbac_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rbac_<wbr>authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Key Vault uses Role Based Access Control (RBAC) for authorization of data actions. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_enabled_for_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_enabled_for_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>disk_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1679,7 +1730,7 @@ The following state arguments are supported:
 <a href="#state_enabled_for_template_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>template_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1697,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1706,7 +1757,7 @@ The following state arguments are supported:
 <a href="#state_network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultnetworkacls">Input[Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1715,7 +1766,7 @@ The following state arguments are supported:
 <a href="#state_purge_protection_enabled_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>protection_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1724,7 +1775,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1733,7 +1784,7 @@ The following state arguments are supported:
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Key Vault. Possible values are `standard` and `premium`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1742,7 +1793,7 @@ The following state arguments are supported:
 <a href="#state_soft_delete_enabled_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Azure has removed support for disabling Soft Delete as of 2020-12-15, as such this field is no longer configurable and can be safely removed. This field will be removed in version 3.0 of the Azure Provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1750,7 +1801,7 @@ The following state arguments are supported:
 <a href="#state_soft_delete_retention_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days that items should be retained for once soft-deleted. This value can be between `7` and `90` (the default) days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1759,7 +1810,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1768,7 +1819,7 @@ The following state arguments are supported:
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1777,7 +1828,7 @@ The following state arguments are supported:
 <a href="#state_vault_uri_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI of the Key Vault, used for performing operations on keys and secrets.
 {{% /md %}}</dd></dl>
@@ -1935,7 +1986,7 @@ The following state arguments are supported:
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
 {{% /md %}}</dd><dt class="property-required"
@@ -1944,7 +1995,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. Must match the `tenant_id` used above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1953,7 +2004,7 @@ The following state arguments are supported:
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +2013,7 @@ The following state arguments are supported:
 <a href="#certificatepermissions_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1971,7 +2022,7 @@ The following state arguments are supported:
 <a href="#keypermissions_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1980,7 +2031,7 @@ The following state arguments are supported:
 <a href="#secretpermissions_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1989,7 +2040,7 @@ The following state arguments are supported:
 <a href="#storagepermissions_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
 {{% /md %}}</dd></dl>
@@ -2002,7 +2053,7 @@ The following state arguments are supported:
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
 {{% /md %}}</dd><dt class="property-required"
@@ -2011,7 +2062,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. Must match the `tenant_id` used above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +2071,7 @@ The following state arguments are supported:
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2029,7 +2080,7 @@ The following state arguments are supported:
 <a href="#certificate_permissions_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2038,7 +2089,7 @@ The following state arguments are supported:
 <a href="#key_permissions_python" style="color: inherit; text-decoration: inherit;">key_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2047,7 +2098,7 @@ The following state arguments are supported:
 <a href="#secret_permissions_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `Get`, `List`, `Purge`, `Recover`, `Restore` and `Set`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2056,7 +2107,7 @@ The following state arguments are supported:
 <a href="#storage_permissions_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
 {{% /md %}}</dd></dl>
@@ -2133,7 +2184,7 @@ The following state arguments are supported:
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}E-mail address of the contact.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2142,7 +2193,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the contact.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2151,7 +2202,7 @@ The following state arguments are supported:
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Phone number of the contact.
 {{% /md %}}</dd></dl>
@@ -2164,7 +2215,7 @@ The following state arguments are supported:
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}E-mail address of the contact.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2173,7 +2224,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the contact.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2182,7 +2233,7 @@ The following state arguments are supported:
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Phone number of the contact.
 {{% /md %}}</dd></dl>
@@ -2277,7 +2328,7 @@ The following state arguments are supported:
 <a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies which traffic can bypass the network rules. Possible values are `AzureServices` and `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2286,7 +2337,7 @@ The following state arguments are supported:
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Default Action to use when no rules match from `ip_rules` / `virtual_network_subnet_ids`. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2295,7 +2346,7 @@ The following state arguments are supported:
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2304,7 +2355,7 @@ The following state arguments are supported:
 <a href="#virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}One or more Subnet ID's which should be able to access this Key Vault.
 {{% /md %}}</dd></dl>
@@ -2317,7 +2368,7 @@ The following state arguments are supported:
 <a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which traffic can bypass the network rules. Possible values are `AzureServices` and `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2326,7 +2377,7 @@ The following state arguments are supported:
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Default Action to use when no rules match from `ip_rules` / `virtual_network_subnet_ids`. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2335,7 +2386,7 @@ The following state arguments are supported:
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Key Vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2344,7 +2395,7 @@ The following state arguments are supported:
 <a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}One or more Subnet ID's which should be able to access this Key Vault.
 {{% /md %}}</dd></dl>

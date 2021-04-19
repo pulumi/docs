@@ -365,19 +365,30 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContentKeyPolicyPolicyOptionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">policy_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContentKeyPolicyPolicyOptionArgs]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContentKeyPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContentKeyPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -412,22 +423,32 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -436,7 +457,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -460,7 +481,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -613,7 +634,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -622,7 +643,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#policyoptions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoption">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -631,7 +652,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -640,7 +661,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -649,7 +670,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd></dl>
@@ -662,7 +683,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -671,7 +692,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#policy_options_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoption">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoption">Input[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -680,7 +701,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -689,7 +710,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +719,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd></dl>
@@ -767,20 +788,27 @@ Get an existing ContentKeyPolicy resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ContentKeyPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ContentKeyPolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ContentKeyPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ContentKeyPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContentKeyPolicyPolicyOptionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ContentKeyPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">policy_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContentKeyPolicyPolicyOptionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ContentKeyPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContentKeyPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ContentKeyPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContentKeyPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ContentKeyPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ContentKeyPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ContentKeyPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ContentKeyPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ContentKeyPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -987,7 +1015,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +1024,7 @@ The following state arguments are supported:
 <a href="#state_mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1005,7 +1033,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1014,7 +1042,7 @@ The following state arguments are supported:
 <a href="#state_policyoptions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoption">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1023,7 +1051,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd></dl>
@@ -1036,7 +1064,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1073,7 @@ The following state arguments are supported:
 <a href="#state_media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1082,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1091,7 @@ The following state arguments are supported:
 <a href="#state_policy_options_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoption">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoption">Input[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1100,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
 {{% /md %}}</dd></dl>
@@ -1230,7 +1258,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Policy Option.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1267,7 @@ The following state arguments are supported:
 <a href="#clearkeyconfigurationenabled_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Key<wbr>Configuration<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable a configuration for non-DRM keys.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1276,7 @@ The following state arguments are supported:
 <a href="#fairplayconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">fairplay<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1285,7 @@ The following state arguments are supported:
 <a href="#openrestrictionenabled_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Restriction<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable an open restriction. License or key will be delivered on every request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1294,7 @@ The following state arguments are supported:
 <a href="#playreadyconfigurationlicenses_nodejs" style="color: inherit; text-decoration: inherit;">playready<wbr>Configuration<wbr>Licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1303,7 @@ The following state arguments are supported:
 <a href="#tokenrestriction_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1312,7 @@ The following state arguments are supported:
 <a href="#widevineconfigurationtemplate_nodejs" style="color: inherit; text-decoration: inherit;">widevine<wbr>Configuration<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Widevine template.
 {{% /md %}}</dd></dl>
@@ -1297,7 +1325,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Policy Option.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1334,7 @@ The following state arguments are supported:
 <a href="#clear_key_configuration_enabled_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>key_<wbr>configuration_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable a configuration for non-DRM keys.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1343,7 @@ The following state arguments are supported:
 <a href="#fairplay_configuration_python" style="color: inherit; text-decoration: inherit;">fairplay_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Input[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1352,7 @@ The following state arguments are supported:
 <a href="#open_restriction_enabled_python" style="color: inherit; text-decoration: inherit;">open_<wbr>restriction_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable an open restriction. License or key will be delivered on every request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1361,7 @@ The following state arguments are supported:
 <a href="#playready_configuration_licenses_python" style="color: inherit; text-decoration: inherit;">playready_<wbr>configuration_<wbr>licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Input[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1370,7 @@ The following state arguments are supported:
 <a href="#token_restriction_python" style="color: inherit; text-decoration: inherit;">token_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Input[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1379,7 @@ The following state arguments are supported:
 <a href="#widevine_configuration_template_python" style="color: inherit; text-decoration: inherit;">widevine_<wbr>configuration_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Widevine template.
 {{% /md %}}</dd></dl>
@@ -1482,7 +1510,7 @@ The following state arguments are supported:
 <a href="#ask_nodejs" style="color: inherit; text-decoration: inherit;">ask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1491,7 +1519,7 @@ The following state arguments are supported:
 <a href="#offlinerentalconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1500,7 +1528,7 @@ The following state arguments are supported:
 <a href="#pfx_nodejs" style="color: inherit; text-decoration: inherit;">pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1509,7 +1537,7 @@ The following state arguments are supported:
 <a href="#pfxpassword_nodejs" style="color: inherit; text-decoration: inherit;">pfx<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1518,7 +1546,7 @@ The following state arguments are supported:
 <a href="#rentalandleasekeytype_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rental and lease key type. Supported values are `DualExpiry`, `PersistentLimited`, `PersistentUnlimited` or `Undefined`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1527,7 +1555,7 @@ The following state arguments are supported:
 <a href="#rentaldurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than 0.
 {{% /md %}}</dd></dl>
@@ -1540,7 +1568,7 @@ The following state arguments are supported:
 <a href="#ask_python" style="color: inherit; text-decoration: inherit;">ask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1577,7 @@ The following state arguments are supported:
 <a href="#offline_rental_configuration_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>rental_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Input[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1586,7 @@ The following state arguments are supported:
 <a href="#pfx_python" style="color: inherit; text-decoration: inherit;">pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1595,7 @@ The following state arguments are supported:
 <a href="#pfx_password_python" style="color: inherit; text-decoration: inherit;">pfx_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1604,7 @@ The following state arguments are supported:
 <a href="#rental_and_lease_key_type_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>and_<wbr>lease_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type. Supported values are `DualExpiry`, `PersistentLimited`, `PersistentUnlimited` or `Undefined`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1613,7 @@ The following state arguments are supported:
 <a href="#rental_duration_seconds_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than 0.
 {{% /md %}}</dd></dl>
@@ -1644,7 +1672,7 @@ The following state arguments are supported:
 <a href="#playbackdurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Playback duration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1681,7 @@ The following state arguments are supported:
 <a href="#storagedurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Storage duration.
 {{% /md %}}</dd></dl>
@@ -1666,7 +1694,7 @@ The following state arguments are supported:
 <a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Playback duration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1675,7 +1703,7 @@ The following state arguments are supported:
 <a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Storage duration.
 {{% /md %}}</dd></dl>
@@ -1896,7 +1924,7 @@ The following state arguments are supported:
 <a href="#allowtestdevices_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Test<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1933,7 @@ The following state arguments are supported:
 <a href="#begindate_nodejs" style="color: inherit; text-decoration: inherit;">begin<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The begin date of license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1942,7 @@ The following state arguments are supported:
 <a href="#contentkeylocationfromheaderenabled_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location<wbr>From<wbr>Header<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies that the content key ID is in the PlayReady header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1923,7 +1951,7 @@ The following state arguments are supported:
 <a href="#contentkeylocationfromkeyid_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location<wbr>From<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content key ID. Specifies that the content key ID is specified in the PlayReady configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1932,7 +1960,7 @@ The following state arguments are supported:
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PlayReady content type. Supported values are `UltraVioletDownload`, `UltraVioletStreaming` or `Unspecified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +1969,7 @@ The following state arguments are supported:
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The expiration date of license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +1978,7 @@ The following state arguments are supported:
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The grace period of license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1959,7 +1987,7 @@ The following state arguments are supported:
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The license type. Supported values are `NonPersistent` or `Persistent`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1968,7 +1996,7 @@ The following state arguments are supported:
 <a href="#playright_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +2005,7 @@ The following state arguments are supported:
 <a href="#relativebegindate_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Begin<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1986,7 +2014,7 @@ The following state arguments are supported:
 <a href="#relativeexpirationdate_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Expiration<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.
 {{% /md %}}</dd></dl>
@@ -1999,7 +2027,7 @@ The following state arguments are supported:
 <a href="#allow_test_devices_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>test_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2008,7 +2036,7 @@ The following state arguments are supported:
 <a href="#begin_date_python" style="color: inherit; text-decoration: inherit;">begin_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The begin date of license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2017,7 +2045,7 @@ The following state arguments are supported:
 <a href="#content_key_location_from_header_enabled_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location_<wbr>from_<wbr>header_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies that the content key ID is in the PlayReady header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2026,7 +2054,7 @@ The following state arguments are supported:
 <a href="#content_key_location_from_key_id_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location_<wbr>from_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content key ID. Specifies that the content key ID is specified in the PlayReady configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2035,7 +2063,7 @@ The following state arguments are supported:
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type. Supported values are `UltraVioletDownload`, `UltraVioletStreaming` or `Unspecified`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2044,7 +2072,7 @@ The following state arguments are supported:
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2053,7 +2081,7 @@ The following state arguments are supported:
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The grace period of license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2062,7 +2090,7 @@ The following state arguments are supported:
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The license type. Supported values are `NonPersistent` or `Persistent`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2071,7 +2099,7 @@ The following state arguments are supported:
 <a href="#play_right_python" style="color: inherit; text-decoration: inherit;">play_<wbr>right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Input[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2080,7 +2108,7 @@ The following state arguments are supported:
 <a href="#relative_begin_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>begin_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2117,7 @@ The following state arguments are supported:
 <a href="#relative_expiration_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>expiration_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.
 {{% /md %}}</dd></dl>
@@ -2310,7 +2338,7 @@ The following state arguments are supported:
 <a href="#agcandcolorstriperestriction_nodejs" style="color: inherit; text-decoration: inherit;">agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2319,7 +2347,7 @@ The following state arguments are supported:
 <a href="#allowpassingvideocontenttounknownoutput_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license. Supported values are `Allowed`, `AllowedWithVideoConstriction` or `NotAllowed`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2328,7 +2356,7 @@ The following state arguments are supported:
 <a href="#analogvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">analog<wbr>Video<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio. Supported values are 100, 150 or 200.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2337,7 +2365,7 @@ The following state arguments are supported:
 <a href="#compresseddigitalaudioopl_nodejs" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.Supported values are 100, 150 or 200.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2346,7 +2374,7 @@ The following state arguments are supported:
 <a href="#digitalvideoonlycontentrestriction_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Video<wbr>Only<wbr>Content<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2355,7 +2383,7 @@ The following state arguments are supported:
 <a href="#firstplayexpiration_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Play<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2364,7 +2392,7 @@ The following state arguments are supported:
 <a href="#imageconstraintforanalogcomponentvideorestriction_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Component<wbr>Video<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2373,7 +2401,7 @@ The following state arguments are supported:
 <a href="#imageconstraintforanalogcomputermonitorrestriction_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Computer<wbr>Monitor<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2382,7 +2410,7 @@ The following state arguments are supported:
 <a href="#scmsrestriction_nodejs" style="color: inherit; text-decoration: inherit;">scms<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2391,7 +2419,7 @@ The following state arguments are supported:
 <a href="#uncompresseddigitalaudioopl_nodejs" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio. Supported values are 100, 150, 250 or 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2400,7 +2428,7 @@ The following state arguments are supported:
 <a href="#uncompresseddigitalvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video. Supported values are 100, 150, 250 or 300.
 {{% /md %}}</dd></dl>
@@ -2413,7 +2441,7 @@ The following state arguments are supported:
 <a href="#agc_and_color_stripe_restriction_python" style="color: inherit; text-decoration: inherit;">agc_<wbr>and_<wbr>color_<wbr>stripe_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2422,7 +2450,7 @@ The following state arguments are supported:
 <a href="#allow_passing_video_content_to_unknown_output_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>passing_<wbr>video_<wbr>content_<wbr>to_<wbr>unknown_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license. Supported values are `Allowed`, `AllowedWithVideoConstriction` or `NotAllowed`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2431,7 +2459,7 @@ The following state arguments are supported:
 <a href="#analog_video_opl_python" style="color: inherit; text-decoration: inherit;">analog_<wbr>video_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio. Supported values are 100, 150 or 200.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2440,7 +2468,7 @@ The following state arguments are supported:
 <a href="#compressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.Supported values are 100, 150 or 200.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2449,7 +2477,7 @@ The following state arguments are supported:
 <a href="#digital_video_only_content_restriction_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>video_<wbr>only_<wbr>content_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2458,7 +2486,7 @@ The following state arguments are supported:
 <a href="#first_play_expiration_python" style="color: inherit; text-decoration: inherit;">first_<wbr>play_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2467,7 +2495,7 @@ The following state arguments are supported:
 <a href="#image_constraint_for_analog_component_video_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>component_<wbr>video_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2476,7 +2504,7 @@ The following state arguments are supported:
 <a href="#image_constraint_for_analog_computer_monitor_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>computer_<wbr>monitor_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2485,7 +2513,7 @@ The following state arguments are supported:
 <a href="#scms_restriction_python" style="color: inherit; text-decoration: inherit;">scms_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2494,7 +2522,7 @@ The following state arguments are supported:
 <a href="#uncompressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio. Supported values are 100, 150, 250 or 300.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2503,7 +2531,7 @@ The following state arguments are supported:
 <a href="#uncompressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video. Supported values are 100, 150, 250 or 300.
 {{% /md %}}</dd></dl>
@@ -2688,7 +2716,7 @@ The following state arguments are supported:
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The audience for the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2697,7 +2725,7 @@ The following state arguments are supported:
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The token issuer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2706,7 +2734,7 @@ The following state arguments are supported:
 <a href="#openidconnectdiscoverydocument_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Discovery<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2715,7 +2743,7 @@ The following state arguments are supported:
 <a href="#primaryrsatokenkeyexponent_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Rsa<wbr>Token<wbr>Key<wbr>Exponent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2724,7 +2752,7 @@ The following state arguments are supported:
 <a href="#primaryrsatokenkeymodulus_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Rsa<wbr>Token<wbr>Key<wbr>Modulus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2733,7 +2761,7 @@ The following state arguments are supported:
 <a href="#primarysymmetrictokenkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Symmetric<wbr>Token<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key value of the key. Specifies a symmetric key for token validation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2770,7 @@ The following state arguments are supported:
 <a href="#primaryx509tokenkeyraw_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>X509Token<wbr>Key<wbr>Raw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2751,7 +2779,7 @@ The following state arguments are supported:
 <a href="#requiredclaims_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2760,7 +2788,7 @@ The following state arguments are supported:
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of token. Supported values are `Jwt` or `Swt`.
 {{% /md %}}</dd></dl>
@@ -2773,7 +2801,7 @@ The following state arguments are supported:
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The audience for the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2782,7 +2810,7 @@ The following state arguments are supported:
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The token issuer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2791,7 +2819,7 @@ The following state arguments are supported:
 <a href="#open_id_connect_discovery_document_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>discovery_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2800,7 +2828,7 @@ The following state arguments are supported:
 <a href="#primary_rsa_token_key_exponent_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>rsa_<wbr>token_<wbr>key_<wbr>exponent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2809,7 +2837,7 @@ The following state arguments are supported:
 <a href="#primary_rsa_token_key_modulus_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>rsa_<wbr>token_<wbr>key_<wbr>modulus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2818,7 +2846,7 @@ The following state arguments are supported:
 <a href="#primary_symmetric_token_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>symmetric_<wbr>token_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key value of the key. Specifies a symmetric key for token validation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2827,7 +2855,7 @@ The following state arguments are supported:
 <a href="#primary_x509_token_key_raw_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>x509_<wbr>token_<wbr>key_<wbr>raw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2836,7 +2864,7 @@ The following state arguments are supported:
 <a href="#required_claims_python" style="color: inherit; text-decoration: inherit;">required_<wbr>claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Input[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2845,7 +2873,7 @@ The following state arguments are supported:
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of token. Supported values are `Jwt` or `Swt`.
 {{% /md %}}</dd></dl>
@@ -2904,7 +2932,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token claim type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2913,7 +2941,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token claim value.
 {{% /md %}}</dd></dl>
@@ -2926,7 +2954,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token claim type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2935,7 +2963,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token claim value.
 {{% /md %}}</dd></dl>

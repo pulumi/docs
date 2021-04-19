@@ -73,9 +73,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/monitoring"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -186,19 +186,33 @@ const exampleActionRuleActionGroup = new azure.monitoring.ActionRuleActionGroup(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionRuleActionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionRuleActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionRuleActionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionRuleActionGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionRuleActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActionRuleActionGroupConditionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ActionRuleActionGroupScopeArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionRuleActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">action_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ActionRuleActionGroupConditionArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ActionRuleActionGroupScopeArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionRuleActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionRuleActionGroupArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionRuleActionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionRuleActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleActionGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionRuleActionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionRuleActionGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleActionGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionRuleActionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ActionRuleActionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionRuleActionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ActionRuleActionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -233,22 +247,32 @@ const exampleActionRuleActionGroup = new azure.monitoring.ActionRuleActionGroup(
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ActionRuleActionGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -257,7 +281,7 @@ const exampleActionRuleActionGroup = new azure.monitoring.ActionRuleActionGroup(
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -281,7 +305,7 @@ const exampleActionRuleActionGroup = new azure.monitoring.ActionRuleActionGroup(
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -488,7 +512,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of monitor action group.
 {{% /md %}}</dd><dt class="property-required"
@@ -497,7 +521,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -506,7 +530,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupcondition">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupcondition">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -515,7 +539,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a description for the Action Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -524,7 +548,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the Action Rule enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -533,7 +557,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -542,7 +566,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupscope">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupscope">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `scope` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -551,7 +575,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -564,7 +588,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of monitor action group.
 {{% /md %}}</dd><dt class="property-required"
@@ -573,7 +597,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -582,7 +606,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupcondition">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupcondition">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -591,7 +615,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the Action Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -600,7 +624,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the Action Rule enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -609,7 +633,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -618,7 +642,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupscope">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupscope">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `scope` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -627,7 +651,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -696,20 +720,30 @@ Get an existing ActionRuleActionGroup resource's state with the given name, ID, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ActionRuleActionGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ActionRuleActionGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ActionRuleActionGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ActionRuleActionGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActionRuleActionGroupConditionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ActionRuleActionGroupScopeArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ActionRuleActionGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">action_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ActionRuleActionGroupConditionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ActionRuleActionGroupScopeArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> ActionRuleActionGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionRuleActionGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ActionRuleActionGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleActionGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionRuleActionGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ActionRuleActionGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionRuleActionGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ActionRuleActionGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ActionRuleActionGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ActionRuleActionGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ActionRuleActionGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -970,7 +1004,7 @@ The following state arguments are supported:
 <a href="#state_actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of monitor action group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -979,7 +1013,7 @@ The following state arguments are supported:
 <a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupcondition">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupcondition">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -988,7 +1022,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a description for the Action Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +1031,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the Action Rule enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +1040,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1049,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1058,7 @@ The following state arguments are supported:
 <a href="#state_scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupscope">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupscope">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `scope` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +1067,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1046,7 +1080,7 @@ The following state arguments are supported:
 <a href="#state_action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of monitor action group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1089,7 @@ The following state arguments are supported:
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupcondition">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupcondition">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1098,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the Action Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1073,7 +1107,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the Action Rule enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1082,7 +1116,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1125,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1134,7 @@ The following state arguments are supported:
 <a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupscope">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupscope">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `scope` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1143,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1267,7 +1301,7 @@ The following state arguments are supported:
 <a href="#alertcontext_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionalertcontext">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Context</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionalertcontext">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Context<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `alert_context` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1310,7 @@ The following state arguments are supported:
 <a href="#alertruleid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionalertruleid">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Rule<wbr>Id</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionalertruleid">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Rule<wbr>Id<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `alert_rule_id` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1319,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditiondescription">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Description</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditiondescription">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Description<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `description` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1328,7 @@ The following state arguments are supported:
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionmonitor">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionmonitor">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1337,7 @@ The following state arguments are supported:
 <a href="#monitorservice_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionmonitorservice">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Service</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionmonitorservice">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Service<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `monitor_service` as block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1312,7 +1346,7 @@ The following state arguments are supported:
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionseverity">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Severity</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionseverity">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Severity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `severity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1321,7 +1355,7 @@ The following state arguments are supported:
 <a href="#targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditiontargetresourcetype">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditiontargetresourcetype">pulumi.<wbr>Input<Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `target_resource_type` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1334,7 +1368,7 @@ The following state arguments are supported:
 <a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionalertcontext">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionalertcontext">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `alert_context` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1377,7 @@ The following state arguments are supported:
 <a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionalertruleid">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Rule<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionalertruleid">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Rule<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `alert_rule_id` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1386,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditiondescription">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditiondescription">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `description` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1395,7 @@ The following state arguments are supported:
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionmonitor">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionmonitor">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1404,7 @@ The following state arguments are supported:
 <a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionmonitorservice">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionmonitorservice">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `monitor_service` as block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1413,7 @@ The following state arguments are supported:
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionseverity">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Severity<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionseverity">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Severity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `severity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1422,7 @@ The following state arguments are supported:
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditiontargetresourcetype">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditiontargetresourcetype">Input[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `target_resource_type` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1447,7 +1481,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals`, `NotEquals`, `Contains`, and `DoesNotContain`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1456,7 +1490,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition.
 {{% /md %}}</dd></dl>
@@ -1469,7 +1503,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals`, `NotEquals`, `Contains`, and `DoesNotContain`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1478,7 +1512,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition.
 {{% /md %}}</dd></dl>
@@ -1537,7 +1571,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals`, `NotEquals`, `Contains`, and `DoesNotContain`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1546,7 +1580,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition.
 {{% /md %}}</dd></dl>
@@ -1559,7 +1593,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals`, `NotEquals`, `Contains`, and `DoesNotContain`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1568,7 +1602,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition.
 {{% /md %}}</dd></dl>
@@ -1627,7 +1661,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals`, `NotEquals`, `Contains`, and `DoesNotContain`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1636,7 +1670,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition.
 {{% /md %}}</dd></dl>
@@ -1649,7 +1683,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals`, `NotEquals`, `Contains`, and `DoesNotContain`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1658,7 +1692,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition.
 {{% /md %}}</dd></dl>
@@ -1717,7 +1751,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals` and `NotEquals`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1726,7 +1760,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition. Possible values are `Fired` and `Resolved`.
 {{% /md %}}</dd></dl>
@@ -1739,7 +1773,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals` and `NotEquals`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1748,7 +1782,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition. Possible values are `Fired` and `Resolved`.
 {{% /md %}}</dd></dl>
@@ -1807,7 +1841,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals` and `NotEquals`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1816,7 +1850,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition. Possible values are `ActivityLog Administrative`, `ActivityLog Autoscale`, `ActivityLog Policy`, `ActivityLog Recommendation`, `ActivityLog Security`, `Application Insights`, `Azure Backup`, `Data Box Edge`, `Data Box Gateway`, `Health Platform`, `Log Analytics`, `Platform`, and `Resource Health`.
 {{% /md %}}</dd></dl>
@@ -1829,7 +1863,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals` and `NotEquals`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1838,7 +1872,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition. Possible values are `ActivityLog Administrative`, `ActivityLog Autoscale`, `ActivityLog Policy`, `ActivityLog Recommendation`, `ActivityLog Security`, `Application Insights`, `Azure Backup`, `Data Box Edge`, `Data Box Gateway`, `Health Platform`, `Log Analytics`, `Platform`, and `Resource Health`.
 {{% /md %}}</dd></dl>
@@ -1897,7 +1931,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals`and `NotEquals`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1906,7 +1940,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3`, and `Sev4`.
 {{% /md %}}</dd></dl>
@@ -1919,7 +1953,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals`and `NotEquals`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1928,7 +1962,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3`, and `Sev4`.
 {{% /md %}}</dd></dl>
@@ -1987,7 +2021,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals` and `NotEquals`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1996,7 +2030,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition. The values should be valid resource types.
 {{% /md %}}</dd></dl>
@@ -2009,7 +2043,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operator for a given condition. Possible values are `Equals` and `NotEquals`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2018,7 +2052,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to match for a given condition. The values should be valid resource types.
 {{% /md %}}</dd></dl>
@@ -2077,7 +2111,7 @@ The following state arguments are supported:
 <a href="#resourceids_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resource IDs of the given scope type which will be the target of action rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -2086,7 +2120,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of target scope. Possible values are `ResourceGroup` and `Resource`.
 {{% /md %}}</dd></dl>
@@ -2099,7 +2133,7 @@ The following state arguments are supported:
 <a href="#resource_ids_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resource IDs of the given scope type which will be the target of action rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -2108,7 +2142,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of target scope. Possible values are `ResourceGroup` and `Resource`.
 {{% /md %}}</dd></dl>

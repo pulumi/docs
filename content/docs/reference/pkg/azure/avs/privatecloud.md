@@ -26,19 +26,35 @@ Vmware Private Clouds can be imported using the `resource id`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">internet_connection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[PrivateCloudManagementClusterArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">internet_connection_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PrivateCloudManagementClusterArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">network_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateCloud</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateCloud</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PrivateCloudArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +89,32 @@ Vmware Private Clouds can be imported using the `resource id`, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PrivateCloudArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +123,7 @@ Vmware Private Clouds can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +147,7 @@ Vmware Private Clouds can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -368,7 +394,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managementcluster_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#privatecloudmanagementcluster">pulumi.<wbr>Input<Private<wbr>Cloud<wbr>Management<wbr>Cluster<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -378,7 +404,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#networksubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -387,7 +413,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -396,7 +422,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -405,7 +431,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internetconnectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Connection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -415,7 +441,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -424,7 +450,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -433,7 +459,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -442,7 +468,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
 {{% /md %}}</dd><dt class="property-optional"
@@ -451,7 +477,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vcenterpassword_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd></dl>
@@ -464,7 +490,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatecloudmanagementcluster">Input[Private<wbr>Cloud<wbr>Management<wbr>Cluster<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -474,7 +500,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#network_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">network_<wbr>subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -483,7 +509,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -492,7 +518,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -501,7 +527,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#internet_connection_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>connection_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -511,7 +537,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -520,7 +546,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -529,7 +555,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#nsxt_password_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -538,7 +564,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
 {{% /md %}}</dd><dt class="property-optional"
@@ -547,7 +573,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#vcenter_password_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd></dl>
@@ -940,20 +966,41 @@ Get an existing PrivateCloud resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PrivateCloudState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PrivateCloud</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PrivateCloudState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PrivateCloud</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">circuits</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateCloudCircuitArgs]]</span> = None<span class="p">, </span><span class="nx">hcx_cloud_manager_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internet_connection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[PrivateCloudManagementClusterArgs]</span> = None<span class="p">, </span><span class="nx">management_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_certificate_thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_manager_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vcenter_certificate_thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vcsa_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vmotion_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PrivateCloud</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">circuits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PrivateCloudCircuitArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">hcx_cloud_manager_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">internet_connection_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">management_cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PrivateCloudManagementClusterArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">management_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nsxt_certificate_thumbprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nsxt_manager_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">nsxt_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">provisioning_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vcenter_certificate_thumbprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vcenter_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vcsa_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vmotion_subnet_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> PrivateCloud</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateCloud<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PrivateCloudState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateCloud<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PrivateCloudState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PrivateCloud</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PrivateCloudState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PrivateCloud</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PrivateCloudState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1416,7 +1463,7 @@ The following state arguments are supported:
 <a href="#state_circuits_nodejs" style="color: inherit; text-decoration: inherit;">circuits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudcircuit">Private<wbr>Cloud<wbr>Circuit[]</a></span>
+        <span class="property-type"><a href="#privatecloudcircuit">pulumi.<wbr>Input<pulumi.<wbr>Input<Private<wbr>Cloud<wbr>Circuit<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1472,7 @@ The following state arguments are supported:
 <a href="#state_hcxcloudmanagerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hcx<wbr>Cloud<wbr>Manager<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_internetconnectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Connection<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -1444,7 +1491,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1500,7 @@ The following state arguments are supported:
 <a href="#state_managementcluster_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#privatecloudmanagementcluster">pulumi.<wbr>Input<Private<wbr>Cloud<wbr>Management<wbr>Cluster<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -1463,7 +1510,7 @@ The following state arguments are supported:
 <a href="#state_managementsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1519,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1528,7 @@ The following state arguments are supported:
 <a href="#state_networksubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_nsxtcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Certificate<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1546,7 @@ The following state arguments are supported:
 <a href="#state_nsxtmanagerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Manager<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1555,7 @@ The following state arguments are supported:
 <a href="#state_nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1564,7 @@ The following state arguments are supported:
 <a href="#state_provisioningsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1535,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1591,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1553,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_vcentercertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Certificate<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1562,7 +1609,7 @@ The following state arguments are supported:
 <a href="#state_vcenterpassword_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1618,7 @@ The following state arguments are supported:
 <a href="#state_vcsaendpoint_nodejs" style="color: inherit; text-decoration: inherit;">vcsa<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1627,7 @@ The following state arguments are supported:
 <a href="#state_vmotionsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
 {{% /md %}}</dd></dl>
@@ -1593,7 +1640,7 @@ The following state arguments are supported:
 <a href="#state_circuits_python" style="color: inherit; text-decoration: inherit;">circuits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudcircuit">Sequence[Private<wbr>Cloud<wbr>Circuit<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatecloudcircuit">Input[Private<wbr>Cloud<wbr>Circuit<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1649,7 @@ The following state arguments are supported:
 <a href="#state_hcx_cloud_manager_endpoint_python" style="color: inherit; text-decoration: inherit;">hcx_<wbr>cloud_<wbr>manager_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1611,7 +1658,7 @@ The following state arguments are supported:
 <a href="#state_internet_connection_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>connection_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -1621,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatecloudmanagementcluster">Input[Private<wbr>Cloud<wbr>Management<wbr>Cluster<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -1640,7 +1687,7 @@ The following state arguments are supported:
 <a href="#state_management_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">management_<wbr>subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1696,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1705,7 @@ The following state arguments are supported:
 <a href="#state_network_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">network_<wbr>subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1714,7 @@ The following state arguments are supported:
 <a href="#state_nsxt_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>certificate_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1723,7 @@ The following state arguments are supported:
 <a href="#state_nsxt_manager_endpoint_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>manager_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_nsxt_password_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_provisioning_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1777,7 @@ The following state arguments are supported:
 <a href="#state_vcenter_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>certificate_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_vcenter_password_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1795,7 @@ The following state arguments are supported:
 <a href="#state_vcsa_endpoint_python" style="color: inherit; text-decoration: inherit;">vcsa_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_vmotion_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
 {{% /md %}}</dd></dl>
@@ -1861,7 +1908,7 @@ The following state arguments are supported:
 <a href="#expressrouteid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1917,7 @@ The following state arguments are supported:
 <a href="#expressrouteprivatepeeringid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Private<wbr>Peering<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit private peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1879,7 +1926,7 @@ The following state arguments are supported:
 <a href="#primarysubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CIDR of the primary subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1935,7 @@ The following state arguments are supported:
 <a href="#secondarysubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CIDR of the secondary subnet.
 {{% /md %}}</dd></dl>
@@ -1901,7 +1948,7 @@ The following state arguments are supported:
 <a href="#express_route_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1910,7 +1957,7 @@ The following state arguments are supported:
 <a href="#express_route_private_peering_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>private_<wbr>peering_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit private peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1919,7 +1966,7 @@ The following state arguments are supported:
 <a href="#primary_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR of the primary subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1928,7 +1975,7 @@ The following state arguments are supported:
 <a href="#secondary_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR of the secondary subnet.
 {{% /md %}}</dd></dl>
@@ -2005,7 +2052,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size of the management cluster. This field can not updated with `internet_connection_enabled` together.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +2061,7 @@ The following state arguments are supported:
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of hosts in the management cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2023,7 +2070,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The ID of the  management cluster.
 {{% /md %}}</dd></dl>
@@ -2036,7 +2083,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size of the management cluster. This field can not updated with `internet_connection_enabled` together.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2045,7 +2092,7 @@ The following state arguments are supported:
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of hosts in the management cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2054,7 +2101,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The ID of the  management cluster.
 {{% /md %}}</dd></dl>

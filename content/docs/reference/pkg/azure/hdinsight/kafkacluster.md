@@ -112,10 +112,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/hdinsight"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -327,19 +327,40 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KafkaCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KafkaCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KafkaCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_proxy</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRestProxyArgs]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KafkaCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterComponentVersionArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterGatewayArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterMetastoresArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterMonitorArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">rest_proxy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterRestProxyArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterRolesArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterStorageAccountGen2Args]]</span> = None<span class="p">,</span>
+                 <span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KafkaClusterStorageAccountArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KafkaCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaClusterArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKafkaCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KafkaClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKafkaCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KafkaClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KafkaCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KafkaClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KafkaCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KafkaClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -374,22 +395,32 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KafkaClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -398,7 +429,7 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -422,7 +453,7 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -753,7 +784,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -762,7 +793,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#componentversion_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#kafkaclustercomponentversion">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -771,7 +802,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#kafkaclustergateway">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Gateway<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -780,7 +811,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -789,7 +820,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#kafkaclusterroles">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Roles<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -798,7 +829,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +838,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +847,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#metastores_nodejs" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastores">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Metastores<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +856,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#kafkaclustermonitor">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Monitor<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +865,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +874,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#restproxy_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy</a></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `rest_proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +883,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args></a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +892,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccount">Kafka<wbr>Cluster<wbr>Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccount">pulumi.<wbr>Input<pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +901,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +910,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -891,7 +922,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -900,7 +931,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustercomponentversion">Input[Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -909,7 +940,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustergateway">Input[Kafka<wbr>Cluster<wbr>Gateway<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -918,7 +949,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -927,7 +958,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterroles">Input[Kafka<wbr>Cluster<wbr>Roles<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -936,7 +967,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -945,7 +976,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -954,7 +985,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastores">Input[Kafka<wbr>Cluster<wbr>Metastores<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -963,7 +994,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustermonitor">Input[Kafka<wbr>Cluster<wbr>Monitor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +1003,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -981,7 +1012,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#rest_proxy_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Input[Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `rest_proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -990,7 +1021,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Input[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +1030,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccount">Sequence[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccount">Input[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1039,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1048,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,20 +1224,40 @@ Get an existing KafkaCluster resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KafkaClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KafkaCluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">KafkaClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KafkaCluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_rest_proxy_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_proxy</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRestProxyArgs]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KafkaCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterComponentVersionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterGatewayArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_rest_proxy_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterMetastoresArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterMonitorArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rest_proxy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterRestProxyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterRolesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaClusterStorageAccountGen2Args]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KafkaClusterStorageAccountArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> KafkaCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafkaCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KafkaClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafkaCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">KafkaClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KafkaCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KafkaClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KafkaCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">KafkaClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1645,7 +1696,7 @@ The following state arguments are supported:
 <a href="#state_clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1654,7 +1705,7 @@ The following state arguments are supported:
 <a href="#state_componentversion_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#kafkaclustercomponentversion">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1714,7 @@ The following state arguments are supported:
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#kafkaclustergateway">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Gateway<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1723,7 @@ The following state arguments are supported:
 <a href="#state_httpsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1681,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_kafkarestproxyendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1690,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1699,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_metastores_nodejs" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastores">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Metastores<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1708,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#kafkaclustermonitor">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Monitor<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1717,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1726,7 +1777,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1735,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_restproxy_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy</a></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `rest_proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1744,7 +1795,7 @@ The following state arguments are supported:
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#kafkaclusterroles">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Roles<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1753,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_sshendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1762,7 +1813,7 @@ The following state arguments are supported:
 <a href="#state_storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args></a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1771,7 +1822,7 @@ The following state arguments are supported:
 <a href="#state_storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccount">Kafka<wbr>Cluster<wbr>Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccount">pulumi.<wbr>Input<pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1780,7 +1831,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1789,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1798,7 +1849,7 @@ The following state arguments are supported:
 <a href="#state_tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1810,7 +1861,7 @@ The following state arguments are supported:
 <a href="#state_cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1870,7 @@ The following state arguments are supported:
 <a href="#state_component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustercomponentversion">Input[Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1879,7 @@ The following state arguments are supported:
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustergateway">Input[Kafka<wbr>Cluster<wbr>Gateway<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1888,7 @@ The following state arguments are supported:
 <a href="#state_https_endpoint_python" style="color: inherit; text-decoration: inherit;">https_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1897,7 @@ The following state arguments are supported:
 <a href="#state_kafka_rest_proxy_endpoint_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>proxy_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1906,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1915,7 @@ The following state arguments are supported:
 <a href="#state_metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastores">Input[Kafka<wbr>Cluster<wbr>Metastores<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1924,7 @@ The following state arguments are supported:
 <a href="#state_monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustermonitor">Input[Kafka<wbr>Cluster<wbr>Monitor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1933,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1942,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1951,7 @@ The following state arguments are supported:
 <a href="#state_rest_proxy_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Input[Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `rest_proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1960,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterroles">Input[Kafka<wbr>Cluster<wbr>Roles<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1969,7 @@ The following state arguments are supported:
 <a href="#state_ssh_endpoint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +1978,7 @@ The following state arguments are supported:
 <a href="#state_storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Input[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +1987,7 @@ The following state arguments are supported:
 <a href="#state_storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccount">Sequence[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccount">Input[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +1996,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1954,7 +2005,7 @@ The following state arguments are supported:
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1963,7 +2014,7 @@ The following state arguments are supported:
 <a href="#state_tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2012,7 +2063,7 @@ The following state arguments are supported:
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2025,7 +2076,7 @@ The following state arguments are supported:
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2102,7 +2153,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd><dt class="property-required"
@@ -2111,7 +2162,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2120,7 +2171,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd></dl>
@@ -2133,7 +2184,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd><dt class="property-required"
@@ -2142,7 +2193,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2151,7 +2202,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd></dl>
@@ -2228,7 +2279,7 @@ The following state arguments are supported:
 <a href="#ambari_nodejs" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoresambari">Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoresambari">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2288,7 @@ The following state arguments are supported:
 <a href="#hive_nodejs" style="color: inherit; text-decoration: inherit;">hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoreshive">Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoreshive">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2246,7 +2297,7 @@ The following state arguments are supported:
 <a href="#oozie_nodejs" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoresoozie">Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoresoozie">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2259,7 +2310,7 @@ The following state arguments are supported:
 <a href="#ambari_python" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoresambari">Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoresambari">Input[Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,7 +2319,7 @@ The following state arguments are supported:
 <a href="#hive_python" style="color: inherit; text-decoration: inherit;">hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoreshive">Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoreshive">Input[Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2328,7 @@ The following state arguments are supported:
 <a href="#oozie_python" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoresoozie">Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoresoozie">Input[Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2372,7 +2423,7 @@ The following state arguments are supported:
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2381,7 +2432,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2390,7 +2441,7 @@ The following state arguments are supported:
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2399,7 +2450,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2412,7 +2463,7 @@ The following state arguments are supported:
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2421,7 +2472,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2430,7 +2481,7 @@ The following state arguments are supported:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2439,7 +2490,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2534,7 +2585,7 @@ The following state arguments are supported:
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2543,7 +2594,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2552,7 +2603,7 @@ The following state arguments are supported:
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2561,7 +2612,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2574,7 +2625,7 @@ The following state arguments are supported:
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2583,7 +2634,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2592,7 +2643,7 @@ The following state arguments are supported:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2601,7 +2652,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2696,7 +2747,7 @@ The following state arguments are supported:
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2705,7 +2756,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2714,7 +2765,7 @@ The following state arguments are supported:
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2723,7 +2774,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2736,7 +2787,7 @@ The following state arguments are supported:
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2745,7 +2796,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2754,7 +2805,7 @@ The following state arguments are supported:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2763,7 +2814,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2822,7 +2873,7 @@ The following state arguments are supported:
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
 {{% /md %}}</dd><dt class="property-required"
@@ -2831,7 +2882,7 @@ The following state arguments are supported:
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
 {{% /md %}}</dd></dl>
@@ -2844,7 +2895,7 @@ The following state arguments are supported:
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
 {{% /md %}}</dd><dt class="property-required"
@@ -2853,7 +2904,7 @@ The following state arguments are supported:
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
 {{% /md %}}</dd></dl>
@@ -2894,7 +2945,7 @@ The following state arguments are supported:
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Security Group ID.
 {{% /md %}}</dd></dl>
@@ -2907,7 +2958,7 @@ The following state arguments are supported:
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Security Group ID.
 {{% /md %}}</dd></dl>
@@ -3002,7 +3053,7 @@ The following state arguments are supported:
 <a href="#headnode_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrolesheadnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
+        <span class="property-type"><a href="#kafkaclusterrolesheadnode">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -3011,7 +3062,7 @@ The following state arguments are supported:
 <a href="#workernode_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrolesworkernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
+        <span class="property-type"><a href="#kafkaclusterrolesworkernode">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3020,7 +3071,7 @@ The following state arguments are supported:
 <a href="#zookeepernode_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
+        <span class="property-type"><a href="#kafkaclusterroleszookeepernode">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3029,7 +3080,7 @@ The following state arguments are supported:
 <a href="#kafkamanagementnode_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Management<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroleskafkamanagementnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node</a></span>
+        <span class="property-type"><a href="#kafkaclusterroleskafkamanagementnode">pulumi.<wbr>Input<Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `kafka_management_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3042,7 +3093,7 @@ The following state arguments are supported:
 <a href="#head_node_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrolesheadnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterrolesheadnode">Input[Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -3051,7 +3102,7 @@ The following state arguments are supported:
 <a href="#worker_node_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrolesworkernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterrolesworkernode">Input[Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3060,7 +3111,7 @@ The following state arguments are supported:
 <a href="#zookeeper_node_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Input[Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3069,7 +3120,7 @@ The following state arguments are supported:
 <a href="#kafka_management_node_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>management_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroleskafkamanagementnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkaclusterroleskafkamanagementnode">Input[Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `kafka_management_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3200,7 +3251,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3209,7 +3260,7 @@ The following state arguments are supported:
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3218,7 +3269,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3227,7 +3278,7 @@ The following state arguments are supported:
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3236,7 +3287,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3245,7 +3296,7 @@ The following state arguments are supported:
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3258,7 +3309,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3267,7 +3318,7 @@ The following state arguments are supported:
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3276,7 +3327,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3285,7 +3336,7 @@ The following state arguments are supported:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3294,7 +3345,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3303,7 +3354,7 @@ The following state arguments are supported:
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3434,7 +3485,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3443,7 +3494,7 @@ The following state arguments are supported:
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Kafka Management Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3452,7 +3503,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3461,7 +3512,7 @@ The following state arguments are supported:
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Kafka Management Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3470,7 +3521,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3479,7 +3530,7 @@ The following state arguments are supported:
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3492,7 +3543,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3501,7 +3552,7 @@ The following state arguments are supported:
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Kafka Management Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3510,7 +3561,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3519,7 +3570,7 @@ The following state arguments are supported:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Kafka Management Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3528,7 +3579,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3537,7 +3588,7 @@ The following state arguments are supported:
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3722,7 +3773,7 @@ The following state arguments are supported:
 <a href="#numberofdiskspernode_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Disks<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3731,7 +3782,7 @@ The following state arguments are supported:
 <a href="#targetinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of instances which should be run for the Worker Nodes.
 {{% /md %}}</dd><dt class="property-required"
@@ -3740,7 +3791,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3749,7 +3800,7 @@ The following state arguments are supported:
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3758,7 +3809,7 @@ The following state arguments are supported:
 <a href="#mininstancecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances which should be run for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been deprecated from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
@@ -3767,7 +3818,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3776,7 +3827,7 @@ The following state arguments are supported:
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3785,7 +3836,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3794,7 +3845,7 @@ The following state arguments are supported:
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3807,7 +3858,7 @@ The following state arguments are supported:
 <a href="#number_of_disks_per_node_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>disks_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3816,7 +3867,7 @@ The following state arguments are supported:
 <a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of instances which should be run for the Worker Nodes.
 {{% /md %}}</dd><dt class="property-required"
@@ -3825,7 +3876,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3834,7 +3885,7 @@ The following state arguments are supported:
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3843,7 +3894,7 @@ The following state arguments are supported:
 <a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances which should be run for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been deprecated from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd><dt class="property-optional"
@@ -3852,7 +3903,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3861,7 +3912,7 @@ The following state arguments are supported:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3870,7 +3921,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3879,7 +3930,7 @@ The following state arguments are supported:
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4010,7 +4061,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4019,7 +4070,7 @@ The following state arguments are supported:
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4028,7 +4079,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4037,7 +4088,7 @@ The following state arguments are supported:
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4046,7 +4097,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4055,7 +4106,7 @@ The following state arguments are supported:
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4068,7 +4119,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4077,7 +4128,7 @@ The following state arguments are supported:
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4086,7 +4137,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4095,7 +4146,7 @@ The following state arguments are supported:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4104,7 +4155,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4113,7 +4164,7 @@ The following state arguments are supported:
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4190,7 +4241,7 @@ The following state arguments are supported:
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4199,7 +4250,7 @@ The following state arguments are supported:
 <a href="#storageaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4208,7 +4259,7 @@ The following state arguments are supported:
 <a href="#storagecontainerid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Container. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4221,7 +4272,7 @@ The following state arguments are supported:
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4230,7 +4281,7 @@ The following state arguments are supported:
 <a href="#storage_account_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4239,7 +4290,7 @@ The following state arguments are supported:
 <a href="#storage_container_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Container. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4334,7 +4385,7 @@ The following state arguments are supported:
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">filesystem<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4343,7 +4394,7 @@ The following state arguments are supported:
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4352,7 +4403,7 @@ The following state arguments are supported:
 <a href="#managedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of Managed Identity to use for accessing the Gen2 filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4361,7 +4412,7 @@ The following state arguments are supported:
 <a href="#storageresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4374,7 +4425,7 @@ The following state arguments are supported:
 <a href="#filesystem_id_python" style="color: inherit; text-decoration: inherit;">filesystem_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4383,7 +4434,7 @@ The following state arguments are supported:
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4392,7 +4443,7 @@ The following state arguments are supported:
 <a href="#managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identity_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of Managed Identity to use for accessing the Gen2 filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4401,7 +4452,7 @@ The following state arguments are supported:
 <a href="#storage_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>

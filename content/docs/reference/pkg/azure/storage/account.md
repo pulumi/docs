@@ -62,9 +62,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -220,10 +220,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -381,19 +381,44 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[AccountBlobPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[AccountCustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">large_file_share_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[AccountNetworkRulesArgs]</span> = None<span class="p">, </span><span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[AccountQueuePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">account_kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountBlobPropertiesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountCustomDomainArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountIdentityArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">large_file_share_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountNetworkRulesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountQueuePropertiesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountStaticWebsiteArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -428,22 +453,32 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -452,7 +487,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -476,7 +511,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -883,7 +918,7 @@ for more information. Defaults to `true`.
 <a href="#accountreplicationtype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Replication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
 {{% /md %}}</dd><dt class="property-required"
@@ -892,7 +927,7 @@ for more information. Defaults to `true`.
 <a href="#accounttier_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -901,7 +936,7 @@ for more information. Defaults to `true`.
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +945,7 @@ for more information. Defaults to `true`.
 <a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +954,7 @@ for more information. Defaults to `true`.
 <a href="#accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +963,7 @@ for more information. Defaults to `true`.
 <a href="#allowblobpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Blob<wbr>Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +972,7 @@ for more information. Defaults to `true`.
 <a href="#blobproperties_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
+        <span class="property-type"><a href="#accountblobproperties">pulumi.<wbr>Input<Account<wbr>Blob<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +981,7 @@ for more information. Defaults to `true`.
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
+        <span class="property-type"><a href="#accountcustomdomain">pulumi.<wbr>Input<Account<wbr>Custom<wbr>Domain<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +990,7 @@ for more information. Defaults to `true`.
 <a href="#enablehttpstrafficonly_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Https<wbr>Traffic<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
@@ -965,7 +1000,7 @@ for more information. Defaults to `true`.
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">pulumi.<wbr>Input<Account<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -974,7 +1009,7 @@ for more information. Defaults to `true`.
 <a href="#ishnsenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hns<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -983,7 +1018,7 @@ for more information. Defaults to `true`.
 <a href="#largefileshareenabled_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>File<wbr>Share<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +1027,7 @@ for more information. Defaults to `true`.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1001,7 +1036,7 @@ for more information. Defaults to `true`.
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1010,7 +1045,7 @@ for more information. Defaults to `true`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +1054,7 @@ for more information. Defaults to `true`.
 <a href="#networkrules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules</a></span>
+        <span class="property-type"><a href="#accountnetworkrules">pulumi.<wbr>Input<Account<wbr>Network<wbr>Rules<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1028,7 +1063,7 @@ for more information. Defaults to `true`.
 <a href="#queueproperties_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
+        <span class="property-type"><a href="#accountqueueproperties">pulumi.<wbr>Input<Account<wbr>Queue<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1037,7 +1072,7 @@ for more information. Defaults to `true`.
 <a href="#staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
+        <span class="property-type"><a href="#accountstaticwebsite">pulumi.<wbr>Input<Account<wbr>Static<wbr>Website<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1081,7 @@ for more information. Defaults to `true`.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1059,7 +1094,7 @@ for more information. Defaults to `true`.
 <a href="#account_replication_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>replication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1068,7 +1103,7 @@ for more information. Defaults to `true`.
 <a href="#account_tier_python" style="color: inherit; text-decoration: inherit;">account_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1077,7 +1112,7 @@ for more information. Defaults to `true`.
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1121,7 @@ for more information. Defaults to `true`.
 <a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1095,7 +1130,7 @@ for more information. Defaults to `true`.
 <a href="#account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1104,7 +1139,7 @@ for more information. Defaults to `true`.
 <a href="#allow_blob_public_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>blob_<wbr>public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1148,7 @@ for more information. Defaults to `true`.
 <a href="#blob_properties_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobproperties">Input[Account<wbr>Blob<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1122,7 +1157,7 @@ for more information. Defaults to `true`.
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountcustomdomain">Input[Account<wbr>Custom<wbr>Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1131,7 +1166,7 @@ for more information. Defaults to `true`.
 <a href="#enable_https_traffic_only_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>https_<wbr>traffic_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
@@ -1141,7 +1176,7 @@ for more information. Defaults to `true`.
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountidentity">Input[Account<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1150,7 +1185,7 @@ for more information. Defaults to `true`.
 <a href="#is_hns_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hns_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1194,7 @@ for more information. Defaults to `true`.
 <a href="#large_file_share_enabled_python" style="color: inherit; text-decoration: inherit;">large_<wbr>file_<wbr>share_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1203,7 @@ for more information. Defaults to `true`.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1212,7 @@ for more information. Defaults to `true`.
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1221,7 @@ for more information. Defaults to `true`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1230,7 @@ for more information. Defaults to `true`.
 <a href="#network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountnetworkrules">Input[Account<wbr>Network<wbr>Rules<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1239,7 @@ for more information. Defaults to `true`.
 <a href="#queue_properties_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueueproperties">Input[Account<wbr>Queue<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1248,7 @@ for more information. Defaults to `true`.
 <a href="#static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountstaticwebsite">Input[Account<wbr>Static<wbr>Website<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1257,7 @@ for more information. Defaults to `true`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -2443,20 +2478,73 @@ Get an existing Account resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccountState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Account</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AccountState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Account</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[AccountBlobPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[AccountCustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">large_file_share_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[AccountNetworkRulesArgs]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_dfs_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_dfs_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_file_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_file_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_queue_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_table_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_table_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[AccountQueuePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_dfs_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_dfs_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_file_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_file_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_queue_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_table_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_table_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">account_kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountBlobPropertiesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountCustomDomainArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountIdentityArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">large_file_share_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountNetworkRulesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_blob_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_dfs_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_dfs_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_file_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_file_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_queue_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_table_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_table_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">primary_web_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountQueuePropertiesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_blob_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_dfs_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_dfs_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_file_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_file_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_queue_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_table_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_table_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_web_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountStaticWebsiteArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccountState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AccountState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Account</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccountState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Account</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AccountState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3493,7 +3581,7 @@ for more information. Defaults to `true`.
 <a href="#state_accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3502,7 +3590,7 @@ for more information. Defaults to `true`.
 <a href="#state_accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3511,7 +3599,7 @@ for more information. Defaults to `true`.
 <a href="#state_accountreplicationtype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Replication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3520,7 +3608,7 @@ for more information. Defaults to `true`.
 <a href="#state_accounttier_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3529,7 +3617,7 @@ for more information. Defaults to `true`.
 <a href="#state_allowblobpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Blob<wbr>Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3538,7 +3626,7 @@ for more information. Defaults to `true`.
 <a href="#state_blobproperties_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
+        <span class="property-type"><a href="#accountblobproperties">pulumi.<wbr>Input<Account<wbr>Blob<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3547,7 +3635,7 @@ for more information. Defaults to `true`.
 <a href="#state_customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
+        <span class="property-type"><a href="#accountcustomdomain">pulumi.<wbr>Input<Account<wbr>Custom<wbr>Domain<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3556,7 +3644,7 @@ for more information. Defaults to `true`.
 <a href="#state_enablehttpstrafficonly_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Https<wbr>Traffic<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
@@ -3566,7 +3654,7 @@ for more information. Defaults to `true`.
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">pulumi.<wbr>Input<Account<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3575,7 +3663,7 @@ for more information. Defaults to `true`.
 <a href="#state_ishnsenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hns<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3584,7 +3672,7 @@ for more information. Defaults to `true`.
 <a href="#state_largefileshareenabled_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>File<wbr>Share<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -3593,7 +3681,7 @@ for more information. Defaults to `true`.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3602,7 +3690,7 @@ for more information. Defaults to `true`.
 <a href="#state_mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3611,7 +3699,7 @@ for more information. Defaults to `true`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3620,7 +3708,7 @@ for more information. Defaults to `true`.
 <a href="#state_networkrules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules</a></span>
+        <span class="property-type"><a href="#accountnetworkrules">pulumi.<wbr>Input<Account<wbr>Network<wbr>Rules<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3629,7 +3717,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3638,7 +3726,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3647,7 +3735,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3656,7 +3744,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3665,7 +3753,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3674,7 +3762,7 @@ for more information. Defaults to `true`.
 <a href="#state_primarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3683,7 +3771,7 @@ for more information. Defaults to `true`.
 <a href="#state_primarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3692,7 +3780,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3701,7 +3789,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3710,7 +3798,7 @@ for more information. Defaults to `true`.
 <a href="#state_primarylocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3719,7 +3807,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3728,7 +3816,7 @@ for more information. Defaults to `true`.
 <a href="#state_primaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3737,7 +3825,7 @@ for more information. Defaults to `true`.
 <a href="#state_primarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3746,7 +3834,7 @@ for more information. Defaults to `true`.
 <a href="#state_primarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3755,7 +3843,7 @@ for more information. Defaults to `true`.
 <a href="#state_primarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3764,7 +3852,7 @@ for more information. Defaults to `true`.
 <a href="#state_primarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3773,7 +3861,7 @@ for more information. Defaults to `true`.
 <a href="#state_queueproperties_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
+        <span class="property-type"><a href="#accountqueueproperties">pulumi.<wbr>Input<Account<wbr>Queue<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3782,7 +3870,7 @@ for more information. Defaults to `true`.
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3791,7 +3879,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3800,7 +3888,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3809,7 +3897,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3818,7 +3906,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3827,7 +3915,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3836,7 +3924,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3845,7 +3933,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3854,7 +3942,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3863,7 +3951,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3872,7 +3960,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3881,7 +3969,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3890,7 +3978,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3899,7 +3987,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3908,7 +3996,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3917,7 +4005,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3926,7 +4014,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3935,7 +4023,7 @@ for more information. Defaults to `true`.
 <a href="#state_staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
+        <span class="property-type"><a href="#accountstaticwebsite">pulumi.<wbr>Input<Account<wbr>Static<wbr>Website<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3944,7 +4032,7 @@ for more information. Defaults to `true`.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -3957,7 +4045,7 @@ for more information. Defaults to `true`.
 <a href="#state_access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3966,7 +4054,7 @@ for more information. Defaults to `true`.
 <a href="#state_account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3975,7 +4063,7 @@ for more information. Defaults to `true`.
 <a href="#state_account_replication_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>replication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3984,7 +4072,7 @@ for more information. Defaults to `true`.
 <a href="#state_account_tier_python" style="color: inherit; text-decoration: inherit;">account_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3993,7 +4081,7 @@ for more information. Defaults to `true`.
 <a href="#state_allow_blob_public_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>blob_<wbr>public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4002,7 +4090,7 @@ for more information. Defaults to `true`.
 <a href="#state_blob_properties_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobproperties">Input[Account<wbr>Blob<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4011,7 +4099,7 @@ for more information. Defaults to `true`.
 <a href="#state_custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountcustomdomain">Input[Account<wbr>Custom<wbr>Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4020,7 +4108,7 @@ for more information. Defaults to `true`.
 <a href="#state_enable_https_traffic_only_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>https_<wbr>traffic_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
@@ -4030,7 +4118,7 @@ for more information. Defaults to `true`.
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountidentity">Input[Account<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4039,7 +4127,7 @@ for more information. Defaults to `true`.
 <a href="#state_is_hns_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hns_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4048,7 +4136,7 @@ for more information. Defaults to `true`.
 <a href="#state_large_file_share_enabled_python" style="color: inherit; text-decoration: inherit;">large_<wbr>file_<wbr>share_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -4057,7 +4145,7 @@ for more information. Defaults to `true`.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4066,7 +4154,7 @@ for more information. Defaults to `true`.
 <a href="#state_min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4075,7 +4163,7 @@ for more information. Defaults to `true`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4084,7 +4172,7 @@ for more information. Defaults to `true`.
 <a href="#state_network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountnetworkrules">Input[Account<wbr>Network<wbr>Rules<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4093,7 +4181,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4102,7 +4190,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4111,7 +4199,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4120,7 +4208,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_blob_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4129,7 +4217,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4138,7 +4226,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4147,7 +4235,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_dfs_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4156,7 +4244,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4165,7 +4253,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_file_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4174,7 +4262,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4183,7 +4271,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4192,7 +4280,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_queue_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4201,7 +4289,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4210,7 +4298,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_table_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4219,7 +4307,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4228,7 +4316,7 @@ for more information. Defaults to `true`.
 <a href="#state_primary_web_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4237,7 +4325,7 @@ for more information. Defaults to `true`.
 <a href="#state_queue_properties_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueueproperties">Input[Account<wbr>Queue<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4246,7 +4334,7 @@ for more information. Defaults to `true`.
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4255,7 +4343,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4264,7 +4352,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4273,7 +4361,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4282,7 +4370,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_blob_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4291,7 +4379,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4300,7 +4388,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4309,7 +4397,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_dfs_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4318,7 +4406,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4327,7 +4415,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_file_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4336,7 +4424,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_location_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4345,7 +4433,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4354,7 +4442,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_queue_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4363,7 +4451,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4372,7 +4460,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_table_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4381,7 +4469,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4390,7 +4478,7 @@ for more information. Defaults to `true`.
 <a href="#state_secondary_web_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4399,7 +4487,7 @@ for more information. Defaults to `true`.
 <a href="#state_static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountstaticwebsite">Input[Account<wbr>Static<wbr>Website<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4408,7 +4496,7 @@ for more information. Defaults to `true`.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -4494,7 +4582,7 @@ for more information. Defaults to `true`.
 <a href="#containerdeleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">pulumi.<wbr>Input<Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4503,7 +4591,7 @@ for more information. Defaults to `true`.
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescorsrule">Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescorsrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4512,7 +4600,7 @@ for more information. Defaults to `true`.
 <a href="#deleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">pulumi.<wbr>Input<Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4525,7 +4613,7 @@ for more information. Defaults to `true`.
 <a href="#container_delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">container_<wbr>delete_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Input[Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4534,7 +4622,7 @@ for more information. Defaults to `true`.
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescorsrule">Sequence[Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescorsrule">Input[Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4543,7 +4631,7 @@ for more information. Defaults to `true`.
 <a href="#delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Input[Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4584,7 +4672,7 @@ for more information. Defaults to `true`.
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that the container should be retained, between `1` and `365` days. Defaults to `7`.
 {{% /md %}}</dd></dl>
@@ -4597,7 +4685,7 @@ for more information. Defaults to `true`.
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that the container should be retained, between `1` and `365` days. Defaults to `7`.
 {{% /md %}}</dd></dl>
@@ -4712,7 +4800,7 @@ for more information. Defaults to `true`.
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
 {{% /md %}}</dd><dt class="property-required"
@@ -4721,7 +4809,7 @@ for more information. Defaults to `true`.
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
@@ -4731,7 +4819,7 @@ for more information. Defaults to `true`.
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
 {{% /md %}}</dd><dt class="property-required"
@@ -4740,7 +4828,7 @@ for more information. Defaults to `true`.
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
 {{% /md %}}</dd><dt class="property-required"
@@ -4749,7 +4837,7 @@ for more information. Defaults to `true`.
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
 {{% /md %}}</dd></dl>
@@ -4762,7 +4850,7 @@ for more information. Defaults to `true`.
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
 {{% /md %}}</dd><dt class="property-required"
@@ -4771,7 +4859,7 @@ for more information. Defaults to `true`.
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
@@ -4781,7 +4869,7 @@ for more information. Defaults to `true`.
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
 {{% /md %}}</dd><dt class="property-required"
@@ -4790,7 +4878,7 @@ for more information. Defaults to `true`.
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
 {{% /md %}}</dd><dt class="property-required"
@@ -4799,7 +4887,7 @@ for more information. Defaults to `true`.
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
 {{% /md %}}</dd></dl>
@@ -4840,7 +4928,7 @@ for more information. Defaults to `true`.
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that the blob should be retained, between `1` and `365` days. Defaults to `7`.
 {{% /md %}}</dd></dl>
@@ -4853,7 +4941,7 @@ for more information. Defaults to `true`.
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that the blob should be retained, between `1` and `365` days. Defaults to `7`.
 {{% /md %}}</dd></dl>
@@ -4912,7 +5000,7 @@ for more information. Defaults to `true`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4921,7 +5009,7 @@ for more information. Defaults to `true`.
 <a href="#usesubdomain_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Subdomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Should the Custom Domain Name be validated by using indirect CNAME validation?
 {{% /md %}}</dd></dl>
@@ -4934,7 +5022,7 @@ for more information. Defaults to `true`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4943,7 +5031,7 @@ for more information. Defaults to `true`.
 <a href="#use_subdomain_python" style="color: inherit; text-decoration: inherit;">use_<wbr>subdomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Should the Custom Domain Name be validated by using indirect CNAME validation?
 {{% /md %}}</dd></dl>
@@ -5020,7 +5108,7 @@ for more information. Defaults to `true`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the identity type of the Storage Account. At this time the only allowed value is `SystemAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5029,7 +5117,7 @@ for more information. Defaults to `true`.
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Identity of this Storage Account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5038,7 +5126,7 @@ for more information. Defaults to `true`.
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this Storage Account.
 {{% /md %}}</dd></dl>
@@ -5051,7 +5139,7 @@ for more information. Defaults to `true`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type of the Storage Account. At this time the only allowed value is `SystemAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5060,7 +5148,7 @@ for more information. Defaults to `true`.
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Identity of this Storage Account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5069,7 +5157,7 @@ for more information. Defaults to `true`.
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this Storage Account.
 {{% /md %}}</dd></dl>
@@ -5166,7 +5254,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5175,7 +5263,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#bypasses_nodejs" style="color: inherit; text-decoration: inherit;">bypasses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
 any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
@@ -5185,7 +5273,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5194,7 +5282,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resource ids for subnets.
 {{% /md %}}</dd></dl>
@@ -5207,7 +5295,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5216,7 +5304,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#bypasses_python" style="color: inherit; text-decoration: inherit;">bypasses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
 any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
@@ -5226,7 +5314,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5235,7 +5323,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resource ids for subnets.
 {{% /md %}}</dd></dl>
@@ -5330,7 +5418,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiescorsrule">Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiescorsrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5339,7 +5427,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#hourmetrics_nodejs" style="color: inherit; text-decoration: inherit;">hour<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">pulumi.<wbr>Input<Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5348,7 +5436,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieslogging">pulumi.<wbr>Input<Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5357,7 +5445,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#minutemetrics_nodejs" style="color: inherit; text-decoration: inherit;">minute<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">pulumi.<wbr>Input<Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5370,7 +5458,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiescorsrule">Sequence[Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiescorsrule">Input[Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5379,7 +5467,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#hour_metrics_python" style="color: inherit; text-decoration: inherit;">hour_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Input[Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5388,7 +5476,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieslogging">Input[Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5397,7 +5485,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#minute_metrics_python" style="color: inherit; text-decoration: inherit;">minute_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Input[Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5512,7 +5600,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
 {{% /md %}}</dd><dt class="property-required"
@@ -5521,7 +5609,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
@@ -5531,7 +5619,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
 {{% /md %}}</dd><dt class="property-required"
@@ -5540,7 +5628,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
 {{% /md %}}</dd><dt class="property-required"
@@ -5549,7 +5637,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
 {{% /md %}}</dd></dl>
@@ -5562,7 +5650,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
 {{% /md %}}</dd><dt class="property-required"
@@ -5571,7 +5659,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
@@ -5581,7 +5669,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
 {{% /md %}}</dd><dt class="property-required"
@@ -5590,7 +5678,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
 {{% /md %}}</dd><dt class="property-required"
@@ -5599,7 +5687,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
 {{% /md %}}</dd></dl>
@@ -5694,7 +5782,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -5703,7 +5791,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5712,7 +5800,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#includeapis_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5721,7 +5809,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
 {{% /md %}}</dd></dl>
@@ -5734,7 +5822,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -5743,7 +5831,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5752,7 +5840,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#include_apis_python" style="color: inherit; text-decoration: inherit;">include_<wbr>apis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5761,7 +5849,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
 {{% /md %}}</dd></dl>
@@ -5874,7 +5962,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether all delete requests should be logged. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -5883,7 +5971,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether all read requests should be logged. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -5892,7 +5980,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -5901,7 +5989,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether all write requests should be logged. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5910,7 +5998,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
 {{% /md %}}</dd></dl>
@@ -5923,7 +6011,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether all delete requests should be logged. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -5932,7 +6020,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether all read requests should be logged. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -5941,7 +6029,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -5950,7 +6038,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#write_python" style="color: inherit; text-decoration: inherit;">write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether all write requests should be logged. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5959,7 +6047,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
 {{% /md %}}</dd></dl>
@@ -6054,7 +6142,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -6063,7 +6151,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6072,7 +6160,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#includeapis_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6081,7 +6169,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
 {{% /md %}}</dd></dl>
@@ -6094,7 +6182,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -6103,7 +6191,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6112,7 +6200,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#include_apis_python" style="color: inherit; text-decoration: inherit;">include_<wbr>apis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6121,7 +6209,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
 {{% /md %}}</dd></dl>
@@ -6180,7 +6268,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#error404document_nodejs" style="color: inherit; text-decoration: inherit;">error404Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6189,7 +6277,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#indexdocument_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.
 {{% /md %}}</dd></dl>
@@ -6202,7 +6290,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#error404_document_python" style="color: inherit; text-decoration: inherit;">error404_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6211,7 +6299,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.
 {{% /md %}}</dd></dl>

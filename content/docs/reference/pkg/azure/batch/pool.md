@@ -19,19 +19,41 @@ Manages an Azure Batch pool.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[PoolAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[PoolCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolContainerConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[PoolFixedScaleArgs]</span> = None<span class="p">, </span><span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">node_agent_sku_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[PoolStartTaskArgs]</span> = None<span class="p">, </span><span class="nx">stop_pending_resize_operation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[PoolStorageImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolAutoScaleArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PoolCertificateArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolContainerConfigurationArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolFixedScaleArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">node_agent_sku_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolStartTaskArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">stop_pending_resize_operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolStorageImageReferenceArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -66,22 +88,32 @@ Manages an Azure Batch pool.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PoolArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -90,7 +122,7 @@ Manages an Azure Batch pool.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -114,7 +146,7 @@ Manages an Azure Batch pool.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -463,7 +495,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -472,7 +504,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#nodeagentskuid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Agent<wbr>Sku<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Sku of the node agents that will be created in the Batch pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -481,7 +513,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Batch pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -490,7 +522,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#storageimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#poolstorageimagereference">pulumi.<wbr>Input<Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` for the virtual machines that will compose the Batch pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -499,7 +531,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the size of the VM created in the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -508,7 +540,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#poolautoscale">pulumi.<wbr>Input<Pool<wbr>Auto<wbr>Scale<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -517,7 +549,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcertificate">Pool<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#poolcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Pool<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -526,7 +558,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolcontainerconfiguration">pulumi.<wbr>Input<Pool<wbr>Container<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -535,7 +567,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the display name of the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -544,7 +576,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#fixedscale_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale</a></span>
+        <span class="property-type"><a href="#poolfixedscale">pulumi.<wbr>Input<Pool<wbr>Fixed<wbr>Scale<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +585,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#maxtaskspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -562,7 +594,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of custom batch pool metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -571,7 +603,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Batch pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -580,7 +612,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolnetworkconfiguration">pulumi.<wbr>Input<Pool<wbr>Network<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `network_configuration` block that describes the network configurations for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +621,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#starttask_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task</a></span>
+        <span class="property-type"><a href="#poolstarttask">pulumi.<wbr>Input<Pool<wbr>Start<wbr>Task<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -598,7 +630,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#stoppendingresizeoperation_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Pending<wbr>Resize<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -610,7 +642,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -619,7 +651,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#node_agent_sku_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>agent_<wbr>sku_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Sku of the node agents that will be created in the Batch pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -628,7 +660,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Batch pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -637,7 +669,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstorageimagereference">Input[Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` for the virtual machines that will compose the Batch pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -646,7 +678,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the VM created in the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -655,7 +687,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolautoscale">Input[Pool<wbr>Auto<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -664,7 +696,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcertificate">Sequence[Pool<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolcertificate">Input[Pool<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -673,7 +705,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolcontainerconfiguration">Input[Pool<wbr>Container<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -682,7 +714,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the display name of the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -691,7 +723,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#fixed_scale_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolfixedscale">Input[Pool<wbr>Fixed<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -700,7 +732,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#max_tasks_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -709,7 +741,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of custom batch pool metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -718,7 +750,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Batch pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -727,7 +759,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolnetworkconfiguration">Input[Pool<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `network_configuration` block that describes the network configurations for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +768,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttask">Input[Pool<wbr>Start<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +777,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#stop_pending_resize_operation_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>pending_<wbr>resize_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -813,20 +845,38 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Pool</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Pool</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[PoolAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[PoolCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolContainerConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[PoolFixedScaleArgs]</span> = None<span class="p">, </span><span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[PoolNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">node_agent_sku_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[PoolStartTaskArgs]</span> = None<span class="p">, </span><span class="nx">stop_pending_resize_operation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[PoolStorageImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Pool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolAutoScaleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PoolCertificateArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">container_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolContainerConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">fixed_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolFixedScaleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">max_tasks_per_node</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">node_agent_sku_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolStartTaskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">stop_pending_resize_operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">storage_image_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolStorageImageReferenceArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Pool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Pool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PoolState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Pool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PoolState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1229,7 +1279,7 @@ The following state arguments are supported:
 <a href="#state_accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1288,7 @@ The following state arguments are supported:
 <a href="#state_autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#poolautoscale">pulumi.<wbr>Input<Pool<wbr>Auto<wbr>Scale<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcertificate">Pool<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#poolcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Pool<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1306,7 @@ The following state arguments are supported:
 <a href="#state_containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolcontainerconfiguration">pulumi.<wbr>Input<Pool<wbr>Container<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1315,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the display name of the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1324,7 @@ The following state arguments are supported:
 <a href="#state_fixedscale_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale</a></span>
+        <span class="property-type"><a href="#poolfixedscale">pulumi.<wbr>Input<Pool<wbr>Fixed<wbr>Scale<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1333,7 @@ The following state arguments are supported:
 <a href="#state_maxtaskspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tasks<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1292,7 +1342,7 @@ The following state arguments are supported:
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of custom batch pool metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1301,7 +1351,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Batch pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,7 +1360,7 @@ The following state arguments are supported:
 <a href="#state_networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolnetworkconfiguration">pulumi.<wbr>Input<Pool<wbr>Network<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `network_configuration` block that describes the network configurations for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1319,7 +1369,7 @@ The following state arguments are supported:
 <a href="#state_nodeagentskuid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Agent<wbr>Sku<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Sku of the node agents that will be created in the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1328,7 +1378,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Batch pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1337,7 +1387,7 @@ The following state arguments are supported:
 <a href="#state_starttask_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task</a></span>
+        <span class="property-type"><a href="#poolstarttask">pulumi.<wbr>Input<Pool<wbr>Start<wbr>Task<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1346,7 +1396,7 @@ The following state arguments are supported:
 <a href="#state_stoppendingresizeoperation_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Pending<wbr>Resize<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1354,7 +1404,7 @@ The following state arguments are supported:
 <a href="#state_storageimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#poolstorageimagereference">pulumi.<wbr>Input<Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` for the virtual machines that will compose the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1413,7 @@ The following state arguments are supported:
 <a href="#state_vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the size of the VM created in the Batch pool.
 {{% /md %}}</dd></dl>
@@ -1376,7 +1426,7 @@ The following state arguments are supported:
 <a href="#state_account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1435,7 @@ The following state arguments are supported:
 <a href="#state_auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolautoscale">Input[Pool<wbr>Auto<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1394,7 +1444,7 @@ The following state arguments are supported:
 <a href="#state_certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcertificate">Sequence[Pool<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolcertificate">Input[Pool<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1403,7 +1453,7 @@ The following state arguments are supported:
 <a href="#state_container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolcontainerconfiguration">Input[Pool<wbr>Container<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1462,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the display name of the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1421,7 +1471,7 @@ The following state arguments are supported:
 <a href="#state_fixed_scale_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolfixedscale">Input[Pool<wbr>Fixed<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1430,7 +1480,7 @@ The following state arguments are supported:
 <a href="#state_max_tasks_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tasks_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1439,7 +1489,7 @@ The following state arguments are supported:
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of custom batch pool metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1498,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Batch pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1507,7 @@ The following state arguments are supported:
 <a href="#state_network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolnetworkconfiguration">Input[Pool<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `network_configuration` block that describes the network configurations for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_node_agent_sku_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>agent_<wbr>sku_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Sku of the node agents that will be created in the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1525,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Batch pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1534,7 @@ The following state arguments are supported:
 <a href="#state_start_task_python" style="color: inherit; text-decoration: inherit;">start_<wbr>task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttask">Input[Pool<wbr>Start<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1543,7 @@ The following state arguments are supported:
 <a href="#state_stop_pending_resize_operation_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>pending_<wbr>resize_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1551,7 @@ The following state arguments are supported:
 <a href="#state_storage_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstorageimagereference">Input[Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` for the virtual machines that will compose the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1510,7 +1560,7 @@ The following state arguments are supported:
 <a href="#state_vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the VM created in the Batch pool.
 {{% /md %}}</dd></dl>
@@ -1578,7 +1628,7 @@ The following state arguments are supported:
 <a href="#formula_nodejs" style="color: inherit; text-decoration: inherit;">formula</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1587,7 +1637,7 @@ The following state arguments are supported:
 <a href="#evaluationinterval_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled. Defaults to `PT15M`.
 {{% /md %}}</dd></dl>
@@ -1600,7 +1650,7 @@ The following state arguments are supported:
 <a href="#formula_python" style="color: inherit; text-decoration: inherit;">formula</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1659,7 @@ The following state arguments are supported:
 <a href="#evaluation_interval_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled. Defaults to `PT15M`.
 {{% /md %}}</dd></dl>
@@ -1704,7 +1754,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Batch Certificate to install on the Batch Pool, which must be inside the same Batch Account.
 {{% /md %}}</dd><dt class="property-required"
@@ -1713,7 +1763,7 @@ The following state arguments are supported:
 <a href="#storelocation_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which to install the certificate. Possible values are `CurrentUser` or `LocalMachine`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1772,7 @@ The following state arguments are supported:
 <a href="#storename_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which to install the certificate. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: `My`, `Root`, `CA`, `Trust`, `Disallowed`, `TrustedPeople`, `TrustedPublisher`, `AuthRoot`, `AddressBook`, but any custom store name can also be used. The default value is `My`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1781,7 @@ The following state arguments are supported:
 <a href="#visibilities_nodejs" style="color: inherit; text-decoration: inherit;">visibilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node should have access to the private data of the certificate.
 {{% /md %}}</dd></dl>
@@ -1744,7 +1794,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Batch Certificate to install on the Batch Pool, which must be inside the same Batch Account.
 {{% /md %}}</dd><dt class="property-required"
@@ -1753,7 +1803,7 @@ The following state arguments are supported:
 <a href="#store_location_python" style="color: inherit; text-decoration: inherit;">store_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which to install the certificate. Possible values are `CurrentUser` or `LocalMachine`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1762,7 +1812,7 @@ The following state arguments are supported:
 <a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which to install the certificate. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: `My`, `Root`, `CA`, `Trust`, `Disallowed`, `TrustedPeople`, `TrustedPublisher`, `AuthRoot`, `AddressBook`, but any custom store name can also be used. The default value is `My`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1771,7 +1821,7 @@ The following state arguments are supported:
 <a href="#visibilities_python" style="color: inherit; text-decoration: inherit;">visibilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node should have access to the private data of the certificate.
 {{% /md %}}</dd></dl>
@@ -1848,7 +1898,7 @@ The following state arguments are supported:
 <a href="#containerimagenames_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1907,7 @@ The following state arguments are supported:
 <a href="#containerregistries_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry[]</a></span>
+        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">pulumi.<wbr>Input<pulumi.<wbr>Input<Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1916,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of container configuration. Possible value is `DockerCompatible`.
 {{% /md %}}</dd></dl>
@@ -1879,7 +1929,7 @@ The following state arguments are supported:
 <a href="#container_image_names_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of container image names to use, as would be specified by `docker pull`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +1938,7 @@ The following state arguments are supported:
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">Sequence[Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">Input[Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1947,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of container configuration. Possible value is `DockerCompatible`.
 {{% /md %}}</dd></dl>
@@ -1974,7 +2024,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1983,7 +2033,7 @@ The following state arguments are supported:
 <a href="#registryserver_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io". Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1992,7 +2042,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2005,7 +2055,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2014,7 +2064,7 @@ The following state arguments are supported:
 <a href="#registry_server_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io". Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2023,7 +2073,7 @@ The following state arguments are supported:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2100,7 +2150,7 @@ The following state arguments are supported:
 <a href="#resizetimeout_nodejs" style="color: inherit; text-decoration: inherit;">resize<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations. Defaults to `PT15M`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2159,7 @@ The following state arguments are supported:
 <a href="#targetdedicatednodes_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Dedicated<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2168,7 @@ The following state arguments are supported:
 <a href="#targetlowprioritynodes_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Low<wbr>Priority<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool. Defaults to `0`.
 {{% /md %}}</dd></dl>
@@ -2131,7 +2181,7 @@ The following state arguments are supported:
 <a href="#resize_timeout_python" style="color: inherit; text-decoration: inherit;">resize_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations. Defaults to `PT15M`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2140,7 +2190,7 @@ The following state arguments are supported:
 <a href="#target_dedicated_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dedicated_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2199,7 @@ The following state arguments are supported:
 <a href="#target_low_priority_nodes_python" style="color: inherit; text-decoration: inherit;">target_<wbr>low_<wbr>priority_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool. Defaults to `0`.
 {{% /md %}}</dd></dl>
@@ -2244,7 +2294,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool will join. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2303,7 @@ The following state arguments are supported:
 <a href="#endpointconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of inbound NAT pools that can be used to address specific ports on an individual compute node externally. Set as documented in the inbound_nat_pools block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2312,7 @@ The following state arguments are supported:
 <a href="#publicaddressprovisioningtype_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Address<wbr>Provisioning<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of public IP address provisioning. Supported values are `BatchManaged`, `UserManaged` and `NoPublicIPAddresses`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2321,7 @@ The following state arguments are supported:
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of public ip ids that will be allocated to nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2284,7 +2334,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool will join. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2293,7 +2343,7 @@ The following state arguments are supported:
 <a href="#endpoint_configurations_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">Sequence[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">Input[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of inbound NAT pools that can be used to address specific ports on an individual compute node externally. Set as documented in the inbound_nat_pools block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2302,7 +2352,7 @@ The following state arguments are supported:
 <a href="#public_address_provisioning_type_python" style="color: inherit; text-decoration: inherit;">public_<wbr>address_<wbr>provisioning_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of public IP address provisioning. Supported values are `BatchManaged`, `UserManaged` and `NoPublicIPAddresses`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2311,7 +2361,7 @@ The following state arguments are supported:
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of public ip ids that will be allocated to nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2424,7 +2474,7 @@ The following state arguments are supported:
 <a href="#backendport_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port number on the compute node. Acceptable values are between `1` and `65535` except for `29876`, `29877` as these are reserved. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2433,7 +2483,7 @@ The following state arguments are supported:
 <a href="#frontendportrange_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The range of external ports that will be used to provide inbound access to the backendPort on individual compute nodes in the format of `1000-1100`. Acceptable values range between `1` and `65534` except ports from `50000` to `55000` which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. Values must be a range of at least `100` nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2442,7 +2492,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint. The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2451,7 +2501,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint. Acceptable values are `TCP` and `UDP`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2460,7 +2510,7 @@ The following state arguments are supported:
 <a href="#networksecuritygrouprules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">pulumi.<wbr>Input<pulumi.<wbr>Input<Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of network security group rules that will be applied to the endpoint. The maximum number of rules that can be specified across all the endpoints on a Batch pool is `25`. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. Set as documented in the network_security_group_rules block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2473,7 +2523,7 @@ The following state arguments are supported:
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port number on the compute node. Acceptable values are between `1` and `65535` except for `29876`, `29877` as these are reserved. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2482,7 +2532,7 @@ The following state arguments are supported:
 <a href="#frontend_port_range_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The range of external ports that will be used to provide inbound access to the backendPort on individual compute nodes in the format of `1000-1100`. Acceptable values range between `1` and `65534` except ports from `50000` to `55000` which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. Values must be a range of at least `100` nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2491,7 +2541,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint. The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2500,7 +2550,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint. Acceptable values are `TCP` and `UDP`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2559,7 @@ The following state arguments are supported:
 <a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Sequence[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Input[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of network security group rules that will be applied to the endpoint. The maximum number of rules that can be specified across all the endpoints on a Batch pool is `25`. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. Set as documented in the network_security_group_rules block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2586,7 +2636,7 @@ The following state arguments are supported:
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag. Acceptable values are `Allow` and `Deny`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2595,7 +2645,7 @@ The following state arguments are supported:
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The priority for this rule. The value must be at least `150`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2604,7 +2654,7 @@ The following state arguments are supported:
 <a href="#sourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2617,7 +2667,7 @@ The following state arguments are supported:
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag. Acceptable values are `Allow` and `Deny`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2626,7 +2676,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The priority for this rule. The value must be at least `150`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2635,7 +2685,7 @@ The following state arguments are supported:
 <a href="#source_address_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2766,7 +2816,7 @@ The following state arguments are supported:
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
 {{% /md %}}</dd><dt class="property-required"
@@ -2775,7 +2825,7 @@ The following state arguments are supported:
 <a href="#useridentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentity">pulumi.<wbr>Input<Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2784,7 +2834,7 @@ The following state arguments are supported:
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2793,7 +2843,7 @@ The following state arguments are supported:
 <a href="#maxtaskretrycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Task<wbr>Retry<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of retry count. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2802,7 +2852,7 @@ The following state arguments are supported:
 <a href="#resourcefiles_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskresourcefile">Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File[]</a></span>
+        <span class="property-type"><a href="#poolstarttaskresourcefile">pulumi.<wbr>Input<pulumi.<wbr>Input<Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2811,7 +2861,7 @@ The following state arguments are supported:
 <a href="#waitforsuccess_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed. Default to `false`.
 {{% /md %}}</dd></dl>
@@ -2824,7 +2874,7 @@ The following state arguments are supported:
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
 {{% /md %}}</dd><dt class="property-required"
@@ -2833,7 +2883,7 @@ The following state arguments are supported:
 <a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentity">Input[Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2842,7 +2892,7 @@ The following state arguments are supported:
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2851,7 +2901,7 @@ The following state arguments are supported:
 <a href="#max_task_retry_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>task_<wbr>retry_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of retry count. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2860,7 +2910,7 @@ The following state arguments are supported:
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskresourcefile">Sequence[Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolstarttaskresourcefile">Input[Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2869,7 +2919,7 @@ The following state arguments are supported:
 <a href="#wait_for_success_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>success</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed. Default to `false`.
 {{% /md %}}</dd></dl>
@@ -3000,7 +3050,7 @@ The following state arguments are supported:
 <a href="#autostoragecontainername_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage<wbr>Container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3009,7 +3059,7 @@ The following state arguments are supported:
 <a href="#blobprefix_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The blob prefix to use when downloading blobs from an Azure Storage container. Only the blobs whose names begin with the specified prefix will be downloaded. The property is valid only when `auto_storage_container_name` or `storage_container_url` is used. This prefix can be a partial filename or a subdirectory. If a prefix is not specified, all the files in the container will be downloaded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3018,7 +3068,7 @@ The following state arguments are supported:
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file permission mode represented as a string in octal format (e.g. `"0644"`). This property applies only to files being downloaded to Linux compute nodes. It will be ignored if it is specified for a `resource_file` which will be downloaded to a Windows node. If this property is not specified for a Linux node, then a default value of 0770 is applied to the file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3027,7 +3077,7 @@ The following state arguments are supported:
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified, `file_path` is optional and is the directory to download the files to. In the case where `file_path` is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory. The specified relative path cannot break out of the task's working directory (for example by using '..').
 {{% /md %}}</dd><dt class="property-optional"
@@ -3036,7 +3086,7 @@ The following state arguments are supported:
 <a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob. There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the blob, or set the ACL for the blob or its container to allow public access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3045,7 +3095,7 @@ The following state arguments are supported:
 <a href="#storagecontainerurl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage. This URL must be readable and listable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob. There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read and list permissions on the blob, or set the ACL for the blob or its container to allow public access.
 {{% /md %}}</dd></dl>
@@ -3058,7 +3108,7 @@ The following state arguments are supported:
 <a href="#auto_storage_container_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage_<wbr>container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3067,7 +3117,7 @@ The following state arguments are supported:
 <a href="#blob_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The blob prefix to use when downloading blobs from an Azure Storage container. Only the blobs whose names begin with the specified prefix will be downloaded. The property is valid only when `auto_storage_container_name` or `storage_container_url` is used. This prefix can be a partial filename or a subdirectory. If a prefix is not specified, all the files in the container will be downloaded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3076,7 +3126,7 @@ The following state arguments are supported:
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file permission mode represented as a string in octal format (e.g. `"0644"`). This property applies only to files being downloaded to Linux compute nodes. It will be ignored if it is specified for a `resource_file` which will be downloaded to a Windows node. If this property is not specified for a Linux node, then a default value of 0770 is applied to the file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3085,7 +3135,7 @@ The following state arguments are supported:
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified, `file_path` is optional and is the directory to download the files to. In the case where `file_path` is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory. The specified relative path cannot break out of the task's working directory (for example by using '..').
 {{% /md %}}</dd><dt class="property-optional"
@@ -3094,7 +3144,7 @@ The following state arguments are supported:
 <a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob. There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the blob, or set the ACL for the blob or its container to allow public access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3103,7 +3153,7 @@ The following state arguments are supported:
 <a href="#storage_container_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage. This URL must be readable and listable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob. There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read and list permissions on the blob, or set the ACL for the blob or its container to allow public access.
 {{% /md %}}</dd></dl>
@@ -3162,7 +3212,7 @@ The following state arguments are supported:
 <a href="#autouser_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">pulumi.<wbr>Input<Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3171,7 +3221,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username to be used by the Batch pool start task.
 {{% /md %}}</dd></dl>
@@ -3184,7 +3234,7 @@ The following state arguments are supported:
 <a href="#auto_user_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Input[Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3193,7 +3243,7 @@ The following state arguments are supported:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username to be used by the Batch pool start task.
 {{% /md %}}</dd></dl>
@@ -3252,7 +3302,7 @@ The following state arguments are supported:
 <a href="#elevationlevel_nodejs" style="color: inherit; text-decoration: inherit;">elevation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs. Possible values are `Admin` or `NonAdmin`. Defaults to `NonAdmin`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3261,7 +3311,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs. Possible values are `Task` or `Pool`. Defaults to `Task`.
 {{% /md %}}</dd></dl>
@@ -3274,7 +3324,7 @@ The following state arguments are supported:
 <a href="#elevation_level_python" style="color: inherit; text-decoration: inherit;">elevation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs. Possible values are `Admin` or `NonAdmin`. Defaults to `NonAdmin`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3283,7 +3333,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs. Possible values are `Task` or `Pool`. Defaults to `Task`.
 {{% /md %}}</dd></dl>
@@ -3398,7 +3448,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Custom Image which the virtual machines should be created from. Changing this forces a new resource to be created. See [official documentation](https://docs.microsoft.com/en-us/azure/batch/batch-custom-images) for more details.
 ---
@@ -3408,7 +3458,7 @@ The following state arguments are supported:
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3417,7 +3467,7 @@ The following state arguments are supported:
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3426,7 +3476,7 @@ The following state arguments are supported:
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3435,7 +3485,7 @@ The following state arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3448,7 +3498,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Custom Image which the virtual machines should be created from. Changing this forces a new resource to be created. See [official documentation](https://docs.microsoft.com/en-us/azure/batch/batch-custom-images) for more details.
 ---
@@ -3458,7 +3508,7 @@ The following state arguments are supported:
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3467,7 +3517,7 @@ The following state arguments are supported:
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3476,7 +3526,7 @@ The following state arguments are supported:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3485,7 +3535,7 @@ The following state arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
