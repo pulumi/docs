@@ -206,19 +206,33 @@ const _default = new gcp.certificateauthority.Certificate("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[CertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[CertificateConfigArgs]</span> = None<span class="p">,</span>
+                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -253,22 +267,32 @@ const _default = new gcp.certificateauthority.Certificate("default", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -277,7 +301,7 @@ const _default = new gcp.certificateauthority.Certificate("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -301,7 +325,7 @@ const _default = new gcp.certificateauthority.Certificate("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -537,7 +561,7 @@ running `gcloud beta privateca locations list`.
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -960,20 +984,36 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CertificateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Certificate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CertificateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Certificate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_descriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateCertificateDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[CertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pem_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pem_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revocation_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateRevocationDetailArgs]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">certificate_descriptions</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateCertificateDescriptionArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[CertificateConfigArgs]</span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pem_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pem_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pem_csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">revocation_details</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateRevocationDetailArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CertificateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CertificateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Certificate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CertificateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Certificate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CertificateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1365,7 +1405,7 @@ this field is present.
 <a href="#state_certificatedescriptions_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Descriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescription">Certificate<wbr>Certificate<wbr>Description[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescription">Certificate<wbr>Certificate<wbr>Description<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
@@ -1375,7 +1415,7 @@ this field is present.
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -1470,7 +1510,7 @@ If it is not provided, the provider project is used.
 <a href="#state_revocationdetails_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificaterevocationdetail">Certificate<wbr>Revocation<wbr>Detail[]</a></span>
+        <span class="property-type"><a href="#certificaterevocationdetail">Certificate<wbr>Revocation<wbr>Detail<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
@@ -1781,7 +1821,7 @@ Structure is documented below.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -1799,7 +1839,7 @@ Structure is documented below.
 <a href="#authoritykeyid_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1807,7 +1847,7 @@ Structure is documented below.
 <a href="#certfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1815,7 +1855,7 @@ Structure is documented below.
 <a href="#configvalues_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1831,7 +1871,7 @@ Structure is documented below.
 <a href="#subjectdescription_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1879,7 @@ Structure is documented below.
 <a href="#subjectkeyid_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2047,7 +2087,7 @@ Structure is documented below.
 <a href="#keyusage_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2129,7 +2169,7 @@ Structure is documented below.
 <a href="#unknownextendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2137,7 +2177,7 @@ Structure is documented below.
 <a href="#basekeyusage_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2185,7 @@ Structure is documented below.
 <a href="#extendedkeyusage_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2211,7 +2251,7 @@ Structure is documented below.
 <a href="#keyusageoptions_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2777,7 +2817,7 @@ Structure is documented below.
 <a href="#obectid_nodejs" style="color: inherit; text-decoration: inherit;">obect<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3127,7 +3167,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -3137,7 +3177,7 @@ Structure is documented below.
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -3587,7 +3627,7 @@ Structure is documented below.
 <a href="#customsans_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3749,7 +3789,7 @@ Structure is documented below.
 <a href="#obectid_nodejs" style="color: inherit; text-decoration: inherit;">obect<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3967,7 +4007,7 @@ Structure is documented below.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -3977,7 +4017,7 @@ Structure is documented below.
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -3987,7 +4027,7 @@ Structure is documented below.
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -4264,7 +4304,7 @@ Structure is documented below.
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -4274,7 +4314,7 @@ Structure is documented below.
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.

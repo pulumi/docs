@@ -28,19 +28,32 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppDiagnosticLogsConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppDiagnosticLogsConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_logs</span><span class="p">:</span> <span class="nx">Optional[ApplicationLogsConfigArgs]</span> = None<span class="p">, </span><span class="nx">detailed_error_messages</span><span class="p">:</span> <span class="nx">Optional[EnabledConfigArgs]</span> = None<span class="p">, </span><span class="nx">failed_requests_tracing</span><span class="p">:</span> <span class="nx">Optional[EnabledConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_logs</span><span class="p">:</span> <span class="nx">Optional[HttpLogsConfigArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                      <span class="nx">application_logs</span><span class="p">:</span> <span class="nx">Optional[ApplicationLogsConfigArgs]</span> = None<span class="p">,</span>
+                                      <span class="nx">detailed_error_messages</span><span class="p">:</span> <span class="nx">Optional[EnabledConfigArgs]</span> = None<span class="p">,</span>
+                                      <span class="nx">failed_requests_tracing</span><span class="p">:</span> <span class="nx">Optional[EnabledConfigArgs]</span> = None<span class="p">,</span>
+                                      <span class="nx">http_logs</span><span class="p">:</span> <span class="nx">Optional[HttpLogsConfigArgs]</span> = None<span class="p">,</span>
+                                      <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppDiagnosticLogsConfigurationArgs</a></span><span class="p">,</span>
+                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppDiagnosticLogsConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppDiagnosticLogsConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppDiagnosticLogsConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppDiagnosticLogsConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppDiagnosticLogsConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppDiagnosticLogsConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppDiagnosticLogsConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,22 +88,32 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WebAppDiagnosticLogsConfigurationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -314,7 +337,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#applicationlogs_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationlogsconfig">Application<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#applicationlogsconfig">Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +345,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#detailederrormessages_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Error<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config</a></span>
+        <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -330,7 +353,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#failedrequeststracing_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Requests<wbr>Tracing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config</a></span>
+        <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -338,7 +361,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#httplogs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httplogsconfig">Http<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#httplogsconfig">Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuretablestorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -687,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -695,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuretablestorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1897,7 +1920,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1928,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1979,7 +2002,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +2010,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}

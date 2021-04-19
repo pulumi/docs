@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/fc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -124,17 +124,20 @@ export const firstFcServiceName = fcServicesDs.services[0].name;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServices<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServicesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServicesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServices<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServicesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServicesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_services(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServicesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_services(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServicesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServices<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServicesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServicesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServices<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetServicesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServicesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetServices` in the Go SDK.
 
@@ -143,7 +146,7 @@ export const firstFcServiceName = fcServicesDs.services[0].name;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServices </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServicesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServicesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServicesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServicesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -567,7 +570,7 @@ The following output properties are available:
 <a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservicelogconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicesservicelogconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing information about the associated log store. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -585,7 +588,7 @@ The following output properties are available:
 <a href="#nasconfig_csharp" style="color: inherit; text-decoration: inherit;">Nas<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservicenasconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicesservicenasconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A list of one element about the nas configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -603,7 +606,7 @@ The following output properties are available:
 <a href="#vpcconfig_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservicevpcconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicesservicevpcconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing information about accessible VPC resources. It contains the following attributes:
 {{% /md %}}</dd></dl>
@@ -849,7 +852,7 @@ The following output properties are available:
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservicelogconfig">Get<wbr>Services<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicesservicelogconfig">Get<wbr>Services<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing information about the associated log store. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -867,7 +870,7 @@ The following output properties are available:
 <a href="#nas_config_python" style="color: inherit; text-decoration: inherit;">nas_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservicenasconfig">Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicesservicenasconfig">Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A list of one element about the nas configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -885,7 +888,7 @@ The following output properties are available:
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservicevpcconfig">Get<wbr>Services<wbr>Service<wbr>Vpc<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getservicesservicevpcconfig">Get<wbr>Services<wbr>Service<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing information about accessible VPC resources. It contains the following attributes:
 {{% /md %}}</dd></dl>
@@ -1003,7 +1006,7 @@ The following output properties are available:
 <a href="#mountpoints_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservicenasconfigmountpoint">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicesservicenasconfigmountpoint">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mount points configuration, including following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1096,7 +1099,7 @@ The following output properties are available:
 <a href="#mount_points_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesservicenasconfigmountpoint">Sequence[Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicesservicenasconfigmountpoint">Sequence[Get<wbr>Services<wbr>Service<wbr>Nas<wbr>Config<wbr>Mount<wbr>Point]</a></span>
     </dt>
     <dd>{{% md %}}The mount points configuration, including following attributes:
 {{% /md %}}</dd><dt class="property-required"

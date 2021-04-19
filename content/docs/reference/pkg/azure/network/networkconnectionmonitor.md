@@ -174,19 +174,38 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorDestinationArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestGroupArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                             <span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                             <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorDestinationArgs]</span> = None<span class="p">,</span>
+                             <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorEndpointArgs]]</span> = None<span class="p">,</span>
+                             <span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">network_watcher_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">output_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorSourceArgs]</span> = None<span class="p">,</span>
+                             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                             <span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">,</span>
+                             <span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestGroupArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkConnectionMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkConnectionMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkConnectionMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkConnectionMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -221,22 +240,32 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NetworkConnectionMonitorArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -245,7 +274,7 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -269,7 +298,7 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -558,7 +587,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -576,7 +605,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -585,7 +614,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#testgroups_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -602,7 +631,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -654,7 +683,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -848,20 +877,35 @@ Get an existing NetworkConnectionMonitor resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NetworkConnectionMonitorState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NetworkConnectionMonitor</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NetworkConnectionMonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NetworkConnectionMonitor</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorDestinationArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestGroupArgs]]</span> = None<span class="p">) -&gt;</span> NetworkConnectionMonitor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorDestinationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorEndpointArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_watcher_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">output_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorSourceArgs]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestGroupArgs]]</span> = None<span class="p">) -&gt;</span> NetworkConnectionMonitor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkConnectionMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NetworkConnectionMonitorState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkConnectionMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkConnectionMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NetworkConnectionMonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkConnectionMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NetworkConnectionMonitor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NetworkConnectionMonitorState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NetworkConnectionMonitor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NetworkConnectionMonitorState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1212,7 +1256,7 @@ The following state arguments are supported:
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1264,7 @@ The following state arguments are supported:
 <a href="#state_endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1282,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1343,7 @@ The following state arguments are supported:
 <a href="#state_testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1352,7 @@ The following state arguments are supported:
 <a href="#state_testgroups_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1673,7 +1717,7 @@ The following state arguments are supported:
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1825,7 @@ The following state arguments are supported:
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2221,7 @@ The following state arguments are supported:
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2186,7 +2230,7 @@ The following state arguments are supported:
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2248,7 @@ The following state arguments are supported:
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,7 +2257,7 @@ The following state arguments are supported:
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2465,7 +2509,7 @@ The following state arguments are supported:
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

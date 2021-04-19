@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.containerservice.getManagedCluste
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Managed cluster.
-API Version: 2021-02-01.
+API Version: 2021-03-01.
 
 
 
@@ -22,17 +22,19 @@ API Version: 2021-02-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagedClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagedClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_managed_cluster(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetManagedClusterResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_managed_cluster(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetManagedClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagedClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagedClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupManagedCluster` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2021-02-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagedCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagedClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagedClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -270,6 +272,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="disablelocalaccounts_csharp">
+<a href="#disablelocalaccounts_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>ID</a>
 </span>
@@ -302,6 +312,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="fqdnsubdomain_csharp">
 <a href="#fqdnsubdomain_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Subdomain</a>
 </span>
@@ -309,6 +327,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="httpproxyconfig_csharp">
+<a href="#httpproxyconfig_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -365,6 +391,14 @@ The following output properties are available:
         <span class="property-type"><a href="#managedclusterpodidentityprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privatelinkresources_csharp">
+<a href="#privatelinkresources_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Resource<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_csharp">
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
@@ -530,6 +564,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="disablelocalaccounts_go">
+<a href="#disablelocalaccounts_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>ID</a>
 </span>
@@ -562,6 +604,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="fqdnsubdomain_go">
 <a href="#fqdnsubdomain_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Subdomain</a>
 </span>
@@ -569,6 +619,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="httpproxyconfig_go">
+<a href="#httpproxyconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfigresponse">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -625,6 +683,14 @@ The following output properties are available:
         <span class="property-type"><a href="#managedclusterpodidentityprofileresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privatelinkresources_go">
+<a href="#privatelinkresources_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkresourceresponse">[]Private<wbr>Link<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_go">
 <a href="#serviceprincipalprofile_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
@@ -790,6 +856,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="disablelocalaccounts_nodejs">
+<a href="#disablelocalaccounts_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>ID</a>
 </span>
@@ -822,6 +896,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="fqdnsubdomain_nodejs">
 <a href="#fqdnsubdomain_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Subdomain</a>
 </span>
@@ -829,6 +911,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="httpproxyconfig_nodejs">
+<a href="#httpproxyconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Proxy<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfigresponse">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -885,6 +975,14 @@ The following output properties are available:
         <span class="property-type"><a href="#managedclusterpodidentityprofileresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privatelinkresources_nodejs">
+<a href="#privatelinkresources_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkresourceresponse">Private<wbr>Link<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_nodejs">
 <a href="#serviceprincipalprofile_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Profile</a>
@@ -1050,6 +1148,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="disable_local_accounts_python">
+<a href="#disable_local_accounts_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>accounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
@@ -1082,6 +1188,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="fqdn_subdomain_python">
 <a href="#fqdn_subdomain_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>subdomain</a>
 </span>
@@ -1089,6 +1203,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="http_proxy_config_python">
+<a href="#http_proxy_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>proxy_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfigresponse">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1145,6 +1267,14 @@ The following output properties are available:
         <span class="property-type"><a href="#managedclusterpodidentityprofileresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="private_link_resources_python">
+<a href="#private_link_resources_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkresourceresponse">Sequence[Private<wbr>Link<wbr>Resource<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_principal_profile_python">
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
@@ -1256,7 +1386,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1494,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1396,7 +1526,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1432,7 +1562,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1456,7 +1586,7 @@ The following output properties are available:
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1516,7 +1646,7 @@ The following output properties are available:
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1548,7 +1678,7 @@ The following output properties are available:
 <a href="#loadbalancerprofile_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1800,7 +1930,7 @@ The following output properties are available:
 <a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1872,7 +2002,7 @@ The following output properties are available:
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1908,7 +2038,7 @@ The following output properties are available:
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1963,6 +2093,90 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</h4>
@@ -2356,7 +2570,7 @@ The following output properties are available:
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2678,7 @@ The following output properties are available:
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2864,7 +3078,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2948,7 +3162,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3104,7 +3318,7 @@ The following output properties are available:
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Power<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3148,6 +3362,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_csharp">
+<a href="#enablefips_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -3156,11 +3378,19 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gpuinstanceprofile_csharp">
+<a href="#gpuinstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kubeletconfig_csharp">
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3176,7 +3406,7 @@ The following output properties are available:
 <a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3258,7 +3488,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_csharp">
+<a href="#ossku_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3328,7 +3566,7 @@ The following output properties are available:
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3416,6 +3654,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_go">
+<a href="#enablefips_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -3423,6 +3669,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpuinstanceprofile_go">
+<a href="#gpuinstanceprofile_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_go">
 <a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -3526,7 +3780,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_go">
+<a href="#ossku_go" style="color: inherit; text-decoration: inherit;">Os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3684,6 +3946,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablefips_nodejs">
+<a href="#enablefips_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>FIPS</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -3691,6 +3961,14 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gpuinstanceprofile_nodejs">
+<a href="#gpuinstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Instance<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_nodejs">
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
@@ -3794,7 +4072,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ossku_nodejs">
+<a href="#ossku_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>SKU</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -3908,7 +4194,7 @@ The following output properties are available:
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3952,6 +4238,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enable_fips_python">
+<a href="#enable_fips_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
 </span>
@@ -3960,11 +4254,19 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="gpu_instance_profile_python">
+<a href="#gpu_instance_profile_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>instance_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kubelet_config_python">
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3980,7 +4282,7 @@ The following output properties are available:
 <a href="#linux_os_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4062,7 +4364,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="os_sku_python">
+<a href="#os_sku_python" style="color: inherit; text-decoration: inherit;">os_<wbr>sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -4132,7 +4442,7 @@ The following output properties are available:
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4205,6 +4515,154 @@ The following output properties are available:
     <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="managedclusterhttpproxyconfigresponse">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_csharp">
+<a href="#httpproxy_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_csharp">
+<a href="#httpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_csharp">
+<a href="#noproxy_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_csharp">
+<a href="#trustedca_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_go">
+<a href="#httpproxy_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_go">
+<a href="#httpsproxy_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_go">
+<a href="#noproxy_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_go">
+<a href="#trustedca_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="httpproxy_nodejs">
+<a href="#httpproxy_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsproxy_nodejs">
+<a href="#httpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noproxy_nodejs">
+<a href="#noproxy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trustedca_nodejs">
+<a href="#trustedca_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="http_proxy_python">
+<a href="#http_proxy_python" style="color: inherit; text-decoration: inherit;">http_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}HTTP proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="https_proxy_python">
+<a href="#https_proxy_python" style="color: inherit; text-decoration: inherit;">https_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}HTTPS proxy server endpoint to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_proxy_python">
+<a href="#no_proxy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Endpoints that should not go through proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trusted_ca_python">
+<a href="#trusted_ca_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Alternative CA cert to use for connecting to proxy servers.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="managedclusteridentityresponse">Managed<wbr>Cluster<wbr>Identity<wbr>Response</h4>
 
 
@@ -4240,7 +4698,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4348,7 +4806,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4456,7 +4914,7 @@ The following output properties are available:
 <a href="#effectiveoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4472,7 +4930,7 @@ The following output properties are available:
 <a href="#managedoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4480,7 +4938,7 @@ The following output properties are available:
 <a href="#outboundipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4488,7 +4946,7 @@ The following output properties are available:
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4612,7 +5070,7 @@ The following output properties are available:
 <a href="#effective_outbound_ips_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4628,7 +5086,7 @@ The following output properties are available:
 <a href="#managed_outbound_ips_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4636,7 +5094,7 @@ The following output properties are available:
 <a href="#outbound_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4644,7 +5102,7 @@ The following output properties are available:
 <a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4712,7 +5170,7 @@ The following output properties are available:
 <a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4748,7 +5206,7 @@ The following output properties are available:
 <a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4764,7 +5222,7 @@ The following output properties are available:
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4800,7 +5258,7 @@ The following output properties are available:
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4948,7 +5406,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4956,7 +5414,7 @@ The following output properties are available:
 <a href="#userassignedidentityexceptions_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5056,7 +5514,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5064,7 +5522,7 @@ The following output properties are available:
 <a href="#user_assigned_identity_exceptions_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5080,7 +5538,7 @@ The following output properties are available:
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5104,7 +5562,7 @@ The following output properties are available:
 <a href="#provisioninginfo_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5114,7 +5572,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_csharp">
+<a href="#bindingselector_csharp" style="color: inherit; text-decoration: inherit;">Binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5158,7 +5624,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_go">
+<a href="#bindingselector_go" style="color: inherit; text-decoration: inherit;">Binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5202,7 +5676,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bindingselector_nodejs">
+<a href="#bindingselector_nodejs" style="color: inherit; text-decoration: inherit;">binding<wbr>Selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5212,7 +5694,7 @@ The following output properties are available:
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5236,7 +5718,7 @@ The following output properties are available:
 <a href="#provisioning_info_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5246,7 +5728,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="binding_selector_python">
+<a href="#binding_selector_python" style="color: inherit; text-decoration: inherit;">binding_<wbr>selector</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Binding selector to use for the AzureIdentityBinding resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</h4>
@@ -5260,7 +5750,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5296,7 +5786,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6172,6 +6662,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablecsiproxy_csharp">
+<a href="#enablecsiproxy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -6199,6 +6697,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablecsiproxy_go">
+<a href="#enablecsiproxy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -6228,6 +6734,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablecsiproxy_nodejs">
+<a href="#enablecsiproxy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>CSIProxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
@@ -6255,6 +6769,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_csi_proxy_python">
+<a href="#enable_csi_proxy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>csi_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable CSI proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -6315,6 +6837,218 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkresourceresponse">Private<wbr>Link<wbr>Resource<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceid_csharp">
+<a href="#privatelinkserviceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service ID of the resource, this field is exposed only to NRP internally.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_csharp">
+<a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_csharp">
+<a href="#requiredmembers_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceid_go">
+<a href="#privatelinkserviceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service ID of the resource, this field is exposed only to NRP internally.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_go">
+<a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_go">
+<a href="#requiredmembers_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceid_nodejs">
+<a href="#privatelinkserviceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>ID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private link service ID of the resource, this field is exposed only to NRP internally.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupid_nodejs">
+<a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requiredmembers_nodejs">
+<a href="#requiredmembers_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="private_link_service_id_python">
+<a href="#private_link_service_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private link service ID of the resource, this field is exposed only to NRP internally.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="group_id_python">
+<a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The group ID of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the private link resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="required_members_python">
+<a href="#required_members_python" style="color: inherit; text-decoration: inherit;">required_<wbr>members</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}RequiredMembers of the resource{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</h4>

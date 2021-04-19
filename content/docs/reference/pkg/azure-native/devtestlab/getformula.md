@@ -22,17 +22,21 @@ API Version: 2018-09-15.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFormula<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFormulaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFormulaResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFormula<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFormulaArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFormulaResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_formula(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFormulaResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_formula(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFormulaResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFormula<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFormulaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFormulaResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFormula<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFormulaArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFormulaResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFormula` in the Go SDK.
 
@@ -41,7 +45,7 @@ API Version: 2018-09-15.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFormula </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetFormulaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFormulaArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFormulaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFormulaArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -684,7 +688,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#artifactparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Parameter<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -864,7 +868,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1152,7 @@ The following output properties are available:
 <a href="#attachnewdatadiskoptions_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1236,7 @@ The following output properties are available:
 <a href="#attach_new_data_disk_options_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>new_<wbr>data_<wbr>disk_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1724,7 +1728,7 @@ The following output properties are available:
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Install<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#artifactinstallpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Install<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1732,7 +1736,7 @@ The following output properties are available:
 <a href="#bulkcreationparameters_csharp" style="color: inherit; text-decoration: inherit;">Bulk<wbr>Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bulkcreationparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1760,7 @@ The following output properties are available:
 <a href="#datadiskparameters_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1792,7 @@ The following output properties are available:
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1836,7 +1840,7 @@ The following output properties are available:
 <a href="#networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1884,7 +1888,7 @@ The following output properties are available:
 <a href="#scheduleparameters_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Creation<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#schedulecreationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Creation<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2388,7 @@ The following output properties are available:
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallpropertiesresponse">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifactinstallpropertiesresponse">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2392,7 +2396,7 @@ The following output properties are available:
 <a href="#bulk_creation_parameters_python" style="color: inherit; text-decoration: inherit;">bulk_<wbr>creation_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2416,7 +2420,7 @@ The following output properties are available:
 <a href="#data_disk_parameters_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskpropertiesresponse">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskpropertiesresponse">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2448,7 +2452,7 @@ The following output properties are available:
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2496,7 +2500,7 @@ The following output properties are available:
 <a href="#network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2544,7 +2548,7 @@ The following output properties are available:
 <a href="#schedule_parameters_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameterresponse">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulecreationparameterresponse">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2640,7 +2644,7 @@ The following output properties are available:
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2872,7 @@ The following output properties are available:
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3088,7 +3092,7 @@ The following output properties are available:
 <a href="#dailyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3096,7 +3100,7 @@ The following output properties are available:
 <a href="#hourlyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3120,7 +3124,7 @@ The following output properties are available:
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3168,7 +3172,7 @@ The following output properties are available:
 <a href="#weeklyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3364,7 +3368,7 @@ The following output properties are available:
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3372,7 +3376,7 @@ The following output properties are available:
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3396,7 +3400,7 @@ The following output properties are available:
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3444,7 +3448,7 @@ The following output properties are available:
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3460,7 +3464,7 @@ The following output properties are available:
 <a href="#inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3496,7 +3500,7 @@ The following output properties are available:
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}

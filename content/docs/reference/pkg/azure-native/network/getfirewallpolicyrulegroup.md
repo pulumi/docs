@@ -22,17 +22,20 @@ API Version: 2020-04-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFirewallPolicyRuleGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFirewallPolicyRuleGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFirewallPolicyRuleGroupResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFirewallPolicyRuleGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFirewallPolicyRuleGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFirewallPolicyRuleGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_firewall_policy_rule_group(</span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFirewallPolicyRuleGroupResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_firewall_policy_rule_group(</span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">rule_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFirewallPolicyRuleGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFirewallPolicyRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFirewallPolicyRuleGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFirewallPolicyRuleGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFirewallPolicyRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFirewallPolicyRuleGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFirewallPolicyRuleGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFirewallPolicyRuleGroup` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-04-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFirewallPolicyRuleGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetFirewallPolicyRuleGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFirewallPolicyRuleGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFirewallPolicyRuleGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFirewallPolicyRuleGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -460,7 +463,7 @@ The following output properties are available:
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +667,7 @@ The following output properties are available:
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +759,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -864,7 +867,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,7 +891,7 @@ The following output properties are available:
 <a href="#rule_conditions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Condition<wbr>Response, Nat<wbr>Rule<wbr>Condition<wbr>Response, Network<wbr>Rule<wbr>Condition<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -956,7 +959,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +983,7 @@ The following output properties are available:
 <a href="#rulecondition_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#natruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#networkruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#natruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#networkruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1115,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1136,7 +1139,7 @@ The following output properties are available:
 <a href="#rule_condition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

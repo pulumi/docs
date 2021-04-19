@@ -447,19 +447,37 @@ const frontDoor = new azure_native.network.FrontDoor("frontDoor", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_settings</span><span class="p">:</span> <span class="nx">Optional[BackendPoolsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, FrontDoorEnabledState]]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">front_door_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[HealthProbeSettingsModelArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancing_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancingSettingsModelArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendPoolArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">backend_pools_settings</span><span class="p">:</span> <span class="nx">Optional[BackendPoolsSettingsArgs]</span> = None<span class="p">,</span>
+              <span class="nx">enabled_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, FrontDoorEnabledState]]</span> = None<span class="p">,</span>
+              <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">front_door_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontendEndpointArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">health_probe_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[HealthProbeSettingsModelArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">load_balancing_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancingSettingsModelArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RoutingRuleArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFrontDoor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FrontDoor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFrontDoor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FrontDoor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FrontDoor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FrontDoorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -494,22 +512,32 @@ const frontDoor = new azure_native.network.FrontDoor("frontDoor", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FrontDoorArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -805,7 +833,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendpool">Backend<wbr>Pool[]</a></span>
+        <span class="property-type"><a href="#backendpool">Backend<wbr>Pool<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Backend pools available to routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +841,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpoolssettings_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendpoolssettings">Backend<wbr>Pools<wbr>Settings</a></span>
+        <span class="property-type"><a href="#backendpoolssettings">Backend<wbr>Pools<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for all backendPools{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +873,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendendpoint">Frontend<wbr>Endpoint[]</a></span>
+        <span class="property-type"><a href="#frontendendpoint">Frontend<wbr>Endpoint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Frontend endpoints available to routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +881,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#healthprobesettings_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobesettingsmodel">Health<wbr>Probe<wbr>Settings<wbr>Model[]</a></span>
+        <span class="property-type"><a href="#healthprobesettingsmodel">Health<wbr>Probe<wbr>Settings<wbr>Model<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings associated with this Front Door instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -861,7 +889,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#loadbalancingsettings_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingsettingsmodel">Load<wbr>Balancing<wbr>Settings<wbr>Model[]</a></span>
+        <span class="property-type"><a href="#loadbalancingsettingsmodel">Load<wbr>Balancing<wbr>Settings<wbr>Model<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings associated with this Front Door instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +905,7 @@ The FrontDoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingrule">Routing<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#routingrule">Routing<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Routing rules associated with this Front Door.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backend">Backend[]</a></span>
+        <span class="property-type"><a href="#backend">Backend<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends for this pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobesettings_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}L7 health probe settings for a backend pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancingsettings_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendresponse">Backend<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#backendresponse">Backend<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends for this pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobesettings_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}L7 health probe settings for a backend pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2022,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancingsettings_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3130,7 +3158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_nodejs" style="color: inherit; text-decoration: inherit;">vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponsevault">Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response<wbr>Vault</a></span>
+        <span class="property-type"><a href="#keyvaultcertificatesourceparametersresponsevault">Key<wbr>Vault<wbr>Certificate<wbr>Source<wbr>Parameters<wbr>Response<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault containing the SSL certificate{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3328,7 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3336,7 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3474,7 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3482,7 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3898,7 +3926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webapplicationfirewallpolicylink_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendendpointupdateparameterswebapplicationfirewallpolicylink">Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a></span>
+        <span class="property-type"><a href="#frontendendpointupdateparameterswebapplicationfirewallpolicylink">Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each host (if applicable){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4148,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customhttpsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhttpsconfigurationresponse">Custom<wbr>Https<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#customhttpsconfigurationresponse">Custom<wbr>Https<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration specifying how to enable HTTPS{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4228,7 +4256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webapplicationfirewallpolicylink_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendendpointupdateparametersresponsewebapplicationfirewallpolicylink">Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a></span>
+        <span class="property-type"><a href="#frontendendpointupdateparametersresponsewebapplicationfirewallpolicylink">Frontend<wbr>Endpoint<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each host (if applicable){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6180,7 +6208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Frontend endpoints associated with this rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6212,7 +6240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6220,7 +6248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesengine_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a specific Rules Engine Configuration to apply to this route.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6228,7 +6256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webapplicationfirewallpolicylink_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruleupdateparameterswebapplicationfirewallpolicylink">Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a></span>
+        <span class="property-type"><a href="#routingruleupdateparameterswebapplicationfirewallpolicylink">Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each routing rule (if applicable){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6560,7 +6588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Frontend endpoints associated with this rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6592,7 +6620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the routing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6600,7 +6628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesengine_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a specific Rules Engine Configuration to apply to this route.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6608,7 +6636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webapplicationfirewallpolicylink_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingruleupdateparametersresponsewebapplicationfirewallpolicylink">Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a></span>
+        <span class="property-type"><a href="#routingruleupdateparametersresponsewebapplicationfirewallpolicylink">Routing<wbr>Rule<wbr>Update<wbr>Parameters<wbr>Response<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for each routing rule (if applicable){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6870,7 +6898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6878,7 +6906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6886,7 +6914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7258,7 +7286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineruleresponse">Rules<wbr>Engine<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#rulesengineruleresponse">Rules<wbr>Engine<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7404,7 +7432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7428,7 +7456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchconditionresponse">Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#rulesenginematchconditionresponse">Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

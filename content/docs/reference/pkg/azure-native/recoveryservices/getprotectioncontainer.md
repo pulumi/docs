@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.recoveryservices.getProtectionCon
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 
 
@@ -22,17 +22,21 @@ API Version: 2021-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtectionContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtectionContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProtectionContainerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtectionContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtectionContainerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProtectionContainerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_protection_container(</span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProtectionContainerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_protection_container(</span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProtectionContainerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProtectionContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProtectionContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProtectionContainerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProtectionContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProtectionContainerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProtectionContainerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupProtectionContainer` in the Go SDK.
 
@@ -41,7 +45,7 @@ API Version: 2021-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProtectionContainer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetProtectionContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtectionContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProtectionContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtectionContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -500,7 +504,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +804,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1360,7 +1364,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1592,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2092,7 +2096,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2324,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2404,7 @@ The following output properties are available:
 <a href="#inquiryinfo_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inquiry<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inquiry<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2408,7 +2412,7 @@ The following output properties are available:
 <a href="#nodeslist_csharp" style="color: inherit; text-decoration: inherit;">Nodes<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#distributednodesinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Distributed<wbr>Nodes<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2484,7 +2488,7 @@ The following output properties are available:
 <a href="#inquiry_info_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinforesponse">Inquiry<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryinforesponse">Inquiry<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2496,7 @@ The following output properties are available:
 <a href="#nodes_list_python" style="color: inherit; text-decoration: inherit;">nodes_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinforesponse">Sequence[Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributednodesinforesponse">Sequence[Distributed<wbr>Nodes<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2516,7 +2520,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2748,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3016,7 +3020,7 @@ The following output properties are available:
 <a href="#errordetail_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3103,7 +3107,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3176,7 +3180,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3476,7 +3480,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3656,7 +3660,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containeridentityinfo_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Identity<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containeridentityinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Identity<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3740,7 +3744,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_identity_info_python" style="color: inherit; text-decoration: inherit;">container_<wbr>identity_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinforesponse">Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containeridentityinforesponse">Container<wbr>Identity<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3780,7 +3784,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinformation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3936,7 +3940,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_information_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4228,7 +4232,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#errordetail_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4236,7 +4240,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquirydetails_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workloadinquirydetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Workload<wbr>Inquiry<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd><dt class="property-optional"
@@ -4318,7 +4322,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4326,7 +4330,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiry_details_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetailsresponse">Sequence[Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetailsresponse">Sequence[Workload<wbr>Inquiry<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd><dt class="property-optional"
@@ -4360,7 +4364,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#errordetail_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error Detail in case the status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4444,7 +4448,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error Detail in case the status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4836,7 +4840,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4860,7 +4864,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#mabcontainerhealthdetails_csharp" style="color: inherit; text-decoration: inherit;">Mab<wbr>Container<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>MABContainer<wbr>Health<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5112,7 +5116,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5136,7 +5140,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#mab_container_health_details_python" style="color: inherit; text-decoration: inherit;">mab_<wbr>container_<wbr>health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">Sequence[MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">Sequence[MABContainer<wbr>Health<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5168,7 +5172,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiryvalidation_csharp" style="color: inherit; text-decoration: inherit;">Inquiry<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inquiry<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryvalidationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inquiry<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5252,7 +5256,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiry_validation_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidationresponse">Inquiry<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryvalidationresponse">Inquiry<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -75,7 +75,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -190,19 +190,33 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataset_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatasetType]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestParametersArgs]</span> = None<span class="p">, </span><span class="nx">registration</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestRegistrationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">time_series</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestTimeSeriesArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">dataset_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatasetType]]</span> = None<span class="p">,</span>
+                           <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestParametersArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">registration</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestRegistrationArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                           <span class="nx">time_series</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestTimeSeriesArgs]</span> = None<span class="p">,</span>
+                           <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDataset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDataset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,22 +251,32 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatasetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -484,7 +508,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -492,7 +516,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -532,7 +556,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series</a></span>
+        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1129,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetstate_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest</a></span>
+        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2205,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatapath_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path</a></span>
+        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2703,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2711,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path</a></span>
+        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2719,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetdefinitionstate_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Definition<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3099,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deprecatedby_nodejs" style="color: inherit; text-decoration: inherit;">deprecated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By</a></span>
+        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3387,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

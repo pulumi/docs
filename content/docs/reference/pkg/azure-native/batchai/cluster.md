@@ -106,7 +106,7 @@ package main
 
 import (
 	batchai "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batchai"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -285,19 +285,35 @@ const cluster = new azure_native.batchai.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_setup</span><span class="p">:</span> <span class="nx">Optional[NodeSetupArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">user_account_settings</span><span class="p">:</span> <span class="nx">Optional[UserAccountSettingsArgs]</span> = None<span class="p">, </span><span class="nx">virtual_machine_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">vm_priority</span><span class="p">:</span> <span class="nx">Optional[VmPriority]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">node_setup</span><span class="p">:</span> <span class="nx">Optional[NodeSetupArgs]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">,</span>
+            <span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">,</span>
+            <span class="nx">user_account_settings</span><span class="p">:</span> <span class="nx">Optional[UserAccountSettingsArgs]</span> = None<span class="p">,</span>
+            <span class="nx">virtual_machine_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineConfigurationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">vm_priority</span><span class="p">:</span> <span class="nx">Optional[VmPriority]</span> = None<span class="p">,</span>
+            <span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -332,22 +348,32 @@ const cluster = new azure_native.batchai.Cluster("cluster", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -611,7 +637,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#useraccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountsettings">User<wbr>Account<wbr>Settings</a></span>
+        <span class="property-type"><a href="#useraccountsettings">User<wbr>Account<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for an administrator user account that will be created on each compute node in the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -643,7 +669,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#nodesetup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Setup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodesetup">Node<wbr>Setup</a></span>
+        <span class="property-type"><a href="#nodesetup">Node<wbr>Setup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup to be performed on each compute node in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +677,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for the cluster. Batch AI service supports manual and auto scale clusters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +685,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Existing virtual network subnet to put the cluster nodes in. Note, if a File Server mount configured in node setup, the File Server's subnet will be used automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +693,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualmachineconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineconfiguration">Virtual<wbr>Machine<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualmachineconfiguration">Virtual<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image configuration for cluster nodes. All nodes in a cluster have the same OS image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instrumentationkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1328,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights component resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1344,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instrumentationkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Store and Secret which contains Azure Application Insights instrumentation key. One of instrumentationKey or instrumentationKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1718,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1896,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2090,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2300,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2438,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2520,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2618,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2934,7 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuesecretreference_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3048,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuesecretreference_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3162,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserver_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3308,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserver_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3786,7 +3812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3868,7 +3894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4138,7 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreference">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreference">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4146,7 +4172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshares_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereference">Azure<wbr>File<wbr>Share<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#azurefilesharereference">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4154,7 +4180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileservers_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreference">File<wbr>Server<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#fileserverreference">File<wbr>Server<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4162,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanagedfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreference">Unmanaged<wbr>File<wbr>System<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreference">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4284,7 +4310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4292,7 +4318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshares_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4300,7 +4326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileservers_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4308,7 +4334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanagedfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4496,7 +4522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountvolumes_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumes">Mount<wbr>Volumes</a></span>
+        <span class="property-type"><a href="#mountvolumes">Mount<wbr>Volumes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4504,7 +4530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounterssettings_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Counters<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterssettings">Performance<wbr>Counters<wbr>Settings</a></span>
+        <span class="property-type"><a href="#performancecounterssettings">Performance<wbr>Counters<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4512,7 +4538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setuptask_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setuptask">Setup<wbr>Task</a></span>
+        <span class="property-type"><a href="#setuptask">Setup<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4610,7 +4636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountvolumes_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response</a></span>
+        <span class="property-type"><a href="#mountvolumesresponse">Mount<wbr>Volumes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mount volumes to be available to setup task and all jobs executing on the cluster. The volumes will be mounted at location specified by $AZ_BATCHAI_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4618,7 +4644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounterssettings_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Counters<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterssettingsresponse">Performance<wbr>Counters<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#performancecounterssettingsresponse">Performance<wbr>Counters<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for performance counters collecting and uploading.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4626,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setuptask_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setuptaskresponse">Setup<wbr>Task<wbr>Response</a></span>
+        <span class="property-type"><a href="#setuptaskresponse">Setup<wbr>Task<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setup task to run on cluster nodes when nodes got created or rebooted. The setup task code needs to be idempotent. Generally the setup task is used to download static data that is required for all jobs that run on the cluster VMs and/or to download/install software.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4870,7 +4896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appinsightsreference_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Insights<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsreference">App<wbr>Insights<wbr>Reference</a></span>
+        <span class="property-type"><a href="#appinsightsreference">App<wbr>Insights<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4920,7 +4946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appinsightsreference_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Insights<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsreferenceresponse">App<wbr>Insights<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#appinsightsreferenceresponse">App<wbr>Insights<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Application Insights information for performance counters reporting. If provided, Batch AI will upload node performance counters to the corresponding Azure Application Insights account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5086,7 +5112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5094,7 +5120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_nodejs" style="color: inherit; text-decoration: inherit;">manual</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5168,7 +5194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-scale settings for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5176,7 +5202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_nodejs" style="color: inherit; text-decoration: inherit;">manual</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Manual scale settings for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5298,7 +5324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">Environment<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#environmentvariable">Environment<wbr>Variable<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5306,7 +5332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value[]</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5468,7 +5494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">Environment<wbr>Variable<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Environment<wbr>Variable<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables to be set for setup task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5476,7 +5502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalueresponse">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of user defined environment variables with secret values to be set for the setup task. Server will never report values of these variables back.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5950,7 +5976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6000,7 +6026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OS image reference for cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}

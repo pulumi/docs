@@ -22,17 +22,20 @@ API Version: 2016-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFunction<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFunctionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFunctionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFunction<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFunctionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFunctionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_function(</span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFunctionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_function(</span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFunctionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFunctionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFunctionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFunctionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFunctionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFunction` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2016-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFunction </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetFunctionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFunctionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFunctionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFunctionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -356,7 +359,7 @@ The following output properties are available:
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -364,7 +367,7 @@ The following output properties are available:
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -488,7 +491,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +499,7 @@ The following output properties are available:
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -628,7 +631,7 @@ The following output properties are available:
 <a href="#columnnames_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +691,7 @@ The following output properties are available:
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +995,7 @@ The following output properties are available:
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1000,7 +1003,7 @@ The following output properties are available:
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functioninputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1008,7 +1011,7 @@ The following output properties are available:
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1100,7 +1103,7 @@ The following output properties are available:
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1111,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">Sequence[Function<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functioninputresponse">Sequence[Function<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1119,7 @@ The following output properties are available:
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}

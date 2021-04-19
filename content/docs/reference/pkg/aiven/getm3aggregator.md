@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -122,17 +122,36 @@ const m3a = aiven.getM3Aggregator({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getM3Aggregator<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetM3AggregatorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetM3AggregatorResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getM3Aggregator<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetM3AggregatorArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetM3AggregatorResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_m3_aggregator(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetM3AggregatorComponentArgs]]</span> = None<span class="p">, </span><span class="nx">m3aggregator</span><span class="p">:</span> <span class="nx">Optional[GetM3AggregatorM3aggregatorArgs]</span> = None<span class="p">, </span><span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetM3AggregatorM3aggregatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetM3AggregatorServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetM3AggregatorResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_m3_aggregator(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetM3AggregatorComponent]]</span> = None<span class="p">,</span>
+                      <span class="nx">m3aggregator</span><span class="p">:</span> <span class="nx">Optional[GetM3AggregatorM3aggregator]</span> = None<span class="p">,</span>
+                      <span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetM3AggregatorM3aggregatorUserConfig]</span> = None<span class="p">,</span>
+                      <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetM3AggregatorServiceIntegration]]</span> = None<span class="p">,</span>
+                      <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetM3AggregatorResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupM3Aggregator<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupM3AggregatorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupM3AggregatorResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupM3Aggregator<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupM3AggregatorArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupM3AggregatorResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupM3Aggregator` in the Go SDK.
 
@@ -141,7 +160,7 @@ const m3a = aiven.getM3Aggregator({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetM3Aggregator </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetM3AggregatorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetM3AggregatorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetM3AggregatorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetM3AggregatorArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -194,7 +213,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3aggregatorcomponent">List&lt;Get<wbr>M3Aggregator<wbr>Component<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getm3aggregatorcomponent">List&lt;Get<wbr>M3Aggregator<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -202,7 +221,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3aggregator_csharp" style="color: inherit; text-decoration: inherit;">M3aggregator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3aggregatorm3aggregator">Get<wbr>M3Aggregator<wbr>M3aggregator<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3aggregatorm3aggregator">Get<wbr>M3Aggregator<wbr>M3aggregator</a></span>
     </dt>
     <dd>{{% md %}}M3 Aggregator specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -211,7 +230,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3aggregatoruserconfig_csharp" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3aggregatorm3aggregatoruserconfig">Get<wbr>M3Aggregator<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3aggregatorm3aggregatoruserconfig">Get<wbr>M3Aggregator<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines M3 Aggregator specific additional configuration options. 
 The following configuration options available:
@@ -280,7 +299,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3aggregatorserviceintegration">List&lt;Get<wbr>M3Aggregator<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getm3aggregatorserviceintegration">List&lt;Get<wbr>M3Aggregator<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -797,7 +816,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3aggregatorcomponent">Sequence[Get<wbr>M3Aggregator<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getm3aggregatorcomponent">Sequence[Get<wbr>M3Aggregator<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +824,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3aggregator_python" style="color: inherit; text-decoration: inherit;">m3aggregator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3aggregatorm3aggregator">Get<wbr>M3Aggregator<wbr>M3aggregator<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3aggregatorm3aggregator">Get<wbr>M3Aggregator<wbr>M3aggregator</a></span>
     </dt>
     <dd>{{% md %}}M3 Aggregator specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +833,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3aggregator_user_config_python" style="color: inherit; text-decoration: inherit;">m3aggregator_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3aggregatorm3aggregatoruserconfig">Get<wbr>M3Aggregator<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3aggregatorm3aggregatoruserconfig">Get<wbr>M3Aggregator<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines M3 Aggregator specific additional configuration options. 
 The following configuration options available:
@@ -883,7 +902,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3aggregatorserviceintegration">Sequence[Get<wbr>M3Aggregator<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getm3aggregatorserviceintegration">Sequence[Get<wbr>M3Aggregator<wbr>Service<wbr>Integration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

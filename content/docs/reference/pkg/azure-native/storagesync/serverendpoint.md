@@ -67,7 +67,7 @@ package main
 
 import (
 	storagesync "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagesync"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -170,19 +170,39 @@ const serverEndpoint = new azure_native.storagesync.ServerEndpoint("serverEndpoi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_tiering</span><span class="p">:</span> <span class="nx">Optional[Union[str, FeatureStatus]]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_download_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, InitialDownloadPolicy]]</span> = None<span class="p">, </span><span class="nx">local_cache_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, LocalCacheMode]]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer</span><span class="p">:</span> <span class="nx">Optional[Union[str, FeatureStatus]]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_local_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier_files_older_than_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_free_space_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">cloud_tiering</span><span class="p">:</span> <span class="nx">Optional[Union[str, FeatureStatus]]</span> = None<span class="p">,</span>
+                   <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">initial_download_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, InitialDownloadPolicy]]</span> = None<span class="p">,</span>
+                   <span class="nx">local_cache_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, LocalCacheMode]]</span> = None<span class="p">,</span>
+                   <span class="nx">offline_data_transfer</span><span class="p">:</span> <span class="nx">Optional[Union[str, FeatureStatus]]</span> = None<span class="p">,</span>
+                   <span class="nx">offline_data_transfer_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">server_local_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">server_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">tier_files_older_than_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                   <span class="nx">volume_free_space_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,22 +237,32 @@ const serverEndpoint = new azure_native.storagesync.ServerEndpoint("serverEndpoi
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServerEndpointArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1455,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2169,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheperformance_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2177,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datepolicystatus_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2185,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnottiering_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Not<wbr>Tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2233,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavings_nodejs" style="color: inherit; text-decoration: inherit;">space<wbr>Savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2241,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumefreespacepolicystatus_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2599,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recallerrors_nodejs" style="color: inherit; text-decoration: inherit;">recall<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2979,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnotsyncingerrors_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Not<wbr>Syncing<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3293,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadactivity_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3309,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadstatus_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3349,7 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadactivity_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3365,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadstatus_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}

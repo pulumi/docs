@@ -174,15 +174,15 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 report_by_resource_group_name = azure_native.costmanagement.ReportByResourceGroupName("reportByResourceGroupName",
-    definition={
-        "dataset": {
-            "aggregation": {
+    definition=azure_native.costmanagement.ReportDefinitionArgs(
+        dataset=azure_native.costmanagement.ReportDatasetArgs(
+            aggregation={
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
                     name="PreTaxCost",
                 ),
             },
-            "configuration": azure_native.costmanagement.ReportDatasetConfigurationArgs(
+            configuration=azure_native.costmanagement.ReportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -191,10 +191,10 @@ report_by_resource_group_name = azure_native.costmanagement.ReportByResourceGrou
                     "PreTaxCost",
                 ],
             ),
-            "filter": {
+            filter={
                 "and": [
-                    {
-                        "or": [
+                    azure_native.costmanagement.ReportFilterArgs(
+                        or_=[
                             azure_native.costmanagement.ReportFilterArgs(
                                 dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                                     name="ResourceLocation",
@@ -216,7 +216,7 @@ report_by_resource_group_name = azure_native.costmanagement.ReportByResourceGrou
                                 ),
                             ),
                         ],
-                    },
+                    ),
                     azure_native.costmanagement.ReportFilterArgs(
                         dimension=azure_native.costmanagement.ReportComparisonExpressionArgs(
                             name="ResourceGroup",
@@ -226,8 +226,8 @@ report_by_resource_group_name = azure_native.costmanagement.ReportByResourceGrou
                     ),
                 ],
             },
-            "granularity": "Daily",
-            "grouping": [
+            granularity="Daily",
+            grouping=[
                 azure_native.costmanagement.ReportGroupingArgs(
                     name="SubscriptionName",
                     type="Dimension",
@@ -237,10 +237,10 @@ report_by_resource_group_name = azure_native.costmanagement.ReportByResourceGrou
                     type="Tag",
                 ),
             ],
-        },
-        "timeframe": "MonthToDate",
-        "type": "Usage",
-    },
+        ),
+        timeframe="MonthToDate",
+        type="Usage",
+    ),
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",
@@ -380,19 +380,31 @@ const reportByResourceGroupName = new azure_native.costmanagement.ReportByResour
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReportByResourceGroupName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReportByResourceGroupNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReportByResourceGroupName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReportByResourceGroupNameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReportByResourceGroupName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[ReportDefinitionArgs]</span> = None<span class="p">, </span><span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[ReportDeliveryInfoArgs]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[Union[str, FormatType]]</span> = None<span class="p">, </span><span class="nx">report_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ReportScheduleArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReportByResourceGroupName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[ReportDefinitionArgs]</span> = None<span class="p">,</span>
+                              <span class="nx">delivery_info</span><span class="p">:</span> <span class="nx">Optional[ReportDeliveryInfoArgs]</span> = None<span class="p">,</span>
+                              <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[Union[str, FormatType]]</span> = None<span class="p">,</span>
+                              <span class="nx">report_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ReportScheduleArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReportByResourceGroupName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReportByResourceGroupNameArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReportByResourceGroupName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReportByResourceGroupNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReportByResourceGroupName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReportByResourceGroupName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReportByResourceGroupNameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReportByResourceGroupName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReportByResourceGroupName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReportByResourceGroupNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReportByResourceGroupName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReportByResourceGroupNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -427,22 +439,32 @@ const reportByResourceGroupName = new azure_native.costmanagement.ReportByResour
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReportByResourceGroupNameArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +656,7 @@ The ReportByResourceGroupName resource accepts the following [input]({{< relref 
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdefinition">Report<wbr>Definition</a></span>
+        <span class="property-type"><a href="#reportdefinition">Report<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for the report.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -642,7 +664,7 @@ The ReportByResourceGroupName resource accepts the following [input]({{< relref 
 <a href="#deliveryinfo_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdeliveryinfo">Report<wbr>Delivery<wbr>Info</a></span>
+        <span class="property-type"><a href="#reportdeliveryinfo">Report<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the report.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -674,7 +696,7 @@ The ReportByResourceGroupName resource accepts the following [input]({{< relref 
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportschedule">Report<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#reportschedule">Report<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1537,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Report<wbr>Aggregation}</span>
+        <span class="property-type">{[key: string]: Report<wbr>Aggregation<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdatasetconfiguration">Report<wbr>Dataset<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#reportdatasetconfiguration">Report<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilter">Report<wbr>Filter</a></span>
+        <span class="property-type"><a href="#reportfilter">Report<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportgrouping">Report<wbr>Grouping[]</a></span>
+        <span class="property-type"><a href="#reportgrouping">Report<wbr>Grouping<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Report<wbr>Aggregation<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Report<wbr>Aggregation<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1823,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdatasetconfigurationresponse">Report<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportdatasetconfigurationresponse">Report<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1831,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1847,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportgroupingresponse">Report<wbr>Grouping<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#reportgroupingresponse">Report<wbr>Grouping<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1993,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdataset">Report<wbr>Dataset</a></span>
+        <span class="property-type"><a href="#reportdataset">Report<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reporttimeperiod">Report<wbr>Time<wbr>Period</a></span>
+        <span class="property-type"><a href="#reporttimeperiod">Report<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2139,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdatasetresponse">Report<wbr>Dataset<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportdatasetresponse">Report<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2147,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reporttimeperiodresponse">Report<wbr>Time<wbr>Period<wbr>Response</a></span>
+        <span class="property-type"><a href="#reporttimeperiodresponse">Report<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2449,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdeliverydestination">Report<wbr>Delivery<wbr>Destination</a></span>
+        <span class="property-type"><a href="#reportdeliverydestination">Report<wbr>Delivery<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2499,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportdeliverydestinationresponse">Report<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportdeliverydestinationresponse">Report<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2613,7 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilter">Report<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#reportfilter">Report<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,7 +2643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimension_nodejs" style="color: inherit; text-decoration: inherit;">dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression</a></span>
+        <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilter">Report<wbr>Filter</a></span>
+        <span class="property-type"><a href="#reportfilter">Report<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#or_nodejs" style="color: inherit; text-decoration: inherit;">or</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilter">Report<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#reportfilter">Report<wbr>Filter<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression</a></span>
+        <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2791,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2799,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimension_nodejs" style="color: inherit; text-decoration: inherit;">dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2807,7 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2815,7 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#or_nodejs" style="color: inherit; text-decoration: inherit;">or</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2823,7 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3273,7 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrenceperiod_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportrecurrenceperiod">Report<wbr>Recurrence<wbr>Period</a></span>
+        <span class="property-type"><a href="#reportrecurrenceperiod">Report<wbr>Recurrence<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3387,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrenceperiod_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportrecurrenceperiodresponse">Report<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportrecurrenceperiodresponse">Report<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -22,17 +22,22 @@ API Version: 2018-10-15.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEnvironmentSetting<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEnvironmentSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEnvironmentSettingResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEnvironmentSetting<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEnvironmentSettingArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEnvironmentSettingResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_environment_setting(</span><span class="nx">environment_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEnvironmentSettingResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_environment_setting(</span><span class="nx">environment_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">lab_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEnvironmentSettingResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEnvironmentSetting<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEnvironmentSettingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEnvironmentSettingResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEnvironmentSetting<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEnvironmentSettingArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEnvironmentSettingResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEnvironmentSetting` in the Go SDK.
 
@@ -41,7 +46,7 @@ API Version: 2018-10-15.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEnvironmentSetting </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetEnvironmentSettingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEnvironmentSettingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEnvironmentSettingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEnvironmentSettingArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -976,7 +981,7 @@ The following output properties are available:
 <a href="#vmstatedetails_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>State<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1089,7 @@ The following output properties are available:
 <a href="#vm_state_details_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>state_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1137,7 @@ The following output properties are available:
 <a href="#referencevm_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1288,7 +1293,7 @@ The following output properties are available:
 <a href="#reference_vm_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

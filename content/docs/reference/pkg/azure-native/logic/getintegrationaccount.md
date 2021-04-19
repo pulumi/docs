@@ -22,17 +22,19 @@ API Version: 2019-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_account(</span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationAccountResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_account(</span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationAccountResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationAccount` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2019-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationAccount </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -428,7 +430,7 @@ The following output properties are available:
 <a href="#connector_csharp" style="color: inherit; text-decoration: inherit;">Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -436,7 +438,7 @@ The following output properties are available:
 <a href="#workflow_csharp" style="color: inherit; text-decoration: inherit;">Workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -488,7 +490,7 @@ The following output properties are available:
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +498,7 @@ The following output properties are available:
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -512,7 +514,7 @@ The following output properties are available:
 <a href="#accessendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +522,7 @@ The following output properties are available:
 <a href="#outgoingipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outgoing<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -572,7 +574,7 @@ The following output properties are available:
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +582,7 @@ The following output properties are available:
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -648,7 +650,7 @@ The following output properties are available:
 <a href="#encryptionkeyreference_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -684,7 +686,7 @@ The following output properties are available:
 <a href="#encryption_key_reference_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionkeyreferenceresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption key reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -708,7 +710,7 @@ The following output properties are available:
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +794,7 @@ The following output properties are available:
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +870,7 @@ The following output properties are available:
 <a href="#encryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +878,7 @@ The following output properties are available:
 <a href="#endpointsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +894,7 @@ The following output properties are available:
 <a href="#networkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1024,7 +1026,7 @@ The following output properties are available:
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmenencryptionconfigurationresponse">Integration<wbr>Service<wbr>Environmen<wbr>Encryption<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1034,7 @@ The following output properties are available:
 <a href="#endpoints_configuration_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Flow<wbr>Endpoints<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#flowendpointsconfigurationresponse">Flow<wbr>Endpoints<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1050,7 @@ The following output properties are available:
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconfigurationresponse">Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconfigurationresponse">Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1114,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1122,7 @@ The following output properties are available:
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1292,7 +1294,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentpropertiesresponse">Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentpropertiesresponse">Integration<wbr>Service<wbr>Environment<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1300,7 +1302,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentskuresponse">Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentskuresponse">Integration<wbr>Service<wbr>Environment<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1460,7 +1462,7 @@ The following output properties are available:
 <a href="#accessendpoint_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1468,7 +1470,7 @@ The following output properties are available:
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1544,7 +1546,7 @@ The following output properties are available:
 <a href="#access_endpoint_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationserviceenvironmentaccessendpointresponse">Integration<wbr>Service<wbr>Environment<wbr>Access<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1554,7 @@ The following output properties are available:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

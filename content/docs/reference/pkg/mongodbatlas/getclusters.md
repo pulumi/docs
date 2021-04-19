@@ -88,8 +88,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/v2/go/mongodbatlas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -215,17 +215,18 @@ const testClusters = testCluster.projectId.apply(projectId => mongodbatlas.getCl
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusters<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClustersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClustersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusters<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClustersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClustersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_clusters(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClustersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_clusters(</span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClustersResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetClustersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetClustersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetClustersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetClustersResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetClusters` in the Go SDK.
 
@@ -234,7 +235,7 @@ const testClusters = testCluster.projectId.apply(projectId => mongodbatlas.getCl
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetClusters </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClustersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClustersArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -486,7 +487,7 @@ The following output properties are available:
 <a href="#biconnector_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -504,7 +505,7 @@ The following output properties are available:
 <a href="#connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultconnectionstrings">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstrings">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 - `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
@@ -553,7 +554,7 @@ The following output properties are available:
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultlabel">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersresultlabel">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -741,7 +742,7 @@ The following output properties are available:
 <a href="#replicationspecs_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultreplicationspec">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersresultreplicationspec">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -750,7 +751,7 @@ The following output properties are available:
 <a href="#snapshotbackuppolicies_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Backup<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicy">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicy">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -1524,7 +1525,7 @@ The following output properties are available:
 <a href="#bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Indicates BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1542,7 +1543,7 @@ The following output properties are available:
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultconnectionstrings">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Args</a></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstrings">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 - `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
@@ -1591,7 +1592,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultlabel">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersresultlabel">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1779,7 +1780,7 @@ The following output properties are available:
 <a href="#replication_specs_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultreplicationspec">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersresultreplicationspec">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1788,7 +1789,7 @@ The following output properties are available:
 <a href="#snapshot_backup_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>backup_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicy">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicy">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -1945,7 +1946,7 @@ The following output properties are available:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpoint">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpoint">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2125,7 +2126,7 @@ The following output properties are available:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpoint">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpoint">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2173,7 +2174,7 @@ The following output properties are available:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpointendpoint">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpointendpoint">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2281,7 +2282,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpointendpoint">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpointendpoint">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2543,7 +2544,7 @@ The following output properties are available:
 <a href="#regionsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Regions<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultreplicationspecregionsconfig">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersresultreplicationspecregionsconfig">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2663,7 +2664,7 @@ The following output properties are available:
 <a href="#regions_configs_python" style="color: inherit; text-decoration: inherit;">regions_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultreplicationspecregionsconfig">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersresultreplicationspecregionsconfig">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Describes the physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -2913,7 +2914,7 @@ The following output properties are available:
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicypolicy">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicypolicy">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3117,7 +3118,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicypolicy">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicypolicy">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3174,7 +3175,7 @@ The following output properties are available:
 <a href="#policyitems_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicypolicypolicyitem">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicypolicypolicyitem">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3237,7 +3238,7 @@ The following output properties are available:
 <a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicypolicypolicyitem">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getclustersresultsnapshotbackuppolicypolicypolicyitem">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

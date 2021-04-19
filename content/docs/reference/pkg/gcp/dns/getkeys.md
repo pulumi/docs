@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -152,17 +152,19 @@ export const fooDnsDsRecord = fooDnsKeys.keySigningKeys[0].dsRecord;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKeys<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKeysArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKeysResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKeys<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKeysArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKeysResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_keys(</span><span class="nx">managed_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKeysResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_keys(</span><span class="nx">managed_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKeysResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeys<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKeysArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKeysResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeys<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetKeysArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKeysResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetKeys` in the Go SDK.
 
@@ -171,7 +173,7 @@ export const fooDnsDsRecord = fooDnsKeys.keySigningKeys[0].dsRecord;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKeys </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetKeysResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKeysArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKeysResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKeysArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -509,7 +511,7 @@ The following output properties are available:
 <a href="#digests_csharp" style="color: inherit; text-decoration: inherit;">Digests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskeysigningkeydigest">List&lt;Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkeyskeysigningkeydigest">List&lt;Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd><dt class="property-required"
@@ -791,7 +793,7 @@ The following output properties are available:
 <a href="#digests_python" style="color: inherit; text-decoration: inherit;">digests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskeysigningkeydigest">Sequence[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkeyskeysigningkeydigest">Sequence[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd><dt class="property-required"
@@ -981,7 +983,7 @@ The following output properties are available:
 <a href="#digests_csharp" style="color: inherit; text-decoration: inherit;">Digests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyszonesigningkeydigest">List&lt;Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkeyszonesigningkeydigest">List&lt;Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd><dt class="property-required"
@@ -1236,7 +1238,7 @@ The following output properties are available:
 <a href="#digests_python" style="color: inherit; text-decoration: inherit;">digests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyszonesigningkeydigest">Sequence[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkeyszonesigningkeydigest">Sequence[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd><dt class="property-required"

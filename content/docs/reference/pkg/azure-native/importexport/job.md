@@ -89,7 +89,7 @@ package main
 
 import (
 	importexport "github.com/pulumi/pulumi-azure-native/sdk/go/azure/importexport"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -301,7 +301,7 @@ package main
 
 import (
 	importexport "github.com/pulumi/pulumi-azure-native/sdk/go/azure/importexport"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -463,19 +463,30 @@ const job = new azure_native.importexport.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[JobDetailsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[JobDetailsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -510,22 +521,32 @@ const job = new azure_native.importexport.Job("job", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -725,7 +746,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdetails">Job<wbr>Details</a></span>
+        <span class="property-type"><a href="#jobdetails">Job<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3034,7 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information</a></span>
+        <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3050,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivelist_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatus">Drive<wbr>Status[]</a></span>
+        <span class="property-type"><a href="#drivestatus">Drive<wbr>Status<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3058,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details</a></span>
+        <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3066,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#export">Export</a></span>
+        <span class="property-type"><a href="#export">Export<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3114,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddress">Return<wbr>Address</a></span>
+        <span class="property-type"><a href="#returnaddress">Return<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3122,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformation">Package<wbr>Information</a></span>
+        <span class="property-type"><a href="#packageinformation">Package<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3130,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnshipping_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping</a></span>
+        <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3138,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippinginformation_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information</a></span>
+        <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3628,7 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivelist_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">Drive<wbr>Status<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">Drive<wbr>Status<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3652,7 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3660,7 +3681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Export<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportresponse">Export<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3708,7 +3729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3716,7 +3737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3724,7 +3745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnshipping_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3732,7 +3753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippinginformation_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

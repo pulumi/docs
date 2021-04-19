@@ -71,8 +71,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -177,17 +177,18 @@ const examplePolicy = new vault.Policy("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyDocument<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyDocumentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyDocument<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyDocumentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_document(</span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPolicyDocumentRuleArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyDocumentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_document(</span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetPolicyDocumentRule]]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyDocumentResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyDocumentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyDocumentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetPolicyDocument` in the Go SDK.
 
@@ -196,7 +197,7 @@ const examplePolicy = new vault.Policy("example", {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicyDocument </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyDocumentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyDocumentArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -212,7 +213,7 @@ The following arguments are supported:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentrule">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicydocumentrule">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -248,7 +249,7 @@ The following arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentrule">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentrule">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -417,7 +418,7 @@ The following output properties are available:
 <a href="#allowedparameters_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentruleallowedparameter">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicydocumentruleallowedparameter">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Whitelists a list of keys and values that are permitted on the given path. See Parameters below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -426,7 +427,7 @@ The following output properties are available:
 <a href="#deniedparameters_csharp" style="color: inherit; text-decoration: inherit;">Denied<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentruledeniedparameter">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getpolicydocumentruledeniedparameter">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Blacklists a list of parameter and values. Any values specified here take precedence over `allowed_parameter`. See Parameters below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -645,7 +646,7 @@ The following output properties are available:
 <a href="#allowed_parameters_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentruleallowedparameter">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentruleallowedparameter">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Whitelists a list of keys and values that are permitted on the given path. See Parameters below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -654,7 +655,7 @@ The following output properties are available:
 <a href="#denied_parameters_python" style="color: inherit; text-decoration: inherit;">denied_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentruledeniedparameter">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getpolicydocumentruledeniedparameter">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Blacklists a list of parameter and values. Any values specified here take precedence over `allowed_parameter`. See Parameters below.
 {{% /md %}}</dd><dt class="property-optional"

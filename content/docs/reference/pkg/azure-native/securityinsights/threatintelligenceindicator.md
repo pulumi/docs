@@ -46,7 +46,7 @@ class MyStack : Stack
             Labels = {},
             Modified = "",
             Name = "d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalIinsights",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             Pattern = "[url:value = 'https://www.contoso.com']",
             PatternType = "url",
             ResourceGroupName = "myRg",
@@ -82,7 +82,7 @@ package main
 
 import (
 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -99,7 +99,7 @@ func main() {
 			Labels:                              []interface{}{},
 			Modified:                            pulumi.String(""),
 			Name:                                pulumi.String("d9cd6f0b-96b9-3984-17cd-a779d1e15a93"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalIinsights"),
+			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
 			Pattern:                             pulumi.String("[url:value = 'https://www.contoso.com']"),
 			PatternType:                         pulumi.String("url"),
 			ResourceGroupName:                   pulumi.String("myRg"),
@@ -147,7 +147,7 @@ threat_intelligence_indicator = azure_native.securityinsights.ThreatIntelligence
     labels=[],
     modified="",
     name="d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
-    operational_insights_resource_provider="Microsoft.OperationalIinsights",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
     pattern="[url:value = 'https://www.contoso.com']",
     pattern_type="url",
     resource_group_name="myRg",
@@ -184,7 +184,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     labels: [],
     modified: "",
     name: "d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
-    operationalInsightsResourceProvider: "Microsoft.OperationalIinsights",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     pattern: "[url:value = 'https://www.contoso.com']",
     patternType: "url",
     resourceGroupName: "myRg",
@@ -216,19 +216,59 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">confidence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defanged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceExternalReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">granular_markings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceGranularMarkingModelArgs]]</span> = None<span class="p">, </span><span class="nx">indicator_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kill_chain_phases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceKillChainPhaseArgs]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ThreatIntelligenceResourceKind]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_marking_refs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parsed_pattern</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceParsedPatternArgs]]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threat_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                <span class="nx">confidence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                <span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">created_by_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">defanged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                                <span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">external_last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">external_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceExternalReferenceArgs]]</span> = None<span class="p">,</span>
+                                <span class="nx">granular_markings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceGranularMarkingModelArgs]]</span> = None<span class="p">,</span>
+                                <span class="nx">indicator_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">kill_chain_phases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceKillChainPhaseArgs]]</span> = None<span class="p">,</span>
+                                <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ThreatIntelligenceResourceKind]]</span> = None<span class="p">,</span>
+                                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">object_marking_refs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">parsed_pattern</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceParsedPatternArgs]]</span> = None<span class="p">,</span>
+                                <span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">pattern_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">revoked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">threat_intelligence_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">threat_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ThreatIntelligenceIndicator</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ThreatIntelligenceIndicator</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -263,22 +303,32 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1030,7 +1080,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#externalreferences_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceexternalreference">Threat<wbr>Intelligence<wbr>External<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#threatintelligenceexternalreference">Threat<wbr>Intelligence<wbr>External<wbr>Reference<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}External References{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1088,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#granularmarkings_nodejs" style="color: inherit; text-decoration: inherit;">granular<wbr>Markings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model[]</a></span>
+        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Granular Markings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1054,7 +1104,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#killchainphases_nodejs" style="color: inherit; text-decoration: inherit;">kill<wbr>Chain<wbr>Phases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencekillchainphase">Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase[]</a></span>
+        <span class="property-type"><a href="#threatintelligencekillchainphase">Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Kill chain phases{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1160,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#parsedpattern_nodejs" style="color: inherit; text-decoration: inherit;">parsed<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpattern">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern[]</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpattern">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Parsed patterns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patterntypevalues_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value[]</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}

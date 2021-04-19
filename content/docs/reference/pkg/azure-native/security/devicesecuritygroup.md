@@ -60,7 +60,7 @@ package main
 
 import (
 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -135,19 +135,31 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowlist_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AllowlistCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">denylist_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DenylistCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">device_security_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThresholdCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">time_window_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeWindowCustomAlertRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">allowlist_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AllowlistCustomAlertRuleArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">denylist_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DenylistCustomAlertRuleArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">device_security_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThresholdCustomAlertRuleArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">time_window_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeWindowCustomAlertRuleArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeviceSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeviceSecurityGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeviceSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeviceSecurityGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,22 +194,32 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DeviceSecurityGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -397,7 +419,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allowlistrules_nodejs" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowlistcustomalertrule">Allowlist<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#allowlistcustomalertrule">Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -405,7 +427,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#denylistrules_nodejs" style="color: inherit; text-decoration: inherit;">denylist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denylistcustomalertrule">Denylist<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#denylistcustomalertrule">Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +443,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdcustomalertrule">Threshold<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#thresholdcustomalertrule">Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -429,7 +451,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#timewindowrules_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowcustomalertrule">Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#timewindowcustomalertrule">Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}

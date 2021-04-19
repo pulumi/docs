@@ -65,7 +65,7 @@ package main
 
 import (
 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -162,19 +162,50 @@ const volume = new azure_native.netapp.Volume("volume", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_key_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ldap_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">,</span>
+           <span class="nx">encryption_key_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">,</span>
+           <span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">ldap_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">,</span>
+           <span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">,</span>
+           <span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+           <span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+           <span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+           <span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -209,22 +240,32 @@ const volume = new azure_native.netapp.Volume("volume", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -426,7 +467,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitystyle_csharp">
 <a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
@@ -630,7 +671,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitystyle_go">
 <a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
@@ -776,7 +817,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dataprotection_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection</a></span>
+        <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +833,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#exportpolicy_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy</a></span>
+        <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +875,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitystyle_nodejs">
 <a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
@@ -1038,7 +1079,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_style_python">
 <a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
@@ -3281,7 +3322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties</a></span>
+        <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3289,7 +3330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobject">Replication<wbr>Object</a></span>
+        <span class="property-type"><a href="#replicationobject">Replication<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3297,7 +3338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties</a></span>
+        <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3363,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyrule">Export<wbr>Policy<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#exportpolicyrule">Export<wbr>Policy<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3445,7 +3486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3453,7 +3494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3461,7 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3527,7 +3568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">Export<wbr>Policy<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}

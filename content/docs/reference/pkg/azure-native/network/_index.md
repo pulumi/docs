@@ -65,6 +65,7 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="privateendpoint" title="PrivateEndpoint"><span class="symbol resource"></span>PrivateEndpoint</a></li>
     <li><a href="privatelinkservice" title="PrivateLinkService"><span class="symbol resource"></span>PrivateLinkService</a></li>
     <li><a href="privatelinkserviceprivateendpointconnection" title="PrivateLinkServicePrivateEndpointConnection"><span class="symbol resource"></span>PrivateLinkServicePrivateEndpointConnection</a></li>
+    <li><a href="privaterecordset" title="PrivateRecordSet"><span class="symbol resource"></span>PrivateRecordSet</a></li>
     <li><a href="privatezone" title="PrivateZone"><span class="symbol resource"></span>PrivateZone</a></li>
     <li><a href="profile" title="Profile"><span class="symbol resource"></span>Profile</a></li>
     <li><a href="publicipaddress" title="PublicIPAddress"><span class="symbol resource"></span>PublicIPAddress</a></li>
@@ -167,6 +168,7 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="getprivateendpoint" title="GetPrivateEndpoint"><span class="symbol function"></span>GetPrivateEndpoint</a></li>
     <li><a href="getprivatelinkservice" title="GetPrivateLinkService"><span class="symbol function"></span>GetPrivateLinkService</a></li>
     <li><a href="getprivatelinkserviceprivateendpointconnection" title="GetPrivateLinkServicePrivateEndpointConnection"><span class="symbol function"></span>GetPrivateLinkServicePrivateEndpointConnection</a></li>
+    <li><a href="getprivaterecordset" title="GetPrivateRecordSet"><span class="symbol function"></span>GetPrivateRecordSet</a></li>
     <li><a href="getprivatezone" title="GetPrivateZone"><span class="symbol function"></span>GetPrivateZone</a></li>
     <li><a href="getprofile" title="GetProfile"><span class="symbol function"></span>GetProfile</a></li>
     <li><a href="getpublicipaddress" title="GetPublicIPAddress"><span class="symbol function"></span>GetPublicIPAddress</a></li>
@@ -222,6 +224,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.0.0-alpha.1618844820+db5e5a54</dd>
 </dl>
 

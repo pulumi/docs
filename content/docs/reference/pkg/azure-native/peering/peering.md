@@ -98,7 +98,7 @@ package main
 
 import (
 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -332,7 +332,7 @@ package main
 
 import (
 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -550,7 +550,7 @@ package main
 
 import (
 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -725,19 +725,34 @@ const peering = new azure_native.peering.Peering("peering", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">direct</span><span class="p">:</span> <span class="nx">Optional[PeeringPropertiesDirectArgs]</span> = None<span class="p">, </span><span class="nx">exchange</span><span class="p">:</span> <span class="nx">Optional[PeeringPropertiesExchangeArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PeeringSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">direct</span><span class="p">:</span> <span class="nx">Optional[PeeringPropertiesDirectArgs]</span> = None<span class="p">,</span>
+            <span class="nx">exchange</span><span class="p">:</span> <span class="nx">Optional[PeeringPropertiesExchangeArgs]</span> = None<span class="p">,</span>
+            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[PeeringSkuArgs]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Peering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Peering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -772,22 +787,32 @@ const peering = new azure_native.peering.Peering("peering", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PeeringArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1043,7 +1068,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringsku">Peering<wbr>Sku</a></span>
+        <span class="property-type"><a href="#peeringsku">Peering<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1076,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#direct_nodejs" style="color: inherit; text-decoration: inherit;">direct</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesdirect">Peering<wbr>Properties<wbr>Direct</a></span>
+        <span class="property-type"><a href="#peeringpropertiesdirect">Peering<wbr>Properties<wbr>Direct<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1084,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange</a></span>
+        <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2130,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2436,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2664,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2826,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3008,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnection">Direct<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#directconnection">Direct<wbr>Connection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3024,7 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3146,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">Direct<wbr>Connection<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#directconnectionresponse">Direct<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3162,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3252,7 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnection">Exchange<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#exchangeconnection">Exchange<wbr>Connection<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3260,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3334,7 +3359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">Exchange<wbr>Connection<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">Exchange<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3342,7 +3367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}

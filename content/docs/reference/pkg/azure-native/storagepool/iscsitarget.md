@@ -90,7 +90,7 @@ package main
 
 import (
 	storagepool "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagepool"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -222,19 +222,30 @@ const iscsiTarget = new azure_native.storagepool.IscsiTarget("iscsiTarget", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disk_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iscsi_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_iqn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpgs</span><span class="p">:</span> <span class="nx">Optional[Sequence[TargetPortalGroupCreateArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">disk_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">iscsi_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">target_iqn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">tpgs</span><span class="p">:</span> <span class="nx">Optional[Sequence[TargetPortalGroupCreateArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiTarget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -269,22 +280,32 @@ const iscsiTarget = new azure_native.storagepool.IscsiTarget("iscsiTarget", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IscsiTargetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -476,7 +497,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tpgs_nodejs" style="color: inherit; text-decoration: inherit;">tpgs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetportalgroupcreate">Target<wbr>Portal<wbr>Group<wbr>Create[]</a></span>
+        <span class="property-type"><a href="#targetportalgroupcreate">Target<wbr>Portal<wbr>Group<wbr>Create<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of iSCSI target portal groups. Can have 1 portal group at most.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acl">Acl[]</a></span>
+        <span class="property-type"><a href="#acl">Acl<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1427,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributes">Attributes</a></span>
+        <span class="property-type"><a href="#attributes">Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1435,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilun">Iscsi<wbr>Lun[]</a></span>
+        <span class="property-type"><a href="#iscsilun">Iscsi<wbr>Lun<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through the iSCSI target portal group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1581,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">Acl<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#aclresponse">Acl<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1589,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
+        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1605,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">Iscsi<wbr>Lun<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">Iscsi<wbr>Lun<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">

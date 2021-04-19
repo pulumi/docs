@@ -272,19 +272,36 @@ const workflow = new azure_native.logic.Workflow("workflow", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[FlowAccessControlConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">endpoints_configuration</span><span class="p">:</span> <span class="nx">Optional[FlowEndpointsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">integration_account</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">, </span><span class="nx">integration_service_environment</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, WorkflowParameterArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, WorkflowState]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[FlowAccessControlConfigurationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">definition</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+             <span class="nx">endpoints_configuration</span><span class="p">:</span> <span class="nx">Optional[FlowEndpointsConfigurationArgs]</span> = None<span class="p">,</span>
+             <span class="nx">integration_account</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">,</span>
+             <span class="nx">integration_service_environment</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, WorkflowParameterArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, WorkflowState]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkflowArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkflow</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkflowArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workflow</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkflow</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkflowArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workflow</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkflowArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workflow</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkflowArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -319,22 +336,32 @@ const workflow = new azure_native.logic.Workflow("workflow", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkflowArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -614,7 +641,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfiguration">Flow<wbr>Access<wbr>Control<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfiguration">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +657,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoints<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsconfiguration">Flow<wbr>Endpoints<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#flowendpointsconfiguration">Flow<wbr>Endpoints<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoints configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +665,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#integrationaccount_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +673,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#integrationserviceenvironment_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +689,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Workflow<wbr>Parameter}</span>
+        <span class="property-type">{[key: string]: Workflow<wbr>Parameter<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflowmanagement_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicy">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1299,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedcalleripaddresses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Caller<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressrange">Ip<wbr>Address<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#ipaddressrange">Ip<wbr>Address<wbr>Range<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openauthenticationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Authentication<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationaccesspolicies">Open<wbr>Authentication<wbr>Access<wbr>Policies</a></span>
+        <span class="property-type"><a href="#openauthenticationaccesspolicies">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1381,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedcalleripaddresses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Caller<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressrangeresponse">Ip<wbr>Address<wbr>Range<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">Ip<wbr>Address<wbr>Range<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openauthenticationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Authentication<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response</a></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1503,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1511,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflowmanagement_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1609,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoingipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outgoing<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1691,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_nodejs" style="color: inherit; text-decoration: inherit;">connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints</a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1699,7 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_nodejs" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints</a></span>
+        <span class="property-type"><a href="#flowendpoints">Flow<wbr>Endpoints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1773,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connector_nodejs" style="color: inherit; text-decoration: inherit;">connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1781,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workflow_nodejs" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1855,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1863,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outgoingipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outgoing<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2121,7 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Open<wbr>Authentication<wbr>Access<wbr>Policy}</span>
+        <span class="property-type">{[key: string]: Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2171,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2221,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationpolicyclaim">Open<wbr>Authentication<wbr>Policy<wbr>Claim[]</a></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaim">Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The access policy claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2295,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The access policy claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2759,7 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}

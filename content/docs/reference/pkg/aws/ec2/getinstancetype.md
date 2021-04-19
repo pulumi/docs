@@ -52,8 +52,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -116,17 +116,29 @@ const example = pulumi.output(aws.ec2.getInstanceType({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceType<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTypeResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceType<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTypeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTypeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_type(</span><span class="nx">default_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fpgas</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeFpgaArgs]]</span> = None<span class="p">, </span><span class="nx">gpuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeGpusArgs]]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">instance_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeInstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_ipv6_addresses_per_interface</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_fpga_memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_gpu_memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_instance_storage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypeResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_type(</span><span class="nx">default_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">default_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">fpgas</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeFpga]]</span> = None<span class="p">,</span>
+                      <span class="nx">gpuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeGpus]]</span> = None<span class="p">,</span>
+                      <span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeInferenceAccelerator]]</span> = None<span class="p">,</span>
+                      <span class="nx">instance_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeInstanceDisk]]</span> = None<span class="p">,</span>
+                      <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">maximum_ipv6_addresses_per_interface</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">total_fpga_memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">total_gpu_memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">total_instance_storage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypeResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceType<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceType<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetInstanceType` in the Go SDK.
 
@@ -135,7 +147,7 @@ const example = pulumi.output(aws.ec2.getInstanceType({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceType </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTypeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTypeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTypeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTypeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -178,7 +190,7 @@ The following arguments are supported:
 <a href="#fpgas_csharp" style="color: inherit; text-decoration: inherit;">Fpgas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypefpga">List&lt;Get<wbr>Instance<wbr>Type<wbr>Fpga<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancetypefpga">List&lt;Get<wbr>Instance<wbr>Type<wbr>Fpga&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the FPGA accelerator settings for the instance type.
 * `fpgas.#.count` - The count of FPGA accelerators for the instance type.
@@ -191,7 +203,7 @@ The following arguments are supported:
 <a href="#gpuses_csharp" style="color: inherit; text-decoration: inherit;">Gpuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypegpus">List&lt;Get<wbr>Instance<wbr>Type<wbr>Gpus<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancetypegpus">List&lt;Get<wbr>Instance<wbr>Type<wbr>Gpus&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the GPU accelerators for the instance type.
 * `gpus.#.count` - The number of GPUs for the instance type.
@@ -217,7 +229,7 @@ The following arguments are supported:
 <a href="#inferenceaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Inference<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">List&lt;Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">List&lt;Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -225,7 +237,7 @@ The following arguments are supported:
 <a href="#instancedisks_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeinstancedisk">List&lt;Get<wbr>Instance<wbr>Type<wbr>Instance<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getinstancetypeinstancedisk">List&lt;Get<wbr>Instance<wbr>Type<wbr>Instance<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the disks for the instance type.
 * `instance_disks.#.count` - The number of disks with this configuration.
@@ -556,7 +568,7 @@ The following arguments are supported:
 <a href="#fpgas_python" style="color: inherit; text-decoration: inherit;">fpgas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypefpga">Sequence[Get<wbr>Instance<wbr>Type<wbr>Fpga<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetypefpga">Sequence[Get<wbr>Instance<wbr>Type<wbr>Fpga]</a></span>
     </dt>
     <dd>{{% md %}}Describes the FPGA accelerator settings for the instance type.
 * `fpgas.#.count` - The count of FPGA accelerators for the instance type.
@@ -569,7 +581,7 @@ The following arguments are supported:
 <a href="#gpuses_python" style="color: inherit; text-decoration: inherit;">gpuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypegpus">Sequence[Get<wbr>Instance<wbr>Type<wbr>Gpus<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetypegpus">Sequence[Get<wbr>Instance<wbr>Type<wbr>Gpus]</a></span>
     </dt>
     <dd>{{% md %}}Describes the GPU accelerators for the instance type.
 * `gpus.#.count` - The number of GPUs for the instance type.
@@ -595,7 +607,7 @@ The following arguments are supported:
 <a href="#inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">Sequence[Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetypeinferenceaccelerator">Sequence[Get<wbr>Instance<wbr>Type<wbr>Inference<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +615,7 @@ The following arguments are supported:
 <a href="#instance_disks_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeinstancedisk">Sequence[Get<wbr>Instance<wbr>Type<wbr>Instance<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getinstancetypeinstancedisk">Sequence[Get<wbr>Instance<wbr>Type<wbr>Instance<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}Describes the disks for the instance type.
 * `instance_disks.#.count` - The number of disks with this configuration.

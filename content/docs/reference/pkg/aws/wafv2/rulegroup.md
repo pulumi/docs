@@ -87,8 +87,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -460,19 +460,32 @@ const example = new aws.wafv2.RuleGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+              <span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -507,22 +520,32 @@ const example = new aws.wafv2.RuleGroup("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -531,7 +554,7 @@ const example = new aws.wafv2.RuleGroup("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -555,7 +578,7 @@ const example = new aws.wafv2.RuleGroup("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -762,7 +785,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#visibilityconfig_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupvisibilityconfig">Rule<wbr>Group<wbr>Visibility<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegroupvisibilityconfig">Rule<wbr>Group<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +812,7 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprule">Rule<wbr>Group<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#rulegrouprule">Rule<wbr>Group<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,20 +1025,31 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RuleGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RuleGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RuleGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">lock_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">) -&gt;</span> RuleGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RuleGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RuleGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RuleGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RuleGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RuleGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1336,7 +1370,7 @@ The following state arguments are supported:
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprule">Rule<wbr>Group<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#rulegrouprule">Rule<wbr>Group<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1397,7 @@ The following state arguments are supported:
 <a href="#state_visibilityconfig_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupvisibilityconfig">Rule<wbr>Group<wbr>Visibility<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegroupvisibilityconfig">Rule<wbr>Group<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
 {{% /md %}}</dd></dl>
@@ -1569,7 +1603,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupruleaction">Rule<wbr>Group<wbr>Rule<wbr>Action</a></span>
+        <span class="property-type"><a href="#rulegroupruleaction">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action that AWS WAF should take on a web request when it matches the rule's statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1596,7 +1630,7 @@ The following state arguments are supported:
 <a href="#statement_nodejs" style="color: inherit; text-decoration: inherit;">statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AWS WAF processing statement for the rule, for example `byte_match_statement` or `geo_match_statement`. See Statement below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1605,7 +1639,7 @@ The following state arguments are supported:
 <a href="#visibilityconfig_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulevisibilityconfig">Rule<wbr>Group<wbr>Rule<wbr>Visibility<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulevisibilityconfig">Rule<wbr>Group<wbr>Rule<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
 {{% /md %}}</dd></dl>
@@ -1731,7 +1765,7 @@ The following state arguments are supported:
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupruleactionallow">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow</a></span>
+        <span class="property-type"><a href="#rulegroupruleactionallow">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Allow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructs AWS WAF to allow the web request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1774,7 @@ The following state arguments are supported:
 <a href="#block_nodejs" style="color: inherit; text-decoration: inherit;">block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupruleactionblock">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block</a></span>
+        <span class="property-type"><a href="#rulegroupruleactionblock">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Block<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructs AWS WAF to block the web request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1783,7 @@ The following state arguments are supported:
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegroupruleactioncount">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count</a></span>
+        <span class="property-type"><a href="#rulegroupruleactioncount">Rule<wbr>Group<wbr>Rule<wbr>Action<wbr>Count<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructs AWS WAF to count the web request and allow it.
 {{% /md %}}</dd></dl>
@@ -1983,7 +2017,7 @@ The following state arguments are supported:
 <a href="#andstatement_nodejs" style="color: inherit; text-decoration: inherit;">and<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1992,7 +2026,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2001,7 +2035,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +2044,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2019,7 +2053,7 @@ The following state arguments are supported:
 <a href="#notstatement_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2028,7 +2062,7 @@ The following state arguments are supported:
 <a href="#orstatement_nodejs" style="color: inherit; text-decoration: inherit;">or<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +2071,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +2080,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2055,7 +2089,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2064,7 +2098,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -2199,7 +2233,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -2415,7 +2449,7 @@ The following state arguments are supported:
 <a href="#andstatement_nodejs" style="color: inherit; text-decoration: inherit;">and<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2424,7 +2458,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2433,7 +2467,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2442,7 +2476,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2451,7 +2485,7 @@ The following state arguments are supported:
 <a href="#notstatement_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2460,7 +2494,7 @@ The following state arguments are supported:
 <a href="#orstatement_nodejs" style="color: inherit; text-decoration: inherit;">or<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2469,7 +2503,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2478,7 +2512,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2487,7 +2521,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2496,7 +2530,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -2631,7 +2665,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -2793,7 +2827,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2802,7 +2836,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2811,7 +2845,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2820,7 +2854,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2829,7 +2863,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2838,7 +2872,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2847,7 +2881,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -3027,7 +3061,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3036,7 +3070,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -3225,7 +3259,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3234,7 +3268,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3243,7 +3277,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3252,7 +3286,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3261,7 +3295,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3270,7 +3304,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3279,7 +3313,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -3612,7 +3646,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -3792,7 +3826,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -4026,7 +4060,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4035,7 +4069,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -4215,7 +4249,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4224,7 +4258,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4233,7 +4267,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4242,7 +4276,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4251,7 +4285,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4260,7 +4294,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4269,7 +4303,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -4647,7 +4681,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4656,7 +4690,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -4845,7 +4879,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4854,7 +4888,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4863,7 +4897,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4872,7 +4906,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4881,7 +4915,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4890,7 +4924,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4899,7 +4933,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -5223,7 +5257,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5232,7 +5266,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -5403,7 +5437,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5412,7 +5446,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5421,7 +5455,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5430,7 +5464,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5439,7 +5473,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5448,7 +5482,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5457,7 +5491,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -5781,7 +5815,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5790,7 +5824,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -5961,7 +5995,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5970,7 +6004,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5979,7 +6013,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5988,7 +6022,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5997,7 +6031,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6006,7 +6040,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6015,7 +6049,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -6393,7 +6427,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6402,7 +6436,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -6591,7 +6625,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6600,7 +6634,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6609,7 +6643,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6618,7 +6652,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6627,7 +6661,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6636,7 +6670,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6645,7 +6679,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -6978,7 +7012,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -7158,7 +7192,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -7347,7 +7381,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -7509,7 +7543,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7518,7 +7552,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7527,7 +7561,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7536,7 +7570,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7545,7 +7579,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7554,7 +7588,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7563,7 +7597,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -7743,7 +7777,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7752,7 +7786,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -7941,7 +7975,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7950,7 +7984,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7959,7 +7993,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7968,7 +8002,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7977,7 +8011,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7986,7 +8020,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7995,7 +8029,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -8328,7 +8362,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -8508,7 +8542,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -8742,7 +8776,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8751,7 +8785,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -8931,7 +8965,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8940,7 +8974,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8949,7 +8983,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8958,7 +8992,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8967,7 +9001,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8976,7 +9010,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8985,7 +9019,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -9363,7 +9397,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9372,7 +9406,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -9561,7 +9595,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9570,7 +9604,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9579,7 +9613,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9588,7 +9622,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9597,7 +9631,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9606,7 +9640,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9615,7 +9649,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -9939,7 +9973,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9948,7 +9982,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -10119,7 +10153,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10128,7 +10162,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10137,7 +10171,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10146,7 +10180,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10155,7 +10189,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10164,7 +10198,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10173,7 +10207,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -10497,7 +10531,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10506,7 +10540,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -10677,7 +10711,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10686,7 +10720,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10695,7 +10729,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10704,7 +10738,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10713,7 +10747,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10722,7 +10756,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10731,7 +10765,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -11037,7 +11071,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -11199,7 +11233,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11208,7 +11242,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11217,7 +11251,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11226,7 +11260,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11235,7 +11269,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11244,7 +11278,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11253,7 +11287,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -11433,7 +11467,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11442,7 +11476,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -11631,7 +11665,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11640,7 +11674,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11649,7 +11683,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11658,7 +11692,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11667,7 +11701,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11676,7 +11710,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11685,7 +11719,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -12018,7 +12052,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -12198,7 +12232,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -12432,7 +12466,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12441,7 +12475,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -12621,7 +12655,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12630,7 +12664,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12639,7 +12673,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12648,7 +12682,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12657,7 +12691,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12666,7 +12700,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12675,7 +12709,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -13053,7 +13087,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13062,7 +13096,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -13251,7 +13285,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13260,7 +13294,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13269,7 +13303,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13278,7 +13312,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13287,7 +13321,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13296,7 +13330,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13305,7 +13339,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -13629,7 +13663,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13638,7 +13672,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -13809,7 +13843,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13818,7 +13852,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13827,7 +13861,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13836,7 +13870,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13845,7 +13879,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13854,7 +13888,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13863,7 +13897,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -14187,7 +14221,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14196,7 +14230,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -14367,7 +14401,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14376,7 +14410,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14385,7 +14419,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14394,7 +14428,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14403,7 +14437,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14412,7 +14446,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14421,7 +14455,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -14772,7 +14806,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14781,7 +14815,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -14961,7 +14995,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14970,7 +15004,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14979,7 +15013,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14988,7 +15022,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14997,7 +15031,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15006,7 +15040,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15015,7 +15049,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -15393,7 +15427,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15402,7 +15436,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -15591,7 +15625,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15600,7 +15634,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15609,7 +15643,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15618,7 +15652,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15627,7 +15661,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15636,7 +15670,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15645,7 +15679,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -15969,7 +16003,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15978,7 +16012,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -16149,7 +16183,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16158,7 +16192,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16167,7 +16201,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16176,7 +16210,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16185,7 +16219,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16194,7 +16228,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16203,7 +16237,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -16527,7 +16561,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16536,7 +16570,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -16707,7 +16741,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16716,7 +16750,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16725,7 +16759,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16734,7 +16768,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16743,7 +16777,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16752,7 +16786,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16761,7 +16795,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -17139,7 +17173,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17148,7 +17182,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -17337,7 +17371,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17346,7 +17380,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17355,7 +17389,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17364,7 +17398,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17373,7 +17407,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17382,7 +17416,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17391,7 +17425,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -17724,7 +17758,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -17904,7 +17938,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -18093,7 +18127,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -18309,7 +18343,7 @@ The following state arguments are supported:
 <a href="#andstatement_nodejs" style="color: inherit; text-decoration: inherit;">and<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18318,7 +18352,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18327,7 +18361,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18336,7 +18370,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18345,7 +18379,7 @@ The following state arguments are supported:
 <a href="#notstatement_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18354,7 +18388,7 @@ The following state arguments are supported:
 <a href="#orstatement_nodejs" style="color: inherit; text-decoration: inherit;">or<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18363,7 +18397,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18372,7 +18406,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18381,7 +18415,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18390,7 +18424,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -18525,7 +18559,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -18687,7 +18721,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18696,7 +18730,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18705,7 +18739,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18714,7 +18748,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18723,7 +18757,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18732,7 +18766,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18741,7 +18775,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -18921,7 +18955,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18930,7 +18964,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -19119,7 +19153,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19128,7 +19162,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19137,7 +19171,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19146,7 +19180,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19155,7 +19189,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19164,7 +19198,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19173,7 +19207,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -19506,7 +19540,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -19686,7 +19720,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -19920,7 +19954,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19929,7 +19963,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -20109,7 +20143,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20118,7 +20152,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20127,7 +20161,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20136,7 +20170,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20145,7 +20179,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20154,7 +20188,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20163,7 +20197,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -20541,7 +20575,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20550,7 +20584,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -20739,7 +20773,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20748,7 +20782,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20757,7 +20791,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20766,7 +20800,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20775,7 +20809,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20784,7 +20818,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -20793,7 +20827,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -21117,7 +21151,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21126,7 +21160,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -21297,7 +21331,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21306,7 +21340,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21315,7 +21349,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21324,7 +21358,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21333,7 +21367,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21342,7 +21376,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21351,7 +21385,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -21675,7 +21709,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21684,7 +21718,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -21855,7 +21889,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21864,7 +21898,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21873,7 +21907,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21882,7 +21916,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21891,7 +21925,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21900,7 +21934,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -21909,7 +21943,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -22287,7 +22321,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -22296,7 +22330,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -22485,7 +22519,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -22494,7 +22528,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -22503,7 +22537,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -22512,7 +22546,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -22521,7 +22555,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -22530,7 +22564,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -22539,7 +22573,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -22872,7 +22906,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -23052,7 +23086,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -23241,7 +23275,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -23403,7 +23437,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23412,7 +23446,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23421,7 +23455,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23430,7 +23464,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23439,7 +23473,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23448,7 +23482,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23457,7 +23491,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -23637,7 +23671,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23646,7 +23680,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -23835,7 +23869,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23844,7 +23878,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23853,7 +23887,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23862,7 +23896,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23871,7 +23905,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23880,7 +23914,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -23889,7 +23923,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -24222,7 +24256,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -24402,7 +24436,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -24636,7 +24670,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -24645,7 +24679,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -24825,7 +24859,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -24834,7 +24868,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -24843,7 +24877,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -24852,7 +24886,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -24861,7 +24895,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -24870,7 +24904,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -24879,7 +24913,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -25257,7 +25291,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -25266,7 +25300,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -25455,7 +25489,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -25464,7 +25498,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -25473,7 +25507,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -25482,7 +25516,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -25491,7 +25525,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -25500,7 +25534,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -25509,7 +25543,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -25833,7 +25867,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -25842,7 +25876,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -26013,7 +26047,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26022,7 +26056,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26031,7 +26065,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26040,7 +26074,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26049,7 +26083,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26058,7 +26092,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26067,7 +26101,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -26391,7 +26425,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26400,7 +26434,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -26571,7 +26605,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26580,7 +26614,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26589,7 +26623,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26598,7 +26632,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26607,7 +26641,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26616,7 +26650,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -26625,7 +26659,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -26931,7 +26965,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -27093,7 +27127,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27102,7 +27136,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27111,7 +27145,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27120,7 +27154,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27129,7 +27163,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27138,7 +27172,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27147,7 +27181,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -27327,7 +27361,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27336,7 +27370,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -27525,7 +27559,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27534,7 +27568,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27543,7 +27577,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27552,7 +27586,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27561,7 +27595,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27570,7 +27604,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -27579,7 +27613,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -27912,7 +27946,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -28092,7 +28126,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -28326,7 +28360,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -28335,7 +28369,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -28515,7 +28549,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -28524,7 +28558,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -28533,7 +28567,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -28542,7 +28576,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -28551,7 +28585,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -28560,7 +28594,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -28569,7 +28603,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -28947,7 +28981,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -28956,7 +28990,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -29145,7 +29179,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29154,7 +29188,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29163,7 +29197,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29172,7 +29206,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29181,7 +29215,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29190,7 +29224,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29199,7 +29233,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -29523,7 +29557,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29532,7 +29566,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -29703,7 +29737,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29712,7 +29746,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29721,7 +29755,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29730,7 +29764,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29739,7 +29773,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29748,7 +29782,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -29757,7 +29791,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -30081,7 +30115,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30090,7 +30124,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -30261,7 +30295,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30270,7 +30304,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30279,7 +30313,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30288,7 +30322,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30297,7 +30331,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30306,7 +30340,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30315,7 +30349,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -30666,7 +30700,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30675,7 +30709,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -30855,7 +30889,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30864,7 +30898,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30873,7 +30907,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30882,7 +30916,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30891,7 +30925,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30900,7 +30934,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -30909,7 +30943,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -31287,7 +31321,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -31296,7 +31330,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -31485,7 +31519,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -31494,7 +31528,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -31503,7 +31537,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -31512,7 +31546,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -31521,7 +31555,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -31530,7 +31564,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -31539,7 +31573,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -31863,7 +31897,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -31872,7 +31906,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -32043,7 +32077,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32052,7 +32086,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32061,7 +32095,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32070,7 +32104,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32079,7 +32113,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32088,7 +32122,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32097,7 +32131,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -32421,7 +32455,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32430,7 +32464,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -32601,7 +32635,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32610,7 +32644,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32619,7 +32653,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32628,7 +32662,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32637,7 +32671,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32646,7 +32680,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -32655,7 +32689,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -32961,7 +32995,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -33177,7 +33211,7 @@ The following state arguments are supported:
 <a href="#andstatement_nodejs" style="color: inherit; text-decoration: inherit;">and<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33186,7 +33220,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33195,7 +33229,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33204,7 +33238,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33213,7 +33247,7 @@ The following state arguments are supported:
 <a href="#notstatement_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33222,7 +33256,7 @@ The following state arguments are supported:
 <a href="#orstatement_nodejs" style="color: inherit; text-decoration: inherit;">or<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33231,7 +33265,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33240,7 +33274,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33249,7 +33283,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33258,7 +33292,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -33393,7 +33427,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -33555,7 +33589,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33564,7 +33598,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33573,7 +33607,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33582,7 +33616,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33591,7 +33625,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33600,7 +33634,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33609,7 +33643,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -33789,7 +33823,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33798,7 +33832,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -33987,7 +34021,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -33996,7 +34030,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -34005,7 +34039,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -34014,7 +34048,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -34023,7 +34057,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -34032,7 +34066,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -34041,7 +34075,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -34374,7 +34408,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -34554,7 +34588,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -34788,7 +34822,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -34797,7 +34831,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -34977,7 +35011,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -34986,7 +35020,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -34995,7 +35029,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35004,7 +35038,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35013,7 +35047,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35022,7 +35056,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35031,7 +35065,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -35409,7 +35443,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35418,7 +35452,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -35607,7 +35641,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35616,7 +35650,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35625,7 +35659,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35634,7 +35668,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35643,7 +35677,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35652,7 +35686,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35661,7 +35695,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -35985,7 +36019,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -35994,7 +36028,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -36165,7 +36199,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36174,7 +36208,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36183,7 +36217,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36192,7 +36226,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36201,7 +36235,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36210,7 +36244,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36219,7 +36253,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -36543,7 +36577,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36552,7 +36586,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -36723,7 +36757,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36732,7 +36766,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36741,7 +36775,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36750,7 +36784,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36759,7 +36793,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36768,7 +36802,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -36777,7 +36811,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -37155,7 +37189,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -37164,7 +37198,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -37353,7 +37387,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -37362,7 +37396,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -37371,7 +37405,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -37380,7 +37414,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -37389,7 +37423,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -37398,7 +37432,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -37407,7 +37441,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -37740,7 +37774,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -37920,7 +37954,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -38109,7 +38143,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statement to negate. You can use any statement that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -38271,7 +38305,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38280,7 +38314,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38289,7 +38323,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38298,7 +38332,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38307,7 +38341,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38316,7 +38350,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38325,7 +38359,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -38505,7 +38539,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38514,7 +38548,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -38703,7 +38737,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38712,7 +38746,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38721,7 +38755,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38730,7 +38764,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38739,7 +38773,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38748,7 +38782,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -38757,7 +38791,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -39090,7 +39124,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -39270,7 +39304,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -39504,7 +39538,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -39513,7 +39547,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -39693,7 +39727,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -39702,7 +39736,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -39711,7 +39745,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -39720,7 +39754,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -39729,7 +39763,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -39738,7 +39772,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -39747,7 +39781,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -40125,7 +40159,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40134,7 +40168,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -40323,7 +40357,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40332,7 +40366,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40341,7 +40375,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40350,7 +40384,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40359,7 +40393,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40368,7 +40402,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40377,7 +40411,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -40701,7 +40735,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40710,7 +40744,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -40881,7 +40915,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40890,7 +40924,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40899,7 +40933,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40908,7 +40942,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40917,7 +40951,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40926,7 +40960,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -40935,7 +40969,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -41259,7 +41293,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41268,7 +41302,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -41439,7 +41473,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41448,7 +41482,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41457,7 +41491,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41466,7 +41500,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41475,7 +41509,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41484,7 +41518,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41493,7 +41527,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -41799,7 +41833,7 @@ The following state arguments are supported:
 <a href="#statements_nodejs" style="color: inherit; text-decoration: inherit;">statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
 {{% /md %}}</dd></dl>
@@ -41961,7 +41995,7 @@ The following state arguments are supported:
 <a href="#bytematchstatement_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41970,7 +42004,7 @@ The following state arguments are supported:
 <a href="#geomatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41979,7 +42013,7 @@ The following state arguments are supported:
 <a href="#ipsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41988,7 +42022,7 @@ The following state arguments are supported:
 <a href="#regexpatternsetreferencestatement_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -41997,7 +42031,7 @@ The following state arguments are supported:
 <a href="#sizeconstraintstatement_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Constraint<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42006,7 +42040,7 @@ The following state arguments are supported:
 <a href="#sqlimatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">sqli<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42015,7 +42049,7 @@ The following state arguments are supported:
 <a href="#xssmatchstatement_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Match<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
 {{% /md %}}</dd></dl>
@@ -42195,7 +42229,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42204,7 +42238,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -42393,7 +42427,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42402,7 +42436,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42411,7 +42445,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42420,7 +42454,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42429,7 +42463,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42438,7 +42472,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -42447,7 +42481,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -42780,7 +42814,7 @@ The following state arguments are supported:
 <a href="#forwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See Forwarded IP Config below for details.
 {{% /md %}}</dd></dl>
@@ -42960,7 +42994,7 @@ The following state arguments are supported:
 <a href="#ipsetforwardedipconfig_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
 {{% /md %}}</dd></dl>
@@ -43194,7 +43228,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -43203,7 +43237,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -43383,7 +43417,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -43392,7 +43426,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -43401,7 +43435,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -43410,7 +43444,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -43419,7 +43453,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -43428,7 +43462,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -43437,7 +43471,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -43815,7 +43849,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -43824,7 +43858,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -44013,7 +44047,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44022,7 +44056,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44031,7 +44065,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44040,7 +44074,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44049,7 +44083,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44058,7 +44092,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44067,7 +44101,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -44391,7 +44425,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44400,7 +44434,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -44571,7 +44605,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44580,7 +44614,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44589,7 +44623,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44598,7 +44632,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44607,7 +44641,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44616,7 +44650,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44625,7 +44659,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -44949,7 +44983,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -44958,7 +44992,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -45129,7 +45163,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45138,7 +45172,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45147,7 +45181,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45156,7 +45190,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45165,7 +45199,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45174,7 +45208,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45183,7 +45217,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -45534,7 +45568,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45543,7 +45577,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -45723,7 +45757,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45732,7 +45766,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45741,7 +45775,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45750,7 +45784,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45759,7 +45793,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45768,7 +45802,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -45777,7 +45811,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -46155,7 +46189,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46164,7 +46198,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -46353,7 +46387,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46362,7 +46396,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46371,7 +46405,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46380,7 +46414,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46389,7 +46423,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46398,7 +46432,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46407,7 +46441,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -46731,7 +46765,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46740,7 +46774,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -46911,7 +46945,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46920,7 +46954,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46929,7 +46963,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46938,7 +46972,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46947,7 +46981,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46956,7 +46990,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -46965,7 +46999,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -47289,7 +47323,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -47298,7 +47332,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -47469,7 +47503,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -47478,7 +47512,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -47487,7 +47521,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -47496,7 +47530,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -47505,7 +47539,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -47514,7 +47548,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -47523,7 +47557,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -47874,7 +47908,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -47883,7 +47917,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -48063,7 +48097,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48072,7 +48106,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48081,7 +48115,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48090,7 +48124,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48099,7 +48133,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48108,7 +48142,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48117,7 +48151,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -48495,7 +48529,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48504,7 +48538,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -48693,7 +48727,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48702,7 +48736,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48711,7 +48745,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48720,7 +48754,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48729,7 +48763,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48738,7 +48772,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -48747,7 +48781,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsizeconstraintstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -49071,7 +49105,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49080,7 +49114,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -49251,7 +49285,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49260,7 +49294,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49269,7 +49303,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49278,7 +49312,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49287,7 +49321,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49296,7 +49330,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49305,7 +49339,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementsqlimatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>
@@ -49629,7 +49663,7 @@ The following state arguments are supported:
 <a href="#texttransformations_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation[]</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49638,7 +49672,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
 {{% /md %}}</dd></dl>
@@ -49809,7 +49843,7 @@ The following state arguments are supported:
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchallqueryarguments">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect all query arguments.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49818,7 +49852,7 @@ The following state arguments are supported:
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchbody">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request body, which immediately follows the request headers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49827,7 +49861,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchmethod">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49836,7 +49870,7 @@ The following state arguments are supported:
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchquerystring">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49845,7 +49879,7 @@ The following state arguments are supported:
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single header. See Single Header below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49854,7 +49888,7 @@ The following state arguments are supported:
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect a single query argument. See Single Query Argument below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -49863,7 +49897,7 @@ The following state arguments are supported:
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path</a></span>
+        <span class="property-type"><a href="#rulegrouprulestatementxssmatchstatementfieldtomatchuripath">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
 {{% /md %}}</dd></dl>

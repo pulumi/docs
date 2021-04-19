@@ -22,17 +22,20 @@ API Version: 2019-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccountBatchConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountBatchConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountBatchConfigurationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccountBatchConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountBatchConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountBatchConfigurationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_account_batch_configuration(</span><span class="nx">batch_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationAccountBatchConfigurationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_account_batch_configuration(</span><span class="nx">batch_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                <span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationAccountBatchConfigurationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccountBatchConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountBatchConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountBatchConfigurationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccountBatchConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountBatchConfigurationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountBatchConfigurationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationAccountBatchConfiguration` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2019-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationAccountBatchConfiguration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountBatchConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountBatchConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountBatchConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountBatchConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -404,7 +407,7 @@ The following output properties are available:
 <a href="#releasecriteria_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +539,7 @@ The following output properties are available:
 <a href="#release_criteria_python" style="color: inherit; text-decoration: inherit;">release_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +595,7 @@ The following output properties are available:
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -676,7 +679,7 @@ The following output properties are available:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -800,7 +803,7 @@ The following output properties are available:
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +935,7 @@ The following output properties are available:
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +983,7 @@ The following output properties are available:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1136,7 +1139,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

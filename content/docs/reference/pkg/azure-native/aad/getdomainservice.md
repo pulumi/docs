@@ -22,17 +22,19 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomainService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDomainServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDomainServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomainService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDomainServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDomainServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domain_service(</span><span class="nx">domain_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domain_service(</span><span class="nx">domain_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomainService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDomainServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDomainServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomainService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDomainServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDomainServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDomainService` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2021-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDomainService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDomainServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDomainServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDomainServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDomainServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1988,7 +1990,7 @@ The following output properties are available:
 <a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2072,7 +2074,7 @@ The following output properties are available:
 <a href="#migration_progress_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2236,7 +2238,7 @@ The following output properties are available:
 <a href="#healthalerts_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2252,7 +2254,7 @@ The following output properties are available:
 <a href="#healthmonitors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2488,7 +2490,7 @@ The following output properties are available:
 <a href="#health_alerts_python" style="color: inherit; text-decoration: inherit;">health_<wbr>alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">Sequence[Health<wbr>Alert<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthalertresponse">Sequence[Health<wbr>Alert<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2504,7 +2506,7 @@ The following output properties are available:
 <a href="#health_monitors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">Sequence[Health<wbr>Monitor<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">Sequence[Health<wbr>Monitor<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2568,7 +2570,7 @@ The following output properties are available:
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2628,7 +2630,7 @@ The following output properties are available:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrustresponse">Sequence[Forest<wbr>Trust<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#foresttrustresponse">Sequence[Forest<wbr>Trust<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd></dl>
 {{% /choosable %}}

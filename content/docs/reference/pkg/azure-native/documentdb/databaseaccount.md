@@ -342,7 +342,7 @@ package main
 
 import (
 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -435,19 +435,53 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorOffer]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[DatabaseAccountOfferType]</span> = None<span class="p">, </span><span class="nx">default_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseAccountKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass</span><span class="p">:</span> <span class="nx">Optional[NetworkAclBypass]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorOffer]]</span> = None<span class="p">,</span>
+                    <span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[DatabaseAccountOfferType]</span> = None<span class="p">,</span>
+                    <span class="nx">default_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">,</span>
+                    <span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseAccountKind]]</span> = None<span class="p">,</span>
+                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">network_acl_bypass</span><span class="p">:</span> <span class="nx">Optional[NetworkAclBypass]</span> = None<span class="p">,</span>
+                    <span class="nx">network_acl_bypass_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                    <span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -482,22 +516,32 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1049,7 +1093,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#location">Location[]</a></span>
+        <span class="property-type"><a href="#location">Location<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the georeplication locations enabled for the Cosmos DB account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1073,7 +1117,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#apiproperties_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiproperties">Api<wbr>Properties</a></span>
+        <span class="property-type"><a href="#apiproperties">Api<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}API specific properties. Currently, supported only for MongoDB API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1125,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy</a> | <a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy</a></span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a> | <a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1133,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Capability[]</a></span>
+        <span class="property-type"><a href="#capability">Capability<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Cosmos DB capabilities for the account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1149,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#consistencypolicy_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistencypolicy">Consistency<wbr>Policy</a></span>
+        <span class="property-type"><a href="#consistencypolicy">Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consistency policy for the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1157,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicy">Cors<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#corspolicy">Cors<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1221,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1229,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressorrange">Ip<wbr>Address<wbr>Or<wbr>Range[]</a></span>
+        <span class="property-type"><a href="#ipaddressorrange">Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1301,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Network ACL rules configured for the Cosmos DB account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3468,7 +3512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3650,7 +3694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties</a></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3700,7 +3744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4042,7 +4086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4050,7 +4094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -89,8 +89,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -234,8 +234,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -320,8 +320,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -415,8 +415,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -488,19 +488,50 @@ const example = new aws.ecs.Service("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_circuit_breaker</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentCircuitBreakerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">deployment_circuit_breaker</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentCircuitBreakerArgs]</span> = None<span class="p">,</span>
+            <span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">,</span>
+            <span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+            <span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ServiceArgs]</a></span> = None<span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -535,22 +566,32 @@ const example = new aws.ecs.Service("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -559,7 +600,7 @@ const example = new aws.ecs.Service("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -583,7 +624,7 @@ const example = new aws.ecs.Service("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1096,7 +1137,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capacityproviderstrategies_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy[]</a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Capacity provider strategy to use for the service. Can be one or more.  Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1155,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deploymentcircuitbreaker_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Circuit<wbr>Breaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker</a></span>
+        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment circuit breaker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1123,7 +1164,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deploymentcontroller_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment controller configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1254,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">Service<wbr>Load<wbr>Balancer[]</a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">Service<wbr>Load<wbr>Balancer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for load balancers. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1272,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1281,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#orderedplacementstrategies_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Placement<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy[]</a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1290,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint[]</a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1326,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceregistries_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,20 +1651,47 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_circuit_breaker</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentCircuitBreakerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">deployment_circuit_breaker</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentCircuitBreakerArgs]</span> = None<span class="p">,</span>
+        <span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">,</span>
+        <span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">enable_execute_command</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadBalancerArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementConstraintArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2190,7 +2258,7 @@ The following state arguments are supported:
 <a href="#state_capacityproviderstrategies_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy[]</a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Capacity provider strategy to use for the service. Can be one or more.  Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2276,7 @@ The following state arguments are supported:
 <a href="#state_deploymentcircuitbreaker_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Circuit<wbr>Breaker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker</a></span>
+        <span class="property-type"><a href="#servicedeploymentcircuitbreaker">Service<wbr>Deployment<wbr>Circuit<wbr>Breaker<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment circuit breaker. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2217,7 +2285,7 @@ The following state arguments are supported:
 <a href="#state_deploymentcontroller_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for deployment controller configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2307,7 +2375,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">Service<wbr>Load<wbr>Balancer[]</a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">Service<wbr>Load<wbr>Balancer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for load balancers. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2325,7 +2393,7 @@ The following state arguments are supported:
 <a href="#state_networkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2334,7 +2402,7 @@ The following state arguments are supported:
 <a href="#state_orderedplacementstrategies_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Placement<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy[]</a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2343,7 +2411,7 @@ The following state arguments are supported:
 <a href="#state_placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint[]</a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2379,7 +2447,7 @@ The following state arguments are supported:
 <a href="#state_serviceregistries_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries</a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

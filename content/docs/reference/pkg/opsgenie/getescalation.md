@@ -53,7 +53,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -116,17 +116,22 @@ const test = pulumi.output(opsgenie.getEscalation({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEscalation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEscalationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEscalationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEscalation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEscalationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEscalationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_escalation(</span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_team_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repeats</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetEscalationRepeatArgs]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetEscalationRuleArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEscalationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_escalation(</span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">owner_team_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">repeats</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetEscalationRepeat]]</span> = None<span class="p">,</span>
+                   <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetEscalationRule]]</span> = None<span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEscalationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEscalation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEscalationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEscalationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEscalation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEscalationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEscalationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEscalation` in the Go SDK.
 
@@ -135,7 +140,7 @@ const test = pulumi.output(opsgenie.getEscalation({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEscalation </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetEscalationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEscalationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEscalationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEscalationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -178,7 +183,7 @@ The following arguments are supported:
 <a href="#repeats_csharp" style="color: inherit; text-decoration: inherit;">Repeats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getescalationrepeat">List&lt;Get<wbr>Escalation<wbr>Repeat<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getescalationrepeat">List&lt;Get<wbr>Escalation<wbr>Repeat&gt;</a></span>
     </dt>
     <dd>{{% md %}}Escalation repeat preferences
 {{% /md %}}</dd><dt class="property-optional"
@@ -187,7 +192,7 @@ The following arguments are supported:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getescalationrule">List&lt;Get<wbr>Escalation<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getescalationrule">List&lt;Get<wbr>Escalation<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Escalation rules
 {{% /md %}}</dd></dl>
@@ -325,7 +330,7 @@ The following arguments are supported:
 <a href="#repeats_python" style="color: inherit; text-decoration: inherit;">repeats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getescalationrepeat">Sequence[Get<wbr>Escalation<wbr>Repeat<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getescalationrepeat">Sequence[Get<wbr>Escalation<wbr>Repeat]</a></span>
     </dt>
     <dd>{{% md %}}Escalation repeat preferences
 {{% /md %}}</dd><dt class="property-optional"
@@ -334,7 +339,7 @@ The following arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getescalationrule">Sequence[Get<wbr>Escalation<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getescalationrule">Sequence[Get<wbr>Escalation<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Escalation rules
 {{% /md %}}</dd></dl>
@@ -766,7 +771,7 @@ The following output properties are available:
 <a href="#recipients_csharp" style="color: inherit; text-decoration: inherit;">Recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getescalationrulerecipient">List&lt;Get<wbr>Escalation<wbr>Rule<wbr>Recipient<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getescalationrulerecipient">List&lt;Get<wbr>Escalation<wbr>Rule<wbr>Recipient&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -874,7 +879,7 @@ The following output properties are available:
 <a href="#recipients_python" style="color: inherit; text-decoration: inherit;">recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getescalationrulerecipient">Sequence[Get<wbr>Escalation<wbr>Rule<wbr>Recipient<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getescalationrulerecipient">Sequence[Get<wbr>Escalation<wbr>Rule<wbr>Recipient]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

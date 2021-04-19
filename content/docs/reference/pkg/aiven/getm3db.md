@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -122,17 +122,36 @@ const m3 = aiven.getM3Db({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getM3Db<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetM3DbArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetM3DbResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getM3Db<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetM3DbArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetM3DbResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_m3_db(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetM3DbComponentArgs]]</span> = None<span class="p">, </span><span class="nx">m3db</span><span class="p">:</span> <span class="nx">Optional[GetM3DbM3dbArgs]</span> = None<span class="p">, </span><span class="nx">m3db_user_config</span><span class="p">:</span> <span class="nx">Optional[GetM3DbM3dbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetM3DbServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetM3DbResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_m3_db(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetM3DbComponent]]</span> = None<span class="p">,</span>
+              <span class="nx">m3db</span><span class="p">:</span> <span class="nx">Optional[GetM3DbM3db]</span> = None<span class="p">,</span>
+              <span class="nx">m3db_user_config</span><span class="p">:</span> <span class="nx">Optional[GetM3DbM3dbUserConfig]</span> = None<span class="p">,</span>
+              <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetM3DbServiceIntegration]]</span> = None<span class="p">,</span>
+              <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetM3DbResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupM3Db<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupM3DbArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupM3DbResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupM3Db<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupM3DbArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupM3DbResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupM3Db` in the Go SDK.
 
@@ -141,7 +160,7 @@ const m3 = aiven.getM3Db({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetM3Db </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetM3DbResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetM3DbArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetM3DbResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetM3DbArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -194,7 +213,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbcomponent">List&lt;Get<wbr>M3Db<wbr>Component<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getm3dbcomponent">List&lt;Get<wbr>M3Db<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -202,7 +221,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3db_csharp" style="color: inherit; text-decoration: inherit;">M3db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3db">Get<wbr>M3Db<wbr>M3db<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3db">Get<wbr>M3Db<wbr>M3db</a></span>
     </dt>
     <dd>{{% md %}}M3 specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -211,7 +230,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3dbuserconfig_csharp" style="color: inherit; text-decoration: inherit;">M3db<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfig">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfig">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines M3 specific additional configuration options. The following 
 configuration options available:
@@ -280,7 +299,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbserviceintegration">List&lt;Get<wbr>M3Db<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getm3dbserviceintegration">List&lt;Get<wbr>M3Db<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -797,7 +816,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbcomponent">Sequence[Get<wbr>M3Db<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getm3dbcomponent">Sequence[Get<wbr>M3Db<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +824,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3db_python" style="color: inherit; text-decoration: inherit;">m3db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3db">Get<wbr>M3Db<wbr>M3db<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3db">Get<wbr>M3Db<wbr>M3db</a></span>
     </dt>
     <dd>{{% md %}}M3 specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +833,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3db_user_config_python" style="color: inherit; text-decoration: inherit;">m3db_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfig">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfig">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines M3 specific additional configuration options. The following 
 configuration options available:
@@ -883,7 +902,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbserviceintegration">Sequence[Get<wbr>M3Db<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getm3dbserviceintegration">Sequence[Get<wbr>M3Db<wbr>Service<wbr>Integration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2058,7 +2077,7 @@ deletion is done.
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfiglimits">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfiglimits">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}M3 limits
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2114,7 @@ metrics are written to aggregated namespaces only.
 <a href="#namespaces_csharp" style="color: inherit; text-decoration: inherit;">Namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespace">List&lt;Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespace">List&lt;Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of M3 namespaces
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2123,7 @@ metrics are written to aggregated namespaces only.
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigprivateaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigprivateaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2142,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2151,7 @@ effect only when a new service is being created.
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}Mapping rules allow more granular use of aggregation, not simply sending
 everything to a namespace. If mapping rules exist that target a namespace, only data matching mapping
@@ -2409,7 +2428,7 @@ when a new service is being created.
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfiglimits">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfiglimits">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}M3 limits
 {{% /md %}}</dd><dt class="property-optional"
@@ -2446,7 +2465,7 @@ metrics are written to aggregated namespaces only.
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespace">Sequence[Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespace">Sequence[Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace]</a></span>
     </dt>
     <dd>{{% md %}}List of M3 namespaces
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2474,7 @@ metrics are written to aggregated namespaces only.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigprivateaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigprivateaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2474,7 +2493,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2483,7 +2502,7 @@ effect only when a new service is being created.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrules">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}Mapping rules allow more granular use of aggregation, not simply sending
 everything to a namespace. If mapping rules exist that target a namespace, only data matching mapping
@@ -2689,7 +2708,7 @@ when a new service is being created.
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespaceoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespaceoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Namespace options
 {{% /md %}}</dd><dt class="property-optional"
@@ -2809,7 +2828,7 @@ when a new service is being created.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespaceoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespaceoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Namespace options
 {{% /md %}}</dd><dt class="property-optional"
@@ -2844,7 +2863,7 @@ when a new service is being created.
 <a href="#retentionoptions_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespaceoptionsretentionoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespaceoptionsretentionoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Retention options
 {{% /md %}}</dd><dt class="property-optional"
@@ -2943,7 +2962,7 @@ namespace in the commitlog.
 <a href="#retention_options_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespaceoptionsretentionoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfignamespaceoptionsretentionoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Retention options
 {{% /md %}}</dd><dt class="property-optional"
@@ -3316,7 +3335,7 @@ for service nodes that are in a project VPC or another type of private network.
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmapping">List&lt;Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmapping">List&lt;Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3352,7 +3371,7 @@ for service nodes that are in a project VPC or another type of private network.
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmapping">Sequence[Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmapping">Sequence[Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3406,7 +3425,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmappingtag">List&lt;Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmappingtag">List&lt;Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags to be appended to matching metrics.
 {{% /md %}}</dd></dl>
@@ -3559,7 +3578,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmappingtag">Sequence[Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getm3dbm3dbuserconfigrulesmappingtag">Sequence[Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}List of tags to be appended to matching metrics.
 {{% /md %}}</dd></dl>

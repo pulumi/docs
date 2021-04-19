@@ -165,7 +165,7 @@ package main
 
 import (
 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -486,19 +486,32 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error</span><span class="p">:</span> <span class="nx">Optional[ErrorResponseArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_info</span><span class="p">:</span> <span class="nx">Optional[SUCSchedulePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">software_update_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tasks</span><span class="p">:</span> <span class="nx">Optional[SoftwareUpdateConfigurationTasksArgs]</span> = None<span class="p">, </span><span class="nx">update_configuration</span><span class="p">:</span> <span class="nx">Optional[UpdateConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                      <span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">error</span><span class="p">:</span> <span class="nx">Optional[ErrorResponseArgs]</span> = None<span class="p">,</span>
+                                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">schedule_info</span><span class="p">:</span> <span class="nx">Optional[SUCSchedulePropertiesArgs]</span> = None<span class="p">,</span>
+                                      <span class="nx">software_update_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                      <span class="nx">tasks</span><span class="p">:</span> <span class="nx">Optional[SoftwareUpdateConfigurationTasksArgs]</span> = None<span class="p">,</span>
+                                      <span class="nx">update_configuration</span><span class="p">:</span> <span class="nx">Optional[UpdateConfigurationArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p">,</span>
+                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SoftwareUpdateConfigurationByName</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SoftwareUpdateConfigurationByName</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -533,22 +546,32 @@ const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUp
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SoftwareUpdateConfigurationByNameArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -772,7 +795,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#scheduleinfo_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sucscheduleproperties">SUCSchedule<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sucscheduleproperties">SUCSchedule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -780,7 +803,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#updateconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updateconfiguration">Update<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#updateconfiguration">Update<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}update specific properties for the Software update configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +811,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponse">Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#errorresponse">Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of provisioning error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +827,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#tasks_nodejs" style="color: inherit; text-decoration: inherit;">tasks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#softwareupdateconfigurationtasks">Software<wbr>Update<wbr>Configuration<wbr>Tasks</a></span>
+        <span class="property-type"><a href="#softwareupdateconfigurationtasks">Software<wbr>Update<wbr>Configuration<wbr>Tasks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tasks information for the Software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1231,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence[]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tagsettings_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagsettingsproperties">Tag<wbr>Settings<wbr>Properties</a></span>
+        <span class="property-type"><a href="#tagsettingsproperties">Tag<wbr>Settings<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1745,7 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tagsettings_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagsettingspropertiesresponse">Tag<wbr>Settings<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#tagsettingspropertiesresponse">Tag<wbr>Settings<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag settings for the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2683,7 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advancedschedule_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advancedschedule_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#advancedscheduleresponse">Advanced<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the advanced schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3495,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#posttask_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskproperties">Task<wbr>Properties</a></span>
+        <span class="property-type"><a href="#taskproperties">Task<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pretask_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskproperties">Task<wbr>Properties</a></span>
+        <span class="property-type"><a href="#taskproperties">Task<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3577,7 +3600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#posttask_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Post task properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pretask_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#taskpropertiesresponse">Task<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pre task properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3849,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurequeries_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurequeryproperties">Azure<wbr>Query<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#azurequeryproperties">Azure<wbr>Query<wbr>Properties<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3857,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonazurequeries_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Azure<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonazurequeryproperties">Non<wbr>Azure<wbr>Query<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#nonazurequeryproperties">Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3931,7 +3954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurequeries_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurequerypropertiesresponse">Azure<wbr>Query<wbr>Properties<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azurequerypropertiesresponse">Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure queries in the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3939,7 +3962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonazurequeries_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Azure<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonazurequerypropertiesresponse">Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#nonazurequerypropertiesresponse">Non<wbr>Azure<wbr>Query<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}List of non Azure queries in the software update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4281,7 +4304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_nodejs" style="color: inherit; text-decoration: inherit;">linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxproperties">Linux<wbr>Properties</a></span>
+        <span class="property-type"><a href="#linuxproperties">Linux<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4297,7 +4320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetproperties">Target<wbr>Properties</a></span>
+        <span class="property-type"><a href="#targetproperties">Target<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4305,7 +4328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_nodejs" style="color: inherit; text-decoration: inherit;">windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsproperties">Windows<wbr>Properties</a></span>
+        <span class="property-type"><a href="#windowsproperties">Windows<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4523,7 +4546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_nodejs" style="color: inherit; text-decoration: inherit;">linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpropertiesresponse">Linux<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#linuxpropertiesresponse">Linux<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux specific update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4539,7 +4562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetpropertiesresponse">Target<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#targetpropertiesresponse">Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Group targets for the software update configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4547,7 +4570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_nodejs" style="color: inherit; text-decoration: inherit;">windows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowspropertiesresponse">Windows<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#windowspropertiesresponse">Windows<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows specific update configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}

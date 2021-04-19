@@ -22,17 +22,20 @@ API Version: 2018-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTrigger<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTriggerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTriggerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTrigger<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTriggerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTriggerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trigger(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTriggerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_trigger(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">trigger_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTriggerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTriggerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTriggerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTriggerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTriggerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTrigger` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2018-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTrigger </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTriggerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTriggerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTriggerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTriggerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -428,7 +431,7 @@ The following output properties are available:
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -656,7 +659,7 @@ The following output properties are available:
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -680,7 +683,7 @@ The following output properties are available:
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -720,7 +723,7 @@ The following output properties are available:
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -860,7 +863,7 @@ The following output properties are available:
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -900,7 +903,7 @@ The following output properties are available:
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -916,7 +919,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -924,7 +927,7 @@ The following output properties are available:
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1072,7 +1075,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Sequence[Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Sequence[Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1080,7 +1083,7 @@ The following output properties are available:
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1168,7 +1171,7 @@ The following output properties are available:
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1372,7 +1375,7 @@ The following output properties are available:
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1544,7 +1547,7 @@ The following output properties are available:
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1655,7 @@ The following output properties are available:
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1892,7 +1895,7 @@ The following output properties are available:
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2024,7 +2027,7 @@ The following output properties are available:
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2403,7 @@ The following output properties are available:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2556,7 +2559,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2591,7 @@ The following output properties are available:
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2620,7 +2623,7 @@ The following output properties are available:
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2720,7 +2723,7 @@ The following output properties are available:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2752,7 +2755,7 @@ The following output properties are available:
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2852,7 +2855,7 @@ The following output properties are available:
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2888,7 +2891,7 @@ The following output properties are available:
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2912,7 +2915,7 @@ The following output properties are available:
 <a href="#pipelinereference_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2972,7 +2975,7 @@ The following output properties are available:
 <a href="#pipeline_reference_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3072,7 +3075,7 @@ The following output properties are available:
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3156,7 +3159,7 @@ The following output properties are available:
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3212,7 +3215,7 @@ The following output properties are available:
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3276,7 +3279,7 @@ The following output properties are available:
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3512,7 +3515,7 @@ The following output properties are available:
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3552,7 +3555,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response, Trigger<wbr>Dependency<wbr>Reference<wbr>Response, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3576,7 +3579,7 @@ The following output properties are available:
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}

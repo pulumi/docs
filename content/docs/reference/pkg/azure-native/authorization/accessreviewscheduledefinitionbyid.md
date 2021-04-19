@@ -55,7 +55,7 @@ package main
 
 import (
 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -119,19 +119,45 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_apply_decisions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backup_reviewers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewReviewerArgs]]</span> = None<span class="p">, </span><span class="nx">default_decision</span><span class="p">:</span> <span class="nx">Optional[Union[str, DefaultDecisionType]]</span> = None<span class="p">, </span><span class="nx">default_decision_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description_for_admins</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description_for_reviewers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_duration_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewInstanceArgs]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">justification_required_on_approval</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mail_notifications_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_occurrences</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">recommendations_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reminder_notifications_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reviewers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewReviewerArgs]]</span> = None<span class="p">, </span><span class="nx">schedule_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AccessReviewRecurrenceRangeType]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                       <span class="nx">auto_apply_decisions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                       <span class="nx">backup_reviewers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewReviewerArgs]]</span> = None<span class="p">,</span>
+                                       <span class="nx">default_decision</span><span class="p">:</span> <span class="nx">Optional[Union[str, DefaultDecisionType]]</span> = None<span class="p">,</span>
+                                       <span class="nx">default_decision_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                       <span class="nx">description_for_admins</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">description_for_reviewers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">instance_duration_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                       <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewInstanceArgs]]</span> = None<span class="p">,</span>
+                                       <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                       <span class="nx">justification_required_on_approval</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                       <span class="nx">mail_notifications_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                       <span class="nx">number_of_occurrences</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                                       <span class="nx">recommendations_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                       <span class="nx">reminder_notifications_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                       <span class="nx">reviewers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessReviewReviewerArgs]]</span> = None<span class="p">,</span>
+                                       <span class="nx">schedule_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">start_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AccessReviewRecurrenceRangeType]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AccessReviewScheduleDefinitionByIdArgs]</a></span> = None<span class="p">,</span>
+                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessReviewScheduleDefinitionById</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessReviewScheduleDefinitionById</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessReviewScheduleDefinitionById</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,22 +192,32 @@ const accessReviewScheduleDefinitionById = new azure_native.authorization.Access
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccessReviewScheduleDefinitionByIdArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -605,7 +641,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#backupreviewers_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewreviewer">Access<wbr>Review<wbr>Reviewer[]</a></span>
+        <span class="property-type"><a href="#accessreviewreviewer">Access<wbr>Review<wbr>Reviewer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of backup reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +705,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewinstance">Access<wbr>Review<wbr>Instance[]</a></span>
+        <span class="property-type"><a href="#accessreviewinstance">Access<wbr>Review<wbr>Instance<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of instances returned when one does an expand on it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +761,7 @@ The AccessReviewScheduleDefinitionById resource accepts the following [input]({{
 <a href="#reviewers_nodejs" style="color: inherit; text-decoration: inherit;">reviewers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessreviewreviewer">Access<wbr>Review<wbr>Reviewer[]</a></span>
+        <span class="property-type"><a href="#accessreviewreviewer">Access<wbr>Review<wbr>Reviewer<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}This is the collection of reviewers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

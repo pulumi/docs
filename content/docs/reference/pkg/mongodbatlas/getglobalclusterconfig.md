@@ -23,17 +23,20 @@ meta_desc: "Documentation for the mongodbatlas.getGlobalClusterConfig function w
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGlobalClusterConfig<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGlobalClusterConfigArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGlobalClusterConfigResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGlobalClusterConfig<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGlobalClusterConfigArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGlobalClusterConfigResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_global_cluster_config(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetGlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGlobalClusterConfigResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_global_cluster_config(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetGlobalClusterConfigManagedNamespace]]</span> = None<span class="p">,</span>
+                              <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGlobalClusterConfigResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGlobalClusterConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGlobalClusterConfigArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGlobalClusterConfigResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGlobalClusterConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGlobalClusterConfigArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGlobalClusterConfigResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGlobalClusterConfig` in the Go SDK.
 
@@ -42,7 +45,7 @@ meta_desc: "Documentation for the mongodbatlas.getGlobalClusterConfig function w
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGlobalClusterConfig </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetGlobalClusterConfigResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGlobalClusterConfigArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGlobalClusterConfigResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGlobalClusterConfigArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -76,7 +79,7 @@ The following arguments are supported:
 <a href="#managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">List&lt;Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">List&lt;Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace&gt;</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd></dl>
@@ -169,7 +172,7 @@ The following arguments are supported:
 <a href="#managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">Sequence[Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getglobalclusterconfigmanagednamespace">Sequence[Get<wbr>Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd></dl>
