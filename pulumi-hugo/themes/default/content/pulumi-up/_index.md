@@ -10,7 +10,7 @@ meta_desc: |
 aliases:
     - /pulumiup
 
-countdown_date: 2021-04-20T09:00:00-08:00
+countdown_date: 2021-04-20T09:00:00-07:00
 
 event_sections:
     - title: The Vision
@@ -40,7 +40,7 @@ event_sections:
 workshops:
     - title: Introduction To Pulumi
       url: /resources/introduction-to-pulumi/?date=2021/04/20
-      datetime: 2021-04-20T09:00:00-07:00
+      datetime: 2021-04-20T14:00:00-07:00
       description: |
         In this workshop, you will learn the fundamentals of Infrastructure as Code through guided exercises using Pulumi's Cloud Engineering platform.
 
