@@ -37,7 +37,7 @@ class MyStack : Stack
     {
         var fs = Output.Create(AliCloud.Nas.GetFileSystems.InvokeAsync(new AliCloud.Nas.GetFileSystemsArgs
         {
-            Description = alicloud_nas_file_system.Foo.Description,
+            DescriptionRegex = alicloud_nas_file_system.Foo.Description,
             ProtocolType = "NFS",
         }));
         this.AlicloudNasFileSystemsId = fs.Apply(fs => fs.Systems[0].Id);
@@ -58,16 +58,17 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/nas"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "NFS"
+		opt0 := alicloud_nas_file_system.Foo.Description
+		opt1 := "NFS"
 		fs, err := nas.GetFileSystems(ctx, &nas.GetFileSystemsArgs{
-			Description:  alicloud_nas_file_system.Foo.Description,
-			ProtocolType: &opt0,
+			DescriptionRegex: &opt0,
+			ProtocolType:     &opt1,
 		}, nil)
 		if err != nil {
 			return err
@@ -88,7 +89,7 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-fs = alicloud.nas.get_file_systems(description=alicloud_nas_file_system["foo"]["description"],
+fs = alicloud.nas.get_file_systems(description_regex=alicloud_nas_file_system["foo"]["description"],
     protocol_type="NFS")
 pulumi.export("alicloudNasFileSystemsId", fs.systems[0].id)
 ```
@@ -105,7 +106,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const fs = alicloud_nas_file_system_foo.description.apply(description => alicloud.nas.getFileSystems({
-    description: description,
+    descriptionRegex: description,
     protocolType: "NFS",
 }, { async: true }));
 
@@ -130,17 +131,22 @@ export const alicloudNasFileSystemsId = fs.systems[0].id;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileSystems<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFileSystemsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFileSystemsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileSystems<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFileSystemsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFileSystemsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_file_systems(</span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFileSystemsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_file_systems(</span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">protocol_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFileSystemsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileSystems<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFileSystemsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFileSystemsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileSystems<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetFileSystemsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFileSystemsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetFileSystems` in the Go SDK.
 
@@ -149,7 +155,7 @@ export const alicloudNasFileSystemsId = fs.systems[0].id;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFileSystems </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetFileSystemsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFileSystemsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFileSystemsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFileSystemsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -686,6 +692,18 @@ The following output properties are available:
     <dd>{{% md %}}Destription of the FileSystem.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="encrypttype_csharp">
+<a href="#encrypttype_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in v1.121.2+) Whether the file system is encrypted.
+Valid values:
+0: The file system is not encrypted.
+1: The file system is encrypted with a managed secret key.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -751,6 +769,18 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destription of the FileSystem.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encrypttype_go">
+<a href="#encrypttype_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in v1.121.2+) Whether the file system is encrypted.
+Valid values:
+0: The file system is not encrypted.
+1: The file system is encrypted with a managed secret key.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
@@ -820,6 +850,18 @@ The following output properties are available:
     <dd>{{% md %}}Destription of the FileSystem.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="encrypttype_nodejs">
+<a href="#encrypttype_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in v1.121.2+) Whether the file system is encrypted.
+Valid values:
+0: The file system is not encrypted.
+1: The file system is encrypted with a managed secret key.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -885,6 +927,18 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destription of the FileSystem.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encrypt_type_python">
+<a href="#encrypt_type_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in v1.121.2+) Whether the file system is encrypted.
+Valid values:
+0: The file system is not encrypted.
+1: The file system is encrypted with a managed secret key.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">

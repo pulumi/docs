@@ -41,12 +41,9 @@ class MyStack : Stack
         var web1 = new EquinixMetal.Device("web1", new EquinixMetal.DeviceArgs
         {
             Hostname = "tf.coreos2",
-            Plan = "t1.small.x86",
-            Facilities = 
-            {
-                "ewr1",
-            },
-            OperatingSystem = "coreos_stable",
+            Plan = "c3.small.x86",
+            Metro = "sv",
+            OperatingSystem = "ubuntu_20_04",
             BillingCycle = "hourly",
             ProjectId = local.Project_id,
         });
@@ -65,19 +62,17 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := equinix - metal.NewDevice(ctx, "web1", &equinix-metal.DeviceArgs{
-			Hostname: pulumi.String("tf.coreos2"),
-			Plan:     pulumi.String("t1.small.x86"),
-			Facilities: pulumi.StringArray{
-				pulumi.String("ewr1"),
-			},
-			OperatingSystem: pulumi.String("coreos_stable"),
+			Hostname:        pulumi.String("tf.coreos2"),
+			Plan:            pulumi.String("c3.small.x86"),
+			Metro:           pulumi.String("sv"),
+			OperatingSystem: pulumi.String("ubuntu_20_04"),
 			BillingCycle:    pulumi.String("hourly"),
 			ProjectId:       pulumi.Any(local.Project_id),
 		})
@@ -101,9 +96,9 @@ import pulumi_equinix_metal as equinix_metal
 
 web1 = equinix_metal.Device("web1",
     hostname="tf.coreos2",
-    plan="t1.small.x86",
-    facilities=["ewr1"],
-    operating_system="coreos_stable",
+    plan="c3.small.x86",
+    metro="sv",
+    operating_system="ubuntu_20_04",
     billing_cycle="hourly",
     project_id=local["project_id"])
 ```
@@ -121,9 +116,9 @@ import * as equinix_metal from "@pulumi/equinix-metal";
 
 const web1 = new equinix_metal.Device("web1", {
     hostname: "tf.coreos2",
-    plan: "t1.small.x86",
-    facilities: ["ewr1"],
-    operatingSystem: "coreos_stable",
+    plan: "c3.small.x86",
+    metro: "sv",
+    operatingSystem: "ubuntu_20_04",
     billingCycle: "hourly",
     projectId: local.project_id,
 });
@@ -146,19 +141,44 @@ const web1 = new equinix_metal.Device("web1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Device</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Device</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Facility]]]</span> = None<span class="p">, </span><span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystem]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Union[str, Plan]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">,</span>
+           <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Facility]]]</span> = None<span class="p">,</span>
+           <span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceIpAddressArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystem]]</span> = None<span class="p">,</span>
+           <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Union[str, Plan]]</span> = None<span class="p">,</span>
+           <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Device</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Device</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -193,22 +213,32 @@ const web1 = new equinix_metal.Device("web1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DeviceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,7 +247,7 @@ const web1 = new equinix_metal.Device("web1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -241,7 +271,7 @@ const web1 = new equinix_metal.Device("web1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -299,15 +329,6 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#billingcycle">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="facilities_csharp">
-<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
@@ -372,7 +393,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="facilities_csharp">
+<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_csharp">
 <a href="#forcedetachvolumes_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -410,6 +440,15 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_csharp">
+<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectsshkeyids_csharp">
@@ -469,15 +508,6 @@ doc.
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="facilities_go">
-<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_go">
@@ -542,7 +572,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="facilities_go">
+<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_go">
 <a href="#forcedetachvolumes_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -580,6 +619,15 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_go">
+<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectsshkeyids_go">
@@ -639,15 +687,6 @@ doc.
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="facilities_nodejs">
-<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | Facility[]</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
@@ -712,7 +751,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="facilities_nodejs">
+<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Facility[]</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_nodejs">
 <a href="#forcedetachvolumes_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach<wbr>Volumes</a>
@@ -735,7 +783,7 @@ continue to boot via iPXE on reboots.
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,6 +798,15 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_nodejs">
+<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectsshkeyids_nodejs">
@@ -809,15 +866,6 @@ doc.
         <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="facilities_python">
-<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Facility]]</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_python">
@@ -882,7 +930,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="facilities_python">
+<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[str, Facility]]</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="force_detach_volumes_python">
 <a href="#force_detach_volumes_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach_<wbr>volumes</a>
@@ -920,6 +977,15 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metro_python">
+<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_ssh_key_ids_python">
@@ -1552,20 +1618,55 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Device</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Device</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_private_ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_public_ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_public_ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployed_facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployed_hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Facility]]]</span> = None<span class="p">, </span><span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkType]]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystem]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Union[str, Plan]]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[DevicePortArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_private_ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">access_public_ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">access_public_ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">,</span>
+        <span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">deployed_facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">deployed_hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Facility]]]</span> = None<span class="p">,</span>
+        <span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceIpAddressArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkType]]</span> = None<span class="p">,</span>
+        <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceNetworkArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystem]]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Union[str, Plan]]</span> = None<span class="p">,</span>
+        <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[DevicePortArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Device</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DeviceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Device</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DeviceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1759,16 +1860,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_facilities_csharp">
 <a href="#state_facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_csharp">
 <a href="#state_forcedetachvolumes_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -1824,6 +1925,15 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_csharp">
+<a href="#state_metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_csharp">
@@ -2059,16 +2169,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_facilities_go">
 <a href="#state_facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_go">
 <a href="#state_forcedetachvolumes_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -2124,6 +2234,15 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_go">
+<a href="#state_metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_go">
@@ -2359,16 +2478,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_facilities_nodejs">
 <a href="#state_facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Facility[]</span>
     </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_nodejs">
 <a href="#state_forcedetachvolumes_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach<wbr>Volumes</a>
@@ -2400,7 +2519,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2424,6 +2543,15 @@ doc.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_nodejs">
+<a href="#state_metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_nodejs">
@@ -2438,7 +2566,7 @@ doc.
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicenetwork">Device<wbr>Network[]</a></span>
+        <span class="property-type"><a href="#devicenetwork">Device<wbr>Network<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:
 * Public IPv4 at `metal_device.name.network.0`
@@ -2470,7 +2598,7 @@ The fields of the network attributes are:
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceport">Device<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#deviceport">Device<wbr>Port<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2659,16 +2787,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_facilities_python">
 <a href="#state_facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Facility]]</span>
     </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_detach_volumes_python">
 <a href="#state_force_detach_volumes_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach_<wbr>volumes</a>
@@ -2724,6 +2852,15 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metro_python">
+<a href="#state_metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_network_type_python">

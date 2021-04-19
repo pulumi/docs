@@ -21,17 +21,20 @@ Provides access to Cloud Composer environment configuration in a region for a gi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEnvironment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEnvironmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEnvironmentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEnvironment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEnvironmentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEnvironmentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_environment(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEnvironmentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_environment(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEnvironmentResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEnvironmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEnvironmentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEnvironmentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEnvironmentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEnvironment` in the Go SDK.
 
@@ -40,7 +43,7 @@ Provides access to Cloud Composer environment configuration in a region for a gi
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEnvironment </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetEnvironmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEnvironmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEnvironmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEnvironmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -435,7 +438,7 @@ The following output properties are available:
 <a href="#databaseconfigs_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -443,7 +446,7 @@ The following output properties are available:
 <a href="#encryptionconfigs_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigencryptionconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigencryptionconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Encryption<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -459,7 +462,7 @@ The following output properties are available:
 <a href="#nodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -475,7 +478,7 @@ The following output properties are available:
 <a href="#privateenvironmentconfigs_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -483,7 +486,7 @@ The following output properties are available:
 <a href="#softwareconfigs_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -491,7 +494,7 @@ The following output properties are available:
 <a href="#webserverconfigs_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -499,7 +502,7 @@ The following output properties are available:
 <a href="#webservernetworkaccesscontrols_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Controls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +714,7 @@ The following output properties are available:
 <a href="#database_configs_python" style="color: inherit; text-decoration: inherit;">database_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigdatabaseconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -719,7 +722,7 @@ The following output properties are available:
 <a href="#encryption_configs_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigencryptionconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigencryptionconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Encryption<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -735,7 +738,7 @@ The following output properties are available:
 <a href="#node_configs_python" style="color: inherit; text-decoration: inherit;">node_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -751,7 +754,7 @@ The following output properties are available:
 <a href="#private_environment_configs_python" style="color: inherit; text-decoration: inherit;">private_<wbr>environment_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigprivateenvironmentconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -759,7 +762,7 @@ The following output properties are available:
 <a href="#software_configs_python" style="color: inherit; text-decoration: inherit;">software_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigsoftwareconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +770,7 @@ The following output properties are available:
 <a href="#web_server_configs_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebserverconfig">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -775,7 +778,7 @@ The following output properties are available:
 <a href="#web_server_network_access_controls_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>controls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrol">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +906,7 @@ The following output properties are available:
 <a href="#ipallocationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">List&lt;Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">List&lt;Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1134,7 @@ The following output properties are available:
 <a href="#ip_allocation_policies_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">Sequence[Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfignodeconfigipallocationpolicy">Sequence[Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1763,7 +1766,7 @@ The following output properties are available:
 <a href="#allowedipranges_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrolallowediprange">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrolallowediprange">List&lt;Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1799,7 +1802,7 @@ The following output properties are available:
 <a href="#allowed_ip_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrolallowediprange">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getenvironmentconfigwebservernetworkaccesscontrolallowediprange">Sequence[Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

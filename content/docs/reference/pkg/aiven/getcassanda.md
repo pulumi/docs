@@ -57,8 +57,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -124,17 +124,36 @@ const bar = aiven.getCassanda({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCassanda<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCassandaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCassandaResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCassanda<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCassandaArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCassandaResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cassanda(</span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[GetCassandaCassandraArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[GetCassandaCassandraUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetCassandaComponentArgs]]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetCassandaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCassandaResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cassanda(</span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[GetCassandaCassandra]</span> = None<span class="p">,</span>
+                 <span class="nx">cassandra_user_config</span><span class="p">:</span> <span class="nx">Optional[GetCassandaCassandraUserConfig]</span> = None<span class="p">,</span>
+                 <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetCassandaComponent]]</span> = None<span class="p">,</span>
+                 <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetCassandaServiceIntegration]]</span> = None<span class="p">,</span>
+                 <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCassandaResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCassanda<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCassandaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCassandaResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCassanda<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetCassandaArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCassandaResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetCassanda` in the Go SDK.
 
@@ -143,7 +162,7 @@ const bar = aiven.getCassanda({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCassanda </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCassandaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCassandaArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCassandaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCassandaArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -181,7 +200,7 @@ intended service usage rather than current attributes.
 <a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandra">Get<wbr>Cassanda<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandra">Get<wbr>Cassanda<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -190,7 +209,7 @@ intended service usage rather than current attributes.
 <a href="#cassandrauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Cassandra<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandrauserconfig">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandrauserconfig">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines Cassandra specific additional configuration options. 
 The following configuration options available:
@@ -215,7 +234,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacomponent">List&lt;Get<wbr>Cassanda<wbr>Component<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcassandacomponent">List&lt;Get<wbr>Cassanda<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -282,7 +301,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandaserviceintegration">List&lt;Get<wbr>Cassanda<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getcassandaserviceintegration">List&lt;Get<wbr>Cassanda<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +803,7 @@ intended service usage rather than current attributes.
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandra">Get<wbr>Cassanda<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandra">Get<wbr>Cassanda<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +812,7 @@ intended service usage rather than current attributes.
 <a href="#cassandra_user_config_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandrauserconfig">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandrauserconfig">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines Cassandra specific additional configuration options. 
 The following configuration options available:
@@ -818,7 +837,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacomponent">Sequence[Get<wbr>Cassanda<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcassandacomponent">Sequence[Get<wbr>Cassanda<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +904,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandaserviceintegration">Sequence[Get<wbr>Cassanda<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getcassandaserviceintegration">Sequence[Get<wbr>Cassanda<wbr>Service<wbr>Integration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1798,7 +1817,7 @@ deletion is done.
 <a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandrauserconfigcassandra">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandrauserconfigcassandra">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1845,7 @@ utility to be used to upload Cassandra data files. Available only on service cre
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandrauserconfigprivateaccess">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandrauserconfigprivateaccess">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1843,7 +1862,7 @@ utility to be used to upload Cassandra data files. Available only on service cre
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandrauserconfigpublicaccess">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandrauserconfigpublicaccess">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2002,7 +2021,7 @@ when a new service is being created.
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandrauserconfigcassandra">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandrauserconfigcassandra">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}Cassandra specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +2049,7 @@ utility to be used to upload Cassandra data files. Available only on service cre
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandrauserconfigprivateaccess">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandrauserconfigprivateaccess">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2047,7 +2066,7 @@ utility to be used to upload Cassandra data files. Available only on service cre
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcassandacassandrauserconfigpublicaccess">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getcassandacassandrauserconfigpublicaccess">Get<wbr>Cassanda<wbr>Cassandra<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"

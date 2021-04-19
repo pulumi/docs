@@ -22,17 +22,20 @@ API Version: 2020-05-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMachineLearningDatastore<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMachineLearningDatastoreArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMachineLearningDatastoreResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMachineLearningDatastore<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMachineLearningDatastoreArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMachineLearningDatastoreResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_machine_learning_datastore(</span><span class="nx">datastore_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMachineLearningDatastoreResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_machine_learning_datastore(</span><span class="nx">datastore_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMachineLearningDatastoreResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMachineLearningDatastore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMachineLearningDatastoreArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMachineLearningDatastoreResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMachineLearningDatastore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMachineLearningDatastoreArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMachineLearningDatastoreResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMachineLearningDatastore` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-05-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMachineLearningDatastore </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMachineLearningDatastoreResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMachineLearningDatastoreArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMachineLearningDatastoreResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMachineLearningDatastoreArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -2748,7 +2751,7 @@ The following output properties are available:
 <a href="#clientcredentials_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Client<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3120,7 +3123,7 @@ The following output properties are available:
 <a href="#client_credentials_python" style="color: inherit; text-decoration: inherit;">client_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3588,7 +3591,7 @@ The following output properties are available:
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3604,7 +3607,7 @@ The following output properties are available:
 <a href="#modifiedby_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3628,7 +3631,7 @@ The following output properties are available:
 <a href="#azuredatalakesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Data<wbr>Lake<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3636,7 +3639,7 @@ The following output properties are available:
 <a href="#azuremysqlsection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>My<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3647,7 @@ The following output properties are available:
 <a href="#azurepostgresqlsection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Postgre<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3652,7 +3655,7 @@ The following output properties are available:
 <a href="#azuresqldatabasesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sql<wbr>Database<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3660,7 +3663,7 @@ The following output properties are available:
 <a href="#azurestoragesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3684,7 +3687,7 @@ The following output properties are available:
 <a href="#glusterfssection_csharp" style="color: inherit; text-decoration: inherit;">Gluster<wbr>Fs<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Gluster<wbr>Fs<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3700,7 +3703,7 @@ The following output properties are available:
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Linked<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3984,7 +3987,7 @@ The following output properties are available:
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4000,7 +4003,7 @@ The following output properties are available:
 <a href="#modified_by_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4024,7 +4027,7 @@ The following output properties are available:
 <a href="#azure_data_lake_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>data_<wbr>lake_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4032,7 +4035,7 @@ The following output properties are available:
 <a href="#azure_my_sql_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>my_<wbr>sql_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4040,7 +4043,7 @@ The following output properties are available:
 <a href="#azure_postgre_sql_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>postgre_<wbr>sql_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4048,7 +4051,7 @@ The following output properties are available:
 <a href="#azure_sql_database_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sql_<wbr>database_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4056,7 +4059,7 @@ The following output properties are available:
 <a href="#azure_storage_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4080,7 +4083,7 @@ The following output properties are available:
 <a href="#gluster_fs_section_python" style="color: inherit; text-decoration: inherit;">gluster_<wbr>fs_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4096,7 +4099,7 @@ The following output properties are available:
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4228,7 +4231,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4336,7 +4339,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

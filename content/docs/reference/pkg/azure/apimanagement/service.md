@@ -75,9 +75,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -181,19 +181,45 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">, </span><span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">, </span><span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">,</span>
+            <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">,</span>
+            <span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">,</span>
+            <span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">,</span>
+            <span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">,</span>
+            <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+            <span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">,</span>
+            <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -228,22 +254,32 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,7 +288,7 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -276,7 +312,7 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -737,7 +773,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#additionallocations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +782,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +791,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +800,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +836,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +845,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -818,7 +854,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -827,7 +863,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#signin_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -836,7 +872,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#signup_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -854,7 +890,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tenantaccess_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +899,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,20 +1451,50 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">developer_portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_regional_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_api_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">, </span><span class="nx">portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scm_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">, </span><span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">, </span><span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">developer_portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">gateway_regional_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">gateway_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">management_api_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scm_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">,</span>
+        <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2051,7 +2117,7 @@ The following state arguments are supported:
 <a href="#state_additionallocations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2126,7 @@ The following state arguments are supported:
 <a href="#state_certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2162,7 @@ The following state arguments are supported:
 <a href="#state_hostnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2171,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2216,7 @@ The following state arguments are supported:
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2243,7 @@ The following state arguments are supported:
 <a href="#state_protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2231,7 +2297,7 @@ The following state arguments are supported:
 <a href="#state_security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2240,7 +2306,7 @@ The following state arguments are supported:
 <a href="#state_signin_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2249,7 +2315,7 @@ The following state arguments are supported:
 <a href="#state_signup_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2342,7 @@ The following state arguments are supported:
 <a href="#state_tenantaccess_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2351,7 @@ The following state arguments are supported:
 <a href="#state_virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2710,7 +2776,7 @@ The following state arguments are supported:
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd></dl>
@@ -3052,7 +3118,7 @@ The following state arguments are supported:
 <a href="#developerportals_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3061,7 +3127,7 @@ The following state arguments are supported:
 <a href="#managements_nodejs" style="color: inherit; text-decoration: inherit;">managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3070,7 +3136,7 @@ The following state arguments are supported:
 <a href="#portals_nodejs" style="color: inherit; text-decoration: inherit;">portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3079,7 +3145,7 @@ The following state arguments are supported:
 <a href="#proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3088,7 +3154,7 @@ The following state arguments are supported:
 <a href="#scms_nodejs" style="color: inherit; text-decoration: inherit;">scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -5213,7 +5279,7 @@ The following state arguments are supported:
 <a href="#termsofservice_nodejs" style="color: inherit; text-decoration: inherit;">terms<wbr>Of<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</a></span>
+        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
 {{% /md %}}</dd></dl>

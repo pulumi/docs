@@ -22,6 +22,7 @@ PROVIDERS=(
     "azure-native"
     "azuread"
     "gcp"
+    "google-native"
 )
 
 echo "Generating docs templates bundle in pulumi/pulumi"

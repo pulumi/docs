@@ -75,7 +75,7 @@ package main
 
 import (
 	confluent "github.com/pulumi/pulumi-azure-native/sdk/go/azure/confluent"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -193,19 +193,31 @@ const organization = new azure_native.confluent.Organization("organization", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_detail</span><span class="p">:</span> <span class="nx">Optional[OrganizationResourcePropertiesOfferDetailArgs]</span> = None<span class="p">, </span><span class="nx">organization_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_detail</span><span class="p">:</span> <span class="nx">Optional[OrganizationResourcePropertiesUserDetailArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">offer_detail</span><span class="p">:</span> <span class="nx">Optional[OrganizationResourcePropertiesOfferDetailArgs]</span> = None<span class="p">,</span>
+                 <span class="nx">organization_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                 <span class="nx">user_detail</span><span class="p">:</span> <span class="nx">Optional[OrganizationResourcePropertiesUserDetailArgs]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganization</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Organization</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganization</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Organization</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Organization</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -240,22 +252,32 @@ const organization = new azure_native.confluent.Organization("organization", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OrganizationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -463,7 +485,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offerdetail_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationresourcepropertiesofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Offer<wbr>Detail</a></span>
+        <span class="property-type"><a href="#organizationresourcepropertiesofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Offer<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +509,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#userdetail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationresourcepropertiesuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>User<wbr>Detail</a></span>
+        <span class="property-type"><a href="#organizationresourcepropertiesuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>User<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subscriber detail{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -838,14 +860,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#saasofferstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Confluent.<wbr>Saa<wbr>SOffer<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="termunit_csharp">
 <a href="#termunit_csharp" style="color: inherit; text-decoration: inherit;">Term<wbr>Unit</a>
 </span>
@@ -889,14 +903,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#saasofferstatus">Saa<wbr>SOffer<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termunit_go">
 <a href="#termunit_go" style="color: inherit; text-decoration: inherit;">Term<wbr>Unit</a>
@@ -942,14 +948,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#saasofferstatus">Saa<wbr>SOffer<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="termunit_nodejs">
 <a href="#termunit_nodejs" style="color: inherit; text-decoration: inherit;">term<wbr>Unit</a>
 </span>
@@ -994,14 +992,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#saasofferstatus">Saa<wbr>SOffer<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="term_unit_python">
 <a href="#term_unit_python" style="color: inherit; text-decoration: inherit;">term_<wbr>unit</a>
 </span>
@@ -1014,7 +1004,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1048,14 +1046,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="termunit_csharp">
 <a href="#termunit_csharp" style="color: inherit; text-decoration: inherit;">Term<wbr>Unit</a>
 </span>
@@ -1066,7 +1056,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1100,14 +1098,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="termunit_go">
 <a href="#termunit_go" style="color: inherit; text-decoration: inherit;">Term<wbr>Unit</a>
 </span>
@@ -1118,7 +1108,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1152,14 +1150,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="termunit_nodejs">
 <a href="#termunit_nodejs" style="color: inherit; text-decoration: inherit;">term<wbr>Unit</a>
 </span>
@@ -1170,7 +1160,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1203,14 +1201,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_unit_python">
 <a href="#term_unit_python" style="color: inherit; text-decoration: inherit;">term_<wbr>unit</a>
@@ -1447,64 +1437,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="saasofferstatus">Saa<wbr>SOffer<wbr>Status</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Started</dt>
-    <dd>Started</dd><dt>Pending<wbr>Fulfillment<wbr>Start</dt>
-    <dd>PendingFulfillmentStart</dd><dt>In<wbr>Progress</dt>
-    <dd>InProgress</dd><dt>Subscribed</dt>
-    <dd>Subscribed</dd><dt>Suspended</dt>
-    <dd>Suspended</dd><dt>Reinstated</dt>
-    <dd>Reinstated</dd><dt>Succeeded</dt>
-    <dd>Succeeded</dd><dt>Failed</dt>
-    <dd>Failed</dd><dt>Unsubscribed</dt>
-    <dd>Unsubscribed</dd><dt>Updating</dt>
-    <dd>Updating</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Saa<wbr>SOffer<wbr>Status<wbr>Started</dt>
-    <dd>Started</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>Pending<wbr>Fulfillment<wbr>Start</dt>
-    <dd>PendingFulfillmentStart</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>In<wbr>Progress</dt>
-    <dd>InProgress</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>Subscribed</dt>
-    <dd>Subscribed</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>Suspended</dt>
-    <dd>Suspended</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>Reinstated</dt>
-    <dd>Reinstated</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>Succeeded</dt>
-    <dd>Succeeded</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>Failed</dt>
-    <dd>Failed</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>Unsubscribed</dt>
-    <dd>Unsubscribed</dd><dt>Saa<wbr>SOffer<wbr>Status<wbr>Updating</dt>
-    <dd>Updating</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Started</dt>
-    <dd>Started</dd><dt>Pending<wbr>Fulfillment<wbr>Start</dt>
-    <dd>PendingFulfillmentStart</dd><dt>In<wbr>Progress</dt>
-    <dd>InProgress</dd><dt>Subscribed</dt>
-    <dd>Subscribed</dd><dt>Suspended</dt>
-    <dd>Suspended</dd><dt>Reinstated</dt>
-    <dd>Reinstated</dd><dt>Succeeded</dt>
-    <dd>Succeeded</dd><dt>Failed</dt>
-    <dd>Failed</dd><dt>Unsubscribed</dt>
-    <dd>Unsubscribed</dd><dt>Updating</dt>
-    <dd>Updating</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>STARTED</dt>
-    <dd>Started</dd><dt>PENDING_FULFILLMENT_START</dt>
-    <dd>PendingFulfillmentStart</dd><dt>IN_PROGRESS</dt>
-    <dd>InProgress</dd><dt>SUBSCRIBED</dt>
-    <dd>Subscribed</dd><dt>SUSPENDED</dt>
-    <dd>Suspended</dd><dt>REINSTATED</dt>
-    <dd>Reinstated</dd><dt>SUCCEEDED</dt>
-    <dd>Succeeded</dd><dt>FAILED</dt>
-    <dd>Failed</dd><dt>UNSUBSCRIBED</dt>
-    <dd>Unsubscribed</dd><dt>UPDATING</dt>
-    <dd>Updating</dd></dl>
 {{% /choosable %}}
 ## Import
 

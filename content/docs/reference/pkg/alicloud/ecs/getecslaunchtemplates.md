@@ -61,8 +61,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -134,17 +134,24 @@ export const firstEcsLaunchTemplateId = example.then(example => example.template
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEcsLaunchTemplates<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEcsLaunchTemplatesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEcsLaunchTemplatesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEcsLaunchTemplates<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEcsLaunchTemplatesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEcsLaunchTemplatesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ecs_launch_templates(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">launch_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEcsLaunchTemplatesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ecs_launch_templates(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                             <span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">launch_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">template_resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">template_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEcsLaunchTemplatesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEcsLaunchTemplates<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEcsLaunchTemplatesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEcsLaunchTemplatesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEcsLaunchTemplates<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetEcsLaunchTemplatesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEcsLaunchTemplatesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetEcsLaunchTemplates` in the Go SDK.
 
@@ -153,7 +160,7 @@ export const firstEcsLaunchTemplateId = example.then(example => example.template
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEcsLaunchTemplates </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetEcsLaunchTemplatesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEcsLaunchTemplatesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEcsLaunchTemplatesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEcsLaunchTemplatesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -810,7 +817,7 @@ The following output properties are available:
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getecslaunchtemplatestemplatedatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getecslaunchtemplatestemplatedatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>Data<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of data disks created with instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -999,7 +1006,7 @@ The following output properties are available:
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getecslaunchtemplatestemplatenetworkinterface">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getecslaunchtemplatestemplatenetworkinterface">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>Network<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of network interfaces created with instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -1116,7 +1123,7 @@ The following output properties are available:
 <a href="#systemdisks_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getecslaunchtemplatestemplatesystemdisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>System<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getecslaunchtemplatestemplatesystemdisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>System<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}The System Disk.
 {{% /md %}}</dd><dt class="property-required"
@@ -1983,7 +1990,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getecslaunchtemplatestemplatedatadisk">Sequence[Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getecslaunchtemplatestemplatedatadisk">Sequence[Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>Data<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}The list of data disks created with instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -2172,7 +2179,7 @@ The following output properties are available:
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getecslaunchtemplatestemplatenetworkinterface">Sequence[Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getecslaunchtemplatestemplatenetworkinterface">Sequence[Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}The list of network interfaces created with instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -2289,7 +2296,7 @@ The following output properties are available:
 <a href="#system_disks_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getecslaunchtemplatestemplatesystemdisk">Sequence[Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>System<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getecslaunchtemplatestemplatesystemdisk">Sequence[Get<wbr>Ecs<wbr>Launch<wbr>Templates<wbr>Template<wbr>System<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}The System Disk.
 {{% /md %}}</dd><dt class="property-required"

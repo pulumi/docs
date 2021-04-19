@@ -356,19 +356,29 @@ const dataset = new azure_native.datafactory.Dataset("dataset", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AmazonMWSObjectDatasetArgs, AmazonRedshiftTableDatasetArgs, AmazonS3DatasetArgs, AvroDatasetArgs, AzureBlobDatasetArgs, AzureBlobFSDatasetArgs, AzureDataExplorerTableDatasetArgs, AzureDataLakeStoreDatasetArgs, AzureDatabricksDeltaLakeDatasetArgs, AzureMariaDBTableDatasetArgs, AzureMySqlTableDatasetArgs, AzurePostgreSqlTableDatasetArgs, AzureSearchIndexDatasetArgs, AzureSqlDWTableDatasetArgs, AzureSqlMITableDatasetArgs, AzureSqlTableDatasetArgs, AzureTableDatasetArgs, BinaryDatasetArgs, CassandraTableDatasetArgs, CommonDataServiceForAppsEntityDatasetArgs, ConcurObjectDatasetArgs, CosmosDbMongoDbApiCollectionDatasetArgs, CosmosDbSqlApiCollectionDatasetArgs, CouchbaseTableDatasetArgs, CustomDatasetArgs, Db2TableDatasetArgs, DelimitedTextDatasetArgs, DocumentDbCollectionDatasetArgs, DrillTableDatasetArgs, DynamicsAXResourceDatasetArgs, DynamicsCrmEntityDatasetArgs, DynamicsEntityDatasetArgs, EloquaObjectDatasetArgs, ExcelDatasetArgs, FileShareDatasetArgs, GoogleAdWordsObjectDatasetArgs, GoogleBigQueryObjectDatasetArgs, GreenplumTableDatasetArgs, HBaseObjectDatasetArgs, HiveObjectDatasetArgs, HttpDatasetArgs, HubspotObjectDatasetArgs, ImpalaObjectDatasetArgs, InformixTableDatasetArgs, JiraObjectDatasetArgs, JsonDatasetArgs, MagentoObjectDatasetArgs, MariaDBTableDatasetArgs, MarketoObjectDatasetArgs, MicrosoftAccessTableDatasetArgs, MongoDbAtlasCollectionDatasetArgs, MongoDbCollectionDatasetArgs, MongoDbV2CollectionDatasetArgs, MySqlTableDatasetArgs, NetezzaTableDatasetArgs, ODataResourceDatasetArgs, OdbcTableDatasetArgs, Office365DatasetArgs, OracleServiceCloudObjectDatasetArgs, OracleTableDatasetArgs, OrcDatasetArgs, ParquetDatasetArgs, PaypalObjectDatasetArgs, PhoenixObjectDatasetArgs, PostgreSqlTableDatasetArgs, PrestoObjectDatasetArgs, QuickBooksObjectDatasetArgs, RelationalTableDatasetArgs, ResponsysObjectDatasetArgs, RestResourceDatasetArgs, SalesforceMarketingCloudObjectDatasetArgs, SalesforceObjectDatasetArgs, SalesforceServiceCloudObjectDatasetArgs, SapBwCubeDatasetArgs, SapCloudForCustomerResourceDatasetArgs, SapEccResourceDatasetArgs, SapHanaTableDatasetArgs, SapOpenHubTableDatasetArgs, SapTableResourceDatasetArgs, ServiceNowObjectDatasetArgs, SharePointOnlineListResourceDatasetArgs, ShopifyObjectDatasetArgs, SnowflakeDatasetArgs, SparkObjectDatasetArgs, SqlServerTableDatasetArgs, SquareObjectDatasetArgs, SybaseTableDatasetArgs, TeradataTableDatasetArgs, VerticaTableDatasetArgs, WebTableDatasetArgs, XeroObjectDatasetArgs, XmlDatasetArgs, ZohoObjectDatasetArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AmazonMWSObjectDatasetArgs, AmazonRedshiftTableDatasetArgs, AmazonS3DatasetArgs, AvroDatasetArgs, AzureBlobDatasetArgs, AzureBlobFSDatasetArgs, AzureDataExplorerTableDatasetArgs, AzureDataLakeStoreDatasetArgs, AzureDatabricksDeltaLakeDatasetArgs, AzureMariaDBTableDatasetArgs, AzureMySqlTableDatasetArgs, AzurePostgreSqlTableDatasetArgs, AzureSearchIndexDatasetArgs, AzureSqlDWTableDatasetArgs, AzureSqlMITableDatasetArgs, AzureSqlTableDatasetArgs, AzureTableDatasetArgs, BinaryDatasetArgs, CassandraTableDatasetArgs, CommonDataServiceForAppsEntityDatasetArgs, ConcurObjectDatasetArgs, CosmosDbMongoDbApiCollectionDatasetArgs, CosmosDbSqlApiCollectionDatasetArgs, CouchbaseTableDatasetArgs, CustomDatasetArgs, Db2TableDatasetArgs, DelimitedTextDatasetArgs, DocumentDbCollectionDatasetArgs, DrillTableDatasetArgs, DynamicsAXResourceDatasetArgs, DynamicsCrmEntityDatasetArgs, DynamicsEntityDatasetArgs, EloquaObjectDatasetArgs, ExcelDatasetArgs, FileShareDatasetArgs, GoogleAdWordsObjectDatasetArgs, GoogleBigQueryObjectDatasetArgs, GreenplumTableDatasetArgs, HBaseObjectDatasetArgs, HiveObjectDatasetArgs, HttpDatasetArgs, HubspotObjectDatasetArgs, ImpalaObjectDatasetArgs, InformixTableDatasetArgs, JiraObjectDatasetArgs, JsonDatasetArgs, MagentoObjectDatasetArgs, MariaDBTableDatasetArgs, MarketoObjectDatasetArgs, MicrosoftAccessTableDatasetArgs, MongoDbAtlasCollectionDatasetArgs, MongoDbCollectionDatasetArgs, MongoDbV2CollectionDatasetArgs, MySqlTableDatasetArgs, NetezzaTableDatasetArgs, ODataResourceDatasetArgs, OdbcTableDatasetArgs, Office365DatasetArgs, OracleServiceCloudObjectDatasetArgs, OracleTableDatasetArgs, OrcDatasetArgs, ParquetDatasetArgs, PaypalObjectDatasetArgs, PhoenixObjectDatasetArgs, PostgreSqlTableDatasetArgs, PrestoObjectDatasetArgs, QuickBooksObjectDatasetArgs, RelationalTableDatasetArgs, ResponsysObjectDatasetArgs, RestResourceDatasetArgs, SalesforceMarketingCloudObjectDatasetArgs, SalesforceObjectDatasetArgs, SalesforceServiceCloudObjectDatasetArgs, SapBwCubeDatasetArgs, SapCloudForCustomerResourceDatasetArgs, SapEccResourceDatasetArgs, SapHanaTableDatasetArgs, SapOpenHubTableDatasetArgs, SapTableResourceDatasetArgs, ServiceNowObjectDatasetArgs, SharePointOnlineListResourceDatasetArgs, ShopifyObjectDatasetArgs, SnowflakeDatasetArgs, SparkObjectDatasetArgs, SqlServerTableDatasetArgs, SquareObjectDatasetArgs, SybaseTableDatasetArgs, TeradataTableDatasetArgs, VerticaTableDatasetArgs, WebTableDatasetArgs, XeroObjectDatasetArgs, XmlDatasetArgs, ZohoObjectDatasetArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dataset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dataset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -403,22 +413,32 @@ const dataset = new azure_native.datafactory.Dataset("dataset", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatasetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -586,7 +606,7 @@ The Dataset resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwsobjectdataset">Amazon<wbr>MWSObject<wbr>Dataset</a> | <a href="#amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset</a> | <a href="#amazons3dataset">Amazon<wbr>S3Dataset</a> | <a href="#avrodataset">Avro<wbr>Dataset</a> | <a href="#azureblobdataset">Azure<wbr>Blob<wbr>Dataset</a> | <a href="#azureblobfsdataset">Azure<wbr>Blob<wbr>FSDataset</a> | <a href="#azuredataexplorertabledataset">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset</a> | <a href="#azuredatalakestoredataset">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset</a> | <a href="#azuredatabricksdeltalakedataset">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset</a> | <a href="#azuremariadbtabledataset">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset</a> | <a href="#azuremysqltabledataset">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset</a> | <a href="#azurepostgresqltabledataset">Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset</a> | <a href="#azuresearchindexdataset">Azure<wbr>Search<wbr>Index<wbr>Dataset</a> | <a href="#azuresqldwtabledataset">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset</a> | <a href="#azuresqlmitabledataset">Azure<wbr>Sql<wbr>MITable<wbr>Dataset</a> | <a href="#azuresqltabledataset">Azure<wbr>Sql<wbr>Table<wbr>Dataset</a> | <a href="#azuretabledataset">Azure<wbr>Table<wbr>Dataset</a> | <a href="#binarydataset">Binary<wbr>Dataset</a> | <a href="#cassandratabledataset">Cassandra<wbr>Table<wbr>Dataset</a> | <a href="#commondataserviceforappsentitydataset">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset</a> | <a href="#concurobjectdataset">Concur<wbr>Object<wbr>Dataset</a> | <a href="#cosmosdbmongodbapicollectiondataset">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset</a> | <a href="#cosmosdbsqlapicollectiondataset">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset</a> | <a href="#couchbasetabledataset">Couchbase<wbr>Table<wbr>Dataset</a> | <a href="#customdataset">Custom<wbr>Dataset</a> | <a href="#db2tabledataset">Db2Table<wbr>Dataset</a> | <a href="#delimitedtextdataset">Delimited<wbr>Text<wbr>Dataset</a> | <a href="#documentdbcollectiondataset">Document<wbr>Db<wbr>Collection<wbr>Dataset</a> | <a href="#drilltabledataset">Drill<wbr>Table<wbr>Dataset</a> | <a href="#dynamicsaxresourcedataset">Dynamics<wbr>AXResource<wbr>Dataset</a> | <a href="#dynamicscrmentitydataset">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset</a> | <a href="#dynamicsentitydataset">Dynamics<wbr>Entity<wbr>Dataset</a> | <a href="#eloquaobjectdataset">Eloqua<wbr>Object<wbr>Dataset</a> | <a href="#exceldataset">Excel<wbr>Dataset</a> | <a href="#filesharedataset">File<wbr>Share<wbr>Dataset</a> | <a href="#googleadwordsobjectdataset">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset</a> | <a href="#googlebigqueryobjectdataset">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset</a> | <a href="#greenplumtabledataset">Greenplum<wbr>Table<wbr>Dataset</a> | <a href="#hbaseobjectdataset">HBase<wbr>Object<wbr>Dataset</a> | <a href="#hiveobjectdataset">Hive<wbr>Object<wbr>Dataset</a> | <a href="#httpdataset">Http<wbr>Dataset</a> | <a href="#hubspotobjectdataset">Hubspot<wbr>Object<wbr>Dataset</a> | <a href="#impalaobjectdataset">Impala<wbr>Object<wbr>Dataset</a> | <a href="#informixtabledataset">Informix<wbr>Table<wbr>Dataset</a> | <a href="#jiraobjectdataset">Jira<wbr>Object<wbr>Dataset</a> | <a href="#jsondataset">Json<wbr>Dataset</a> | <a href="#magentoobjectdataset">Magento<wbr>Object<wbr>Dataset</a> | <a href="#mariadbtabledataset">Maria<wbr>DBTable<wbr>Dataset</a> | <a href="#marketoobjectdataset">Marketo<wbr>Object<wbr>Dataset</a> | <a href="#microsoftaccesstabledataset">Microsoft<wbr>Access<wbr>Table<wbr>Dataset</a> | <a href="#mongodbatlascollectiondataset">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset</a> | <a href="#mongodbcollectiondataset">Mongo<wbr>Db<wbr>Collection<wbr>Dataset</a> | <a href="#mongodbv2collectiondataset">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset</a> | <a href="#mysqltabledataset">My<wbr>Sql<wbr>Table<wbr>Dataset</a> | <a href="#netezzatabledataset">Netezza<wbr>Table<wbr>Dataset</a> | <a href="#odataresourcedataset">OData<wbr>Resource<wbr>Dataset</a> | <a href="#odbctabledataset">Odbc<wbr>Table<wbr>Dataset</a> | <a href="#office365dataset">Office365Dataset</a> | <a href="#oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset</a> | <a href="#oracletabledataset">Oracle<wbr>Table<wbr>Dataset</a> | <a href="#orcdataset">Orc<wbr>Dataset</a> | <a href="#parquetdataset">Parquet<wbr>Dataset</a> | <a href="#paypalobjectdataset">Paypal<wbr>Object<wbr>Dataset</a> | <a href="#phoenixobjectdataset">Phoenix<wbr>Object<wbr>Dataset</a> | <a href="#postgresqltabledataset">Postgre<wbr>Sql<wbr>Table<wbr>Dataset</a> | <a href="#prestoobjectdataset">Presto<wbr>Object<wbr>Dataset</a> | <a href="#quickbooksobjectdataset">Quick<wbr>Books<wbr>Object<wbr>Dataset</a> | <a href="#relationaltabledataset">Relational<wbr>Table<wbr>Dataset</a> | <a href="#responsysobjectdataset">Responsys<wbr>Object<wbr>Dataset</a> | <a href="#restresourcedataset">Rest<wbr>Resource<wbr>Dataset</a> | <a href="#salesforcemarketingcloudobjectdataset">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset</a> | <a href="#salesforceobjectdataset">Salesforce<wbr>Object<wbr>Dataset</a> | <a href="#salesforceservicecloudobjectdataset">Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset</a> | <a href="#sapbwcubedataset">Sap<wbr>Bw<wbr>Cube<wbr>Dataset</a> | <a href="#sapcloudforcustomerresourcedataset">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset</a> | <a href="#sapeccresourcedataset">Sap<wbr>Ecc<wbr>Resource<wbr>Dataset</a> | <a href="#saphanatabledataset">Sap<wbr>Hana<wbr>Table<wbr>Dataset</a> | <a href="#sapopenhubtabledataset">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset</a> | <a href="#saptableresourcedataset">Sap<wbr>Table<wbr>Resource<wbr>Dataset</a> | <a href="#servicenowobjectdataset">Service<wbr>Now<wbr>Object<wbr>Dataset</a> | <a href="#sharepointonlinelistresourcedataset">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset</a> | <a href="#shopifyobjectdataset">Shopify<wbr>Object<wbr>Dataset</a> | <a href="#snowflakedataset">Snowflake<wbr>Dataset</a> | <a href="#sparkobjectdataset">Spark<wbr>Object<wbr>Dataset</a> | <a href="#sqlservertabledataset">Sql<wbr>Server<wbr>Table<wbr>Dataset</a> | <a href="#squareobjectdataset">Square<wbr>Object<wbr>Dataset</a> | <a href="#sybasetabledataset">Sybase<wbr>Table<wbr>Dataset</a> | <a href="#teradatatabledataset">Teradata<wbr>Table<wbr>Dataset</a> | <a href="#verticatabledataset">Vertica<wbr>Table<wbr>Dataset</a> | <a href="#webtabledataset">Web<wbr>Table<wbr>Dataset</a> | <a href="#xeroobjectdataset">Xero<wbr>Object<wbr>Dataset</a> | <a href="#xmldataset">Xml<wbr>Dataset</a> | <a href="#zohoobjectdataset">Zoho<wbr>Object<wbr>Dataset</a></span>
+        <span class="property-type"><a href="#amazonmwsobjectdataset">Amazon<wbr>MWSObject<wbr>Dataset<wbr>Args</a> | <a href="#amazonredshifttabledataset">Amazon<wbr>Redshift<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#amazons3dataset">Amazon<wbr>S3Dataset<wbr>Args</a> | <a href="#avrodataset">Avro<wbr>Dataset<wbr>Args</a> | <a href="#azureblobdataset">Azure<wbr>Blob<wbr>Dataset<wbr>Args</a> | <a href="#azureblobfsdataset">Azure<wbr>Blob<wbr>FSDataset<wbr>Args</a> | <a href="#azuredataexplorertabledataset">Azure<wbr>Data<wbr>Explorer<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuredatalakestoredataset">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Dataset<wbr>Args</a> | <a href="#azuredatabricksdeltalakedataset">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Dataset<wbr>Args</a> | <a href="#azuremariadbtabledataset">Azure<wbr>Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#azuremysqltabledataset">Azure<wbr>My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azurepostgresqltabledataset">Azure<wbr>Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuresearchindexdataset">Azure<wbr>Search<wbr>Index<wbr>Dataset<wbr>Args</a> | <a href="#azuresqldwtabledataset">Azure<wbr>Sql<wbr>DWTable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqlmitabledataset">Azure<wbr>Sql<wbr>MITable<wbr>Dataset<wbr>Args</a> | <a href="#azuresqltabledataset">Azure<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#azuretabledataset">Azure<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#binarydataset">Binary<wbr>Dataset<wbr>Args</a> | <a href="#cassandratabledataset">Cassandra<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#commondataserviceforappsentitydataset">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#concurobjectdataset">Concur<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbmongodbapicollectiondataset">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#cosmosdbsqlapicollectiondataset">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#couchbasetabledataset">Couchbase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#customdataset">Custom<wbr>Dataset<wbr>Args</a> | <a href="#db2tabledataset">Db2Table<wbr>Dataset<wbr>Args</a> | <a href="#delimitedtextdataset">Delimited<wbr>Text<wbr>Dataset<wbr>Args</a> | <a href="#documentdbcollectiondataset">Document<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#drilltabledataset">Drill<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsaxresourcedataset">Dynamics<wbr>AXResource<wbr>Dataset<wbr>Args</a> | <a href="#dynamicscrmentitydataset">Dynamics<wbr>Crm<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#dynamicsentitydataset">Dynamics<wbr>Entity<wbr>Dataset<wbr>Args</a> | <a href="#eloquaobjectdataset">Eloqua<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#exceldataset">Excel<wbr>Dataset<wbr>Args</a> | <a href="#filesharedataset">File<wbr>Share<wbr>Dataset<wbr>Args</a> | <a href="#googleadwordsobjectdataset">Google<wbr>Ad<wbr>Words<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#googlebigqueryobjectdataset">Google<wbr>Big<wbr>Query<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#greenplumtabledataset">Greenplum<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#hbaseobjectdataset">HBase<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#hiveobjectdataset">Hive<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#httpdataset">Http<wbr>Dataset<wbr>Args</a> | <a href="#hubspotobjectdataset">Hubspot<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#impalaobjectdataset">Impala<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#informixtabledataset">Informix<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#jiraobjectdataset">Jira<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#jsondataset">Json<wbr>Dataset<wbr>Args</a> | <a href="#magentoobjectdataset">Magento<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#mariadbtabledataset">Maria<wbr>DBTable<wbr>Dataset<wbr>Args</a> | <a href="#marketoobjectdataset">Marketo<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#microsoftaccesstabledataset">Microsoft<wbr>Access<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#mongodbatlascollectiondataset">Mongo<wbr>Db<wbr>Atlas<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbcollectiondataset">Mongo<wbr>Db<wbr>Collection<wbr>Dataset<wbr>Args</a> | <a href="#mongodbv2collectiondataset">Mongo<wbr>Db<wbr>V2Collection<wbr>Dataset<wbr>Args</a> | <a href="#mysqltabledataset">My<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#netezzatabledataset">Netezza<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#odataresourcedataset">OData<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#odbctabledataset">Odbc<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#office365dataset">Office365Dataset<wbr>Args</a> | <a href="#oracleservicecloudobjectdataset">Oracle<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#oracletabledataset">Oracle<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#orcdataset">Orc<wbr>Dataset<wbr>Args</a> | <a href="#parquetdataset">Parquet<wbr>Dataset<wbr>Args</a> | <a href="#paypalobjectdataset">Paypal<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#phoenixobjectdataset">Phoenix<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#postgresqltabledataset">Postgre<wbr>Sql<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#prestoobjectdataset">Presto<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#quickbooksobjectdataset">Quick<wbr>Books<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#relationaltabledataset">Relational<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#responsysobjectdataset">Responsys<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#restresourcedataset">Rest<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#salesforcemarketingcloudobjectdataset">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceobjectdataset">Salesforce<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#salesforceservicecloudobjectdataset">Salesforce<wbr>Service<wbr>Cloud<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sapbwcubedataset">Sap<wbr>Bw<wbr>Cube<wbr>Dataset<wbr>Args</a> | <a href="#sapcloudforcustomerresourcedataset">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#sapeccresourcedataset">Sap<wbr>Ecc<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#saphanatabledataset">Sap<wbr>Hana<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#sapopenhubtabledataset">Sap<wbr>Open<wbr>Hub<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#saptableresourcedataset">Sap<wbr>Table<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#servicenowobjectdataset">Service<wbr>Now<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sharepointonlinelistresourcedataset">Share<wbr>Point<wbr>Online<wbr>List<wbr>Resource<wbr>Dataset<wbr>Args</a> | <a href="#shopifyobjectdataset">Shopify<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#snowflakedataset">Snowflake<wbr>Dataset<wbr>Args</a> | <a href="#sparkobjectdataset">Spark<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sqlservertabledataset">Sql<wbr>Server<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#squareobjectdataset">Square<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#sybasetabledataset">Sybase<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#teradatatabledataset">Teradata<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#verticatabledataset">Vertica<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#webtabledataset">Web<wbr>Table<wbr>Dataset<wbr>Args</a> | <a href="#xeroobjectdataset">Xero<wbr>Object<wbr>Dataset<wbr>Args</a> | <a href="#xmldataset">Xml<wbr>Dataset<wbr>Args</a> | <a href="#zohoobjectdataset">Zoho<wbr>Object<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -949,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1255,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1537,7 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1843,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformat">Avro<wbr>Format</a> | <a href="#jsonformat">Json<wbr>Format</a> | <a href="#orcformat">Orc<wbr>Format</a> | <a href="#parquetformat">Parquet<wbr>Format</a> | <a href="#textformat">Text<wbr>Format</a></span>
+        <span class="property-type"><a href="#avroformat">Avro<wbr>Format<wbr>Args</a> | <a href="#jsonformat">Json<wbr>Format<wbr>Args</a> | <a href="#orcformat">Orc<wbr>Format<wbr>Args</a> | <a href="#parquetformat">Parquet<wbr>Format<wbr>Args</a> | <a href="#textformat">Text<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2593,7 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3019,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3035,7 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3051,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3059,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3091,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3759,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3767,7 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3807,7 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3815,7 +3835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4097,7 +4117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4105,7 +4125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4145,7 +4165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4153,7 +4173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4663,7 +4683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4679,7 +4699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4703,7 +4723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4719,7 +4739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformat">Avro<wbr>Format</a> | <a href="#jsonformat">Json<wbr>Format</a> | <a href="#orcformat">Orc<wbr>Format</a> | <a href="#parquetformat">Parquet<wbr>Format</a> | <a href="#textformat">Text<wbr>Format</a></span>
+        <span class="property-type"><a href="#avroformat">Avro<wbr>Format<wbr>Args</a> | <a href="#jsonformat">Json<wbr>Format<wbr>Args</a> | <a href="#orcformat">Orc<wbr>Format<wbr>Args</a> | <a href="#parquetformat">Parquet<wbr>Format<wbr>Args</a> | <a href="#textformat">Text<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Azure Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4743,7 +4763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5129,7 +5149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5145,7 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5169,7 +5189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5185,7 +5205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Azure Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5209,7 +5229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5547,7 +5567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5563,7 +5583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5587,7 +5607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5603,7 +5623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformat">Avro<wbr>Format</a> | <a href="#jsonformat">Json<wbr>Format</a> | <a href="#orcformat">Orc<wbr>Format</a> | <a href="#parquetformat">Parquet<wbr>Format</a> | <a href="#textformat">Text<wbr>Format</a></span>
+        <span class="property-type"><a href="#avroformat">Avro<wbr>Format<wbr>Args</a> | <a href="#jsonformat">Json<wbr>Format<wbr>Args</a> | <a href="#orcformat">Orc<wbr>Format<wbr>Args</a> | <a href="#parquetformat">Parquet<wbr>Format<wbr>Args</a> | <a href="#textformat">Text<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Azure Data Lake Storage Gen2 storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5611,7 +5631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5917,7 +5937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5933,7 +5953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5957,7 +5977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5973,7 +5993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Azure Data Lake Storage Gen2 storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5981,7 +6001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6695,7 +6715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6719,7 +6739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6727,7 +6747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6969,7 +6989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6993,7 +7013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7001,7 +7021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7291,7 +7311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7307,7 +7327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7331,7 +7351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7347,7 +7367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformat">Avro<wbr>Format</a> | <a href="#jsonformat">Json<wbr>Format</a> | <a href="#orcformat">Orc<wbr>Format</a> | <a href="#parquetformat">Parquet<wbr>Format</a> | <a href="#textformat">Text<wbr>Format</a></span>
+        <span class="property-type"><a href="#avroformat">Avro<wbr>Format<wbr>Args</a> | <a href="#jsonformat">Json<wbr>Format<wbr>Args</a> | <a href="#orcformat">Orc<wbr>Format<wbr>Args</a> | <a href="#parquetformat">Parquet<wbr>Format<wbr>Args</a> | <a href="#textformat">Text<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7355,7 +7375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7661,7 +7681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7677,7 +7697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7701,7 +7721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7717,7 +7737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7725,7 +7745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8163,7 +8183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8195,7 +8215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8203,7 +8223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8469,7 +8489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8501,7 +8521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8509,7 +8529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8923,7 +8943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8947,7 +8967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8955,7 +8975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9197,7 +9217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9221,7 +9241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9229,7 +9249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9487,7 +9507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9511,7 +9531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9519,7 +9539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9793,7 +9813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9817,7 +9837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9825,7 +9845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10099,7 +10119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10123,7 +10143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10131,7 +10151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10405,7 +10425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10429,7 +10449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10437,7 +10457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10703,7 +10723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10727,7 +10747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10735,7 +10755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10977,7 +10997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11001,7 +11021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11009,7 +11029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11259,7 +11279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11283,7 +11303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11291,7 +11311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11565,7 +11585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11589,7 +11609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11597,7 +11617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11871,7 +11891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11895,7 +11915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11903,7 +11923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12177,7 +12197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12201,7 +12221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12209,7 +12229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12483,7 +12503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12507,7 +12527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12515,7 +12535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12789,7 +12809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12813,7 +12833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12821,7 +12841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13079,7 +13099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13111,7 +13131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13119,7 +13139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13353,7 +13373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13385,7 +13405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13393,7 +13413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13643,7 +13663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13651,7 +13671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13667,7 +13687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13683,7 +13703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13691,7 +13711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13949,7 +13969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13957,7 +13977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13973,7 +13993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13989,7 +14009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13997,7 +14017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14255,7 +14275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14279,7 +14299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14295,7 +14315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14561,7 +14581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14585,7 +14605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14601,7 +14621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14851,7 +14871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14883,7 +14903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14891,7 +14911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15125,7 +15145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15157,7 +15177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15165,7 +15185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15433,7 +15453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15457,7 +15477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15465,7 +15485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15707,7 +15727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15731,7 +15751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15739,7 +15759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15989,7 +16009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16013,7 +16033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16021,7 +16041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16263,7 +16283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16287,7 +16307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16295,7 +16315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16537,7 +16557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16561,7 +16581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16569,7 +16589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16811,7 +16831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16835,7 +16855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16843,7 +16863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17077,7 +17097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17101,7 +17121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17109,7 +17129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17351,7 +17371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17375,7 +17395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17383,7 +17403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17609,7 +17629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17633,7 +17653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17641,7 +17661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17851,7 +17871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17875,7 +17895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17883,7 +17903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18723,7 +18743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18747,7 +18767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18755,7 +18775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19029,7 +19049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19053,7 +19073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19061,7 +19081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19463,7 +19483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19471,7 +19491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19543,7 +19563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19559,7 +19579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20025,7 +20045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20033,7 +20053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20105,7 +20125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20121,7 +20141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20451,7 +20471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20475,7 +20495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20483,7 +20503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20725,7 +20745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20749,7 +20769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20757,7 +20777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21007,7 +21027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21031,7 +21051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21039,7 +21059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21313,7 +21333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21337,7 +21357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21345,7 +21365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21603,7 +21623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21635,7 +21655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21643,7 +21663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21877,7 +21897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21909,7 +21929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21917,7 +21937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22151,7 +22171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22183,7 +22203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22191,7 +22211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22425,7 +22445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22457,7 +22477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22465,7 +22485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22699,7 +22719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22731,7 +22751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22739,7 +22759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22973,7 +22993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23005,7 +23025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23013,7 +23033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23247,7 +23267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23271,7 +23291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23279,7 +23299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23521,7 +23541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23545,7 +23565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23553,7 +23573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23875,7 +23895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23883,7 +23903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23907,7 +23927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23931,7 +23951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23947,7 +23967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24309,7 +24329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24317,7 +24337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24341,7 +24361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24365,7 +24385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24381,7 +24401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24923,7 +24943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24939,7 +24959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24971,7 +24991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24987,7 +25007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformat">Avro<wbr>Format</a> | <a href="#jsonformat">Json<wbr>Format</a> | <a href="#orcformat">Orc<wbr>Format</a> | <a href="#parquetformat">Parquet<wbr>Format</a> | <a href="#textformat">Text<wbr>Format</a></span>
+        <span class="property-type"><a href="#avroformat">Avro<wbr>Format<wbr>Args</a> | <a href="#jsonformat">Json<wbr>Format<wbr>Args</a> | <a href="#orcformat">Orc<wbr>Format<wbr>Args</a> | <a href="#parquetformat">Parquet<wbr>Format<wbr>Args</a> | <a href="#textformat">Text<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25011,7 +25031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25389,7 +25409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25405,7 +25425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25437,7 +25457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25453,7 +25473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25477,7 +25497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25923,7 +25943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25947,7 +25967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25955,7 +25975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26197,7 +26217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26221,7 +26241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26229,7 +26249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26503,7 +26523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26535,7 +26555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26543,7 +26563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26841,7 +26861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26873,7 +26893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26881,7 +26901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27455,7 +27475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27479,7 +27499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27487,7 +27507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27761,7 +27781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27785,7 +27805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27793,7 +27813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28051,7 +28071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28075,7 +28095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28083,7 +28103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28325,7 +28345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28349,7 +28369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28357,7 +28377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28779,7 +28799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28803,7 +28823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28811,7 +28831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29085,7 +29105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29109,7 +29129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29117,7 +29137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29459,7 +29479,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29485,7 +29505,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29501,7 +29521,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29509,7 +29529,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformat">Avro<wbr>Format</a> | <a href="#jsonformat">Json<wbr>Format</a> | <a href="#orcformat">Orc<wbr>Format</a> | <a href="#parquetformat">Parquet<wbr>Format</a> | <a href="#textformat">Text<wbr>Format</a></span>
+        <span class="property-type"><a href="#avroformat">Avro<wbr>Format<wbr>Args</a> | <a href="#jsonformat">Json<wbr>Format<wbr>Args</a> | <a href="#orcformat">Orc<wbr>Format<wbr>Args</a> | <a href="#parquetformat">Parquet<wbr>Format<wbr>Args</a> | <a href="#textformat">Text<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29517,7 +29537,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29901,7 +29921,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29927,7 +29947,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29943,7 +29963,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29951,7 +29971,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29959,7 +29979,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30487,7 +30507,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30511,7 +30531,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30519,7 +30539,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30761,7 +30781,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30785,7 +30805,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30793,7 +30813,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31051,7 +31071,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31075,7 +31095,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31083,7 +31103,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31357,7 +31377,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31381,7 +31401,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31389,7 +31409,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31647,7 +31667,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31671,7 +31691,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31679,7 +31699,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31921,7 +31941,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31945,7 +31965,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31953,7 +31973,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32195,7 +32215,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32219,7 +32239,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32227,7 +32247,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32469,7 +32489,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32493,7 +32513,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32501,7 +32521,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32775,7 +32795,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -32783,7 +32803,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32799,7 +32819,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32823,7 +32843,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32831,7 +32851,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33113,7 +33133,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -33121,7 +33141,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33137,7 +33157,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33161,7 +33181,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33169,7 +33189,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34157,7 +34177,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34181,7 +34201,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34189,7 +34209,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34431,7 +34451,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34455,7 +34475,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34463,7 +34483,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34705,7 +34725,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34729,7 +34749,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34737,7 +34757,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34979,7 +34999,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35003,7 +35023,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35011,7 +35031,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35253,7 +35273,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35277,7 +35297,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35285,7 +35305,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35527,7 +35547,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35551,7 +35571,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35559,7 +35579,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35801,7 +35821,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35825,7 +35845,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35833,7 +35853,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36075,7 +36095,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36099,7 +36119,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36107,7 +36127,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36357,7 +36377,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36381,7 +36401,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36389,7 +36409,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36631,7 +36651,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36655,7 +36675,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36663,7 +36683,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36905,7 +36925,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36929,7 +36949,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36937,7 +36957,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37179,7 +37199,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37203,7 +37223,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37211,7 +37231,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37453,7 +37473,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37477,7 +37497,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37485,7 +37505,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37727,7 +37747,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37751,7 +37771,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37759,7 +37779,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37993,7 +38013,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38017,7 +38037,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38025,7 +38045,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38267,7 +38287,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38291,7 +38311,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38299,7 +38319,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38557,7 +38577,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38581,7 +38601,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38589,7 +38609,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38863,7 +38883,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38887,7 +38907,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38895,7 +38915,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39153,7 +39173,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39177,7 +39197,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39185,7 +39205,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39427,7 +39447,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39451,7 +39471,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39459,7 +39479,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39701,7 +39721,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39725,7 +39745,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39733,7 +39753,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39975,7 +39995,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39999,7 +40019,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40007,7 +40027,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40265,7 +40285,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -40297,7 +40317,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40305,7 +40325,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40571,7 +40591,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -40603,7 +40623,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40611,7 +40631,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41153,7 +41173,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41177,7 +41197,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41185,7 +41205,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41427,7 +41447,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41451,7 +41471,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41459,7 +41479,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41717,7 +41737,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41741,7 +41761,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41749,7 +41769,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42023,7 +42043,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42047,7 +42067,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42055,7 +42075,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42363,7 +42383,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -42371,7 +42391,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42395,7 +42415,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42411,7 +42431,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42669,7 +42689,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -42677,7 +42697,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42701,7 +42721,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42717,7 +42737,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43349,7 +43369,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -43357,7 +43377,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43389,7 +43409,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43397,7 +43417,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43655,7 +43675,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -43663,7 +43683,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43695,7 +43715,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43703,7 +43723,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44109,7 +44129,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44133,7 +44153,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44141,7 +44161,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44383,7 +44403,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44407,7 +44427,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44415,7 +44435,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44673,7 +44693,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44697,7 +44717,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44705,7 +44725,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44979,7 +44999,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45003,7 +45023,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45011,7 +45031,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45285,7 +45305,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45309,7 +45329,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45317,7 +45337,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45591,7 +45611,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45615,7 +45635,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45623,7 +45643,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45897,7 +45917,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45921,7 +45941,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45929,7 +45949,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46203,7 +46223,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46227,7 +46247,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46235,7 +46255,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46493,7 +46513,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46517,7 +46537,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46525,7 +46545,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46767,7 +46787,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46791,7 +46811,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46799,7 +46819,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47041,7 +47061,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47065,7 +47085,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47073,7 +47093,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47315,7 +47335,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47339,7 +47359,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47347,7 +47367,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47589,7 +47609,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47613,7 +47633,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47621,7 +47641,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47863,7 +47883,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47887,7 +47907,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47895,7 +47915,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48201,7 +48221,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48233,7 +48253,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48249,7 +48269,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48603,7 +48623,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48635,7 +48655,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48651,7 +48671,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48941,7 +48961,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48965,7 +48985,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48973,7 +48993,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49215,7 +49235,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49239,7 +49259,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49247,7 +49267,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49489,7 +49509,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49513,7 +49533,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49529,7 +49549,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49763,7 +49783,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49787,7 +49807,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49803,7 +49823,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50037,7 +50057,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50061,7 +50081,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50077,7 +50097,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50311,7 +50331,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50335,7 +50355,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50351,7 +50371,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50569,7 +50589,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50593,7 +50613,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50601,7 +50621,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50811,7 +50831,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50835,7 +50855,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50843,7 +50863,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51069,7 +51089,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -51101,7 +51121,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51109,7 +51129,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51343,7 +51363,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -51375,7 +51395,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51383,7 +51403,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51617,7 +51637,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -51649,7 +51669,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51657,7 +51677,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51891,7 +51911,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -51923,7 +51943,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51931,7 +51951,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52165,7 +52185,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52189,7 +52209,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52197,7 +52217,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52439,7 +52459,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52463,7 +52483,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52471,7 +52491,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52745,7 +52765,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -52793,7 +52813,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52801,7 +52821,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53083,7 +53103,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -53131,7 +53151,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53139,7 +53159,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53389,7 +53409,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -53421,7 +53441,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53429,7 +53449,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53663,7 +53683,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -53695,7 +53715,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53703,7 +53723,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53937,7 +53957,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53961,7 +53981,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53969,7 +53989,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54211,7 +54231,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54235,7 +54255,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54243,7 +54263,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54649,7 +54669,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54673,7 +54693,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54689,7 +54709,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54923,7 +54943,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54947,7 +54967,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54963,7 +54983,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55197,7 +55217,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55221,7 +55241,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55229,7 +55249,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55471,7 +55491,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55495,7 +55515,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55503,7 +55523,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55745,7 +55765,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55769,7 +55789,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55777,7 +55797,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56019,7 +56039,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56043,7 +56063,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56051,7 +56071,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56309,7 +56329,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56333,7 +56353,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56341,7 +56361,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56615,7 +56635,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56639,7 +56659,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56647,7 +56667,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56921,7 +56941,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56945,7 +56965,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56953,7 +56973,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57227,7 +57247,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57251,7 +57271,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57259,7 +57279,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57517,7 +57537,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57541,7 +57561,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57549,7 +57569,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57791,7 +57811,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57815,7 +57835,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57823,7 +57843,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58065,7 +58085,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58089,7 +58109,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58097,7 +58117,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58339,7 +58359,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58363,7 +58383,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58371,7 +58391,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58629,7 +58649,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58661,7 +58681,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58669,7 +58689,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58935,7 +58955,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58967,7 +58987,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58975,7 +58995,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -59981,7 +60001,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60005,7 +60025,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60013,7 +60033,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60287,7 +60307,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60311,7 +60331,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60319,7 +60339,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60601,7 +60621,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60625,7 +60645,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60633,7 +60653,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60907,7 +60927,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60931,7 +60951,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -60939,7 +60959,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61189,7 +61209,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61213,7 +61233,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61221,7 +61241,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61463,7 +61483,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61487,7 +61507,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61495,7 +61515,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61785,7 +61805,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -61793,7 +61813,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location</a> | <a href="#amazons3location">Amazon<wbr>S3Location</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#hdfslocation">Hdfs<wbr>Location</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location</a> | <a href="#sftplocation">Sftp<wbr>Location</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocation">Amazon<wbr>S3Compatible<wbr>Location<wbr>Args</a> | <a href="#amazons3location">Amazon<wbr>S3Location<wbr>Args</a> | <a href="#azureblobfslocation">Azure<wbr>Blob<wbr>FSLocation<wbr>Args</a> | <a href="#azureblobstoragelocation">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#azuredatalakestorelocation">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Args</a> | <a href="#azurefilestoragelocation">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#fileserverlocation">File<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#ftpserverlocation">Ftp<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#googlecloudstoragelocation">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#hdfslocation">Hdfs<wbr>Location<wbr>Args</a> | <a href="#httpserverlocation">Http<wbr>Server<wbr>Location<wbr>Args</a> | <a href="#oraclecloudstoragelocation">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Args</a> | <a href="#sftplocation">Sftp<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61809,7 +61829,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression</a></span>
+        <span class="property-type"><a href="#datasetbzip2compression">Dataset<wbr>BZip2Compression<wbr>Args</a> | <a href="#datasetdeflatecompression">Dataset<wbr>Deflate<wbr>Compression<wbr>Args</a> | <a href="#datasetgzipcompression">Dataset<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasettarcompression">Dataset<wbr>Tar<wbr>Compression<wbr>Args</a> | <a href="#datasettargzipcompression">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Args</a> | <a href="#datasetzipdeflatecompression">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61833,7 +61853,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -61849,7 +61869,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62155,7 +62175,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -62163,7 +62183,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62179,7 +62199,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62203,7 +62223,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62219,7 +62239,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62477,7 +62497,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62501,7 +62521,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetfolder">Dataset<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62509,7 +62529,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62751,7 +62771,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62775,7 +62795,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -62783,7 +62803,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response<wbr>Args}</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -100,8 +100,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataloss"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -249,19 +249,31 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreventionJobTrigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionJobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreventionJobTrigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionJobTriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PreventionJobTrigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[PreventionJobTriggerInspectJobArgs]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[PreventionJobTriggerTriggerArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PreventionJobTrigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[PreventionJobTriggerInspectJobArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[PreventionJobTriggerTriggerArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PreventionJobTrigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionJobTriggerArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreventionJobTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreventionJobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionJobTrigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreventionJobTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreventionJobTriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionJobTrigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreventionJobTrigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PreventionJobTriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreventionJobTrigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PreventionJobTriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -296,22 +308,32 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PreventionJobTriggerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -320,7 +342,7 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -344,7 +366,7 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -535,7 +557,7 @@ or `projects/{{project}}/locations/{{location}}`
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertrigger">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger[]</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertrigger">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
@@ -563,7 +585,7 @@ Structure is documented below.
 <a href="#inspectjob_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
@@ -779,20 +801,30 @@ Get an existing PreventionJobTrigger resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PreventionJobTriggerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreventionJobTrigger</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PreventionJobTriggerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreventionJobTrigger</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[PreventionJobTriggerInspectJobArgs]</span> = None<span class="p">, </span><span class="nx">last_run_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[PreventionJobTriggerTriggerArgs]]</span> = None<span class="p">) -&gt;</span> PreventionJobTrigger</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">inspect_job</span><span class="p">:</span> <span class="nx">Optional[PreventionJobTriggerInspectJobArgs]</span> = None<span class="p">,</span>
+        <span class="nx">last_run_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">triggers</span><span class="p">:</span> <span class="nx">Optional[Sequence[PreventionJobTriggerTriggerArgs]]</span> = None<span class="p">) -&gt;</span> PreventionJobTrigger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionJobTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PreventionJobTriggerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionJobTrigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionJobTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PreventionJobTriggerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionJobTrigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreventionJobTrigger</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PreventionJobTriggerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreventionJobTrigger</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PreventionJobTriggerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1081,7 +1113,7 @@ Structure is documented below.
 <a href="#state_inspectjob_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
@@ -1130,7 +1162,7 @@ Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 <a href="#state_triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertrigger">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger[]</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertrigger">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
@@ -1302,7 +1334,7 @@ Structure is documented below.
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
@@ -1321,7 +1353,7 @@ Structure is documented below.
 <a href="#storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -1398,7 +1430,7 @@ Structure is documented below.
 <a href="#savefindings_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>Findings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
@@ -1456,7 +1488,7 @@ Structure is documented below.
 <a href="#outputconfig_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to store output
 Structure is documented below.
@@ -1546,7 +1578,7 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on the location of the target BigQuery Table.
 Structure is documented below.
@@ -1826,7 +1858,7 @@ Structure is documented below.
 <a href="#bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining BigQuery table and row identifiers.
 Structure is documented below.
@@ -1836,7 +1868,7 @@ Structure is documented below.
 <a href="#cloudstorageoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining a file or a set of files within a Google Cloud Storage bucket.
 Structure is documented below.
@@ -1846,7 +1878,7 @@ Structure is documented below.
 <a href="#datastoreoptions_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining a data set within Google Cloud Datastore.
 Structure is documented below.
@@ -1856,7 +1888,7 @@ Structure is documented below.
 <a href="#timespanconfig_nodejs" style="color: inherit; text-decoration: inherit;">timespan<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -1944,7 +1976,7 @@ Structure is documented below.
 <a href="#tablereference_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
@@ -2238,7 +2270,7 @@ Possible values are `TOP` and `RANDOM_START`.
 <a href="#fileset_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
@@ -2428,7 +2460,7 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
 <a href="#regexfileset_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>File<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan.
 Structure is documented below.
@@ -2676,7 +2708,7 @@ Structure is documented below.
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A representation of a Datastore kind.
 Structure is documented below.
@@ -2686,7 +2718,7 @@ Structure is documented below.
 <a href="#partitionid_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datastore partition ID. A partition ID identifies a grouping of entities. The grouping
 is always by project and namespace, however the namespace ID may be empty.
@@ -2958,7 +2990,7 @@ be based on the time of the execution of the last run of the JobTrigger.
 <a href="#timestampfield_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field</a></span>
+        <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
@@ -3128,7 +3160,7 @@ Structure is documented below.
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.

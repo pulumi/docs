@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.kusto.DatabasePrincipalAssignment
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Class representing a database principal assignment.
-API Version: 2020-09-18.
+API Version: 2021-01-01.
 
 {{% examples %}}
 
@@ -62,7 +62,7 @@ package main
 
 import (
 	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -150,19 +150,33 @@ const databasePrincipalAssignment = new azure_native.kusto.DatabasePrincipalAssi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">principal_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PrincipalType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabasePrincipalRole]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">principal_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">principal_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PrincipalType]]</span> = None<span class="p">,</span>
+                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabasePrincipalRole]]</span> = None<span class="p">,</span>
+                                <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabasePrincipalAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabasePrincipalAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabasePrincipalAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -197,22 +211,32 @@ const databasePrincipalAssignment = new azure_native.kusto.DatabasePrincipalAssi
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DatabasePrincipalAssignmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -797,8 +821,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Admin</dd><dt>Ingestor</dt>
     <dd>Ingestor</dd><dt>Monitor</dt>
     <dd>Monitor</dd><dt>User</dt>
-    <dd>User</dd><dt>Unrestricted<wbr>Viewers</dt>
-    <dd>UnrestrictedViewers</dd><dt>Viewer</dt>
+    <dd>User</dd><dt>Unrestricted<wbr>Viewer</dt>
+    <dd>UnrestrictedViewer</dd><dt>Viewer</dt>
     <dd>Viewer</dd></dl>
 {{% /choosable %}}
 
@@ -807,8 +831,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Admin</dd><dt>Database<wbr>Principal<wbr>Role<wbr>Ingestor</dt>
     <dd>Ingestor</dd><dt>Database<wbr>Principal<wbr>Role<wbr>Monitor</dt>
     <dd>Monitor</dd><dt>Database<wbr>Principal<wbr>Role<wbr>User</dt>
-    <dd>User</dd><dt>Database<wbr>Principal<wbr>Role<wbr>Unrestricted<wbr>Viewers</dt>
-    <dd>UnrestrictedViewers</dd><dt>Database<wbr>Principal<wbr>Role<wbr>Viewer</dt>
+    <dd>User</dd><dt>Database<wbr>Principal<wbr>Role<wbr>Unrestricted<wbr>Viewer</dt>
+    <dd>UnrestrictedViewer</dd><dt>Database<wbr>Principal<wbr>Role<wbr>Viewer</dt>
     <dd>Viewer</dd></dl>
 {{% /choosable %}}
 
@@ -817,8 +841,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Admin</dd><dt>Ingestor</dt>
     <dd>Ingestor</dd><dt>Monitor</dt>
     <dd>Monitor</dd><dt>User</dt>
-    <dd>User</dd><dt>Unrestricted<wbr>Viewers</dt>
-    <dd>UnrestrictedViewers</dd><dt>Viewer</dt>
+    <dd>User</dd><dt>Unrestricted<wbr>Viewer</dt>
+    <dd>UnrestrictedViewer</dd><dt>Viewer</dt>
     <dd>Viewer</dd></dl>
 {{% /choosable %}}
 
@@ -827,8 +851,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Admin</dd><dt>INGESTOR</dt>
     <dd>Ingestor</dd><dt>MONITOR</dt>
     <dd>Monitor</dd><dt>USER</dt>
-    <dd>User</dd><dt>UNRESTRICTED_VIEWERS</dt>
-    <dd>UnrestrictedViewers</dd><dt>VIEWER</dt>
+    <dd>User</dd><dt>UNRESTRICTED_VIEWER</dt>
+    <dd>UnrestrictedViewer</dd><dt>VIEWER</dt>
     <dd>Viewer</dd></dl>
 {{% /choosable %}}
 

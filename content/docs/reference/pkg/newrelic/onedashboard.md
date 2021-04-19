@@ -19,19 +19,30 @@ meta_desc: "Documentation for the newrelic.OneDashboard resource with examples, 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OneDashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OneDashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OneDashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OneDashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OneDashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pages</span><span class="p">:</span> <span class="nx">Optional[Sequence[OneDashboardPageArgs]]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OneDashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">pages</span><span class="p">:</span> <span class="nx">Optional[Sequence[OneDashboardPageArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OneDashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OneDashboardArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOneDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OneDashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OneDashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOneDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OneDashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OneDashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OneDashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OneDashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OneDashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OneDashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -66,22 +77,32 @@ meta_desc: "Documentation for the newrelic.OneDashboard resource with examples, 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OneDashboardArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -90,7 +111,7 @@ meta_desc: "Documentation for the newrelic.OneDashboard resource with examples, 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -114,7 +135,7 @@ meta_desc: "Documentation for the newrelic.OneDashboard resource with examples, 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -267,7 +288,7 @@ The OneDashboard resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpage">One<wbr>Dashboard<wbr>Page[]</a></span>
+        <span class="property-type"><a href="#onedashboardpage">One<wbr>Dashboard<wbr>Page<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a page. See Nested page blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -493,20 +514,29 @@ Get an existing OneDashboard resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OneDashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OneDashboard</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">OneDashboardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OneDashboard</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pages</span><span class="p">:</span> <span class="nx">Optional[Sequence[OneDashboardPageArgs]]</span> = None<span class="p">, </span><span class="nx">permalink</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OneDashboard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pages</span><span class="p">:</span> <span class="nx">Optional[Sequence[OneDashboardPageArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">permalink</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OneDashboard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOneDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OneDashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OneDashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOneDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">OneDashboardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OneDashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OneDashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OneDashboardState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OneDashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">OneDashboardState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -785,7 +815,7 @@ The following state arguments are supported:
 <a href="#state_pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpage">One<wbr>Dashboard<wbr>Page[]</a></span>
+        <span class="property-type"><a href="#onedashboardpage">One<wbr>Dashboard<wbr>Page<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a page. See Nested page blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1181,7 +1211,7 @@ The following state arguments are supported:
 <a href="#widgetareas_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Areas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetarea">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetarea">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes an Area widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1190,7 +1220,7 @@ The following state arguments are supported:
 <a href="#widgetbars_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Bars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbar">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbar">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Bar widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1199,7 +1229,7 @@ The following state arguments are supported:
 <a href="#widgetbillboards_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Billboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbillboard">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbillboard">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Billboard widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1238,7 @@ The following state arguments are supported:
 <a href="#widgetbullets_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Bullets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbullet">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bullet[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbullet">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bullet<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Bullet widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1247,7 @@ The following state arguments are supported:
 <a href="#widgetfunnels_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Funnels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetfunnel">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Funnel[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetfunnel">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Funnel<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Funnel widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1256,7 @@ The following state arguments are supported:
 <a href="#widgetheatmaps_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Heatmaps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetheatmap">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Heatmap[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetheatmap">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Heatmap<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Heatmap widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1265,7 @@ The following state arguments are supported:
 <a href="#widgethistograms_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Histograms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgethistogram">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Histogram[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgethistogram">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Histogram<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Histogram widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1274,7 @@ The following state arguments are supported:
 <a href="#widgetlines_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetline">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetline">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Line widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1283,7 @@ The following state arguments are supported:
 <a href="#widgetmarkdowns_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Markdowns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetmarkdown">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Markdown[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetmarkdown">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Markdown<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Markdown widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1292,7 @@ The following state arguments are supported:
 <a href="#widgetpies_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Pies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetpy">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetpy">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Pie widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1301,7 @@ The following state arguments are supported:
 <a href="#widgettables_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgettable">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgettable">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) A nested block that describes a Table widget.  See Nested widget blocks below for details.
 {{% /md %}}</dd></dl>
@@ -1559,7 +1589,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetareanrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetareanrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Area<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -1935,7 +1965,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbarnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbarnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bar<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -2349,7 +2379,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbillboardnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbillboardnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Billboard<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -2767,7 +2797,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetbulletnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bullet<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetbulletnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Bullet<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -3147,7 +3177,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetfunnelnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Funnel<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetfunnelnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Funnel<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -3507,7 +3537,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetheatmapnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Heatmap<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetheatmapnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Heatmap<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -3867,7 +3897,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgethistogramnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Histogram<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgethistogramnrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Histogram<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -4227,7 +4257,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetlinenrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetlinenrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Line<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -4873,7 +4903,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgetpynrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgetpynrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Py<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.
@@ -5265,7 +5295,7 @@ The following state arguments are supported:
 <a href="#nrqlqueries_nodejs" style="color: inherit; text-decoration: inherit;">nrql<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onedashboardpagewidgettablenrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Nrql<wbr>Query[]</a></span>
+        <span class="property-type"><a href="#onedashboardpagewidgettablenrqlquery">One<wbr>Dashboard<wbr>Page<wbr>Widget<wbr>Table<wbr>Nrql<wbr>Query<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a NRQL Query. See Nested nrql\_query blocks below for details.
 * `linked_entity_guids`: (Optional) Related entity GUIDs. Currently only supports Dashboard entity GUIDs.

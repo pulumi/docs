@@ -165,8 +165,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lex"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -458,19 +458,37 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[IntentConclusionStatementArgs]</span> = None<span class="p">, </span><span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentConfirmationPromptArgs]</span> = None<span class="p">, </span><span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[IntentDialogCodeHookArgs]</span> = None<span class="p">, </span><span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentFollowUpPromptArgs]</span> = None<span class="p">, </span><span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[IntentFulfillmentActivityArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[IntentRejectionStatementArgs]</span> = None<span class="p">, </span><span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentSlotArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[IntentConclusionStatementArgs]</span> = None<span class="p">,</span>
+           <span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentConfirmationPromptArgs]</span> = None<span class="p">,</span>
+           <span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[IntentDialogCodeHookArgs]</span> = None<span class="p">,</span>
+           <span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentFollowUpPromptArgs]</span> = None<span class="p">,</span>
+           <span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[IntentFulfillmentActivityArgs]</span> = None<span class="p">,</span>
+           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[IntentRejectionStatementArgs]</span> = None<span class="p">,</span>
+           <span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+           <span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentSlotArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -505,22 +523,32 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IntentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -529,7 +557,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -553,7 +581,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -874,7 +902,7 @@ from the user using prompts defined in the slots. Attributes are documented unde
 <a href="#fulfillmentactivity_nodejs" style="color: inherit; text-decoration: inherit;">fulfillment<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
@@ -885,7 +913,7 @@ places an order with a local pizza store. Attributes are documented under fulfil
 <a href="#conclusionstatement_nodejs" style="color: inherit; text-decoration: inherit;">conclusion<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
 after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
@@ -898,7 +926,7 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 <a href="#confirmationprompt_nodejs" style="color: inherit; text-decoration: inherit;">confirmation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prompts the user to confirm the intent. This question should
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
@@ -928,7 +956,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#dialogcodehook_nodejs" style="color: inherit; text-decoration: inherit;">dialog<wbr>Code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
+        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
@@ -938,7 +966,7 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
 <a href="#followupprompt_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Up<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
@@ -971,7 +999,7 @@ in the Alexa Skills Kit.
 <a href="#rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -993,7 +1021,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#slots_nodejs" style="color: inherit; text-decoration: inherit;">slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslot">Intent<wbr>Slot[]</a></span>
+        <span class="property-type"><a href="#intentslot">Intent<wbr>Slot<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
@@ -1380,20 +1408,39 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IntentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Intent</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">IntentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Intent</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[IntentConclusionStatementArgs]</span> = None<span class="p">, </span><span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentConfirmationPromptArgs]</span> = None<span class="p">, </span><span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[IntentDialogCodeHookArgs]</span> = None<span class="p">, </span><span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentFollowUpPromptArgs]</span> = None<span class="p">, </span><span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[IntentFulfillmentActivityArgs]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[IntentRejectionStatementArgs]</span> = None<span class="p">, </span><span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentSlotArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Intent</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[IntentConclusionStatementArgs]</span> = None<span class="p">,</span>
+        <span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentConfirmationPromptArgs]</span> = None<span class="p">,</span>
+        <span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[IntentDialogCodeHookArgs]</span> = None<span class="p">,</span>
+        <span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentFollowUpPromptArgs]</span> = None<span class="p">,</span>
+        <span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[IntentFulfillmentActivityArgs]</span> = None<span class="p">,</span>
+        <span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[IntentRejectionStatementArgs]</span> = None<span class="p">,</span>
+        <span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentSlotArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Intent</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IntentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IntentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Intent</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IntentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Intent</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">IntentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1879,7 +1926,7 @@ included as an argument because the resource will add it automatically when upda
 <a href="#state_conclusionstatement_nodejs" style="color: inherit; text-decoration: inherit;">conclusion<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The statement that you want Amazon Lex to convey to the user
 after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
@@ -1892,7 +1939,7 @@ mutually exclusive. You can specify only one. Attributes are documented under st
 <a href="#state_confirmationprompt_nodejs" style="color: inherit; text-decoration: inherit;">confirmation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prompts the user to confirm the intent. This question should
 have a yes or no answer. You you must provide both the `rejection_statement` and `confirmation_prompt`,
@@ -1931,7 +1978,7 @@ resource is created and on each update. Defaults to `false`.
 <a href="#state_dialogcodehook_nodejs" style="color: inherit; text-decoration: inherit;">dialog<wbr>Code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</a></span>
+        <span class="property-type"><a href="#intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Lambda function to invoke for each user input. You can
 invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
@@ -1941,7 +1988,7 @@ invoke this Lambda function to personalize user interaction. Attributes are docu
 <a href="#state_followupprompt_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Up<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Lex uses this prompt to solicit additional activity after
 fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
@@ -1953,7 +2000,7 @@ exclusive. You can specify only one. Attributes are documented under follow_up_p
 <a href="#state_fulfillmentactivity_nodejs" style="color: inherit; text-decoration: inherit;">fulfillment<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the intent is fulfilled. For example, after a
 user provides all of the information for a pizza order, `fulfillment_activity` defines how the bot
@@ -1994,7 +2041,7 @@ in the Alexa Skills Kit.
 <a href="#state_rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -2016,7 +2063,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#state_slots_nodejs" style="color: inherit; text-decoration: inherit;">slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslot">Intent<wbr>Slot[]</a></span>
+        <span class="property-type"><a href="#intentslot">Intent<wbr>Slot<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}An list of intent slots. At runtime, Amazon Lex elicits required slot values
 from the user using prompts defined in the slots. Attributes are documented under slot.
@@ -2281,7 +2328,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconclusionstatementmessage">Intent<wbr>Conclusion<wbr>Statement<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentconclusionstatementmessage">Intent<wbr>Conclusion<wbr>Statement<wbr>Message<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2544,7 +2591,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentconfirmationpromptmessage">Intent<wbr>Confirmation<wbr>Prompt<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentconfirmationpromptmessage">Intent<wbr>Confirmation<wbr>Prompt<wbr>Message<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -2883,7 +2930,7 @@ documented below under statement.
 <a href="#prompt_nodejs" style="color: inherit; text-decoration: inherit;">prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Prompts for information from the user. Attributes are documented under prompt.
 {{% /md %}}</dd><dt class="property-required"
@@ -2892,7 +2939,7 @@ documented below under statement.
 <a href="#rejectionstatement_nodejs" style="color: inherit; text-decoration: inherit;">rejection<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the user answers "no" to the question defined in the prompt field,
 Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
@@ -3012,7 +3059,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptpromptmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3257,7 +3304,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentfollowuppromptrejectionstatementmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -3499,7 +3546,7 @@ returning the slot data to the client application.
 <a href="#codehook_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</a></span>
+        <span class="property-type"><a href="#intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A description of the Lambda function that is run to fulfill the intent.
 Required if type is CodeHook. Attributes are documented under code_hook.
@@ -3689,7 +3736,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentrejectionstatementmessage">Intent<wbr>Rejection<wbr>Statement<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentrejectionstatementmessage">Intent<wbr>Rejection<wbr>Statement<wbr>Message<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
@@ -4141,7 +4188,7 @@ is optional. In most cases, Amazon Lex is capable of understanding user utteranc
 <a href="#valueelicitationprompt_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Elicitation<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The prompt that Amazon Lex uses to elicit the slot value
 from the user. Attributes are documented under prompt.
@@ -4330,7 +4377,7 @@ slot values into the response card. For more information, see
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message[]</a></span>
+        <span class="property-type"><a href="#intentslotvalueelicitationpromptmessage">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}A set of messages, each of which provides a message string and its type.
 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).

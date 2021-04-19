@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -126,17 +126,19 @@ export const apiManagementId = example.then(example => example.id);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupService` in the Go SDK.
 
@@ -145,7 +147,7 @@ export const apiManagementId = example.then(example => example.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1160,7 +1162,7 @@ The following output properties are available:
 <a href="#developerportals_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationdeveloperportal">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationdeveloperportal">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1169,7 +1171,7 @@ The following output properties are available:
 <a href="#managements_csharp" style="color: inherit; text-decoration: inherit;">Managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1178,7 +1180,7 @@ The following output properties are available:
 <a href="#portals_csharp" style="color: inherit; text-decoration: inherit;">Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationportal">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationportal">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1187,7 +1189,7 @@ The following output properties are available:
 <a href="#proxies_csharp" style="color: inherit; text-decoration: inherit;">Proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1196,7 +1198,7 @@ The following output properties are available:
 <a href="#scms_csharp" style="color: inherit; text-decoration: inherit;">Scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationscm">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationscm">List&lt;Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -1307,7 +1309,7 @@ The following output properties are available:
 <a href="#developer_portals_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationdeveloperportal">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationdeveloperportal">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1316,7 +1318,7 @@ The following output properties are available:
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1325,7 +1327,7 @@ The following output properties are available:
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationportal">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationportal">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1334,7 +1336,7 @@ The following output properties are available:
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1343,7 +1345,7 @@ The following output properties are available:
 <a href="#scms_python" style="color: inherit; text-decoration: inherit;">scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationscm">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationscm">Sequence[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd></dl>

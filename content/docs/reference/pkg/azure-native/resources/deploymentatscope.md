@@ -71,7 +71,7 @@ package main
 
 import (
 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -177,19 +177,30 @@ const deploymentAtScope = new azure_native.resources.DeploymentAtScope("deployme
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[DeploymentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[DeploymentPropertiesArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentAtScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentAtScope</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentAtScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentAtScope</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentAtScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeploymentAtScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -224,22 +235,32 @@ const deploymentAtScope = new azure_native.resources.DeploymentAtScope("deployme
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DeploymentAtScopeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -415,7 +436,7 @@ The DeploymentAtScope resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentproperties">Deployment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#deploymentproperties">Deployment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -788,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response</a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1080,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultmetadata_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response</a></span>
+        <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultpattern_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</a></span>
+        <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliaspathresponse">Alias<wbr>Path<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#aliaspathresponse">Alias<wbr>Path<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1554,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicdependencyresponse">Basic<wbr>Dependency<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#basicdependencyresponse">Basic<wbr>Dependency<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1798,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debugsetting_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting</a></span>
+        <span class="property-type"><a href="#debugsetting">Debug<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1806,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressionevaluationoptions_nodejs" style="color: inherit; text-decoration: inherit;">expression<wbr>Evaluation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options</a></span>
+        <span class="property-type"><a href="#expressionevaluationoptions">Expression<wbr>Evaluation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1814,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerrordeployment_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeployment">On<wbr>Error<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#onerrordeployment">On<wbr>Error<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1830,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterslink_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslink">Parameters<wbr>Link</a></span>
+        <span class="property-type"><a href="#parameterslink">Parameters<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1846,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatelink_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelink">Template<wbr>Link</a></span>
+        <span class="property-type"><a href="#templatelink">Template<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI of the template. Use either the templateLink property or the template property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2216,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#debugsetting_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#debugsettingresponse">Debug<wbr>Setting<wbr>Response</a></span>
+        <span class="property-type"><a href="#debugsettingresponse">Debug<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2224,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dependencyresponse">Dependency<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#dependencyresponse">Dependency<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2240,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2256,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerrordeployment_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response</a></span>
+        <span class="property-type"><a href="#onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2264,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputresources_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2288,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterslink_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterslinkresponse">Parameters<wbr>Link<wbr>Response</a></span>
+        <span class="property-type"><a href="#parameterslinkresponse">Parameters<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2296,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_nodejs" style="color: inherit; text-decoration: inherit;">providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresponse">Provider<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#providerresponse">Provider<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2320,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatelink_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#templatelinkresponse">Template<wbr>Link<wbr>Response</a></span>
+        <span class="property-type"><a href="#templatelinkresponse">Template<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2336,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatedresources_nodejs" style="color: inherit; text-decoration: inherit;">validated<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2660,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2676,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3482,7 +3503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiprofiles_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiprofileresponse">Api<wbr>Profile<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#apiprofileresponse">Api<wbr>Profile<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3498,7 +3519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasresponse">Alias<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#aliasresponse">Alias<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3522,7 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationmappings_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3748,7 +3769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerresourcetyperesponse">Provider<wbr>Resource<wbr>Type<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#providerresourcetyperesponse">Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

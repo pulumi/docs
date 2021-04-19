@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-datadog/sdk/v3/go/datadog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -131,17 +131,21 @@ const test = pulumi.output(datadog.getSecurityMonitoringRules({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecurityMonitoringRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSecurityMonitoringRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSecurityMonitoringRulesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecurityMonitoringRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSecurityMonitoringRulesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSecurityMonitoringRulesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_security_monitoring_rules(</span><span class="nx">default_only_filter</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_only_filter</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecurityMonitoringRulesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_security_monitoring_rules(</span><span class="nx">default_only_filter</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">name_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">tags_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">user_only_filter</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecurityMonitoringRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityMonitoringRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecurityMonitoringRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecurityMonitoringRulesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityMonitoringRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecurityMonitoringRulesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecurityMonitoringRulesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetSecurityMonitoringRules` in the Go SDK.
 
@@ -150,7 +154,7 @@ const test = pulumi.output(datadog.getSecurityMonitoringRules({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecurityMonitoringRules </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSecurityMonitoringRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSecurityMonitoringRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSecurityMonitoringRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSecurityMonitoringRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -573,7 +577,7 @@ The following output properties are available:
 <a href="#cases_csharp" style="color: inherit; text-decoration: inherit;">Cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritymonitoringrulesrulecase">List&lt;Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesrulecase">List&lt;Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -597,7 +601,7 @@ The following output properties are available:
 <a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritymonitoringrulesrulequery">List&lt;Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Query<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesrulequery">List&lt;Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Query&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +617,7 @@ The following output properties are available:
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +757,7 @@ The following output properties are available:
 <a href="#cases_python" style="color: inherit; text-decoration: inherit;">cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritymonitoringrulesrulecase">Sequence[Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesrulecase">Sequence[Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Case]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -777,7 +781,7 @@ The following output properties are available:
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritymonitoringrulesrulequery">Sequence[Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesrulequery">Sequence[Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Query]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +797,7 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#getsecuritymonitoringrulesruleoptions">Get<wbr>Security<wbr>Monitoring<wbr>Rules<wbr>Rule<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
