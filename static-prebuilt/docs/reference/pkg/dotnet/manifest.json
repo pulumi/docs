@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html",
-          "hash": "cxNLzz2KoNMfw7AoBQyS1A=="
+          "hash": "Od4o9xTlvh0A+ylfNVxTWA=="
         }
       },
       "is_incremental": false,
@@ -557,11 +557,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackDeployment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi.Automation/Pulumi.Automation.StackDeployment.html",
+          "hash": "To6Fl8qWGq8Gqzqnvi5t6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi.Automation/Pulumi.Automation.StackSettings.yml",
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.StackSettings.html",
-          "hash": "lR/SkZRIGn9HV8DHGIFPcg=="
+          "hash": "z1uQZSnz09S8RlhwvaUB4Q=="
         }
       },
       "is_incremental": false,
@@ -693,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.Workspace.html",
-          "hash": "QDLpDnbZkZ0qpzA2FFR0WA=="
+          "hash": "V4W3b7wxDZHGSwxlwu5j4w=="
         }
       },
       "is_incremental": false,
@@ -705,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html",
-          "hash": "fRbbTwQsOq7kvBpdMwwIVw=="
+          "hash": "YHYEcbw7Onj3S1yMuP02Ow=="
         }
       },
       "is_incremental": false,
@@ -717,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/Pulumi.Automation.html",
-          "hash": "7HsUwlJCT/VOXcpCHkBD7Q=="
+          "hash": "TreTcX+hXLZLyoxhinMkxg=="
         }
       },
       "is_incremental": false,
@@ -729,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi.Automation/toc.html",
-          "hash": "NjfQ8MM3dwvuBnWuxzEJuw=="
+          "hash": "W2F5qIemU+fOXwAlAgYpmw=="
         }
       },
       "is_incremental": false,
@@ -1425,7 +1437,31 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Testing.IMocks.html",
-          "hash": "aCir4a/oTKWoYefMKpbZRA=="
+          "hash": "ZPY2CCbabSriTLsM99QyUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Testing.MockCallArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Testing.MockCallArgs.html",
+          "hash": "bgsTva/AmPiNuHLQZrZn9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.Testing.MockResourceArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Pulumi/Pulumi.Testing.MockResourceArgs.html",
+          "hash": "6xNZgkuaLSPs3FiyPVXWbg=="
         }
       },
       "is_incremental": false,
@@ -1449,7 +1485,7 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/Pulumi.Testing.html",
-          "hash": "S7oh40m0T6HtL1YF8fFnOQ=="
+          "hash": "49LtcVMbSO24UYwo33OOpA=="
         }
       },
       "is_incremental": false,
@@ -1497,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "Pulumi/toc.html",
-          "hash": "cFmkADLJ28iu2FKKiW7Agg=="
+          "hash": "9mm0Xl1PhvbwigpWv4w1hw=="
         }
       },
       "is_incremental": false,
@@ -1518,7 +1554,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 122,
+          "total_file_count": 125,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

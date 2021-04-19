@@ -1474,6 +1474,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Automation.LocalWorkspace.EnvironmentVariables
   nameWithType: LocalWorkspace.EnvironmentVariables
+- uid: Pulumi.Automation.LocalWorkspace.ExportStackAsync(System.String,System.Threading.CancellationToken)
+  name: ExportStackAsync(String, CancellationToken)
+  href: Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_ExportStackAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Pulumi.Automation.LocalWorkspace.ExportStackAsync(System.String,System.Threading.CancellationToken)
+  fullName: Pulumi.Automation.LocalWorkspace.ExportStackAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: LocalWorkspace.ExportStackAsync(String, CancellationToken)
+- uid: Pulumi.Automation.LocalWorkspace.ExportStackAsync*
+  name: ExportStackAsync
+  href: Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_ExportStackAsync_
+  commentId: Overload:Pulumi.Automation.LocalWorkspace.ExportStackAsync
+  isSpec: "True"
+  fullName: Pulumi.Automation.LocalWorkspace.ExportStackAsync
+  nameWithType: LocalWorkspace.ExportStackAsync
 - uid: Pulumi.Automation.LocalWorkspace.GetAllConfigAsync(System.String,System.Threading.CancellationToken)
   name: GetAllConfigAsync(String, CancellationToken)
   href: Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_GetAllConfigAsync_System_String_System_Threading_CancellationToken_
@@ -1526,6 +1539,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Automation.LocalWorkspace.GetStackSettingsAsync
   nameWithType: LocalWorkspace.GetStackSettingsAsync
+- uid: Pulumi.Automation.LocalWorkspace.ImportStackAsync(System.String,Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)
+  name: ImportStackAsync(String, StackDeployment, CancellationToken)
+  href: Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_ImportStackAsync_System_String_Pulumi_Automation_StackDeployment_System_Threading_CancellationToken_
+  commentId: M:Pulumi.Automation.LocalWorkspace.ImportStackAsync(System.String,Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)
+  fullName: Pulumi.Automation.LocalWorkspace.ImportStackAsync(System.String, Pulumi.Automation.StackDeployment, System.Threading.CancellationToken)
+  nameWithType: LocalWorkspace.ImportStackAsync(String, StackDeployment, CancellationToken)
+- uid: Pulumi.Automation.LocalWorkspace.ImportStackAsync*
+  name: ImportStackAsync
+  href: Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_ImportStackAsync_
+  commentId: Overload:Pulumi.Automation.LocalWorkspace.ImportStackAsync
+  isSpec: "True"
+  fullName: Pulumi.Automation.LocalWorkspace.ImportStackAsync
+  nameWithType: LocalWorkspace.ImportStackAsync
 - uid: Pulumi.Automation.LocalWorkspace.InstallPluginAsync(System.String,System.String,Pulumi.Automation.PluginKind,System.Threading.CancellationToken)
   name: InstallPluginAsync(String, String, PluginKind, CancellationToken)
   href: Pulumi.Automation/Pulumi.Automation.LocalWorkspace.html#Pulumi_Automation_LocalWorkspace_InstallPluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_System_Threading_CancellationToken_
@@ -2802,6 +2828,38 @@ references:
   isSpec: "True"
   fullName: Pulumi.Automation.RefreshOptions.ExpectNoChanges
   nameWithType: RefreshOptions.ExpectNoChanges
+- uid: Pulumi.Automation.StackDeployment
+  name: StackDeployment
+  href: Pulumi.Automation/Pulumi.Automation.StackDeployment.html
+  commentId: T:Pulumi.Automation.StackDeployment
+  fullName: Pulumi.Automation.StackDeployment
+  nameWithType: StackDeployment
+- uid: Pulumi.Automation.StackDeployment.Json
+  name: Json
+  href: Pulumi.Automation/Pulumi.Automation.StackDeployment.html#Pulumi_Automation_StackDeployment_Json
+  commentId: P:Pulumi.Automation.StackDeployment.Json
+  fullName: Pulumi.Automation.StackDeployment.Json
+  nameWithType: StackDeployment.Json
+- uid: Pulumi.Automation.StackDeployment.Json*
+  name: Json
+  href: Pulumi.Automation/Pulumi.Automation.StackDeployment.html#Pulumi_Automation_StackDeployment_Json_
+  commentId: Overload:Pulumi.Automation.StackDeployment.Json
+  isSpec: "True"
+  fullName: Pulumi.Automation.StackDeployment.Json
+  nameWithType: StackDeployment.Json
+- uid: Pulumi.Automation.StackDeployment.Version
+  name: Version
+  href: Pulumi.Automation/Pulumi.Automation.StackDeployment.html#Pulumi_Automation_StackDeployment_Version
+  commentId: P:Pulumi.Automation.StackDeployment.Version
+  fullName: Pulumi.Automation.StackDeployment.Version
+  nameWithType: StackDeployment.Version
+- uid: Pulumi.Automation.StackDeployment.Version*
+  name: Version
+  href: Pulumi.Automation/Pulumi.Automation.StackDeployment.html#Pulumi_Automation_StackDeployment_Version_
+  commentId: Overload:Pulumi.Automation.StackDeployment.Version
+  isSpec: "True"
+  fullName: Pulumi.Automation.StackDeployment.Version
+  nameWithType: StackDeployment.Version
 - uid: Pulumi.Automation.StackSettings
   name: StackSettings
   href: Pulumi.Automation/Pulumi.Automation.StackSettings.html
@@ -3499,6 +3557,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Automation.Workspace.EnvironmentVariables
   nameWithType: Workspace.EnvironmentVariables
+- uid: Pulumi.Automation.Workspace.ExportStackAsync(System.String,System.Threading.CancellationToken)
+  name: ExportStackAsync(String, CancellationToken)
+  href: Pulumi.Automation/Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_ExportStackAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Pulumi.Automation.Workspace.ExportStackAsync(System.String,System.Threading.CancellationToken)
+  fullName: Pulumi.Automation.Workspace.ExportStackAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: Workspace.ExportStackAsync(String, CancellationToken)
+- uid: Pulumi.Automation.Workspace.ExportStackAsync*
+  name: ExportStackAsync
+  href: Pulumi.Automation/Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_ExportStackAsync_
+  commentId: Overload:Pulumi.Automation.Workspace.ExportStackAsync
+  isSpec: "True"
+  fullName: Pulumi.Automation.Workspace.ExportStackAsync
+  nameWithType: Workspace.ExportStackAsync
 - uid: Pulumi.Automation.Workspace.GetAllConfigAsync(System.String,System.Threading.CancellationToken)
   name: GetAllConfigAsync(String, CancellationToken)
   href: Pulumi.Automation/Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_GetAllConfigAsync_System_String_System_Threading_CancellationToken_
@@ -3564,6 +3635,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Automation.Workspace.GetStackSettingsAsync
   nameWithType: Workspace.GetStackSettingsAsync
+- uid: Pulumi.Automation.Workspace.ImportStackAsync(System.String,Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)
+  name: ImportStackAsync(String, StackDeployment, CancellationToken)
+  href: Pulumi.Automation/Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_ImportStackAsync_System_String_Pulumi_Automation_StackDeployment_System_Threading_CancellationToken_
+  commentId: M:Pulumi.Automation.Workspace.ImportStackAsync(System.String,Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)
+  fullName: Pulumi.Automation.Workspace.ImportStackAsync(System.String, Pulumi.Automation.StackDeployment, System.Threading.CancellationToken)
+  nameWithType: Workspace.ImportStackAsync(String, StackDeployment, CancellationToken)
+- uid: Pulumi.Automation.Workspace.ImportStackAsync*
+  name: ImportStackAsync
+  href: Pulumi.Automation/Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_ImportStackAsync_
+  commentId: Overload:Pulumi.Automation.Workspace.ImportStackAsync
+  isSpec: "True"
+  fullName: Pulumi.Automation.Workspace.ImportStackAsync
+  nameWithType: Workspace.ImportStackAsync
 - uid: Pulumi.Automation.Workspace.InstallPluginAsync(System.String,System.String,Pulumi.Automation.PluginKind,System.Threading.CancellationToken)
   name: InstallPluginAsync(String, String, PluginKind, CancellationToken)
   href: Pulumi.Automation/Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_InstallPluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_System_Threading_CancellationToken_
@@ -3855,6 +3939,19 @@ references:
   commentId: T:Pulumi.Automation.WorkspaceStack
   fullName: Pulumi.Automation.WorkspaceStack
   nameWithType: WorkspaceStack
+- uid: Pulumi.Automation.WorkspaceStack.CancelAsync(System.Threading.CancellationToken)
+  name: CancelAsync(CancellationToken)
+  href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_CancelAsync_System_Threading_CancellationToken_
+  commentId: M:Pulumi.Automation.WorkspaceStack.CancelAsync(System.Threading.CancellationToken)
+  fullName: Pulumi.Automation.WorkspaceStack.CancelAsync(System.Threading.CancellationToken)
+  nameWithType: WorkspaceStack.CancelAsync(CancellationToken)
+- uid: Pulumi.Automation.WorkspaceStack.CancelAsync*
+  name: CancelAsync
+  href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_CancelAsync_
+  commentId: Overload:Pulumi.Automation.WorkspaceStack.CancelAsync
+  isSpec: "True"
+  fullName: Pulumi.Automation.WorkspaceStack.CancelAsync
+  nameWithType: WorkspaceStack.CancelAsync
 - uid: Pulumi.Automation.WorkspaceStack.CreateAsync(System.String,Pulumi.Automation.Workspace,System.Threading.CancellationToken)
   name: CreateAsync(String, Workspace, CancellationToken)
   href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_CreateAsync_System_String_Pulumi_Automation_Workspace_System_Threading_CancellationToken_
@@ -3907,6 +4004,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Automation.WorkspaceStack.Dispose
   nameWithType: WorkspaceStack.Dispose
+- uid: Pulumi.Automation.WorkspaceStack.ExportStackAsync(System.Threading.CancellationToken)
+  name: ExportStackAsync(CancellationToken)
+  href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_ExportStackAsync_System_Threading_CancellationToken_
+  commentId: M:Pulumi.Automation.WorkspaceStack.ExportStackAsync(System.Threading.CancellationToken)
+  fullName: Pulumi.Automation.WorkspaceStack.ExportStackAsync(System.Threading.CancellationToken)
+  nameWithType: WorkspaceStack.ExportStackAsync(CancellationToken)
+- uid: Pulumi.Automation.WorkspaceStack.ExportStackAsync*
+  name: ExportStackAsync
+  href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_ExportStackAsync_
+  commentId: Overload:Pulumi.Automation.WorkspaceStack.ExportStackAsync
+  isSpec: "True"
+  fullName: Pulumi.Automation.WorkspaceStack.ExportStackAsync
+  nameWithType: WorkspaceStack.ExportStackAsync
 - uid: Pulumi.Automation.WorkspaceStack.GetAllConfigAsync(System.Threading.CancellationToken)
   name: GetAllConfigAsync(CancellationToken)
   href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_GetAllConfigAsync_System_Threading_CancellationToken_
@@ -3972,6 +4082,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.Automation.WorkspaceStack.GetOutputsAsync
   nameWithType: WorkspaceStack.GetOutputsAsync
+- uid: Pulumi.Automation.WorkspaceStack.ImportStackAsync(Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)
+  name: ImportStackAsync(StackDeployment, CancellationToken)
+  href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_ImportStackAsync_Pulumi_Automation_StackDeployment_System_Threading_CancellationToken_
+  commentId: M:Pulumi.Automation.WorkspaceStack.ImportStackAsync(Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)
+  fullName: Pulumi.Automation.WorkspaceStack.ImportStackAsync(Pulumi.Automation.StackDeployment, System.Threading.CancellationToken)
+  nameWithType: WorkspaceStack.ImportStackAsync(StackDeployment, CancellationToken)
+- uid: Pulumi.Automation.WorkspaceStack.ImportStackAsync*
+  name: ImportStackAsync
+  href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_ImportStackAsync_
+  commentId: Overload:Pulumi.Automation.WorkspaceStack.ImportStackAsync
+  isSpec: "True"
+  fullName: Pulumi.Automation.WorkspaceStack.ImportStackAsync
+  nameWithType: WorkspaceStack.ImportStackAsync
 - uid: Pulumi.Automation.WorkspaceStack.Name
   name: Name
   href: Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html#Pulumi_Automation_WorkspaceStack_Name
@@ -7223,15 +7346,12 @@ references:
   commentId: T:Pulumi.Testing.IMocks
   fullName: Pulumi.Testing.IMocks
   nameWithType: IMocks
-- uid: Pulumi.Testing.IMocks.CallAsync(System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String)
-  name: CallAsync(String, ImmutableDictionary<String, Object>, String)
-  href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_CallAsync_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_String_
-  commentId: M:Pulumi.Testing.IMocks.CallAsync(System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String)
-  name.vb: CallAsync(String, ImmutableDictionary(Of String, Object), String)
-  fullName: Pulumi.Testing.IMocks.CallAsync(System.String, System.Collections.Immutable.ImmutableDictionary<System.String, System.Object>, System.String)
-  fullName.vb: Pulumi.Testing.IMocks.CallAsync(System.String, System.Collections.Immutable.ImmutableDictionary(Of System.String, System.Object), System.String)
-  nameWithType: IMocks.CallAsync(String, ImmutableDictionary<String, Object>, String)
-  nameWithType.vb: IMocks.CallAsync(String, ImmutableDictionary(Of String, Object), String)
+- uid: Pulumi.Testing.IMocks.CallAsync(Pulumi.Testing.MockCallArgs)
+  name: CallAsync(MockCallArgs)
+  href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_CallAsync_Pulumi_Testing_MockCallArgs_
+  commentId: M:Pulumi.Testing.IMocks.CallAsync(Pulumi.Testing.MockCallArgs)
+  fullName: Pulumi.Testing.IMocks.CallAsync(Pulumi.Testing.MockCallArgs)
+  nameWithType: IMocks.CallAsync(MockCallArgs)
 - uid: Pulumi.Testing.IMocks.CallAsync*
   name: CallAsync
   href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_CallAsync_
@@ -7239,15 +7359,12 @@ references:
   isSpec: "True"
   fullName: Pulumi.Testing.IMocks.CallAsync
   nameWithType: IMocks.CallAsync
-- uid: Pulumi.Testing.IMocks.NewResourceAsync(System.String,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String,System.String)
-  name: NewResourceAsync(String, String, ImmutableDictionary<String, Object>, String, String)
-  href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_NewResourceAsync_System_String_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_String_System_String_
-  commentId: M:Pulumi.Testing.IMocks.NewResourceAsync(System.String,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String,System.String)
-  name.vb: NewResourceAsync(String, String, ImmutableDictionary(Of String, Object), String, String)
-  fullName: Pulumi.Testing.IMocks.NewResourceAsync(System.String, System.String, System.Collections.Immutable.ImmutableDictionary<System.String, System.Object>, System.String, System.String)
-  fullName.vb: Pulumi.Testing.IMocks.NewResourceAsync(System.String, System.String, System.Collections.Immutable.ImmutableDictionary(Of System.String, System.Object), System.String, System.String)
-  nameWithType: IMocks.NewResourceAsync(String, String, ImmutableDictionary<String, Object>, String, String)
-  nameWithType.vb: IMocks.NewResourceAsync(String, String, ImmutableDictionary(Of String, Object), String, String)
+- uid: Pulumi.Testing.IMocks.NewResourceAsync(Pulumi.Testing.MockResourceArgs)
+  name: NewResourceAsync(MockResourceArgs)
+  href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_NewResourceAsync_Pulumi_Testing_MockResourceArgs_
+  commentId: M:Pulumi.Testing.IMocks.NewResourceAsync(Pulumi.Testing.MockResourceArgs)
+  fullName: Pulumi.Testing.IMocks.NewResourceAsync(Pulumi.Testing.MockResourceArgs)
+  nameWithType: IMocks.NewResourceAsync(MockResourceArgs)
 - uid: Pulumi.Testing.IMocks.NewResourceAsync*
   name: NewResourceAsync
   href: Pulumi/Pulumi.Testing.IMocks.html#Pulumi_Testing_IMocks_NewResourceAsync_
@@ -7255,6 +7372,122 @@ references:
   isSpec: "True"
   fullName: Pulumi.Testing.IMocks.NewResourceAsync
   nameWithType: IMocks.NewResourceAsync
+- uid: Pulumi.Testing.MockCallArgs
+  name: MockCallArgs
+  href: Pulumi/Pulumi.Testing.MockCallArgs.html
+  commentId: T:Pulumi.Testing.MockCallArgs
+  fullName: Pulumi.Testing.MockCallArgs
+  nameWithType: MockCallArgs
+- uid: Pulumi.Testing.MockCallArgs.Args
+  name: Args
+  href: Pulumi/Pulumi.Testing.MockCallArgs.html#Pulumi_Testing_MockCallArgs_Args
+  commentId: P:Pulumi.Testing.MockCallArgs.Args
+  fullName: Pulumi.Testing.MockCallArgs.Args
+  nameWithType: MockCallArgs.Args
+- uid: Pulumi.Testing.MockCallArgs.Args*
+  name: Args
+  href: Pulumi/Pulumi.Testing.MockCallArgs.html#Pulumi_Testing_MockCallArgs_Args_
+  commentId: Overload:Pulumi.Testing.MockCallArgs.Args
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockCallArgs.Args
+  nameWithType: MockCallArgs.Args
+- uid: Pulumi.Testing.MockCallArgs.Provider
+  name: Provider
+  href: Pulumi/Pulumi.Testing.MockCallArgs.html#Pulumi_Testing_MockCallArgs_Provider
+  commentId: P:Pulumi.Testing.MockCallArgs.Provider
+  fullName: Pulumi.Testing.MockCallArgs.Provider
+  nameWithType: MockCallArgs.Provider
+- uid: Pulumi.Testing.MockCallArgs.Provider*
+  name: Provider
+  href: Pulumi/Pulumi.Testing.MockCallArgs.html#Pulumi_Testing_MockCallArgs_Provider_
+  commentId: Overload:Pulumi.Testing.MockCallArgs.Provider
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockCallArgs.Provider
+  nameWithType: MockCallArgs.Provider
+- uid: Pulumi.Testing.MockCallArgs.Token
+  name: Token
+  href: Pulumi/Pulumi.Testing.MockCallArgs.html#Pulumi_Testing_MockCallArgs_Token
+  commentId: P:Pulumi.Testing.MockCallArgs.Token
+  fullName: Pulumi.Testing.MockCallArgs.Token
+  nameWithType: MockCallArgs.Token
+- uid: Pulumi.Testing.MockCallArgs.Token*
+  name: Token
+  href: Pulumi/Pulumi.Testing.MockCallArgs.html#Pulumi_Testing_MockCallArgs_Token_
+  commentId: Overload:Pulumi.Testing.MockCallArgs.Token
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockCallArgs.Token
+  nameWithType: MockCallArgs.Token
+- uid: Pulumi.Testing.MockResourceArgs
+  name: MockResourceArgs
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html
+  commentId: T:Pulumi.Testing.MockResourceArgs
+  fullName: Pulumi.Testing.MockResourceArgs
+  nameWithType: MockResourceArgs
+- uid: Pulumi.Testing.MockResourceArgs.Id
+  name: Id
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Id
+  commentId: P:Pulumi.Testing.MockResourceArgs.Id
+  fullName: Pulumi.Testing.MockResourceArgs.Id
+  nameWithType: MockResourceArgs.Id
+- uid: Pulumi.Testing.MockResourceArgs.Id*
+  name: Id
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Id_
+  commentId: Overload:Pulumi.Testing.MockResourceArgs.Id
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockResourceArgs.Id
+  nameWithType: MockResourceArgs.Id
+- uid: Pulumi.Testing.MockResourceArgs.Inputs
+  name: Inputs
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Inputs
+  commentId: P:Pulumi.Testing.MockResourceArgs.Inputs
+  fullName: Pulumi.Testing.MockResourceArgs.Inputs
+  nameWithType: MockResourceArgs.Inputs
+- uid: Pulumi.Testing.MockResourceArgs.Inputs*
+  name: Inputs
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Inputs_
+  commentId: Overload:Pulumi.Testing.MockResourceArgs.Inputs
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockResourceArgs.Inputs
+  nameWithType: MockResourceArgs.Inputs
+- uid: Pulumi.Testing.MockResourceArgs.Name
+  name: Name
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Name
+  commentId: P:Pulumi.Testing.MockResourceArgs.Name
+  fullName: Pulumi.Testing.MockResourceArgs.Name
+  nameWithType: MockResourceArgs.Name
+- uid: Pulumi.Testing.MockResourceArgs.Name*
+  name: Name
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Name_
+  commentId: Overload:Pulumi.Testing.MockResourceArgs.Name
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockResourceArgs.Name
+  nameWithType: MockResourceArgs.Name
+- uid: Pulumi.Testing.MockResourceArgs.Provider
+  name: Provider
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Provider
+  commentId: P:Pulumi.Testing.MockResourceArgs.Provider
+  fullName: Pulumi.Testing.MockResourceArgs.Provider
+  nameWithType: MockResourceArgs.Provider
+- uid: Pulumi.Testing.MockResourceArgs.Provider*
+  name: Provider
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Provider_
+  commentId: Overload:Pulumi.Testing.MockResourceArgs.Provider
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockResourceArgs.Provider
+  nameWithType: MockResourceArgs.Provider
+- uid: Pulumi.Testing.MockResourceArgs.Type
+  name: Type
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Type
+  commentId: P:Pulumi.Testing.MockResourceArgs.Type
+  fullName: Pulumi.Testing.MockResourceArgs.Type
+  nameWithType: MockResourceArgs.Type
+- uid: Pulumi.Testing.MockResourceArgs.Type*
+  name: Type
+  href: Pulumi/Pulumi.Testing.MockResourceArgs.html#Pulumi_Testing_MockResourceArgs_Type_
+  commentId: Overload:Pulumi.Testing.MockResourceArgs.Type
+  isSpec: "True"
+  fullName: Pulumi.Testing.MockResourceArgs.Type
+  nameWithType: MockResourceArgs.Type
 - uid: Pulumi.Testing.TestOptions
   name: TestOptions
   href: Pulumi/Pulumi.Testing.TestOptions.html

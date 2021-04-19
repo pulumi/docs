@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StackSettings
+    <title>Class StackDeployment
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StackSettings
+    <meta name="title" content="Class StackDeployment
    ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -66,16 +66,23 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Pulumi.Automation.StackSettings">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Automation.StackDeployment">
   
-  <h1 id="Pulumi_Automation_StackSettings" data-uid="Pulumi.Automation.StackSettings" class="text-break">Class StackSettings
+  <h1 id="Pulumi_Automation_StackDeployment" data-uid="Pulumi.Automation.StackDeployment" class="text-break">Class StackDeployment
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the state of a stack deployment as used by
+ExportStackAsync and ImportStackAsync.</p>
+<p>
+There is no strongly typed model for the contents yet, but you
+can access the raw representation via the Json property.
+<p>
+NOTE: instances may contain sensitive data (secrets).
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StackSettings</span></div>
+    <div class="level1"><span class="xref">StackDeployment</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -103,23 +110,23 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Automation.html">Pulumi.Automation</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.Automation.dll</h6>
-  <h5 id="Pulumi_Automation_StackSettings_syntax">Syntax</h5>
+  <h5 id="Pulumi_Automation_StackDeployment_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StackSettings</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class StackDeployment</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/StackSettings.cs/#L39">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/StackDeployment.cs/#L34">View Source</a>
   </span>
-  <a id="Pulumi_Automation_StackSettings_Config_" data-uid="Pulumi.Automation.StackSettings.Config*"></a>
-  <h4 id="Pulumi_Automation_StackSettings_Config" data-uid="Pulumi.Automation.StackSettings.Config">Config</h4>
-  <div class="markdown level1 summary"><p>This is an optional configuration bag.</p>
+  <a id="Pulumi_Automation_StackDeployment_Json_" data-uid="Pulumi.Automation.StackDeployment.Json*"></a>
+  <h4 id="Pulumi_Automation_StackDeployment_Json" data-uid="Pulumi.Automation.StackDeployment.Json">Json</h4>
+  <div class="markdown level1 summary"><p>JSON representation of the deployment.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, StackSettingsConfigValue&gt; Config { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public JsonElement Json { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,24 +138,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Pulumi.Automation.StackSettingsConfigValue.html">StackSettingsConfigValue</a>&gt;</td>
+        <td><span class="xref">System.Text.Json.JsonElement</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/StackSettings.cs/#L21">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/StackDeployment.cs/#L29">View Source</a>
   </span>
-  <a id="Pulumi_Automation_StackSettings_EncryptedKey_" data-uid="Pulumi.Automation.StackSettings.EncryptedKey*"></a>
-  <h4 id="Pulumi_Automation_StackSettings_EncryptedKey" data-uid="Pulumi.Automation.StackSettings.EncryptedKey">EncryptedKey</h4>
-  <div class="markdown level1 summary"><p>This is the KMS-encrypted ciphertext for the data key used for secrets
-encryption. Only used for cloud-based secrets providers.</p>
+  <a id="Pulumi_Automation_StackDeployment_Version_" data-uid="Pulumi.Automation.StackDeployment.Version*"></a>
+  <h4 id="Pulumi_Automation_StackDeployment_Version" data-uid="Pulumi.Automation.StackDeployment.Version">Version</h4>
+  <div class="markdown level1 summary"><p>Version indicates the schema of the encoded deployment.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;encryptedkey&quot;)]
-public string EncryptedKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Version { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,64 +165,7 @@ public string EncryptedKey { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/StackSettings.cs/#L30">View Source</a>
-  </span>
-  <a id="Pulumi_Automation_StackSettings_EncryptionSalt_" data-uid="Pulumi.Automation.StackSettings.EncryptionSalt*"></a>
-  <h4 id="Pulumi_Automation_StackSettings_EncryptionSalt" data-uid="Pulumi.Automation.StackSettings.EncryptionSalt">EncryptionSalt</h4>
-  <div class="markdown level1 summary"><p>This is this stack's base64 encoded encryption salt. Only used for
-passphrase-based secrets providers.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;encryptionsalt&quot;)]
-public string EncryptionSalt { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/StackSettings.cs/#L12">View Source</a>
-  </span>
-  <a id="Pulumi_Automation_StackSettings_SecretsProvider_" data-uid="Pulumi.Automation.StackSettings.SecretsProvider*"></a>
-  <h4 id="Pulumi_Automation_StackSettings_SecretsProvider" data-uid="Pulumi.Automation.StackSettings.SecretsProvider">SecretsProvider</h4>
-  <div class="markdown level1 summary"><p>This stack's secrets provider.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;secretsprovider&quot;)]
-public string SecretsProvider { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -229,7 +177,7 @@ public string SecretsProvider { get; set; }</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/StackSettings.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/StackDeployment.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -873,7 +873,7 @@ workspace.</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L642">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L667">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspace_Dispose_" data-uid="Pulumi.Automation.LocalWorkspace.Dispose*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspace_Dispose" data-uid="Pulumi.Automation.LocalWorkspace.Dispose">Dispose()</h4>
@@ -885,6 +885,60 @@ workspace.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_Dispose">Workspace.Dispose()</a></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L611">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_LocalWorkspace_ExportStackAsync_" data-uid="Pulumi.Automation.LocalWorkspace.ExportStackAsync*"></a>
+  <h4 id="Pulumi_Automation_LocalWorkspace_ExportStackAsync_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.LocalWorkspace.ExportStackAsync(System.String,System.Threading.CancellationToken)">ExportStackAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Exports the deployment state of the stack.</p>
+<p>
+This can be combined with ImportStackAsync to edit a
+stack&apos;s state (such as recovery from failed deployments).
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;StackDeployment&gt; ExportStackAsync(string stackName, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">stackName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.Automation.StackDeployment.html">StackDeployment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_ExportStackAsync_System_String_System_Threading_CancellationToken_">Workspace.ExportStackAsync(String, CancellationToken)</a></div>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L503">View Source</a>
   </span>
@@ -1098,7 +1152,66 @@ to the Workspace.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_GetStackSettingsAsync_System_String_System_Threading_CancellationToken_">Workspace.GetStackSettingsAsync(String, CancellationToken)</a></div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L611">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L620">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_LocalWorkspace_ImportStackAsync_" data-uid="Pulumi.Automation.LocalWorkspace.ImportStackAsync*"></a>
+  <h4 id="Pulumi_Automation_LocalWorkspace_ImportStackAsync_System_String_Pulumi_Automation_StackDeployment_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.LocalWorkspace.ImportStackAsync(System.String,Pulumi.Automation.StackDeployment,System.Threading.CancellationToken)">ImportStackAsync(String, StackDeployment, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Imports the specified deployment state into a pre-existing stack.</p>
+<p>
+This can be combined with ExportStackAsync to edit a
+stack&apos;s state (such as recovery from failed deployments).
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task ImportStackAsync(string stackName, StackDeployment state, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">stackName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Automation.StackDeployment.html">StackDeployment</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_ImportStackAsync_System_String_Pulumi_Automation_StackDeployment_System_Threading_CancellationToken_">Workspace.ImportStackAsync(String, StackDeployment, CancellationToken)</a></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L636">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspace_InstallPluginAsync_" data-uid="Pulumi.Automation.LocalWorkspace.InstallPluginAsync*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspace_InstallPluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.LocalWorkspace.InstallPluginAsync(System.String,System.String,Pulumi.Automation.PluginKind,System.Threading.CancellationToken)">InstallPluginAsync(String, String, PluginKind, CancellationToken)</h4>
@@ -1163,7 +1276,7 @@ to the Workspace.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_InstallPluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_System_Threading_CancellationToken_">Workspace.InstallPluginAsync(String, String, PluginKind, CancellationToken)</a></div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L635">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L660">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspace_ListPluginsAsync_" data-uid="Pulumi.Automation.LocalWorkspace.ListPluginsAsync*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspace_ListPluginsAsync_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.LocalWorkspace.ListPluginsAsync(System.Threading.CancellationToken)">ListPluginsAsync(CancellationToken)</h4>
@@ -1485,7 +1598,7 @@ An extensibility point to perform workspace cleanup (CLI operations may create/m
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Pulumi.Automation.Workspace.html#Pulumi_Automation_Workspace_RemoveConfigAsync_System_String_System_String_System_Threading_CancellationToken_">Workspace.RemoveConfigAsync(String, String, CancellationToken)</a></div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L615">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi.Automation/LocalWorkspace.cs/#L640">View Source</a>
   </span>
   <a id="Pulumi_Automation_LocalWorkspace_RemovePluginAsync_" data-uid="Pulumi.Automation.LocalWorkspace.RemovePluginAsync*"></a>
   <h4 id="Pulumi_Automation_LocalWorkspace_RemovePluginAsync_System_String_System_String_Pulumi_Automation_PluginKind_System_Threading_CancellationToken_" data-uid="Pulumi.Automation.LocalWorkspace.RemovePluginAsync(System.String,System.String,Pulumi.Automation.PluginKind,System.Threading.CancellationToken)">RemovePluginAsync(String, String, PluginKind, CancellationToken)</h4>
