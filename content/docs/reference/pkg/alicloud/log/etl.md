@@ -114,8 +114,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/log"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/log"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -339,19 +339,48 @@ const exampleEtl = new alicloud.log.Etl("exampleEtl", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Etl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EtlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Etl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EtlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Etl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_key_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etl_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etl_sinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EtlEtlSinkArgs]]</span> = None<span class="p">, </span><span class="nx">etl_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_access_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_access_key_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_access_key_id_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">kms_encryption_access_key_secret_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logstore</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Etl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">access_key_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">etl_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">etl_sinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EtlEtlSinkArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">etl_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">from_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encrypted_access_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encrypted_access_key_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encryption_access_key_id_context</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encryption_access_key_secret_context</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">logstore</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">to_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Etl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EtlArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEtl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EtlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Etl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEtl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EtlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Etl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Etl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EtlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Etl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EtlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -386,22 +415,32 @@ const exampleEtl = new alicloud.log.Etl("exampleEtl", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EtlArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -410,7 +449,7 @@ const exampleEtl = new alicloud.log.Etl("exampleEtl", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -434,7 +473,7 @@ const exampleEtl = new alicloud.log.Etl("exampleEtl", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -911,7 +950,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Log service etl job alias.
 {{% /md %}}</dd><dt class="property-required"
@@ -920,7 +959,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etlname_nodejs" style="color: inherit; text-decoration: inherit;">etl<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the log etl job.
 {{% /md %}}</dd><dt class="property-required"
@@ -929,7 +968,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etlsinks_nodejs" style="color: inherit; text-decoration: inherit;">etl<wbr>Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etletlsink">Etl<wbr>Etl<wbr>Sink[]</a></span>
+        <span class="property-type"><a href="#etletlsink">pulumi.<wbr>Input<pulumi.<wbr>Input<Etl<wbr>Etl<wbr>Sink<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Target logstore configuration for delivery after data processing.
 {{% /md %}}</dd><dt class="property-required"
@@ -938,7 +977,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#logstore_nodejs" style="color: inherit; text-decoration: inherit;">logstore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delivery target logstore.
 {{% /md %}}</dd><dt class="property-required"
@@ -947,7 +986,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project where the target logstore is delivered.
 {{% /md %}}</dd><dt class="property-required"
@@ -956,7 +995,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Processing operation grammar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -965,7 +1004,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dekms_encryption_access_key_id_contextlivery target logstore access key id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -974,7 +1013,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#accesskeysecret_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delivery target logstore access key secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -983,7 +1022,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The etl job create time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +1031,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the log etl job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1001,7 +1040,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etltype_nodejs" style="color: inherit; text-decoration: inherit;">etl<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Log service etl type, the default value is `ETL`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1010,7 +1049,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#fromtime_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The start time of the processing job, the default starts from the current time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +1058,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kmsencryptedaccesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key id used to a log etl job. If the `access_key_id` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1028,7 +1067,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kmsencryptedaccesskeysecret_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Access<wbr>Key<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key secret used to a log etl job. If the `access_key_secret` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1037,7 +1076,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kmsencryptionaccesskeyidcontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Access<wbr>Key<wbr>Id<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_access_key_id` before creating or updating an instance with `kms_encrypted_access_key_id`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1085,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kmsencryptionaccesskeysecretcontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Access<wbr>Key<wbr>Secret<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_access_key_secret` before creating or updating an instance with `kms_encrypted_access_key_secret`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1094,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}ETL job last modified time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1103,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Advanced parameter configuration of processing operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1073,7 +1112,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sts role info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1082,7 +1121,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Job scheduling type, the default value is Resident.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1130,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Log project tags. the default value is RUNNING, Only 4 values are supported: `STARTING`，`RUNNING`，`STOPPING`，`STOPPED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1139,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#totime_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Deadline of processing job, the default value is None.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1148,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Log etl job version. the default value is 2.
 {{% /md %}}</dd></dl>
@@ -1122,7 +1161,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Log service etl job alias.
 {{% /md %}}</dd><dt class="property-required"
@@ -1131,7 +1170,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etl_name_python" style="color: inherit; text-decoration: inherit;">etl_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the log etl job.
 {{% /md %}}</dd><dt class="property-required"
@@ -1140,7 +1179,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etl_sinks_python" style="color: inherit; text-decoration: inherit;">etl_<wbr>sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etletlsink">Sequence[Etl<wbr>Etl<wbr>Sink<wbr>Args]</a></span>
+        <span class="property-type"><a href="#etletlsink">Input[Etl<wbr>Etl<wbr>Sink<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Target logstore configuration for delivery after data processing.
 {{% /md %}}</dd><dt class="property-required"
@@ -1149,7 +1188,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#logstore_python" style="color: inherit; text-decoration: inherit;">logstore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delivery target logstore.
 {{% /md %}}</dd><dt class="property-required"
@@ -1158,7 +1197,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project where the target logstore is delivered.
 {{% /md %}}</dd><dt class="property-required"
@@ -1167,7 +1206,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Processing operation grammar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1215,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dekms_encryption_access_key_id_contextlivery target logstore access key id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1185,7 +1224,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#access_key_secret_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delivery target logstore access key secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1233,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The etl job create time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1242,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the log etl job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1251,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#etl_type_python" style="color: inherit; text-decoration: inherit;">etl_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Log service etl type, the default value is `ETL`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1260,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#from_time_python" style="color: inherit; text-decoration: inherit;">from_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The start time of the processing job, the default starts from the current time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1269,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kms_encrypted_access_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key id used to a log etl job. If the `access_key_id` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1278,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kms_encrypted_access_key_secret_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>access_<wbr>key_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key secret used to a log etl job. If the `access_key_secret` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1287,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kms_encryption_access_key_id_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>access_<wbr>key_<wbr>id_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_access_key_id` before creating or updating an instance with `kms_encrypted_access_key_id`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1296,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kms_encryption_access_key_secret_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>access_<wbr>key_<wbr>secret_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_access_key_secret` before creating or updating an instance with `kms_encrypted_access_key_secret`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1305,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}ETL job last modified time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1314,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Advanced parameter configuration of processing operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1323,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sts role info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1332,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Job scheduling type, the default value is Resident.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1341,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Log project tags. the default value is RUNNING, Only 4 values are supported: `STARTING`，`RUNNING`，`STOPPING`，`STOPPED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1350,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#to_time_python" style="color: inherit; text-decoration: inherit;">to_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Deadline of processing job, the default value is None.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1359,7 @@ The Etl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Log etl job version. the default value is 2.
 {{% /md %}}</dd></dl>
@@ -1389,20 +1428,45 @@ Get an existing Etl resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EtlState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Etl</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EtlState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Etl</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_key_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etl_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etl_sinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[EtlEtlSinkArgs]]</span> = None<span class="p">, </span><span class="nx">etl_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_access_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_access_key_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_access_key_id_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">kms_encryption_access_key_secret_context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">logstore</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Etl</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">access_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">access_key_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">etl_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">etl_sinks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EtlEtlSinkArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">etl_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">from_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encrypted_access_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encrypted_access_key_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encryption_access_key_id_context</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encryption_access_key_secret_context</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">logstore</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">to_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> Etl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEtl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EtlState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Etl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEtl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EtlState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Etl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Etl</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EtlState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Etl</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EtlState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1933,7 +1997,7 @@ The following state arguments are supported:
 <a href="#state_accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dekms_encryption_access_key_id_contextlivery target logstore access key id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1942,7 +2006,7 @@ The following state arguments are supported:
 <a href="#state_accesskeysecret_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delivery target logstore access key secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1951,7 +2015,7 @@ The following state arguments are supported:
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The etl job create time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +2024,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the log etl job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1969,7 +2033,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Log service etl job alias.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1978,7 +2042,7 @@ The following state arguments are supported:
 <a href="#state_etlname_nodejs" style="color: inherit; text-decoration: inherit;">etl<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the log etl job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +2051,7 @@ The following state arguments are supported:
 <a href="#state_etlsinks_nodejs" style="color: inherit; text-decoration: inherit;">etl<wbr>Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etletlsink">Etl<wbr>Etl<wbr>Sink[]</a></span>
+        <span class="property-type"><a href="#etletlsink">pulumi.<wbr>Input<pulumi.<wbr>Input<Etl<wbr>Etl<wbr>Sink<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Target logstore configuration for delivery after data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +2060,7 @@ The following state arguments are supported:
 <a href="#state_etltype_nodejs" style="color: inherit; text-decoration: inherit;">etl<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Log service etl type, the default value is `ETL`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2005,7 +2069,7 @@ The following state arguments are supported:
 <a href="#state_fromtime_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The start time of the processing job, the default starts from the current time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +2078,7 @@ The following state arguments are supported:
 <a href="#state_kmsencryptedaccesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key id used to a log etl job. If the `access_key_id` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2023,7 +2087,7 @@ The following state arguments are supported:
 <a href="#state_kmsencryptedaccesskeysecret_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Access<wbr>Key<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key secret used to a log etl job. If the `access_key_secret` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2032,7 +2096,7 @@ The following state arguments are supported:
 <a href="#state_kmsencryptionaccesskeyidcontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Access<wbr>Key<wbr>Id<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_access_key_id` before creating or updating an instance with `kms_encrypted_access_key_id`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2041,7 +2105,7 @@ The following state arguments are supported:
 <a href="#state_kmsencryptionaccesskeysecretcontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Access<wbr>Key<wbr>Secret<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_access_key_secret` before creating or updating an instance with `kms_encrypted_access_key_secret`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2050,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}ETL job last modified time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2059,7 +2123,7 @@ The following state arguments are supported:
 <a href="#state_logstore_nodejs" style="color: inherit; text-decoration: inherit;">logstore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delivery target logstore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2068,7 +2132,7 @@ The following state arguments are supported:
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Advanced parameter configuration of processing operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2077,7 +2141,7 @@ The following state arguments are supported:
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project where the target logstore is delivered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2086,7 +2150,7 @@ The following state arguments are supported:
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sts role info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Job scheduling type, the default value is Resident.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2168,7 @@ The following state arguments are supported:
 <a href="#state_script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Processing operation grammar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2113,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Log project tags. the default value is RUNNING, Only 4 values are supported: `STARTING`，`RUNNING`，`STOPPING`，`STOPPED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2122,7 +2186,7 @@ The following state arguments are supported:
 <a href="#state_totime_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Deadline of processing job, the default value is None.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2195,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Log etl job version. the default value is 2.
 {{% /md %}}</dd></dl>
@@ -2144,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dekms_encryption_access_key_id_contextlivery target logstore access key id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2217,7 @@ The following state arguments are supported:
 <a href="#state_access_key_secret_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delivery target logstore access key secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2226,7 @@ The following state arguments are supported:
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The etl job create time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2235,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the log etl job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2244,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Log service etl job alias.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2253,7 @@ The following state arguments are supported:
 <a href="#state_etl_name_python" style="color: inherit; text-decoration: inherit;">etl_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the log etl job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2262,7 @@ The following state arguments are supported:
 <a href="#state_etl_sinks_python" style="color: inherit; text-decoration: inherit;">etl_<wbr>sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etletlsink">Sequence[Etl<wbr>Etl<wbr>Sink<wbr>Args]</a></span>
+        <span class="property-type"><a href="#etletlsink">Input[Etl<wbr>Etl<wbr>Sink<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Target logstore configuration for delivery after data processing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2271,7 @@ The following state arguments are supported:
 <a href="#state_etl_type_python" style="color: inherit; text-decoration: inherit;">etl_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Log service etl type, the default value is `ETL`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2280,7 @@ The following state arguments are supported:
 <a href="#state_from_time_python" style="color: inherit; text-decoration: inherit;">from_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The start time of the processing job, the default starts from the current time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2289,7 @@ The following state arguments are supported:
 <a href="#state_kms_encrypted_access_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key id used to a log etl job. If the `access_key_id` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2298,7 @@ The following state arguments are supported:
 <a href="#state_kms_encrypted_access_key_secret_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>access_<wbr>key_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key secret used to a log etl job. If the `access_key_secret` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2307,7 @@ The following state arguments are supported:
 <a href="#state_kms_encryption_access_key_id_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>access_<wbr>key_<wbr>id_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_access_key_id` before creating or updating an instance with `kms_encrypted_access_key_id`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2316,7 @@ The following state arguments are supported:
 <a href="#state_kms_encryption_access_key_secret_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>access_<wbr>key_<wbr>secret_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_access_key_secret` before creating or updating an instance with `kms_encrypted_access_key_secret`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2325,7 @@ The following state arguments are supported:
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}ETL job last modified time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2334,7 @@ The following state arguments are supported:
 <a href="#state_logstore_python" style="color: inherit; text-decoration: inherit;">logstore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delivery target logstore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2343,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Advanced parameter configuration of processing operations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2352,7 @@ The following state arguments are supported:
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project where the target logstore is delivered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2361,7 @@ The following state arguments are supported:
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sts role info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2370,7 @@ The following state arguments are supported:
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Job scheduling type, the default value is Resident.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2379,7 @@ The following state arguments are supported:
 <a href="#state_script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Processing operation grammar.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2388,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Log project tags. the default value is RUNNING, Only 4 values are supported: `STARTING`，`RUNNING`，`STOPPING`，`STOPPED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2397,7 @@ The following state arguments are supported:
 <a href="#state_to_time_python" style="color: inherit; text-decoration: inherit;">to_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Deadline of processing job, the default value is None.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2406,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Log etl job version. the default value is 2.
 {{% /md %}}</dd></dl>
@@ -2554,7 +2618,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delivery target logstore region.
 {{% /md %}}</dd><dt class="property-required"
@@ -2563,7 +2627,7 @@ The following state arguments are supported:
 <a href="#logstore_nodejs" style="color: inherit; text-decoration: inherit;">logstore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delivery target logstore.
 {{% /md %}}</dd><dt class="property-required"
@@ -2572,7 +2636,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delivery target name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2581,7 +2645,7 @@ The following state arguments are supported:
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The project where the target logstore is delivered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2590,7 +2654,7 @@ The following state arguments are supported:
 <a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dekms_encryption_access_key_id_contextlivery target logstore access key id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2599,7 +2663,7 @@ The following state arguments are supported:
 <a href="#accesskeysecret_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Delivery target logstore access key secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2608,7 +2672,7 @@ The following state arguments are supported:
 <a href="#kmsencryptedaccesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key id used to a log etl job. If the `access_key_id` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2617,7 +2681,7 @@ The following state arguments are supported:
 <a href="#kmsencryptedaccesskeysecret_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Access<wbr>Key<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key secret used to a log etl job. If the `access_key_secret` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2626,7 +2690,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sts role info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2635,7 +2699,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ETL sinks type, the default value is AliyunLOG.
 {{% /md %}}</dd></dl>
@@ -2648,7 +2712,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delivery target logstore region.
 {{% /md %}}</dd><dt class="property-required"
@@ -2657,7 +2721,7 @@ The following state arguments are supported:
 <a href="#logstore_python" style="color: inherit; text-decoration: inherit;">logstore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delivery target logstore.
 {{% /md %}}</dd><dt class="property-required"
@@ -2666,7 +2730,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delivery target name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2675,7 +2739,7 @@ The following state arguments are supported:
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The project where the target logstore is delivered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2684,7 +2748,7 @@ The following state arguments are supported:
 <a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dekms_encryption_access_key_id_contextlivery target logstore access key id.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2757,7 @@ The following state arguments are supported:
 <a href="#access_key_secret_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Delivery target logstore access key secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2766,7 @@ The following state arguments are supported:
 <a href="#kms_encrypted_access_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key id used to a log etl job. If the `access_key_id` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2775,7 @@ The following state arguments are supported:
 <a href="#kms_encrypted_access_key_secret_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>access_<wbr>key_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts access key secret used to a log etl job. If the `access_key_secret` is filled in, this field will be ignored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2720,7 +2784,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sts role info.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2729,7 +2793,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ETL sinks type, the default value is AliyunLOG.
 {{% /md %}}</dd></dl>

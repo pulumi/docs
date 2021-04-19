@@ -26,19 +26,53 @@ Cluster nodepool can be imported using the id, e.g. Then complete the nodepool.t
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodePool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodePool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolLabelArgs]]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[NodePoolManagementArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_name_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">period_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolScalingConfigArgs]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolTaintArgs]]</span> = None<span class="p">, </span><span class="nx">unschedulable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodePoolDataDiskArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodePoolLabelArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodePoolManagementArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">node_name_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">period_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodePoolScalingConfigArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">system_disk_category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">system_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">system_disk_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+             <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodePoolTaintArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">unschedulable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodePool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodePool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodePool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodePool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodePool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodePool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +107,32 @@ Cluster nodepool can be imported using the id, e.g. Then complete the nodepool.t
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NodePoolArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +141,7 @@ Cluster nodepool can be imported using the id, e.g. Then complete the nodepool.t
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +165,7 @@ Cluster nodepool can be imported using the id, e.g. Then complete the nodepool.t
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -686,7 +730,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -695,7 +739,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instancetypes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd><dt class="property-required"
@@ -704,7 +748,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vswitchids_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The vswitches used by node pool workers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -713,7 +757,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable Node payment auto-renew, default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -722,7 +766,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Node payment auto-renew period, one of `1`, `2`, `3`,`6`, `12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -731,7 +775,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepooldatadisk">Node<wbr>Pool<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#nodepooldatadisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Pool<wbr>Data<wbr>Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
@@ -740,7 +784,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -749,7 +793,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#installcloudmonitor_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Cloud<wbr>Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Install the cloud monitoring plug-in on the node, and you can view the monitoring information of the instance through the cloud monitoring console. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -758,7 +802,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Node payment type. Valid values: `PostPaid`, `PrePaid`, default is `PostPaid`. If value is `PrePaid`, the arguments `period`, `period_unit`, `auto_renew` and `auto_renew_period` are required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +811,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `key_name` `kms_encrypted_password` fields. Only `key_name` is supported in the management node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -776,7 +820,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -785,7 +829,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoollabel">Node<wbr>Pool<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#nodepoollabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Pool<wbr>Label<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A List of Kubernetes labels to assign to the nodes . Only labels that are applied with the ACK API are managed by this argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -794,7 +838,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">pulumi.<wbr>Input<Node<wbr>Pool<wbr>Management<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Managed node pool configuration. When using a managed node pool, the node key must use `key_name`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -803,7 +847,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -812,7 +856,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The worker node number of the node pool. From version 1.111.0, `node_count` is not required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +865,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#nodenamemode_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example "customized,aliyun.com,5,test", if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +874,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of ssh login cluster node. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +883,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Node payment period. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +892,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#periodunit_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +901,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#scalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolscalingconfig">pulumi.<wbr>Input<Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +910,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -875,7 +919,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#systemdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_ssd` and `cloud_efficiency`. Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -884,7 +928,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#systemdiskperformancelevel_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Performance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +936,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#systemdisksize_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value range [40~500] in GB. Default to `120`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +945,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A Map of tags to assign to the resource. It will be applied for ECS instances finally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +954,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepooltaint">Node<wbr>Pool<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#nodepooltaint">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Pool<wbr>Taint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A List of Kubernetes taints to assign to the nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +963,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#unschedulable_nodejs" style="color: inherit; text-decoration: inherit;">unschedulable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set the newly added node as unschedulable. If you want to open the scheduling option, you can open it in the node list of the console. If you are using an auto-scaling node pool, the setting will not take effect. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +972,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 {{% /md %}}</dd></dl>
@@ -941,7 +985,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -950,7 +994,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd><dt class="property-required"
@@ -959,7 +1003,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The vswitches used by node pool workers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +1012,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable Node payment auto-renew, default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -977,7 +1021,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Node payment auto-renew period, one of `1`, `2`, `3`,`6`, `12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +1030,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepooldatadisk">Sequence[Node<wbr>Pool<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepooldatadisk">Input[Node<wbr>Pool<wbr>Data<wbr>Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +1039,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +1048,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#install_cloud_monitor_python" style="color: inherit; text-decoration: inherit;">install_<wbr>cloud_<wbr>monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Install the cloud monitoring plug-in on the node, and you can view the monitoring information of the instance through the cloud monitoring console. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1057,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Node payment type. Valid values: `PostPaid`, `PrePaid`, default is `PostPaid`. If value is `PrePaid`, the arguments `period`, `period_unit`, `auto_renew` and `auto_renew_period` are required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +1066,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `key_name` `kms_encrypted_password` fields. Only `key_name` is supported in the management node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1075,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1084,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoollabel">Sequence[Node<wbr>Pool<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoollabel">Input[Node<wbr>Pool<wbr>Label<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A List of Kubernetes labels to assign to the nodes . Only labels that are applied with the ACK API are managed by this argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1093,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Input[Node<wbr>Pool<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Managed node pool configuration. When using a managed node pool, the node key must use `key_name`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1102,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1111,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The worker node number of the node pool. From version 1.111.0, `node_count` is not required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1120,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#node_name_mode_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example "customized,aliyun.com,5,test", if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1129,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of ssh login cluster node. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1138,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Node payment period. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1147,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#period_unit_python" style="color: inherit; text-decoration: inherit;">period_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1156,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#scaling_config_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolscalingconfig">Input[Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1165,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1130,7 +1174,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#system_disk_category_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_ssd` and `cloud_efficiency`. Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1139,7 +1183,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#system_disk_performance_level_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>performance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1147,7 +1191,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#system_disk_size_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value range [40~500] in GB. Default to `120`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1200,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A Map of tags to assign to the resource. It will be applied for ECS instances finally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1209,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepooltaint">Sequence[Node<wbr>Pool<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepooltaint">Input[Node<wbr>Pool<wbr>Taint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A List of Kubernetes taints to assign to the nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1218,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#unschedulable_python" style="color: inherit; text-decoration: inherit;">unschedulable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set the newly added node as unschedulable. If you want to open the scheduling option, you can open it in the node list of the console. If you are using an auto-scaling node pool, the setting will not take effect. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1227,7 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 {{% /md %}}</dd></dl>
@@ -1320,20 +1364,52 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NodePoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NodePool</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NodePoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NodePool</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolLabelArgs]]</span> = None<span class="p">, </span><span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[NodePoolManagementArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_name_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">period_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolScalingConfigArgs]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolTaintArgs]]</span> = None<span class="p">, </span><span class="nx">unschedulable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> NodePool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodePoolDataDiskArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodePoolLabelArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">management</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodePoolManagementArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">node_name_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">period_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NodePoolScalingConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">system_disk_category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">system_disk_performance_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">system_disk_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodePoolTaintArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">unschedulable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> NodePool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodePool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NodePoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodePool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodePool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NodePoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodePool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NodePool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NodePoolState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NodePool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NodePoolState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1986,7 +2062,7 @@ The following state arguments are supported:
 <a href="#state_autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable Node payment auto-renew, default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1995,7 +2071,7 @@ The following state arguments are supported:
 <a href="#state_autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Node payment auto-renew period, one of `1`, `2`, `3`,`6`, `12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2004,7 +2080,7 @@ The following state arguments are supported:
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2013,7 +2089,7 @@ The following state arguments are supported:
 <a href="#state_datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepooldatadisk">Node<wbr>Pool<wbr>Data<wbr>Disk[]</a></span>
+        <span class="property-type"><a href="#nodepooldatadisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Pool<wbr>Data<wbr>Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +2098,7 @@ The following state arguments are supported:
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2031,7 +2107,7 @@ The following state arguments are supported:
 <a href="#state_installcloudmonitor_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Cloud<wbr>Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Install the cloud monitoring plug-in on the node, and you can view the monitoring information of the instance through the cloud monitoring console. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2040,7 +2116,7 @@ The following state arguments are supported:
 <a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Node payment type. Valid values: `PostPaid`, `PrePaid`, default is `PostPaid`. If value is `PrePaid`, the arguments `period`, `period_unit`, `auto_renew` and `auto_renew_period` are required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2049,7 +2125,7 @@ The following state arguments are supported:
 <a href="#state_instancetypes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2058,7 +2134,7 @@ The following state arguments are supported:
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `key_name` `kms_encrypted_password` fields. Only `key_name` is supported in the management node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2067,7 +2143,7 @@ The following state arguments are supported:
 <a href="#state_kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2076,7 +2152,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoollabel">Node<wbr>Pool<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#nodepoollabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Pool<wbr>Label<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A List of Kubernetes labels to assign to the nodes . Only labels that are applied with the ACK API are managed by this argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2085,7 +2161,7 @@ The following state arguments are supported:
 <a href="#state_management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">pulumi.<wbr>Input<Node<wbr>Pool<wbr>Management<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Managed node pool configuration. When using a managed node pool, the node key must use `key_name`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2170,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2179,7 @@ The following state arguments are supported:
 <a href="#state_nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The worker node number of the node pool. From version 1.111.0, `node_count` is not required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2188,7 @@ The following state arguments are supported:
 <a href="#state_nodenamemode_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example "customized,aliyun.com,5,test", if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2197,7 @@ The following state arguments are supported:
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of ssh login cluster node. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2206,7 @@ The following state arguments are supported:
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Node payment period. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2139,7 +2215,7 @@ The following state arguments are supported:
 <a href="#state_periodunit_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2148,7 +2224,7 @@ The following state arguments are supported:
 <a href="#state_scalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolscalingconfig">pulumi.<wbr>Input<Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2157,7 +2233,7 @@ The following state arguments are supported:
 <a href="#state_scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) Id of the Scaling Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2242,7 @@ The following state arguments are supported:
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2175,7 +2251,7 @@ The following state arguments are supported:
 <a href="#state_systemdiskcategory_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_ssd` and `cloud_efficiency`. Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2184,7 +2260,7 @@ The following state arguments are supported:
 <a href="#state_systemdiskperformancelevel_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Performance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2192,7 +2268,7 @@ The following state arguments are supported:
 <a href="#state_systemdisksize_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Disk<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value range [40~500] in GB. Default to `120`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2277,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A Map of tags to assign to the resource. It will be applied for ECS instances finally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2286,7 @@ The following state arguments are supported:
 <a href="#state_taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepooltaint">Node<wbr>Pool<wbr>Taint[]</a></span>
+        <span class="property-type"><a href="#nodepooltaint">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Pool<wbr>Taint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A List of Kubernetes taints to assign to the nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2295,7 @@ The following state arguments are supported:
 <a href="#state_unschedulable_nodejs" style="color: inherit; text-decoration: inherit;">unschedulable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set the newly added node as unschedulable. If you want to open the scheduling option, you can open it in the node list of the console. If you are using an auto-scaling node pool, the setting will not take effect. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2304,7 @@ The following state arguments are supported:
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2313,7 @@ The following state arguments are supported:
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2245,7 +2321,7 @@ The following state arguments are supported:
 <a href="#state_vswitchids_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The vswitches used by node pool workers.
 {{% /md %}}</dd></dl>
@@ -2258,7 +2334,7 @@ The following state arguments are supported:
 <a href="#state_auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable Node payment auto-renew, default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2267,7 +2343,7 @@ The following state arguments are supported:
 <a href="#state_auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Node payment auto-renew period, one of `1`, `2`, `3`,`6`, `12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2352,7 @@ The following state arguments are supported:
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2361,7 @@ The following state arguments are supported:
 <a href="#state_data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepooldatadisk">Sequence[Node<wbr>Pool<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepooldatadisk">Input[Node<wbr>Pool<wbr>Data<wbr>Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2294,7 +2370,7 @@ The following state arguments are supported:
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom Image support. Must based on CentOS7 or AliyunLinux2.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2303,7 +2379,7 @@ The following state arguments are supported:
 <a href="#state_install_cloud_monitor_python" style="color: inherit; text-decoration: inherit;">install_<wbr>cloud_<wbr>monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Install the cloud monitoring plug-in on the node, and you can view the monitoring information of the instance through the cloud monitoring console. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2312,7 +2388,7 @@ The following state arguments are supported:
 <a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Node payment type. Valid values: `PostPaid`, `PrePaid`, default is `PostPaid`. If value is `PrePaid`, the arguments `period`, `period_unit`, `auto_renew` and `auto_renew_period` are required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2397,7 @@ The following state arguments are supported:
 <a href="#state_instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2406,7 @@ The following state arguments are supported:
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `key_name` `kms_encrypted_password` fields. Only `key_name` is supported in the management node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2339,7 +2415,7 @@ The following state arguments are supported:
 <a href="#state_kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2348,7 +2424,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoollabel">Sequence[Node<wbr>Pool<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoollabel">Input[Node<wbr>Pool<wbr>Label<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A List of Kubernetes labels to assign to the nodes . Only labels that are applied with the ACK API are managed by this argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2357,7 +2433,7 @@ The following state arguments are supported:
 <a href="#state_management_python" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Input[Node<wbr>Pool<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Managed node pool configuration. When using a managed node pool, the node key must use `key_name`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2366,7 +2442,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2451,7 @@ The following state arguments are supported:
 <a href="#state_node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The worker node number of the node pool. From version 1.111.0, `node_count` is not required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2460,7 @@ The following state arguments are supported:
 <a href="#state_node_name_mode_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Each node name consists of a prefix, an IP substring, and a suffix. For example "customized,aliyun.com,5,test", if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2393,7 +2469,7 @@ The following state arguments are supported:
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of ssh login cluster node. You have to specify one of `password` `key_name` `kms_encrypted_password` fields.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2478,7 @@ The following state arguments are supported:
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Node payment period. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2411,7 +2487,7 @@ The following state arguments are supported:
 <a href="#state_period_unit_python" style="color: inherit; text-decoration: inherit;">period_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2496,7 @@ The following state arguments are supported:
 <a href="#state_scaling_config_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolscalingconfig">Input[Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2505,7 @@ The following state arguments are supported:
 <a href="#state_scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) Id of the Scaling Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2438,7 +2514,7 @@ The following state arguments are supported:
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The system disk size of worker node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2447,7 +2523,7 @@ The following state arguments are supported:
 <a href="#state_system_disk_category_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value are `cloud_ssd` and `cloud_efficiency`. Default to `cloud_efficiency`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2456,7 +2532,7 @@ The following state arguments are supported:
 <a href="#state_system_disk_performance_level_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>performance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2540,7 @@ The following state arguments are supported:
 <a href="#state_system_disk_size_python" style="color: inherit; text-decoration: inherit;">system_<wbr>disk_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The system disk category of worker node. Its valid value range [40~500] in GB. Default to `120`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2473,7 +2549,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A Map of tags to assign to the resource. It will be applied for ECS instances finally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2558,7 @@ The following state arguments are supported:
 <a href="#state_taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepooltaint">Sequence[Node<wbr>Pool<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepooltaint">Input[Node<wbr>Pool<wbr>Taint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A List of Kubernetes taints to assign to the nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2491,7 +2567,7 @@ The following state arguments are supported:
 <a href="#state_unschedulable_python" style="color: inherit; text-decoration: inherit;">unschedulable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set the newly added node as unschedulable. If you want to open the scheduling option, you can open it in the node list of the console. If you are using an auto-scaling node pool, the setting will not take effect. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2500,7 +2576,7 @@ The following state arguments are supported:
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2585,7 @@ The following state arguments are supported:
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2593,7 @@ The following state arguments are supported:
 <a href="#state_vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The vswitches used by node pool workers.
 {{% /md %}}</dd></dl>
@@ -2703,7 +2779,7 @@ The following state arguments are supported:
 <a href="#autosnapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Snapshot<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2711,7 +2787,7 @@ The following state arguments are supported:
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the data disks. Valid values:`cloud`, `cloud_efficiency`, `cloud_ssd` and `cloud_essd`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2720,7 +2796,7 @@ The following state arguments are supported:
 <a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2728,7 +2804,7 @@ The following state arguments are supported:
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to encrypt data disks. Valid values: true and false. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2737,7 +2813,7 @@ The following state arguments are supported:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2821,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2754,7 +2830,7 @@ The following state arguments are supported:
 <a href="#performancelevel_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Worker node data disk performance level, when `category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2763,7 +2839,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size of a data disk, Its valid value range [40~32768] in GB. Default to `40`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2772,7 +2848,7 @@ The following state arguments are supported:
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2784,7 +2860,7 @@ The following state arguments are supported:
 <a href="#auto_snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>snapshot_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2792,7 +2868,7 @@ The following state arguments are supported:
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the data disks. Valid values:`cloud`, `cloud_efficiency`, `cloud_ssd` and `cloud_essd`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2801,7 +2877,7 @@ The following state arguments are supported:
 <a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2809,7 +2885,7 @@ The following state arguments are supported:
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to encrypt data disks. Valid values: true and false. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2818,7 +2894,7 @@ The following state arguments are supported:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2826,7 +2902,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of node pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2835,7 +2911,7 @@ The following state arguments are supported:
 <a href="#performance_level_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Worker node data disk performance level, when `category` values `cloud_essd`, the optional values are `PL0`, `PL1`, `PL2` or `PL3`, but the specific performance level is related to the disk capacity. For more information, see [Enhanced SSDs](https://www.alibabacloud.com/help/doc-detail/122389.htm). Default is `PL1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2844,7 +2920,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size of a data disk, Its valid value range [40~32768] in GB. Default to `40`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2853,7 +2929,7 @@ The following state arguments are supported:
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2911,7 +2987,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2920,7 +2996,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label value.
 {{% /md %}}</dd></dl>
@@ -2933,7 +3009,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2942,7 +3018,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label value.
 {{% /md %}}</dd></dl>
@@ -3055,7 +3131,7 @@ The following state arguments are supported:
 <a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Max number of unavailable nodes. Default to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3064,7 +3140,7 @@ The following state arguments are supported:
 <a href="#autorepair_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether automatic repair, Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3073,7 +3149,7 @@ The following state arguments are supported:
 <a href="#autoupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether auto upgrade, Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3082,7 +3158,7 @@ The following state arguments are supported:
 <a href="#surge_nodejs" style="color: inherit; text-decoration: inherit;">surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of additional nodes. You have to specify one of surge, surge_percentage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3091,7 +3167,7 @@ The following state arguments are supported:
 <a href="#surgepercentage_nodejs" style="color: inherit; text-decoration: inherit;">surge<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Proportion of additional nodes. You have to specify one of surge, surge_percentage.
 {{% /md %}}</dd></dl>
@@ -3104,7 +3180,7 @@ The following state arguments are supported:
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Max number of unavailable nodes. Default to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3113,7 +3189,7 @@ The following state arguments are supported:
 <a href="#auto_repair_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether automatic repair, Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3122,7 +3198,7 @@ The following state arguments are supported:
 <a href="#auto_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether auto upgrade, Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3131,7 +3207,7 @@ The following state arguments are supported:
 <a href="#surge_python" style="color: inherit; text-decoration: inherit;">surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of additional nodes. You have to specify one of surge, surge_percentage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3140,7 +3216,7 @@ The following state arguments are supported:
 <a href="#surge_percentage_python" style="color: inherit; text-decoration: inherit;">surge_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Proportion of additional nodes. You have to specify one of surge, surge_percentage.
 {{% /md %}}</dd></dl>
@@ -3271,7 +3347,7 @@ The following state arguments are supported:
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Max number of instances in a auto scaling group, its valid value range [0~1000]. `max_size` has to be greater than `min_size`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3280,7 +3356,7 @@ The following state arguments are supported:
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Min number of instances in a auto scaling group, its valid value range [0~1000].
 {{% /md %}}</dd><dt class="property-optional"
@@ -3289,7 +3365,7 @@ The following state arguments are supported:
 <a href="#eipbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">eip<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Peak EIP bandwidth. Its valid value range [1~500] in Mbps. Default to `5`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3298,7 +3374,7 @@ The following state arguments are supported:
 <a href="#eipinternetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">eip<wbr>Internet<wbr>Charge<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EIP billing type. `PayByBandwidth`: Charged at fixed bandwidth. `PayByTraffic`: Billed as used traffic. Default: `PayByBandwidth`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3307,7 +3383,7 @@ The following state arguments are supported:
 <a href="#isbondeip_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Bond<wbr>Eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to bind EIP for an instance. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3316,7 +3392,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Instance classification, not required. Vaild value: `cpu`, `gpu`, `gpushare` and `spot`. Default: `cpu`. The actual instance type is determined by `instance_types`.
 {{% /md %}}</dd></dl>
@@ -3329,7 +3405,7 @@ The following state arguments are supported:
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Max number of instances in a auto scaling group, its valid value range [0~1000]. `max_size` has to be greater than `min_size`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3338,7 +3414,7 @@ The following state arguments are supported:
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Min number of instances in a auto scaling group, its valid value range [0~1000].
 {{% /md %}}</dd><dt class="property-optional"
@@ -3347,7 +3423,7 @@ The following state arguments are supported:
 <a href="#eip_bandwidth_python" style="color: inherit; text-decoration: inherit;">eip_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Peak EIP bandwidth. Its valid value range [1~500] in Mbps. Default to `5`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3356,7 +3432,7 @@ The following state arguments are supported:
 <a href="#eip_internet_charge_type_python" style="color: inherit; text-decoration: inherit;">eip_<wbr>internet_<wbr>charge_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EIP billing type. `PayByBandwidth`: Charged at fixed bandwidth. `PayByTraffic`: Billed as used traffic. Default: `PayByBandwidth`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3365,7 +3441,7 @@ The following state arguments are supported:
 <a href="#is_bond_eip_python" style="color: inherit; text-decoration: inherit;">is_<wbr>bond_<wbr>eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to bind EIP for an instance. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3374,7 +3450,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Instance classification, not required. Vaild value: `cpu`, `gpu`, `gpushare` and `spot`. Default: `cpu`. The actual instance type is determined by `instance_types`.
 {{% /md %}}</dd></dl>
@@ -3449,7 +3525,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3458,7 +3534,7 @@ The following state arguments are supported:
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3466,7 +3542,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label value.
 {{% /md %}}</dd></dl>
@@ -3479,7 +3555,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3488,7 +3564,7 @@ The following state arguments are supported:
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3496,7 +3572,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label value.
 {{% /md %}}</dd></dl>
