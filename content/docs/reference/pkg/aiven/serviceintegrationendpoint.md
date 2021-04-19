@@ -60,8 +60,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -139,19 +139,39 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalAwsCloudwatchMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_schema_registry_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalSchemaRegistryUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointJolokiaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointSignalfxUserConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointDatadogUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalAwsCloudwatchMetricsUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalKafkaUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">external_schema_registry_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalSchemaRegistryUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointJolokiaUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointPrometheusUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointRsyslogUserConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointSignalfxUserConfigArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIntegrationEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIntegrationEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceIntegrationEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,22 +206,32 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceIntegrationEndpointArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -210,7 +240,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -234,7 +264,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -553,7 +583,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
@@ -563,7 +593,7 @@ to identify different integration endpoints.
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
@@ -573,7 +603,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -582,7 +612,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -591,7 +621,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -600,7 +630,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalawscloudwatchmetricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -609,7 +639,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -618,7 +648,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -627,7 +657,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalkafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -636,7 +666,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#externalschemaregistryuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -645,7 +675,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#jolokiauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">jolokia<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -654,7 +684,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -663,7 +693,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -672,7 +702,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd></dl>
@@ -685,7 +715,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
@@ -695,7 +725,7 @@ to identify different integration endpoints.
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
@@ -705,7 +735,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +744,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +753,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +762,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_aws_cloudwatch_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +771,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +780,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +789,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>kafka_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +798,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#external_schema_registry_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>schema_<wbr>registry_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +807,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +816,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +825,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +834,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd></dl>
@@ -909,20 +939,37 @@ Get an existing ServiceIntegrationEndpoint resource's state with the given name,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceIntegrationEndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceIntegrationEndpoint</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceIntegrationEndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceIntegrationEndpoint</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalAwsCloudwatchMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_schema_registry_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointExternalSchemaRegistryUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointJolokiaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationEndpointSignalfxUserConfigArgs]</span> = None<span class="p">) -&gt;</span> ServiceIntegrationEndpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointDatadogUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalAwsCloudwatchMetricsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalKafkaUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">external_schema_registry_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointExternalSchemaRegistryUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointJolokiaUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointPrometheusUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointRsyslogUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationEndpointSignalfxUserConfigArgs]]</span> = None<span class="p">) -&gt;</span> ServiceIntegrationEndpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIntegrationEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceIntegrationEndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIntegrationEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIntegrationEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceIntegrationEndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIntegrationEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceIntegrationEndpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceIntegrationEndpointState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceIntegrationEndpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceIntegrationEndpointState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1313,7 +1360,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1369,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1378,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
@@ -1341,7 +1388,7 @@ to identify different integration endpoints.
 <a href="#state_endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
@@ -1351,7 +1398,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1407,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_externalawscloudwatchmetricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1416,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1425,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1434,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_externalkafkauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1443,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_externalschemaregistryuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1452,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_jolokiauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">jolokia<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1461,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1470,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1479,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1488,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd></dl>
@@ -1454,7 +1501,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Datadog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1463,7 +1510,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Integration endpoint specific backend configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1519,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is the name of the endpoint. This value has no effect beyond being used
 to identify different integration endpoints.
@@ -1482,7 +1529,7 @@ to identify different integration endpoints.
 <a href="#state_endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is the type of the external service this endpoint is associated with.
 By the time of writing the only available option is `datadog`.
@@ -1492,7 +1539,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchlogsuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external AWS CloudWatch Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1501,7 +1548,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_external_aws_cloudwatch_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalawscloudwatchmetricsuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch mertrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1510,7 +1557,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalelasticsearchlogsuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external elasticsearch specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1566,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalgooglecloudlogginguserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external Google Cloud Logginig specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1575,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_external_kafka_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>kafka_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalkafkauserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}external Kafka specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1537,7 +1584,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_external_schema_registry_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>schema_<wbr>registry_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointexternalschemaregistryuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External schema registry specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1546,7 +1593,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointjolokiauserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Jolokia specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1602,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines the project the endpoint is associated with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1611,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointprometheususerconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Prometheus specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1620,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointrsysloguserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}rsyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1629,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#state_signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointsignalfxuserconfig">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd></dl>
@@ -1694,7 +1741,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#datadogapikey_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1702,7 +1749,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#datadogtags_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfigdatadogtag">Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfigdatadogtag">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1710,7 +1757,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#disableconsumerstats_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Consumer<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1718,7 +1765,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#maxpartitioncontexts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Contexts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1726,7 +1773,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#site_nodejs" style="color: inherit; text-decoration: inherit;">site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1738,7 +1785,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#datadog_api_key_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1793,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#datadog_tags_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfigdatadogtag">Sequence[Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceintegrationendpointdatadoguserconfigdatadogtag">Input[Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1801,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#disable_consumer_stats_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>consumer_<wbr>stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1762,7 +1809,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#max_partition_contexts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>contexts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1770,7 +1817,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#site_python" style="color: inherit; text-decoration: inherit;">site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1824,7 +1871,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1832,7 +1879,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1844,7 +1891,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1852,7 +1899,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1938,7 +1985,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +1993,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +2001,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1962,7 +2009,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1974,7 +2021,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +2029,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +2037,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +2045,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2084,7 +2131,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2092,7 +2139,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2100,7 +2147,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2108,7 +2155,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2120,7 +2167,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2128,7 +2175,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2136,7 +2183,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2144,7 +2191,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2246,7 +2293,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#ca_nodejs" style="color: inherit; text-decoration: inherit;">ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2254,7 +2301,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#indexdaysmax_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Days<wbr>Max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2262,7 +2309,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#indexprefix_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2270,7 +2317,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2278,7 +2325,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2290,7 +2337,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#ca_python" style="color: inherit; text-decoration: inherit;">ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2298,7 +2345,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#index_days_max_python" style="color: inherit; text-decoration: inherit;">index_<wbr>days_<wbr>max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2306,7 +2353,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#index_prefix_python" style="color: inherit; text-decoration: inherit;">index_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2314,7 +2361,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2322,7 +2369,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2392,7 +2439,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#logid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2447,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2408,7 +2455,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#serviceaccountcredentials_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2420,7 +2467,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#log_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2428,7 +2475,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2436,7 +2483,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#service_account_credentials_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2602,7 +2649,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#bootstrapservers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2610,7 +2657,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#saslmechanism_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2618,7 +2665,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#saslplainpassword_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Plain<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2626,7 +2673,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#saslplainusername_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Plain<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2634,7 +2681,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#securityprotocol_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2642,7 +2689,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sslcacert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2650,7 +2697,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sslclientcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2658,7 +2705,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sslclientkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2666,7 +2713,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sslendpointidentificationalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Endpoint<wbr>Identification<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2678,7 +2725,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#bootstrap_servers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2686,7 +2733,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sasl_mechanism_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2694,7 +2741,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sasl_plain_password_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>plain_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2702,7 +2749,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sasl_plain_username_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>plain_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2710,7 +2757,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#security_protocol_python" style="color: inherit; text-decoration: inherit;">security_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2718,7 +2765,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#ssl_ca_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +2773,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#ssl_client_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,7 +2781,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#ssl_client_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2742,7 +2789,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#ssl_endpoint_identification_algorithm_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>endpoint_<wbr>identification_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2828,7 +2875,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2883,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2891,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2852,7 +2899,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2864,7 +2911,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2872,7 +2919,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2880,7 +2927,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2888,7 +2935,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2942,7 +2989,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2950,7 +2997,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2962,7 +3009,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2970,7 +3017,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3024,7 +3071,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3032,7 +3079,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3044,7 +3091,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3052,7 +3099,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3218,7 +3265,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#ca_nodejs" style="color: inherit; text-decoration: inherit;">ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3226,7 +3273,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3234,7 +3281,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3242,7 +3289,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3250,7 +3297,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#logline_nodejs" style="color: inherit; text-decoration: inherit;">logline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3258,7 +3305,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3266,7 +3313,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sd_nodejs" style="color: inherit; text-decoration: inherit;">sd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3274,7 +3321,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3282,7 +3329,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3294,7 +3341,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#ca_python" style="color: inherit; text-decoration: inherit;">ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3302,7 +3349,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3310,7 +3357,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3318,7 +3365,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3326,7 +3373,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#logline_python" style="color: inherit; text-decoration: inherit;">logline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3334,7 +3381,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3342,7 +3389,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#sd_python" style="color: inherit; text-decoration: inherit;">sd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3350,7 +3397,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3358,7 +3405,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3428,7 +3475,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#enabledmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3436,7 +3483,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#signalfxapikey_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3444,7 +3491,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#signalfxrealm_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>Realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3456,7 +3503,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#enabled_metrics_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3464,7 +3511,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#signalfx_api_key_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3472,7 +3519,7 @@ By the time of writing the only available option is `datadog`.
 <a href="#signalfx_realm_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>realm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

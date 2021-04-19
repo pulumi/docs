@@ -18,19 +18,36 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pg</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PgArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pg</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PgArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pg</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[PgPgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[PgPgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[PgServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pg</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+       <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+       <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+       <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+       <span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PgPgArgs]]</span> = None<span class="p">,</span>
+       <span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PgPgUserConfigArgs]]</span> = None<span class="p">,</span>
+       <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+       <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+       <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PgServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+       <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+       <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Pg</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PgArgs</a></span><span class="p">,</span>
+       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPg</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PgArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pg</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPg</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PgArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pg</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pg</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PgArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pg</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PgArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +82,32 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PgArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +116,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +140,7 @@ meta_desc: "Documentation for the aiven.Pg resource with examples, input propert
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -432,7 +459,7 @@ deletion is done.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -443,7 +470,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -454,7 +481,7 @@ intended service usage rather than current attributes.
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -469,7 +496,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -479,7 +506,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -489,7 +516,7 @@ UTC time in HH:mm:ss format.
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpg">Pg<wbr>Pg</a></span>
+        <span class="property-type"><a href="#pgpg">pulumi<wbr>Input<Pg<wbr>Pg<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -498,7 +525,7 @@ UTC time in HH:mm:ss format.
 <a href="#pguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#pgpguserconfig">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
@@ -508,7 +535,7 @@ configuration options available:
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -524,7 +551,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -538,7 +565,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgserviceintegration">Pg<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#pgserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<Pg<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -547,7 +574,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -564,7 +591,7 @@ deletion is done.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -575,7 +602,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -586,7 +613,7 @@ intended service usage rather than current attributes.
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -601,7 +628,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -611,7 +638,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -621,7 +648,7 @@ UTC time in HH:mm:ss format.
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpg">Pg<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpg">Input[Pg<wbr>Pg<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +657,7 @@ UTC time in HH:mm:ss format.
 <a href="#pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfig">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
@@ -640,7 +667,7 @@ configuration options available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -656,7 +683,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -670,7 +697,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgserviceintegration">Sequence[Pg<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pgserviceintegration">Input[Pg<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +706,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1040,20 +1067,41 @@ Get an existing Pg resource's state with the given name, ID, and optional extra 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PgState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Pg</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PgState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Pg</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[PgComponentArgs]]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[PgPgArgs]</span> = None<span class="p">, </span><span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[PgPgUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[PgServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Pg</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PgComponentArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pg</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PgPgArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">pg_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PgPgUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PgServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Pg</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPg<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PgState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pg</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPg<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PgState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pg</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Pg</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PgState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Pg</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PgState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1570,7 +1618,7 @@ deletion is done.
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1585,7 +1633,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgcomponent">Pg<wbr>Component[]</a></span>
+        <span class="property-type"><a href="#pgcomponent">pulumi<wbr>Input<pulumi<wbr>Input<Pg<wbr>Component<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1642,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1604,7 +1652,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -1614,7 +1662,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpg">Pg<wbr>Pg</a></span>
+        <span class="property-type"><a href="#pgpg">pulumi<wbr>Input<Pg<wbr>Pg<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1671,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_pguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#pgpguserconfig">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
@@ -1633,7 +1681,7 @@ configuration options available:
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -1649,7 +1697,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -1660,7 +1708,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -1674,7 +1722,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1683,7 +1731,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgserviceintegration">Pg<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#pgserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<Pg<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1692,7 +1740,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -1703,7 +1751,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1760,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1769,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1778,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1787,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1796,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1805,7 @@ intended service usage rather than current attributes.
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1774,7 +1822,7 @@ deletion is done.
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1789,7 +1837,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgcomponent">Sequence[Pg<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pgcomponent">Input[Pg<wbr>Component<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1798,7 +1846,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1808,7 +1856,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -1818,7 +1866,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpg">Pg<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpg">Input[Pg<wbr>Pg<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1827,7 +1875,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_pg_user_config_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfig">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfig">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines PostgreSQL specific additional configuration options. The following 
 configuration options available:
@@ -1837,7 +1885,7 @@ configuration options available:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -1853,7 +1901,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -1864,7 +1912,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -1878,7 +1926,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1935,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgserviceintegration">Sequence[Pg<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pgserviceintegration">Input[Pg<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1944,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -1907,7 +1955,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the PostgreSQL service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1964,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1973,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1982,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the PostgreSQL service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +1991,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the PostgreSQL service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +2000,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1961,7 +2009,7 @@ intended service usage rather than current attributes.
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -2115,7 +2163,7 @@ deletion is done.
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2123,7 +2171,7 @@ deletion is done.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2180,7 @@ deletion is done.
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2140,7 +2188,7 @@ deletion is done.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2197,7 @@ deletion is done.
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2205,7 @@ deletion is done.
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2214,7 @@ deletion is done.
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2178,7 +2226,7 @@ deletion is done.
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2186,7 +2234,7 @@ deletion is done.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2243,7 @@ deletion is done.
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2251,7 @@ deletion is done.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2212,7 +2260,7 @@ deletion is done.
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2220,7 +2268,7 @@ deletion is done.
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2277,7 @@ deletion is done.
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2395,7 +2443,7 @@ deletion is done.
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2404,7 +2452,7 @@ deletion is done.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2413,7 +2461,7 @@ deletion is done.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2422,7 +2470,7 @@ deletion is done.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2431,7 +2479,7 @@ deletion is done.
 <a href="#replicauri_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL replica URI for services with a replica
 {{% /md %}}</dd><dt class="property-optional"
@@ -2440,7 +2488,7 @@ deletion is done.
 <a href="#sslmode_nodejs" style="color: inherit; text-decoration: inherit;">sslmode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL sslmode setting (currently always `require`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2449,7 +2497,7 @@ deletion is done.
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL master connection URI
 {{% /md %}}</dd><dt class="property-optional"
@@ -2458,7 +2506,7 @@ deletion is done.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL admin user name
 {{% /md %}}</dd></dl>
@@ -2471,7 +2519,7 @@ deletion is done.
 <a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2480,7 +2528,7 @@ deletion is done.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2489,7 +2537,7 @@ deletion is done.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2498,7 +2546,7 @@ deletion is done.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2507,7 +2555,7 @@ deletion is done.
 <a href="#replica_uri_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL replica URI for services with a replica
 {{% /md %}}</dd><dt class="property-optional"
@@ -2516,7 +2564,7 @@ deletion is done.
 <a href="#sslmode_python" style="color: inherit; text-decoration: inherit;">sslmode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL sslmode setting (currently always `require`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2525,7 +2573,7 @@ deletion is done.
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL master connection URI
 {{% /md %}}</dd><dt class="property-optional"
@@ -2534,7 +2582,7 @@ deletion is done.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL admin user name
 {{% /md %}}</dd></dl>
@@ -2999,7 +3047,7 @@ total RAM (up to 32MB).
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}custom password for admin user. Defaults to random string. *This must
 be set only when a new service is being created.*
@@ -3009,7 +3057,7 @@ be set only when a new service is being created.*
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}custom username for admin user. *This must be set only when a new service
 is being created.*
@@ -3019,7 +3067,7 @@ is being created.*
 <a href="#backuphour_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the hour of day (in UTC) when backup for the service is started. New backup 
 is only started if previous backup has already completed.
@@ -3029,7 +3077,7 @@ is only started if previous backup has already completed.
 <a href="#backupminute_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Minute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the minute of an hour when backup for the service is started. New backup 
 is only started if previous backup has already completed.
@@ -3039,7 +3087,7 @@ is only started if previous backup has already completed.
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3048,7 +3096,7 @@ is only started if previous backup has already completed.
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</a></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
 {{% /md %}}</dd><dt class="property-optional"
@@ -3057,7 +3105,7 @@ is only started if previous backup has already completed.
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpg">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3066,7 +3114,7 @@ is only started if previous backup has already completed.
 <a href="#pgreadreplica_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Read<wbr>Replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This setting is deprecated. Use read-replica service integration instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3075,7 +3123,7 @@ is only started if previous backup has already completed.
 <a href="#pgservicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Service<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the PG Service from which to fork (deprecated, use service_to_fork_from). 
 This has effect only when a new service is being created.
@@ -3085,7 +3133,7 @@ This has effect only when a new service is being created.
 <a href="#pgversion_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL major version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3094,7 +3142,7 @@ This has effect only when a new service is being created.
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpgbouncer">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3103,7 +3151,7 @@ This has effect only when a new service is being created.
 <a href="#pglookout_nodejs" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpglookout">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3112,7 +3160,7 @@ This has effect only when a new service is being created.
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivateaccess">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3121,7 +3169,7 @@ This has effect only when a new service is being created.
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3130,7 +3178,7 @@ This has effect only when a new service is being created.
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
@@ -3140,7 +3188,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpublicaccess">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -3149,7 +3197,7 @@ effect only when a new service is being created.
 <a href="#recoverytargettime_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Target<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
@@ -3159,7 +3207,7 @@ only when a new service is being created.
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
@@ -3169,7 +3217,7 @@ when a new service is being created.
 <a href="#sharedbufferspercentage_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Buffers<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Percentage of total RAM that the database server uses for 
 memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts
@@ -3180,7 +3228,7 @@ the shared_buffers configuration value. The absolute maximum is 12 GB.
 <a href="#synchronousreplication_nodejs" style="color: inherit; text-decoration: inherit;">synchronous<wbr>Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Synchronous replication type. Note that the service plan 
 also needs to support synchronous replication.
@@ -3190,7 +3238,7 @@ also needs to support synchronous replication.
 <a href="#timescaledb_nodejs" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</a></span>
+        <span class="property-type"><a href="#pgpguserconfigtimescaledb">pulumi<wbr>Input<Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3199,7 +3247,7 @@ also needs to support synchronous replication.
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Variant of the PostgreSQL service, may affect the features that are 
 exposed by default. Options: `aiven` or `timescale`.
@@ -3209,7 +3257,7 @@ exposed by default. Options: `aiven` or `timescale`.
 <a href="#workmem_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the maximum amount of memory to be used by a query operation (such 
 as a sort or hash table) before writing to temporary disk files, in MB. Default is 1MB + 0.075% of
@@ -3224,7 +3272,7 @@ total RAM (up to 32MB).
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}custom password for admin user. Defaults to random string. *This must
 be set only when a new service is being created.*
@@ -3234,7 +3282,7 @@ be set only when a new service is being created.*
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}custom username for admin user. *This must be set only when a new service
 is being created.*
@@ -3244,7 +3292,7 @@ is being created.*
 <a href="#backup_hour_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the hour of day (in UTC) when backup for the service is started. New backup 
 is only started if previous backup has already completed.
@@ -3254,7 +3302,7 @@ is only started if previous backup has already completed.
 <a href="#backup_minute_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>minute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the minute of an hour when backup for the service is started. New backup 
 is only started if previous backup has already completed.
@@ -3264,7 +3312,7 @@ is only started if previous backup has already completed.
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3273,7 +3321,7 @@ is only started if previous backup has already completed.
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigmigration">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigmigration">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}migrate data from existing server, has the following options:
 {{% /md %}}</dd><dt class="property-optional"
@@ -3282,7 +3330,7 @@ is only started if previous backup has already completed.
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpg">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpg">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3291,7 +3339,7 @@ is only started if previous backup has already completed.
 <a href="#pg_read_replica_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>read_<wbr>replica</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This setting is deprecated. Use read-replica service integration instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3300,7 +3348,7 @@ is only started if previous backup has already completed.
 <a href="#pg_service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the PG Service from which to fork (deprecated, use service_to_fork_from). 
 This has effect only when a new service is being created.
@@ -3310,7 +3358,7 @@ This has effect only when a new service is being created.
 <a href="#pg_version_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL major version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3319,7 +3367,7 @@ This has effect only when a new service is being created.
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpgbouncer">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3328,7 +3376,7 @@ This has effect only when a new service is being created.
 <a href="#pglookout_python" style="color: inherit; text-decoration: inherit;">pglookout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpglookout">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpglookout">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PGLookout settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3337,7 +3385,7 @@ This has effect only when a new service is being created.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivateaccess">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3346,7 +3394,7 @@ This has effect only when a new service is being created.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigprivatelinkaccess">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3355,7 +3403,7 @@ This has effect only when a new service is being created.
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
@@ -3365,7 +3413,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigpublicaccess">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -3374,7 +3422,7 @@ effect only when a new service is being created.
 <a href="#recovery_target_time_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>target_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
@@ -3384,7 +3432,7 @@ only when a new service is being created.
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
@@ -3394,7 +3442,7 @@ when a new service is being created.
 <a href="#shared_buffers_percentage_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>buffers_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Percentage of total RAM that the database server uses for 
 memory buffers. Valid range is 20-60 (float), which corresponds to 20% - 60%. This setting adjusts
@@ -3405,7 +3453,7 @@ the shared_buffers configuration value. The absolute maximum is 12 GB.
 <a href="#synchronous_replication_python" style="color: inherit; text-decoration: inherit;">synchronous_<wbr>replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Synchronous replication type. Note that the service plan 
 also needs to support synchronous replication.
@@ -3415,7 +3463,7 @@ also needs to support synchronous replication.
 <a href="#timescaledb_python" style="color: inherit; text-decoration: inherit;">timescaledb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args</a></span>
+        <span class="property-type"><a href="#pgpguserconfigtimescaledb">Input[Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TimescaleDB extension configuration values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3424,7 +3472,7 @@ also needs to support synchronous replication.
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Variant of the PostgreSQL service, may affect the features that are 
 exposed by default. Options: `aiven` or `timescale`.
@@ -3434,7 +3482,7 @@ exposed by default. Options: `aiven` or `timescale`.
 <a href="#work_mem_python" style="color: inherit; text-decoration: inherit;">work_<wbr>mem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the maximum amount of memory to be used by a query operation (such 
 as a sort or hash table) before writing to temporary disk files, in MB. Default is 1MB + 0.075% of
@@ -3587,7 +3635,7 @@ migration (supported by MySQL only at the moment)
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3596,7 +3644,7 @@ migration (supported by MySQL only at the moment)
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3605,7 +3653,7 @@ migration (supported by MySQL only at the moment)
 <a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
 migration (supported by MySQL only at the moment)
@@ -3615,7 +3663,7 @@ migration (supported by MySQL only at the moment)
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3624,7 +3672,7 @@ migration (supported by MySQL only at the moment)
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3633,7 +3681,7 @@ migration (supported by MySQL only at the moment)
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3642,7 +3690,7 @@ migration (supported by MySQL only at the moment)
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}user name for authentication with the server where to migrate data from.
 {{% /md %}}</dd></dl>
@@ -3655,7 +3703,7 @@ migration (supported by MySQL only at the moment)
 <a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}database name for bootstrapping the initial connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3664,7 +3712,7 @@ migration (supported by MySQL only at the moment)
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}hostname or IP address of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3673,7 +3721,7 @@ migration (supported by MySQL only at the moment)
 <a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
 migration (supported by MySQL only at the moment)
@@ -3683,7 +3731,7 @@ migration (supported by MySQL only at the moment)
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}password for authentication with the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3692,7 +3740,7 @@ migration (supported by MySQL only at the moment)
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}port number of the server where to migrate data from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3701,7 +3749,7 @@ migration (supported by MySQL only at the moment)
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the server where to migrate data from is secured with SSL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3710,7 +3758,7 @@ migration (supported by MySQL only at the moment)
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}user name for authentication with the server where to migrate data from.
 {{% /md %}}</dd></dl>
@@ -4501,7 +4549,7 @@ to lower than the default 200ms may negatively impact performance
 <a href="#autovacuumanalyzescalefactor_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Analyze<wbr>Scale<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a fraction of the table size to add to 
 autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2
@@ -4512,7 +4560,7 @@ autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The de
 <a href="#autovacuumanalyzethreshold_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Analyze<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the minimum number of inserted, updated 
 or deleted tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
@@ -4522,7 +4570,7 @@ or deleted tuples needed to trigger an ANALYZE in any one table. The default is 
 <a href="#autovacuumfreezemaxage_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Freeze<wbr>Max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the maximum age (in transactions) that a table's 
 pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID
@@ -4534,7 +4582,7 @@ even when autovacuum is otherwise disabled. This parameter will cause the server
 <a href="#autovacuummaxworkers_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Max<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the maximum number of autovacuum processes (other 
 than the autovacuum launcher) that may be running at any one time. The default is three. This parameter
@@ -4545,7 +4593,7 @@ can only be set at server start.
 <a href="#autovacuumnaptime_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Naptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the minimum delay between autovacuum runs on any 
 given database. The delay is measured in seconds, and the default is one minute.
@@ -4555,7 +4603,7 @@ given database. The delay is measured in seconds, and the default is one minute.
 <a href="#autovacuumvacuumcostdelay_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Cost<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the cost delay value that will be used 
 in automatic VACUUM operations. If -1 is specified, the regular vacuum_cost_delay value will be
@@ -4566,7 +4614,7 @@ used. The default value is 20 milliseconds.
 <a href="#autovacuumvacuumcostlimit_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Cost<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the cost limit value that will be used in 
 automatic VACUUM operations. If -1 is specified (which is the default), the regular vacuum_cost_limit
@@ -4577,7 +4625,7 @@ value will be used.
 <a href="#autovacuumvacuumscalefactor_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Scale<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies a fraction of the table size to add to 
 autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
@@ -4587,7 +4635,7 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
 <a href="#autovacuumvacuumthreshold_nodejs" style="color: inherit; text-decoration: inherit;">autovacuum<wbr>Vacuum<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the minimum number of updated or deleted tuples 
 needed to trigger a VACUUM in any one table. The default is 50 tuples
@@ -4597,7 +4645,7 @@ needed to trigger a VACUUM in any one table. The default is 50 tuples
 <a href="#deadlocktimeout_nodejs" style="color: inherit; text-decoration: inherit;">deadlock<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}this is the amount of time, in milliseconds, to wait on a lock before 
 checking to see if there is a deadlock condition.
@@ -4607,7 +4655,7 @@ checking to see if there is a deadlock condition.
 <a href="#idleintransactionsessiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>In<wbr>Transaction<wbr>Session<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time out sessions with open transactions after 
 this number of milliseconds.
@@ -4617,7 +4665,7 @@ this number of milliseconds.
 <a href="#jit_nodejs" style="color: inherit; text-decoration: inherit;">jit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls system-wide use of Just-in-Time Compilation (JIT).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4626,7 +4674,7 @@ this number of milliseconds.
 <a href="#logautovacuumminduration_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Autovacuum<wbr>Min<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Causes each action executed by autovacuum to be logged 
 if it ran for at least the specified number of milliseconds. Setting this to zero logs all autovacuum
@@ -4637,7 +4685,7 @@ actions. Minus-one (the default) disables logging autovacuum actions.
 <a href="#logerrorverbosity_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Error<wbr>Verbosity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls the amount of detail written in the server log for 
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
@@ -4647,7 +4695,7 @@ each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
 <a href="#loglineprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Line<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Choose from one of the available log-formats. These can support 
 popular log analyzers like pgbadger, pganalyze etc.
@@ -4658,7 +4706,7 @@ milliseconds to run, -1 disables
 <a href="#logmindurationstatement_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Min<wbr>Duration<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Log statements that take more than this number of
 {{% /md %}}</dd><dt class="property-optional"
@@ -4667,7 +4715,7 @@ milliseconds to run, -1 disables
 <a href="#maxfilesperprocess_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Files<wbr>Per<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
 {{% /md %}}</dd><dt class="property-optional"
@@ -4676,7 +4724,7 @@ milliseconds to run, -1 disables
 <a href="#maxlockspertransaction_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Locks<wbr>Per<wbr>Transaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
 {{% /md %}}</dd><dt class="property-optional"
@@ -4685,7 +4733,7 @@ milliseconds to run, -1 disables
 <a href="#maxlogicalreplicationworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Logical<wbr>Replication<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum logical replication workers 
 (taken from the pool of max_parallel_workers)
@@ -4695,7 +4743,7 @@ milliseconds to run, -1 disables
 <a href="#maxparallelworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that the system can 
 support for parallel queries.
@@ -4705,7 +4753,7 @@ support for parallel queries.
 <a href="#maxparallelworkerspergather_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Workers<wbr>Per<wbr>Gather</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that can be 
 started by a single Gather or Gather Merge node.
@@ -4715,7 +4763,7 @@ started by a single Gather or Gather Merge node.
 <a href="#maxpredlockspertransaction_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pred<wbr>Locks<wbr>Per<wbr>Transaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum predicate locks per transaction
 {{% /md %}}</dd><dt class="property-optional"
@@ -4724,7 +4772,7 @@ started by a single Gather or Gather Merge node.
 <a href="#maxpreparedtransactions_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prepared<wbr>Transactions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum prepared transactions
 {{% /md %}}</dd><dt class="property-optional"
@@ -4733,7 +4781,7 @@ started by a single Gather or Gather Merge node.
 <a href="#maxreplicationslots_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replication<wbr>Slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum replication slots
 {{% /md %}}</dd><dt class="property-optional"
@@ -4742,7 +4790,7 @@ started by a single Gather or Gather Merge node.
 <a href="#maxstackdepth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Stack<wbr>Depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum depth of the stack in bytes
 {{% /md %}}</dd><dt class="property-optional"
@@ -4751,7 +4799,7 @@ started by a single Gather or Gather Merge node.
 <a href="#maxstandbyarchivedelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Standby<wbr>Archive<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Max standby archive delay in milliseconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -4760,7 +4808,7 @@ started by a single Gather or Gather Merge node.
 <a href="#maxstandbystreamingdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Standby<wbr>Streaming<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -4769,7 +4817,7 @@ started by a single Gather or Gather Merge node.
 <a href="#maxwalsenders_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wal<wbr>Senders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum WAL senders
 {{% /md %}}</dd><dt class="property-optional"
@@ -4778,7 +4826,7 @@ started by a single Gather or Gather Merge node.
 <a href="#maxworkerprocesses_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Worker<wbr>Processes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of background processes that the system
 can support
@@ -4795,7 +4843,7 @@ collection. The default value is top.
 <a href="#pgpartmanbgwdotinterval_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4803,7 +4851,7 @@ collection. The default value is top.
 <a href="#pgpartmanbgwdotrole_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Partman<wbr>Bgw<wbr>Dot<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4811,7 +4859,7 @@ collection. The default value is top.
 <a href="#pgstatstatementsdottrack_nodejs" style="color: inherit; text-decoration: inherit;">pg<wbr>Stat<wbr>Statements<wbr>Dot<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4819,7 +4867,7 @@ collection. The default value is top.
 <a href="#tempfilelimit_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>File<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL temporary file limit in KiB, -1 for unlimited
 {{% /md %}}</dd><dt class="property-optional"
@@ -4828,7 +4876,7 @@ collection. The default value is top.
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PostgreSQL service timezone
 {{% /md %}}</dd><dt class="property-optional"
@@ -4837,7 +4885,7 @@ collection. The default value is top.
 <a href="#trackactivityquerysize_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Activity<wbr>Query<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the number of bytes reserved to track the currently 
 executing command for each active session.
@@ -4847,7 +4895,7 @@ executing command for each active session.
 <a href="#trackcommittimestamp_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Commit<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Record commit time of transactions
 {{% /md %}}</dd><dt class="property-optional"
@@ -4856,7 +4904,7 @@ executing command for each active session.
 <a href="#trackfunctions_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4865,7 +4913,7 @@ executing command for each active session.
 <a href="#walsendertimeout_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Sender<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Terminate replication connections that are inactive for longer than 
 this amount of time, in milliseconds.
@@ -4875,7 +4923,7 @@ this amount of time, in milliseconds.
 <a href="#walwriterdelay_nodejs" style="color: inherit; text-decoration: inherit;">wal<wbr>Writer<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}WAL flush interval in milliseconds. Note that setting this value 
 to lower than the default 200ms may negatively impact performance
@@ -4889,7 +4937,7 @@ to lower than the default 200ms may negatively impact performance
 <a href="#autovacuum_analyze_scale_factor_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>analyze_<wbr>scale_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a fraction of the table size to add to 
 autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The default is 0.2
@@ -4900,7 +4948,7 @@ autovacuum_analyze_threshold when deciding whether to trigger an ANALYZE. The de
 <a href="#autovacuum_analyze_threshold_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>analyze_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the minimum number of inserted, updated 
 or deleted tuples needed to trigger an ANALYZE in any one table. The default is 50 tuples.
@@ -4910,7 +4958,7 @@ or deleted tuples needed to trigger an ANALYZE in any one table. The default is 
 <a href="#autovacuum_freeze_max_age_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>freeze_<wbr>max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the maximum age (in transactions) that a table's 
 pg_class.relfrozenxid field can attain before a VACUUM operation is forced to prevent transaction ID
@@ -4922,7 +4970,7 @@ even when autovacuum is otherwise disabled. This parameter will cause the server
 <a href="#autovacuum_max_workers_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>max_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the maximum number of autovacuum processes (other 
 than the autovacuum launcher) that may be running at any one time. The default is three. This parameter
@@ -4933,7 +4981,7 @@ can only be set at server start.
 <a href="#autovacuum_naptime_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>naptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the minimum delay between autovacuum runs on any 
 given database. The delay is measured in seconds, and the default is one minute.
@@ -4943,7 +4991,7 @@ given database. The delay is measured in seconds, and the default is one minute.
 <a href="#autovacuum_vacuum_cost_delay_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>cost_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the cost delay value that will be used 
 in automatic VACUUM operations. If -1 is specified, the regular vacuum_cost_delay value will be
@@ -4954,7 +5002,7 @@ used. The default value is 20 milliseconds.
 <a href="#autovacuum_vacuum_cost_limit_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>cost_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the cost limit value that will be used in 
 automatic VACUUM operations. If -1 is specified (which is the default), the regular vacuum_cost_limit
@@ -4965,7 +5013,7 @@ value will be used.
 <a href="#autovacuum_vacuum_scale_factor_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>scale_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies a fraction of the table size to add to 
 autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The default is 0.2 (20% of table size).
@@ -4975,7 +5023,7 @@ autovacuum_vacuum_threshold when deciding whether to trigger a VACUUM. The defau
 <a href="#autovacuum_vacuum_threshold_python" style="color: inherit; text-decoration: inherit;">autovacuum_<wbr>vacuum_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the minimum number of updated or deleted tuples 
 needed to trigger a VACUUM in any one table. The default is 50 tuples
@@ -4985,7 +5033,7 @@ needed to trigger a VACUUM in any one table. The default is 50 tuples
 <a href="#deadlock_timeout_python" style="color: inherit; text-decoration: inherit;">deadlock_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}this is the amount of time, in milliseconds, to wait on a lock before 
 checking to see if there is a deadlock condition.
@@ -4995,7 +5043,7 @@ checking to see if there is a deadlock condition.
 <a href="#idle_in_transaction_session_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>in_<wbr>transaction_<wbr>session_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time out sessions with open transactions after 
 this number of milliseconds.
@@ -5005,7 +5053,7 @@ this number of milliseconds.
 <a href="#jit_python" style="color: inherit; text-decoration: inherit;">jit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls system-wide use of Just-in-Time Compilation (JIT).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5014,7 +5062,7 @@ this number of milliseconds.
 <a href="#log_autovacuum_min_duration_python" style="color: inherit; text-decoration: inherit;">log_<wbr>autovacuum_<wbr>min_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Causes each action executed by autovacuum to be logged 
 if it ran for at least the specified number of milliseconds. Setting this to zero logs all autovacuum
@@ -5025,7 +5073,7 @@ actions. Minus-one (the default) disables logging autovacuum actions.
 <a href="#log_error_verbosity_python" style="color: inherit; text-decoration: inherit;">log_<wbr>error_<wbr>verbosity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls the amount of detail written in the server log for 
 each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
@@ -5035,7 +5083,7 @@ each message that is logged. Possible values: `TERSE`, `DEFAULT` and `VERBOSE`.
 <a href="#log_line_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>line_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Choose from one of the available log-formats. These can support 
 popular log analyzers like pgbadger, pganalyze etc.
@@ -5046,7 +5094,7 @@ milliseconds to run, -1 disables
 <a href="#log_min_duration_statement_python" style="color: inherit; text-decoration: inherit;">log_<wbr>min_<wbr>duration_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Log statements that take more than this number of
 {{% /md %}}</dd><dt class="property-optional"
@@ -5055,7 +5103,7 @@ milliseconds to run, -1 disables
 <a href="#max_files_per_process_python" style="color: inherit; text-decoration: inherit;">max_<wbr>files_<wbr>per_<wbr>process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum number of files that can be open per process
 {{% /md %}}</dd><dt class="property-optional"
@@ -5064,7 +5112,7 @@ milliseconds to run, -1 disables
 <a href="#max_locks_per_transaction_python" style="color: inherit; text-decoration: inherit;">max_<wbr>locks_<wbr>per_<wbr>transaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum locks per transaction
 {{% /md %}}</dd><dt class="property-optional"
@@ -5073,7 +5121,7 @@ milliseconds to run, -1 disables
 <a href="#max_logical_replication_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>logical_<wbr>replication_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum logical replication workers 
 (taken from the pool of max_parallel_workers)
@@ -5083,7 +5131,7 @@ milliseconds to run, -1 disables
 <a href="#max_parallel_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that the system can 
 support for parallel queries.
@@ -5093,7 +5141,7 @@ support for parallel queries.
 <a href="#max_parallel_workers_per_gather_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>workers_<wbr>per_<wbr>gather</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of workers that can be 
 started by a single Gather or Gather Merge node.
@@ -5103,7 +5151,7 @@ started by a single Gather or Gather Merge node.
 <a href="#max_pred_locks_per_transaction_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pred_<wbr>locks_<wbr>per_<wbr>transaction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum predicate locks per transaction
 {{% /md %}}</dd><dt class="property-optional"
@@ -5112,7 +5160,7 @@ started by a single Gather or Gather Merge node.
 <a href="#max_prepared_transactions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prepared_<wbr>transactions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum prepared transactions
 {{% /md %}}</dd><dt class="property-optional"
@@ -5121,7 +5169,7 @@ started by a single Gather or Gather Merge node.
 <a href="#max_replication_slots_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replication_<wbr>slots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum replication slots
 {{% /md %}}</dd><dt class="property-optional"
@@ -5130,7 +5178,7 @@ started by a single Gather or Gather Merge node.
 <a href="#max_stack_depth_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stack_<wbr>depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum depth of the stack in bytes
 {{% /md %}}</dd><dt class="property-optional"
@@ -5139,7 +5187,7 @@ started by a single Gather or Gather Merge node.
 <a href="#max_standby_archive_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>standby_<wbr>archive_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Max standby archive delay in milliseconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -5148,7 +5196,7 @@ started by a single Gather or Gather Merge node.
 <a href="#max_standby_streaming_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>standby_<wbr>streaming_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Max standby streaming delay in milliseconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -5157,7 +5205,7 @@ started by a single Gather or Gather Merge node.
 <a href="#max_wal_senders_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wal_<wbr>senders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL maximum WAL senders
 {{% /md %}}</dd><dt class="property-optional"
@@ -5166,7 +5214,7 @@ started by a single Gather or Gather Merge node.
 <a href="#max_worker_processes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>worker_<wbr>processes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of background processes that the system
 can support
@@ -5183,7 +5231,7 @@ collection. The default value is top.
 <a href="#pg_partman_bgw_dot_interval_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>dot_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5191,7 +5239,7 @@ collection. The default value is top.
 <a href="#pg_partman_bgw_dot_role_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>partman_<wbr>bgw_<wbr>dot_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5199,7 +5247,7 @@ collection. The default value is top.
 <a href="#pg_stat_statements_dot_track_python" style="color: inherit; text-decoration: inherit;">pg_<wbr>stat_<wbr>statements_<wbr>dot_<wbr>track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5207,7 +5255,7 @@ collection. The default value is top.
 <a href="#temp_file_limit_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>file_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL temporary file limit in KiB, -1 for unlimited
 {{% /md %}}</dd><dt class="property-optional"
@@ -5216,7 +5264,7 @@ collection. The default value is top.
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PostgreSQL service timezone
 {{% /md %}}</dd><dt class="property-optional"
@@ -5225,7 +5273,7 @@ collection. The default value is top.
 <a href="#track_activity_query_size_python" style="color: inherit; text-decoration: inherit;">track_<wbr>activity_<wbr>query_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of bytes reserved to track the currently 
 executing command for each active session.
@@ -5235,7 +5283,7 @@ executing command for each active session.
 <a href="#track_commit_timestamp_python" style="color: inherit; text-decoration: inherit;">track_<wbr>commit_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Record commit time of transactions
 {{% /md %}}</dd><dt class="property-optional"
@@ -5244,7 +5292,7 @@ executing command for each active session.
 <a href="#track_functions_python" style="color: inherit; text-decoration: inherit;">track_<wbr>functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables tracking of function call counts and time used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5253,7 +5301,7 @@ executing command for each active session.
 <a href="#wal_sender_timeout_python" style="color: inherit; text-decoration: inherit;">wal_<wbr>sender_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Terminate replication connections that are inactive for longer than 
 this amount of time, in milliseconds.
@@ -5263,7 +5311,7 @@ this amount of time, in milliseconds.
 <a href="#wal_writer_delay_python" style="color: inherit; text-decoration: inherit;">wal_<wbr>writer_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}WAL flush interval in milliseconds. Note that setting this value 
 to lower than the default 200ms may negatively impact performance
@@ -5463,7 +5511,7 @@ longer than this.
 <a href="#autodbidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If the automatically created database pools have been unused this 
 many seconds, they are freed. If 0 then timeout is disabled.
@@ -5473,7 +5521,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
 <a href="#autodbmaxdbconnections_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Max<wbr>Db<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Do not allow more than this many server connections per database 
 (regardless of user). Setting it to 0 means unlimited.
@@ -5483,7 +5531,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
 <a href="#autodbpoolmode_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Pool<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}PGBouncer pool mode
 {{% /md %}}</dd><dt class="property-optional"
@@ -5492,7 +5540,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
 <a href="#autodbpoolsize_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Pool<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
 when a pool doesn't exist.
@@ -5502,7 +5550,7 @@ when a pool doesn't exist.
 <a href="#ignorestartupparameters_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Startup<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5511,7 +5559,7 @@ when a pool doesn't exist.
 <a href="#minpoolsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pool<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
 behavior when usual load comes suddenly back after period of total inactivity. The value is
@@ -5522,7 +5570,7 @@ effectively capped at the pool size.
 <a href="#serveridletimeout_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If a server connection has been idle more than this many seconds 
 it will be dropped. If 0 then timeout is disabled.
@@ -5532,7 +5580,7 @@ it will be dropped. If 0 then timeout is disabled.
 <a href="#serverlifetime_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
 longer than this.
@@ -5542,7 +5590,7 @@ longer than this.
 <a href="#serverresetqueryalways_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Reset<wbr>Query<wbr>Always</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Run server_reset_query (DISCARD ALL) in all pooling modes.
 {{% /md %}}</dd></dl>
@@ -5555,7 +5603,7 @@ longer than this.
 <a href="#autodb_idle_timeout_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If the automatically created database pools have been unused this 
 many seconds, they are freed. If 0 then timeout is disabled.
@@ -5565,7 +5613,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
 <a href="#autodb_max_db_connections_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>max_<wbr>db_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Do not allow more than this many server connections per database 
 (regardless of user). Setting it to 0 means unlimited.
@@ -5575,7 +5623,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
 <a href="#autodb_pool_mode_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>pool_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}PGBouncer pool mode
 {{% /md %}}</dd><dt class="property-optional"
@@ -5584,7 +5632,7 @@ many seconds, they are freed. If 0 then timeout is disabled.
 <a href="#autodb_pool_size_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>pool_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
 when a pool doesn't exist.
@@ -5594,7 +5642,7 @@ when a pool doesn't exist.
 <a href="#ignore_startup_parameters_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>startup_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5603,7 +5651,7 @@ when a pool doesn't exist.
 <a href="#min_pool_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pool_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
 behavior when usual load comes suddenly back after period of total inactivity. The value is
@@ -5614,7 +5662,7 @@ effectively capped at the pool size.
 <a href="#server_idle_timeout_python" style="color: inherit; text-decoration: inherit;">server_<wbr>idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If a server connection has been idle more than this many seconds 
 it will be dropped. If 0 then timeout is disabled.
@@ -5624,7 +5672,7 @@ it will be dropped. If 0 then timeout is disabled.
 <a href="#server_lifetime_python" style="color: inherit; text-decoration: inherit;">server_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
 longer than this.
@@ -5634,7 +5682,7 @@ longer than this.
 <a href="#server_reset_query_always_python" style="color: inherit; text-decoration: inherit;">server_<wbr>reset_<wbr>query_<wbr>always</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Run server_reset_query (DISCARD ALL) in all pooling modes.
 {{% /md %}}</dd></dl>
@@ -5677,7 +5725,7 @@ triggering database failover to standby
 <a href="#maxfailoverreplicationtimelag_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failover<wbr>Replication<wbr>Time<wbr>Lag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Number of seconds of master unavailability before 
 triggering database failover to standby
@@ -5691,7 +5739,7 @@ triggering database failover to standby
 <a href="#max_failover_replication_time_lag_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failover_<wbr>replication_<wbr>time_<wbr>lag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Number of seconds of master unavailability before 
 triggering database failover to standby
@@ -5771,7 +5819,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5780,7 +5828,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5789,7 +5837,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
@@ -5803,7 +5851,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5812,7 +5860,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5821,7 +5869,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
@@ -5881,7 +5929,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5890,7 +5938,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd></dl>
@@ -5903,7 +5951,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5912,7 +5960,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd></dl>
@@ -5991,7 +6039,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6000,7 +6048,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6009,7 +6057,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
@@ -6023,7 +6071,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable pg.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6032,7 +6080,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6041,7 +6089,7 @@ service nodes that are in a project VPC or another type of private network
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet for 
 service nodes that are in a project VPC or another type of private network
@@ -6087,7 +6135,7 @@ total number of concurrent background workers you want running at any given poin
 <a href="#maxbackgroundworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Background<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of background workers for timescaledb 
 operations. You should configure this setting to the sum of your number of databases and the
@@ -6102,7 +6150,7 @@ total number of concurrent background workers you want running at any given poin
 <a href="#max_background_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>background_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of background workers for timescaledb 
 operations. You should configure this setting to the sum of your number of databases and the
@@ -6159,7 +6207,7 @@ total number of concurrent background workers you want running at any given poin
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6167,7 +6215,7 @@ total number of concurrent background workers you want running at any given poin
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6179,7 +6227,7 @@ total number of concurrent background workers you want running at any given poin
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6187,7 +6235,7 @@ total number of concurrent background workers you want running at any given poin
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

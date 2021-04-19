@@ -72,8 +72,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -181,19 +181,36 @@ const mysql1 = new aiven.MySql("mysql1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MySql</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MySqlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MySql</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MySqlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MySql</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[MySqlMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[MySqlMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[MySqlServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MySql</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MySqlMysqlArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MySqlMysqlUserConfigArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MySqlServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+          <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MySql</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MySqlArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMySql</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MySqlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MySql</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMySql</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MySqlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MySql</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MySql</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MySqlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MySql</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MySqlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -228,22 +245,32 @@ const mysql1 = new aiven.MySql("mysql1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MySqlArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,7 +279,7 @@ const mysql1 = new aiven.MySql("mysql1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -276,7 +303,7 @@ const mysql1 = new aiven.MySql("mysql1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -603,7 +630,7 @@ deletion is done.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -614,7 +641,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -625,7 +652,7 @@ intended service usage rather than current attributes.
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -640,7 +667,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -650,7 +677,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -660,7 +687,7 @@ UTC time in HH:mm:ss format.
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysql">My<wbr>Sql<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#mysqlmysql">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -670,7 +697,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#mysqluserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfig">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
@@ -680,7 +707,7 @@ configuration options available:
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -696,7 +723,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -710,7 +737,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlserviceintegration">My<wbr>Sql<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#mysqlserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<My<wbr>Sql<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}can be used to define service integrations that must exist
 immediately upon service creation. By the time of writing the only such integration is
@@ -722,7 +749,7 @@ replica the following configuration needs to be added:
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -739,7 +766,7 @@ deletion is done.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -750,7 +777,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -761,7 +788,7 @@ intended service usage rather than current attributes.
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -776,7 +803,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -786,7 +813,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -796,7 +823,7 @@ UTC time in HH:mm:ss format.
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysql">My<wbr>Sql<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysql">Input[My<wbr>Sql<wbr>Mysql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -806,7 +833,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#mysql_user_config_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfig">Input[My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
@@ -816,7 +843,7 @@ configuration options available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -832,7 +859,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -846,7 +873,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlserviceintegration">Sequence[My<wbr>Sql<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mysqlserviceintegration">Input[My<wbr>Sql<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}can be used to define service integrations that must exist
 immediately upon service creation. By the time of writing the only such integration is
@@ -858,7 +885,7 @@ replica the following configuration needs to be added:
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1219,20 +1246,41 @@ Get an existing MySql resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MySqlState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MySql</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MySqlState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MySql</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[MySqlComponentArgs]]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[MySqlMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[MySqlMysqlUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[MySqlServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MySql</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MySqlComponentArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MySqlMysqlArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mysql_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MySqlMysqlUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MySqlServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> MySql</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMySql<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MySqlState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MySql</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMySql<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MySqlState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MySql</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MySql</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MySqlState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MySql</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MySqlState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1757,7 +1805,7 @@ deletion is done.
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1772,7 +1820,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlcomponent">My<wbr>Sql<wbr>Component[]</a></span>
+        <span class="property-type"><a href="#mysqlcomponent">pulumi<wbr>Input<pulumi<wbr>Input<My<wbr>Sql<wbr>Component<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1829,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1791,7 +1839,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -1801,7 +1849,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysql">My<wbr>Sql<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#mysqlmysql">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -1811,7 +1859,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#state_mysqluserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfig">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
@@ -1821,7 +1869,7 @@ configuration options available:
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -1837,7 +1885,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -1848,7 +1896,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -1862,7 +1910,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1871,7 +1919,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlserviceintegration">My<wbr>Sql<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#mysqlserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<My<wbr>Sql<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}can be used to define service integrations that must exist
 immediately upon service creation. By the time of writing the only such integration is
@@ -1883,7 +1931,7 @@ replica the following configuration needs to be added:
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -1894,7 +1942,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1903,7 +1951,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}MySQL port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1912,7 +1960,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1921,7 +1969,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1930,7 +1978,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1939,7 +1987,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1948,7 +1996,7 @@ intended service usage rather than current attributes.
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1965,7 +2013,7 @@ deletion is done.
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1980,7 +2028,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlcomponent">Sequence[My<wbr>Sql<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mysqlcomponent">Input[My<wbr>Sql<wbr>Component<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1989,7 +2037,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1999,7 +2047,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -2009,7 +2057,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysql">My<wbr>Sql<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysql">Input[My<wbr>Sql<wbr>Mysql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -2019,7 +2067,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#state_mysql_user_config_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfig">Input[My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
@@ -2029,7 +2077,7 @@ configuration options available:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -2045,7 +2093,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -2056,7 +2104,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -2070,7 +2118,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2127,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlserviceintegration">Sequence[My<wbr>Sql<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mysqlserviceintegration">Input[My<wbr>Sql<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}can be used to define service integrations that must exist
 immediately upon service creation. By the time of writing the only such integration is
@@ -2091,7 +2139,7 @@ replica the following configuration needs to be added:
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -2102,7 +2150,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2111,7 +2159,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}MySQL port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2120,7 +2168,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -2129,7 +2177,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2186,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2195,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2156,7 +2204,7 @@ intended service usage rather than current attributes.
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -2310,7 +2358,7 @@ deletion is done.
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2318,7 +2366,7 @@ deletion is done.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -2327,7 +2375,7 @@ deletion is done.
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2383,7 @@ deletion is done.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -2344,7 +2392,7 @@ deletion is done.
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2400,7 @@ deletion is done.
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
 {{% /md %}}</dd><dt class="property-optional"
@@ -2361,7 +2409,7 @@ deletion is done.
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2373,7 +2421,7 @@ deletion is done.
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2429,7 @@ deletion is done.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -2390,7 +2438,7 @@ deletion is done.
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2398,7 +2446,7 @@ deletion is done.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -2407,7 +2455,7 @@ deletion is done.
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2415,7 +2463,7 @@ deletion is done.
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
 {{% /md %}}</dd><dt class="property-optional"
@@ -2424,7 +2472,7 @@ deletion is done.
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2714,7 +2762,7 @@ a new service is being created.
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom password for admin user. Defaults to random string. 
 This must be set only when a new service is being created.
@@ -2724,7 +2772,7 @@ This must be set only when a new service is being created.
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom username for admin user. This must be set only when a 
 new service is being created.
@@ -2734,7 +2782,7 @@ new service is being created.
 <a href="#backuphour_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hour of day (in UTC) when backup for the service is started. 
 New backup is only started if previous backup has already completed.
@@ -2744,7 +2792,7 @@ New backup is only started if previous backup has already completed.
 <a href="#backupminute_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Minute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The minute of an hour when backup for the service is started. 
 New backup is only started if previous backup has already completed.
@@ -2754,7 +2802,7 @@ New backup is only started if previous backup has already completed.
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
 {{% /md %}}</dd><dt class="property-optional"
@@ -2763,7 +2811,7 @@ New backup is only started if previous backup has already completed.
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2772,7 +2820,7 @@ New backup is only started if previous backup has already completed.
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -2782,7 +2830,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#mysqlversion_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}MySQL major version
 {{% /md %}}</dd><dt class="property-optional"
@@ -2791,7 +2839,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -2800,7 +2848,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2809,7 +2857,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
@@ -2819,7 +2867,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">pulumi<wbr>Input<My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2828,7 +2876,7 @@ effect only when a new service is being created.
 <a href="#recoverytargettime_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Target<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
@@ -2838,7 +2886,7 @@ only when a new service is being created.
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
@@ -2852,7 +2900,7 @@ a new service is being created.
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom password for admin user. Defaults to random string. 
 This must be set only when a new service is being created.
@@ -2862,7 +2910,7 @@ This must be set only when a new service is being created.
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom username for admin user. This must be set only when a 
 new service is being created.
@@ -2872,7 +2920,7 @@ new service is being created.
 <a href="#backup_hour_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hour of day (in UTC) when backup for the service is started. 
 New backup is only started if previous backup has already completed.
@@ -2882,7 +2930,7 @@ New backup is only started if previous backup has already completed.
 <a href="#backup_minute_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>minute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The minute of an hour when backup for the service is started. 
 New backup is only started if previous backup has already completed.
@@ -2892,7 +2940,7 @@ New backup is only started if previous backup has already completed.
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
 {{% /md %}}</dd><dt class="property-optional"
@@ -2901,7 +2949,7 @@ New backup is only started if previous backup has already completed.
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmigration">Input[My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2910,7 +2958,7 @@ New backup is only started if previous backup has already completed.
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigmysql">Input[My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -2920,7 +2968,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#mysql_version_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}MySQL major version
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +2977,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">Input[My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -2938,7 +2986,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">Input[My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2947,7 +2995,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
@@ -2957,7 +3005,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">Input[My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2966,7 +3014,7 @@ effect only when a new service is being created.
 <a href="#recovery_target_time_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>target_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
@@ -2976,7 +3024,7 @@ only when a new service is being created.
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
@@ -3128,7 +3176,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
 {{% /md %}}</dd><dt class="property-optional"
@@ -3137,7 +3185,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -3146,7 +3194,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored 
 during migration (supported by MySQL only at the moment)
@@ -3156,7 +3204,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -3165,7 +3213,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -3174,7 +3222,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
 {{% /md %}}</dd><dt class="property-optional"
@@ -3183,7 +3231,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
 {{% /md %}}</dd></dl>
@@ -3196,7 +3244,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
 {{% /md %}}</dd><dt class="property-optional"
@@ -3205,7 +3253,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -3214,7 +3262,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored 
 during migration (supported by MySQL only at the moment)
@@ -3224,7 +3272,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -3233,7 +3281,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
 {{% /md %}}</dd><dt class="property-optional"
@@ -3242,7 +3290,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
 {{% /md %}}</dd><dt class="property-optional"
@@ -3251,7 +3299,7 @@ during migration (supported by MySQL only at the moment)
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
 {{% /md %}}</dd></dl>
@@ -3740,7 +3788,7 @@ a noninteractive connection before closing it.
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of seconds that the mysqld server waits for a 
 connect packet before responding with Bad handshake
@@ -3750,7 +3798,7 @@ connect packet before responding with Bad handshake
 <a href="#defaulttimezone_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default server time zone as an offset from UTC 
 (from -12:00 to +12:00), a time zone name, or 'SYSTEM' to use the MySQL server default.
@@ -3760,7 +3808,7 @@ connect packet before responding with Bad handshake
 <a href="#groupconcatmaxlen_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Concat<wbr>Max<wbr>Len</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum permitted result length in bytes for 
 the GROUP_CONCAT() function.
@@ -3770,7 +3818,7 @@ the GROUP_CONCAT() function.
 <a href="#informationschemastatsexpiry_nodejs" style="color: inherit; text-decoration: inherit;">information<wbr>Schema<wbr>Stats<wbr>Expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, before cached 
 statistics expire
@@ -3780,7 +3828,7 @@ statistics expire
 <a href="#innodbftmintokensize_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Ft<wbr>Min<wbr>Token<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimum length of words that are stored in 
 an InnoDB FULLTEXT index.
@@ -3790,7 +3838,7 @@ an InnoDB FULLTEXT index.
 <a href="#innodbftserverstopwordtable_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Ft<wbr>Server<wbr>Stopword<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This option is used to specify your 
 own InnoDB FULLTEXT index stopword list for all InnoDB tables.
@@ -3800,7 +3848,7 @@ own InnoDB FULLTEXT index stopword list for all InnoDB tables.
 <a href="#innodblockwaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Lock<wbr>Wait<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The length of time in seconds an InnoDB 
 transaction waits for a row lock before giving up.
@@ -3810,7 +3858,7 @@ transaction waits for a row lock before giving up.
 <a href="#innodblogbuffersize_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Log<wbr>Buffer<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The size in bytes of the buffer that InnoDB 
 uses to write to the log files on disk.
@@ -3820,7 +3868,7 @@ uses to write to the log files on disk.
 <a href="#innodbonlinealterlogmaxsize_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Online<wbr>Alter<wbr>Log<wbr>Max<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The upper limit in bytes on the 
 size of the temporary log files used during online DDL operations for InnoDB tables.
@@ -3830,7 +3878,7 @@ size of the temporary log files used during online DDL operations for InnoDB tab
 <a href="#innodbprintalldeadlocks_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When enabled, information about all 
 deadlocks in InnoDB user transactions is recorded in the error log. Disabled by default.
@@ -3840,7 +3888,7 @@ deadlocks in InnoDB user transactions is recorded in the error log. Disabled by 
 <a href="#innodbrollbackontimeout_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Rollback<wbr>On<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When enabled a transaction timeout 
 causes InnoDB to abort and roll back the entire transaction.
@@ -3850,7 +3898,7 @@ causes InnoDB to abort and roll back the entire transaction.
 <a href="#interactivetimeout_nodejs" style="color: inherit; text-decoration: inherit;">interactive<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for 
 activity on an interactive connection before closing it.
@@ -3860,7 +3908,7 @@ activity on an interactive connection before closing it.
 <a href="#longquerytime_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Query<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The slow_query_logs work as SQL statements that take 
 more than long_query_time seconds to execute. Default is 10s
@@ -3870,7 +3918,7 @@ more than long_query_time seconds to execute. Default is 10s
 <a href="#maxallowedpacket_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Allowed<wbr>Packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of the largest message in bytes that can 
 be received by the server. Default is 67108864 (64M)
@@ -3880,7 +3928,7 @@ be received by the server. Default is 67108864 (64M)
 <a href="#maxheaptablesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Heap<wbr>Table<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. 
 Also set tmp_table_size. Default is 16777216 (16M)
@@ -3890,7 +3938,7 @@ Also set tmp_table_size. Default is 16777216 (16M)
 <a href="#netreadtimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Read<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait for more data from 
 a connection before aborting the read.
@@ -3900,7 +3948,7 @@ a connection before aborting the read.
 <a href="#netwritetimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Write<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
@@ -3910,7 +3958,7 @@ written to a connection before aborting the write.
 <a href="#slowquerylog_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Query<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Slow query log enables capturing of slow queries. 
 Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
@@ -3920,7 +3968,7 @@ Setting slow_query_log to false also truncates the mysql.slow_log table. Default
 <a href="#sortbuffersize_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Buffer<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sort buffer size in bytes for ORDER BY optimization. 
 Default is 262144 (256K)
@@ -3930,7 +3978,7 @@ Default is 262144 (256K)
 <a href="#sqlmode_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Global SQL mode. Set to empty to use MySQL server defaults. 
 When creating a new service and not setting this field Aiven default SQL mode (strict,
@@ -3941,7 +3989,7 @@ SQL standard compliant) will be assigned.
 <a href="#sqlrequireprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Require<wbr>Primary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Require primary key to be defined for new 
 tables or old tables modified with ALTER TABLE and fail if missing. It is recommended
@@ -3953,7 +4001,7 @@ is missing them.
 <a href="#tmptablesize_nodejs" style="color: inherit; text-decoration: inherit;">tmp<wbr>Table<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. Also set 
 max_heap_table_size. Default is 16777216 (16M)
@@ -3963,7 +4011,7 @@ max_heap_table_size. Default is 16777216 (16M)
 <a href="#waittimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for activity on 
 a noninteractive connection before closing it.
@@ -3977,7 +4025,7 @@ a noninteractive connection before closing it.
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of seconds that the mysqld server waits for a 
 connect packet before responding with Bad handshake
@@ -3987,7 +4035,7 @@ connect packet before responding with Bad handshake
 <a href="#default_time_zone_python" style="color: inherit; text-decoration: inherit;">default_<wbr>time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default server time zone as an offset from UTC 
 (from -12:00 to +12:00), a time zone name, or 'SYSTEM' to use the MySQL server default.
@@ -3997,7 +4045,7 @@ connect packet before responding with Bad handshake
 <a href="#group_concat_max_len_python" style="color: inherit; text-decoration: inherit;">group_<wbr>concat_<wbr>max_<wbr>len</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum permitted result length in bytes for 
 the GROUP_CONCAT() function.
@@ -4007,7 +4055,7 @@ the GROUP_CONCAT() function.
 <a href="#information_schema_stats_expiry_python" style="color: inherit; text-decoration: inherit;">information_<wbr>schema_<wbr>stats_<wbr>expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, before cached 
 statistics expire
@@ -4017,7 +4065,7 @@ statistics expire
 <a href="#innodb_ft_min_token_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>ft_<wbr>min_<wbr>token_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimum length of words that are stored in 
 an InnoDB FULLTEXT index.
@@ -4027,7 +4075,7 @@ an InnoDB FULLTEXT index.
 <a href="#innodb_ft_server_stopword_table_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>ft_<wbr>server_<wbr>stopword_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This option is used to specify your 
 own InnoDB FULLTEXT index stopword list for all InnoDB tables.
@@ -4037,7 +4085,7 @@ own InnoDB FULLTEXT index stopword list for all InnoDB tables.
 <a href="#innodb_lock_wait_timeout_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>lock_<wbr>wait_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The length of time in seconds an InnoDB 
 transaction waits for a row lock before giving up.
@@ -4047,7 +4095,7 @@ transaction waits for a row lock before giving up.
 <a href="#innodb_log_buffer_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>log_<wbr>buffer_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the buffer that InnoDB 
 uses to write to the log files on disk.
@@ -4057,7 +4105,7 @@ uses to write to the log files on disk.
 <a href="#innodb_online_alter_log_max_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>online_<wbr>alter_<wbr>log_<wbr>max_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The upper limit in bytes on the 
 size of the temporary log files used during online DDL operations for InnoDB tables.
@@ -4067,7 +4115,7 @@ size of the temporary log files used during online DDL operations for InnoDB tab
 <a href="#innodb_print_all_deadlocks_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>print_<wbr>all_<wbr>deadlocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When enabled, information about all 
 deadlocks in InnoDB user transactions is recorded in the error log. Disabled by default.
@@ -4077,7 +4125,7 @@ deadlocks in InnoDB user transactions is recorded in the error log. Disabled by 
 <a href="#innodb_rollback_on_timeout_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>rollback_<wbr>on_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When enabled a transaction timeout 
 causes InnoDB to abort and roll back the entire transaction.
@@ -4087,7 +4135,7 @@ causes InnoDB to abort and roll back the entire transaction.
 <a href="#interactive_timeout_python" style="color: inherit; text-decoration: inherit;">interactive_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for 
 activity on an interactive connection before closing it.
@@ -4097,7 +4145,7 @@ activity on an interactive connection before closing it.
 <a href="#long_query_time_python" style="color: inherit; text-decoration: inherit;">long_<wbr>query_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The slow_query_logs work as SQL statements that take 
 more than long_query_time seconds to execute. Default is 10s
@@ -4107,7 +4155,7 @@ more than long_query_time seconds to execute. Default is 10s
 <a href="#max_allowed_packet_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allowed_<wbr>packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of the largest message in bytes that can 
 be received by the server. Default is 67108864 (64M)
@@ -4117,7 +4165,7 @@ be received by the server. Default is 67108864 (64M)
 <a href="#max_heap_table_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>heap_<wbr>table_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. 
 Also set tmp_table_size. Default is 16777216 (16M)
@@ -4127,7 +4175,7 @@ Also set tmp_table_size. Default is 16777216 (16M)
 <a href="#net_read_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>read_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait for more data from 
 a connection before aborting the read.
@@ -4137,7 +4185,7 @@ a connection before aborting the read.
 <a href="#net_write_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>write_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
@@ -4147,7 +4195,7 @@ written to a connection before aborting the write.
 <a href="#slow_query_log_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>query_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Slow query log enables capturing of slow queries. 
 Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
@@ -4157,7 +4205,7 @@ Setting slow_query_log to false also truncates the mysql.slow_log table. Default
 <a href="#sort_buffer_size_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>buffer_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sort buffer size in bytes for ORDER BY optimization. 
 Default is 262144 (256K)
@@ -4167,7 +4215,7 @@ Default is 262144 (256K)
 <a href="#sql_mode_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Global SQL mode. Set to empty to use MySQL server defaults. 
 When creating a new service and not setting this field Aiven default SQL mode (strict,
@@ -4178,7 +4226,7 @@ SQL standard compliant) will be assigned.
 <a href="#sql_require_primary_key_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>require_<wbr>primary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Require primary key to be defined for new 
 tables or old tables modified with ALTER TABLE and fail if missing. It is recommended
@@ -4190,7 +4238,7 @@ is missing them.
 <a href="#tmp_table_size_python" style="color: inherit; text-decoration: inherit;">tmp_<wbr>table_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. Also set 
 max_heap_table_size. Default is 16777216 (16M)
@@ -4200,7 +4248,7 @@ max_heap_table_size. Default is 16777216 (16M)
 <a href="#wait_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for activity on 
 a noninteractive connection before closing it.
@@ -4264,7 +4312,7 @@ for service nodes that are in a project VPC or another type of private network
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -4274,7 +4322,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
@@ -4288,7 +4336,7 @@ for service nodes that are in a project VPC or another type of private network
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -4298,7 +4346,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
@@ -4342,7 +4390,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -4356,7 +4404,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -4420,7 +4468,7 @@ for service nodes that are in a project VPC or another type of private network
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -4430,7 +4478,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
@@ -4444,7 +4492,7 @@ for service nodes that are in a project VPC or another type of private network
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
@@ -4454,7 +4502,7 @@ nodes that are in a project VPC or another type of private network
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
@@ -4510,7 +4558,7 @@ for service nodes that are in a project VPC or another type of private network
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4518,7 +4566,7 @@ for service nodes that are in a project VPC or another type of private network
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4530,7 +4578,7 @@ for service nodes that are in a project VPC or another type of private network
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4538,7 +4586,7 @@ for service nodes that are in a project VPC or another type of private network
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

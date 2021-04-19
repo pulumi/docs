@@ -67,8 +67,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -164,19 +164,36 @@ const gr1 = new aiven.Grafana("gr1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Grafana</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GrafanaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Grafana</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GrafanaArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Grafana</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[GrafanaGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[GrafanaGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GrafanaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Grafana</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GrafanaGrafanaArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GrafanaGrafanaUserConfigArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GrafanaServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Grafana</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GrafanaArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGrafana</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GrafanaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Grafana</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGrafana</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GrafanaArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Grafana</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Grafana</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GrafanaArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Grafana</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GrafanaArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,22 +228,32 @@ const gr1 = new aiven.Grafana("gr1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GrafanaArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -235,7 +262,7 @@ const gr1 = new aiven.Grafana("gr1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -259,7 +286,7 @@ const gr1 = new aiven.Grafana("gr1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -580,7 +607,7 @@ deletion is done.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -591,7 +618,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -602,7 +629,7 @@ intended service usage rather than current attributes.
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -617,7 +644,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafana">Grafana<wbr>Grafana</a></span>
+        <span class="property-type"><a href="#grafanagrafana">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -627,7 +654,7 @@ are in a project VPC or another type of private network.
 <a href="#grafanauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfig">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
@@ -637,7 +664,7 @@ configuration options available:
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -647,7 +674,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -657,7 +684,7 @@ UTC time in HH:mm:ss format.
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -673,7 +700,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -687,7 +714,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanaserviceintegration">Grafana<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#grafanaserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<Grafana<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -696,7 +723,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -713,7 +740,7 @@ deletion is done.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -724,7 +751,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -735,7 +762,7 @@ intended service usage rather than current attributes.
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -750,7 +777,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafana">Grafana<wbr>Grafana<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafana">Input[Grafana<wbr>Grafana<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -760,7 +787,7 @@ are in a project VPC or another type of private network.
 <a href="#grafana_user_config_python" style="color: inherit; text-decoration: inherit;">grafana_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfig">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
@@ -770,7 +797,7 @@ configuration options available:
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -780,7 +807,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -790,7 +817,7 @@ UTC time in HH:mm:ss format.
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -806,7 +833,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -820,7 +847,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanaserviceintegration">Sequence[Grafana<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#grafanaserviceintegration">Input[Grafana<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +856,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1190,20 +1217,41 @@ Get an existing Grafana resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GrafanaState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Grafana</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GrafanaState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Grafana</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GrafanaComponentArgs]]</span> = None<span class="p">, </span><span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[GrafanaGrafanaArgs]</span> = None<span class="p">, </span><span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[GrafanaGrafanaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GrafanaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Grafana</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GrafanaComponentArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">grafana</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GrafanaGrafanaArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">grafana_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GrafanaGrafanaUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GrafanaServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Grafana</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGrafana<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GrafanaState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Grafana</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGrafana<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GrafanaState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Grafana</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Grafana</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GrafanaState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Grafana</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GrafanaState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1722,7 +1770,7 @@ deletion is done.
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1737,7 +1785,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanacomponent">Grafana<wbr>Component[]</a></span>
+        <span class="property-type"><a href="#grafanacomponent">pulumi<wbr>Input<pulumi<wbr>Input<Grafana<wbr>Component<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1746,7 +1794,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafana">Grafana<wbr>Grafana</a></span>
+        <span class="property-type"><a href="#grafanagrafana">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -1756,7 +1804,7 @@ are in a project VPC or another type of private network.
 <a href="#state_grafanauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">grafana<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfig">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
@@ -1766,7 +1814,7 @@ configuration options available:
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1776,7 +1824,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -1786,7 +1834,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -1802,7 +1850,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -1813,7 +1861,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -1827,7 +1875,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1836,7 +1884,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanaserviceintegration">Grafana<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#grafanaserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<Grafana<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1845,7 +1893,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -1856,7 +1904,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1865,7 +1913,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Grafana port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1874,7 +1922,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1883,7 +1931,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1892,7 +1940,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1901,7 +1949,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1910,7 +1958,7 @@ intended service usage rather than current attributes.
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1927,7 +1975,7 @@ deletion is done.
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1942,7 +1990,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanacomponent">Sequence[Grafana<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#grafanacomponent">Input[Grafana<wbr>Component<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1951,7 +1999,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafana">Grafana<wbr>Grafana<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafana">Input[Grafana<wbr>Grafana<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -1961,7 +2009,7 @@ are in a project VPC or another type of private network.
 <a href="#state_grafana_user_config_python" style="color: inherit; text-decoration: inherit;">grafana_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfig">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
@@ -1971,7 +2019,7 @@ configuration options available:
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1981,7 +2029,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -1991,7 +2039,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -2007,7 +2055,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -2018,7 +2066,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -2032,7 +2080,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2041,7 +2089,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanaserviceintegration">Sequence[Grafana<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#grafanaserviceintegration">Input[Grafana<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -2050,7 +2098,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -2061,7 +2109,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2070,7 +2118,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Grafana port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2127,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2136,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2097,7 +2145,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2106,7 +2154,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2115,7 +2163,7 @@ intended service usage rather than current attributes.
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -2267,7 +2315,7 @@ deletion is done.
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2275,7 +2323,7 @@ deletion is done.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd><dt class="property-optional"
@@ -2284,7 +2332,7 @@ deletion is done.
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2340,7 @@ deletion is done.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2349,7 @@ deletion is done.
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2309,7 +2357,7 @@ deletion is done.
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2317,7 +2365,7 @@ deletion is done.
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2329,7 +2377,7 @@ deletion is done.
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2337,7 +2385,7 @@ deletion is done.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd><dt class="property-optional"
@@ -2346,7 +2394,7 @@ deletion is done.
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2354,7 +2402,7 @@ deletion is done.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd><dt class="property-optional"
@@ -2363,7 +2411,7 @@ deletion is done.
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2371,7 +2419,7 @@ deletion is done.
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2379,7 +2427,7 @@ deletion is done.
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2975,7 +3023,7 @@ Defaults to false.
 <a href="#alertingenabled_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable or disable Grafana alerting functionality
 {{% /md %}}</dd><dt class="property-optional"
@@ -2984,7 +3032,7 @@ Defaults to false.
 <a href="#alertingerrorortimeout_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Error<wbr>Or<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
 {{% /md %}}</dd><dt class="property-optional"
@@ -2993,7 +3041,7 @@ Defaults to false.
 <a href="#alertingnodataornullvalues_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default value for 'no data or null values' for
 new alerting rules
@@ -3003,7 +3051,7 @@ new alerting rules
 <a href="#allowembedding_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Embedding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
@@ -3013,7 +3061,7 @@ tags. Disabled by default to limit impact of clickjacking
 <a href="#authbasicenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Basic<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable or disable basic authentication form, used by Grafana 
 built-in login.
@@ -3023,7 +3071,7 @@ built-in login.
 <a href="#authgenericoauth_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Generic<wbr>Oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3032,7 +3080,7 @@ built-in login.
 <a href="#authgithub_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -3041,7 +3089,7 @@ built-in login.
 <a href="#authgitlab_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3050,7 +3098,7 @@ built-in login.
 <a href="#authgoogle_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3059,7 +3107,7 @@ built-in login.
 <a href="#cookiesamesite_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Samesite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cookie SameSite attribute: 'strict' prevents sending cookie for 
 cross-site requests, effectively disabling direct linking from other sites to Grafana. 'lax' is the default value.
@@ -3069,7 +3117,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3078,7 +3126,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
 <a href="#dashboardsminrefreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Signed sequence of decimal numbers, followed 
 by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
@@ -3088,7 +3136,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#dashboardsversionstokeep_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dashboard versions to keep per dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3097,7 +3145,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#dataproxysenduserheader_nodejs" style="color: inherit; text-decoration: inherit;">dataproxy<wbr>Send<wbr>User<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Send 'X-Grafana-User' header to data source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3106,7 +3154,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#dataproxytimeout_nodejs" style="color: inherit; text-decoration: inherit;">dataproxy<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3115,7 +3163,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#disablegravatar_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Gravatar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set to true to disable gravatar. Defaults to false 
 (gravatar is enabled).
@@ -3125,7 +3173,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#editorscanadmin_nodejs" style="color: inherit; text-decoration: inherit;">editors<wbr>Can<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Editors can manage folders, teams and dashboards created by them.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3134,7 +3182,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#externalimagestorage_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Image<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External image store settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -3143,7 +3191,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#googleanalyticsuaid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Analytics<wbr>Ua<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Google Analytics Universal Analytics ID for tracking Grafana usage
 {{% /md %}}</dd><dt class="property-optional"
@@ -3152,7 +3200,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
 {{% /md %}}</dd><dt class="property-optional"
@@ -3161,7 +3209,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#metricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable Grafana /metrics endpoint
 {{% /md %}}</dd><dt class="property-optional"
@@ -3170,7 +3218,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3178,7 +3226,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3187,7 +3235,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has 
 effect only when a new service is being created.
@@ -3197,7 +3245,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3206,7 +3254,7 @@ effect only when a new service is being created.
 <a href="#recoverybasebackupname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Basebackup<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3215,7 +3263,7 @@ effect only when a new service is being created.
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
@@ -3225,7 +3273,7 @@ when a new service is being created.
 <a href="#smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">pulumi<wbr>Input<Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3234,7 +3282,7 @@ when a new service is being created.
 <a href="#userautoassignorg_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Auto<wbr>Assign<wbr>Org</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auto-assign new users on signup to main organization. 
 Defaults to false.
@@ -3244,7 +3292,7 @@ Defaults to false.
 <a href="#userautoassignorgrole_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Auto<wbr>Assign<wbr>Org<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Set role for new signups. Defaults to Viewer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3253,7 +3301,7 @@ Defaults to false.
 <a href="#viewerscanedit_nodejs" style="color: inherit; text-decoration: inherit;">viewers<wbr>Can<wbr>Edit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Users with view-only permission can edit but not save dashboards.
 {{% /md %}}</dd></dl>
@@ -3266,7 +3314,7 @@ Defaults to false.
 <a href="#alerting_enabled_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable or disable Grafana alerting functionality
 {{% /md %}}</dd><dt class="property-optional"
@@ -3275,7 +3323,7 @@ Defaults to false.
 <a href="#alerting_error_or_timeout_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>error_<wbr>or_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
 {{% /md %}}</dd><dt class="property-optional"
@@ -3284,7 +3332,7 @@ Defaults to false.
 <a href="#alerting_nodata_or_nullvalues_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>nodata_<wbr>or_<wbr>nullvalues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default value for 'no data or null values' for
 new alerting rules
@@ -3294,7 +3342,7 @@ new alerting rules
 <a href="#allow_embedding_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>embedding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
@@ -3304,7 +3352,7 @@ tags. Disabled by default to limit impact of clickjacking
 <a href="#auth_basic_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>basic_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable or disable basic authentication form, used by Grafana 
 built-in login.
@@ -3314,7 +3362,7 @@ built-in login.
 <a href="#auth_generic_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>generic_<wbr>oauth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3323,7 +3371,7 @@ built-in login.
 <a href="#auth_github_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -3332,7 +3380,7 @@ built-in login.
 <a href="#auth_gitlab_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3341,7 +3389,7 @@ built-in login.
 <a href="#auth_google_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3350,7 +3398,7 @@ built-in login.
 <a href="#cookie_samesite_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>samesite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cookie SameSite attribute: 'strict' prevents sending cookie for 
 cross-site requests, effectively disabling direct linking from other sites to Grafana. 'lax' is the default value.
@@ -3360,7 +3408,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3369,7 +3417,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
 <a href="#dashboards_min_refresh_interval_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>min_<wbr>refresh_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Signed sequence of decimal numbers, followed 
 by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
@@ -3379,7 +3427,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#dashboards_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dashboard versions to keep per dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3388,7 +3436,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#dataproxy_send_user_header_python" style="color: inherit; text-decoration: inherit;">dataproxy_<wbr>send_<wbr>user_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Send 'X-Grafana-User' header to data source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3397,7 +3445,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#dataproxy_timeout_python" style="color: inherit; text-decoration: inherit;">dataproxy_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3406,7 +3454,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#disable_gravatar_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gravatar</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set to true to disable gravatar. Defaults to false 
 (gravatar is enabled).
@@ -3416,7 +3464,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#editors_can_admin_python" style="color: inherit; text-decoration: inherit;">editors_<wbr>can_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Editors can manage folders, teams and dashboards created by them.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3425,7 +3473,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#external_image_storage_python" style="color: inherit; text-decoration: inherit;">external_<wbr>image_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -3434,7 +3482,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#google_analytics_ua_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>analytics_<wbr>ua_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Google Analytics Universal Analytics ID for tracking Grafana usage
 {{% /md %}}</dd><dt class="property-optional"
@@ -3443,7 +3491,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
 {{% /md %}}</dd><dt class="property-optional"
@@ -3452,7 +3500,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#metrics_enabled_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable Grafana /metrics endpoint
 {{% /md %}}</dd><dt class="property-optional"
@@ -3461,7 +3509,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3469,7 +3517,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3478,7 +3526,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has 
 effect only when a new service is being created.
@@ -3488,7 +3536,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3497,7 +3545,7 @@ effect only when a new service is being created.
 <a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3506,7 +3554,7 @@ effect only when a new service is being created.
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
@@ -3516,7 +3564,7 @@ when a new service is being created.
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Input[Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3525,7 +3573,7 @@ when a new service is being created.
 <a href="#user_auto_assign_org_python" style="color: inherit; text-decoration: inherit;">user_<wbr>auto_<wbr>assign_<wbr>org</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auto-assign new users on signup to main organization. 
 Defaults to false.
@@ -3535,7 +3583,7 @@ Defaults to false.
 <a href="#user_auto_assign_org_role_python" style="color: inherit; text-decoration: inherit;">user_<wbr>auto_<wbr>assign_<wbr>org_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Set role for new signups. Defaults to Viewer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3544,7 +3592,7 @@ Defaults to false.
 <a href="#viewers_can_edit_python" style="color: inherit; text-decoration: inherit;">viewers_<wbr>can_<wbr>edit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Users with view-only permission can edit but not save dashboards.
 {{% /md %}}</dd></dl>
@@ -3747,7 +3795,7 @@ Defaults to false.
 <a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -3756,7 +3804,7 @@ Defaults to false.
 <a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Allowed domain
 {{% /md %}}</dd><dt class="property-optional"
@@ -3765,7 +3813,7 @@ Defaults to false.
 <a href="#allowedorganizations_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Organizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
 {{% /md %}}</dd><dt class="property-optional"
@@ -3774,7 +3822,7 @@ Defaults to false.
 <a href="#apiurl_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd><dt class="property-optional"
@@ -3783,7 +3831,7 @@ Defaults to false.
 <a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd><dt class="property-optional"
@@ -3792,7 +3840,7 @@ Defaults to false.
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -3801,7 +3849,7 @@ Defaults to false.
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -3810,7 +3858,7 @@ Defaults to false.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the OAuth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3819,7 +3867,7 @@ Defaults to false.
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Scope must be non-empty string without whitespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3828,7 +3876,7 @@ Defaults to false.
 <a href="#tokenurl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd></dl>
@@ -3841,7 +3889,7 @@ Defaults to false.
 <a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -3850,7 +3898,7 @@ Defaults to false.
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Allowed domain
 {{% /md %}}</dd><dt class="property-optional"
@@ -3859,7 +3907,7 @@ Defaults to false.
 <a href="#allowed_organizations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>organizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
 {{% /md %}}</dd><dt class="property-optional"
@@ -3868,7 +3916,7 @@ Defaults to false.
 <a href="#api_url_python" style="color: inherit; text-decoration: inherit;">api_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd><dt class="property-optional"
@@ -3877,7 +3925,7 @@ Defaults to false.
 <a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd><dt class="property-optional"
@@ -3886,7 +3934,7 @@ Defaults to false.
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -3895,7 +3943,7 @@ Defaults to false.
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -3904,7 +3952,7 @@ Defaults to false.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the OAuth integration
 {{% /md %}}</dd><dt class="property-optional"
@@ -3913,7 +3961,7 @@ Defaults to false.
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Scope must be non-empty string without whitespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3922,7 +3970,7 @@ Defaults to false.
 <a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd></dl>
@@ -4035,7 +4083,7 @@ Defaults to false.
 <a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -4044,7 +4092,7 @@ Defaults to false.
 <a href="#allowedorganizations_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Organizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
 {{% /md %}}</dd><dt class="property-optional"
@@ -4053,7 +4101,7 @@ Defaults to false.
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4062,7 +4110,7 @@ Defaults to false.
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4071,7 +4119,7 @@ Defaults to false.
 <a href="#teamids_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given team IDs
 {{% /md %}}</dd></dl>
@@ -4084,7 +4132,7 @@ Defaults to false.
 <a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -4093,7 +4141,7 @@ Defaults to false.
 <a href="#allowed_organizations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>organizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
 {{% /md %}}</dd><dt class="property-optional"
@@ -4102,7 +4150,7 @@ Defaults to false.
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4111,7 +4159,7 @@ Defaults to false.
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4120,7 +4168,7 @@ Defaults to false.
 <a href="#team_ids_python" style="color: inherit; text-decoration: inherit;">team_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given team IDs
 {{% /md %}}</dd></dl>
@@ -4269,7 +4317,7 @@ Defaults to false.
 <a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -4278,7 +4326,7 @@ Defaults to false.
 <a href="#allowedgroups_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given groups
 {{% /md %}}</dd><dt class="property-optional"
@@ -4287,7 +4335,7 @@ Defaults to false.
 <a href="#apiurl_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd><dt class="property-optional"
@@ -4296,7 +4344,7 @@ Defaults to false.
 <a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd><dt class="property-optional"
@@ -4305,7 +4353,7 @@ Defaults to false.
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4314,7 +4362,7 @@ Defaults to false.
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4323,7 +4371,7 @@ Defaults to false.
 <a href="#tokenurl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd></dl>
@@ -4336,7 +4384,7 @@ Defaults to false.
 <a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -4345,7 +4393,7 @@ Defaults to false.
 <a href="#allowed_groups_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given groups
 {{% /md %}}</dd><dt class="property-optional"
@@ -4354,7 +4402,7 @@ Defaults to false.
 <a href="#api_url_python" style="color: inherit; text-decoration: inherit;">api_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd><dt class="property-optional"
@@ -4363,7 +4411,7 @@ Defaults to false.
 <a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd><dt class="property-optional"
@@ -4372,7 +4420,7 @@ Defaults to false.
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4381,7 +4429,7 @@ Defaults to false.
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4390,7 +4438,7 @@ Defaults to false.
 <a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
 {{% /md %}}</dd></dl>
@@ -4485,7 +4533,7 @@ Defaults to false.
 <a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -4494,7 +4542,7 @@ Defaults to false.
 <a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Allowed domain
 {{% /md %}}</dd><dt class="property-optional"
@@ -4503,7 +4551,7 @@ Defaults to false.
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4512,7 +4560,7 @@ Defaults to false.
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd></dl>
@@ -4525,7 +4573,7 @@ Defaults to false.
 <a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
 {{% /md %}}</dd><dt class="property-optional"
@@ -4534,7 +4582,7 @@ Defaults to false.
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Allowed domain
 {{% /md %}}</dd><dt class="property-optional"
@@ -4543,7 +4591,7 @@ Defaults to false.
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
 {{% /md %}}</dd><dt class="property-optional"
@@ -4552,7 +4600,7 @@ Defaults to false.
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
 {{% /md %}}</dd></dl>
@@ -4649,7 +4697,7 @@ s3:PutObject and s3:PutObjectAcl actions
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
@@ -4659,7 +4707,7 @@ s3:PutObject and s3:PutObjectAcl actions
 <a href="#bucketurl_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Bucket URL for S3
 {{% /md %}}</dd><dt class="property-optional"
@@ -4668,7 +4716,7 @@ s3:PutObject and s3:PutObjectAcl actions
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Provider type
 {{% /md %}}</dd><dt class="property-optional"
@@ -4677,7 +4725,7 @@ s3:PutObject and s3:PutObjectAcl actions
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}S3 secret key
 {{% /md %}}</dd></dl>
@@ -4690,7 +4738,7 @@ s3:PutObject and s3:PutObjectAcl actions
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
@@ -4700,7 +4748,7 @@ s3:PutObject and s3:PutObjectAcl actions
 <a href="#bucket_url_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Bucket URL for S3
 {{% /md %}}</dd><dt class="property-optional"
@@ -4709,7 +4757,7 @@ s3:PutObject and s3:PutObjectAcl actions
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Provider type
 {{% /md %}}</dd><dt class="property-optional"
@@ -4718,7 +4766,7 @@ s3:PutObject and s3:PutObjectAcl actions
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}S3 secret key
 {{% /md %}}</dd></dl>
@@ -4761,7 +4809,7 @@ are in a project VPC or another type of private network.
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -4775,7 +4823,7 @@ are in a project VPC or another type of private network.
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -4819,7 +4867,7 @@ are in a project VPC or another type of private network.
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -4833,7 +4881,7 @@ are in a project VPC or another type of private network.
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -4877,7 +4925,7 @@ are in a project VPC or another type of private network.
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -4891,7 +4939,7 @@ are in a project VPC or another type of private network.
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
@@ -5061,7 +5109,7 @@ Default is OpportunisticStartTLS.
 <a href="#fromaddress_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address used for sending emails
 {{% /md %}}</dd><dt class="property-optional"
@@ -5070,7 +5118,7 @@ Default is OpportunisticStartTLS.
 <a href="#fromname_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name used in outgoing emails, defaults to Grafana
 {{% /md %}}</dd><dt class="property-optional"
@@ -5079,7 +5127,7 @@ Default is OpportunisticStartTLS.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd><dt class="property-optional"
@@ -5088,7 +5136,7 @@ Default is OpportunisticStartTLS.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
 {{% /md %}}</dd><dt class="property-optional"
@@ -5097,7 +5145,7 @@ Default is OpportunisticStartTLS.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd><dt class="property-optional"
@@ -5106,7 +5154,7 @@ Default is OpportunisticStartTLS.
 <a href="#skipverify_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
 {{% /md %}}</dd><dt class="property-optional"
@@ -5115,7 +5163,7 @@ Default is OpportunisticStartTLS.
 <a href="#starttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">starttls<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
 Default is OpportunisticStartTLS.
@@ -5125,7 +5173,7 @@ Default is OpportunisticStartTLS.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username for SMTP authentication
 {{% /md %}}</dd></dl>
@@ -5138,7 +5186,7 @@ Default is OpportunisticStartTLS.
 <a href="#from_address_python" style="color: inherit; text-decoration: inherit;">from_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address used for sending emails
 {{% /md %}}</dd><dt class="property-optional"
@@ -5147,7 +5195,7 @@ Default is OpportunisticStartTLS.
 <a href="#from_name_python" style="color: inherit; text-decoration: inherit;">from_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name used in outgoing emails, defaults to Grafana
 {{% /md %}}</dd><dt class="property-optional"
@@ -5156,7 +5204,7 @@ Default is OpportunisticStartTLS.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
 {{% /md %}}</dd><dt class="property-optional"
@@ -5165,7 +5213,7 @@ Default is OpportunisticStartTLS.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
 {{% /md %}}</dd><dt class="property-optional"
@@ -5174,7 +5222,7 @@ Default is OpportunisticStartTLS.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SMTP server port
 {{% /md %}}</dd><dt class="property-optional"
@@ -5183,7 +5231,7 @@ Default is OpportunisticStartTLS.
 <a href="#skip_verify_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
 {{% /md %}}</dd><dt class="property-optional"
@@ -5192,7 +5240,7 @@ Default is OpportunisticStartTLS.
 <a href="#starttls_policy_python" style="color: inherit; text-decoration: inherit;">starttls_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
 Default is OpportunisticStartTLS.
@@ -5202,7 +5250,7 @@ Default is OpportunisticStartTLS.
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username for SMTP authentication
 {{% /md %}}</dd></dl>
@@ -5257,7 +5305,7 @@ Default is OpportunisticStartTLS.
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5265,7 +5313,7 @@ Default is OpportunisticStartTLS.
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5277,7 +5325,7 @@ Default is OpportunisticStartTLS.
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5285,7 +5333,7 @@ Default is OpportunisticStartTLS.
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

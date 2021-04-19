@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -122,17 +122,37 @@ const kafka1 = aiven.getKafka({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKafka<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKafkaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKafkaResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKafka<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKafkaArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKafkaResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetKafkaComponentArgs]]</span> = None<span class="p">, </span><span class="nx">default_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[GetKafkaKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetKafkaKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetKafkaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kafka(</span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetKafkaComponent]]</span> = None<span class="p">,</span>
+              <span class="nx">default_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[GetKafkaKafka]</span> = None<span class="p">,</span>
+              <span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetKafkaKafkaUserConfig]</span> = None<span class="p">,</span>
+              <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetKafkaServiceIntegration]]</span> = None<span class="p">,</span>
+              <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKafkaResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafka<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKafkaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKafkaResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafka<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKafkaArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKafkaResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKafka` in the Go SDK.
 
@@ -141,7 +161,7 @@ const kafka1 = aiven.getKafka({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKafka </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetKafkaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKafkaArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKafkaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKafkaArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -194,7 +214,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkacomponent">List&lt;Get<wbr>Kafka<wbr>Component<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkafkacomponent">List&lt;Get<wbr>Kafka<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -210,7 +230,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafka">Get<wbr>Kafka<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafka">Get<wbr>Kafka<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Kafka server provided values:
 {{% /md %}}</dd><dt class="property-optional"
@@ -219,7 +239,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafkauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
@@ -288,7 +308,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkaserviceintegration">List&lt;Get<wbr>Kafka<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkafkaserviceintegration">List&lt;Get<wbr>Kafka<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +841,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkacomponent">Sequence[Get<wbr>Kafka<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkafkacomponent">Sequence[Get<wbr>Kafka<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +857,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafka">Get<wbr>Kafka<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafka">Get<wbr>Kafka<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Kafka server provided values:
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +866,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#kafka_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}defines Kafka specific additional configuration options. The following 
 configuration options available:
@@ -915,7 +935,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkaserviceintegration">Sequence[Get<wbr>Kafka<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getkafkaserviceintegration">Sequence[Get<wbr>Kafka<wbr>Service<wbr>Integration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2322,7 +2342,7 @@ deletion is done.
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigkafka">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigkafka">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Kafka server provided values:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2331,7 +2351,7 @@ deletion is done.
 <a href="#kafkaauthenticationmethods_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigkafkaauthenticationmethods">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigkafkaauthenticationmethods">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
 {{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2369,7 @@ deletion is done.
 <a href="#kafkaconnectconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigkafkaconnectconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigkafkaconnectconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2367,7 +2387,7 @@ deletion is done.
 <a href="#kafkarestconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigkafkarestconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigkafkarestconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -2385,7 +2405,7 @@ deletion is done.
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigprivateaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigprivateaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -2394,7 +2414,7 @@ deletion is done.
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2403,7 +2423,7 @@ deletion is done.
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigpublicaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigpublicaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2421,7 +2441,7 @@ deletion is done.
 <a href="#schemaregistryconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
 {{% /md %}}</dd></dl>
@@ -2712,7 +2732,7 @@ deletion is done.
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigkafka">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigkafka">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
     <dd>{{% md %}}Kafka server provided values:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2721,7 +2741,7 @@ deletion is done.
 <a href="#kafka_authentication_methods_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigkafkaauthenticationmethods">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigkafkaauthenticationmethods">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</a></span>
     </dt>
     <dd>{{% md %}}Kafka authentication methods
 {{% /md %}}</dd><dt class="property-optional"
@@ -2739,7 +2759,7 @@ deletion is done.
 <a href="#kafka_connect_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigkafkaconnectconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigkafkaconnectconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect configuration values
 {{% /md %}}</dd><dt class="property-optional"
@@ -2757,7 +2777,7 @@ deletion is done.
 <a href="#kafka_rest_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigkafkarestconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigkafkarestconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka-REST configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -2775,7 +2795,7 @@ deletion is done.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigprivateaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigprivateaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
 {{% /md %}}</dd><dt class="property-optional"
@@ -2784,7 +2804,7 @@ deletion is done.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigprivatelinkaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2793,7 +2813,7 @@ deletion is done.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigpublicaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigpublicaccess">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
 {{% /md %}}</dd><dt class="property-optional"
@@ -2811,7 +2831,7 @@ deletion is done.
 <a href="#schema_registry_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#getkafkakafkauserconfigschemaregistryconfig">Get<wbr>Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Schema Registry configuration
 {{% /md %}}</dd></dl>

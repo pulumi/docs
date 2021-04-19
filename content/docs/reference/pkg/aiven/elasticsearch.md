@@ -73,8 +73,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -185,19 +185,36 @@ const es1 = new aiven.ElasticSearch("es1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ElasticSearchElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ElasticSearchElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElasticSearchServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ElasticSearchElasticsearchArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ElasticSearchElasticsearchUserConfigArgs]]</span> = None<span class="p">,</span>
+                  <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ElasticSearchServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewElasticSearch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ElasticSearch</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewElasticSearch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ElasticSearch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -232,22 +249,32 @@ const es1 = new aiven.ElasticSearch("es1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ElasticSearchArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -256,7 +283,7 @@ const es1 = new aiven.ElasticSearch("es1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -280,7 +307,7 @@ const es1 = new aiven.ElasticSearch("es1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -601,7 +628,7 @@ deletion is done.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -612,7 +639,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -623,7 +650,7 @@ intended service usage rather than current attributes.
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -638,7 +665,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearch">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -648,7 +675,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#elasticsearchuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfig">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfig">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
@@ -658,7 +685,7 @@ The following configuration options available:
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -668,7 +695,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -678,7 +705,7 @@ UTC time in HH:mm:ss format.
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -694,7 +721,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -708,7 +735,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchserviceintegration">Elastic<wbr>Search<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#elasticsearchserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<Elastic<wbr>Search<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +744,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -734,7 +761,7 @@ deletion is done.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -745,7 +772,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -756,7 +783,7 @@ intended service usage rather than current attributes.
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -771,7 +798,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearch">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -781,7 +808,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#elasticsearch_user_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfig">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfig">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
@@ -791,7 +818,7 @@ The following configuration options available:
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -801,7 +828,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -811,7 +838,7 @@ UTC time in HH:mm:ss format.
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -827,7 +854,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -841,7 +868,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchserviceintegration">Sequence[Elastic<wbr>Search<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elasticsearchserviceintegration">Input[Elastic<wbr>Search<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -850,7 +877,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1211,20 +1238,41 @@ Get an existing ElasticSearch resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ElasticSearchState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ElasticSearch</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ElasticSearchState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ElasticSearch</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElasticSearchComponentArgs]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ElasticSearchElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ElasticSearchElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElasticSearchServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ElasticSearch</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ElasticSearchComponentArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ElasticSearchElasticsearchArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ElasticSearchElasticsearchUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ElasticSearchServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> ElasticSearch</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElasticSearch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ElasticSearchState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ElasticSearch</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElasticSearch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ElasticSearchState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ElasticSearch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ElasticSearch</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ElasticSearchState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ElasticSearch</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ElasticSearchState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1743,7 +1791,7 @@ deletion is done.
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1758,7 +1806,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchcomponent">Elastic<wbr>Search<wbr>Component[]</a></span>
+        <span class="property-type"><a href="#elasticsearchcomponent">pulumi<wbr>Input<pulumi<wbr>Input<Elastic<wbr>Search<wbr>Component<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1815,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearch">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -1777,7 +1825,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#state_elasticsearchuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfig">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfig">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
@@ -1787,7 +1835,7 @@ The following configuration options available:
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1797,7 +1845,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -1807,7 +1855,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -1823,7 +1871,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -1834,7 +1882,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -1848,7 +1896,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1905,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchserviceintegration">Elastic<wbr>Search<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#elasticsearchserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<Elastic<wbr>Search<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1914,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -1877,7 +1925,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1886,7 +1934,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1895,7 +1943,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1904,7 +1952,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1913,7 +1961,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1970,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1979,7 @@ intended service usage rather than current attributes.
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1948,7 +1996,7 @@ deletion is done.
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1963,7 +2011,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchcomponent">Sequence[Elastic<wbr>Search<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elasticsearchcomponent">Input[Elastic<wbr>Search<wbr>Component<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +2020,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearch">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -1982,7 +2030,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#state_elasticsearch_user_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfig">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfig">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
@@ -1992,7 +2040,7 @@ The following configuration options available:
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -2002,7 +2050,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -2012,7 +2060,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -2028,7 +2076,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -2039,7 +2087,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -2053,7 +2101,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2062,7 +2110,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchserviceintegration">Sequence[Elastic<wbr>Search<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elasticsearchserviceintegration">Input[Elastic<wbr>Search<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -2071,7 +2119,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -2082,7 +2130,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2091,7 +2139,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2100,7 +2148,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2157,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2166,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2127,7 +2175,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2136,7 +2184,7 @@ intended service usage rather than current attributes.
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -2284,7 +2332,7 @@ deletion is done.
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2340,7 @@ deletion is done.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2300,7 +2348,7 @@ deletion is done.
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2308,7 +2356,7 @@ deletion is done.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2316,7 +2364,7 @@ deletion is done.
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2372,7 @@ deletion is done.
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2380,7 @@ deletion is done.
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2344,7 +2392,7 @@ deletion is done.
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2400,7 @@ deletion is done.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2360,7 +2408,7 @@ deletion is done.
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2368,7 +2416,7 @@ deletion is done.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2376,7 +2424,7 @@ deletion is done.
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2432,7 @@ deletion is done.
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2392,7 +2440,7 @@ deletion is done.
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2432,7 +2480,7 @@ deletion is done.
 <a href="#kibanauri_nodejs" style="color: inherit; text-decoration: inherit;">kibana<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI for Kibana frontend.
 {{% /md %}}</dd></dl>
@@ -2445,7 +2493,7 @@ deletion is done.
 <a href="#kibana_uri_python" style="color: inherit; text-decoration: inherit;">kibana_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI for Kibana frontend.
 {{% /md %}}</dd></dl>
@@ -2756,7 +2804,7 @@ only when a new service is being created.
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the 
 Aiven DNS name.
@@ -2766,7 +2814,7 @@ Aiven DNS name.
 <a href="#disablereplicationfactoradjustment_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Replication<wbr>Factor<wbr>Adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Disable automatic replication factor 
 adjustment for multi-node services. By default, Aiven ensures all indexes are replicated at
@@ -2778,7 +2826,7 @@ virtual machine failure.
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigelasticsearch">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -2788,7 +2836,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#elasticsearchversion_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Elasticsearch major version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2797,7 +2845,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#indexpatterns_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindexpattern">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern[]</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindexpattern">pulumi<wbr>Input<pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
@@ -2807,7 +2855,7 @@ be kept.
 <a href="#indextemplate_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindextemplate">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindextemplate">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Template settings for all new indexe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2816,7 +2864,7 @@ be kept.
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2825,7 +2873,7 @@ be kept.
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigkibana">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigkibana">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -2835,7 +2883,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#maxindexcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2844,7 +2892,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigprivateaccess">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigprivateaccess">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2853,7 +2901,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigprivatelinkaccess">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigprivatelinkaccess">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -2862,7 +2910,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has 
 effect only when a new service is being created.
@@ -2872,7 +2920,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigpublicaccess">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigpublicaccess">pulumi<wbr>Input<Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2881,7 +2929,7 @@ effect only when a new service is being created.
 <a href="#recoverybasebackupname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Basebackup<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2890,7 +2938,7 @@ effect only when a new service is being created.
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
@@ -2904,7 +2952,7 @@ only when a new service is being created.
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the 
 Aiven DNS name.
@@ -2914,7 +2962,7 @@ Aiven DNS name.
 <a href="#disable_replication_factor_adjustment_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>replication_<wbr>factor_<wbr>adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Disable automatic replication factor 
 adjustment for multi-node services. By default, Aiven ensures all indexes are replicated at
@@ -2926,7 +2974,7 @@ virtual machine failure.
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigelasticsearch">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -2936,7 +2984,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#elasticsearch_version_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Elasticsearch major version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2945,7 +2993,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#index_patterns_python" style="color: inherit; text-decoration: inherit;">index_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindexpattern">Sequence[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args]</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindexpattern">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
@@ -2955,7 +3003,7 @@ be kept.
 <a href="#index_template_python" style="color: inherit; text-decoration: inherit;">index_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindextemplate">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindextemplate">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Template settings for all new indexe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2964,7 +3012,7 @@ be kept.
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2973,7 +3021,7 @@ be kept.
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigkibana">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigkibana">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -2983,7 +3031,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2992,7 +3040,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigprivateaccess">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigprivateaccess">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3001,7 +3049,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigprivatelinkaccess">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigprivatelinkaccess">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd><dt class="property-optional"
@@ -3010,7 +3058,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has 
 effect only when a new service is being created.
@@ -3020,7 +3068,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigpublicaccess">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigpublicaccess">Input[Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3029,7 +3077,7 @@ effect only when a new service is being created.
 <a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3038,7 +3086,7 @@ effect only when a new service is being created.
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
@@ -3584,7 +3632,7 @@ is automatically lowered if set to higher than maximum value.
 <a href="#actionautocreateindexenabled_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Auto<wbr>Create<wbr>Index<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Explicitly allow or block automatic 
 creation of indices. Defaults to true
@@ -3594,7 +3642,7 @@ creation of indices. Defaults to true
 <a href="#actiondestructiverequiresname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Destructive<wbr>Requires<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Require explicit index names when deleting
 {{% /md %}}</dd><dt class="property-optional"
@@ -3603,7 +3651,7 @@ creation of indices. Defaults to true
 <a href="#clustermaxshardspernode_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls the number of shards allowed in the
 cluster per data node.
@@ -3613,7 +3661,7 @@ cluster per data node.
 <a href="#httpmaxcontentlength_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Content<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum content length for HTTP requests to 
 the Elasticsearch HTTP API, in bytes.
@@ -3623,7 +3671,7 @@ the Elasticsearch HTTP API, in bytes.
 <a href="#httpmaxheadersize_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Header<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The max size of allowed headers, in bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3632,7 +3680,7 @@ the Elasticsearch HTTP API, in bytes.
 <a href="#httpmaxinitiallinelength_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Initial<wbr>Line<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The max length of an HTTP URL, in bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3641,7 +3689,7 @@ the Elasticsearch HTTP API, in bytes.
 <a href="#indicesfielddatacachesize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Fielddata<wbr>Cache<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Relative amount. Maximum amount of 
 heap memory used for field data cache. This is an expert setting; decreasing the
@@ -3653,7 +3701,7 @@ for field data cache will decrease amount of heap available for other operations
 <a href="#indicesmemoryindexbuffersize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Memory<wbr>Index<wbr>Buffer<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Percentage value. Default is 10%. 
 Total amount of heap used for indexing buffer, before writing segments to disk.
@@ -3665,7 +3713,7 @@ will increase indexing performance but causes performance issues for query perfo
 <a href="#indicesqueriescachesize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Queries<wbr>Cache<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Percentage value. Default is 10%. 
 Maximum amount of heap used for query cache. This is an expert setting.
@@ -3677,7 +3725,7 @@ operations; too high value will cause issues with other Elasticsearch functional
 <a href="#indicesqueryboolmaxclausecount_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Query<wbr>Bool<wbr>Max<wbr>Clause<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum number of clauses Lucene 
 BooleanQuery can have. The default value (1024) is relatively high, and increasing it
@@ -3688,7 +3736,7 @@ may cause performance issues. Investigate other approaches first before increasi
 <a href="#reindexremotewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">reindex<wbr>Remote<wbr>Whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Whitelisted addresses for reindexing. 
 Changing this value will cause all Elasticsearch instances to restart.
@@ -3698,7 +3746,7 @@ Changing this value will cause all Elasticsearch instances to restart.
 <a href="#searchmaxbuckets_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Max<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum number of aggregation buckets allowed 
 in a single response. Elasticsearch default value is used when this is not defined.
@@ -3708,7 +3756,7 @@ in a single response. Elasticsearch default value is used when this is not defin
 <a href="#threadpoolanalyzequeuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
@@ -3718,7 +3766,7 @@ See documentation for exact details.
 <a href="#threadpoolanalyzesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
@@ -3729,7 +3777,7 @@ value is automatically lowered if set to higher than maximum value.
 <a href="#threadpoolforcemergesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Force<wbr>Merge<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
@@ -3740,7 +3788,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
 <a href="#threadpoolgetqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Get<wbr>Queue<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
@@ -3750,7 +3798,7 @@ documentation for exact details.
 <a href="#threadpoolgetsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Get<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
@@ -3761,7 +3809,7 @@ value is automatically lowered if set to higher than maximum value.
 <a href="#threadpoolindexqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Index<wbr>Queue<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
@@ -3771,7 +3819,7 @@ See documentation for exact details.
 <a href="#threadpoolindexsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Index<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
@@ -3782,7 +3830,7 @@ value is automatically lowered if set to higher than maximum value.
 <a href="#threadpoolsearchqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Queue<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
@@ -3792,7 +3840,7 @@ documentation for exact details.
 <a href="#threadpoolsearchsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
@@ -3803,7 +3851,7 @@ is automatically lowered if set to higher than maximum value.
 <a href="#threadpoolsearchthrottledqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Queue<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
@@ -3813,7 +3861,7 @@ See documentation for exact details.
 <a href="#threadpoolsearchthrottledsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
@@ -3824,7 +3872,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
 <a href="#threadpoolwritequeuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Write<wbr>Queue<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
@@ -3834,7 +3882,7 @@ documentation for exact details.
 <a href="#threadpoolwritesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Write<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
@@ -3849,7 +3897,7 @@ is automatically lowered if set to higher than maximum value.
 <a href="#action_auto_create_index_enabled_python" style="color: inherit; text-decoration: inherit;">action_<wbr>auto_<wbr>create_<wbr>index_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Explicitly allow or block automatic 
 creation of indices. Defaults to true
@@ -3859,7 +3907,7 @@ creation of indices. Defaults to true
 <a href="#action_destructive_requires_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>destructive_<wbr>requires_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Require explicit index names when deleting
 {{% /md %}}</dd><dt class="property-optional"
@@ -3868,7 +3916,7 @@ creation of indices. Defaults to true
 <a href="#cluster_max_shards_per_node_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>max_<wbr>shards_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls the number of shards allowed in the
 cluster per data node.
@@ -3878,7 +3926,7 @@ cluster per data node.
 <a href="#http_max_content_length_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>content_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum content length for HTTP requests to 
 the Elasticsearch HTTP API, in bytes.
@@ -3888,7 +3936,7 @@ the Elasticsearch HTTP API, in bytes.
 <a href="#http_max_header_size_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>header_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The max size of allowed headers, in bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3897,7 +3945,7 @@ the Elasticsearch HTTP API, in bytes.
 <a href="#http_max_initial_line_length_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>initial_<wbr>line_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The max length of an HTTP URL, in bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3906,7 +3954,7 @@ the Elasticsearch HTTP API, in bytes.
 <a href="#indices_fielddata_cache_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>fielddata_<wbr>cache_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Relative amount. Maximum amount of 
 heap memory used for field data cache. This is an expert setting; decreasing the
@@ -3918,7 +3966,7 @@ for field data cache will decrease amount of heap available for other operations
 <a href="#indices_memory_index_buffer_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>memory_<wbr>index_<wbr>buffer_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Percentage value. Default is 10%. 
 Total amount of heap used for indexing buffer, before writing segments to disk.
@@ -3930,7 +3978,7 @@ will increase indexing performance but causes performance issues for query perfo
 <a href="#indices_queries_cache_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>queries_<wbr>cache_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Percentage value. Default is 10%. 
 Maximum amount of heap used for query cache. This is an expert setting.
@@ -3942,7 +3990,7 @@ operations; too high value will cause issues with other Elasticsearch functional
 <a href="#indices_query_bool_max_clause_count_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>query_<wbr>bool_<wbr>max_<wbr>clause_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum number of clauses Lucene 
 BooleanQuery can have. The default value (1024) is relatively high, and increasing it
@@ -3953,7 +4001,7 @@ may cause performance issues. Investigate other approaches first before increasi
 <a href="#reindex_remote_whitelists_python" style="color: inherit; text-decoration: inherit;">reindex_<wbr>remote_<wbr>whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Whitelisted addresses for reindexing. 
 Changing this value will cause all Elasticsearch instances to restart.
@@ -3963,7 +4011,7 @@ Changing this value will cause all Elasticsearch instances to restart.
 <a href="#search_max_buckets_python" style="color: inherit; text-decoration: inherit;">search_<wbr>max_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum number of aggregation buckets allowed 
 in a single response. Elasticsearch default value is used when this is not defined.
@@ -3973,7 +4021,7 @@ in a single response. Elasticsearch default value is used when this is not defin
 <a href="#thread_pool_analyze_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>analyze_<wbr>queue_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
@@ -3983,7 +4031,7 @@ See documentation for exact details.
 <a href="#thread_pool_analyze_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>analyze_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
@@ -3994,7 +4042,7 @@ value is automatically lowered if set to higher than maximum value.
 <a href="#thread_pool_force_merge_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>force_<wbr>merge_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
@@ -4005,7 +4053,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
 <a href="#thread_pool_get_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>get_<wbr>queue_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
@@ -4015,7 +4063,7 @@ documentation for exact details.
 <a href="#thread_pool_get_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>get_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
@@ -4026,7 +4074,7 @@ value is automatically lowered if set to higher than maximum value.
 <a href="#thread_pool_index_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>index_<wbr>queue_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
@@ -4036,7 +4084,7 @@ See documentation for exact details.
 <a href="#thread_pool_index_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>index_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
@@ -4047,7 +4095,7 @@ value is automatically lowered if set to higher than maximum value.
 <a href="#thread_pool_search_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>queue_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
@@ -4057,7 +4105,7 @@ documentation for exact details.
 <a href="#thread_pool_search_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
@@ -4068,7 +4116,7 @@ is automatically lowered if set to higher than maximum value.
 <a href="#thread_pool_search_throttled_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>throttled_<wbr>queue_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
@@ -4078,7 +4126,7 @@ See documentation for exact details.
 <a href="#thread_pool_search_throttled_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>throttled_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
@@ -4089,7 +4137,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
 <a href="#thread_pool_write_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>write_<wbr>queue_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
@@ -4099,7 +4147,7 @@ documentation for exact details.
 <a href="#thread_pool_write_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>write_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
@@ -4180,7 +4228,7 @@ dots and glob characters (* and ?)
 <a href="#maxindexcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4189,7 +4237,7 @@ dots and glob characters (* and ?)
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
@@ -4199,7 +4247,7 @@ dots and glob characters (* and ?)
 <a href="#sortingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Deletion sorting algorithm
 {{% /md %}}</dd></dl>
@@ -4212,7 +4260,7 @@ dots and glob characters (* and ?)
 <a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4221,7 +4269,7 @@ dots and glob characters (* and ?)
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
@@ -4231,7 +4279,7 @@ dots and glob characters (* and ?)
 <a href="#sorting_algorithm_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Deletion sorting algorithm
 {{% /md %}}</dd></dl>
@@ -4312,7 +4360,7 @@ memory errors when a document contains too many nested objects. Default is 10000
 <a href="#mappingnestedobjectslimit_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum number of nested JSON objects that 
 a single document can contain across all nested types. This limit helps to prevent out of
@@ -4323,7 +4371,7 @@ memory errors when a document contains too many nested objects. Default is 10000
 <a href="#numberofreplicas_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of replicas each primary shard has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4332,7 +4380,7 @@ memory errors when a document contains too many nested objects. Default is 10000
 <a href="#numberofshards_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Shards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of primary shards that an index should have.
 {{% /md %}}</dd></dl>
@@ -4345,7 +4393,7 @@ memory errors when a document contains too many nested objects. Default is 10000
 <a href="#mapping_nested_objects_limit_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>nested_<wbr>objects_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum number of nested JSON objects that 
 a single document can contain across all nested types. This limit helps to prevent out of
@@ -4356,7 +4404,7 @@ memory errors when a document contains too many nested objects. Default is 10000
 <a href="#number_of_replicas_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of replicas each primary shard has.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4365,7 +4413,7 @@ memory errors when a document contains too many nested objects. Default is 10000
 <a href="#number_of_shards_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>shards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of primary shards that an index should have.
 {{% /md %}}</dd></dl>
@@ -4448,7 +4496,7 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
 <a href="#elasticsearchrequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Request<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds for requests 
 made by Kibana towards Elasticsearch.
@@ -4458,7 +4506,7 @@ made by Kibana towards Elasticsearch.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable or disable Kibana.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4467,7 +4515,7 @@ made by Kibana towards Elasticsearch.
 <a href="#maxoldspacesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Old<wbr>Space<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limits the maximum amount of memory (in MiB) the 
 Kibana process can use. This sets the max_old_space_size option of the nodejs running
@@ -4482,7 +4530,7 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
 <a href="#elasticsearch_request_timeout_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>request_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds for requests 
 made by Kibana towards Elasticsearch.
@@ -4492,7 +4540,7 @@ made by Kibana towards Elasticsearch.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable or disable Kibana.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4501,7 +4549,7 @@ made by Kibana towards Elasticsearch.
 <a href="#max_old_space_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>old_<wbr>space_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limits the maximum amount of memory (in MiB) the 
 Kibana process can use. This sets the max_old_space_size option of the nodejs running
@@ -4586,7 +4634,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4596,7 +4644,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -4606,7 +4654,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4620,7 +4668,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4630,7 +4678,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -4640,7 +4688,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4704,7 +4752,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4714,7 +4762,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -4728,7 +4776,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4738,7 +4786,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -4822,7 +4870,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4832,7 +4880,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -4842,7 +4890,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4856,7 +4904,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to elasticsearch from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4866,7 +4914,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
@@ -4876,7 +4924,7 @@ service nodes that are in a project VPC or another type of private network.
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
@@ -4932,7 +4980,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4940,7 +4988,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4952,7 +5000,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4960,7 +5008,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

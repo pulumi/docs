@@ -18,19 +18,37 @@ meta_desc: "Documentation for the aiven.KafkaTopic resource with examples, input
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KafkaTopic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KafkaTopic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaTopicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KafkaTopic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[KafkaTopicConfigArgs]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaTopicTagArgs]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KafkaTopic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaTopicConfigArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+               <span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+               <span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+               <span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+               <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KafkaTopicTagArgs]]]]</span> = None<span class="p">,</span>
+               <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">KafkaTopic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaTopicArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKafkaTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KafkaTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaTopic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKafkaTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KafkaTopicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaTopic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KafkaTopic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KafkaTopicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KafkaTopic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KafkaTopicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +83,32 @@ meta_desc: "Documentation for the aiven.KafkaTopic resource with examples, input
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KafkaTopicArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +117,7 @@ meta_desc: "Documentation for the aiven.KafkaTopic resource with examples, input
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +141,7 @@ meta_desc: "Documentation for the aiven.KafkaTopic resource with examples, input
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -406,7 +434,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#partitions_nodejs" style="color: inherit; text-decoration: inherit;">partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
 {{% /md %}}</dd><dt class="property-required"
@@ -415,7 +443,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the topic belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
@@ -427,7 +455,7 @@ the topic being deleted and new one created instead.
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
 {{% /md %}}</dd><dt class="property-required"
@@ -436,7 +464,7 @@ the topic being deleted and new one created instead.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
 {{% /md %}}</dd><dt class="property-required"
@@ -445,7 +473,7 @@ the topic being deleted and new one created instead.
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is the actual name of the topic account. This propery cannot be changed
 once the service is created. Doing so will result in the topic being deleted and new one
@@ -456,7 +484,7 @@ created instead.
 <a href="#cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -465,7 +493,7 @@ created instead.
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopicconfig">Kafka<wbr>Topic<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkatopicconfig">pulumi<wbr>Input<Kafka<wbr>Topic<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -474,7 +502,7 @@ created instead.
 <a href="#minimuminsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas 
 (ISR) to produce to a partition.
@@ -484,7 +512,7 @@ created instead.
 <a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}retention.bytes value
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.retention_bytes instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -493,7 +521,7 @@ created instead.
 <a href="#retentionhours_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.retention_ms instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -502,7 +530,7 @@ created instead.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopictag">Kafka<wbr>Topic<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#kafkatopictag">pulumi<wbr>Input<pulumi<wbr>Input<Kafka<wbr>Topic<wbr>Tag<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Kafka Topic tag
 {{% /md %}}</dd><dt class="property-optional"
@@ -511,7 +539,7 @@ created instead.
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protection, which prevents a Kafka topic from being deleted. It is recommended to
 enable this for any production Kafka topic containing critical data.
@@ -525,7 +553,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
 {{% /md %}}</dd><dt class="property-required"
@@ -534,7 +562,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the topic belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
@@ -546,7 +574,7 @@ the topic being deleted and new one created instead.
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
 {{% /md %}}</dd><dt class="property-required"
@@ -555,7 +583,7 @@ the topic being deleted and new one created instead.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
 {{% /md %}}</dd><dt class="property-required"
@@ -564,7 +592,7 @@ the topic being deleted and new one created instead.
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is the actual name of the topic account. This propery cannot be changed
 once the service is created. Doing so will result in the topic being deleted and new one
@@ -575,7 +603,7 @@ created instead.
 <a href="#cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -584,7 +612,7 @@ created instead.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopicconfig">Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkatopicconfig">Input[Kafka<wbr>Topic<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -593,7 +621,7 @@ created instead.
 <a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas 
 (ISR) to produce to a partition.
@@ -603,7 +631,7 @@ created instead.
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.retention_bytes instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -612,7 +640,7 @@ created instead.
 <a href="#retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.retention_ms instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -621,7 +649,7 @@ created instead.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopictag">Sequence[Kafka<wbr>Topic<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kafkatopictag">Input[Kafka<wbr>Topic<wbr>Tag<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Kafka Topic tag
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +658,7 @@ created instead.
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protection, which prevents a Kafka topic from being deleted. It is recommended to
 enable this for any production Kafka topic containing critical data.
@@ -700,20 +728,34 @@ Get an existing KafkaTopic resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KafkaTopicState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KafkaTopic</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">KafkaTopicState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KafkaTopic</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[KafkaTopicConfigArgs]</span> = None<span class="p">, </span><span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaTopicTagArgs]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KafkaTopic</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KafkaTopicConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">minimum_in_sync_replicas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">partitions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">retention_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">retention_hours</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KafkaTopicTagArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> KafkaTopic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafkaTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KafkaTopicState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaTopic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafkaTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">KafkaTopicState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KafkaTopic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KafkaTopic</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KafkaTopicState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KafkaTopic</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">KafkaTopicState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1060,7 +1102,7 @@ created instead.
 <a href="#state_cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1069,7 +1111,7 @@ created instead.
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopicconfig">Kafka<wbr>Topic<wbr>Config</a></span>
+        <span class="property-type"><a href="#kafkatopicconfig">pulumi<wbr>Input<Kafka<wbr>Topic<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1078,7 +1120,7 @@ created instead.
 <a href="#state_minimuminsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas 
 (ISR) to produce to a partition.
@@ -1088,7 +1130,7 @@ created instead.
 <a href="#state_partitions_nodejs" style="color: inherit; text-decoration: inherit;">partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1097,7 +1139,7 @@ created instead.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the topic belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
@@ -1109,7 +1151,7 @@ the topic being deleted and new one created instead.
 <a href="#state_replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1118,7 +1160,7 @@ the topic being deleted and new one created instead.
 <a href="#state_retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}retention.bytes value
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.retention_bytes instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1127,7 +1169,7 @@ the topic being deleted and new one created instead.
 <a href="#state_retentionhours_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.retention_ms instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1136,7 +1178,7 @@ the topic being deleted and new one created instead.
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
 {{% /md %}}</dd><dt class="property-optional"
@@ -1145,7 +1187,7 @@ the topic being deleted and new one created instead.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopictag">Kafka<wbr>Topic<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#kafkatopictag">pulumi<wbr>Input<pulumi<wbr>Input<Kafka<wbr>Topic<wbr>Tag<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Kafka Topic tag
 {{% /md %}}</dd><dt class="property-optional"
@@ -1154,7 +1196,7 @@ the topic being deleted and new one created instead.
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protection, which prevents a Kafka topic from being deleted. It is recommended to
 enable this for any production Kafka topic containing critical data.
@@ -1164,7 +1206,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#state_topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is the actual name of the topic account. This propery cannot be changed
 once the service is created. Doing so will result in the topic being deleted and new one
@@ -1179,7 +1221,7 @@ created instead.
 <a href="#state_cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1188,7 +1230,7 @@ created instead.
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopicconfig">Kafka<wbr>Topic<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kafkatopicconfig">Input[Kafka<wbr>Topic<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kafka topic configuration
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1197,7 +1239,7 @@ created instead.
 <a href="#state_minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum required nodes in-sync replicas 
 (ISR) to produce to a partition.
@@ -1207,7 +1249,7 @@ created instead.
 <a href="#state_partitions_python" style="color: inherit; text-decoration: inherit;">partitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of partitions to create in the topic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1258,7 @@ created instead.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the topic belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
@@ -1228,7 +1270,7 @@ the topic being deleted and new one created instead.
 <a href="#state_replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Replication factor for the topic.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1237,7 +1279,7 @@ the topic being deleted and new one created instead.
 <a href="#state_retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.retention_bytes instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1246,7 +1288,7 @@ the topic being deleted and new one created instead.
 <a href="#state_retention_hours_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Retention period in hours, if -1 it is infinite.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.retention_ms instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -1255,7 +1297,7 @@ the topic being deleted and new one created instead.
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service to link the kafka topic to
 {{% /md %}}</dd><dt class="property-optional"
@@ -1264,7 +1306,7 @@ the topic being deleted and new one created instead.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkatopictag">Sequence[Kafka<wbr>Topic<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kafkatopictag">Input[Kafka<wbr>Topic<wbr>Tag<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Kafka Topic tag
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1315,7 @@ the topic being deleted and new one created instead.
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protection, which prevents a Kafka topic from being deleted. It is recommended to
 enable this for any production Kafka topic containing critical data.
@@ -1283,7 +1325,7 @@ enable this for any production Kafka topic containing critical data.
 <a href="#state_topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is the actual name of the topic account. This propery cannot be changed
 once the service is created. Doing so will result in the topic being deleted and new one
@@ -1749,7 +1791,7 @@ created instead.
 <a href="#cleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1800,7 @@ created instead.
 <a href="#compressiontype_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}compression.type value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1809,7 @@ created instead.
 <a href="#deleteretentionms_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}delete.retention.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1818,7 @@ created instead.
 <a href="#filedeletedelayms_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Delete<wbr>Delay<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}file.delete.delay.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1827,7 @@ created instead.
 <a href="#flushmessages_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}flush.messages value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1794,7 +1836,7 @@ created instead.
 <a href="#flushms_nodejs" style="color: inherit; text-decoration: inherit;">flush<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}flush.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1845,7 @@ created instead.
 <a href="#indexintervalbytes_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Interval<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}index.interval.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1854,7 @@ created instead.
 <a href="#maxcompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Compaction<wbr>Lag<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}max.compaction.lag.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1863,7 @@ created instead.
 <a href="#maxmessagebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Message<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}max.message.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1872,7 @@ created instead.
 <a href="#messagedownconversionenable_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Downconversion<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}message.downconversion.enable value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1881,7 @@ created instead.
 <a href="#messageformatversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}message.format.version value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1848,7 +1890,7 @@ created instead.
 <a href="#messagetimestampdifferencemaxms_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Timestamp<wbr>Difference<wbr>Max<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}message.timestamp.difference.max.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1899,7 @@ created instead.
 <a href="#messagetimestamptype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Timestamp<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}message.timestamp.type value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1908,7 @@ created instead.
 <a href="#mincleanabledirtyratio_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cleanable<wbr>Dirty<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}min.cleanable.dirty.ratio value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1917,7 @@ created instead.
 <a href="#mincompactionlagms_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Compaction<wbr>Lag<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}min.compaction.lag.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1926,7 @@ created instead.
 <a href="#mininsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Insync<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}min.insync.replicas value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1935,7 @@ created instead.
 <a href="#preallocate_nodejs" style="color: inherit; text-decoration: inherit;">preallocate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}preallocate value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1902,7 +1944,7 @@ created instead.
 <a href="#retentionbytes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1911,7 +1953,7 @@ created instead.
 <a href="#retentionms_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}retention.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1920,7 +1962,7 @@ created instead.
 <a href="#segmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}segment.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1929,7 +1971,7 @@ created instead.
 <a href="#segmentindexbytes_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Index<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}segment.index.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1938,7 +1980,7 @@ created instead.
 <a href="#segmentjitterms_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Jitter<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}segment.jitter.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1947,7 +1989,7 @@ created instead.
 <a href="#segmentms_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}segment.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1956,7 +1998,7 @@ created instead.
 <a href="#uncleanleaderelectionenable_nodejs" style="color: inherit; text-decoration: inherit;">unclean<wbr>Leader<wbr>Election<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}unclean.leader.election.enable value
 {{% /md %}}</dd></dl>
@@ -1969,7 +2011,7 @@ created instead.
 <a href="#cleanup_policy_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1978,7 +2020,7 @@ created instead.
 <a href="#compression_type_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}compression.type value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +2029,7 @@ created instead.
 <a href="#delete_retention_ms_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}delete.retention.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +2038,7 @@ created instead.
 <a href="#file_delete_delay_ms_python" style="color: inherit; text-decoration: inherit;">file_<wbr>delete_<wbr>delay_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}file.delete.delay.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2005,7 +2047,7 @@ created instead.
 <a href="#flush_messages_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}flush.messages value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +2056,7 @@ created instead.
 <a href="#flush_ms_python" style="color: inherit; text-decoration: inherit;">flush_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}flush.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2023,7 +2065,7 @@ created instead.
 <a href="#index_interval_bytes_python" style="color: inherit; text-decoration: inherit;">index_<wbr>interval_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}index.interval.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2032,7 +2074,7 @@ created instead.
 <a href="#max_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">max_<wbr>compaction_<wbr>lag_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}max.compaction.lag.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2041,7 +2083,7 @@ created instead.
 <a href="#max_message_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>message_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}max.message.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2050,7 +2092,7 @@ created instead.
 <a href="#message_downconversion_enable_python" style="color: inherit; text-decoration: inherit;">message_<wbr>downconversion_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}message.downconversion.enable value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2059,7 +2101,7 @@ created instead.
 <a href="#message_format_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}message.format.version value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2068,7 +2110,7 @@ created instead.
 <a href="#message_timestamp_difference_max_ms_python" style="color: inherit; text-decoration: inherit;">message_<wbr>timestamp_<wbr>difference_<wbr>max_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}message.timestamp.difference.max.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2077,7 +2119,7 @@ created instead.
 <a href="#message_timestamp_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>timestamp_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}message.timestamp.type value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2086,7 +2128,7 @@ created instead.
 <a href="#min_cleanable_dirty_ratio_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cleanable_<wbr>dirty_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}min.cleanable.dirty.ratio value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2137,7 @@ created instead.
 <a href="#min_compaction_lag_ms_python" style="color: inherit; text-decoration: inherit;">min_<wbr>compaction_<wbr>lag_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}min.compaction.lag.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2146,7 @@ created instead.
 <a href="#min_insync_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>insync_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}min.insync.replicas value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2113,7 +2155,7 @@ created instead.
 <a href="#preallocate_python" style="color: inherit; text-decoration: inherit;">preallocate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}preallocate value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2122,7 +2164,7 @@ created instead.
 <a href="#retention_bytes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}retention.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2173,7 @@ created instead.
 <a href="#retention_ms_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}retention.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2140,7 +2182,7 @@ created instead.
 <a href="#segment_bytes_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}segment.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2191,7 @@ created instead.
 <a href="#segment_index_bytes_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>index_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}segment.index.bytes value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2158,7 +2200,7 @@ created instead.
 <a href="#segment_jitter_ms_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>jitter_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}segment.jitter.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2167,7 +2209,7 @@ created instead.
 <a href="#segment_ms_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}segment.ms value
 {{% /md %}}</dd><dt class="property-optional"
@@ -2176,7 +2218,7 @@ created instead.
 <a href="#unclean_leader_election_enable_python" style="color: inherit; text-decoration: inherit;">unclean_<wbr>leader_<wbr>election_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}unclean.leader.election.enable value
 {{% /md %}}</dd></dl>
@@ -2231,7 +2273,7 @@ created instead.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2281,7 @@ created instead.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2251,7 +2293,7 @@ created instead.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2259,7 +2301,7 @@ created instead.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

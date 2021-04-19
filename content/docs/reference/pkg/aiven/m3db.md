@@ -71,8 +71,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -173,19 +173,36 @@ const m3 = new aiven.M3Db("m3", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">M3Db</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">M3DbArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">M3Db</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">M3DbArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">M3Db</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">m3db</span><span class="p">:</span> <span class="nx">Optional[M3DbM3dbArgs]</span> = None<span class="p">, </span><span class="nx">m3db_user_config</span><span class="p">:</span> <span class="nx">Optional[M3DbM3dbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[M3DbServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">M3Db</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">m3db</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[M3DbM3dbArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">m3db_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[M3DbM3dbUserConfigArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[M3DbServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">M3Db</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">M3DbArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewM3Db</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">M3DbArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">M3Db</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewM3Db</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">M3DbArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">M3Db</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">M3Db</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">M3DbArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">M3Db</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">M3DbArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -220,22 +237,32 @@ const m3 = new aiven.M3Db("m3", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">M3DbArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -244,7 +271,7 @@ const m3 = new aiven.M3Db("m3", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -268,7 +295,7 @@ const m3 = new aiven.M3Db("m3", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -587,7 +614,7 @@ deletion is done.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -598,7 +625,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -609,7 +636,7 @@ intended service usage rather than current attributes.
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -624,7 +651,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3db_nodejs" style="color: inherit; text-decoration: inherit;">m3db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3db">M3Db<wbr>M3db</a></span>
+        <span class="property-type"><a href="#m3dbm3db">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}M3 specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -633,7 +660,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3dbuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3db<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfig">M3Db<wbr>M3db<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfig">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines M3 specific additional configuration options. The following 
 configuration options available:
@@ -643,7 +670,7 @@ configuration options available:
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -653,7 +680,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -663,7 +690,7 @@ UTC time in HH:mm:ss format.
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -679,7 +706,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -693,7 +720,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbserviceintegration">M3Db<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#m3dbserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<M3Db<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -702,7 +729,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -719,7 +746,7 @@ deletion is done.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -730,7 +757,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -741,7 +768,7 @@ intended service usage rather than current attributes.
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -756,7 +783,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3db_python" style="color: inherit; text-decoration: inherit;">m3db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3db">M3Db<wbr>M3db<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3db">Input[M3Db<wbr>M3db<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}M3 specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +792,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#m3db_user_config_python" style="color: inherit; text-decoration: inherit;">m3db_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfig">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfig">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines M3 specific additional configuration options. The following 
 configuration options available:
@@ -775,7 +802,7 @@ configuration options available:
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -785,7 +812,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -795,7 +822,7 @@ UTC time in HH:mm:ss format.
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -811,7 +838,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -825,7 +852,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbserviceintegration">Sequence[M3Db<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#m3dbserviceintegration">Input[M3Db<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +861,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1195,20 +1222,41 @@ Get an existing M3Db resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">M3DbState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">M3Db</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">M3DbState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">M3Db</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[Sequence[M3DbComponentArgs]]</span> = None<span class="p">, </span><span class="nx">m3db</span><span class="p">:</span> <span class="nx">Optional[M3DbM3dbArgs]</span> = None<span class="p">, </span><span class="nx">m3db_user_config</span><span class="p">:</span> <span class="nx">Optional[M3DbM3dbUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[M3DbServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> M3Db</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">components</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[M3DbComponentArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">m3db</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[M3DbM3dbArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">m3db_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[M3DbM3dbUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[M3DbServiceIntegrationArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> M3Db</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetM3Db<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">M3DbState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">M3Db</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetM3Db<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">M3DbState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">M3Db</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">M3Db</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">M3DbState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">M3Db</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">M3DbState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1725,7 +1773,7 @@ deletion is done.
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1740,7 +1788,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbcomponent">M3Db<wbr>Component[]</a></span>
+        <span class="property-type"><a href="#m3dbcomponent">pulumi<wbr>Input<pulumi<wbr>Input<M3Db<wbr>Component<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1797,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_m3db_nodejs" style="color: inherit; text-decoration: inherit;">m3db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3db">M3Db<wbr>M3db</a></span>
+        <span class="property-type"><a href="#m3dbm3db">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}M3 specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1806,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_m3dbuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3db<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfig">M3Db<wbr>M3db<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfig">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}defines M3 specific additional configuration options. The following 
 configuration options available:
@@ -1768,7 +1816,7 @@ configuration options available:
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1778,7 +1826,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -1788,7 +1836,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -1804,7 +1852,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -1815,7 +1863,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -1829,7 +1877,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}M3 hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1838,7 +1886,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbserviceintegration">M3Db<wbr>Service<wbr>Integration[]</a></span>
+        <span class="property-type"><a href="#m3dbserviceintegration">pulumi<wbr>Input<pulumi<wbr>Input<M3Db<wbr>Service<wbr>Integration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -1847,7 +1895,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -1858,7 +1906,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the M3 service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1867,7 +1915,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}M3 port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1876,7 +1924,7 @@ intended service usage rather than current attributes.
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1885,7 +1933,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URI for connecting to the M3 service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1894,7 +1942,7 @@ intended service usage rather than current attributes.
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the M3 service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1903,7 +1951,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1912,7 +1960,7 @@ intended service usage rather than current attributes.
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -1929,7 +1977,7 @@ deletion is done.
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
@@ -1944,7 +1992,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbcomponent">Sequence[M3Db<wbr>Component<wbr>Args]</a></span>
+        <span class="property-type"><a href="#m3dbcomponent">Input[M3Db<wbr>Component<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
 {{% /md %}}</dd><dt class="property-optional"
@@ -1953,7 +2001,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_m3db_python" style="color: inherit; text-decoration: inherit;">m3db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3db">M3Db<wbr>M3db<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3db">Input[M3Db<wbr>M3db<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}M3 specific server provided values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +2010,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 <a href="#state_m3db_user_config_python" style="color: inherit; text-decoration: inherit;">m3db_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfig">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfig">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}defines M3 specific additional configuration options. The following 
 configuration options available:
@@ -1972,7 +2020,7 @@ configuration options available:
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
@@ -1982,7 +2030,7 @@ On monday, tuesday, wednesday, etc.
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
@@ -1992,7 +2040,7 @@ UTC time in HH:mm:ss format.
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines what kind of computing resources are allocated for the service. It can
 be changed after creation, though there are some restrictions when going to a smaller
@@ -2008,7 +2056,7 @@ seen from the Aiven web console's Create Service dialog.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
@@ -2019,7 +2067,7 @@ Project cannot be changed later without destroying and re-creating the service.
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}optionally specifies the VPC the service should run in. If the value
 is not set the service is not run inside a VPC. When set, the value should be given as a
@@ -2033,7 +2081,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}M3 hostname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2090,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbserviceintegration">Sequence[M3Db<wbr>Service<wbr>Integration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#m3dbserviceintegration">Input[M3Db<wbr>Service<wbr>Integration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2099,7 @@ significant amount of time to complete if the service has a lot of data.
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
@@ -2062,7 +2110,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the M3 service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2071,7 +2119,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}M3 port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2080,7 +2128,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2137,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the M3 service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2098,7 +2146,7 @@ intended service usage rather than current attributes.
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the M3 service, if applicable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2155,7 @@ intended service usage rather than current attributes.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2116,7 +2164,7 @@ intended service usage rather than current attributes.
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
@@ -2264,7 +2312,7 @@ deletion is done.
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,7 +2320,7 @@ deletion is done.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2280,7 +2328,7 @@ deletion is done.
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2288,7 +2336,7 @@ deletion is done.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2296,7 +2344,7 @@ deletion is done.
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2304,7 +2352,7 @@ deletion is done.
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2312,7 +2360,7 @@ deletion is done.
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2324,7 +2372,7 @@ deletion is done.
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2380,7 @@ deletion is done.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2340,7 +2388,7 @@ deletion is done.
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2348,7 +2396,7 @@ deletion is done.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2356,7 +2404,7 @@ deletion is done.
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2364,7 +2412,7 @@ deletion is done.
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2372,7 +2420,7 @@ deletion is done.
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2620,7 +2668,7 @@ when a new service is being created.
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2629,7 +2677,7 @@ when a new service is being created.
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
 {{% /md %}}</dd><dt class="property-optional"
@@ -2638,7 +2686,7 @@ when a new service is being created.
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfiglimits">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfiglimits">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}M3 limits
 {{% /md %}}</dd><dt class="property-optional"
@@ -2647,7 +2695,7 @@ when a new service is being created.
 <a href="#m3version_nodejs" style="color: inherit; text-decoration: inherit;">m3Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2703,7 @@ when a new service is being created.
 <a href="#m3coordinatorenablegraphitecarboningest_nodejs" style="color: inherit; text-decoration: inherit;">m3coordinator<wbr>Enable<wbr>Graphite<wbr>Carbon<wbr>Ingest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
@@ -2666,7 +2714,7 @@ metrics are written to aggregated namespaces only.
 <a href="#m3dbversion_nodejs" style="color: inherit; text-decoration: inherit;">m3db<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}M3 major version
 {{% /md %}}</dd><dt class="property-optional"
@@ -2675,7 +2723,7 @@ metrics are written to aggregated namespaces only.
 <a href="#namespaces_nodejs" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfignamespace">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace[]</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfignamespace">pulumi<wbr>Input<pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of M3 namespaces
 {{% /md %}}</dd><dt class="property-optional"
@@ -2684,7 +2732,7 @@ metrics are written to aggregated namespaces only.
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigprivateaccess">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigprivateaccess">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2741,7 @@ metrics are written to aggregated namespaces only.
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
@@ -2703,7 +2751,7 @@ effect only when a new service is being created.
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigpublicaccess">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigpublicaccess">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2712,7 +2760,7 @@ effect only when a new service is being created.
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigrules">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigrules">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Mapping rules allow more granular use of aggregation, not simply sending 
 everything to a namespace. If mapping rules exist that target a namespace, only data matching mapping
@@ -2723,7 +2771,7 @@ rules will be sent to it and nothing else.
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
@@ -2737,7 +2785,7 @@ when a new service is being created.
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2746,7 +2794,7 @@ when a new service is being created.
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
 {{% /md %}}</dd><dt class="property-optional"
@@ -2755,7 +2803,7 @@ when a new service is being created.
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfiglimits">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfiglimits">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}M3 limits
 {{% /md %}}</dd><dt class="property-optional"
@@ -2764,7 +2812,7 @@ when a new service is being created.
 <a href="#m3_version_python" style="color: inherit; text-decoration: inherit;">m3_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,7 +2820,7 @@ when a new service is being created.
 <a href="#m3coordinator_enable_graphite_carbon_ingest_python" style="color: inherit; text-decoration: inherit;">m3coordinator_<wbr>enable_<wbr>graphite_<wbr>carbon_<wbr>ingest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
@@ -2783,7 +2831,7 @@ metrics are written to aggregated namespaces only.
 <a href="#m3db_version_python" style="color: inherit; text-decoration: inherit;">m3db_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}M3 major version
 {{% /md %}}</dd><dt class="property-optional"
@@ -2792,7 +2840,7 @@ metrics are written to aggregated namespaces only.
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfignamespace">Sequence[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Args]</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfignamespace">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of M3 namespaces
 {{% /md %}}</dd><dt class="property-optional"
@@ -2801,7 +2849,7 @@ metrics are written to aggregated namespaces only.
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigprivateaccess">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigprivateaccess">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2858,7 @@ metrics are written to aggregated namespaces only.
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
@@ -2820,7 +2868,7 @@ effect only when a new service is being created.
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigpublicaccess">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigpublicaccess">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2829,7 +2877,7 @@ effect only when a new service is being created.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigrules">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigrules">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mapping rules allow more granular use of aggregation, not simply sending 
 everything to a namespace. If mapping rules exist that target a namespace, only data matching mapping
@@ -2840,7 +2888,7 @@ rules will be sent to it and nothing else.
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
@@ -2938,7 +2986,7 @@ when a new service is being created.
 <a href="#globaldatapoints_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Datapoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum number of data points fetched during request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2947,7 +2995,7 @@ when a new service is being created.
 <a href="#querydatapoints_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Datapoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum number of data points fetched in single query
 {{% /md %}}</dd><dt class="property-optional"
@@ -2956,7 +3004,7 @@ when a new service is being created.
 <a href="#queryrequireexhaustive_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Require<wbr>Exhaustive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When query limits are exceeded, whether to return error 
 (if True) or return partial results (False)
@@ -2966,7 +3014,7 @@ when a new service is being created.
 <a href="#queryseries_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum number of series fetched in single query
 {{% /md %}}</dd></dl>
@@ -2979,7 +3027,7 @@ when a new service is being created.
 <a href="#global_datapoints_python" style="color: inherit; text-decoration: inherit;">global_<wbr>datapoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum number of data points fetched during request
 {{% /md %}}</dd><dt class="property-optional"
@@ -2988,7 +3036,7 @@ when a new service is being created.
 <a href="#query_datapoints_python" style="color: inherit; text-decoration: inherit;">query_<wbr>datapoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum number of data points fetched in single query
 {{% /md %}}</dd><dt class="property-optional"
@@ -2997,7 +3045,7 @@ when a new service is being created.
 <a href="#query_require_exhaustive_python" style="color: inherit; text-decoration: inherit;">query_<wbr>require_<wbr>exhaustive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When query limits are exceeded, whether to return error 
 (if True) or return partial results (False)
@@ -3007,7 +3055,7 @@ when a new service is being created.
 <a href="#query_series_python" style="color: inherit; text-decoration: inherit;">query_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum number of series fetched in single query
 {{% /md %}}</dd></dl>
@@ -3102,7 +3150,7 @@ when a new service is being created.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the namespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3111,7 +3159,7 @@ when a new service is being created.
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfignamespaceoptions">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfignamespaceoptions">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Namespace options
 {{% /md %}}</dd><dt class="property-optional"
@@ -3120,7 +3168,7 @@ when a new service is being created.
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resolution for an aggregated namespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3129,7 +3177,7 @@ when a new service is being created.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of aggregation (aggregated/unaggregated)
 {{% /md %}}</dd></dl>
@@ -3142,7 +3190,7 @@ when a new service is being created.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the namespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3151,7 +3199,7 @@ when a new service is being created.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfignamespaceoptions">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfignamespaceoptions">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Namespace options
 {{% /md %}}</dd><dt class="property-optional"
@@ -3160,7 +3208,7 @@ when a new service is being created.
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resolution for an aggregated namespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3169,7 +3217,7 @@ when a new service is being created.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of aggregation (aggregated/unaggregated)
 {{% /md %}}</dd></dl>
@@ -3250,7 +3298,7 @@ namespace in the commitlog.
 <a href="#retentionoptions_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfignamespaceoptionsretentionoptions">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfignamespaceoptionsretentionoptions">pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Retention options
 {{% /md %}}</dd><dt class="property-optional"
@@ -3259,7 +3307,7 @@ namespace in the commitlog.
 <a href="#snapshotenabled_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls whether M3DB will create snapshot files for 
 this namespace
@@ -3269,7 +3317,7 @@ this namespace
 <a href="#writestocommitlog_nodejs" style="color: inherit; text-decoration: inherit;">writes<wbr>To<wbr>Commitlog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls whether M3DB will include writes to this 
 namespace in the commitlog.
@@ -3283,7 +3331,7 @@ namespace in the commitlog.
 <a href="#retention_options_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfignamespaceoptionsretentionoptions">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfignamespaceoptionsretentionoptions">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Retention options
 {{% /md %}}</dd><dt class="property-optional"
@@ -3292,7 +3340,7 @@ namespace in the commitlog.
 <a href="#snapshot_enabled_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls whether M3DB will create snapshot files for 
 this namespace
@@ -3302,7 +3350,7 @@ this namespace
 <a href="#writes_to_commitlog_python" style="color: inherit; text-decoration: inherit;">writes_<wbr>to_<wbr>commitlog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls whether M3DB will include writes to this 
 namespace in the commitlog.
@@ -3424,7 +3472,7 @@ retain data for the namespace
 <a href="#blockdataexpiryduration_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Data<wbr>Expiry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls how long we wait before expiring stale data
 {{% /md %}}</dd><dt class="property-optional"
@@ -3433,7 +3481,7 @@ retain data for the namespace
 <a href="#blocksizeduration_nodejs" style="color: inherit; text-decoration: inherit;">blocksize<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls how long to keep a block in memory before 
 flushing to a fileset on disk
@@ -3443,7 +3491,7 @@ flushing to a fileset on disk
 <a href="#bufferfutureduration_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Future<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls how far into the future writes to 
 the namespace will be accepted
@@ -3453,7 +3501,7 @@ the namespace will be accepted
 <a href="#bufferpastduration_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Past<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls how far into the past writes to the 
 namespace will be accepted
@@ -3463,7 +3511,7 @@ namespace will be accepted
 <a href="#retentionperiodduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Controls the duration of time that M3DB will 
 retain data for the namespace
@@ -3477,7 +3525,7 @@ retain data for the namespace
 <a href="#block_data_expiry_duration_python" style="color: inherit; text-decoration: inherit;">block_<wbr>data_<wbr>expiry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls how long we wait before expiring stale data
 {{% /md %}}</dd><dt class="property-optional"
@@ -3486,7 +3534,7 @@ retain data for the namespace
 <a href="#blocksize_duration_python" style="color: inherit; text-decoration: inherit;">blocksize_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls how long to keep a block in memory before 
 flushing to a fileset on disk
@@ -3496,7 +3544,7 @@ flushing to a fileset on disk
 <a href="#buffer_future_duration_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>future_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls how far into the future writes to 
 the namespace will be accepted
@@ -3506,7 +3554,7 @@ the namespace will be accepted
 <a href="#buffer_past_duration_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>past_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls how far into the past writes to the 
 namespace will be accepted
@@ -3516,7 +3564,7 @@ namespace will be accepted
 <a href="#retention_period_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Controls the duration of time that M3DB will 
 retain data for the namespace
@@ -3560,7 +3608,7 @@ for service nodes that are in a project VPC or another type of private network.
 <a href="#m3coordinator_nodejs" style="color: inherit; text-decoration: inherit;">m3coordinator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to m3coordinator from the public internet 
 for service nodes that are in a project VPC or another type of private network.
@@ -3574,7 +3622,7 @@ for service nodes that are in a project VPC or another type of private network.
 <a href="#m3coordinator_python" style="color: inherit; text-decoration: inherit;">m3coordinator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to m3coordinator from the public internet 
 for service nodes that are in a project VPC or another type of private network.
@@ -3618,7 +3666,7 @@ for service nodes that are in a project VPC or another type of private network.
 <a href="#m3coordinator_nodejs" style="color: inherit; text-decoration: inherit;">m3coordinator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to m3coordinator from the public internet 
 for service nodes that are in a project VPC or another type of private network.
@@ -3632,7 +3680,7 @@ for service nodes that are in a project VPC or another type of private network.
 <a href="#m3coordinator_python" style="color: inherit; text-decoration: inherit;">m3coordinator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allow clients to connect to m3coordinator from the public internet 
 for service nodes that are in a project VPC or another type of private network.
@@ -3672,7 +3720,7 @@ for service nodes that are in a project VPC or another type of private network.
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigrulesmapping">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigrulesmapping">pulumi<wbr>Input<pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3684,7 +3732,7 @@ for service nodes that are in a project VPC or another type of private network.
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigrulesmapping">Sequence[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigrulesmapping">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3800,7 +3848,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of aggregations to be applied
 {{% /md %}}</dd><dt class="property-optional"
@@ -3809,7 +3857,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#drop_nodejs" style="color: inherit; text-decoration: inherit;">drop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Drop the matching metric; Only store the derived metric (as specified in the roll-up rules), if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3818,7 +3866,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The metrics to be used with this particular rule; Matching metric names with wildcards (using
 __name__:wildcard) or matching tags and their (optionally wildcarded) values. For value, !
@@ -3829,7 +3877,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the namespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3838,7 +3886,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigrulesmappingtag">M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigrulesmappingtag">pulumi<wbr>Input<pulumi<wbr>Input<M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of tags to be appended to matching metrics.
 {{% /md %}}</dd></dl>
@@ -3851,7 +3899,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of aggregations to be applied
 {{% /md %}}</dd><dt class="property-optional"
@@ -3860,7 +3908,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#drop_python" style="color: inherit; text-decoration: inherit;">drop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Drop the matching metric; Only store the derived metric (as specified in the roll-up rules), if any.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3869,7 +3917,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The metrics to be used with this particular rule; Matching metric names with wildcards (using
 __name__:wildcard) or matching tags and their (optionally wildcarded) values. For value, !
@@ -3880,7 +3928,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the namespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3889,7 +3937,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#m3dbm3dbuserconfigrulesmappingtag">Sequence[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#m3dbm3dbuserconfigrulesmappingtag">Input[M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Rules<wbr>Mapping<wbr>Tag<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of tags to be appended to matching metrics.
 {{% /md %}}</dd></dl>
@@ -3948,7 +3996,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the namespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3957,7 +4005,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the tag.
 {{% /md %}}</dd></dl>
@@ -3970,7 +4018,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the namespace
 {{% /md %}}</dd><dt class="property-optional"
@@ -3979,7 +4027,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the tag.
 {{% /md %}}</dd></dl>
@@ -4034,7 +4082,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4042,7 +4090,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4054,7 +4102,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4062,7 +4110,7 @@ can be used at start of value for negation, and multiple filters can be supplied
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

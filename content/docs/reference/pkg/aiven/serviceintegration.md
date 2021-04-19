@@ -62,8 +62,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-aiven/sdk/v4/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -135,19 +135,50 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceIntegration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceIntegration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIntegrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceIntegration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationDashboardUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationM3aggregatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationM3coordinatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationReadReplicaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema_registry_proxy_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationSchemaRegistryProxyUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceIntegration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationDashboardUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationDatadogUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationExternalAwsCloudwatchMetricsUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationKafkaConnectUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationKafkaLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationKafkaMirrormakerUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationM3aggregatorUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationM3coordinatorUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationMetricsUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationMirrormakerUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationPrometheusUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationReadReplicaUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationRsyslogUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">schema_registry_proxy_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationSchemaRegistryProxyUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationSignalfxUserConfigArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceIntegration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceIntegrationArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceIntegration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIntegration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceIntegration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceIntegrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIntegration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceIntegration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceIntegrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceIntegration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceIntegrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,22 +213,32 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceIntegrationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -206,7 +247,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -230,7 +271,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -761,7 +802,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
 , `datadog`, `logs`, `metrics`, `kafka_connect`, `external_google_cloud_logging`, `external_elasticsearch_logs`
@@ -773,7 +814,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +823,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#dashboarduserconfig_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +832,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +841,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#destinationendpointid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
 Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
@@ -812,7 +853,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#destinationservicename_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +862,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +871,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#externalawscloudwatchmetricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +880,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +889,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +898,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkaconnectuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +907,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkalogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -875,7 +916,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -884,7 +925,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#logsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -893,7 +934,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#m3aggregatoruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3aggregator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}M3 aggregator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -902,7 +943,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#m3coordinatoruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3coordinator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}M3 coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -911,7 +952,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#metricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +961,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#mirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +970,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Prometheus coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -938,7 +979,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#readreplicauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}PG Read replica specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -947,7 +988,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}RSyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +997,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#schemaregistryproxyuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Schema registry proxy specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -965,7 +1006,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -974,7 +1015,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#sourceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
 endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
@@ -986,7 +1027,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd></dl>
@@ -999,7 +1040,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
 , `datadog`, `logs`, `metrics`, `kafka_connect`, `external_google_cloud_logging`, `external_elasticsearch_logs`
@@ -1011,7 +1052,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1061,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#dashboard_user_config_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Input[Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1070,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Input[Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1079,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#destination_endpoint_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
 Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
@@ -1050,7 +1091,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#destination_service_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1100,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Input[Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1068,7 +1109,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#external_aws_cloudwatch_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Input[Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1118,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Input[Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1127,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Input[Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1095,7 +1136,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Input[Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1104,7 +1145,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafka_logs_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Input[Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1154,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Input[Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1122,7 +1163,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#logs_user_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Input[Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1131,7 +1172,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#m3aggregator_user_config_python" style="color: inherit; text-decoration: inherit;">m3aggregator_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Input[Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}M3 aggregator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1140,7 +1181,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#m3coordinator_user_config_python" style="color: inherit; text-decoration: inherit;">m3coordinator_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Input[Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}M3 coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1149,7 +1190,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#metrics_user_config_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Input[Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1199,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Input[Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1208,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Input[Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Prometheus coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1217,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#read_replica_user_config_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Input[Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PG Read replica specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1185,7 +1226,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Input[Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}RSyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1235,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#schema_registry_proxy_user_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>proxy_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Input[Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Schema registry proxy specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1244,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Input[Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1253,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#source_endpoint_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
 endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
@@ -1224,7 +1265,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd></dl>
@@ -1293,20 +1334,47 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceIntegrationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceIntegration</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceIntegrationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceIntegration</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationDashboardUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationM3aggregatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationM3coordinatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationReadReplicaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema_registry_proxy_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationSchemaRegistryProxyUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceIntegration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationDashboardUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationDatadogUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">external_aws_cloudwatch_metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationExternalAwsCloudwatchMetricsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationKafkaConnectUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationKafkaLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationKafkaMirrormakerUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationLogsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationM3aggregatorUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationM3coordinatorUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationMetricsUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationMirrormakerUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationPrometheusUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationReadReplicaUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationRsyslogUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">schema_registry_proxy_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationSchemaRegistryProxyUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIntegrationSignalfxUserConfigArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ServiceIntegration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceIntegrationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIntegration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceIntegrationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceIntegration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceIntegration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceIntegrationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceIntegration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceIntegrationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1891,7 +1959,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_dashboarduserconfig_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1968,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_datadoguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1977,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_destinationendpointid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
 Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
@@ -1921,7 +1989,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_destinationservicename_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1930,7 +1998,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1939,7 +2007,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_externalawscloudwatchmetricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1948,7 +2016,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1957,7 +2025,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +2034,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
 , `datadog`, `logs`, `metrics`, `kafka_connect`, `external_google_cloud_logging`, `external_elasticsearch_logs`
@@ -1978,7 +2046,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafkaconnectuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +2055,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafkalogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +2064,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2005,7 +2073,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_logsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +2082,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_m3aggregatoruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3aggregator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}M3 aggregator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2023,7 +2091,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_m3coordinatoruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">m3coordinator<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}M3 coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2032,7 +2100,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_metricsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2041,7 +2109,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_mirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2050,7 +2118,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2059,7 +2127,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_prometheususerconfig_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Prometheus coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2068,7 +2136,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_readreplicauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}PG Read replica specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2077,7 +2145,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_rsysloguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">rsyslog<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}RSyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2086,7 +2154,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_schemaregistryproxyuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Schema registry proxy specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2163,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_signalfxuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">signalfx<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">pulumi<wbr>Input<Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2172,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_sourceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
 endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
@@ -2116,7 +2184,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd></dl>
@@ -2129,7 +2197,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_dashboard_user_config_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationdashboarduserconfig">Input[Service<wbr>Integration<wbr>Dashboard<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2206,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_datadog_user_config_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfig">Input[Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2215,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_destination_endpoint_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of the integration.
 Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
@@ -2159,7 +2227,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_destination_service_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2236,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Input[Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2245,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_external_aws_cloudwatch_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchmetricsuserconfig">Input[Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Metrics<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External AWS cloudwatch metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2186,7 +2254,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Input[Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2263,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Input[Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2272,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values include `dashboard`
 , `datadog`, `logs`, `metrics`, `kafka_connect`, `external_google_cloud_logging`, `external_elasticsearch_logs`
@@ -2216,7 +2284,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Input[Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2293,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafka_logs_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkalogsuserconfig">Input[Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Kafka Logs specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2302,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Input[Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2311,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_logs_user_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Input[Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2320,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_m3aggregator_user_config_python" style="color: inherit; text-decoration: inherit;">m3aggregator_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3aggregatoruserconfig">Input[Service<wbr>Integration<wbr>M3aggregator<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}M3 aggregator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2329,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_m3coordinator_user_config_python" style="color: inherit; text-decoration: inherit;">m3coordinator_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationm3coordinatoruserconfig">Input[Service<wbr>Integration<wbr>M3coordinator<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}M3 coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2338,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_metrics_user_config_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfig">Input[Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Metrics specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2347,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Input[Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2356,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2365,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_prometheus_user_config_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfig">Input[Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Prometheus coordinator specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2374,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_read_replica_user_config_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationreadreplicauserconfig">Input[Service<wbr>Integration<wbr>Read<wbr>Replica<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}PG Read replica specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2383,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_rsyslog_user_config_python" style="color: inherit; text-decoration: inherit;">rsyslog_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationrsysloguserconfig">Input[Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}RSyslog specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2392,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_schema_registry_proxy_user_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>proxy_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationschemaregistryproxyuserconfig">Input[Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Schema registry proxy specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2401,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationsignalfxuserconfig">Input[Service<wbr>Integration<wbr>Signalfx<wbr>User<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Signalfx specific user configurable settings
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2410,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_source_endpoint_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the integration. Only either
 endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or service name (
@@ -2354,7 +2422,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#state_source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd></dl>
@@ -2482,7 +2550,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#datadogtags_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag[]</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +2558,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#excludeconsumergroups_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Consumer<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2498,7 +2566,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#excludetopics_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2506,7 +2574,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#includeconsumergroups_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Consumer<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2514,7 +2582,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#includetopics_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2522,7 +2590,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkacustommetrics_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Custom<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2534,7 +2602,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#datadog_tags_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">Sequence[Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceintegrationdatadoguserconfigdatadogtag">Input[Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config<wbr>Datadog<wbr>Tag<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2542,7 +2610,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#exclude_consumer_groups_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>consumer_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2550,7 +2618,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#exclude_topics_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2558,7 +2626,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#include_consumer_groups_python" style="color: inherit; text-decoration: inherit;">include_<wbr>consumer_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2566,7 +2634,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#include_topics_python" style="color: inherit; text-decoration: inherit;">include_<wbr>topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2574,7 +2642,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafka_custom_metrics_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>custom_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2628,7 +2696,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2636,7 +2704,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2648,7 +2716,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2656,7 +2724,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2694,7 +2762,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">pulumi<wbr>Input<Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2706,7 +2774,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Input[Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2792,7 +2860,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#configstoragetopic_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Storage<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2800,7 +2868,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2808,7 +2876,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#offsetstoragetopic_nodejs" style="color: inherit; text-decoration: inherit;">offset<wbr>Storage<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2816,7 +2884,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#statusstoragetopic_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Storage<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2828,7 +2896,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#config_storage_topic_python" style="color: inherit; text-decoration: inherit;">config_<wbr>storage_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2904,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2912,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#offset_storage_topic_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>storage_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2852,7 +2920,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#status_storage_topic_python" style="color: inherit; text-decoration: inherit;">status_<wbr>storage_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2890,7 +2958,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafkatopic_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2902,7 +2970,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#kafka_topic_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2940,7 +3008,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#clusteralias_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2952,7 +3020,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#cluster_alias_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3006,7 +3074,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#elasticsearchindexdaysmax_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Index<wbr>Days<wbr>Max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3014,7 +3082,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#elasticsearchindexprefix_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Index<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3026,7 +3094,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#elasticsearch_index_days_max_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>index_<wbr>days_<wbr>max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3034,7 +3102,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#elasticsearch_index_prefix_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>index_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3136,7 +3204,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3144,7 +3212,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3152,7 +3220,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#rousername_nodejs" style="color: inherit; text-decoration: inherit;">ro<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3160,7 +3228,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#sourcemysql_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">pulumi<wbr>Input<Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3168,7 +3236,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3180,7 +3248,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3188,7 +3256,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3196,7 +3264,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#ro_username_python" style="color: inherit; text-decoration: inherit;">ro_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3204,7 +3272,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#source_mysql_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysql">Input[Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3212,7 +3280,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3250,7 +3318,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_nodejs" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">pulumi<wbr>Input<Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3262,7 +3330,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_python" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationmetricsuserconfigsourcemysqltelegraf">Input[Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3508,7 +3576,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gathereventwaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Event<wbr>Waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3516,7 +3584,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherfileeventsstats_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>File<wbr>Events<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3524,7 +3592,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherindexiowaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Index<wbr>Io<wbr>Waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3532,7 +3600,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherinfoschemaautoinc_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Info<wbr>Schema<wbr>Auto<wbr>Inc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3540,7 +3608,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherinnodbmetrics_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Innodb<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,7 +3616,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherperfeventsstatements_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Perf<wbr>Events<wbr>Statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3556,7 +3624,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherprocesslist_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Process<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3564,7 +3632,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherslavestatus_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Slave<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3572,7 +3640,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gathertableiowaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Io<wbr>Waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3580,7 +3648,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gathertablelockwaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Lock<wbr>Waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3588,7 +3656,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gathertableschema_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3596,7 +3664,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perfeventsstatementsdigesttextlimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Digest<wbr>Text<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3604,7 +3672,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perfeventsstatementslimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3612,7 +3680,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perfeventsstatementstimelimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Time<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3624,7 +3692,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_event_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>event_<wbr>waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3632,7 +3700,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_file_events_stats_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>file_<wbr>events_<wbr>stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3640,7 +3708,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_index_io_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>index_<wbr>io_<wbr>waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3648,7 +3716,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_info_schema_auto_inc_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>info_<wbr>schema_<wbr>auto_<wbr>inc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3656,7 +3724,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_innodb_metrics_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>innodb_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3664,7 +3732,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_perf_events_statements_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>perf_<wbr>events_<wbr>statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3672,7 +3740,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_process_list_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>process_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3680,7 +3748,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_slave_status_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>slave_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3688,7 +3756,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_table_io_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>io_<wbr>waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3696,7 +3764,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_table_lock_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>lock_<wbr>waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3704,7 +3772,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_table_schema_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3712,7 +3780,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perf_events_statements_digest_text_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>digest_<wbr>text_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3720,7 +3788,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perf_events_statements_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3728,7 +3796,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perf_events_statements_time_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>time_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3766,7 +3834,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#mirrormakerwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>Whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3778,7 +3846,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#mirrormaker_whitelist_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3816,7 +3884,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#sourcemysql_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">pulumi<wbr>Input<Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3828,7 +3896,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#source_mysql_python" style="color: inherit; text-decoration: inherit;">source_<wbr>mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysql">Input[Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3866,7 +3934,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_nodejs" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">pulumi<wbr>Input<Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3878,7 +3946,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#telegraf_python" style="color: inherit; text-decoration: inherit;">telegraf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceintegrationprometheususerconfigsourcemysqltelegraf">Input[Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4124,7 +4192,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gathereventwaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Event<wbr>Waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4132,7 +4200,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherfileeventsstats_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>File<wbr>Events<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4140,7 +4208,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherindexiowaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Index<wbr>Io<wbr>Waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4148,7 +4216,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherinfoschemaautoinc_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Info<wbr>Schema<wbr>Auto<wbr>Inc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4156,7 +4224,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherinnodbmetrics_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Innodb<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4164,7 +4232,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherperfeventsstatements_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Perf<wbr>Events<wbr>Statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4172,7 +4240,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherprocesslist_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Process<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4180,7 +4248,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gatherslavestatus_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Slave<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4188,7 +4256,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gathertableiowaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Io<wbr>Waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4196,7 +4264,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gathertablelockwaits_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Lock<wbr>Waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4204,7 +4272,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gathertableschema_nodejs" style="color: inherit; text-decoration: inherit;">gather<wbr>Table<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4212,7 +4280,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perfeventsstatementsdigesttextlimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Digest<wbr>Text<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4220,7 +4288,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perfeventsstatementslimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4228,7 +4296,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perfeventsstatementstimelimit_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Events<wbr>Statements<wbr>Time<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4240,7 +4308,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_event_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>event_<wbr>waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4248,7 +4316,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_file_events_stats_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>file_<wbr>events_<wbr>stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4256,7 +4324,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_index_io_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>index_<wbr>io_<wbr>waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4264,7 +4332,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_info_schema_auto_inc_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>info_<wbr>schema_<wbr>auto_<wbr>inc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4272,7 +4340,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_innodb_metrics_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>innodb_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4280,7 +4348,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_perf_events_statements_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>perf_<wbr>events_<wbr>statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4288,7 +4356,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_process_list_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>process_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4296,7 +4364,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_slave_status_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>slave_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4304,7 +4372,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_table_io_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>io_<wbr>waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4312,7 +4380,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_table_lock_waits_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>lock_<wbr>waits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4320,7 +4388,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#gather_table_schema_python" style="color: inherit; text-decoration: inherit;">gather_<wbr>table_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4328,7 +4396,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perf_events_statements_digest_text_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>digest_<wbr>text_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4336,7 +4404,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perf_events_statements_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4344,7 +4412,7 @@ reference syntax described above to set up the dependency correctly.
 <a href="#perf_events_statements_time_limit_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>events_<wbr>statements_<wbr>time_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -22,19 +22,40 @@ The Project resource allows the creation and management of Aiven Projects.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">available_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_currency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">billing_extra_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">card_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_from_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_cloud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">technical_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vat_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">available_credits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">billing_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">billing_currency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">billing_emails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">billing_extra_text</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">billing_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">card_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">copy_from_project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">default_cloud</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">technical_emails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">vat_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -69,22 +90,32 @@ The Project resource allows the creation and management of Aiven Projects.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -93,7 +124,7 @@ The Project resource allows the creation and management of Aiven Projects.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -117,7 +148,7 @@ The Project resource allows the creation and management of Aiven Projects.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -484,7 +515,7 @@ this up-to-date to be aware of any potential issues with your project.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
@@ -495,7 +526,7 @@ project, including all sub-resources.
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
@@ -505,7 +536,7 @@ using account ID.
 <a href="#availablecredits_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Credits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is a computed property returning the amount of platform credits available to
 the project. This could be your free trial or other promotional credits.
@@ -515,7 +546,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billingaddress_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -524,7 +555,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billingcurrency_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing currency
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -533,7 +564,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billingemails_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -542,7 +573,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billingextratext_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Extra<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
@@ -551,7 +582,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billinggroup_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing group Id
 {{% /md %}}</dd><dt class="property-optional"
@@ -560,7 +591,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
@@ -571,7 +602,7 @@ Kafka. This value cannot be set, only read.
 <a href="#cardid_nodejs" style="color: inherit; text-decoration: inherit;">card<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is either the full card UUID or the last 4 digits of the card. As the full
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
@@ -583,7 +614,7 @@ another project.
 <a href="#copyfromproject_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From<wbr>Project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is the name of another project used to copy billing information and
 some other project attributes like technical contacts from. This is mostly relevant when
@@ -596,7 +627,7 @@ effect when the project is created.
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
@@ -605,7 +636,7 @@ effect when the project is created.
 <a href="#defaultcloud_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines the default cloud provider and region where services are
 hosted. This can be changed freely after the project is created. This will not affect existing
@@ -616,7 +647,7 @@ services.
 <a href="#technicalemails_nodejs" style="color: inherit; text-decoration: inherit;">technical<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
@@ -627,7 +658,7 @@ this up-to-date to be aware of any potential issues with your project.
 <a href="#vatid_nodejs" style="color: inherit; text-decoration: inherit;">vat<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
@@ -640,7 +671,7 @@ this up-to-date to be aware of any potential issues with your project.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
@@ -651,7 +682,7 @@ project, including all sub-resources.
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
@@ -661,7 +692,7 @@ using account ID.
 <a href="#available_credits_python" style="color: inherit; text-decoration: inherit;">available_<wbr>credits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is a computed property returning the amount of platform credits available to
 the project. This could be your free trial or other promotional credits.
@@ -671,7 +702,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billing_address_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -680,7 +711,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billing_currency_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing currency
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -689,7 +720,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billing_emails_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -698,7 +729,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billing_extra_text_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>extra_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
@@ -707,7 +738,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#billing_group_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing group Id
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +747,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
@@ -727,7 +758,7 @@ Kafka. This value cannot be set, only read.
 <a href="#card_id_python" style="color: inherit; text-decoration: inherit;">card_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is either the full card UUID or the last 4 digits of the card. As the full
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
@@ -739,7 +770,7 @@ another project.
 <a href="#copy_from_project_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from_<wbr>project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is the name of another project used to copy billing information and
 some other project attributes like technical contacts from. This is mostly relevant when
@@ -752,7 +783,7 @@ effect when the project is created.
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
@@ -761,7 +792,7 @@ effect when the project is created.
 <a href="#default_cloud_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines the default cloud provider and region where services are
 hosted. This can be changed freely after the project is created. This will not affect existing
@@ -772,7 +803,7 @@ services.
 <a href="#technical_emails_python" style="color: inherit; text-decoration: inherit;">technical_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
@@ -783,7 +814,7 @@ this up-to-date to be aware of any potential issues with your project.
 <a href="#vat_id_python" style="color: inherit; text-decoration: inherit;">vat_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
@@ -968,20 +999,40 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">available_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_currency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">billing_extra_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">billing_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">card_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_from_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_cloud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">estimated_balance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">technical_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vat_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">available_credits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">billing_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">billing_currency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">billing_emails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">billing_extra_text</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">billing_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">card_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">copy_from_project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">country_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_cloud</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">estimated_balance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">payment_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">technical_emails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vat_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1460,7 +1511,7 @@ this up-to-date to be aware of any potential issues with your project.
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
@@ -1470,7 +1521,7 @@ using account ID.
 <a href="#state_availablecredits_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Credits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is a computed property returning the amount of platform credits available to
 the project. This could be your free trial or other promotional credits.
@@ -1480,7 +1531,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billingaddress_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1489,7 +1540,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billingcurrency_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing currency
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1498,7 +1549,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billingemails_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1507,7 +1558,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billingextratext_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Extra<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1516,7 +1567,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billinggroup_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing group Id
 {{% /md %}}</dd><dt class="property-optional"
@@ -1525,7 +1576,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
@@ -1536,7 +1587,7 @@ Kafka. This value cannot be set, only read.
 <a href="#state_cardid_nodejs" style="color: inherit; text-decoration: inherit;">card<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is either the full card UUID or the last 4 digits of the card. As the full
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
@@ -1548,7 +1599,7 @@ another project.
 <a href="#state_copyfromproject_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From<wbr>Project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is the name of another project used to copy billing information and
 some other project attributes like technical contacts from. This is mostly relevant when
@@ -1561,7 +1612,7 @@ effect when the project is created.
 <a href="#state_country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing country
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1570,7 +1621,7 @@ effect when the project is created.
 <a href="#state_countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1579,7 +1630,7 @@ effect when the project is created.
 <a href="#state_defaultcloud_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines the default cloud provider and region where services are
 hosted. This can be changed freely after the project is created. This will not affect existing
@@ -1590,7 +1641,7 @@ services.
 <a href="#state_estimatedbalance_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Balance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
 project in the current billing period.
@@ -1600,7 +1651,7 @@ project in the current billing period.
 <a href="#state_paymentmethod_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
 this project, e.g. "card".
@@ -1610,7 +1661,7 @@ this project, e.g. "card".
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
@@ -1621,7 +1672,7 @@ project, including all sub-resources.
 <a href="#state_technicalemails_nodejs" style="color: inherit; text-decoration: inherit;">technical<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
@@ -1632,7 +1683,7 @@ this up-to-date to be aware of any potential issues with your project.
 <a href="#state_vatid_nodejs" style="color: inherit; text-decoration: inherit;">vat<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
@@ -1645,7 +1696,7 @@ this up-to-date to be aware of any potential issues with your project.
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
@@ -1655,7 +1706,7 @@ using account ID.
 <a href="#state_available_credits_python" style="color: inherit; text-decoration: inherit;">available_<wbr>credits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is a computed property returning the amount of platform credits available to
 the project. This could be your free trial or other promotional credits.
@@ -1665,7 +1716,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billing_address_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1674,7 +1725,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billing_currency_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing currency
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1683,7 +1734,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billing_emails_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1692,7 +1743,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billing_extra_text_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>extra_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1701,7 +1752,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_billing_group_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing group Id
 {{% /md %}}</dd><dt class="property-optional"
@@ -1710,7 +1761,7 @@ the project. This could be your free trial or other promotional credits.
 <a href="#state_ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
@@ -1721,7 +1772,7 @@ Kafka. This value cannot be set, only read.
 <a href="#state_card_id_python" style="color: inherit; text-decoration: inherit;">card_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is either the full card UUID or the last 4 digits of the card. As the full
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
@@ -1733,7 +1784,7 @@ another project.
 <a href="#state_copy_from_project_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from_<wbr>project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is the name of another project used to copy billing information and
 some other project attributes like technical contacts from. This is mostly relevant when
@@ -1746,7 +1797,7 @@ effect when the project is created.
 <a href="#state_country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing country
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1755,7 +1806,7 @@ effect when the project is created.
 <a href="#state_country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1764,7 +1815,7 @@ effect when the project is created.
 <a href="#state_default_cloud_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines the default cloud provider and region where services are
 hosted. This can be changed freely after the project is created. This will not affect existing
@@ -1775,7 +1826,7 @@ services.
 <a href="#state_estimated_balance_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>balance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is a computed property returning the current accumulated bill for this 
 project in the current billing period.
@@ -1785,7 +1836,7 @@ project in the current billing period.
 <a href="#state_payment_method_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}is a computed property returning the method of invoicing used for payments for
 this project, e.g. "card".
@@ -1795,7 +1846,7 @@ this project, e.g. "card".
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
@@ -1806,7 +1857,7 @@ project, including all sub-resources.
 <a href="#state_technical_emails_python" style="color: inherit; text-decoration: inherit;">technical_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
@@ -1817,7 +1868,7 @@ this up-to-date to be aware of any potential issues with your project.
 <a href="#state_vat_id_python" style="color: inherit; text-decoration: inherit;">vat_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
